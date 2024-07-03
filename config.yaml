@@ -1,0 +1,333 @@
+mixed-port: 808
+allow-lan: true
+mode: rule
+log-level: debug
+external-controller: 0.0.0.0:9090
+secret: route
+ipv6: true
+dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:1053
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver:
+  - 114.114.114.114
+  - 8.8.8.8
+  - 119.29.29.29
+  - 223.5.5.5
+  nameserver:
+  - 114.114.114.114
+  - 8.8.8.8
+  - tls://dns.rubyfish.cn:853
+  - https://1.1.1.1/dns-query
+  - dhcp://en0
+  fallback:
+  - tls://8.8.8.8:853
+  - tls://1.1.1.1:853
+  - https://dns.google/dns-query
+  - https://cloudflare-dns.com/dns-query
+  fallback-filter:
+    geoip: true
+    ipcidr:
+    - 240.0.0.0/4
+proxies:
+- name: 3.65.138.240:22222@trojan@US
+  server: 3.65.138.240
+  type: trojan
+  country: United States
+  port: 22222
+  password: telegram-id-directvpn
+  sni: trojan.burgerip.co.uk
+  skip-cert-verify: true
+  udp: true
+  success_rate: 0.8
+  minimum: 151.84
+  maximum: 1156.65
+  average: 333.25
+  ISO: US
+  UpdateDay: '2024-07-03T16:42:39.972066'
+  PFirstFoundDay: '2024-07-03T04:50:32.041795'
+  Rank: -2
+- name: 3.66.203.102:22222@trojan@US
+  server: 3.66.203.102
+  type: trojan
+  country: United States
+  port: 22222
+  password: telegram-id-privatevpns
+  sni: trojan.burgerip.co.uk
+  skip-cert-verify: true
+  udp: true
+  success_rate: 0.6666666666666666
+  minimum: 123.63
+  maximum: 165.23
+  average: 347.0
+  ISO: US
+  UpdateDay: '2024-07-03T16:42:39.875694'
+  PFirstFoundDay: '2024-07-02T23:54:32.405109'
+  Rank: -36
+- name: 51.21.4.82:22222@trojan@
+  type: trojan
+  server: 51.21.4.82
+  port: 22222
+  sni: trojan.burgerip.co.uk
+  password: telegram-id-privatevpns
+  success_rate: 1.0
+  minimum: 183.84
+  maximum: 212.62
+  average: 401.0
+  country: ''
+  ISO: ''
+  UpdateDay: '2024-07-03T16:42:40.366388'
+  PFirstFoundDay: '2024-07-02T21:53:24.564355'
+  Rank: -266
+- name: 13.60.112.60:22222@trojan@US
+  server: 13.60.112.60
+  type: trojan
+  country: United States
+  port: 22222
+  udp: true
+  password: telegram-id-privatevpns
+  sni: trojan.burgerip.co.uk
+  network: tcp
+  success_rate: 1.0
+  minimum: 179.52
+  maximum: 1191.48
+  average: 464.0
+  ISO: US
+  UpdateDay: '2024-07-03T16:42:51.736702'
+  PFirstFoundDay: '2024-07-02T22:54:52.826891'
+  Rank: -1208
+- alterId: 64
+  cipher: auto
+  country: United States
+  h2-opts: {}
+  http-opts: {}
+  name: 38.33.55.71:37001@vmess@US
+  network: ws
+  port: 37001
+  server: 38.33.55.71
+  servername: www.18999379.xyz
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-opts:
+    headers:
+      Host: www.bing.com
+    path: /path/191019072927
+  success_rate: 0.6666666666666666
+  minimum: 190.08
+  maximum: 199.57
+  average: 629.5
+  ISO: US
+  UpdateDay: '2024-07-03T16:43:40.594603'
+  PFirstFoundDay: '2024-06-16T22:53:08.050685'
+  Rank: -4349
+- name: 136.244.110.189:443@trojan@US
+  server: 136.244.110.189
+  port: 443
+  type: trojan
+  password: 19c80ce9-0935-41b9-b077-277621316a87
+  sni: hidd2.parthianempire.org
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /VOkcnRNFk1Gfjd07ui73LZgwx8s
+    headers:
+      Host: hidd2.parthianempire.org
+  udp: true
+  success_rate: 0.75
+  minimum: 240.38
+  maximum: 273.41
+  average: 830.3333333333334
+  country: United States
+  ISO: US
+  UpdateDay: '2024-07-03T16:42:51.496414'
+  PFirstFoundDay: '2024-07-01T22:54:17.489065'
+  Rank: -1233
+proxy-groups:
+- name: PG-default
+  type: fallback
+  url: https://www.google.com
+  interval: 200
+  strategy: round-robin
+  proxies:
+  - td.ylks.link:443@trojan@US
+  - 173.249.199.27:443@vmess@US
+  - zi.you.usdtvfk.top:443@trojan@DE
+  - 192.65.217.183:443@trojan@AU
+  - macau.hapchung.com:10443@trojan@MO
+  - 152.67.217.187:443@trojan@US
+  - 185.59.218.220:443@trojan@RU
+  - 185.146.173.31:443@trojan@SE
+  - 13.39.73.30:22222@trojan@US
+  - 154.85.99.134:2053@trojan@SC
+  - 13.50.9.156:22222@trojan@US
+  - 172.67.175.243:8443@trojan@US
+  - 91.199.84.122:12052@trojan@LU
+  - 172.67.200.234:2096@trojan@US
+  - 51.255.49.192:443@trojan@FR
+  - 3.66.203.102:22222@trojan@US
+  - 3.65.138.240:22222@trojan@US
+  - 3.11.55.148:22222@trojan@US
+  - 51.21.4.82:22222@trojan@
+  - 203.198.16.85:443@trojan@HK
+  - 103.224.212.221:443@trojan@AU
+  - shs.ziqiyun.xyz:443@trojan@AU
+  - 52.212.41.192:22222@trojan@US
+  - 154.197.121.253:443@trojan@SC
+  - 172.207.128.159:443@trojan@GB
+  - 163.172.211.74:443@trojan@GB
+  - 103.224.212.213:443@trojan@AU
+  - youtube-bai-piao-wang-zhe-usa.98848.xyz:443@trojan@AU
+  - 133.167.85.62:443@trojan@JP
+  - 172.207.175.114:443@trojan@GB
+  - uk-04.allhub.ltd:443@trojan@FR
+  - 3.70.39.184:22222@trojan@US
+  - 38.180.70.206:80@vmess@US
+  - 20.2.200.95:443@trojan@US
+  - 5.44.249.43:3389@trojan@LT
+  - 52.50.138.148:22222@trojan@US
+  - 136.244.110.189:443@trojan@US
+  - 13.60.112.60:22222@trojan@US
+  - 54.38.156.210:443@trojan@
+  - hidd2.parthianempire.org:443@vmess@US
+  - 38.33.47.92:38000@vmess@US
+  - 103.172.116.195:3389@trojan@LT
+  - 38.33.55.71:37001@vmess@US
+  - tw02.trojanyyds.xyz:443@trojan@US
+  - 103.224.212.212:443@trojan@AU
+  tolerance: 250
+rule-providers:
+  anting:
+    type: file
+    behavior: classical
+    path: ./ruleset/anting.yaml
+    interval: 86400
+  reject:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt
+    path: ./ruleset/reject.yaml
+    interval: 86400
+  icloud:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt
+    path: ./ruleset/icloud.yaml
+    interval: 86400
+  apple:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt
+    path: ./ruleset/apple.yaml
+    interval: 86400
+  google:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt
+    path: ./ruleset/google.yaml
+    interval: 86400
+  proxy:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt
+    path: ./ruleset/proxy.yaml
+    interval: 86400
+  direct:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt
+    path: ./ruleset/direct.yaml
+    interval: 86400
+  private:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt
+    path: ./ruleset/private.yaml
+    interval: 86400
+  gfw:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt
+    path: ./ruleset/gfw.yaml
+    interval: 86400
+  greatfire:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/greatfire.txt
+    path: ./ruleset/greatfire.yaml
+    interval: 86400
+  tld-not-cn:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt
+    path: ./ruleset/tld-not-cn.yaml
+    interval: 86400
+  telegramcidr:
+    type: http
+    behavior: ipcidr
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt
+    path: ./ruleset/telegramcidr.yaml
+    interval: 86400
+  cncidr:
+    type: http
+    behavior: ipcidr
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt
+    path: ./ruleset/cncidr.yaml
+    interval: 86400
+  lancidr:
+    type: http
+    behavior: ipcidr
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt
+    path: ./ruleset/lancidr.yaml
+    interval: 86400
+rules:
+- PROCESS-NAME,v2ray,DIRECT
+- PROCESS-NAME,xray,DIRECT
+- PROCESS-NAME,naive,DIRECT
+- PROCESS-NAME,trojan,DIRECT
+- PROCESS-NAME,trojan-go,DIRECT
+- PROCESS-NAME,ss-local,DIRECT
+- PROCESS-NAME,privoxy,DIRECT
+- PROCESS-NAME,leaf,DIRECT
+- PROCESS-NAME,v2ray.exe,DIRECT
+- PROCESS-NAME,xray.exe,DIRECT
+- PROCESS-NAME,naive.exe,DIRECT
+- PROCESS-NAME,trojan.exe,DIRECT
+- PROCESS-NAME,trojan-go.exe,DIRECT
+- PROCESS-NAME,ss-local.exe,DIRECT
+- PROCESS-NAME,privoxy.exe,DIRECT
+- PROCESS-NAME,leaf.exe,DIRECT
+- PROCESS-NAME,Surge,DIRECT
+- PROCESS-NAME,Surge 2,DIRECT
+- PROCESS-NAME,Surge 3,DIRECT
+- PROCESS-NAME,Surge 4,DIRECT
+- PROCESS-NAME,Surge%202,DIRECT
+- PROCESS-NAME,Surge%203,DIRECT
+- PROCESS-NAME,Surge%204,DIRECT
+- PROCESS-NAME,Folx,DIRECT
+- DOMAIN,clash.razord.top,PG-default
+- DOMAIN,yacd.haishan.me,PG-default
+- DOMAIN-SUFFIX,wsj.com,PG-default
+- DOMAIN-SUFFIX,126.com,PG-default
+- DOMAIN-SUFFIX,t66y.com,PG-default
+- DOMAIN-SUFFIX,gitbook.com,PG-default
+- DOMAIN-SUFFIX,identitytoolkit.googleapis.com,PG-default
+- DOMAIN-SUFFIX,github.com,PG-default
+- DOMAIN-SUFFIX,githubusercontents.com,PG-default
+- RULE-SET,anting,PG-default
+- RULE-SET,private,DIRECT
+- RULE-SET,reject,REJECT
+- RULE-SET,direct,DIRECT
+- RULE-SET,cncidr,DIRECT
+- RULE-SET,lancidr,DIRECT
+- RULE-SET,tld-not-cn,PG-default
+- RULE-SET,gfw,PG-default
+- RULE-SET,greatfire,PG-default
+- RULE-SET,telegramcidr,PG-default
+- RULE-SET,google,PG-default
+- RULE-SET,proxy,PG-default
+- RULE-SET,apple,PG-default
+- RULE-SET,icloud,PG-default
+- MATCH,PG-default
