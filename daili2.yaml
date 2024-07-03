@@ -31,6 +31,26 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
+- name: 211.72.156.17:23555@trojan@TW
+  server: 211.72.156.17
+  port: 23555
+  type: trojan
+  password: moist
+  sni: trojan.freenods.sbs
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: trojan.freenods.sbs
+  success_rate: 0.9
+  minimum: 55.3
+  maximum: 78.31
+  average: 207.77777777777777
+  country: Taiwan
+  ISO: TW
+  UpdateDay: '2024-07-04T02:01:02.849704'
+  PFirstFoundDay: '2024-07-03T16:22:16.652160'
+  Rank: 201
 - name: td.ylks.link:443@trojan@US
   type: trojan
   server: td.ylks.link
@@ -46,12 +66,12 @@ proxies:
   success_rate: 1.0
   minimum: 252.63
   maximum: 253.54
-  average: 619.9
+  average: 572.4
   country: United States
   ISO: US
-  UpdateDay: '2024-07-04T01:31:02.361893'
+  UpdateDay: '2024-07-04T02:01:02.335500'
   PFirstFoundDay: '2024-07-03T14:58:02.412532'
-  Rank: 1365
+  Rank: 1515
 - name: 154.197.121.253:443@trojan@SC
   server: 154.197.121.253
   port: 443
@@ -68,33 +88,12 @@ proxies:
   success_rate: 1.0
   minimum: 246.27
   maximum: 1266.51
-  average: 707.3
+  average: 627.3
   country: Seychelles
   ISO: SC
-  UpdateDay: '2024-07-04T01:31:02.494464'
+  UpdateDay: '2024-07-04T02:01:02.462285'
   PFirstFoundDay: '2024-07-03T08:49:29.912469'
-  Rank: 1344
-- name: 116.47.10.236:27335@trojan@KR
-  server: 116.47.10.236
-  port: 27335
-  type: trojan
-  password: moist
-  sni: trojan.freenods.sbs
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: '%2F'
-    headers:
-      Host: trojan.freenods.sbs
-  success_rate: 0.9
-  minimum: 154.59
-  maximum: 1118.49
-  average: 945.3333333333334
-  country: South Korea
-  ISO: KR
-  UpdateDay: '2024-07-04T01:31:23.130543'
-  PFirstFoundDay: '2024-07-02T13:48:25.099177'
-  Rank: -339
+  Rank: 1495
 proxy-groups:
 - name: PG-default
   type: fallback
@@ -102,9 +101,9 @@ proxy-groups:
   interval: 200
   strategy: round-robin
   proxies:
+  - 211.72.156.17:23555@trojan@TW
   - td.ylks.link:443@trojan@US
   - 154.197.121.253:443@trojan@SC
-  - 116.47.10.236:27335@trojan@KR
   tolerance: 250
 rules:
 - MATCH,PG-default
