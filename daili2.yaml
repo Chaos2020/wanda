@@ -31,23 +31,6 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
-- name: 3.66.203.102:22222@trojan@US
-  server: 3.66.203.102
-  port: 22222
-  type: trojan
-  password: telegram-id-privatevpns
-  sni: trojan.burgerip.co.uk
-  skip-cert-verify: true
-  udp: true
-  success_rate: 1.0
-  minimum: 147.45
-  maximum: 167.68
-  average: 481.5
-  country: United States
-  ISO: US
-  UpdateDay: '2024-07-03T22:31:02.381815'
-  PFirstFoundDay: '2024-07-02T23:54:32.405109'
-  Rank: 1726
 - name: 38.180.70.206:80@vmess@US
   server: 38.180.70.206
   type: vmess
@@ -67,32 +50,11 @@ proxies:
   success_rate: 1.0
   minimum: 134.57
   maximum: 1160.29
-  average: 528.8
+  average: 501.7
   ISO: US
-  UpdateDay: '2024-07-03T22:31:03.019080'
+  UpdateDay: '2024-07-03T23:01:02.935200'
   PFirstFoundDay: '2024-07-01T17:58:32.326093'
-  Rank: 180
-- name: td.ylks.link:443@trojan@US
-  type: trojan
-  server: td.ylks.link
-  port: 443
-  udp: true
-  password: NISHIKUITAN222
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      host: td.ylks.link
-  success_rate: 1.0
-  minimum: 252.63
-  maximum: 253.54
-  average: 649.1
-  country: United States
-  ISO: US
-  UpdateDay: '2024-07-03T22:31:02.632173'
-  PFirstFoundDay: '2024-07-03T14:58:02.412532'
-  Rank: 743
+  Rank: 361
 - alterId: 0
   cipher: auto
   country: United States
@@ -114,11 +76,11 @@ proxies:
   success_rate: 1.0
   minimum: 245.59
   maximum: 252.27
-  average: 675.2
+  average: 630.2
   ISO: US
-  UpdateDay: '2024-07-03T22:31:30.690783'
+  UpdateDay: '2024-07-03T23:01:25.898829'
   PFirstFoundDay: '2024-07-03T05:54:51.288792'
-  Rank: -1358
+  Rank: -1258
 - name: 136.244.110.189:443@trojan@US
   server: 136.244.110.189
   port: 443
@@ -132,36 +94,36 @@ proxies:
     headers:
       Host: hidd2.parthianempire.org
   udp: true
-  success_rate: 0.9
+  success_rate: 0.8
   minimum: 255.43
   maximum: 273.24
-  average: 715.1111111111111
+  average: 731.875
   country: United States
   ISO: US
-  UpdateDay: '2024-07-03T22:31:23.647050'
+  UpdateDay: '2024-07-03T23:01:23.292285'
   PFirstFoundDay: '2024-07-01T22:54:17.489065'
-  Rank: -425
-- name: 116.47.10.236:27335@trojan@KR
-  server: 116.47.10.236
-  port: 27335
+  Rank: -394
+- name: td.ylks.link:443@trojan@US
   type: trojan
-  password: moist
-  sni: trojan.freenods.sbs
-  skip-cert-verify: false
+  server: td.ylks.link
+  port: 443
+  udp: true
+  password: NISHIKUITAN222
+  skip-cert-verify: true
   network: ws
   ws-opts:
-    path: '%2F'
+    path: /
     headers:
-      Host: trojan.freenods.sbs
-  success_rate: 0.7
-  minimum: 154.59
-  maximum: 1118.49
-  average: 1067.5714285714287
-  country: South Korea
-  ISO: KR
-  UpdateDay: '2024-07-03T22:31:23.250365'
-  PFirstFoundDay: '2024-07-02T13:48:25.099177'
-  Rank: -255
+      host: td.ylks.link
+  success_rate: 1.0
+  minimum: 252.63
+  maximum: 253.54
+  average: 762.1
+  country: United States
+  ISO: US
+  UpdateDay: '2024-07-03T23:01:02.671333'
+  PFirstFoundDay: '2024-07-03T14:58:02.412532'
+  Rank: 834
 - name: 154.197.121.253:443@trojan@SC
   server: 154.197.121.253
   port: 443
@@ -178,12 +140,12 @@ proxies:
   success_rate: 1.0
   minimum: 246.27
   maximum: 1266.51
-  average: 1154.4
+  average: 983.8
   country: Seychelles
   ISO: SC
-  UpdateDay: '2024-07-03T22:31:02.508598'
+  UpdateDay: '2024-07-03T23:01:02.547121'
   PFirstFoundDay: '2024-07-03T08:49:29.912469'
-  Rank: 772
+  Rank: 827
 proxy-groups:
 - name: PG-default
   type: fallback
@@ -191,12 +153,10 @@ proxy-groups:
   interval: 200
   strategy: round-robin
   proxies:
-  - 3.66.203.102:22222@trojan@US
   - 38.180.70.206:80@vmess@US
-  - td.ylks.link:443@trojan@US
   - hidd2.parthianempire.org:443@vmess@US
   - 136.244.110.189:443@trojan@US
-  - 116.47.10.236:27335@trojan@KR
+  - td.ylks.link:443@trojan@US
   - 154.197.121.253:443@trojan@SC
   tolerance: 250
 rules:
