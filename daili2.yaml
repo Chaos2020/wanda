@@ -31,22 +31,43 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
-- name: tj-jp01.yiyo2way.xyz:9980@trojan@US
-  server: tj-jp01.yiyo2way.xyz
+- name: 211.72.156.17:23555@trojan@TW
+  server: 211.72.156.17
+  port: 23555
   type: trojan
-  country: United States
-  port: 9980
-  password: 4179ca8a-d210-34c2-9d17-125377a5abd2
+  password: moist
+  sni: trojan.freenods.sbs
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: trojan.freenods.sbs
+  success_rate: 0.6
+  minimum: 55.3
+  maximum: 78.31
+  average: 215.5
+  country: Taiwan
+  ISO: TW
+  UpdateDay: '2024-07-04T00:01:22.750080'
+  PFirstFoundDay: '2024-07-03T16:22:16.652160'
+  Rank: -159
+- name: 52.212.41.192:22222@trojan@US
+  server: 52.212.41.192
+  port: 22222
+  type: trojan
+  password: telegram-id-privatevpns
+  sni: trojan.burgerip.co.uk
   skip-cert-verify: true
   udp: true
   success_rate: 0.6
-  minimum: 63.21
-  maximum: 1084.74
-  average: 244.33333333333334
+  minimum: 154.45
+  maximum: 227.42
+  average: 377.3333333333333
+  country: United States
   ISO: US
-  UpdateDay: '2024-07-03T23:33:08.015706'
-  PFirstFoundDay: '2024-07-01T07:57:13.939366'
-  Rank: -3518
+  UpdateDay: '2024-07-04T00:01:24.297625'
+  PFirstFoundDay: '2024-07-03T04:50:24.055553'
+  Rank: -1109
 - name: 38.180.70.206:80@vmess@US
   server: 38.180.70.206
   type: vmess
@@ -66,11 +87,32 @@ proxies:
   success_rate: 1.0
   minimum: 134.57
   maximum: 1160.29
-  average: 397.2
+  average: 400.3
   ISO: US
-  UpdateDay: '2024-07-03T23:31:02.643331'
+  UpdateDay: '2024-07-04T00:01:02.728313'
   PFirstFoundDay: '2024-07-01T17:58:32.326093'
-  Rank: 551
+  Rank: 741
+- name: td.ylks.link:443@trojan@US
+  type: trojan
+  server: td.ylks.link
+  port: 443
+  udp: true
+  password: NISHIKUITAN222
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      host: td.ylks.link
+  success_rate: 1.0
+  minimum: 252.63
+  maximum: 253.54
+  average: 639.2
+  country: United States
+  ISO: US
+  UpdateDay: '2024-07-04T00:01:02.484445'
+  PFirstFoundDay: '2024-07-03T14:58:02.412532'
+  Rank: 1025
 - alterId: 0
   cipher: auto
   country: United States
@@ -92,80 +134,11 @@ proxies:
   success_rate: 1.0
   minimum: 245.59
   maximum: 252.27
-  average: 631.8
+  average: 662.3
   ISO: US
-  UpdateDay: '2024-07-03T23:31:24.708465'
+  UpdateDay: '2024-07-04T00:01:24.420548'
   PFirstFoundDay: '2024-07-03T05:54:51.288792'
-  Rank: -1158
-- name: 136.244.110.189:443@trojan@US
-  server: 136.244.110.189
-  port: 443
-  type: trojan
-  password: 19c80ce9-0935-41b9-b077-277621316a87
-  sni: hidd2.parthianempire.org
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /VOkcnRNFk1Gfjd07ui73LZgwx8s
-    headers:
-      Host: hidd2.parthianempire.org
-  udp: true
-  success_rate: 0.9
-  minimum: 255.43
-  maximum: 273.24
-  average: 722.8888888888889
-  country: United States
-  ISO: US
-  UpdateDay: '2024-07-03T23:31:22.789163'
-  PFirstFoundDay: '2024-07-01T22:54:17.489065'
-  Rank: -333
-- name: td.ylks.link:443@trojan@US
-  type: trojan
-  server: td.ylks.link
-  port: 443
-  udp: true
-  password: NISHIKUITAN222
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      host: td.ylks.link
-  success_rate: 1.0
-  minimum: 252.63
-  maximum: 253.54
-  average: 750.4
-  country: United States
-  ISO: US
-  UpdateDay: '2024-07-03T23:31:02.403221'
-  PFirstFoundDay: '2024-07-03T14:58:02.412532'
-  Rank: 925
-- alterId: 64
-  cipher: auto
-  country: United States
-  h2-opts: {}
-  http-opts: {}
-  name: 38.33.55.71:37001@vmess@US
-  network: ws
-  port: 37001
-  server: 38.33.55.71
-  servername: www.18999379.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-opts:
-    headers:
-      Host: www.bing.com
-    path: /path/191019072927
-  success_rate: 0.6
-  minimum: 187.36
-  maximum: 210.95
-  average: 755.6666666666666
-  ISO: US
-  UpdateDay: '2024-07-03T23:33:18.915297'
-  PFirstFoundDay: '2024-06-16T22:53:08.050685'
-  Rank: -4039
+  Rank: -1058
 - name: 154.197.121.253:443@trojan@SC
   server: 154.197.121.253
   port: 443
@@ -182,12 +155,55 @@ proxies:
   success_rate: 1.0
   minimum: 246.27
   maximum: 1266.51
-  average: 861.3
+  average: 758.7
   country: Seychelles
   ISO: SC
-  UpdateDay: '2024-07-03T23:31:02.522676'
+  UpdateDay: '2024-07-04T00:01:02.605496'
   PFirstFoundDay: '2024-07-03T08:49:29.912469'
-  Rank: 900
+  Rank: 991
+- name: 136.244.110.189:443@trojan@US
+  server: 136.244.110.189
+  port: 443
+  type: trojan
+  password: 19c80ce9-0935-41b9-b077-277621316a87
+  sni: hidd2.parthianempire.org
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /VOkcnRNFk1Gfjd07ui73LZgwx8s
+    headers:
+      Host: hidd2.parthianempire.org
+  udp: true
+  success_rate: 0.9
+  minimum: 255.43
+  maximum: 273.24
+  average: 834.8888888888889
+  country: United States
+  ISO: US
+  UpdateDay: '2024-07-04T00:01:22.893413'
+  PFirstFoundDay: '2024-07-01T22:54:17.489065'
+  Rank: -290
+- name: 116.47.10.236:27335@trojan@KR
+  server: 116.47.10.236
+  port: 27335
+  type: trojan
+  password: moist
+  sni: trojan.freenods.sbs
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: '%2F'
+    headers:
+      Host: trojan.freenods.sbs
+  success_rate: 0.6
+  minimum: 154.59
+  maximum: 1118.49
+  average: 1074.5
+  country: South Korea
+  ISO: KR
+  UpdateDay: '2024-07-04T00:01:23.018868'
+  PFirstFoundDay: '2024-07-02T13:48:25.099177'
+  Rank: -369
 proxy-groups:
 - name: PG-default
   type: fallback
@@ -195,13 +211,14 @@ proxy-groups:
   interval: 200
   strategy: round-robin
   proxies:
-  - tj-jp01.yiyo2way.xyz:9980@trojan@US
+  - 211.72.156.17:23555@trojan@TW
+  - 52.212.41.192:22222@trojan@US
   - 38.180.70.206:80@vmess@US
-  - hidd2.parthianempire.org:443@vmess@US
-  - 136.244.110.189:443@trojan@US
   - td.ylks.link:443@trojan@US
-  - 38.33.55.71:37001@vmess@US
+  - hidd2.parthianempire.org:443@vmess@US
   - 154.197.121.253:443@trojan@SC
+  - 136.244.110.189:443@trojan@US
+  - 116.47.10.236:27335@trojan@KR
   tolerance: 250
 rules:
 - MATCH,PG-default
