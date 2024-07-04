@@ -31,6 +31,88 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
+- name: 38.180.70.206:80@vmess@US
+  server: 38.180.70.206
+  type: vmess
+  country: United States
+  port: 80
+  uuid: f533e37c-9da5-4955-a218-a7886e5719b6
+  alterId: 0
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /NkXnI0l6LGkotMyATWmx5f6MblN
+    headers:
+      host: 38.180.70.206
+  success_rate: 60.0
+  minimum: 151.14
+  maximum: 162.74
+  average: 369.5
+  ISO: US
+  UpdateDay: 2024-07-05T01:02
+  PFirstFoundDay: '2024-07-01T17:58:32.326093'
+  Rank: -19
+- name: 108.181.200.220:50613@vmess@CA
+  server: 108.181.200.220
+  port: 50613
+  type: vmess
+  uuid: 09e81eaa-d298-432c-e7b6-17add32d14fc
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      host: 108.181.200.220
+  udp: true
+  success_rate: 55.55555555555556
+  minimum: 263.72
+  maximum: 293.25
+  average: 517.2
+  country: Canada
+  ISO: CA
+  UpdateDay: 2024-07-05T01:04
+  PFirstFoundDay: '2024-07-04T16:30:21.412447'
+  Rank: -158
+- name: at1.trojanvpn.de:2053@trojan@GI
+  server: at1.trojanvpn.de
+  type: trojan
+  port: 2053
+  password: 09191dbf-e7f7-4e7d-b405-c4785ea992bf
+  sni: ftp.debian.org
+  skip-cert-verify: true
+  udp: true
+  success_rate: 57.142857142857146
+  minimum: 237.82
+  maximum: 300.01
+  average: 548.0
+  country: Gibraltar
+  ISO: GI
+  UpdateDay: 2024-07-05T01:02
+  PFirstFoundDay: '2024-04-09T22:19:55.313354'
+  Rank: -40
+- name: 95.164.9.196:2053@trojan@GI
+  server: 95.164.9.196
+  type: trojan
+  country: Gibraltar
+  port: 2053
+  password: 09191dbf-e7f7-4e7d-b405-c4785ea992bf
+  sni: ftp.debian.org
+  skip-cert-verify: true
+  udp: true
+  success_rate: 62.5
+  minimum: 276.52
+  maximum: 290.14
+  average: 575.4
+  ISO: GI
+  UpdateDay: 2024-07-05T01:02
+  PFirstFoundDay: '2024-04-09T18:20:59.863065'
+  Rank: -8
 - name: 47.238.0.114:2096@trojan@US
   server: 47.238.0.114
   port: 2096
@@ -47,12 +129,12 @@ proxies:
   success_rate: 66.66666666666667
   minimum: 47.21
   maximum: 2121.4
-  average: 743.0
+  average: 734.6666666666666
   country: United States
   ISO: US
-  UpdateDay: 2024-07-05T00:33
+  UpdateDay: 2024-07-05T01:02
   PFirstFoundDay: '2024-07-04T10:28:12.066463'
-  Rank: -18
+  Rank: -15
 proxy-groups:
 - name: PG-default
   type: fallback
@@ -60,6 +142,10 @@ proxy-groups:
   interval: 200
   strategy: round-robin
   proxies:
+  - 38.180.70.206:80@vmess@US
+  - 108.181.200.220:50613@vmess@CA
+  - at1.trojanvpn.de:2053@trojan@GI
+  - 95.164.9.196:2053@trojan@GI
   - 47.238.0.114:2096@trojan@US
   tolerance: 250
 rule-providers:
