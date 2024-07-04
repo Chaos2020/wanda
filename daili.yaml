@@ -50,11 +50,34 @@ proxies:
   success_rate: 100.0
   minimum: 134.57
   maximum: 1160.29
-  average: 326.8
+  average: 389.8
   ISO: US
-  UpdateDay: '2024-07-04T12:01:02.366545'
+  UpdateDay: '2024-07-04T12:31:02.311306'
   PFirstFoundDay: '2024-07-01T17:58:32.326093'
-  Rank: 3751
+  Rank: 3932
+- name: 154.197.121.253:443@trojan@SC
+  server: 154.197.121.253
+  port: 443
+  client-fingerprint: chrome
+  type: trojan
+  password: moist
+  sni: trojan.freenods.sbs
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: trojan.freenods.sbs
+  udp: true
+  success_rate: 90.0
+  minimum: 207.09
+  maximum: 237.47
+  average: 564.2222222222222
+  country: Seychelles
+  ISO: SC
+  UpdateDay: '2024-07-04T12:31:02.679917'
+  PFirstFoundDay: '2024-07-03T08:49:29.912469'
+  Rank: 598
 - name: hidd2.parthianempire.org:443@vmess@US
   server: hidd2.parthianempire.org
   port: 443
@@ -73,12 +96,12 @@ proxies:
   success_rate: 100.0
   minimum: 284.91
   maximum: 305.06
-  average: 682.9
+  average: 700.2
   country: United States
   ISO: US
-  UpdateDay: '2024-07-04T12:01:02.890196'
+  UpdateDay: '2024-07-04T12:31:02.799891'
   PFirstFoundDay: '2024-07-03T05:54:51.288792'
-  Rank: 301
+  Rank: 401
 - name: 136.244.110.189:443@trojan@US
   server: 136.244.110.189
   port: 443
@@ -95,35 +118,12 @@ proxies:
   success_rate: 100.0
   minimum: 255.43
   maximum: 273.24
-  average: 696.2
+  average: 708.9
   country: United States
   ISO: US
-  UpdateDay: '2024-07-04T12:01:03.011754'
+  UpdateDay: '2024-07-04T12:31:02.941992'
   PFirstFoundDay: '2024-07-01T22:54:17.489065'
-  Rank: 156
-- name: 154.197.121.253:443@trojan@SC
-  server: 154.197.121.253
-  port: 443
-  client-fingerprint: chrome
-  type: trojan
-  password: moist
-  sni: trojan.freenods.sbs
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: trojan.freenods.sbs
-  udp: true
-  success_rate: 100.0
-  minimum: 207.09
-  maximum: 237.47
-  average: 731.2
-  country: Seychelles
-  ISO: SC
-  UpdateDay: '2024-07-04T12:01:02.742432'
-  PFirstFoundDay: '2024-07-03T08:49:29.912469'
-  Rank: 458
+  Rank: 256
 - name: 116.47.10.236:27335@trojan@KR
   server: 116.47.10.236
   port: 27335
@@ -139,12 +139,12 @@ proxies:
   success_rate: 80.0
   minimum: 154.59
   maximum: 1118.49
-  average: 826.75
+  average: 711.875
   country: South Korea
   ISO: KR
-  UpdateDay: '2024-07-04T12:01:02.612341'
+  UpdateDay: '2024-07-04T12:31:02.558260'
   PFirstFoundDay: '2024-07-02T13:48:25.099177'
-  Rank: 2107
+  Rank: 2169
 proxy-groups:
 - name: PG-default
   type: fallback
@@ -153,9 +153,9 @@ proxy-groups:
   strategy: round-robin
   proxies:
   - 38.180.70.206:80@vmess@US
+  - 154.197.121.253:443@trojan@SC
   - hidd2.parthianempire.org:443@vmess@US
   - 136.244.110.189:443@trojan@US
-  - 154.197.121.253:443@trojan@SC
   - 116.47.10.236:27335@trojan@KR
   tolerance: 250
 rule-providers:
