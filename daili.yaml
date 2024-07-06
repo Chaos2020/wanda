@@ -31,67 +31,161 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
-- name: 139.162.84.183:3306@trojan@NL
-  server: 139.162.84.183
-  port: 3306
-  type: trojan
-  password: 7ac49a893e0bd10c
-  sni: n2.gladns.com
+- type: trojan
+  name: 211.72.156.17:23555@trojan@TW
+  server: 211.72.156.17
+  port: 23555
+  password: moist
+  udp: true
   skip-cert-verify: true
+  sni: trojan.freenods.sbs
   network: ws
   ws-opts:
-    path: /gateway/connect
+    path: /
     headers:
-      Host: n2.gladns.com
-  udp: true
+      host: trojan.freenods.sbs
   success_rate: 50.0
-  minimum: 67.31
-  maximum: 67.31
-  average: 169.0
-  country: The Netherlands
-  ISO: NL
-  UpdateDay: 2024-07-06T18:01
-  PFirstFoundDay: 2024-07-06T16:50
+  minimum: 54.41
+  maximum: 68.39
+  average: 400.0
+  country: Taiwan
+  ISO: TW
+  UpdateDay: 2024-07-06T19:03
+  PFirstFoundDay: '2024-07-03T16:22:16.652160'
   Rank: 0
-- name: 172.105.220.7:3306@trojan@US
-  server: 172.105.220.7
-  port: 3306
-  type: trojan
-  password: 8a1ab0df6abea549
-  sni: n2.gladns.com
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /gateway/connect
-    headers:
-      Host: n2.gladns.com
-  udp: true
-  success_rate: 50.0
-  minimum: 83.97
-  maximum: 83.97
-  average: 258.4
-  country: United States
-  ISO: US
-  UpdateDay: 2024-07-06T18:01
-  PFirstFoundDay: 2024-07-06T16:51
-  Rank: -20
-- name: 3.127.6.155:22222@trojan@US
-  server: 3.127.6.155
+- name: 18.202.119.149:22222@trojan@US
+  server: 18.202.119.149
   type: trojan
   country: United States
   port: 22222
   udp: true
-  password: telegram-id-directvpn
+  password: telegram-id-privatevpns
+  sni: trojan.burgerip.co.uk
+  network: tcp
+  success_rate: 50.0
+  minimum: 1211.49
+  maximum: 1211.49
+  average: 420.0
+  ISO: US
+  UpdateDay: 2024-07-06T19:02
+  PFirstFoundDay: 2024-07-06T10:16
+  Rank: 0
+- name: 213.35.113.141:8080@vmess@SE
+  server: 213.35.113.141
+  type: vmess
+  country: Sweden
+  port: 8080
+  uuid: f9808413-8b12-42ea-86ff-a0af6727a0e8
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: oci-sg.968968.xyz
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /index?ed=2560
+    headers:
+      host: 213.35.113.141
+  success_rate: 66.66666666666667
+  minimum: 178.79
+  maximum: 310.01
+  average: 454.5
+  ISO: SE
+  UpdateDay: 2024-07-06T19:01
+  PFirstFoundDay: '2024-06-11T19:31:40.524545'
+  Rank: 20
+- name: 16.170.114.68:22222@trojan@US
+  server: 16.170.114.68
+  type: trojan
+  country: United States
+  port: 22222
+  password: telegram-id-privatevpns
   sni: trojan.burgerip.co.uk
   skip-cert-verify: true
-  success_rate: 50.0
-  minimum: 175.29
-  maximum: 1238.22
-  average: 398.4
+  udp: true
+  success_rate: 66.66666666666667
+  minimum: 204.46
+  maximum: 204.46
+  average: 487.25
   ISO: US
-  UpdateDay: 2024-07-06T18:01
-  PFirstFoundDay: 2024-07-06T10:19
-  Rank: -100
+  UpdateDay: 2024-07-06T19:02
+  PFirstFoundDay: 2024-07-06T10:16
+  Rank: 2
+- name: 54.247.179.84:22222@trojan@US
+  server: 54.247.179.84
+  type: trojan
+  country: United States
+  port: 22222
+  udp: true
+  password: telegram-id-privatevpns
+  sni: trojan.burgerip.co.uk
+  network: tcp
+  success_rate: 50.0
+  minimum: 192.54
+  maximum: 223.48
+  average: 489.0
+  ISO: US
+  UpdateDay: 2024-07-06T19:03
+  PFirstFoundDay: 2024-07-06T10:16
+  Rank: 0
+- name: 95.164.9.196:2053@trojan@GI
+  server: 95.164.9.196
+  type: trojan
+  country: Gibraltar
+  port: 2053
+  password: 09191dbf-e7f7-4e7d-b405-c4785ea992bf
+  skip-cert-verify: true
+  udp: true
+  success_rate: 80.0
+  minimum: 283.03
+  maximum: 3266.98
+  average: 554.5
+  ISO: GI
+  UpdateDay: 2024-07-06T19:01
+  PFirstFoundDay: '2024-04-09T18:20:59.863065'
+  Rank: 2
+- name: 192.74.250.208:38000@vmess@US
+  server: 192.74.250.208
+  port: 38000
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  alterId: 64
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /path/353112182726
+    headers:
+      host: 192.74.250.208
+  udp: true
+  success_rate: 66.66666666666667
+  minimum: 196.68
+  maximum: 196.68
+  average: 649.5
+  country: United States
+  ISO: US
+  UpdateDay: 2024-07-06T19:01
+  PFirstFoundDay: '2024-06-08T11:07:39.160696'
+  Rank: 22
+- name: 16.170.139.92:22222@trojan@US
+  server: 16.170.139.92
+  type: trojan
+  country: United States
+  port: 22222
+  udp: true
+  password: telegram-id-privatevpns
+  sni: trojan.burgerip.co.uk
+  network: tcp
+  success_rate: 66.66666666666667
+  minimum: 3197.28
+  maximum: 3197.28
+  average: 727.5
+  ISO: US
+  UpdateDay: 2024-07-06T19:01
+  PFirstFoundDay: 2024-07-06T10:16
+  Rank: 20
 - name: 38.180.70.206:80@vmess@US
   server: 38.180.70.206
   type: vmess
@@ -111,10 +205,27 @@ proxies:
   success_rate: 100.0
   minimum: 164.74
   maximum: 175.36
-  average: 407.7
+  average: 745.8
   ISO: US
-  UpdateDay: 2024-07-06T18:01
+  UpdateDay: 2024-07-06T19:01
   PFirstFoundDay: '2024-07-01T17:58:32.326093'
+  Rank: 2
+- country: United Kingdom
+  name: 23.106.35.90:28331@trojan@GB
+  password: FcYCR32n8lEy3aaXTSAYzl3DNXTSAYzl3DNqZ58SDgFBOxeC6Cw47uSZy3Aje0xeC6Cw4
+  port: 28331
+  server: 23.106.35.90
+  skip-cert-verify: true
+  sni: hovland.golfland.club
+  type: trojan
+  udp: true
+  success_rate: 80.0
+  minimum: 255.49
+  maximum: 259.12
+  average: 844.0
+  ISO: GB
+  UpdateDay: 2024-07-06T19:01
+  PFirstFoundDay: '2024-06-28T19:54:14.189735'
   Rank: 2
 - name: 3.122.17.59:22222@trojan@US
   server: 3.122.17.59
@@ -125,197 +236,14 @@ proxies:
   sni: trojan.burgerip.co.uk
   skip-cert-verify: true
   udp: true
-  success_rate: 75.0
-  minimum: 161.38
-  maximum: 3168.03
-  average: 445.3333333333333
+  success_rate: 50.0
+  minimum: 149.14
+  maximum: 1181.98
+  average: 897.5
   ISO: US
-  UpdateDay: 2024-07-06T18:01
+  UpdateDay: 2024-07-06T19:01
   PFirstFoundDay: 2024-07-06T10:19
-  Rank: 2
-- name: 35.158.183.21:22222@trojan@US
-  server: 35.158.183.21
-  port: 22222
-  type: trojan
-  password: telegram-id-privatevpns
-  sni: trojan.burgerip.co.uk
-  skip-cert-verify: true
-  udp: true
-  success_rate: 55.55555555555556
-  minimum: 147.78
-  maximum: 166.64
-  average: 482.8
-  country: United States
-  ISO: US
-  UpdateDay: 2024-07-06T18:01
-  PFirstFoundDay: 2024-07-06T16:51
-  Rank: 40
-- name: 213.35.113.141:8080@vmess@SE
-  server: 213.35.113.141
-  type: vmess
-  country: Sweden
-  port: 8080
-  uuid: f9808413-8b12-42ea-86ff-a0af6727a0e8
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: oci-sg.968968.xyz
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /index?ed=2560
-    headers:
-      host: 213.35.113.141
-  success_rate: 60.0
-  minimum: 119.62
-  maximum: 1324.27
-  average: 523.6666666666666
-  ISO: SE
-  UpdateDay: 2024-07-06T18:01
-  PFirstFoundDay: '2024-06-11T19:31:40.524545'
-  Rank: -20
-- name: 23.106.35.90:28331@trojan@GB
-  server: 23.106.35.90
-  type: trojan
-  country: United Kingdom
-  port: 28331
-  udp: true
-  password: FcYCR32n8lEy3aaXTSAYzl3DNXTSAYzl3DNqZ58SDgFBOxeC6Cw47uSZy3Aje0xeC6Cw4
-  skip-cert-verify: true
-  success_rate: 80.0
-  minimum: 217.1
-  maximum: 254.08
-  average: 547.0
-  ISO: GB
-  UpdateDay: 2024-07-06T18:01
-  PFirstFoundDay: '2024-06-28T19:54:14.189735'
-  Rank: 2
-- name: 95.164.9.196:2053@trojan@GI
-  server: 95.164.9.196
-  type: trojan
-  country: Gibraltar
-  port: 2053
-  udp: true
-  password: 09191dbf-e7f7-4e7d-b405-c4785ea992bf
-  sni: ftp.debian.org
-  skip-cert-verify: true
-  success_rate: 90.0
-  minimum: 239.08
-  maximum: 304.2
-  average: 594.6666666666666
-  ISO: GI
-  UpdateDay: 2024-07-06T18:01
-  PFirstFoundDay: '2024-04-09T18:20:59.863065'
-  Rank: 2
-- name: 51.44.35.78:22222@trojan@US
-  server: 51.44.35.78
-  type: trojan
-  country: United States
-  port: 22222
-  password: telegram-id-privatevpns
-  sni: trojan.burgerip.co.uk
-  skip-cert-verify: true
-  udp: true
-  success_rate: 85.71428571428571
-  minimum: 166.29
-  maximum: 1164.89
-  average: 633.5
-  ISO: US
-  UpdateDay: 2024-07-06T18:01
-  PFirstFoundDay: 2024-07-06T10:19
-  Rank: 2
-- name: 192.74.250.208:38000@vmess@US
-  server: 192.74.250.208
-  port: 38000
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 64
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /path/353112182726
-    headers:
-      host: 192.74.250.208
-  udp: true
-  success_rate: 88.88888888888889
-  minimum: 196.68
-  maximum: 196.68
-  average: 699.875
-  country: United States
-  ISO: US
-  UpdateDay: 2024-07-06T18:01
-  PFirstFoundDay: '2024-06-08T11:07:39.160696'
-  Rank: 2
-- alterId: 0
-  cipher: auto
-  h2-opts: {}
-  http-opts: {}
-  name: 65.20.113.203:80@vmess@US
-  network: ws
-  port: 80
-  server: 65.20.113.203
-  skip-cert-verify: true
-  type: vmess
-  udp: true
-  uuid: 251780c1-1501-43b3-be2a-d144a20d479a
-  ws-opts:
-    headers:
-      host: 65.20.113.203
-    path: /Nbs2DSTSkFW6MrrFQHeSDQ7
-  success_rate: 70.0
-  minimum: 213.36
-  maximum: 256.54
-  average: 940.0
-  country: United States
-  ISO: US
-  UpdateDay: 2024-07-06T18:01
-  PFirstFoundDay: '2024-03-15T21:35:20.050940'
-  Rank: 2
-- name: 47.238.0.114:2096@trojan@US
-  server: 47.238.0.114
-  type: trojan
-  port: 2096
-  udp: true
-  password: moist
-  sni: trojan.freenods.sbs
-  skip-cert-verify: true
-  network: ws
-  success_rate: 71.42857142857143
-  minimum: 67.77
-  maximum: 3089.22
-  average: 977.6
-  country: United States
-  ISO: US
-  UpdateDay: 2024-07-06T18:01
-  PFirstFoundDay: '2024-07-04T10:28:12.066463'
-  Rank: 2
-- name: s1c.v2.v001sss.xyz:2082@vmess@US
-  server: s1c.v2.v001sss.xyz
-  port: 2082
-  type: vmess
-  uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      host: s1c.v2.v001sss.xyz
-  udp: true
-  success_rate: 60.0
-  minimum: 266.75
-  maximum: 266.75
-  average: 1569.0
-  country: United States
-  ISO: US
-  UpdateDay: 2024-07-06T18:03
-  PFirstFoundDay: 2024-07-06T14:27
-  Rank: -604
+  Rank: 3
 proxy-groups:
 - name: PG-default
   type: fallback
@@ -323,20 +251,17 @@ proxy-groups:
   interval: 200
   strategy: round-robin
   proxies:
-  - 139.162.84.183:3306@trojan@NL
-  - 172.105.220.7:3306@trojan@US
-  - 3.127.6.155:22222@trojan@US
-  - 38.180.70.206:80@vmess@US
-  - 3.122.17.59:22222@trojan@US
-  - 35.158.183.21:22222@trojan@US
+  - 211.72.156.17:23555@trojan@TW
+  - 18.202.119.149:22222@trojan@US
   - 213.35.113.141:8080@vmess@SE
-  - 23.106.35.90:28331@trojan@GB
+  - 16.170.114.68:22222@trojan@US
+  - 54.247.179.84:22222@trojan@US
   - 95.164.9.196:2053@trojan@GI
-  - 51.44.35.78:22222@trojan@US
   - 192.74.250.208:38000@vmess@US
-  - 65.20.113.203:80@vmess@US
-  - 47.238.0.114:2096@trojan@US
-  - s1c.v2.v001sss.xyz:2082@vmess@US
+  - 16.170.139.92:22222@trojan@US
+  - 38.180.70.206:80@vmess@US
+  - 23.106.35.90:28331@trojan@GB
+  - 3.122.17.59:22222@trojan@US
   tolerance: 250
 rule-providers:
   anting:
