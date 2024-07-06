@@ -47,10 +47,10 @@ proxies:
   success_rate: 100.0
   minimum: 59.98
   maximum: 76.08
-  average: 216.8
+  average: 236.5
   country: Taiwan
   ISO: TW
-  UpdateDay: 2024-07-07T04:30
+  UpdateDay: 2024-07-07T05:00
   PFirstFoundDay: '2024-07-03T16:22:16.652160'
   Rank: 2
 - name: 154.21.194.213:16024@vmess@US
@@ -70,30 +70,14 @@ proxies:
     path: /
     headers:
       host: 154.21.194.213
-  success_rate: 90.0
+  success_rate: 100.0
   minimum: 186.18
   maximum: 1211.12
-  average: 408.3333333333333
+  average: 410.2
   ISO: US
-  UpdateDay: 2024-07-07T04:30
+  UpdateDay: 2024-07-07T05:01
   PFirstFoundDay: 2024-07-06T20:20
   Rank: 2
-- name: at1.trojanvpn.de:2053@trojan@GI
-  server: at1.trojanvpn.de
-  type: trojan
-  port: 2053
-  password: 09191dbf-e7f7-4e7d-b405-c4785ea992bf
-  sni: ftp.debian.org
-  skip-cert-verify: true
-  success_rate: 100.0
-  minimum: 278.79
-  maximum: 3272.73
-  average: 522.4
-  country: Gibraltar
-  ISO: GI
-  UpdateDay: 2024-07-07T04:32
-  PFirstFoundDay: '2024-04-09T22:19:55.313354'
-  Rank: -660
 - name: 95.164.9.196:2053@trojan@GI
   server: 95.164.9.196
   type: trojan
@@ -106,11 +90,27 @@ proxies:
   success_rate: 90.0
   minimum: 281.14
   maximum: 1295.76
-  average: 530.4444444444445
+  average: 527.2222222222222
   ISO: GI
-  UpdateDay: 2024-07-07T04:30
+  UpdateDay: 2024-07-07T05:01
   PFirstFoundDay: '2024-04-09T18:20:59.863065'
   Rank: 2
+- name: at1.trojanvpn.de:2053@trojan@GI
+  server: at1.trojanvpn.de
+  type: trojan
+  port: 2053
+  password: 09191dbf-e7f7-4e7d-b405-c4785ea992bf
+  sni: ftp.debian.org
+  skip-cert-verify: true
+  success_rate: 100.0
+  minimum: 278.79
+  maximum: 3272.73
+  average: 528.7
+  country: Gibraltar
+  ISO: GI
+  UpdateDay: 2024-07-07T05:01
+  PFirstFoundDay: '2024-04-09T22:19:55.313354'
+  Rank: -460
 - alterId: 0
   cipher: auto
   name: onea.flha.ru:2095@vmess@US
@@ -125,13 +125,13 @@ proxies:
     headers:
       host: onea.flha.ru
     path: /
-  success_rate: 100.0
+  success_rate: 90.0
   minimum: 245.33
   maximum: 3281.31
-  average: 570.9
+  average: 568.3333333333334
   country: United States
   ISO: US
-  UpdateDay: 2024-07-07T04:31
+  UpdateDay: 2024-07-07T05:01
   PFirstFoundDay: '2024-05-26T09:50:32.372314'
   Rank: 2
 - name: 38.180.70.206:80@vmess@US
@@ -150,14 +150,59 @@ proxies:
     path: /NkXnI0l6LGkotMyATWmx5f6MblN
     headers:
       host: 38.180.70.206
-  success_rate: 70.0
+  success_rate: 90.0
   minimum: 163.4
   maximum: 1184.3
-  average: 596.2857142857143
+  average: 616.1111111111111
   ISO: US
-  UpdateDay: 2024-07-07T04:30
+  UpdateDay: 2024-07-07T05:00
   PFirstFoundDay: '2024-07-01T17:58:32.326093'
   Rank: 2
+- name: 192.74.250.208:38000@vmess@US
+  server: 192.74.250.208
+  port: 38000
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  alterId: 64
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /path/353112182726
+    headers:
+      host: 192.74.250.208
+  udp: true
+  success_rate: 90.0
+  minimum: 196.68
+  maximum: 196.68
+  average: 636.4444444444445
+  country: United States
+  ISO: US
+  UpdateDay: 2024-07-07T05:03
+  PFirstFoundDay: '2024-06-08T11:07:39.160696'
+  Rank: -966
+- type: vmess
+  name: s1c.v2.v001sss.xyz:2082@vmess@US
+  ws-opts:
+    path: /
+    headers:
+      host: s1c.v2.v001sss.xyz
+  server: s1c.v2.v001sss.xyz
+  port: '2082'
+  uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
+  alterId: '0'
+  cipher: auto
+  network: ws
+  success_rate: 80.0
+  minimum: 257.46
+  maximum: 1264.15
+  average: 1254.625
+  country: United States
+  ISO: US
+  UpdateDay: 2024-07-07T05:03
+  PFirstFoundDay: 2024-07-06T20:27
+  Rank: -1154
 proxy-groups:
 - name: PG-default
   type: fallback
@@ -167,10 +212,12 @@ proxy-groups:
   proxies:
   - 211.72.156.17:23555@trojan@TW
   - 154.21.194.213:16024@vmess@US
-  - at1.trojanvpn.de:2053@trojan@GI
   - 95.164.9.196:2053@trojan@GI
+  - at1.trojanvpn.de:2053@trojan@GI
   - onea.flha.ru:2095@vmess@US
   - 38.180.70.206:80@vmess@US
+  - 192.74.250.208:38000@vmess@US
+  - s1c.v2.v001sss.xyz:2082@vmess@US
   tolerance: 250
 rules:
 - MATCH,PG-default
