@@ -50,9 +50,9 @@ proxies:
   success_rate: 90.0
   minimum: 163.4
   maximum: 1184.3
-  average: 363.55555555555554
+  average: 394.44444444444446
   ISO: US
-  UpdateDay: 2024-07-07T00:31
+  UpdateDay: 2024-07-07T01:01
   PFirstFoundDay: '2024-07-01T17:58:32.326093'
   Rank: 2
 - name: 51.44.35.78:22222@trojan@US
@@ -67,27 +67,10 @@ proxies:
   success_rate: 100.0
   minimum: 183.05
   maximum: 3232.55
-  average: 447.7
+  average: 486.9
   ISO: US
-  UpdateDay: 2024-07-07T00:31
+  UpdateDay: 2024-07-07T01:01
   PFirstFoundDay: 2024-07-06T10:19
-  Rank: 2
-- name: 95.164.9.196:2053@trojan@GI
-  server: 95.164.9.196
-  type: trojan
-  country: Gibraltar
-  port: 2053
-  password: 09191dbf-e7f7-4e7d-b405-c4785ea992bf
-  sni: ftp.debian.org
-  skip-cert-verify: true
-  udp: true
-  success_rate: 100.0
-  minimum: 281.14
-  maximum: 1295.76
-  average: 552.4
-  ISO: GI
-  UpdateDay: 2024-07-07T00:31
-  PFirstFoundDay: '2024-04-09T18:20:59.863065'
   Rank: 2
 - name: 154.21.194.213:16024@vmess@US
   server: 154.21.194.213
@@ -106,37 +89,31 @@ proxies:
     path: /
     headers:
       host: 154.21.194.213
-  success_rate: 90.0
+  success_rate: 60.0
   minimum: 186.18
   maximum: 1211.12
-  average: 644.3333333333334
+  average: 539.8333333333334
   ISO: US
-  UpdateDay: 2024-07-07T00:31
+  UpdateDay: 2024-07-07T01:01
   PFirstFoundDay: 2024-07-06T20:20
-  Rank: 2
-- alterId: 0
-  cipher: auto
-  name: onea.flha.ru:2095@vmess@US
-  network: ws
-  port: 2095
-  server: onea.flha.ru
+  Rank: 42
+- name: 95.164.9.196:2053@trojan@GI
+  server: 95.164.9.196
+  type: trojan
+  country: Gibraltar
+  port: 2053
+  password: 09191dbf-e7f7-4e7d-b405-c4785ea992bf
+  sni: ftp.debian.org
   skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 7a737f41-b792-4260-94ff-3d864da67b80
-  ws-opts:
-    headers:
-      host: onea.flha.ru
-    path: /
-  success_rate: 80.0
-  minimum: 245.33
-  maximum: 3281.31
-  average: 734.75
-  country: United States
-  ISO: US
-  UpdateDay: 2024-07-07T00:31
-  PFirstFoundDay: '2024-05-26T09:50:32.372314'
-  Rank: -180
+  udp: true
+  success_rate: 100.0
+  minimum: 281.14
+  maximum: 1295.76
+  average: 552.9
+  ISO: GI
+  UpdateDay: 2024-07-07T01:01
+  PFirstFoundDay: '2024-04-09T18:20:59.863065'
+  Rank: 2
 - name: 213.35.113.141:8080@vmess@SE
   server: 213.35.113.141
   type: vmess
@@ -157,32 +134,36 @@ proxies:
   success_rate: 100.0
   minimum: 192.83
   maximum: 334.6
-  average: 819.9
+  average: 747.1
   ISO: SE
-  UpdateDay: 2024-07-07T00:31
+  UpdateDay: 2024-07-07T01:01
   PFirstFoundDay: '2024-06-11T19:31:40.524545'
   Rank: 2
-- type: vmess
-  name: s1c.v2.v001sss.xyz:2082@vmess@US
-  ws-opts:
-    path: /
-    headers:
-      host: s1c.v2.v001sss.xyz
-  server: s1c.v2.v001sss.xyz
-  port: '2082'
-  uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
-  alterId: '0'
+- name: 38.11.73.119:37001@vmess@US
+  server: 38.11.73.119
+  type: vmess
+  country: United States
+  port: 37001
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  alterId: 64
   cipher: auto
   network: ws
-  success_rate: 60.0
-  minimum: 257.46
-  maximum: 1264.15
-  average: 1964.0
-  country: United States
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /path/131017282829
+    headers:
+      host: 38.11.73.119
+  success_rate: 50.0
+  minimum: 233.7
+  maximum: 265.49
+  average: 1337.8
   ISO: US
-  UpdateDay: 2024-07-07T00:31
-  PFirstFoundDay: 2024-07-06T20:27
-  Rank: -488
+  UpdateDay: 2024-07-07T01:01
+  PFirstFoundDay: '2024-06-22T11:54:32.322406'
+  Rank: -260
 proxy-groups:
 - name: PG-default
   type: fallback
@@ -192,11 +173,10 @@ proxy-groups:
   proxies:
   - 38.180.70.206:80@vmess@US
   - 51.44.35.78:22222@trojan@US
-  - 95.164.9.196:2053@trojan@GI
   - 154.21.194.213:16024@vmess@US
-  - onea.flha.ru:2095@vmess@US
+  - 95.164.9.196:2053@trojan@GI
   - 213.35.113.141:8080@vmess@SE
-  - s1c.v2.v001sss.xyz:2082@vmess@US
+  - 38.11.73.119:37001@vmess@US
   tolerance: 250
 rules:
 - MATCH,PG-default
