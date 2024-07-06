@@ -31,6 +31,28 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
+- type: trojan
+  name: 211.72.156.17:23555@trojan@TW
+  server: 211.72.156.17
+  port: 23555
+  password: moist
+  udp: true
+  skip-cert-verify: true
+  sni: trojan.freenods.sbs
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      host: trojan.freenods.sbs
+  success_rate: 90.0
+  minimum: 59.98
+  maximum: 76.08
+  average: 286.55555555555554
+  country: Taiwan
+  ISO: TW
+  UpdateDay: 2024-07-07T02:31
+  PFirstFoundDay: '2024-07-03T16:22:16.652160'
+  Rank: 2
 - name: 38.180.70.206:80@vmess@US
   server: 38.180.70.206
   type: vmess
@@ -47,12 +69,12 @@ proxies:
     path: /NkXnI0l6LGkotMyATWmx5f6MblN
     headers:
       host: 38.180.70.206
-  success_rate: 80.0
+  success_rate: 90.0
   minimum: 163.4
   maximum: 1184.3
-  average: 342.5
+  average: 309.1111111111111
   ISO: US
-  UpdateDay: 2024-07-07T02:01
+  UpdateDay: 2024-07-07T02:31
   PFirstFoundDay: '2024-07-01T17:58:32.326093'
   Rank: 2
 - name: 154.21.194.213:16024@vmess@US
@@ -72,12 +94,12 @@ proxies:
     path: /
     headers:
       host: 154.21.194.213
-  success_rate: 70.0
+  success_rate: 90.0
   minimum: 186.18
   maximum: 1211.12
-  average: 494.7142857142857
+  average: 453.8888888888889
   ISO: US
-  UpdateDay: 2024-07-07T02:01
+  UpdateDay: 2024-07-07T02:31
   PFirstFoundDay: 2024-07-06T20:20
   Rank: 2
 - name: 213.35.113.141:8080@vmess@SE
@@ -100,9 +122,9 @@ proxies:
   success_rate: 100.0
   minimum: 192.83
   maximum: 334.6
-  average: 600.5
+  average: 535.4
   ISO: SE
-  UpdateDay: 2024-07-07T02:01
+  UpdateDay: 2024-07-07T02:31
   PFirstFoundDay: '2024-06-11T19:31:40.524545'
   Rank: 2
 - name: 95.164.9.196:2053@trojan@GI
@@ -117,9 +139,9 @@ proxies:
   success_rate: 100.0
   minimum: 281.14
   maximum: 1295.76
-  average: 605.6
+  average: 636.4
   ISO: GI
-  UpdateDay: 2024-07-07T02:01
+  UpdateDay: 2024-07-07T02:31
   PFirstFoundDay: '2024-04-09T18:20:59.863065'
   Rank: 2
 - alterId: 0
@@ -136,13 +158,13 @@ proxies:
     headers:
       host: onea.flha.ru
     path: /
-  success_rate: 70.0
+  success_rate: 90.0
   minimum: 245.33
   maximum: 3281.31
-  average: 714.8571428571429
+  average: 945.0
   country: United States
   ISO: US
-  UpdateDay: 2024-07-07T02:01
+  UpdateDay: 2024-07-07T02:31
   PFirstFoundDay: '2024-05-26T09:50:32.372314'
   Rank: 2
 - name: 38.11.73.119:37001@vmess@US
@@ -165,11 +187,32 @@ proxies:
   success_rate: 60.0
   minimum: 233.7
   maximum: 265.49
-  average: 1255.1666666666667
+  average: 1076.6666666666667
   ISO: US
-  UpdateDay: 2024-07-07T02:01
+  UpdateDay: 2024-07-07T02:31
   PFirstFoundDay: '2024-06-22T11:54:32.322406'
-  Rank: -374
+  Rank: -372
+- type: vmess
+  name: s1c.v2.v001sss.xyz:2082@vmess@US
+  ws-opts:
+    path: /
+    headers:
+      host: s1c.v2.v001sss.xyz
+  server: s1c.v2.v001sss.xyz
+  port: '2082'
+  uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
+  alterId: '0'
+  cipher: auto
+  network: ws
+  success_rate: 60.0
+  minimum: 257.46
+  maximum: 1264.15
+  average: 1459.6666666666667
+  country: United States
+  ISO: US
+  UpdateDay: 2024-07-07T02:32
+  PFirstFoundDay: 2024-07-06T20:27
+  Rank: -973
 proxy-groups:
 - name: PG-default
   type: fallback
@@ -177,12 +220,14 @@ proxy-groups:
   interval: 200
   strategy: round-robin
   proxies:
+  - 211.72.156.17:23555@trojan@TW
   - 38.180.70.206:80@vmess@US
   - 154.21.194.213:16024@vmess@US
   - 213.35.113.141:8080@vmess@SE
   - 95.164.9.196:2053@trojan@GI
   - onea.flha.ru:2095@vmess@US
   - 38.11.73.119:37001@vmess@US
+  - s1c.v2.v001sss.xyz:2082@vmess@US
   tolerance: 250
 rules:
 - MATCH,PG-default
