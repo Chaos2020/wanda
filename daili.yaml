@@ -47,72 +47,13 @@ proxies:
     path: /NkXnI0l6LGkotMyATWmx5f6MblN
     headers:
       host: 38.180.70.206
-  success_rate: 90.0
+  success_rate: 80.0
   minimum: 163.4
   maximum: 1184.3
-  average: 394.44444444444446
+  average: 384.75
   ISO: US
-  UpdateDay: 2024-07-07T01:01
+  UpdateDay: 2024-07-07T01:31
   PFirstFoundDay: '2024-07-01T17:58:32.326093'
-  Rank: 2
-- name: 51.44.35.78:22222@trojan@US
-  server: 51.44.35.78
-  type: trojan
-  country: United States
-  port: 22222
-  udp: true
-  password: telegram-id-privatevpns
-  sni: trojan.burgerip.co.uk
-  network: tcp
-  success_rate: 100.0
-  minimum: 183.05
-  maximum: 3232.55
-  average: 486.9
-  ISO: US
-  UpdateDay: 2024-07-07T01:01
-  PFirstFoundDay: 2024-07-06T10:19
-  Rank: 2
-- name: 154.21.194.213:16024@vmess@US
-  server: 154.21.194.213
-  type: vmess
-  country: United States
-  port: 16024
-  uuid: 29b6d6fc-72af-456e-9b6c-3573958e6fb7
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 154.21.194.213
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      host: 154.21.194.213
-  success_rate: 60.0
-  minimum: 186.18
-  maximum: 1211.12
-  average: 539.8333333333334
-  ISO: US
-  UpdateDay: 2024-07-07T01:01
-  PFirstFoundDay: 2024-07-06T20:20
-  Rank: 42
-- name: 95.164.9.196:2053@trojan@GI
-  server: 95.164.9.196
-  type: trojan
-  country: Gibraltar
-  port: 2053
-  password: 09191dbf-e7f7-4e7d-b405-c4785ea992bf
-  sni: ftp.debian.org
-  skip-cert-verify: true
-  udp: true
-  success_rate: 100.0
-  minimum: 281.14
-  maximum: 1295.76
-  average: 552.9
-  ISO: GI
-  UpdateDay: 2024-07-07T01:01
-  PFirstFoundDay: '2024-04-09T18:20:59.863065'
   Rank: 2
 - name: 213.35.113.141:8080@vmess@SE
   server: 213.35.113.141
@@ -134,36 +75,28 @@ proxies:
   success_rate: 100.0
   minimum: 192.83
   maximum: 334.6
-  average: 747.1
+  average: 551.3
   ISO: SE
-  UpdateDay: 2024-07-07T01:01
+  UpdateDay: 2024-07-07T01:31
   PFirstFoundDay: '2024-06-11T19:31:40.524545'
   Rank: 2
-- name: 38.11.73.119:37001@vmess@US
-  server: 38.11.73.119
-  type: vmess
-  country: United States
-  port: 37001
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 64
-  cipher: auto
-  network: ws
-  http-opts: {}
-  h2-opts: {}
-  tls: true
+- name: 95.164.9.196:2053@trojan@GI
+  server: 95.164.9.196
+  type: trojan
+  country: Gibraltar
+  port: 2053
+  password: 09191dbf-e7f7-4e7d-b405-c4785ea992bf
+  sni: ftp.debian.org
   skip-cert-verify: true
-  ws-opts:
-    path: /path/131017282829
-    headers:
-      host: 38.11.73.119
-  success_rate: 50.0
-  minimum: 233.7
-  maximum: 265.49
-  average: 1337.8
-  ISO: US
-  UpdateDay: 2024-07-07T01:01
-  PFirstFoundDay: '2024-06-22T11:54:32.322406'
-  Rank: -260
+  udp: true
+  success_rate: 100.0
+  minimum: 281.14
+  maximum: 1295.76
+  average: 560.1
+  ISO: GI
+  UpdateDay: 2024-07-07T01:31
+  PFirstFoundDay: '2024-04-09T18:20:59.863065'
+  Rank: 2
 proxy-groups:
 - name: PG-default
   type: fallback
@@ -172,11 +105,8 @@ proxy-groups:
   strategy: round-robin
   proxies:
   - 38.180.70.206:80@vmess@US
-  - 51.44.35.78:22222@trojan@US
-  - 154.21.194.213:16024@vmess@US
-  - 95.164.9.196:2053@trojan@GI
   - 213.35.113.141:8080@vmess@SE
-  - 38.11.73.119:37001@vmess@US
+  - 95.164.9.196:2053@trojan@GI
   tolerance: 250
 rule-providers:
   anting:
