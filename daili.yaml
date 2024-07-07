@@ -31,6 +31,38 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
+- name: 3.120.160.251:22222@trojan@US
+  server: 3.120.160.251
+  port: 22222
+  type: trojan
+  password: telegram-id-directvpn
+  sni: trojan.burgerip.co.uk
+  skip-cert-verify: false
+  success_rate: 70.0
+  minimum: 150.93
+  maximum: 1170.33
+  average: 308.7142857142857
+  country: United States
+  ISO: US
+  UpdateDay: 2024-07-07T16:01
+  PFirstFoundDay: 2024-07-07T10:14
+  Rank: 2
+- name: 52.28.92.166:22222@trojan@US
+  server: 52.28.92.166
+  type: trojan
+  country: United States
+  port: 22222
+  password: telegram-id-directvpn
+  skip-cert-verify: true
+  udp: true
+  success_rate: 80.0
+  minimum: 144.6
+  maximum: 3149.03
+  average: 346.25
+  ISO: US
+  UpdateDay: 2024-07-07T16:01
+  PFirstFoundDay: 2024-07-07T10:18
+  Rank: 2
 - name: 38.180.70.206:80@vmess@US
   server: 38.180.70.206
   type: vmess
@@ -47,30 +79,14 @@ proxies:
     path: /NkXnI0l6LGkotMyATWmx5f6MblN
     headers:
       host: 38.180.70.206
-  success_rate: 80.0
+  success_rate: 85.71428571428571
   minimum: 159.84
   maximum: 1183.76
-  average: 322.75
+  average: 347.6666666666667
   ISO: US
-  UpdateDay: 2024-07-07T15:31
+  UpdateDay: 2024-07-07T16:01
   PFirstFoundDay: '2024-07-01T17:58:32.326093'
   Rank: 2
-- name: 52.28.92.166:22222@trojan@US
-  server: 52.28.92.166
-  type: trojan
-  country: United States
-  port: 22222
-  password: telegram-id-directvpn
-  skip-cert-verify: true
-  udp: true
-  success_rate: 60.0
-  minimum: 144.6
-  maximum: 3149.03
-  average: 336.0
-  ISO: US
-  UpdateDay: 2024-07-07T15:31
-  PFirstFoundDay: 2024-07-07T10:18
-  Rank: 21
 - name: 3.120.123.129:22222@trojan@US
   server: 3.120.123.129
   type: trojan
@@ -79,12 +95,12 @@ proxies:
   password: telegram-id-privatevpns
   skip-cert-verify: true
   udp: true
-  success_rate: 87.5
+  success_rate: 90.0
   minimum: 145.9
   maximum: 182.76
-  average: 396.2857142857143
+  average: 387.6666666666667
   ISO: US
-  UpdateDay: 2024-07-07T15:31
+  UpdateDay: 2024-07-07T16:01
   PFirstFoundDay: 2024-07-07T10:13
   Rank: 2
 - name: 95.164.9.196:2053@trojan@GI
@@ -96,12 +112,12 @@ proxies:
   sni: ftp.debian.org
   skip-cert-verify: true
   udp: true
-  success_rate: 80.0
+  success_rate: 85.71428571428571
   minimum: 261.77
   maximum: 295.19
-  average: 571.75
+  average: 562.5
   ISO: GI
-  UpdateDay: 2024-07-07T15:31
+  UpdateDay: 2024-07-07T16:01
   PFirstFoundDay: '2024-04-09T18:20:59.863065'
   Rank: 2
 - name: 23.95.68.243:80@vmess@US
@@ -120,13 +136,13 @@ proxies:
     path: /
     headers:
       host: 23.95.68.243
-  success_rate: 90.0
+  success_rate: 100.0
   minimum: 215.94
   maximum: 1254.21
-  average: 608.4444444444445
+  average: 641.3
   country: United States
   ISO: US
-  UpdateDay: 2024-07-07T15:31
+  UpdateDay: 2024-07-07T16:01
   PFirstFoundDay: 2024-07-07T10:18
   Rank: 2
 - name: 38.95.115.176:16424@vmess@US
@@ -145,14 +161,34 @@ proxies:
     path: /
     headers:
       host: 38.95.115.176
-  success_rate: 50.0
+  success_rate: 70.0
   minimum: 209.27
   maximum: 228.58
-  average: 1296.75
+  average: 1037.5714285714287
   ISO: US
-  UpdateDay: 2024-07-07T15:31
+  UpdateDay: 2024-07-07T16:01
   PFirstFoundDay: 2024-07-07T10:13
-  Rank: -45
+  Rank: -3
+- name: 116.47.10.236:27335@trojan@KR
+  server: 116.47.10.236
+  port: 27335
+  type: trojan
+  password: moist
+  sni: trojan.freenods.sbs
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: trojan.freenods.sbs
+  success_rate: 50.0
+  minimum: 138.11
+  maximum: 1146.67
+  average: 1093.6
+  country: South Korea
+  ISO: KR
+  UpdateDay: 2024-07-07T16:01
+  PFirstFoundDay: '2024-07-02T13:48:25.099177'
+  Rank: -74
 proxy-groups:
 - name: PG-default
   type: fallback
@@ -160,12 +196,14 @@ proxy-groups:
   interval: 200
   strategy: round-robin
   proxies:
-  - 38.180.70.206:80@vmess@US
+  - 3.120.160.251:22222@trojan@US
   - 52.28.92.166:22222@trojan@US
+  - 38.180.70.206:80@vmess@US
   - 3.120.123.129:22222@trojan@US
   - 95.164.9.196:2053@trojan@GI
   - 23.95.68.243:80@vmess@US
   - 38.95.115.176:16424@vmess@US
+  - 116.47.10.236:27335@trojan@KR
   tolerance: 250
 rule-providers:
   anting:
