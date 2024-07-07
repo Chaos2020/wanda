@@ -50,10 +50,43 @@ proxies:
   success_rate: 100.0
   minimum: 163.4
   maximum: 1184.3
-  average: 345.5
+  average: 400.0
   ISO: US
-  UpdateDay: 2024-07-07T09:31
+  UpdateDay: 2024-07-07T10:01
   PFirstFoundDay: '2024-07-01T17:58:32.326093'
+  Rank: 2
+- name: 95.164.9.196:2053@trojan@GI
+  server: 95.164.9.196
+  type: trojan
+  country: Gibraltar
+  port: 2053
+  password: 09191dbf-e7f7-4e7d-b405-c4785ea992bf
+  sni: ftp.debian.org
+  skip-cert-verify: true
+  udp: true
+  success_rate: 90.0
+  minimum: 281.14
+  maximum: 1295.76
+  average: 537.1111111111111
+  ISO: GI
+  UpdateDay: 2024-07-07T10:01
+  PFirstFoundDay: '2024-04-09T18:20:59.863065'
+  Rank: 2
+- name: at1.trojanvpn.de:2053@trojan@GI
+  server: at1.trojanvpn.de
+  type: trojan
+  port: 2053
+  password: 09191dbf-e7f7-4e7d-b405-c4785ea992bf
+  sni: ftp.debian.org
+  skip-cert-verify: true
+  success_rate: 100.0
+  minimum: 278.79
+  maximum: 3272.73
+  average: 552.4
+  country: Gibraltar
+  ISO: GI
+  UpdateDay: 2024-07-07T10:01
+  PFirstFoundDay: '2024-04-09T22:19:55.313354'
   Rank: 2
 - name: 154.21.194.213:16024@vmess@US
   server: 154.21.194.213
@@ -72,46 +105,13 @@ proxies:
     path: /
     headers:
       host: 154.21.194.213
-  success_rate: 80.0
+  success_rate: 70.0
   minimum: 186.18
   maximum: 1211.12
-  average: 421.125
+  average: 716.0
   ISO: US
-  UpdateDay: 2024-07-07T09:31
+  UpdateDay: 2024-07-07T10:01
   PFirstFoundDay: 2024-07-06T20:20
-  Rank: 2
-- name: 95.164.9.196:2053@trojan@GI
-  server: 95.164.9.196
-  type: trojan
-  country: Gibraltar
-  port: 2053
-  password: 09191dbf-e7f7-4e7d-b405-c4785ea992bf
-  sni: ftp.debian.org
-  skip-cert-verify: true
-  udp: true
-  success_rate: 90.0
-  minimum: 281.14
-  maximum: 1295.76
-  average: 544.7777777777778
-  ISO: GI
-  UpdateDay: 2024-07-07T09:31
-  PFirstFoundDay: '2024-04-09T18:20:59.863065'
-  Rank: 2
-- name: at1.trojanvpn.de:2053@trojan@GI
-  server: at1.trojanvpn.de
-  type: trojan
-  port: 2053
-  password: 09191dbf-e7f7-4e7d-b405-c4785ea992bf
-  sni: ftp.debian.org
-  skip-cert-verify: true
-  success_rate: 100.0
-  minimum: 278.79
-  maximum: 3272.73
-  average: 556.1
-  country: Gibraltar
-  ISO: GI
-  UpdateDay: 2024-07-07T09:31
-  PFirstFoundDay: '2024-04-09T22:19:55.313354'
   Rank: 2
 proxy-groups:
 - name: PG-default
@@ -121,9 +121,9 @@ proxy-groups:
   strategy: round-robin
   proxies:
   - 38.180.70.206:80@vmess@US
-  - 154.21.194.213:16024@vmess@US
   - 95.164.9.196:2053@trojan@GI
   - at1.trojanvpn.de:2053@trojan@GI
+  - 154.21.194.213:16024@vmess@US
   tolerance: 250
 rule-providers:
   anting:
