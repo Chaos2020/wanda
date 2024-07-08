@@ -31,44 +31,6 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
-- name: bgroup.node4.t.nodelist-airport.com:50001@trojan@US
-  server: bgroup.node4.t.nodelist-airport.com
-  type: trojan
-  country: United States
-  port: 50001
-  password: 2155145a-b1b5-443a-8977-670f6bd10f02
-  skip-cert-verify: true
-  udp: true
-  success_rate: 60.0
-  minimum: 100.25
-  maximum: 1175.73
-  average: 213.66666666666666
-  ISO: US
-  UpdateDay: 2024-07-08T15:31
-  PFirstFoundDay: 2024-07-05T18:55
-  Rank: -20
-- name: 211.72.156.17:23555@trojan@TW
-  server: 211.72.156.17
-  port: 23555
-  type: trojan
-  password: moist
-  sni: trojan.freenods.sbs
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: ''
-    headers:
-      Host: trojan.freenods.sbs
-  udp: true
-  success_rate: 80.0
-  minimum: 85.67
-  maximum: 1064.66
-  average: 348.75
-  country: Taiwan
-  ISO: TW
-  UpdateDay: 2024-07-08T15:31
-  PFirstFoundDay: '2024-07-03T16:22:16.652160'
-  Rank: 2
 - name: 38.180.70.206:80@vmess@US
   server: 38.180.70.206
   type: vmess
@@ -85,12 +47,12 @@ proxies:
     path: /NkXnI0l6LGkotMyATWmx5f6MblN
     headers:
       host: 38.180.70.206
-  success_rate: 83.33333333333333
+  success_rate: 88.88888888888889
   minimum: 134.33
   maximum: 1168.78
-  average: 472.8
+  average: 451.75
   ISO: US
-  UpdateDay: 2024-07-08T15:31
+  UpdateDay: 2024-07-08T16:01
   PFirstFoundDay: '2024-07-01T17:58:32.326093'
   Rank: 2
 - name: 23.95.68.243:80@vmess@US
@@ -109,15 +71,61 @@ proxies:
     path: /
     headers:
       host: 23.95.68.243
-  success_rate: 85.71428571428571
+  success_rate: 88.88888888888889
   minimum: 221.16
   maximum: 1275.33
-  average: 585.3333333333334
+  average: 550.75
   country: United States
   ISO: US
-  UpdateDay: 2024-07-08T15:31
+  UpdateDay: 2024-07-08T16:01
   PFirstFoundDay: 2024-07-07T10:18
   Rank: 2
+- name: 211.72.156.17:23555@trojan@TW
+  server: 211.72.156.17
+  port: 23555
+  type: trojan
+  password: moist
+  sni: trojan.freenods.sbs
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: ''
+    headers:
+      Host: trojan.freenods.sbs
+  udp: true
+  success_rate: 75.0
+  minimum: 85.67
+  maximum: 1064.66
+  average: 592.1666666666666
+  country: Taiwan
+  ISO: TW
+  UpdateDay: 2024-07-08T16:01
+  PFirstFoundDay: '2024-07-03T16:22:16.652160'
+  Rank: 2
+- name: 192.74.250.208:38000@vmess@US
+  server: 192.74.250.208
+  port: 38000
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  alterId: 64
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /path/353112182726
+    headers:
+      host: 192.74.250.208
+  udp: true
+  success_rate: 60.0
+  minimum: 176.51
+  maximum: 201.61
+  average: 671.3333333333334
+  country: United States
+  ISO: US
+  UpdateDay: 2024-07-08T16:03
+  PFirstFoundDay: '2024-06-08T11:07:39.160696'
+  Rank: -299
 - name: 8.210.100.23:2096@trojan@SG
   server: 8.210.100.23
   port: 2096
@@ -134,10 +142,10 @@ proxies:
   success_rate: 100.0
   minimum: 1065.84
   maximum: 3075.89
-  average: 1097.142857142857
+  average: 813.8
   country: Singapore
   ISO: SG
-  UpdateDay: 2024-07-08T15:31
+  UpdateDay: 2024-07-08T16:01
   PFirstFoundDay: '2024-06-07T11:22:59.960425'
   Rank: 2
 proxy-groups:
@@ -147,10 +155,10 @@ proxy-groups:
   interval: 200
   strategy: round-robin
   proxies:
-  - bgroup.node4.t.nodelist-airport.com:50001@trojan@US
-  - 211.72.156.17:23555@trojan@TW
   - 38.180.70.206:80@vmess@US
   - 23.95.68.243:80@vmess@US
+  - 211.72.156.17:23555@trojan@TW
+  - 192.74.250.208:38000@vmess@US
   - 8.210.100.23:2096@trojan@SG
   tolerance: 250
 rule-providers:
