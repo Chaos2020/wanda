@@ -31,6 +31,25 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
+- name: 211.72.156.17:23555@trojan@TW
+  type: trojan
+  server: 211.72.156.17
+  port: 23555
+  udp: false
+  password: moist
+  skip-cert-verify: false
+  network: tcp
+  client-fingerprint: chrome
+  sni: trojan.freenods.sbs
+  success_rate: 80.0
+  minimum: 65.68
+  maximum: 258.34
+  average: 342.25
+  country: Taiwan
+  ISO: TW
+  UpdateDay: 2024-07-08T10:01
+  PFirstFoundDay: '2024-07-03T16:22:16.652160'
+  Rank: 2
 - name: 23.95.68.243:80@vmess@US
   type: vmess
   server: 23.95.68.243
@@ -50,12 +69,115 @@ proxies:
   success_rate: 60.0
   minimum: 174.3
   maximum: 205.68
-  average: 474.5
+  average: 452.8333333333333
   country: United States
   ISO: US
-  UpdateDay: 2024-07-08T09:31
+  UpdateDay: 2024-07-08T10:01
   PFirstFoundDay: 2024-07-07T10:18
-  Rank: 42
+  Rank: 82
+- name: at1.trojanvpn.de:2053@trojan@GI
+  server: at1.trojanvpn.de
+  type: trojan
+  country: Gibraltar
+  port: 2053
+  password: 09191dbf-e7f7-4e7d-b405-c4785ea992bf
+  sni: ftp.debian.org
+  skip-cert-verify: true
+  udp: true
+  success_rate: 80.0
+  minimum: 256.74
+  maximum: 286.67
+  average: 562.375
+  ISO: GI
+  UpdateDay: 2024-07-08T10:01
+  PFirstFoundDay: '2024-04-09T22:19:55.313354'
+  Rank: 2
+- name: 164.38.155.61:443@trojan@GB
+  server: 164.38.155.61
+  type: trojan
+  country: United Kingdom
+  port: 443
+  password: TeleGram-VPNCTVIP
+  sni: trojan-ws.vpnctvip.dns-dynamic.NeT
+  skip-cert-verify: true
+  ws-opts:
+    path: /proxyIP=proxyip.us.fxxk.dedyn.io
+    headers:
+      Host: trojan-ws.vpnctvip.dns-dynamic.NeT
+  network: ws
+  success_rate: 70.0
+  minimum: 206.12
+  maximum: 224.66
+  average: 635.2857142857143
+  ISO: GB
+  UpdateDay: 2024-07-08T10:01
+  PFirstFoundDay: '2024-05-24T11:50:47.596801'
+  Rank: 2
+- name: 95.164.9.196:2053@trojan@GI
+  server: 95.164.9.196
+  type: trojan
+  port: 2053
+  password: 09191dbf-e7f7-4e7d-b405-c4785ea992bf
+  sni: ftp.debian.org
+  skip-cert-verify: true
+  udp: true
+  success_rate: 90.0
+  minimum: 257.47
+  maximum: 290.64
+  average: 705.0
+  country: Gibraltar
+  ISO: GI
+  UpdateDay: 2024-07-08T10:01
+  PFirstFoundDay: '2024-04-09T18:20:59.863065'
+  Rank: 2
+- alterId: 0
+  cipher: auto
+  name: beyonddsz.cfd:443@vmess@IR
+  network: ws
+  port: 443
+  server: beyonddsz.cfd
+  tls: true
+  type: vmess
+  uuid: 9b456c2a-f2c1-45e1-87a9-b7628b04bb24
+  ws-opts:
+    headers:
+      host: beyonddsz.cfd
+    path: /linkws
+  success_rate: 70.0
+  minimum: 250.42
+  maximum: 250.42
+  average: 855.0
+  country: Iran
+  ISO: IR
+  UpdateDay: 2024-07-08T10:01
+  PFirstFoundDay: '2024-06-25T19:54:03.713441'
+  Rank: 2
+- alterId: 64
+  cipher: auto
+  country: United States
+  h2-opts: {}
+  http-opts: {}
+  name: 107.167.20.185:30000@vmess@US
+  network: ws
+  port: 30000
+  server: 107.167.20.185
+  servername: www.15314695.xyz
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-opts:
+    headers:
+      host: 107.167.20.185
+    path: /path/191019072927
+  success_rate: 80.0
+  minimum: 184.41
+  maximum: 207.49
+  average: 859.25
+  ISO: US
+  UpdateDay: 2024-07-08T10:01
+  PFirstFoundDay: '2024-06-30T11:59:47.631737'
+  Rank: 2
 proxy-groups:
 - name: PG-default
   type: fallback
@@ -63,7 +185,13 @@ proxy-groups:
   interval: 200
   strategy: round-robin
   proxies:
+  - 211.72.156.17:23555@trojan@TW
   - 23.95.68.243:80@vmess@US
+  - at1.trojanvpn.de:2053@trojan@GI
+  - 164.38.155.61:443@trojan@GB
+  - 95.164.9.196:2053@trojan@GI
+  - beyonddsz.cfd:443@vmess@IR
+  - 107.167.20.185:30000@vmess@US
   tolerance: 250
 rules:
 - MATCH,PG-default
