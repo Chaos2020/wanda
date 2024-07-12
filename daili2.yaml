@@ -31,25 +31,32 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
-- name: 154.44.27.210:43005@trojan@US
-  server: 154.44.27.210
-  type: trojan
-  country: United States
-  port: 43005
-  udp: true
-  password: 4CCF9A9AB80E9889198B02ECE7FA08DD
-  sni: j0083.ruixiangseo.xyz
+- name: tls.10.node-for-bigairport.win:11443@vmess@NL
+  server: tls.10.node-for-bigairport.win
+  port: 11443
+  type: vmess
+  uuid: 1b98966d-1326-4ca5-9b96-c87e8a2dfa88
+  alterId: 0
+  cipher: auto
+  tls: true
   skip-cert-verify: true
-  success_rate: 66.66666666666667
-  minimum: 58.48
-  maximum: 93.52
-  average: 135.0
-  ISO: US
-  UpdateDay: 2024-07-12T16:31
-  PFirstFoundDay: 2024-07-09T10:51
-  Rank: 32
-- name: tls.86.node-for-bigairport.win:443@vmess@NL
-  server: tls.86.node-for-bigairport.win
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      host: tls.10.node-for-bigairport.win
+  udp: true
+  success_rate: 50.0
+  minimum: 185.77
+  maximum: 271.16
+  average: 277.0
+  country: The Netherlands
+  ISO: NL
+  UpdateDay: 2024-07-12T17:01
+  PFirstFoundDay: '2024-06-22T09:51:29.371312'
+  Rank: 0
+- name: tls.88.node-for-bigairport.win:443@vmess@NL
+  server: tls.88.node-for-bigairport.win
   port: 443
   type: vmess
   uuid: 1b98966d-1326-4ca5-9b96-c87e8a2dfa88
@@ -61,66 +68,110 @@ proxies:
   ws-opts:
     path: /
     headers:
-      host: tls.86.node-for-bigairport.win
+      host: tls.88.node-for-bigairport.win
   udp: true
   success_rate: 50.0
-  minimum: 171.26
-  maximum: 189.31
-  average: 146.0
+  minimum: 60.44
+  maximum: 92.62
+  average: 300.0
   country: The Netherlands
   ISO: NL
-  UpdateDay: 2024-07-12T16:31
-  PFirstFoundDay: '2024-01-28T22:01:02.714397'
+  UpdateDay: 2024-07-12T17:02
+  PFirstFoundDay: 2024-07-11T20:40
   Rank: 0
-- name: hk5g.xn--vhq70hxyat50h6wk.com:443@vmess@US
-  server: hk5g.xn--vhq70hxyat50h6wk.com
-  type: vmess
+- name: 51.20.113.120:22222@trojan@US
+  server: 51.20.113.120
+  type: trojan
   country: United States
-  port: 443
-  uuid: 47c14f5f-a2cf-4483-87c9-b9688fb1ba56
+  port: 22222
+  udp: true
+  password: telegram-id-privatevpns
+  sni: trojan.burgerip.co.uk
+  network: tcp
+  success_rate: 100.0
+  minimum: 153.73
+  maximum: 172.7
+  average: 481.5
+  ISO: US
+  UpdateDay: 2024-07-12T17:01
+  PFirstFoundDay: 2024-07-12T16:15
+  Rank: 2
+- name: 13.53.118.167:22222@trojan@US
+  server: 13.53.118.167
+  port: 22222
+  type: trojan
+  password: telegram-id-directvpn
+  sni: trojan.burgerip.co.uk
+  skip-cert-verify: true
+  udp: true
+  success_rate: 75.0
+  minimum: 170.27
+  maximum: 202.44
+  average: 495.6666666666667
+  country: United States
+  ISO: US
+  UpdateDay: 2024-07-12T17:02
+  PFirstFoundDay: 2024-07-12T16:15
+  Rank: 2
+- name: 154.44.27.210:43005@trojan@US
+  server: 154.44.27.210
+  type: trojan
+  country: United States
+  port: 43005
+  udp: true
+  password: 4CCF9A9AB80E9889198B02ECE7FA08DD
+  sni: j0083.ruixiangseo.xyz
+  skip-cert-verify: true
+  success_rate: 100.0
+  minimum: 75.29
+  maximum: 3090.18
+  average: 530.0
+  ISO: US
+  UpdateDay: 2024-07-12T17:01
+  PFirstFoundDay: 2024-07-09T10:51
+  Rank: 2
+- name: 37.114.60.196:52465@vmess@DE
+  server: 37.114.60.196
+  type: vmess
+  country: Germany
+  port: 52465
+  uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF
   alterId: 0
   cipher: auto
   network: ws
+  servername: dxobG4aZmk.gafnode.sbs
   http-opts: {}
   h2-opts: {}
+  tls: true
   skip-cert-verify: true
   ws-opts:
-    path: /
+    path: /speedtest
     headers:
-      host: hk5g.xn--vhq70hxyat50h6wk.com
+      host: 37.114.60.196
   success_rate: 50.0
-  minimum: 135.44
-  maximum: 199.97
-  average: 278.0
-  ISO: US
-  UpdateDay: 2024-07-12T16:31
-  PFirstFoundDay: 2024-07-12T14:12
-  Rank: 22
-- name: 23.95.68.243:80@vmess@US
-  type: vmess
-  server: 23.95.68.243
-  port: 80
-  uuid: 211d8a34-9c48-4435-b4bf-343ae1cbda0e
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: google.com
-  http-opts: {}
-  h2-opts: {}
+  minimum: 167.46
+  maximum: 175.78
+  average: 573.0
+  ISO: DE
+  UpdateDay: 2024-07-12T17:01
+  PFirstFoundDay: 2024-07-12T14:14
+  Rank: 0
+- name: ger.aaaa.gay:45900@trojan@LU
+  server: ger.aaaa.gay
+  type: trojan
+  country: Luxembourg
+  port: 45900
+  udp: true
+  password: 7a49ebc8-6235-36b1-b7b4-0864b95bd90a
   skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      host: 23.95.68.243
-  success_rate: 66.66666666666667
-  minimum: 200.92
-  maximum: 258.51
-  average: 514.5
-  country: United States
-  ISO: US
-  UpdateDay: 2024-07-12T16:31
-  PFirstFoundDay: 2024-07-07T10:18
-  Rank: 32
+  success_rate: 50.0
+  minimum: 230.58
+  maximum: 280.49
+  average: 683.0
+  ISO: LU
+  UpdateDay: 2024-07-12T17:03
+  PFirstFoundDay: 2024-07-12T10:09
+  Rank: 0
 - name: 23.254.166.237:2086@vmess@US
   server: 23.254.166.237
   type: vmess
@@ -137,88 +188,14 @@ proxies:
     path: /
     headers:
       host: 23.254.166.237
-  success_rate: 66.66666666666667
-  minimum: 198.08
-  maximum: 291.6
-  average: 521.5
+  success_rate: 100.0
+  minimum: 219.72
+  maximum: 253.01
+  average: 696.6666666666666
   ISO: US
-  UpdateDay: 2024-07-12T16:31
+  UpdateDay: 2024-07-12T17:01
   PFirstFoundDay: '2024-06-19T18:00:03.856532'
-  Rank: 32
-- name: 38.38.148.246:37001@vmess@US
-  server: 38.38.148.246
-  type: vmess
-  country: United States
-  port: 37001
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 64
-  cipher: auto
-  network: ws
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  skip-cert-verify: true
-  ws-opts:
-    path: /path/301830040135
-    headers:
-      host: 38.38.148.246
-  success_rate: 50.0
-  minimum: 190.6
-  maximum: 1215.46
-  average: 686.0
-  ISO: US
-  UpdateDay: 2024-07-12T16:31
-  PFirstFoundDay: '2024-06-22T11:54:25.808287'
-  Rank: 12
-- name: tls.100.node-for-bigairport.win:443@vmess@US
-  server: tls.100.node-for-bigairport.win
-  port: 443
-  type: vmess
-  uuid: 1b98966d-1326-4ca5-9b96-c87e8a2dfa88
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      host: tls.100.node-for-bigairport.win
-  udp: true
-  success_rate: 100.0
-  minimum: 65.88
-  maximum: 184.93
-  average: 690.5
-  country: United States
-  ISO: US
-  UpdateDay: 2024-07-12T16:31
-  PFirstFoundDay: '2024-01-23T11:38:12.629477'
-  Rank: 35
-- name: 108.186.57.252:38001@vmess@US
-  server: 108.186.57.252
-  type: vmess
-  country: United States
-  port: 38001
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 64
-  cipher: auto
-  network: ws
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  skip-cert-verify: true
-  ws-opts:
-    path: /path/351800142602
-    headers:
-      host: 108.186.57.252
-  success_rate: 100.0
-  minimum: 172.03
-  maximum: 185.13
-  average: 781.0
-  ISO: US
-  UpdateDay: 2024-07-12T16:31
-  PFirstFoundDay: '2024-06-22T11:54:34.277429'
-  Rank: 52
+  Rank: 2
 - name: 68.168.31.242:443@vmess@US
   server: 68.168.31.242
   type: vmess
@@ -237,14 +214,111 @@ proxies:
     path: /linkvws
     headers:
       host: 68.168.31.242
-  success_rate: 50.0
-  minimum: 251.24
-  maximum: 265.82
-  average: 809.0
+  success_rate: 66.66666666666667
+  minimum: 267.78
+  maximum: 3286.19
+  average: 725.5
   ISO: US
-  UpdateDay: 2024-07-12T16:31
+  UpdateDay: 2024-07-12T17:01
   PFirstFoundDay: '2024-06-27T21:00:44.091238'
-  Rank: 22
+  Rank: 52
+- name: tls.03.node-for-bigairport.win:12443@vmess@US
+  server: tls.03.node-for-bigairport.win
+  port: 12443
+  type: vmess
+  uuid: 1b98966d-1326-4ca5-9b96-c87e8a2dfa88
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      host: tls.03.node-for-bigairport.win
+  udp: true
+  success_rate: 50.0
+  minimum: 78.0
+  maximum: 80.82
+  average: 816.0
+  country: United States
+  ISO: US
+  UpdateDay: 2024-07-12T17:02
+  PFirstFoundDay: 2024-07-11T20:40
+  Rank: 0
+- name: 45.142.113.238:63546@vmess@DE
+  server: 45.142.113.238
+  type: vmess
+  country: Germany
+  port: 63546
+  uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: dxobG4aZmk.gafnode.sbs
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /speedtest
+    headers:
+      host: 45.142.113.238
+  success_rate: 50.0
+  minimum: 176.87
+  maximum: 218.43
+  average: 817.0
+  ISO: DE
+  UpdateDay: 2024-07-12T17:03
+  PFirstFoundDay: 2024-07-12T14:14
+  Rank: 0
+- name: 172.67.191.234:443@trojan@US
+  server: 172.67.191.234
+  port: 443
+  type: trojan
+  password: 7f2782e1-1f1a-4c5b-b4ae-cead54b8c381
+  sni: nl1.tRojANVpN.xYZ
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: '%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252F'
+    headers:
+      Host: nl1.tRojANVpN.xYZ
+  udp: true
+  success_rate: 66.66666666666667
+  minimum: 195.2
+  maximum: 265.52
+  average: 984.0
+  country: United States
+  ISO: US
+  UpdateDay: 2024-07-12T17:01
+  PFirstFoundDay: '2024-07-03T19:30:17.484204'
+  Rank: 92
+- name: 38.38.148.246:37001@vmess@US
+  server: 38.38.148.246
+  type: vmess
+  country: United States
+  port: 37001
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  alterId: 64
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /path/301830040135
+    headers:
+      host: 38.38.148.246
+  success_rate: 100.0
+  minimum: 202.91
+  maximum: 3224.28
+  average: 990.0
+  ISO: US
+  UpdateDay: 2024-07-12T17:01
+  PFirstFoundDay: '2024-06-22T11:54:25.808287'
+  Rank: 2
 - name: 68.168.31.196:443@vmess@US
   server: 68.168.31.196
   type: vmess
@@ -263,36 +337,36 @@ proxies:
     path: /linkvws
     headers:
       host: 68.168.31.196
-  success_rate: 50.0
-  minimum: 264.78
-  maximum: 281.5
-  average: 846.0
+  success_rate: 100.0
+  minimum: 257.27
+  maximum: 279.01
+  average: 1059.3333333333333
   ISO: US
-  UpdateDay: 2024-07-12T16:31
+  UpdateDay: 2024-07-12T17:01
   PFirstFoundDay: 2024-07-12T10:14
-  Rank: 12
-- name: 172.67.191.234:443@trojan@US
-  server: 172.67.191.234
-  port: 443
-  type: trojan
-  password: 7f2782e1-1f1a-4c5b-b4ae-cead54b8c381
-  sni: nl1.tRojANVpN.xYZ
+  Rank: 2
+- type: trojan
+  name: 116.47.10.236:27335@trojan@KR
+  server: 116.47.10.236
+  port: 27335
+  password: moist
+  udp: true
   skip-cert-verify: true
+  sni: trojan.freenods.sbs
   network: ws
   ws-opts:
-    path: '%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252F'
+    path: /
     headers:
-      Host: nl1.tRojANVpN.xYZ
-  udp: true
+      host: trojan.freenods.sbs
   success_rate: 50.0
-  minimum: 231.61
-  maximum: 266.09
-  average: 1557.0
-  country: United States
-  ISO: US
-  UpdateDay: 2024-07-12T16:31
-  PFirstFoundDay: '2024-07-03T19:30:17.484204'
-  Rank: 37
+  minimum: 129.64
+  maximum: 129.64
+  average: 1074.0
+  country: South Korea
+  ISO: KR
+  UpdateDay: 2024-07-12T17:01
+  PFirstFoundDay: '2024-07-02T13:48:25.099177'
+  Rank: -5
 proxy-groups:
 - name: PG-default
   type: fallback
@@ -300,17 +374,21 @@ proxy-groups:
   interval: 200
   strategy: round-robin
   proxies:
+  - tls.10.node-for-bigairport.win:11443@vmess@NL
+  - tls.88.node-for-bigairport.win:443@vmess@NL
+  - 51.20.113.120:22222@trojan@US
+  - 13.53.118.167:22222@trojan@US
   - 154.44.27.210:43005@trojan@US
-  - tls.86.node-for-bigairport.win:443@vmess@NL
-  - hk5g.xn--vhq70hxyat50h6wk.com:443@vmess@US
-  - 23.95.68.243:80@vmess@US
+  - 37.114.60.196:52465@vmess@DE
+  - ger.aaaa.gay:45900@trojan@LU
   - 23.254.166.237:2086@vmess@US
-  - 38.38.148.246:37001@vmess@US
-  - tls.100.node-for-bigairport.win:443@vmess@US
-  - 108.186.57.252:38001@vmess@US
   - 68.168.31.242:443@vmess@US
-  - 68.168.31.196:443@vmess@US
+  - tls.03.node-for-bigairport.win:12443@vmess@US
+  - 45.142.113.238:63546@vmess@DE
   - 172.67.191.234:443@trojan@US
+  - 38.38.148.246:37001@vmess@US
+  - 68.168.31.196:443@vmess@US
+  - 116.47.10.236:27335@trojan@KR
   tolerance: 250
 rules:
 - MATCH,PG-default
