@@ -31,9 +31,26 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
-- name: tls.92.node-for-bigairport.win:443@vmess@NL
-  server: tls.92.node-for-bigairport.win
-  port: 443
+- name: sg005.421421.xyz:20230@trojan@SG
+  server: sg005.421421.xyz
+  type: trojan
+  country: Singapore
+  port: 20230
+  udp: true
+  password: 7b1dc908-93f8-4111-8d80-e69a9a2d5476
+  sni: 421421.xyz
+  skip-cert-verify: true
+  success_rate: 50.0
+  minimum: 96.6
+  maximum: 4318.54
+  average: 155.0
+  ISO: SG
+  UpdateDay: 2024-07-14T15:01
+  PFirstFoundDay: 2024-07-12T18:43
+  Rank: 42
+- name: tls.05.node-for-bigairport.win:33443@vmess@NL
+  server: tls.05.node-for-bigairport.win
+  port: 33443
   type: vmess
   uuid: 1b98966d-1326-4ca5-9b96-c87e8a2dfa88
   alterId: 0
@@ -44,106 +61,51 @@ proxies:
   ws-opts:
     path: /
     headers:
-      host: tls.92.node-for-bigairport.win
+      host: tls.05.node-for-bigairport.win
   udp: true
   success_rate: 50.0
-  minimum: 68.46
-  maximum: 1301.14
-  average: 332.0
+  minimum: 68.59
+  maximum: 81.4
+  average: 164.0
   country: The Netherlands
   ISO: NL
-  UpdateDay: 2024-07-14T14:31
-  PFirstFoundDay: '2024-01-23T00:39:17.089580'
+  UpdateDay: 2024-07-14T15:02
+  PFirstFoundDay: '2024-06-22T01:53:19.433241'
   Rank: 0
-- name: 3.124.245.27:22222@trojan@US
-  server: 3.124.245.27
-  port: 22222
-  type: trojan
+- alpn:
+  - http/1.1
+  name: 35.180.160.211:22222@trojan@US
+  network: tcp
   password: telegram-id-privatevpns
-  sni: trojan.burgerip.co.uk
-  skip-cert-verify: false
-  success_rate: 50.0
-  minimum: 182.06
-  maximum: 182.06
-  average: 335.0
-  country: United States
-  ISO: US
-  UpdateDay: 2024-07-14T14:31
-  PFirstFoundDay: 2024-07-14T10:11
-  Rank: 82
-- name: 3.76.73.224:22222@trojan@US
-  server: 3.76.73.224
   port: 22222
-  type: trojan
-  password: telegram-id-directvpn
+  server: 35.180.160.211
   sni: trojan.burgerip.co.uk
-  skip-cert-verify: true
-  udp: true
-  success_rate: 50.0
-  minimum: 133.71
-  maximum: 1127.04
-  average: 338.0
+  type: trojan
+  success_rate: 66.66666666666667
+  minimum: 202.56
+  maximum: 3164.37
+  average: 347.0
   country: United States
   ISO: US
-  UpdateDay: 2024-07-14T14:31
+  UpdateDay: 2024-07-14T15:01
   PFirstFoundDay: 2024-07-14T10:11
-  Rank: 230
-- name: 35.187.233.203:25825@vmess@US
-  server: 35.187.233.203
-  port: 25825
-  type: vmess
-  uuid: baf98d74-c383-4d76-cfb6-9a039045b406
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /baf98d74
-    headers:
-      host: 35.187.233.203
-  udp: true
-  success_rate: 100.0
-  minimum: 121.09
-  maximum: 196.7
-  average: 340.5
-  country: United States
-  ISO: US
-  UpdateDay: 2024-07-14T14:32
-  PFirstFoundDay: 2024-07-14T14:14
-  Rank: 40
-- name: 18.135.86.14:22222@trojan@US
-  server: 18.135.86.14
+  Rank: 102
+- name: 3.78.83.59:22222@trojan@US
+  server: 3.78.83.59
   port: 22222
   type: trojan
   password: telegram-id-privatevpns
   sni: trojan.burgerip.co.uk
   skip-cert-verify: false
   success_rate: 66.66666666666667
-  minimum: 212.0
-  maximum: 213.7
-  average: 360.0
+  minimum: 126.06
+  maximum: 161.65
+  average: 360.5
   country: United States
   ISO: US
-  UpdateDay: 2024-07-14T14:31
+  UpdateDay: 2024-07-14T15:01
   PFirstFoundDay: 2024-07-14T10:11
-  Rank: 52
-- name: 13.39.188.179:22222@trojan@US
-  server: 13.39.188.179
-  port: 22222
-  type: trojan
-  password: telegram-id-privatevpns
-  sni: trojan.burgerip.co.uk
-  skip-cert-verify: false
-  success_rate: 66.66666666666667
-  minimum: 211.05
-  maximum: 1175.71
-  average: 435.0
-  country: United States
-  ISO: US
-  UpdateDay: 2024-07-14T14:32
-  PFirstFoundDay: 2024-07-14T10:11
-  Rank: 20
+  Rank: 262
 - alterId: 0
   cipher: auto
   name: jp-tokyo-oracle-a5a4f1.ip1.shop:20277@vmess@US
@@ -158,103 +120,63 @@ proxies:
       host: jp-tokyo-oracle-a5a4f1.ip1.shop
     path: /rongseven?ed=2048
   success_rate: 66.66666666666667
-  minimum: 157.77
-  maximum: 180.57
-  average: 446.5
+  minimum: 167.58
+  maximum: 3748.35
+  average: 377.0
   country: United States
   ISO: US
-  UpdateDay: 2024-07-14T14:31
+  UpdateDay: 2024-07-14T15:01
   PFirstFoundDay: 2024-07-14T14:14
-  Rank: 20
-- name: 18.169.204.37:22222@trojan@US
-  server: 18.169.204.37
-  port: 22222
+  Rank: 60
+- name: 52.209.100.49:22222@trojan@US
+  server: 52.209.100.49
   type: trojan
+  country: United States
+  port: 22222
+  password: telegram-id-privatevpns
+  skip-cert-verify: true
+  udp: true
+  success_rate: 50.0
+  minimum: 189.29
+  maximum: 189.29
+  average: 449.0
+  ISO: US
+  UpdateDay: 2024-07-14T15:01
+  PFirstFoundDay: 2024-07-14T10:11
+  Rank: 42
+- name: 13.39.188.179:22222@trojan@US
+  server: 13.39.188.179
+  type: trojan
+  country: United States
+  port: 22222
+  udp: true
   password: telegram-id-privatevpns
   sni: trojan.burgerip.co.uk
   skip-cert-verify: true
-  udp: true
   success_rate: 100.0
-  minimum: 3202.98
-  maximum: 3212.05
-  average: 471.0
-  country: United States
+  minimum: 158.16
+  maximum: 1149.12
+  average: 468.6666666666667
   ISO: US
-  UpdateDay: 2024-07-14T14:31
+  UpdateDay: 2024-07-14T15:01
   PFirstFoundDay: 2024-07-14T10:11
-  Rank: 122
-- name: 13.60.149.129:22222@trojan@US
-  server: 13.60.149.129
+  Rank: 2
+- name: 18.135.86.14:22222@trojan@US
+  server: 18.135.86.14
+  type: trojan
+  country: United States
   port: 22222
-  type: trojan
-  password: telegram-id-privatevpns
-  sni: trojan.burgerip.co.uk
-  skip-cert-verify: false
-  success_rate: 50.0
-  minimum: 209.89
-  maximum: 209.89
-  average: 488.0
-  country: United States
-  ISO: US
-  UpdateDay: 2024-07-14T14:31
-  PFirstFoundDay: 2024-07-14T10:11
-  Rank: 72
-- alterId: 0
-  cipher: auto
-  name: 51.195.91.135:10000@vmess@FR
-  network: ws
-  port: 10000
-  server: 51.195.91.135
-  tls: false
-  type: vmess
-  uuid: cde36a6c-3c5e-11ef-bafd-eb0a0b341998
-  ws-opts:
-    headers:
-      host: 51.195.91.135
-    path: /vpnjantit
-  success_rate: 50.0
-  minimum: 164.84
-  maximum: 196.45
-  average: 503.0
-  country: France
-  ISO: FR
-  UpdateDay: 2024-07-14T14:32
-  PFirstFoundDay: 2024-07-14T14:14
-  Rank: 0
-- name: 3.78.83.59:22222@trojan@US
-  server: 3.78.83.59
-  port: 22222
-  type: trojan
-  password: telegram-id-privatevpns
-  sni: trojan.burgerip.co.uk
-  skip-cert-verify: true
   udp: true
-  success_rate: 66.66666666666667
-  minimum: 197.04
-  maximum: 1203.88
-  average: 572.5
-  country: United States
-  ISO: US
-  UpdateDay: 2024-07-14T14:31
-  PFirstFoundDay: 2024-07-14T10:11
-  Rank: 152
-- name: us003.421421.xyz:20230@trojan@US
-  server: us003.421421.xyz
-  type: trojan
-  country: United States
-  port: 20230
-  udp: true
-  password: 7b1dc908-93f8-4111-8d80-e69a9a2d5476
-  sni: 421421.xyz
+  password: telegram-id-privatevpns
   skip-cert-verify: true
-  success_rate: 50.0
-  minimum: 190.73
-  maximum: 1205.4
-  average: 621.0
+  success_rate: 100.0
+  minimum: 1221.63
+  maximum: 1221.63
+  average: 476.6666666666667
   ISO: US
-  UpdateDay: 2024-07-14T14:32
-  PFirstFoundDay: 2024-07-12T18:43
-  Rank: 0
+  UpdateDay: 2024-07-14T15:01
+  PFirstFoundDay: 2024-07-14T10:11
+  Rank: 2
 - name: 108.186.57.252:38001@vmess@US
   server: 108.186.57.252
   type: vmess
@@ -272,56 +194,36 @@ proxies:
     path: /path/351800142602
     headers:
       host: 108.186.57.252
-  success_rate: 100.0
-  minimum: 178.34
-  maximum: 1179.35
-  average: 633.0
+  success_rate: 66.66666666666667
+  minimum: 179.91
+  maximum: 3179.82
+  average: 562.5
   ISO: US
-  UpdateDay: 2024-07-14T14:31
+  UpdateDay: 2024-07-14T15:01
   PFirstFoundDay: '2024-06-22T11:54:34.277429'
-  Rank: 62
-- name: 23.95.68.243:80@vmess@US
-  type: vmess
-  server: 23.95.68.243
-  port: 80
-  uuid: 211d8a34-9c48-4435-b4bf-343ae1cbda0e
-  alterId: 0
+  Rank: 112
+- alterId: 0
   cipher: auto
+  name: 8.219.223.204:10000@vmess@SG
   network: ws
-  servername: google.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
+  port: 10000
+  server: 8.219.223.204
+  tls: false
+  type: vmess
+  uuid: 3deae67c-3c60-11ef-9b97-00163e088855
   ws-opts:
-    path: /
     headers:
-      host: 23.95.68.243
+      host: 8.219.223.204
+    path: /vpnjantit
   success_rate: 50.0
-  minimum: 292.99
-  maximum: 294.23
-  average: 636.0
-  country: United States
-  ISO: US
-  UpdateDay: 2024-07-14T14:31
-  PFirstFoundDay: 2024-07-07T10:18
-  Rank: 12
-- name: 3.132.149.105:22222@trojan@US
-  server: 3.132.149.105
-  port: 22222
-  type: trojan
-  password: telegram-id-directvpn
-  sni: trojan.burgerip.co.uk
-  skip-cert-verify: true
-  udp: true
-  success_rate: 100.0
-  minimum: 227.83
-  maximum: 228.05
-  average: 639.0
-  country: United States
-  ISO: US
-  UpdateDay: 2024-07-14T14:31
-  PFirstFoundDay: 2024-07-14T10:11
-  Rank: 2
+  minimum: 74.91
+  maximum: 87.3
+  average: 580.0
+  country: Singapore
+  ISO: SG
+  UpdateDay: 2024-07-14T15:02
+  PFirstFoundDay: 2024-07-14T14:14
+  Rank: 0
 - name: 23.254.166.237:2086@vmess@US
   server: 23.254.166.237
   type: vmess
@@ -338,55 +240,100 @@ proxies:
     path: /
     headers:
       host: 23.254.166.237
-  success_rate: 50.0
-  minimum: 3224.9
-  maximum: 3250.95
-  average: 644.0
+  success_rate: 66.66666666666667
+  minimum: 274.95
+  maximum: 289.2
+  average: 588.5
   ISO: US
-  UpdateDay: 2024-07-14T14:31
+  UpdateDay: 2024-07-14T15:01
   PFirstFoundDay: '2024-06-19T18:00:03.856532'
-  Rank: 32
-- name: tls.96.node-for-bigairport.win:443@vmess@US
-  server: tls.96.node-for-bigairport.win
-  port: 443
+  Rank: 72
+- alterId: 0
+  cipher: auto
+  name: 51.195.91.135:10000@vmess@FR
+  network: ws
+  port: 10000
+  server: 51.195.91.135
+  tls: false
   type: vmess
-  uuid: 1b98966d-1326-4ca5-9b96-c87e8a2dfa88
-  alterId: 0
+  uuid: cde36a6c-3c5e-11ef-bafd-eb0a0b341998
+  ws-opts:
+    headers:
+      host: 51.195.91.135
+    path: /vpnjantit
+  success_rate: 100.0
+  minimum: 183.2
+  maximum: 198.81
+  average: 597.0
+  country: France
+  ISO: FR
+  UpdateDay: 2024-07-14T15:02
+  PFirstFoundDay: 2024-07-14T14:14
+  Rank: 40
+- name: 192.74.242.195:37000@vmess@US
+  server: 192.74.242.195
+  port: 37000
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  alterId: 64
   cipher: auto
   tls: true
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /
+    path: /path/290829250230
     headers:
-      host: tls.96.node-for-bigairport.win
+      host: 192.74.242.195
   udp: true
-  success_rate: 100.0
-  minimum: 72.86
-  maximum: 1223.95
-  average: 778.0
+  success_rate: 50.0
+  minimum: 192.93
+  maximum: 1202.51
+  average: 655.0
   country: United States
   ISO: US
-  UpdateDay: 2024-07-14T14:32
-  PFirstFoundDay: '2024-01-22T22:39:59.283954'
-  Rank: 2
-- name: 35.180.160.211:22222@trojan@US
-  server: 35.180.160.211
+  UpdateDay: 2024-07-14T15:02
+  PFirstFoundDay: '2024-06-01T13:21:47.972228'
+  Rank: 0
+- name: 52.212.109.149:22222@trojan@US
+  server: 52.212.109.149
   port: 22222
   type: trojan
   password: telegram-id-privatevpns
   sni: trojan.burgerip.co.uk
-  skip-cert-verify: true
-  udp: true
-  success_rate: 50.0
-  minimum: 214.07
-  maximum: 214.07
-  average: 802.0
+  skip-cert-verify: false
+  success_rate: 75.0
+  minimum: 167.54
+  maximum: 167.54
+  average: 657.0
   country: United States
   ISO: US
-  UpdateDay: 2024-07-14T14:31
-  PFirstFoundDay: 2024-07-14T10:11
-  Rank: 52
+  UpdateDay: 2024-07-14T15:01
+  PFirstFoundDay: 2024-07-14T10:14
+  Rank: 2
+- name: 108.186.31.109:37000@vmess@US
+  server: 108.186.31.109
+  port: 37000
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  alterId: 64
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /path/172509243015
+    headers:
+      host: 108.186.31.109
+  udp: true
+  success_rate: 100.0
+  minimum: 193.04
+  maximum: 196.83
+  average: 667.6666666666666
+  country: United States
+  ISO: US
+  UpdateDay: 2024-07-14T15:02
+  PFirstFoundDay: '2024-06-01T16:29:55.561109'
+  Rank: 2
 - alterId: 0
   cipher: auto
   name: 142.724064.xyz:443@vmess@US
@@ -400,32 +347,73 @@ proxies:
     headers:
       host: 142.724064.xyz
     path: /pttnvws
-  success_rate: 50.0
-  minimum: 254.15
-  maximum: 268.68
-  average: 907.0
+  success_rate: 66.66666666666667
+  minimum: 269.53
+  maximum: 293.57
+  average: 695.5
   country: United States
   ISO: US
-  UpdateDay: 2024-07-14T14:32
+  UpdateDay: 2024-07-14T15:02
   PFirstFoundDay: 2024-07-14T14:14
-  Rank: 0
-- name: 52.212.109.149:22222@trojan@US
-  server: 52.212.109.149
+  Rank: 20
+- name: 23.95.68.243:80@vmess@US
+  type: vmess
+  server: 23.95.68.243
+  port: 80
+  uuid: 211d8a34-9c48-4435-b4bf-343ae1cbda0e
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: google.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      host: 23.95.68.243
+  success_rate: 100.0
+  minimum: 182.12
+  maximum: 259.92
+  average: 845.6666666666666
+  country: United States
+  ISO: US
+  UpdateDay: 2024-07-14T15:01
+  PFirstFoundDay: 2024-07-07T10:18
+  Rank: 2
+- name: 18.169.204.37:22222@trojan@US
+  server: 18.169.204.37
   port: 22222
   type: trojan
+  password: telegram-id-privatevpns
+  sni: trojan.burgerip.co.uk
+  skip-cert-verify: false
+  success_rate: 75.0
+  minimum: 193.64
+  maximum: 3197.59
+  average: 874.6666666666666
+  country: United States
+  ISO: US
+  UpdateDay: 2024-07-14T15:01
+  PFirstFoundDay: 2024-07-14T10:11
+  Rank: 2
+- name: 13.60.149.129:22222@trojan@US
+  server: 13.60.149.129
+  type: trojan
+  country: United States
+  port: 22222
   password: telegram-id-privatevpns
   sni: trojan.burgerip.co.uk
   skip-cert-verify: true
   udp: true
   success_rate: 50.0
-  minimum: 264.42
-  maximum: 264.42
-  average: 912.0
-  country: United States
+  minimum: 163.81
+  maximum: 3209.74
+  average: 907.0
   ISO: US
-  UpdateDay: 2024-07-14T14:31
-  PFirstFoundDay: 2024-07-14T10:14
-  Rank: 72
+  UpdateDay: 2024-07-14T15:01
+  PFirstFoundDay: 2024-07-14T10:11
+  Rank: 122
 - alterId: 0
   cipher: auto
   name: 110.724064.xyz:443@vmess@US
@@ -440,38 +428,39 @@ proxies:
       host: 110.724064.xyz
     path: /nlpivws
   success_rate: 66.66666666666667
-  minimum: 284.59
-  maximum: 326.71
-  average: 947.5
+  minimum: 303.74
+  maximum: 321.42
+  average: 956.5
   country: United States
   ISO: US
-  UpdateDay: 2024-07-14T14:31
+  UpdateDay: 2024-07-14T15:01
   PFirstFoundDay: 2024-07-14T14:14
-  Rank: 15
-- name: 125.724064.xyz:443@vmess@US
-  server: 125.724064.xyz
-  port: 443
+  Rank: 50
+- name: id1.ubaistore.my.id:80@vmess@ID
+  server: id1.ubaistore.my.id
   type: vmess
-  uuid: 22f112f4-ca19-4b99-b95a-1c6a6a132140
+  country: Indonesia
+  port: 80
+  uuid: 7e872fff-2f77-4fa1-813b-70b2f41dd128
   alterId: 0
   cipher: auto
-  tls: true
-  skip-cert-verify: true
   network: ws
+  servername: id1.ubaistore.my.id
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
   ws-opts:
-    path: /olqjvws
+    path: /vmessws
     headers:
-      host: 125.724064.xyz
-  udp: true
+      host: id1.ubaistore.my.id
   success_rate: 50.0
-  minimum: 339.17
-  maximum: 628.97
-  average: 1028.0
-  country: United States
-  ISO: US
-  UpdateDay: 2024-07-14T14:31
-  PFirstFoundDay: 2024-07-14T14:14
-  Rank: -5
+  minimum: 446.24
+  maximum: 1487.14
+  average: 959.0
+  ISO: ID
+  UpdateDay: 2024-07-14T15:01
+  PFirstFoundDay: 2024-07-12T22:14
+  Rank: 55
 - alterId: 0
   cipher: auto
   name: 48.724064.xyz:443@vmess@US
@@ -485,15 +474,15 @@ proxies:
     headers:
       host: 48.724064.xyz
     path: /tjqhvws
-  success_rate: 50.0
-  minimum: 327.77
-  maximum: 347.05
-  average: 1073.0
+  success_rate: 66.66666666666667
+  minimum: 336.62
+  maximum: 400.56
+  average: 962.5
   country: United States
   ISO: US
-  UpdateDay: 2024-07-14T14:31
+  UpdateDay: 2024-07-14T15:01
   PFirstFoundDay: 2024-07-14T14:14
-  Rank: -5
+  Rank: 15
 - name: 172.67.191.234:443@trojan@US
   server: 172.67.191.234
   port: 443
@@ -507,15 +496,48 @@ proxies:
     headers:
       Host: nl1.tRojANVpN.xYZ
   udp: true
-  success_rate: 50.0
-  minimum: 221.86
-  maximum: 1252.04
-  average: 1154.0
+  success_rate: 66.66666666666667
+  minimum: 268.54
+  maximum: 286.8
+  average: 1087.5
   country: United States
   ISO: US
-  UpdateDay: 2024-07-14T14:31
+  UpdateDay: 2024-07-14T15:01
   PFirstFoundDay: '2024-07-03T19:30:17.484204'
-  Rank: 37
+  Rank: 92
+- name: usjchf.motrix.xyz:5443@trojan@US
+  network: tcp
+  password: fg20mtCFHy
+  port: 5443
+  server: usjchf.motrix.xyz
+  skip-cert-verify: true
+  type: trojan
+  success_rate: 100.0
+  minimum: 222.98
+  maximum: 341.03
+  average: 1163.5
+  country: United States
+  ISO: US
+  UpdateDay: 2024-07-14T15:02
+  PFirstFoundDay: 2024-07-14T14:41
+  Rank: 30
+- name: 3.124.245.27:22222@trojan@US
+  server: 3.124.245.27
+  type: trojan
+  country: United States
+  port: 22222
+  password: telegram-id-privatevpns
+  sni: trojan.burgerip.co.uk
+  skip-cert-verify: true
+  udp: true
+  success_rate: 66.66666666666667
+  minimum: 3204.83
+  maximum: 3204.83
+  average: 1296.5
+  ISO: US
+  UpdateDay: 2024-07-14T15:01
+  PFirstFoundDay: 2024-07-14T10:11
+  Rank: 197
 - alterId: 0
   cipher: auto
   name: 109.724064.xyz:443@vmess@US
@@ -529,39 +551,15 @@ proxies:
     headers:
       host: 109.724064.xyz
     path: /qqsvvws
-  success_rate: 100.0
-  minimum: 264.29
-  maximum: 310.04
-  average: 1415.5
+  success_rate: 66.66666666666667
+  minimum: 311.5
+  maximum: 3906.09
+  average: 1607.0
   country: United States
   ISO: US
-  UpdateDay: 2024-07-14T14:32
+  UpdateDay: 2024-07-14T15:01
   PFirstFoundDay: 2024-07-14T14:14
-  Rank: 30
-- name: s1c.v2.v001sss.xyz:2082@vmess@US
-  server: s1c.v2.v001sss.xyz
-  type: vmess
-  country: United States
-  port: 2082
-  uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
-  alterId: 0
-  cipher: auto
-  network: ws
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      host: s1c.v2.v001sss.xyz
-  success_rate: 100.0
-  minimum: 3327.09
-  maximum: 3327.09
-  average: 1583.5
-  ISO: US
-  UpdateDay: 2024-07-14T14:31
-  PFirstFoundDay: 2024-07-13T10:11
-  Rank: 162
+  Rank: 41
 proxy-groups:
 - name: PG-default
   type: fallback
@@ -569,32 +567,32 @@ proxy-groups:
   interval: 200
   strategy: round-robin
   proxies:
-  - tls.92.node-for-bigairport.win:443@vmess@NL
-  - 3.124.245.27:22222@trojan@US
-  - 3.76.73.224:22222@trojan@US
-  - 35.187.233.203:25825@vmess@US
-  - 18.135.86.14:22222@trojan@US
-  - 13.39.188.179:22222@trojan@US
+  - sg005.421421.xyz:20230@trojan@SG
+  - tls.05.node-for-bigairport.win:33443@vmess@NL
+  - 35.180.160.211:22222@trojan@US
+  - 3.78.83.59:22222@trojan@US
   - jp-tokyo-oracle-a5a4f1.ip1.shop:20277@vmess@US
+  - 52.209.100.49:22222@trojan@US
+  - 13.39.188.179:22222@trojan@US
+  - 18.135.86.14:22222@trojan@US
+  - 108.186.57.252:38001@vmess@US
+  - 8.219.223.204:10000@vmess@SG
+  - 23.254.166.237:2086@vmess@US
+  - 51.195.91.135:10000@vmess@FR
+  - 192.74.242.195:37000@vmess@US
+  - 52.212.109.149:22222@trojan@US
+  - 108.186.31.109:37000@vmess@US
+  - 142.724064.xyz:443@vmess@US
+  - 23.95.68.243:80@vmess@US
   - 18.169.204.37:22222@trojan@US
   - 13.60.149.129:22222@trojan@US
-  - 51.195.91.135:10000@vmess@FR
-  - 3.78.83.59:22222@trojan@US
-  - us003.421421.xyz:20230@trojan@US
-  - 108.186.57.252:38001@vmess@US
-  - 23.95.68.243:80@vmess@US
-  - 3.132.149.105:22222@trojan@US
-  - 23.254.166.237:2086@vmess@US
-  - tls.96.node-for-bigairport.win:443@vmess@US
-  - 35.180.160.211:22222@trojan@US
-  - 142.724064.xyz:443@vmess@US
-  - 52.212.109.149:22222@trojan@US
   - 110.724064.xyz:443@vmess@US
-  - 125.724064.xyz:443@vmess@US
+  - id1.ubaistore.my.id:80@vmess@ID
   - 48.724064.xyz:443@vmess@US
   - 172.67.191.234:443@trojan@US
+  - usjchf.motrix.xyz:5443@trojan@US
+  - 3.124.245.27:22222@trojan@US
   - 109.724064.xyz:443@vmess@US
-  - s1c.v2.v001sss.xyz:2082@vmess@US
   tolerance: 250
 rules:
 - MATCH,PG-default
