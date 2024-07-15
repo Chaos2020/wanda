@@ -31,6 +31,23 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
+- name: 16.171.204.16:22222@trojan@US
+  server: 16.171.204.16
+  port: 22222
+  type: trojan
+  password: telegram-id-privatevpns
+  sni: trojan.burgerip.co.uk
+  skip-cert-verify: true
+  udp: true
+  success_rate: 100.0
+  minimum: 208.27
+  maximum: 1174.63
+  average: 362.4
+  country: United States
+  ISO: US
+  UpdateDay: 2024-07-15T09:31
+  PFirstFoundDay: 2024-07-14T22:13
+  Rank: 2
 - name: 23.95.68.243:80@vmess@US
   type: vmess
   server: 23.95.68.243
@@ -50,28 +67,11 @@ proxies:
   success_rate: 100.0
   minimum: 289.07
   maximum: 1279.81
-  average: 372.4
+  average: 402.4
   country: United States
   ISO: US
-  UpdateDay: 2024-07-15T09:01
+  UpdateDay: 2024-07-15T09:31
   PFirstFoundDay: 2024-07-07T10:18
-  Rank: 2
-- name: 16.171.204.16:22222@trojan@US
-  server: 16.171.204.16
-  port: 22222
-  type: trojan
-  password: telegram-id-privatevpns
-  sni: trojan.burgerip.co.uk
-  skip-cert-verify: true
-  udp: true
-  success_rate: 100.0
-  minimum: 208.27
-  maximum: 1174.63
-  average: 373.7
-  country: United States
-  ISO: US
-  UpdateDay: 2024-07-15T09:01
-  PFirstFoundDay: 2024-07-14T22:13
   Rank: 2
 - name: 13.41.27.113:22222@trojan@US
   server: 13.41.27.113
@@ -81,15 +81,15 @@ proxies:
   sni: trojan.burgerip.co.uk
   skip-cert-verify: true
   udp: true
-  success_rate: 50.0
+  success_rate: 70.0
   minimum: 184.58
   maximum: 188.77
-  average: 466.6
+  average: 457.57142857142856
   country: United States
   ISO: US
-  UpdateDay: 2024-07-15T09:03
+  UpdateDay: 2024-07-15T09:33
   PFirstFoundDay: 2024-07-14T22:14
-  Rank: -740
+  Rank: -660
 - name: 108.186.57.252:38001@vmess@US
   server: 108.186.57.252
   type: vmess
@@ -110,35 +110,11 @@ proxies:
   success_rate: 100.0
   minimum: 188.32
   maximum: 1169.33
-  average: 519.5
+  average: 519.3
   ISO: US
-  UpdateDay: 2024-07-15T09:01
+  UpdateDay: 2024-07-15T09:31
   PFirstFoundDay: '2024-06-22T11:54:34.277429'
   Rank: 2
-- name: 152.53.0.187:46357@vmess@AT
-  server: 152.53.0.187
-  port: 46357
-  type: vmess
-  uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /speedtest
-    headers:
-      host: 152.53.0.187
-  udp: true
-  success_rate: 50.0
-  minimum: 272.72
-  maximum: 315.17
-  average: 688.4
-  country: Austria
-  ISO: AT
-  UpdateDay: 2024-07-15T09:01
-  PFirstFoundDay: 2024-07-12T14:14
-  Rank: -300
 - name: 172.67.191.234:443@trojan@US
   server: 172.67.191.234
   port: 443
@@ -155,10 +131,10 @@ proxies:
   success_rate: 100.0
   minimum: 254.42
   maximum: 277.93
-  average: 847.5
+  average: 848.1
   country: United States
   ISO: US
-  UpdateDay: 2024-07-15T09:01
+  UpdateDay: 2024-07-15T09:31
   PFirstFoundDay: '2024-07-03T19:30:17.484204'
   Rank: 2
 - name: s1c.v2.v001sss.xyz:2082@vmess@US
@@ -178,12 +154,35 @@ proxies:
   success_rate: 90.0
   minimum: 221.73
   maximum: 240.45
-  average: 1081.6666666666667
+  average: 1156.111111111111
   country: United States
   ISO: US
-  UpdateDay: 2024-07-15T09:01
+  UpdateDay: 2024-07-15T09:31
   PFirstFoundDay: 2024-07-13T10:11
   Rank: 2
+- alterId: 0
+  cipher: auto
+  name: onea.flha.ru:2095@vmess@US
+  network: ws
+  port: 2095
+  server: onea.flha.ru
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 7a737f41-b792-4260-94ff-3d864da67b80
+  ws-opts:
+    headers:
+      host: onea.flha.ru
+    path: /
+  success_rate: 50.0
+  minimum: 279.02
+  maximum: 280.29
+  average: 1174.4
+  country: United States
+  ISO: US
+  UpdateDay: 2024-07-15T09:31
+  PFirstFoundDay: '2024-05-26T09:50:32.372314'
+  Rank: -272
 proxy-groups:
 - name: PG-default
   type: fallback
@@ -191,13 +190,13 @@ proxy-groups:
   interval: 200
   strategy: round-robin
   proxies:
-  - 23.95.68.243:80@vmess@US
   - 16.171.204.16:22222@trojan@US
+  - 23.95.68.243:80@vmess@US
   - 13.41.27.113:22222@trojan@US
   - 108.186.57.252:38001@vmess@US
-  - 152.53.0.187:46357@vmess@AT
   - 172.67.191.234:443@trojan@US
   - s1c.v2.v001sss.xyz:2082@vmess@US
+  - onea.flha.ru:2095@vmess@US
   tolerance: 250
 rules:
 - MATCH,PG-default
