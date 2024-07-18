@@ -31,23 +31,23 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
-- name: 15.188.101.179:22222@trojan@US
-  server: 15.188.101.179
+- name: 13.60.165.212:22222@trojan@US
+  server: 13.60.165.212
   port: 22222
   type: trojan
   password: telegram-id-directvpn
   sni: trojan.burgerip.co.uk
   skip-cert-verify: true
   udp: true
-  success_rate: 57.142857142857146
-  minimum: 153.09
-  maximum: 167.11
-  average: 347.5
+  success_rate: 60.0
+  minimum: 194.32
+  maximum: 226.26
+  average: 417.1666666666667
   country: United States
   ISO: US
-  UpdateDay: 2024-07-18T19:31
+  UpdateDay: 2024-07-18T20:01
   PFirstFoundDay: 2024-07-18T18:13
-  Rank: 20
+  Rank: 0
 - name: 23.95.68.243:80@vmess@US
   type: vmess
   server: 23.95.68.243
@@ -64,13 +64,13 @@ proxies:
     path: /
     headers:
       host: 23.95.68.243
-  success_rate: 71.42857142857143
+  success_rate: 90.0
   minimum: 208.16
   maximum: 208.16
-  average: 428.6
+  average: 447.6666666666667
   country: United States
   ISO: US
-  UpdateDay: 2024-07-18T19:31
+  UpdateDay: 2024-07-18T20:01
   PFirstFoundDay: 2024-07-07T10:18
   Rank: 2
 - name: 193.151.137.72:2083@trojan@IR
@@ -86,37 +86,37 @@ proxies:
     headers:
       Host: gstatic.com
   udp: true
-  success_rate: 75.0
+  success_rate: 80.0
   minimum: 311.58
   maximum: 1396.8
-  average: 1101.3333333333333
+  average: 1080.25
   country: Iran
   ISO: IR
-  UpdateDay: 2024-07-18T19:31
+  UpdateDay: 2024-07-18T20:01
   PFirstFoundDay: 2024-07-18T18:13
   Rank: 2
-- name: onea.flha.ru:2095@vmess@US
+- name: 95.164.44.140:8080@vmess@GI
+  server: 95.164.44.140
   type: vmess
-  server: onea.flha.ru
-  port: 2095
-  uuid: 7a737f41-b792-4260-94ff-3d864da67b80
+  port: 8080
+  uuid: 28f8d51a-0e75-4fc3-a36e-03bf4e4d0910
   alterId: 0
-  cipher: auto
+  cipher: none
   network: ws
   http-opts: {}
   h2-opts: {}
   ws-opts:
-    path: /
+    path: /vmess
     headers:
-      host: onea.flha.ru
+      host: 95.164.44.140
   success_rate: 70.0
-  minimum: 203.34
-  maximum: 216.55
-  average: 1306.4285714285713
-  country: United States
-  ISO: US
-  UpdateDay: 2024-07-18T19:31
-  PFirstFoundDay: '2024-05-26T09:50:32.372314'
+  minimum: 245.19
+  maximum: 265.05
+  average: 1188.142857142857
+  country: Gibraltar
+  ISO: GI
+  UpdateDay: 2024-07-18T20:01
+  PFirstFoundDay: 2024-07-18T18:38
   Rank: 2
 - name: s1c.v2.v001sss.xyz:2082@vmess@US
   server: s1c.v2.v001sss.xyz
@@ -131,13 +131,13 @@ proxies:
     path: /
     headers:
       host: s1c.v2.v001sss.xyz
-  success_rate: 80.0
+  success_rate: 83.33333333333333
   minimum: 190.44
   maximum: 211.88
-  average: 1345.75
+  average: 1454.0
   country: United States
   ISO: US
-  UpdateDay: 2024-07-18T19:31
+  UpdateDay: 2024-07-18T20:01
   PFirstFoundDay: 2024-07-13T10:11
   Rank: 2
 proxy-groups:
@@ -147,10 +147,10 @@ proxy-groups:
   interval: 200
   strategy: round-robin
   proxies:
-  - 15.188.101.179:22222@trojan@US
+  - 13.60.165.212:22222@trojan@US
   - 23.95.68.243:80@vmess@US
   - 193.151.137.72:2083@trojan@IR
-  - onea.flha.ru:2095@vmess@US
+  - 95.164.44.140:8080@vmess@GI
   - s1c.v2.v001sss.xyz:2082@vmess@US
   tolerance: 250
 rule-providers:
