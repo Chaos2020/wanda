@@ -31,6 +31,45 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
+- type: trojan
+  name: 211.72.156.17:23555@trojan@TW
+  server: 211.72.156.17
+  port: 23555
+  password: moist
+  udp: true
+  skip-cert-verify: true
+  sni: trojan.freenods.sbs
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      host: trojan.freenods.sbs
+  success_rate: 66.66666666666667
+  minimum: 76.73
+  maximum: 88.97
+  average: 199.5
+  country: Taiwan
+  ISO: TW
+  UpdateDay: 2024-07-18T19:01
+  PFirstFoundDay: '2024-07-03T16:22:16.652160'
+  Rank: 82
+- name: 15.188.101.179:22222@trojan@US
+  server: 15.188.101.179
+  port: 22222
+  type: trojan
+  password: telegram-id-directvpn
+  sni: trojan.burgerip.co.uk
+  skip-cert-verify: true
+  udp: true
+  success_rate: 50.0
+  minimum: 153.09
+  maximum: 167.11
+  average: 370.5
+  country: United States
+  ISO: US
+  UpdateDay: 2024-07-18T19:01
+  PFirstFoundDay: 2024-07-18T18:13
+  Rank: 0
 - name: 3.121.150.24:22222@trojan@US
   server: 3.121.150.24
   port: 22222
@@ -39,15 +78,49 @@ proxies:
   sni: trojan.burgerip.co.uk
   skip-cert-verify: true
   udp: true
-  success_rate: 66.66666666666667
-  minimum: 170.25
-  maximum: 1179.32
-  average: 344.0
+  success_rate: 50.0
+  minimum: 151.73
+  maximum: 1188.15
+  average: 399.0
   country: United States
   ISO: US
-  UpdateDay: 2024-07-18T18:33
+  UpdateDay: 2024-07-18T19:01
   PFirstFoundDay: 2024-07-18T10:19
-  Rank: 20
+  Rank: 30
+- name: 16.170.99.69:22222@trojan@US
+  server: 16.170.99.69
+  port: 22222
+  type: trojan
+  password: telegram-id-privatevpns
+  sni: trojan.burgerip.co.uk
+  skip-cert-verify: true
+  udp: true
+  success_rate: 75.0
+  minimum: 157.43
+  maximum: 238.6
+  average: 421.6666666666667
+  country: United States
+  ISO: US
+  UpdateDay: 2024-07-18T19:02
+  PFirstFoundDay: 2024-07-18T16:13
+  Rank: 2
+- name: 13.60.165.212:22222@trojan@US
+  server: 13.60.165.212
+  port: 22222
+  type: trojan
+  password: telegram-id-directvpn
+  sni: trojan.burgerip.co.uk
+  skip-cert-verify: true
+  udp: true
+  success_rate: 50.0
+  minimum: 194.32
+  maximum: 226.26
+  average: 426.0
+  country: United States
+  ISO: US
+  UpdateDay: 2024-07-18T19:02
+  PFirstFoundDay: 2024-07-18T18:13
+  Rank: 0
 - name: 23.95.68.243:80@vmess@US
   type: vmess
   server: 23.95.68.243
@@ -64,109 +137,145 @@ proxies:
     path: /
     headers:
       host: 23.95.68.243
-  success_rate: 66.66666666666667
-  minimum: 192.92
-  maximum: 210.75
-  average: 464.5
-  country: United States
-  ISO: US
-  UpdateDay: 2024-07-18T18:31
-  PFirstFoundDay: 2024-07-07T10:18
-  Rank: 32
-- name: 137.175.18.240:38000@vmess@US
-  server: 137.175.18.240
-  port: 38000
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 64
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /path/010901112128
-    headers:
-      host: 137.175.18.240
-  udp: true
-  success_rate: 100.0
-  minimum: 145.76
-  maximum: 1177.15
-  average: 527.0
-  country: United States
-  ISO: US
-  UpdateDay: 2024-07-18T18:31
-  PFirstFoundDay: '2024-06-22T11:54:27.251719'
-  Rank: 2
-- name: 192.74.250.208:38000@vmess@US
-  server: 192.74.250.208
-  port: 38000
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 64
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /path/353112182726
-    headers:
-      host: 192.74.250.208
-  udp: true
-  success_rate: 100.0
-  minimum: 178.05
-  maximum: 189.28
-  average: 676.0
-  country: United States
-  ISO: US
-  UpdateDay: 2024-07-18T18:31
-  PFirstFoundDay: '2024-06-08T11:07:39.160696'
-  Rank: 40
-- type: trojan
-  name: 116.47.10.236:27335@trojan@KR
-  server: 116.47.10.236
-  port: 27335
-  password: moist
-  udp: true
-  skip-cert-verify: true
-  sni: trojan.freenods.sbs
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      host: trojan.freenods.sbs
   success_rate: 50.0
-  minimum: 136.95
-  maximum: 136.95
-  average: 1147.0
-  country: South Korea
-  ISO: KR
-  UpdateDay: 2024-07-18T18:32
-  PFirstFoundDay: '2024-07-02T13:48:25.099177'
-  Rank: -5
-- name: 95.164.44.140:2095@vmess@GI
-  server: 95.164.44.140
+  minimum: 208.16
+  maximum: 208.16
+  average: 450.5
+  country: United States
+  ISO: US
+  UpdateDay: 2024-07-18T19:01
+  PFirstFoundDay: 2024-07-07T10:18
+  Rank: 42
+- name: 172.66.44.249:443@trojan@US
+  server: 172.66.44.249
+  port: 443
+  type: trojan
+  password: auto
+  sni: fe9b5676-a2aa-4b6a-8257-cd2dd0910205.8c98ef2b-bee2-470b-b759-9f5efbc10812.freeddns.org
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /worker-polished-glade-fe47.tahajadidi2022.workers.dev/?ed=2560
+    headers:
+      Host: fe9b5676-a2aa-4b6a-8257-cd2dd0910205.8c98ef2b-bee2-470b-b759-9f5efbc10812.freeddns.org
+  udp: true
+  success_rate: 66.66666666666667
+  minimum: 211.03
+  maximum: 3254.35
+  average: 632.5
+  country: United States
+  ISO: US
+  UpdateDay: 2024-07-18T19:01
+  PFirstFoundDay: 2024-07-15T10:10
+  Rank: 42
+- name: us003.421421.xyz:20230@trojan@US
+  server: us003.421421.xyz
+  type: trojan
+  country: United States
+  port: 20230
+  udp: true
+  password: cf13832b-4ca0-4fee-8e85-2b2411104e75
+  sni: 421421.xyz
+  skip-cert-verify: true
+  success_rate: 60.0
+  minimum: 210.78
+  maximum: 210.78
+  average: 768.0
+  ISO: US
+  UpdateDay: 2024-07-18T19:02
+  PFirstFoundDay: 2024-07-12T18:43
+  Rank: 15
+- name: beyonddsz.cfd:443@vmess@FR
   type: vmess
-  country: Gibraltar
+  server: beyonddsz.cfd
+  port: 443
+  cipher: auto
+  uuid: 9b456c2a-f2c1-45e1-87a9-b7628b04bb24
+  alterId: 0
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /linkws
+    headers:
+      host: beyonddsz.cfd
+  client-fingerprint: chrome
+  success_rate: 75.0
+  minimum: 271.47
+  maximum: 1270.72
+  average: 823.3333333333334
+  country: France
+  ISO: FR
+  UpdateDay: 2024-07-18T19:02
+  PFirstFoundDay: 2024-07-10T16:46
+  Rank: 2
+- name: 193.151.137.72:2083@trojan@IR
+  server: 193.151.137.72
+  port: 2083
+  type: trojan
+  password: gZLV1zq-5XiGUX9SO2oIHw
+  sni: gstatic.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: ''
+    headers:
+      Host: gstatic.com
+  udp: true
+  success_rate: 50.0
+  minimum: 311.58
+  maximum: 1396.8
+  average: 939.0
+  country: Iran
+  ISO: IR
+  UpdateDay: 2024-07-18T19:01
+  PFirstFoundDay: 2024-07-18T18:13
+  Rank: 0
+- name: onea.flha.ru:2095@vmess@US
+  type: vmess
+  server: onea.flha.ru
   port: 2095
-  uuid: 28f8d51a-0e75-4fc3-a36e-03bf4e4d0910
+  uuid: 7a737f41-b792-4260-94ff-3d864da67b80
   alterId: 0
   cipher: auto
   network: ws
   http-opts: {}
   h2-opts: {}
-  skip-cert-verify: true
   ws-opts:
-    path: /vmess
+    path: /
     headers:
-      host: 95.164.44.140
-  success_rate: 50.0
-  minimum: 228.72
-  maximum: 1237.14
-  average: 1246.0
-  ISO: GI
-  UpdateDay: 2024-07-18T18:32
-  PFirstFoundDay: 2024-07-18T18:13
-  Rank: -5
+      host: onea.flha.ru
+  success_rate: 57.142857142857146
+  minimum: 203.34
+  maximum: 216.55
+  average: 1227.75
+  country: United States
+  ISO: US
+  UpdateDay: 2024-07-18T19:01
+  PFirstFoundDay: '2024-05-26T09:50:32.372314'
+  Rank: 10
+- name: s1c.v2.v001sss.xyz:2082@vmess@US
+  server: s1c.v2.v001sss.xyz
+  port: 2082
+  type: vmess
+  uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      host: s1c.v2.v001sss.xyz
+  success_rate: 66.66666666666667
+  minimum: 190.44
+  maximum: 211.88
+  average: 1513.5
+  country: United States
+  ISO: US
+  UpdateDay: 2024-07-18T19:03
+  PFirstFoundDay: 2024-07-13T10:11
+  Rank: 10
 proxy-groups:
 - name: PG-default
   type: fallback
@@ -174,12 +283,18 @@ proxy-groups:
   interval: 200
   strategy: round-robin
   proxies:
+  - 211.72.156.17:23555@trojan@TW
+  - 15.188.101.179:22222@trojan@US
   - 3.121.150.24:22222@trojan@US
+  - 16.170.99.69:22222@trojan@US
+  - 13.60.165.212:22222@trojan@US
   - 23.95.68.243:80@vmess@US
-  - 137.175.18.240:38000@vmess@US
-  - 192.74.250.208:38000@vmess@US
-  - 116.47.10.236:27335@trojan@KR
-  - 95.164.44.140:2095@vmess@GI
+  - 172.66.44.249:443@trojan@US
+  - us003.421421.xyz:20230@trojan@US
+  - beyonddsz.cfd:443@vmess@FR
+  - 193.151.137.72:2083@trojan@IR
+  - onea.flha.ru:2095@vmess@US
+  - s1c.v2.v001sss.xyz:2082@vmess@US
   tolerance: 250
 rule-providers:
   anting:
