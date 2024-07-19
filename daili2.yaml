@@ -31,48 +31,55 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
-- name: 23.95.68.243:80@vmess@US
-  type: vmess
-  server: 23.95.68.243
-  port: 80
-  uuid: 211d8a34-9c48-4435-b4bf-343ae1cbda0e
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: google.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      host: 23.95.68.243
-  success_rate: 66.66666666666667
-  minimum: 195.56
-  maximum: 198.35
-  average: 406.5
+- name: bgroup.node1.t.nodelist-airport.com:50001@trojan@US
+  server: bgroup.node1.t.nodelist-airport.com
+  type: trojan
   country: United States
+  port: 50001
+  password: 2155145a-b1b5-443a-8977-670f6bd10f02
+  skip-cert-verify: true
+  udp: true
+  success_rate: 50.0
+  minimum: 100.85
+  maximum: 117.88
+  average: 221.0
   ISO: US
-  UpdateDay: 2024-07-19T16:31
-  PFirstFoundDay: 2024-07-07T10:18
-  Rank: 32
+  UpdateDay: 2024-07-19T17:02
+  PFirstFoundDay: 2024-07-05T10:55
+  Rank: 0
+- name: tj-hk.aikunapp.com:5100@trojan@HK
+  server: tj-hk.aikunapp.com
+  type: trojan
+  country: Hong Kong
+  port: 5100
+  udp: true
+  password: a45201e7-7a4a-41ad-b7e1-8cbac19234ef
+  sni: s0.awsstatic.com
+  skip-cert-verify: true
+  success_rate: 50.0
+  minimum: 84.61
+  maximum: 1102.9
+  average: 299.0
+  ISO: HK
+  UpdateDay: 2024-07-19T17:02
+  PFirstFoundDay: '2024-07-01T03:53:49.538907'
+  Rank: 0
 - name: 3.11.201.188:22222@trojan@US
   server: 3.11.201.188
   port: 22222
   type: trojan
   password: telegram-id-privatevpns
   sni: trojan.burgerip.co.uk
-  skip-cert-verify: true
-  udp: true
-  success_rate: 66.66666666666667
-  minimum: 135.7
-  maximum: 3216.49
-  average: 486.5
+  skip-cert-verify: false
+  success_rate: 100.0
+  minimum: 200.54
+  maximum: 1210.18
+  average: 432.75
   country: United States
   ISO: US
-  UpdateDay: 2024-07-19T16:31
+  UpdateDay: 2024-07-19T17:01
   PFirstFoundDay: 2024-07-18T22:14
-  Rank: 192
+  Rank: 2
 - name: 38.75.136.73:443@vmess@US
   server: 38.75.136.73
   type: vmess
@@ -91,109 +98,55 @@ proxies:
     path: /linkvws
     headers:
       host: 38.75.136.73
-  success_rate: 75.0
-  minimum: 181.75
-  maximum: 1191.63
-  average: 499.6666666666667
+  success_rate: 66.66666666666667
+  minimum: 197.14
+  maximum: 3212.58
+  average: 512.5
   ISO: US
-  UpdateDay: 2024-07-19T16:31
+  UpdateDay: 2024-07-19T17:01
   PFirstFoundDay: '2024-06-27T21:01:38.388930'
-  Rank: 2
-- name: dashboard.phantomcloud.xyz:10000@vmess@SG
-  server: dashboard.phantomcloud.xyz
+  Rank: 42
+- name: 23.95.68.243:80@vmess@US
   type: vmess
-  country: Singapore
-  port: 10000
-  uuid: 316cfd66-5fab-40d9-8b97-a8d569265625
+  server: 23.95.68.243
+  port: 80
+  uuid: 211d8a34-9c48-4435-b4bf-343ae1cbda0e
   alterId: 0
   cipher: auto
   network: ws
+  servername: google.com
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
   ws-opts:
-    path: /316cfd66-5fab-40d9-8b97-a8d569265625
+    path: /
     headers:
-      host: dashboard.phantomcloud.xyz
+      host: 23.95.68.243
   success_rate: 50.0
-  minimum: 264.17
-  maximum: 286.44
-  average: 535.0
-  ISO: SG
-  UpdateDay: 2024-07-19T16:31
-  PFirstFoundDay: 2024-07-19T10:16
-  Rank: 12
-- name: 108.186.31.109:37000@vmess@US
-  server: 108.186.31.109
-  port: 37000
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 64
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /path/172509243015
-    headers:
-      host: 108.186.31.109
-  udp: true
-  success_rate: 50.0
-  minimum: 176.9
-  maximum: 200.77
-  average: 556.0
+  minimum: 246.58
+  maximum: 1254.42
+  average: 524.0
   country: United States
   ISO: US
-  UpdateDay: 2024-07-19T16:33
-  PFirstFoundDay: '2024-06-01T16:29:55.561109'
-  Rank: 0
-- name: 156.225.67.98:41004@vmess@SC
-  server: 156.225.67.98
-  type: vmess
-  country: Seychelles
-  port: 41004
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 64
-  cipher: auto
-  network: ws
-  servername: www.57657441.xyz
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  skip-cert-verify: true
-  ws-opts:
-    path: /path/340434130032
-    headers:
-      host: 156.225.67.98
-  success_rate: 50.0
-  minimum: 189.51
-  maximum: 212.0
-  average: 564.0
-  ISO: SC
-  UpdateDay: 2024-07-19T16:31
-  PFirstFoundDay: 2024-07-19T16:15
-  Rank: 0
-- name: 172.66.44.249:443@trojan@US
-  server: 172.66.44.249
-  port: 443
+  UpdateDay: 2024-07-19T17:01
+  PFirstFoundDay: 2024-07-07T10:18
+  Rank: 42
+- name: 3.141.251.167:22222@trojan@US
+  server: 3.141.251.167
+  port: 22222
   type: trojan
-  password: auto
-  sni: fe9b5676-a2aa-4b6a-8257-cd2dd0910205.8c98ef2b-bee2-470b-b759-9f5efbc10812.freeddns.org
+  password: telegram-id-directvpn
+  sni: trojan.burgerip.co.uk
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /worker-polished-glade-fe47.tahajadidi2022.workers.dev/?ed=2560
-    headers:
-      Host: fe9b5676-a2aa-4b6a-8257-cd2dd0910205.8c98ef2b-bee2-470b-b759-9f5efbc10812.freeddns.org
   udp: true
   success_rate: 50.0
-  minimum: 236.4
-  maximum: 1240.39
-  average: 581.0
+  minimum: 227.1
+  maximum: 243.02
+  average: 525.0
   country: United States
   ISO: US
-  UpdateDay: 2024-07-19T16:31
-  PFirstFoundDay: 2024-07-15T10:10
+  UpdateDay: 2024-07-19T17:01
+  PFirstFoundDay: 2024-07-19T10:15
   Rank: 0
 - name: 108.186.31.115:37000@vmess@US
   server: 108.186.31.115
@@ -210,32 +163,15 @@ proxies:
     headers:
       host: 108.186.31.115
   udp: true
-  success_rate: 100.0
-  minimum: 182.24
-  maximum: 1218.58
-  average: 600.6666666666666
-  country: United States
-  ISO: US
-  UpdateDay: 2024-07-19T16:31
-  PFirstFoundDay: 2024-07-12T14:14
-  Rank: 2
-- name: 3.23.148.74:22222@trojan@US
-  server: 3.23.148.74
-  port: 22222
-  type: trojan
-  password: telegram-id-directvpn
-  sni: trojan.burgerip.co.uk
-  skip-cert-verify: true
-  udp: true
   success_rate: 66.66666666666667
-  minimum: 236.27
-  maximum: 254.54
-  average: 632.0
+  minimum: 167.27
+  maximum: 3172.74
+  average: 551.5
   country: United States
   ISO: US
-  UpdateDay: 2024-07-19T16:31
-  PFirstFoundDay: 2024-07-19T10:12
-  Rank: 320
+  UpdateDay: 2024-07-19T17:01
+  PFirstFoundDay: 2024-07-12T14:14
+  Rank: 42
 - name: 172.111.57.30:31002@vmess@US
   server: 172.111.57.30
   type: vmess
@@ -254,14 +190,14 @@ proxies:
     path: /path/1720097652489
     headers:
       host: 172.111.57.30
-  success_rate: 100.0
-  minimum: 162.79
-  maximum: 1171.41
-  average: 653.0
+  success_rate: 50.0
+  minimum: 167.72
+  maximum: 3170.75
+  average: 559.0
   ISO: US
-  UpdateDay: 2024-07-19T16:33
+  UpdateDay: 2024-07-19T17:01
   PFirstFoundDay: 2024-07-19T16:15
-  Rank: 2
+  Rank: 22
 - name: 192.74.230.44:37007@vmess@US
   server: 192.74.230.44
   type: vmess
@@ -280,14 +216,65 @@ proxies:
     path: /path/1720097652489
     headers:
       host: 192.74.230.44
-  success_rate: 50.0
+  success_rate: 75.0
   minimum: 196.47
   maximum: 204.7
-  average: 655.0
+  average: 601.0
   ISO: US
-  UpdateDay: 2024-07-19T16:31
+  UpdateDay: 2024-07-19T17:01
   PFirstFoundDay: 2024-07-19T12:15
-  Rank: 82
+  Rank: 2
+- uuid: 316cfd66-5fab-40d9-8b97-a8d569265625
+  cipher: auto
+  alterId: 0
+  server: dashboard.phantomcloud.xyz
+  name: dashboard.phantomcloud.xyz:10000@vmess@SG
+  type: vmess
+  port: 10000
+  network: ws
+  tls: false
+  udp: false
+  client-fingerprint: chrome
+  fingerprint: ''
+  ws-opts:
+    path: /316cfd66-5fab-40d9-8b97-a8d569265625
+    headers:
+      host: dashboard.phantomcloud.xyz
+  success_rate: 100.0
+  minimum: 266.41
+  maximum: 1832.65
+  average: 619.0
+  country: Singapore
+  ISO: SG
+  UpdateDay: 2024-07-19T17:01
+  PFirstFoundDay: 2024-07-19T10:16
+  Rank: 42
+- name: 38.14.107.233:38003@vmess@US
+  server: 38.14.107.233
+  type: vmess
+  country: United States
+  port: 38003
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  alterId: 64
+  cipher: auto
+  network: ws
+  servername: www.23179753.xyz
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /path/340434130032
+    headers:
+      host: 38.14.107.233
+  success_rate: 66.66666666666667
+  minimum: 201.08
+  maximum: 201.08
+  average: 645.5
+  ISO: US
+  UpdateDay: 2024-07-19T17:01
+  PFirstFoundDay: 2024-07-19T16:45
+  Rank: 20
 - name: 148.135.0.220:31003@vmess@US
   server: 148.135.0.220
   type: vmess
@@ -307,39 +294,53 @@ proxies:
     headers:
       host: 148.135.0.220
   success_rate: 100.0
-  minimum: 202.35
-  maximum: 1202.83
-  average: 672.3333333333334
+  minimum: 1190.52
+  maximum: 1213.48
+  average: 683.6666666666666
   ISO: US
-  UpdateDay: 2024-07-19T16:33
+  UpdateDay: 2024-07-19T17:01
   PFirstFoundDay: 2024-07-19T16:15
   Rank: 2
-- name: 170.178.163.75:30000@vmess@US
-  server: 170.178.163.75
-  type: vmess
-  country: United States
-  port: 30000
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 64
-  cipher: auto
-  network: ws
-  servername: www.20670670.xyz
-  http-opts: {}
-  h2-opts: {}
-  tls: true
+- name: 15.222.245.142:2053@trojan@US
+  server: 15.222.245.142
+  type: trojan
+  port: 2053
+  udp: true
+  password: auto
+  sni: dns68.9166619.xyz
   skip-cert-verify: true
-  ws-opts:
-    path: /path/181721272114
-    headers:
-      host: 170.178.163.75
-  success_rate: 50.0
-  minimum: 166.42
-  maximum: 173.12
-  average: 686.0
+  network: ws
+  success_rate: 66.66666666666667
+  minimum: 1259.58
+  maximum: 1289.17
+  average: 709.5
+  country: United States
   ISO: US
-  UpdateDay: 2024-07-19T16:33
-  PFirstFoundDay: 2024-07-19T16:15
-  Rank: 0
+  UpdateDay: 2024-07-19T17:01
+  PFirstFoundDay: 2024-07-19T10:15
+  Rank: 82
+- name: 104.18.25.92:443@trojan@US
+  server: 104.18.25.92
+  port: 443
+  type: trojan
+  password: e8105dfd24414268b6c7652c63731097
+  sni: avianrecruit.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /6b777a91
+    headers:
+      Host: avianrecruit.com
+  udp: true
+  success_rate: 66.66666666666667
+  minimum: 198.97
+  maximum: 206.88
+  average: 719.0
+  country: United States
+  ISO: US
+  UpdateDay: 2024-07-19T17:01
+  PFirstFoundDay: 2024-07-19T16:13
+  Rank: 20
 - name: us.eaxeg.be:80@vmess@US
   server: us.eaxeg.be
   type: vmess
@@ -357,82 +358,14 @@ proxies:
     path: /5k7oCLn871DU5O2ONZ6a2i
     headers:
       host: us.eaxeg.be
-  success_rate: 66.66666666666667
-  minimum: 3216.73
-  maximum: 3216.73
-  average: 695.0
-  ISO: US
-  UpdateDay: 2024-07-19T16:31
-  PFirstFoundDay: 2024-07-18T10:20
-  Rank: 32
-- name: 156.249.18.43:41002@vmess@SC
-  server: 156.249.18.43
-  type: vmess
-  country: Seychelles
-  port: 41002
-  uuid: 6193116d-96f9-4d7a-9be5-5bb06a69af0b
-  alterId: 64
-  cipher: auto
-  network: ws
-  servername: www.58987690.xyz
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  skip-cert-verify: true
-  ws-opts:
-    path: /path/1720097652489
-    headers:
-      host: 156.249.18.43
   success_rate: 100.0
-  minimum: 209.37
-  maximum: 1224.25
-  average: 701.0
-  ISO: SC
-  UpdateDay: 2024-07-19T16:31
-  PFirstFoundDay: 2024-07-19T16:15
-  Rank: 40
-- name: 108.186.31.118:37000@vmess@US
-  server: 108.186.31.118
-  port: 37000
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 64
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /path/052619122332
-    headers:
-      host: 108.186.31.118
-  udp: true
-  success_rate: 50.0
-  minimum: 219.54
-  maximum: 1210.86
-  average: 752.0
-  country: United States
+  minimum: 1221.49
+  maximum: 3292.55
+  average: 847.0
   ISO: US
-  UpdateDay: 2024-07-19T16:32
-  PFirstFoundDay: '2024-06-14T16:53:28.573206'
-  Rank: 0
-- name: 15.222.245.142:2053@trojan@US
-  server: 15.222.245.142
-  type: trojan
-  port: 2053
-  udp: true
-  password: auto
-  sni: dns68.9166619.xyz
-  skip-cert-verify: true
-  network: ws
-  success_rate: 66.66666666666667
-  minimum: 249.5
-  maximum: 1267.73
-  average: 759.0
-  country: United States
-  ISO: US
-  UpdateDay: 2024-07-19T16:31
-  PFirstFoundDay: 2024-07-19T10:15
-  Rank: 42
+  UpdateDay: 2024-07-19T17:01
+  PFirstFoundDay: 2024-07-18T10:20
+  Rank: 2
 - name: jp.rnmcnm.com:443@vmess@US
   server: jp.rnmcnm.com
   type: vmess
@@ -452,52 +385,60 @@ proxies:
     headers:
       host: jp.rnmcnm.com
   success_rate: 100.0
-  minimum: 3251.06
-  maximum: 3251.06
-  average: 1015.25
+  minimum: 1760.06
+  maximum: 2932.67
+  average: 861.0
   ISO: US
-  UpdateDay: 2024-07-19T16:31
+  UpdateDay: 2024-07-19T17:01
   PFirstFoundDay: 2024-07-19T12:15
-  Rank: 2
-- name: chatgpt.motrix.xyz:5452@trojan@US
-  server: chatgpt.motrix.xyz
-  type: trojan
-  country: United States
-  port: 5452
-  udp: true
-  password: i7dRy1Jfyo
-  skip-cert-verify: true
-  success_rate: 66.66666666666667
-  minimum: 4343.09
-  maximum: 4343.09
-  average: 1163.0
-  ISO: US
-  UpdateDay: 2024-07-19T16:31
-  PFirstFoundDay: 2024-07-19T12:43
-  Rank: 27
-- name: 95.164.44.140:2095@vmess@GI
-  server: 95.164.44.140
+  Rank: 52
+- name: 6.724064.xyz:443@vmess@US
+  server: 6.724064.xyz
   type: vmess
-  country: Gibraltar
-  port: 2095
-  uuid: 28f8d51a-0e75-4fc3-a36e-03bf4e4d0910
+  country: United States
+  port: 443
+  uuid: e7290e7b-8650-423a-8701-f718850620b0
   alterId: 0
   cipher: auto
   network: ws
+  servername: 6.724064.xyz
   http-opts: {}
   h2-opts: {}
+  tls: true
   skip-cert-verify: true
   ws-opts:
-    path: /vmess
+    path: /xglsvws
     headers:
-      host: 95.164.44.140
+      host: 6.724064.xyz
+  success_rate: 66.66666666666667
+  minimum: 288.75
+  maximum: 1351.45
+  average: 986.0
+  ISO: US
+  UpdateDay: 2024-07-19T17:01
+  PFirstFoundDay: 2024-07-19T12:43
+  Rank: 15
+- type: trojan
+  name: 116.47.10.236:27335@trojan@KR
+  server: 116.47.10.236
+  port: 27335
+  password: moist
+  udp: true
+  skip-cert-verify: true
+  sni: trojan.freenods.sbs
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      host: trojan.freenods.sbs
   success_rate: 50.0
-  minimum: 240.56
-  maximum: 240.56
-  average: 1419.0
-  ISO: GI
-  UpdateDay: 2024-07-19T16:31
-  PFirstFoundDay: 2024-07-19T16:10
+  minimum: 122.91
+  maximum: 1096.27
+  average: 1015.0
+  country: South Korea
+  ISO: KR
+  UpdateDay: 2024-07-19T17:01
+  PFirstFoundDay: '2024-07-02T13:48:25.099177'
   Rank: -5
 - name: 103.159.206.35:31945@vmess@TW
   server: 103.159.206.35
@@ -516,13 +457,53 @@ proxies:
     headers:
       host: 103.159.206.35
   success_rate: 50.0
-  minimum: 483.91
-  maximum: 1572.62
-  average: 1518.0
+  minimum: 1503.09
+  maximum: 1503.09
+  average: 1539.0
   ISO: TW
-  UpdateDay: 2024-07-19T16:31
+  UpdateDay: 2024-07-19T17:01
   PFirstFoundDay: '2024-01-06T20:21:47.381693'
-  Rank: 31
+  Rank: 56
+- name: 95.164.44.140:2095@vmess@GI
+  server: 95.164.44.140
+  type: vmess
+  country: Gibraltar
+  port: 2095
+  uuid: 28f8d51a-0e75-4fc3-a36e-03bf4e4d0910
+  alterId: 0
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /vmess
+    headers:
+      host: 95.164.44.140
+  success_rate: 50.0
+  minimum: 263.1
+  maximum: 263.1
+  average: 1698.0
+  ISO: GI
+  UpdateDay: 2024-07-19T17:02
+  PFirstFoundDay: 2024-07-19T16:10
+  Rank: -5
+- name: chatgpt.motrix.xyz:5452@trojan@US
+  server: chatgpt.motrix.xyz
+  type: trojan
+  country: United States
+  port: 5452
+  udp: true
+  password: i7dRy1Jfyo
+  skip-cert-verify: true
+  success_rate: 50.0
+  minimum: 1227.17
+  maximum: 3292.82
+  average: 2156.0
+  ISO: US
+  UpdateDay: 2024-07-19T17:01
+  PFirstFoundDay: 2024-07-19T12:43
+  Rank: 18
 proxy-groups:
 - name: PG-default
   type: fallback
@@ -530,27 +511,27 @@ proxy-groups:
   interval: 200
   strategy: round-robin
   proxies:
-  - 23.95.68.243:80@vmess@US
+  - bgroup.node1.t.nodelist-airport.com:50001@trojan@US
+  - tj-hk.aikunapp.com:5100@trojan@HK
   - 3.11.201.188:22222@trojan@US
   - 38.75.136.73:443@vmess@US
-  - dashboard.phantomcloud.xyz:10000@vmess@SG
-  - 108.186.31.109:37000@vmess@US
-  - 156.225.67.98:41004@vmess@SC
-  - 172.66.44.249:443@trojan@US
+  - 23.95.68.243:80@vmess@US
+  - 3.141.251.167:22222@trojan@US
   - 108.186.31.115:37000@vmess@US
-  - 3.23.148.74:22222@trojan@US
   - 172.111.57.30:31002@vmess@US
   - 192.74.230.44:37007@vmess@US
+  - dashboard.phantomcloud.xyz:10000@vmess@SG
+  - 38.14.107.233:38003@vmess@US
   - 148.135.0.220:31003@vmess@US
-  - 170.178.163.75:30000@vmess@US
-  - us.eaxeg.be:80@vmess@US
-  - 156.249.18.43:41002@vmess@SC
-  - 108.186.31.118:37000@vmess@US
   - 15.222.245.142:2053@trojan@US
+  - 104.18.25.92:443@trojan@US
+  - us.eaxeg.be:80@vmess@US
   - jp.rnmcnm.com:443@vmess@US
-  - chatgpt.motrix.xyz:5452@trojan@US
-  - 95.164.44.140:2095@vmess@GI
+  - 6.724064.xyz:443@vmess@US
+  - 116.47.10.236:27335@trojan@KR
   - 103.159.206.35:31945@vmess@TW
+  - 95.164.44.140:2095@vmess@GI
+  - chatgpt.motrix.xyz:5452@trojan@US
   tolerance: 250
 rules:
 - MATCH,PG-default
