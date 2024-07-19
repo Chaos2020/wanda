@@ -31,23 +31,23 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
-- name: 54.155.250.236:22222@trojan@US
-  server: 54.155.250.236
+- name: 3.9.30.228:22222@trojan@US
+  server: 3.9.30.228
   port: 22222
   type: trojan
-  password: telegram-id-privatevpns
+  password: telegram-id-directvpn
   sni: trojan.burgerip.co.uk
   skip-cert-verify: true
   udp: true
   success_rate: 60.0
-  minimum: 1182.32
-  maximum: 1182.32
-  average: 335.5
+  minimum: 146.26
+  maximum: 220.73
+  average: 362.3333333333333
   country: United States
   ISO: US
-  UpdateDay: 2024-07-19T08:31
-  PFirstFoundDay: 2024-07-18T22:14
-  Rank: -91
+  UpdateDay: 2024-07-19T09:01
+  PFirstFoundDay: 2024-07-18T20:15
+  Rank: -318
 - name: 54.171.242.5:22222@trojan@US
   server: 54.171.242.5
   port: 22222
@@ -56,15 +56,15 @@ proxies:
   sni: trojan.burgerip.co.uk
   skip-cert-verify: true
   udp: true
-  success_rate: 50.0
+  success_rate: 70.0
   minimum: 171.32
   maximum: 212.76
-  average: 370.6
+  average: 372.2857142857143
   country: United States
   ISO: US
-  UpdateDay: 2024-07-19T08:31
+  UpdateDay: 2024-07-19T09:01
   PFirstFoundDay: 2024-07-18T22:14
-  Rank: -140
+  Rank: -60
 - name: us.eaxeg.be:80@vmess@US
   server: us.eaxeg.be
   type: vmess
@@ -85,9 +85,9 @@ proxies:
   success_rate: 100.0
   minimum: 232.41
   maximum: 239.92
-  average: 403.4
+  average: 393.4
   ISO: US
-  UpdateDay: 2024-07-19T08:31
+  UpdateDay: 2024-07-19T09:01
   PFirstFoundDay: 2024-07-18T10:20
   Rank: 2
 - name: 23.95.68.243:80@vmess@US
@@ -109,10 +109,10 @@ proxies:
   success_rate: 100.0
   minimum: 1264.79
   maximum: 1271.17
-  average: 493.8
+  average: 498.4
   country: United States
   ISO: US
-  UpdateDay: 2024-07-19T08:31
+  UpdateDay: 2024-07-19T09:01
   PFirstFoundDay: 2024-07-07T10:18
   Rank: 2
 - name: 95.164.44.140:2095@vmess@GI
@@ -132,11 +132,33 @@ proxies:
   success_rate: 100.0
   minimum: 249.97
   maximum: 259.75
-  average: 555.4
+  average: 553.2
   country: Gibraltar
   ISO: GI
-  UpdateDay: 2024-07-19T08:31
+  UpdateDay: 2024-07-19T09:01
   PFirstFoundDay: 2024-07-18T20:43
+  Rank: 2
+- type: trojan
+  name: 116.47.10.236:27335@trojan@KR
+  server: 116.47.10.236
+  port: 27335
+  password: moist
+  udp: true
+  skip-cert-verify: true
+  sni: trojan.freenods.sbs
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      host: trojan.freenods.sbs
+  success_rate: 80.0
+  minimum: 1200.13
+  maximum: 1200.13
+  average: 742.875
+  country: South Korea
+  ISO: KR
+  UpdateDay: 2024-07-19T09:01
+  PFirstFoundDay: '2024-07-02T13:48:25.099177'
   Rank: 2
 - name: s1c.v2.v001sss.xyz:2082@vmess@US
   server: s1c.v2.v001sss.xyz
@@ -151,13 +173,13 @@ proxies:
     path: /
     headers:
       host: s1c.v2.v001sss.xyz
-  success_rate: 70.0
+  success_rate: 80.0
   minimum: 294.03
   maximum: 294.03
-  average: 1281.5714285714287
+  average: 1395.125
   country: United States
   ISO: US
-  UpdateDay: 2024-07-19T08:31
+  UpdateDay: 2024-07-19T09:01
   PFirstFoundDay: 2024-07-18T22:11
   Rank: 2
 proxy-groups:
@@ -167,11 +189,12 @@ proxy-groups:
   interval: 200
   strategy: round-robin
   proxies:
-  - 54.155.250.236:22222@trojan@US
+  - 3.9.30.228:22222@trojan@US
   - 54.171.242.5:22222@trojan@US
   - us.eaxeg.be:80@vmess@US
   - 23.95.68.243:80@vmess@US
   - 95.164.44.140:2095@vmess@GI
+  - 116.47.10.236:27335@trojan@KR
   - s1c.v2.v001sss.xyz:2082@vmess@US
   tolerance: 250
 rule-providers:
