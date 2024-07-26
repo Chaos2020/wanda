@@ -31,22 +31,22 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
-- name: 51.44.49.12:22222@trojan@US
-  server: 51.44.49.12
+- name: 3.75.29.113:22222@trojan@US
+  server: 3.75.29.113
   port: 22222
   type: trojan
   password: telegram-id-privatevpns
   sni: trojan.burgerip.co.uk
   skip-cert-verify: false
-  success_rate: 70.0
-  minimum: 1161.44
-  maximum: 1183.04
-  average: 353.0
+  success_rate: 50.0
+  minimum: 127.89
+  maximum: 1150.83
+  average: 350.0
   country: United States
   ISO: US
-  UpdateDay: 2024-07-27T00:01
-  PFirstFoundDay: 2024-07-26T20:20
-  Rank: 100
+  UpdateDay: 2024-07-27T00:31
+  PFirstFoundDay: 2024-07-26T18:47
+  Rank: -444
 - name: 23.162.200.227:443@vmess@US
   server: 23.162.200.227
   type: vmess
@@ -64,14 +64,14 @@ proxies:
     path: /linkvws
     headers:
       host: 23.162.200.227
-  success_rate: 87.5
+  success_rate: 100.0
   minimum: 248.1
   maximum: 248.88
-  average: 604.2857142857143
+  average: 599.3
   ISO: US
-  UpdateDay: 2024-07-27T00:01
+  UpdateDay: 2024-07-27T00:31
   PFirstFoundDay: '2024-06-23T18:52:05.681712'
-  Rank: 5306
+  Rank: 5506
 - name: 27.50.48.108:443@trojan@SG
   server: 27.50.48.108
   type: trojan
@@ -86,36 +86,14 @@ proxies:
     headers:
       Host: trojan.freenods.sbs
   network: ws
-  success_rate: 87.5
+  success_rate: 100.0
   minimum: 242.25
   maximum: 1280.46
-  average: 750.0
+  average: 821.1
   ISO: SG
-  UpdateDay: 2024-07-27T00:01
+  UpdateDay: 2024-07-27T00:31
   PFirstFoundDay: 2024-07-21T14:15
-  Rank: 4968
-- name: 154.197.121.127:443@trojan@SC
-  server: 154.197.121.127
-  type: trojan
-  country: Seychelles
-  port: 443
-  udp: true
-  password: moist
-  sni: trojan.freenods.sbs
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      Host: trojan.freenods.sbs
-  network: ws
-  success_rate: 80.0
-  minimum: 241.58
-  maximum: 1234.94
-  average: 870.5
-  ISO: SC
-  UpdateDay: 2024-07-27T00:01
-  PFirstFoundDay: 2024-07-21T14:15
-  Rank: 4246
+  Rank: 5163
 - name: 6.724064.xyz:443@vmess@US
   server: 6.724064.xyz
   type: vmess
@@ -134,14 +112,36 @@ proxies:
     path: /xglsvws
     headers:
       host: 6.724064.xyz
-  success_rate: 60.0
+  success_rate: 70.0
   minimum: 312.36
   maximum: 1491.78
-  average: 988.3333333333334
+  average: 860.2857142857143
   ISO: US
-  UpdateDay: 2024-07-27T00:01
+  UpdateDay: 2024-07-27T00:31
   PFirstFoundDay: 2024-07-26T12:17
-  Rank: -49
+  Rank: 1
+- name: 154.197.121.127:443@trojan@SC
+  server: 154.197.121.127
+  type: trojan
+  country: Seychelles
+  port: 443
+  udp: true
+  password: moist
+  sni: trojan.freenods.sbs
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      Host: trojan.freenods.sbs
+  network: ws
+  success_rate: 85.71428571428571
+  minimum: 241.58
+  maximum: 1234.94
+  average: 864.1666666666666
+  ISO: SC
+  UpdateDay: 2024-07-27T00:31
+  PFirstFoundDay: 2024-07-21T14:15
+  Rank: 4316
 proxy-groups:
 - name: PG-default
   type: fallback
@@ -149,11 +149,11 @@ proxy-groups:
   interval: 200
   strategy: round-robin
   proxies:
-  - 51.44.49.12:22222@trojan@US
+  - 3.75.29.113:22222@trojan@US
   - 23.162.200.227:443@vmess@US
   - 27.50.48.108:443@trojan@SG
-  - 154.197.121.127:443@trojan@SC
   - 6.724064.xyz:443@vmess@US
+  - 154.197.121.127:443@trojan@SC
   tolerance: 250
 rule-providers:
   anting:
