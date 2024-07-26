@@ -48,11 +48,11 @@ proxies:
   success_rate: 100.0
   minimum: 242.25
   maximum: 1280.46
-  average: 626.4
+  average: 614.8
   ISO: SG
-  UpdateDay: 2024-07-27T02:01
+  UpdateDay: 2024-07-27T02:31
   PFirstFoundDay: 2024-07-21T14:15
-  Rank: 5753
+  Rank: 5948
 - name: 154.197.121.127:443@trojan@SC
   server: 154.197.121.127
   type: trojan
@@ -70,36 +70,27 @@ proxies:
   success_rate: 90.0
   minimum: 241.58
   maximum: 1234.94
-  average: 729.5555555555555
+  average: 653.1111111111111
   ISO: SC
-  UpdateDay: 2024-07-27T02:01
+  UpdateDay: 2024-07-27T02:31
   PFirstFoundDay: 2024-07-21T14:15
-  Rank: 4631
-- name: 23.162.200.227:443@vmess@US
-  server: 23.162.200.227
-  type: vmess
+  Rank: 4766
+- name: 3.75.29.113:22222@trojan@US
+  server: 3.75.29.113
+  port: 22222
+  type: trojan
+  password: telegram-id-privatevpns
+  sni: trojan.burgerip.co.uk
+  skip-cert-verify: false
+  success_rate: 60.0
+  minimum: 127.89
+  maximum: 1150.83
+  average: 807.3333333333334
   country: United States
-  port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
-  network: ws
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  skip-cert-verify: true
-  ws-opts:
-    path: /linkvws
-    headers:
-      host: 23.162.200.227
-  success_rate: 100.0
-  minimum: 248.1
-  maximum: 248.88
-  average: 825.3
   ISO: US
-  UpdateDay: 2024-07-27T02:01
-  PFirstFoundDay: '2024-06-23T18:52:05.681712'
-  Rank: 6063
+  UpdateDay: 2024-07-27T02:32
+  PFirstFoundDay: 2024-07-26T18:47
+  Rank: -873
 - name: indiavideo.sbs:443@vmess@FR
   server: indiavideo.sbs
   type: vmess
@@ -121,37 +112,36 @@ proxies:
   success_rate: 100.0
   minimum: 245.54
   maximum: 1241.23
-  average: 831.1
+  average: 838.8
   ISO: FR
-  UpdateDay: 2024-07-27T02:01
+  UpdateDay: 2024-07-27T02:31
   PFirstFoundDay: 2024-07-20T20:41
-  Rank: 1656
-- name: 6.724064.xyz:443@vmess@US
-  server: 6.724064.xyz
+  Rank: 1846
+- name: 23.162.200.227:443@vmess@US
+  server: 23.162.200.227
   type: vmess
   country: United States
   port: 443
-  uuid: e7290e7b-8650-423a-8701-f718850620b0
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   alterId: 0
   cipher: auto
   network: ws
-  servername: 6.724064.xyz
   http-opts: {}
   h2-opts: {}
   tls: true
   skip-cert-verify: true
   ws-opts:
-    path: /xglsvws
+    path: /linkvws
     headers:
-      host: 6.724064.xyz
-  success_rate: 60.0
-  minimum: 312.36
-  maximum: 1491.78
-  average: 836.6666666666666
+      host: 23.162.200.227
+  success_rate: 100.0
+  minimum: 248.1
+  maximum: 248.88
+  average: 898.3
   ISO: US
-  UpdateDay: 2024-07-27T02:01
-  PFirstFoundDay: 2024-07-26T12:17
-  Rank: -14
+  UpdateDay: 2024-07-27T02:31
+  PFirstFoundDay: '2024-06-23T18:52:05.681712'
+  Rank: 6239
 proxy-groups:
 - name: PG-default
   type: fallback
@@ -161,9 +151,9 @@ proxy-groups:
   proxies:
   - 27.50.48.108:443@trojan@SG
   - 154.197.121.127:443@trojan@SC
-  - 23.162.200.227:443@vmess@US
+  - 3.75.29.113:22222@trojan@US
   - indiavideo.sbs:443@vmess@FR
-  - 6.724064.xyz:443@vmess@US
+  - 23.162.200.227:443@vmess@US
   tolerance: 250
 rules:
 - MATCH,PG-default
