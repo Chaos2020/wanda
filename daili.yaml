@@ -31,22 +31,50 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
-- name: 3.75.29.113:22222@trojan@US
-  server: 3.75.29.113
-  port: 22222
+- name: 27.50.48.108:443@trojan@SG
+  server: 27.50.48.108
   type: trojan
-  password: telegram-id-privatevpns
-  sni: trojan.burgerip.co.uk
-  skip-cert-verify: false
-  success_rate: 50.0
-  minimum: 127.89
-  maximum: 1150.83
-  average: 480.4
-  country: United States
-  ISO: US
-  UpdateDay: 2024-07-27T01:31
-  PFirstFoundDay: 2024-07-26T18:47
-  Rank: -594
+  country: Singapore
+  port: 443
+  udp: true
+  password: moist
+  sni: trojan.freenods.sbs
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      Host: trojan.freenods.sbs
+  network: ws
+  success_rate: 100.0
+  minimum: 242.25
+  maximum: 1280.46
+  average: 626.4
+  ISO: SG
+  UpdateDay: 2024-07-27T02:01
+  PFirstFoundDay: 2024-07-21T14:15
+  Rank: 5753
+- name: 154.197.121.127:443@trojan@SC
+  server: 154.197.121.127
+  type: trojan
+  country: Seychelles
+  port: 443
+  udp: true
+  password: moist
+  sni: trojan.freenods.sbs
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      Host: trojan.freenods.sbs
+  network: ws
+  success_rate: 90.0
+  minimum: 241.58
+  maximum: 1234.94
+  average: 729.5555555555555
+  ISO: SC
+  UpdateDay: 2024-07-27T02:01
+  PFirstFoundDay: 2024-07-21T14:15
+  Rank: 4631
 - name: 23.162.200.227:443@vmess@US
   server: 23.162.200.227
   type: vmess
@@ -67,33 +95,11 @@ proxies:
   success_rate: 100.0
   minimum: 248.1
   maximum: 248.88
-  average: 772.5
+  average: 825.3
   ISO: US
-  UpdateDay: 2024-07-27T01:31
+  UpdateDay: 2024-07-27T02:01
   PFirstFoundDay: '2024-06-23T18:52:05.681712'
-  Rank: 5887
-- name: 27.50.48.108:443@trojan@SG
-  server: 27.50.48.108
-  type: trojan
-  country: Singapore
-  port: 443
-  udp: true
-  password: moist
-  sni: trojan.freenods.sbs
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      Host: trojan.freenods.sbs
-  network: ws
-  success_rate: 100.0
-  minimum: 242.25
-  maximum: 1280.46
-  average: 773.1
-  ISO: SG
-  UpdateDay: 2024-07-27T01:31
-  PFirstFoundDay: 2024-07-21T14:15
-  Rank: 5553
+  Rank: 6063
 - name: indiavideo.sbs:443@vmess@FR
   server: indiavideo.sbs
   type: vmess
@@ -112,36 +118,14 @@ proxies:
     path: /linkws
     headers:
       host: indiavideo.sbs
-  success_rate: 80.0
+  success_rate: 100.0
   minimum: 245.54
   maximum: 1241.23
-  average: 775.25
+  average: 831.1
   ISO: FR
-  UpdateDay: 2024-07-27T01:31
+  UpdateDay: 2024-07-27T02:01
   PFirstFoundDay: 2024-07-20T20:41
-  Rank: 1466
-- name: 154.197.121.127:443@trojan@SC
-  server: 154.197.121.127
-  type: trojan
-  country: Seychelles
-  port: 443
-  udp: true
-  password: moist
-  sni: trojan.freenods.sbs
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      Host: trojan.freenods.sbs
-  network: ws
-  success_rate: 90.0
-  minimum: 241.58
-  maximum: 1234.94
-  average: 775.8888888888889
-  ISO: SC
-  UpdateDay: 2024-07-27T01:31
-  PFirstFoundDay: 2024-07-21T14:15
-  Rank: 4496
+  Rank: 1656
 - name: 6.724064.xyz:443@vmess@US
   server: 6.724064.xyz
   type: vmess
@@ -160,31 +144,14 @@ proxies:
     path: /xglsvws
     headers:
       host: 6.724064.xyz
-  success_rate: 70.0
+  success_rate: 60.0
   minimum: 312.36
   maximum: 1491.78
-  average: 840.1428571428571
+  average: 836.6666666666666
   ISO: US
-  UpdateDay: 2024-07-27T01:31
+  UpdateDay: 2024-07-27T02:01
   PFirstFoundDay: 2024-07-26T12:17
-  Rank: 31
-- name: 42.3.148.130:443@trojan@HK
-  server: 42.3.148.130
-  port: 443
-  type: trojan
-  password: NUeBvQHox0BmnHpu
-  sni: ggghhhk51.xyz
-  skip-cert-verify: true
-  udp: true
-  success_rate: 50.0
-  minimum: 88.42
-  maximum: 1122.28
-  average: 939.0
-  country: Hong Kong
-  ISO: HK
-  UpdateDay: 2024-07-27T01:31
-  PFirstFoundDay: 2024-07-25T18:15
-  Rank: -787
+  Rank: -14
 proxy-groups:
 - name: PG-default
   type: fallback
@@ -192,13 +159,11 @@ proxy-groups:
   interval: 200
   strategy: round-robin
   proxies:
-  - 3.75.29.113:22222@trojan@US
-  - 23.162.200.227:443@vmess@US
   - 27.50.48.108:443@trojan@SG
-  - indiavideo.sbs:443@vmess@FR
   - 154.197.121.127:443@trojan@SC
+  - 23.162.200.227:443@vmess@US
+  - indiavideo.sbs:443@vmess@FR
   - 6.724064.xyz:443@vmess@US
-  - 42.3.148.130:443@trojan@HK
   tolerance: 250
 rule-providers:
   anting:
