@@ -31,22 +31,6 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
-- name: 51.44.49.12:22222@trojan@US
-  server: 51.44.49.12
-  port: 22222
-  type: trojan
-  password: telegram-id-privatevpns
-  sni: trojan.burgerip.co.uk
-  skip-cert-verify: false
-  success_rate: 70.0
-  minimum: 1161.44
-  maximum: 1183.04
-  average: 381.14285714285717
-  country: United States
-  ISO: US
-  UpdateDay: 2024-07-27T04:31
-  PFirstFoundDay: 2024-07-26T20:20
-  Rank: 1
 - name: 154.197.121.127:443@trojan@SC
   server: 154.197.121.127
   type: trojan
@@ -64,11 +48,11 @@ proxies:
   success_rate: 100.0
   minimum: 241.58
   maximum: 1234.94
-  average: 528.2
+  average: 528.5
   ISO: SC
-  UpdateDay: 2024-07-27T04:31
+  UpdateDay: 2024-07-27T05:01
   PFirstFoundDay: 2024-07-21T14:15
-  Rank: 5506
+  Rank: 5706
 - name: 27.50.48.108:443@trojan@SG
   server: 27.50.48.108
   type: trojan
@@ -86,11 +70,37 @@ proxies:
   success_rate: 100.0
   minimum: 242.25
   maximum: 1280.46
-  average: 663.1
+  average: 656.4
   ISO: SG
-  UpdateDay: 2024-07-27T04:31
+  UpdateDay: 2024-07-27T05:01
   PFirstFoundDay: 2024-07-21T14:15
-  Rank: 6698
+  Rank: 6898
+- name: 6.724064.xyz:443@vmess@US
+  server: 6.724064.xyz
+  type: vmess
+  country: United States
+  port: 443
+  uuid: e7290e7b-8650-423a-8701-f718850620b0
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: 6.724064.xyz
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /xglsvws
+    headers:
+      host: 6.724064.xyz
+  success_rate: 70.0
+  minimum: 312.36
+  maximum: 1491.78
+  average: 736.7142857142857
+  ISO: US
+  UpdateDay: 2024-07-27T05:01
+  PFirstFoundDay: 2024-07-26T12:17
+  Rank: 1
 - name: 23.162.200.227:443@vmess@US
   server: 23.162.200.227
   type: vmess
@@ -111,37 +121,37 @@ proxies:
   success_rate: 100.0
   minimum: 248.1
   maximum: 248.88
-  average: 675.6
+  average: 758.5
   ISO: US
-  UpdateDay: 2024-07-27T04:31
+  UpdateDay: 2024-07-27T05:01
   PFirstFoundDay: '2024-06-23T18:52:05.681712'
-  Rank: 7015
-- name: 6.724064.xyz:443@vmess@US
-  server: 6.724064.xyz
+  Rank: 7210
+- name: 38.33.0.177:38001@vmess@US
+  server: 38.33.0.177
   type: vmess
   country: United States
-  port: 443
-  uuid: e7290e7b-8650-423a-8701-f718850620b0
-  alterId: 0
+  port: 38001
+  uuid: 68d238ce-3ca1-46dc-b833-a0916c829ad3
+  alterId: 64
   cipher: auto
   network: ws
-  servername: 6.724064.xyz
+  servername: www.74635375.xyz
   http-opts: {}
   h2-opts: {}
   tls: true
   skip-cert-verify: true
   ws-opts:
-    path: /xglsvws
+    path: /path/1720097652489
     headers:
-      host: 6.724064.xyz
-  success_rate: 60.0
-  minimum: 312.36
-  maximum: 1491.78
-  average: 783.0
+      host: 38.33.0.177
+  success_rate: 70.0
+  minimum: 1252.48
+  maximum: 1252.48
+  average: 789.7142857142857
   ISO: US
-  UpdateDay: 2024-07-27T04:31
-  PFirstFoundDay: 2024-07-26T12:17
-  Rank: -309
+  UpdateDay: 2024-07-27T05:01
+  PFirstFoundDay: 2024-07-19T18:14
+  Rank: 1886
 - name: indiavideo.sbs:443@vmess@FR
   server: indiavideo.sbs
   type: vmess
@@ -163,37 +173,11 @@ proxies:
   success_rate: 100.0
   minimum: 245.54
   maximum: 1241.23
-  average: 796.9
+  average: 873.6
   ISO: FR
-  UpdateDay: 2024-07-27T04:31
+  UpdateDay: 2024-07-27T05:01
   PFirstFoundDay: 2024-07-20T20:41
-  Rank: 2626
-- name: 38.33.0.177:38001@vmess@US
-  server: 38.33.0.177
-  type: vmess
-  country: United States
-  port: 38001
-  uuid: 68d238ce-3ca1-46dc-b833-a0916c829ad3
-  alterId: 64
-  cipher: auto
-  network: ws
-  servername: www.74635375.xyz
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  skip-cert-verify: true
-  ws-opts:
-    path: /path/1720097652489
-    headers:
-      host: 38.33.0.177
-  success_rate: 60.0
-  minimum: 1252.48
-  maximum: 1252.48
-  average: 844.6666666666666
-  ISO: US
-  UpdateDay: 2024-07-27T04:31
-  PFirstFoundDay: 2024-07-19T18:14
-  Rank: 1866
+  Rank: 2816
 proxy-groups:
 - name: PG-default
   type: fallback
@@ -201,13 +185,12 @@ proxy-groups:
   interval: 200
   strategy: round-robin
   proxies:
-  - 51.44.49.12:22222@trojan@US
   - 154.197.121.127:443@trojan@SC
   - 27.50.48.108:443@trojan@SG
-  - 23.162.200.227:443@vmess@US
   - 6.724064.xyz:443@vmess@US
-  - indiavideo.sbs:443@vmess@FR
+  - 23.162.200.227:443@vmess@US
   - 38.33.0.177:38001@vmess@US
+  - indiavideo.sbs:443@vmess@FR
   tolerance: 250
 rules:
 - MATCH,PG-default
