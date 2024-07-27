@@ -31,28 +31,6 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
-- name: 154.197.121.127:443@trojan@SC
-  server: 154.197.121.127
-  type: trojan
-  country: Seychelles
-  port: 443
-  udp: true
-  password: moist
-  sni: trojan.freenods.sbs
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      Host: trojan.freenods.sbs
-  network: ws
-  success_rate: 100.0
-  minimum: 241.58
-  maximum: 1234.94
-  average: 553.8
-  ISO: SC
-  UpdateDay: 2024-07-27T08:01
-  PFirstFoundDay: 2024-07-21T14:15
-  Rank: 6901
 - name: 6.724064.xyz:443@vmess@US
   server: 6.724064.xyz
   type: vmess
@@ -71,14 +49,36 @@ proxies:
     path: /xglsvws
     headers:
       host: 6.724064.xyz
-  success_rate: 70.0
+  success_rate: 60.0
   minimum: 312.36
   maximum: 1491.78
-  average: 561.1428571428571
+  average: 577.5
   ISO: US
-  UpdateDay: 2024-07-27T08:01
+  UpdateDay: 2024-07-27T08:31
   PFirstFoundDay: 2024-07-26T12:17
-  Rank: 361
+  Rank: 321
+- name: 154.197.121.127:443@trojan@SC
+  server: 154.197.121.127
+  type: trojan
+  country: Seychelles
+  port: 443
+  udp: true
+  password: moist
+  sni: trojan.freenods.sbs
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      Host: trojan.freenods.sbs
+  network: ws
+  success_rate: 100.0
+  minimum: 241.58
+  maximum: 1234.94
+  average: 601.4
+  ISO: SC
+  UpdateDay: 2024-07-27T08:31
+  PFirstFoundDay: 2024-07-21T14:15
+  Rank: 7096
 - name: 27.50.48.108:443@trojan@SG
   server: 27.50.48.108
   type: trojan
@@ -96,36 +96,11 @@ proxies:
   success_rate: 100.0
   minimum: 242.25
   maximum: 1280.46
-  average: 620.2
+  average: 622.8
   ISO: SG
-  UpdateDay: 2024-07-27T08:01
+  UpdateDay: 2024-07-27T08:31
   PFirstFoundDay: 2024-07-21T14:15
-  Rank: 8078
-- name: 23.162.200.227:443@vmess@US
-  server: 23.162.200.227
-  type: vmess
-  country: United States
-  port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
-  network: ws
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  skip-cert-verify: true
-  ws-opts:
-    path: /linkvws
-    headers:
-      host: 23.162.200.227
-  success_rate: 100.0
-  minimum: 248.1
-  maximum: 248.88
-  average: 645.6
-  ISO: US
-  UpdateDay: 2024-07-27T08:01
-  PFirstFoundDay: '2024-06-23T18:52:05.681712'
-  Rank: 8400
+  Rank: 8278
 - name: indiavideo.sbs:443@vmess@FR
   server: indiavideo.sbs
   type: vmess
@@ -147,11 +122,36 @@ proxies:
   success_rate: 100.0
   minimum: 245.54
   maximum: 1241.23
-  average: 677.0
+  average: 681.3
   ISO: FR
-  UpdateDay: 2024-07-27T08:01
+  UpdateDay: 2024-07-27T08:31
   PFirstFoundDay: 2024-07-20T20:41
-  Rank: 3966
+  Rank: 4166
+- name: 23.162.200.227:443@vmess@US
+  server: 23.162.200.227
+  type: vmess
+  country: United States
+  port: 443
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /linkvws
+    headers:
+      host: 23.162.200.227
+  success_rate: 100.0
+  minimum: 248.1
+  maximum: 248.88
+  average: 694.2
+  ISO: US
+  UpdateDay: 2024-07-27T08:31
+  PFirstFoundDay: '2024-06-23T18:52:05.681712'
+  Rank: 8600
 - name: 38.33.0.177:38001@vmess@US
   server: 38.33.0.177
   type: vmess
@@ -170,14 +170,14 @@ proxies:
     path: /path/1720097652489
     headers:
       host: 38.33.0.177
-  success_rate: 70.0
+  success_rate: 50.0
   minimum: 1252.48
   maximum: 1252.48
-  average: 791.4285714285714
+  average: 755.6
   ISO: US
-  UpdateDay: 2024-07-27T08:01
+  UpdateDay: 2024-07-27T08:31
   PFirstFoundDay: 2024-07-19T18:14
-  Rank: 2546
+  Rank: 2446
 proxy-groups:
 - name: PG-default
   type: fallback
@@ -185,11 +185,11 @@ proxy-groups:
   interval: 200
   strategy: round-robin
   proxies:
-  - 154.197.121.127:443@trojan@SC
   - 6.724064.xyz:443@vmess@US
+  - 154.197.121.127:443@trojan@SC
   - 27.50.48.108:443@trojan@SG
-  - 23.162.200.227:443@vmess@US
   - indiavideo.sbs:443@vmess@FR
+  - 23.162.200.227:443@vmess@US
   - 38.33.0.177:38001@vmess@US
   tolerance: 250
 rules:
