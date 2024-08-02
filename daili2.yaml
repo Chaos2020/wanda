@@ -31,6 +31,32 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
+- name: vc.fly.dev:443@vmess@US
+  server: vc.fly.dev
+  type: vmess
+  country: United States
+  port: 443
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  alterId: 32
+  cipher: auto
+  network: ws
+  servername: vc.fly.dev
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /vc
+    headers:
+      Host: www.bing.com
+  success_rate: 50
+  minimum: 75.84
+  maximum: 3111.92
+  average: 338
+  ISO: US
+  UpdateDay: 2024-08-02T15:01
+  PFirstFoundDay: '2024-05-07T03:36:58.935636'
+  Rank: -516
 - name: 51.68.215.55:443@trojan@FR
   server: 51.68.215.55
   type: trojan
@@ -48,36 +74,27 @@ proxies:
   success_rate: 66
   minimum: 168.06
   maximum: 184.35
-  average: 433
+  average: 506
   ISO: FR
-  UpdateDay: 2024-08-02T14:31
+  UpdateDay: 2024-08-02T15:01
   PFirstFoundDay: '2024-02-11T13:56:15.462034'
-  Rank: 8206
-- name: 23.95.68.243:80@vmess@US
-  type: vmess
-  server: 23.95.68.243
-  port: 80
-  uuid: 211d8a34-9c48-4435-b4bf-343ae1cbda0e
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: google.com
-  http-opts: {}
-  h2-opts: {}
+  Rank: 8185
+- name: fr1.trojanvpn.de:2053@trojan@MD
+  server: fr1.trojanvpn.de
+  port: 2053
+  type: trojan
+  password: 5c7941b5-c393-4eea-a76d-d44b59baf8a0
   skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      host: 23.95.68.243
-  success_rate: 80
-  minimum: 148.29
-  maximum: 1197.05
-  average: 540
-  country: United States
-  ISO: US
-  UpdateDay: 2024-08-02T14:31
-  PFirstFoundDay: 2024-07-07T10:18
-  Rank: 1114
+  udp: true
+  success_rate: 50
+  minimum: 269.89
+  maximum: 1491.2
+  average: 548
+  country: Moldova
+  ISO: MD
+  UpdateDay: 2024-08-02T15:01
+  PFirstFoundDay: 2024-07-20T20:41
+  Rank: -216
 - name: 185.133.35.46:443@trojan@BR
   server: 185.133.35.46
   port: 443
@@ -94,12 +111,12 @@ proxies:
   success_rate: 50
   minimum: 197.92
   maximum: 3223.31
-  average: 579
+  average: 593
   country: Brazil
   ISO: BR
-  UpdateDay: 2024-08-02T14:31
+  UpdateDay: 2024-08-02T15:01
   PFirstFoundDay: '2024-07-01T20:53:31.812776'
-  Rank: 11772
+  Rank: 11732
 - name: 23.162.200.227:443@vmess@US
   server: 23.162.200.227
   type: vmess
@@ -120,83 +137,36 @@ proxies:
   success_rate: 75
   minimum: 243.86
   maximum: 247.63
-  average: 620
+  average: 616
   ISO: US
-  UpdateDay: 2024-08-02T14:31
+  UpdateDay: 2024-08-02T15:01
   PFirstFoundDay: '2024-06-23T18:52:05.681712'
-  Rank: 24033
-- name: 51.89.3.229:30001@vmess@FR
-  server: 51.89.3.229
-  port: 30001
+  Rank: 24031
+- name: 23.95.68.243:80@vmess@US
   type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 64
+  server: 23.95.68.243
+  port: 80
+  uuid: 211d8a34-9c48-4435-b4bf-343ae1cbda0e
+  alterId: 0
   cipher: auto
-  tls: true
-  skip-cert-verify: true
   network: ws
-  ws-opts:
-    path: /path/181721272114
-    headers:
-      host: 51.89.3.229
-  udp: true
-  success_rate: 50
-  minimum: 168.63
-  maximum: 1159.95
-  average: 761
-  country: France
-  ISO: FR
-  UpdateDay: 2024-08-02T14:31
-  PFirstFoundDay: 2024-07-20T20:41
-  Rank: 197
-- name: 192.74.241.163:38002@vmess@US
-  server: 192.74.241.163
-  port: 38002
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 64
-  cipher: auto
-  tls: true
+  servername: google.com
+  http-opts: {}
+  h2-opts: {}
   skip-cert-verify: true
-  network: ws
   ws-opts:
-    path: /path/182410031734
+    path: /
     headers:
-      host: 192.74.241.163
-  udp: true
-  success_rate: 60
-  minimum: 287.36
-  maximum: 3300.83
-  average: 777
+      host: 23.95.68.243
+  success_rate: 75
+  minimum: 148.29
+  maximum: 1197.05
+  average: 760
   country: United States
   ISO: US
-  UpdateDay: 2024-08-02T14:31
-  PFirstFoundDay: '2024-06-29T05:59:54.162430'
-  Rank: 77
-- name: 142.4.103.164:38002@vmess@US
-  server: 142.4.103.164
-  port: 38002
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 64
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /path/340434130032
-    headers:
-      host: 142.4.103.164
-  udp: true
-  success_rate: 66
-  minimum: 254.32
-  maximum: 382.69
-  average: 793
-  country: United States
-  ISO: US
-  UpdateDay: 2024-08-02T14:31
-  PFirstFoundDay: 2024-07-20T20:41
-  Rank: 331
+  UpdateDay: 2024-08-02T15:01
+  PFirstFoundDay: 2024-07-07T10:18
+  Rank: 1110
 - name: 38.33.34.38:36000@vmess@US
   server: 38.33.34.38
   port: 36000
@@ -212,40 +182,40 @@ proxies:
     headers:
       host: 38.33.34.38
   udp: true
-  success_rate: 80
+  success_rate: 66
   minimum: 209.72
   maximum: 1249.3
-  average: 985
+  average: 790
   country: United States
   ISO: US
-  UpdateDay: 2024-08-02T14:31
+  UpdateDay: 2024-08-02T15:01
   PFirstFoundDay: '2024-06-08T11:07:21.191446'
-  Rank: 1635
-- name: 199.188.106.2:37002@vmess@US
-  server: 199.188.106.2
+  Rank: 1614
+- name: nlch.blueberrynetwork.store:80@vmess@CZ
+  server: nlch.blueberrynetwork.store
+  port: 80
   type: vmess
-  country: United States
-  port: 37002
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 64
+  alterId: 0
   cipher: auto
+  client-fingerprint: chrome
   network: ws
-  http-opts: {}
-  h2-opts: {}
-  tls: true
   skip-cert-verify: true
+  tls: false
+  udp: true
+  uuid: 3e5cda0a-6122-4f54-9e3c-3f49e7a526f9
   ws-opts:
-    path: /path/150227231722
     headers:
-      host: 199.188.106.2
-  success_rate: 66
-  minimum: 254.7
-  maximum: 1262.09
-  average: 1275
-  ISO: US
-  UpdateDay: 2024-08-02T14:31
-  PFirstFoundDay: 2024-07-20T20:41
-  Rank: -476
+      host: nlch.blueberrynetwork.store
+    path: /
+  success_rate: 50
+  minimum: 245.83
+  maximum: 1278.71
+  average: 869
+  country: Czechia
+  ISO: CZ
+  UpdateDay: 2024-08-02T15:01
+  PFirstFoundDay: 2024-07-30T10:11
+  Rank: -351
 - name: 152.70.239.134:34237@trojan@US
   server: 152.70.239.134
   type: trojan
@@ -263,16 +233,90 @@ proxies:
   success_rate: 66
   minimum: 1057.45
   maximum: 1057.45
-  average: 1377
+  average: 882
   ISO: US
-  UpdateDay: 2024-08-02T14:31
+  UpdateDay: 2024-08-02T15:01
   PFirstFoundDay: 2024-07-22T10:43
-  Rank: 90
-- name: 192.74.242.195:37000@vmess@US
-  server: 192.74.242.195
+  Rank: 67
+- name: 51.89.3.229:30001@vmess@FR
+  server: 51.89.3.229
+  port: 30001
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  alterId: 64
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /path/181721272114
+    headers:
+      host: 51.89.3.229
+  udp: true
+  success_rate: 100
+  minimum: 168.63
+  maximum: 1159.95
+  average: 912
+  country: France
+  ISO: FR
+  UpdateDay: 2024-08-02T15:01
+  PFirstFoundDay: 2024-07-20T20:41
+  Rank: 252
+- name: 142.4.103.164:38002@vmess@US
+  server: 142.4.103.164
+  port: 38002
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  alterId: 64
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /path/340434130032
+    headers:
+      host: 142.4.103.164
+  udp: true
+  success_rate: 100
+  minimum: 254.32
+  maximum: 382.69
+  average: 1017
+  country: United States
+  ISO: US
+  UpdateDay: 2024-08-02T15:01
+  PFirstFoundDay: 2024-07-20T20:41
+  Rank: 405
+- name: 22.lwdh.us:12910@vmess@CZ
+  server: 22.lwdh.us
+  type: vmess
+  port: 12910
+  udp: true
+  uuid: 8259cb1c-dd6c-4739-9c88-af550d977525
+  alterId: 0
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      host: 22.lwdh.us
+  success_rate: 50
+  minimum: 174.21
+  maximum: 3173.0
+  average: 1094
+  country: Czechia
+  ISO: CZ
+  UpdateDay: 2024-08-02T15:01
+  PFirstFoundDay: 2024-07-30T10:11
+  Rank: -299
+- name: 199.188.106.2:37002@vmess@US
+  server: 199.188.106.2
   type: vmess
   country: United States
-  port: 37000
+  port: 37002
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
   alterId: 64
   cipher: auto
@@ -282,17 +326,40 @@ proxies:
   tls: true
   skip-cert-verify: true
   ws-opts:
-    path: /path/290829250230
+    path: /path/150227231722
     headers:
-      host: 192.74.242.195
-  success_rate: 60
-  minimum: 1273.3
-  maximum: 1295.04
-  average: 1620
+      host: 199.188.106.2
+  success_rate: 100
+  minimum: 254.7
+  maximum: 1262.09
+  average: 1490
   ISO: US
-  UpdateDay: 2024-08-02T14:31
-  PFirstFoundDay: '2024-06-01T13:21:47.972228'
-  Rank: 25
+  UpdateDay: 2024-08-02T15:01
+  PFirstFoundDay: 2024-07-20T20:41
+  Rank: 1
+- name: s1c.v2.v001sss.xyz:2082@vmess@US
+  type: vmess
+  server: s1c.v2.v001sss.xyz
+  port: 2082
+  cipher: auto
+  uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
+  alterId: 0
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      host: s1c.v2.v001sss.xyz
+  success_rate: 66
+  minimum: 205.15
+  maximum: 3223.07
+  average: 1911
+  country: United States
+  ISO: US
+  UpdateDay: 2024-08-02T15:01
+  PFirstFoundDay: 2024-07-20T22:38
+  Rank: -377
 proxy-groups:
 - name: PG-default
   type: fallback
@@ -300,17 +367,20 @@ proxy-groups:
   interval: 200
   strategy: round-robin
   proxies:
+  - vc.fly.dev:443@vmess@US
   - 51.68.215.55:443@trojan@FR
-  - 23.95.68.243:80@vmess@US
+  - fr1.trojanvpn.de:2053@trojan@MD
   - 185.133.35.46:443@trojan@BR
   - 23.162.200.227:443@vmess@US
-  - 51.89.3.229:30001@vmess@FR
-  - 192.74.241.163:38002@vmess@US
-  - 142.4.103.164:38002@vmess@US
+  - 23.95.68.243:80@vmess@US
   - 38.33.34.38:36000@vmess@US
-  - 199.188.106.2:37002@vmess@US
+  - nlch.blueberrynetwork.store:80@vmess@CZ
   - 152.70.239.134:34237@trojan@US
-  - 192.74.242.195:37000@vmess@US
+  - 51.89.3.229:30001@vmess@FR
+  - 142.4.103.164:38002@vmess@US
+  - 22.lwdh.us:12910@vmess@CZ
+  - 199.188.106.2:37002@vmess@US
+  - s1c.v2.v001sss.xyz:2082@vmess@US
   tolerance: 250
 rules:
 - MATCH,PG-default
