@@ -31,6 +31,31 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
+- name: vc.fly.dev:443@vmess@US
+  server: vc.fly.dev
+  type: vmess
+  country: United States
+  port: 443
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  alterId: 32
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /vc
+    headers:
+      host: vc.fly.dev
+  success_rate: 50
+  minimum: 88888
+  maximum: 88888
+  average: 407
+  ISO: US
+  UpdateDay: 2024-08-04T12:31
+  PFirstFoundDay: '2024-05-07T03:36:58.935636'
+  Rank: -1
 - name: 23.95.68.243:80@vmess@US
   type: vmess
   server: 23.95.68.243
@@ -50,37 +75,12 @@ proxies:
   success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 461
+  average: 457
   country: United States
   ISO: US
-  UpdateDay: 2024-08-04T12:14
+  UpdateDay: 2024-08-04T12:31
   PFirstFoundDay: 2024-07-07T10:18
-  Rank: 1357
-- name: vc.fly.dev:443@vmess@US
-  server: vc.fly.dev
-  type: vmess
-  country: United States
-  port: 443
-  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
-  alterId: 32
-  cipher: auto
-  network: ws
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  skip-cert-verify: true
-  ws-opts:
-    path: /vc
-    headers:
-      host: vc.fly.dev
-  success_rate: 100
-  minimum: 88888
-  maximum: 88888
-  average: 613
-  ISO: US
-  UpdateDay: 2024-08-04T12:14
-  PFirstFoundDay: '2024-05-07T03:36:58.935636'
-  Rank: 39
+  Rank: 1317
 - name: 23.162.200.227:443@vmess@US
   server: 23.162.200.227
   type: vmess
@@ -90,6 +90,7 @@ proxies:
   alterId: 0
   cipher: auto
   network: ws
+  servername: 23.162.200.227
   http-opts: {}
   h2-opts: {}
   tls: true
@@ -101,35 +102,36 @@ proxies:
   success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 645
+  average: 643
   ISO: US
-  UpdateDay: 2024-08-04T12:14
+  UpdateDay: 2024-08-04T12:31
   PFirstFoundDay: '2024-06-23T18:52:05.681712'
-  Rank: 24855
-- name: 142.4.103.164:38002@vmess@US
-  server: 142.4.103.164
-  port: 38002
+  Rank: 24815
+- name: m2-hk1.go-relay.top:80@vmess@US
+  server: m2-hk1.go-relay.top
   type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 64
+  country: United States
+  port: 80
+  uuid: 91b1404f-38b4-4194-91a6-a6dc092daafd
+  alterId: 0
   cipher: auto
-  tls: true
-  skip-cert-verify: true
   network: ws
+  servername: m2-hk1.go-relay.top
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
   ws-opts:
-    path: /path/340434130032
+    path: /ws?ed=2560
     headers:
-      host: 142.4.103.164
-  udp: true
+      host: m2-hk1.go-relay.top
   success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 871
-  country: United States
+  average: 949
   ISO: US
-  UpdateDay: 2024-08-04T12:14
-  PFirstFoundDay: 2024-07-20T20:41
-  Rank: -2980
+  UpdateDay: 2024-08-04T12:31
+  PFirstFoundDay: '2024-06-10T14:50:56.461656'
+  Rank: 161
 - name: 38.33.34.38:36000@vmess@US
   server: 38.33.34.38
   port: 36000
@@ -148,12 +150,12 @@ proxies:
   success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 993
+  average: 972
   country: United States
   ISO: US
-  UpdateDay: 2024-08-04T12:14
+  UpdateDay: 2024-08-04T12:31
   PFirstFoundDay: '2024-06-08T11:07:21.191446'
-  Rank: 2151
+  Rank: 2111
 - name: 199.188.106.2:37002@vmess@US
   server: 199.188.106.2
   type: vmess
@@ -174,36 +176,33 @@ proxies:
   success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 1038
+  average: 1490
   ISO: US
-  UpdateDay: 2024-08-04T12:14
+  UpdateDay: 2024-08-04T12:31
   PFirstFoundDay: 2024-07-20T20:41
-  Rank: 107
-- name: m2-hk1.go-relay.top:80@vmess@US
-  server: m2-hk1.go-relay.top
-  type: vmess
-  country: United States
-  port: 80
-  uuid: 91b1404f-38b4-4194-91a6-a6dc092daafd
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: m2-hk1.go-relay.top
-  http-opts: {}
-  h2-opts: {}
+  Rank: 65
+- name: 172.66.47.7:443@trojan@US
+  server: 172.66.47.7
+  port: 443
+  type: trojan
+  password: auto
+  sni: fe9b5676-a2aa-4b6a-8257-cd2dd0910205.8c98ef2b-bee2-470b-b759-9f5efbc10812.freeddns.org
   skip-cert-verify: true
+  network: ws
   ws-opts:
-    path: /ws?ed=2560
+    path: /worker-polished-glade-fe47.tahajadidi2022.workers.dev/?ed=2560
     headers:
-      host: m2-hk1.go-relay.top
-  success_rate: 100
+      Host: fe9b5676-a2aa-4b6a-8257-cd2dd0910205.8c98ef2b-bee2-470b-b759-9f5efbc10812.freeddns.org
+  udp: true
+  success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 1552
+  average: 1829
+  country: United States
   ISO: US
-  UpdateDay: 2024-08-04T12:14
-  PFirstFoundDay: '2024-06-10T14:50:56.461656'
-  Rank: 201
+  UpdateDay: 2024-08-04T12:31
+  PFirstFoundDay: 2024-07-15T10:11
+  Rank: -159
 - name: s1c.v2.v001sss.xyz:2082@vmess@US
   server: s1c.v2.v001sss.xyz
   type: vmess
@@ -224,11 +223,11 @@ proxies:
   success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 1698
+  average: 1856
   ISO: US
-  UpdateDay: 2024-08-04T12:14
+  UpdateDay: 2024-08-04T12:31
   PFirstFoundDay: 2024-07-20T22:38
-  Rank: -41
+  Rank: -83
 proxy-groups:
 - name: PG-default
   type: fallback
@@ -236,13 +235,13 @@ proxy-groups:
   interval: 200
   strategy: round-robin
   proxies:
-  - 23.95.68.243:80@vmess@US
   - vc.fly.dev:443@vmess@US
+  - 23.95.68.243:80@vmess@US
   - 23.162.200.227:443@vmess@US
-  - 142.4.103.164:38002@vmess@US
+  - m2-hk1.go-relay.top:80@vmess@US
   - 38.33.34.38:36000@vmess@US
   - 199.188.106.2:37002@vmess@US
-  - m2-hk1.go-relay.top:80@vmess@US
+  - 172.66.47.7:443@trojan@US
   - s1c.v2.v001sss.xyz:2082@vmess@US
   tolerance: 250
 rules:
