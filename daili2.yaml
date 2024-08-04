@@ -50,74 +50,38 @@ proxies:
   success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 535
+  average: 536
   country: United States
   ISO: US
-  UpdateDay: 2024-08-04T22:31
+  UpdateDay: 2024-08-04T23:01
   PFirstFoundDay: 2024-07-07T10:18
-  Rank: 1917
-- name: 129.146.95.165:443@trojan@US
-  server: 129.146.95.165
-  port: 443
-  type: trojan
-  password: 5c542056-a113-43a3-9889-f7ec7884e014
-  sni: download.xn--mirrors-oj8km52txc7d.com
-  skip-cert-verify: true
-  udp: true
-  success_rate: 50
-  minimum: 88888
-  maximum: 88888
-  average: 597
-  country: United States
-  ISO: US
-  UpdateDay: 2024-08-04T22:32
-  PFirstFoundDay: 2024-07-28T12:15
-  Rank: -4565
-- name: 104.21.47.176:443@trojan@US
-  server: 104.21.47.176
-  type: trojan
-  country: United States
-  port: 443
-  udp: true
-  password: 52701795-3c3b-46b4-b7cf-c5978b3a4cf2
-  sni: hdfyc1.achaemenidempireofpersia.uk
-  skip-cert-verify: true
-  network: grpc
-  grpc-opts:
-    grpc-service-name: xw7uebRG4KlUXGGYTVEagC5V7fI
-  success_rate: 50
-  minimum: 88888
-  maximum: 88888
-  average: 641
-  ISO: US
-  UpdateDay: 2024-08-04T22:31
-  PFirstFoundDay: '2024-03-14T22:34:13.898356'
-  Rank: -14
-- name: vc.fly.dev:443@vmess@US
-  server: vc.fly.dev
+  Rank: 1818
+- name: 23.162.200.227:443@vmess@US
+  server: 23.162.200.227
   type: vmess
   country: United States
   port: 443
-  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
-  alterId: 32
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
   cipher: auto
   network: ws
+  servername: 23.162.200.227
   http-opts: {}
   h2-opts: {}
   tls: true
   skip-cert-verify: true
   ws-opts:
-    path: /vc
+    path: /linkvws
     headers:
-      host: vc.fly.dev
+      host: 23.162.200.227
   success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 671
+  average: 647
   ISO: US
-  UpdateDay: 2024-08-04T22:31
-  PFirstFoundDay: '2024-05-07T03:36:58.935636'
-  Rank: -98
+  UpdateDay: 2024-08-04T23:01
+  PFirstFoundDay: '2024-06-23T18:52:05.681712'
+  Rank: 22291
 - name: 38.33.34.38:36000@vmess@US
   server: 38.33.34.38
   port: 36000
@@ -136,12 +100,56 @@ proxies:
   success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 922
+  average: 868
   country: United States
   ISO: US
-  UpdateDay: 2024-08-04T22:31
+  UpdateDay: 2024-08-04T23:01
   PFirstFoundDay: '2024-06-08T11:07:21.191446'
-  Rank: 1741
+  Rank: 1642
+- name: 192.74.241.210:30002@vmess@US
+  server: 192.74.241.210
+  port: 30002
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  alterId: 64
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /path/331311062533
+    headers:
+      host: 192.74.241.210
+  udp: true
+  success_rate: 50
+  minimum: 88888
+  maximum: 88888
+  average: 1062
+  country: United States
+  ISO: US
+  UpdateDay: 2024-08-04T23:01
+  PFirstFoundDay: 2024-07-20T20:41
+  Rank: -4588
+- name: 104.21.47.176:443@trojan@US
+  server: 104.21.47.176
+  type: trojan
+  country: United States
+  port: 443
+  udp: true
+  password: 52701795-3c3b-46b4-b7cf-c5978b3a4cf2
+  sni: hdfyc1.achaemenidempireofpersia.uk
+  skip-cert-verify: true
+  network: grpc
+  grpc-opts:
+    grpc-service-name: xw7uebRG4KlUXGGYTVEagC5V7fI
+  success_rate: 50
+  minimum: 88888
+  maximum: 88888
+  average: 1139
+  ISO: US
+  UpdateDay: 2024-08-04T23:01
+  PFirstFoundDay: '2024-03-14T22:34:13.898356'
+  Rank: -115
 - name: s1c.v2.v001sss.xyz:2082@vmess@US
   server: s1c.v2.v001sss.xyz
   type: vmess
@@ -162,11 +170,11 @@ proxies:
   success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 1611
+  average: 1557
   ISO: US
-  UpdateDay: 2024-08-04T22:31
+  UpdateDay: 2024-08-04T23:01
   PFirstFoundDay: 2024-07-20T22:38
-  Rank: -69
+  Rank: -170
 proxy-groups:
 - name: PG-default
   type: fallback
@@ -175,10 +183,10 @@ proxy-groups:
   strategy: round-robin
   proxies:
   - 23.95.68.243:80@vmess@US
-  - 129.146.95.165:443@trojan@US
-  - 104.21.47.176:443@trojan@US
-  - vc.fly.dev:443@vmess@US
+  - 23.162.200.227:443@vmess@US
   - 38.33.34.38:36000@vmess@US
+  - 192.74.241.210:30002@vmess@US
+  - 104.21.47.176:443@trojan@US
   - s1c.v2.v001sss.xyz:2082@vmess@US
   tolerance: 250
 rules:
