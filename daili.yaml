@@ -48,11 +48,33 @@ proxies:
   success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 578
+  average: 458
   ISO: FR
-  UpdateDay: 2024-08-05T20:31
+  UpdateDay: 2024-08-05T21:01
   PFirstFoundDay: '2024-02-11T13:56:15.462034'
-  Rank: 3527
+  Rank: 3487
+- name: 185.133.35.46:443@trojan@BR
+  server: 185.133.35.46
+  port: 443
+  type: trojan
+  password: trojan
+  sni: test-a23.pages.dev
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: ''
+    headers:
+      Host: test-a23.pages.dev
+  udp: true
+  success_rate: 50
+  minimum: 88888
+  maximum: 88888
+  average: 598
+  country: Brazil
+  ISO: BR
+  UpdateDay: 2024-08-05T21:01
+  PFirstFoundDay: '2024-07-01T20:53:31.812776'
+  Rank: 10104
 - name: 23.162.200.227:443@vmess@US
   server: 23.162.200.227
   type: vmess
@@ -73,33 +95,11 @@ proxies:
   success_rate: 66
   minimum: 88888
   maximum: 88888
-  average: 594
+  average: 616
   ISO: US
-  UpdateDay: 2024-08-05T20:31
+  UpdateDay: 2024-08-05T21:01
   PFirstFoundDay: 2024-06-23T18:52
-  Rank: 19191
-- name: 152.70.239.134:34237@trojan@US
-  server: 152.70.239.134
-  type: trojan
-  country: United States
-  port: 34237
-  udp: true
-  password: moist
-  sni: trojan.freenods.sbs
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      Host: trojan.freenods.sbs
-  network: ws
-  success_rate: 50
-  minimum: 88888
-  maximum: 88888
-  average: 626
-  ISO: US
-  UpdateDay: 2024-08-05T20:31
-  PFirstFoundDay: 2024-07-22T10:43
-  Rank: -79
+  Rank: 19170
 - name: 164.38.155.61:443@trojan@GB
   server: 164.38.155.61
   type: trojan
@@ -116,11 +116,27 @@ proxies:
   success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 668
+  average: 678
   ISO: GB
-  UpdateDay: 2024-08-05T20:31
+  UpdateDay: 2024-08-05T21:01
   PFirstFoundDay: 2024-05-24T11:50
-  Rank: -11
+  Rank: -51
+- name: fr1.trojanvpn.de:2053@trojan@MD
+  server: fr1.trojanvpn.de
+  type: trojan
+  country: Moldova
+  port: 2053
+  password: 5c7941b5-c393-4eea-a76d-d44b59baf8a0
+  skip-cert-verify: true
+  udp: true
+  success_rate: 75
+  minimum: 88888
+  maximum: 88888
+  average: 684
+  ISO: MD
+  UpdateDay: 2024-08-05T21:01
+  PFirstFoundDay: 2024-07-20T20:41
+  Rank: 1
 - name: 38.33.34.38:36000@vmess@US
   server: 38.33.34.38
   port: 36000
@@ -139,34 +155,58 @@ proxies:
   success_rate: 66
   minimum: 88888
   maximum: 88888
-  average: 906
+  average: 875
   country: United States
   ISO: US
-  UpdateDay: 2024-08-05T20:31
+  UpdateDay: 2024-08-05T21:01
   PFirstFoundDay: '2024-06-08T11:07:21.191446'
-  Rank: 1902
-- name: 185.133.35.46:443@trojan@BR
-  server: 185.133.35.46
-  port: 443
-  type: trojan
-  password: trojan
-  sni: test-a23.pages.dev
+  Rank: 1879
+- name: 199.188.106.2:37002@vmess@US
+  server: 199.188.106.2
+  port: 37002
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  alterId: 64
+  cipher: auto
+  tls: true
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: ''
+    path: /path/150227231722
     headers:
-      Host: test-a23.pages.dev
+      host: 199.188.106.2
   udp: true
-  success_rate: 50
+  success_rate: 75
   minimum: 88888
   maximum: 88888
-  average: 1128
-  country: Brazil
-  ISO: BR
-  UpdateDay: 2024-08-05T20:31
-  PFirstFoundDay: '2024-07-01T20:53:31.812776'
-  Rank: 10144
+  average: 1046
+  country: United States
+  ISO: US
+  UpdateDay: 2024-08-05T21:01
+  PFirstFoundDay: 2024-07-20T20:41
+  Rank: 1
+- name: 104.17.215.4:443@trojan@US
+  server: 104.17.215.4
+  port: 443
+  type: trojan
+  password: cb1f26aa437d4bfa9b841d28503ce8cc
+  sni: jobscareerfortoday.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: 6b777a91
+    headers:
+      Host: jobscareerfortoday.com
+  udp: true
+  success_rate: 66
+  minimum: 88888
+  maximum: 88888
+  average: 1348
+  country: United States
+  ISO: US
+  UpdateDay: 2024-08-05T21:01
+  PFirstFoundDay: '2024-07-03T16:26:17.445814'
+  Rank: -1292
 proxy-groups:
 - name: PG-default
   type: fallback
@@ -175,11 +215,13 @@ proxy-groups:
   strategy: round-robin
   proxies:
   - 51.68.215.55:443@trojan@FR
-  - 23.162.200.227:443@vmess@US
-  - 152.70.239.134:34237@trojan@US
-  - 164.38.155.61:443@trojan@GB
-  - 38.33.34.38:36000@vmess@US
   - 185.133.35.46:443@trojan@BR
+  - 23.162.200.227:443@vmess@US
+  - 164.38.155.61:443@trojan@GB
+  - fr1.trojanvpn.de:2053@trojan@MD
+  - 38.33.34.38:36000@vmess@US
+  - 199.188.106.2:37002@vmess@US
+  - 104.17.215.4:443@trojan@US
   tolerance: 250
 rule-providers:
   anting:
