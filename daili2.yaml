@@ -31,28 +31,6 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
-- name: 152.70.239.134:34237@trojan@US
-  server: 152.70.239.134
-  type: trojan
-  country: United States
-  port: 34237
-  udp: true
-  password: moist
-  sni: trojan.freenods.sbs
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      Host: trojan.freenods.sbs
-  network: ws
-  success_rate: 100
-  minimum: 88888
-  maximum: 88888
-  average: 336
-  ISO: US
-  UpdateDay: 2024-08-05T12:01
-  PFirstFoundDay: 2024-07-22T10:43
-  Rank: 266
 - name: 51.68.215.55:443@trojan@FR
   server: 51.68.215.55
   type: trojan
@@ -67,30 +45,51 @@ proxies:
       Host: 51.68.215.55
   fingerprint: chrome
   network: ws
-  success_rate: 83
+  success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 472
+  average: 439
   ISO: FR
-  UpdateDay: 2024-08-05T12:01
+  UpdateDay: 2024-08-05T12:31
   PFirstFoundDay: '2024-02-11T13:56:15.462034'
-  Rank: 4179
+  Rank: 4139
 - name: fr1.trojanvpn.de:2053@trojan@MD
   server: fr1.trojanvpn.de
   type: trojan
   country: Moldova
   port: 2053
-  udp: true
   password: 5c7941b5-c393-4eea-a76d-d44b59baf8a0
   skip-cert-verify: true
-  success_rate: 83
+  udp: true
+  success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 512
+  average: 490
   ISO: MD
-  UpdateDay: 2024-08-05T12:01
+  UpdateDay: 2024-08-05T12:31
   PFirstFoundDay: 2024-07-20T20:41
-  Rank: 395
+  Rank: 355
+- name: 164.38.155.61:443@trojan@GB
+  server: 164.38.155.61
+  type: trojan
+  country: United Kingdom
+  port: 443
+  udp: true
+  password: TeleGram-VPNCTVIP
+  sni: trojan-ws.vpnctvip.dns-dynamic.NeT
+  ws-opts:
+    path: /proxyIP=proxyip.us.fxxk.dedyn.io
+    headers:
+      Host: trojan-ws.vpnctvip.dns-dynamic.NeT
+  network: ws
+  success_rate: 50
+  minimum: 88888
+  maximum: 88888
+  average: 598
+  ISO: GB
+  UpdateDay: 2024-08-05T12:31
+  PFirstFoundDay: '2024-05-24T11:50:47.596801'
+  Rank: 103
 - name: 23.162.200.227:443@vmess@US
   server: 23.162.200.227
   type: vmess
@@ -109,14 +108,14 @@ proxies:
     path: /linkvws
     headers:
       host: 23.162.200.227
-  success_rate: 100
+  success_rate: 66
   minimum: 88888
   maximum: 88888
-  average: 540
+  average: 598
   ISO: US
-  UpdateDay: 2024-08-05T12:01
+  UpdateDay: 2024-08-05T12:31
   PFirstFoundDay: '2024-06-23T18:52:05.681712'
-  Rank: 19095
+  Rank: 19074
 - name: 185.133.35.46:443@trojan@BR
   server: 185.133.35.46
   port: 443
@@ -130,36 +129,15 @@ proxies:
     headers:
       Host: test-a23.pages.dev
   udp: true
-  success_rate: 85
+  success_rate: 66
   minimum: 88888
   maximum: 88888
-  average: 562
+  average: 601
   country: Brazil
   ISO: BR
-  UpdateDay: 2024-08-05T12:01
+  UpdateDay: 2024-08-05T12:31
   PFirstFoundDay: '2024-07-01T20:53:31.812776'
-  Rank: 9789
-- name: 164.38.155.61:443@trojan@GB
-  server: 164.38.155.61
-  type: trojan
-  country: United Kingdom
-  port: 443
-  udp: true
-  password: TeleGram-VPNCTVIP
-  sni: trojan-ws.vpnctvip.dns-dynamic.NeT
-  ws-opts:
-    path: /proxyIP=proxyip.us.fxxk.dedyn.io
-    headers:
-      Host: trojan-ws.vpnctvip.dns-dynamic.NeT
-  network: ws
-  success_rate: 90
-  minimum: 88888
-  maximum: 88888
-  average: 591
-  ISO: GB
-  UpdateDay: 2024-08-05T12:01
-  PFirstFoundDay: '2024-05-24T11:50:47.596801'
-  Rank: 143
+  Rank: 9768
 - name: 38.33.34.38:36000@vmess@US
   server: 38.33.34.38
   port: 36000
@@ -175,40 +153,41 @@ proxies:
     headers:
       host: 38.33.34.38
   udp: true
-  success_rate: 100
+  success_rate: 75
   minimum: 88888
   maximum: 88888
-  average: 801
+  average: 848
   country: United States
   ISO: US
-  UpdateDay: 2024-08-05T12:01
+  UpdateDay: 2024-08-05T12:31
   PFirstFoundDay: '2024-06-08T11:07:21.191446'
-  Rank: 1958
-- name: s1c.v2.v001sss.xyz:2082@vmess@US
-  server: s1c.v2.v001sss.xyz
+  Rank: 1956
+- name: 6.724064.xyz:443@vmess@US
+  server: 6.724064.xyz
   type: vmess
   country: United States
-  port: 2082
-  uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
+  port: 443
+  uuid: e7290e7b-8650-423a-8701-f718850620b0
   alterId: 0
   cipher: auto
   network: ws
-  servername: s1c.v2.v001sss.xyz
+  servername: 6.724064.xyz
   http-opts: {}
   h2-opts: {}
+  tls: true
   skip-cert-verify: true
   ws-opts:
-    path: /
+    path: /xglsvws
     headers:
-      host: s1c.v2.v001sss.xyz
-  success_rate: 50
+      host: 6.724064.xyz
+  success_rate: 66
   minimum: 88888
   maximum: 88888
-  average: 1073
+  average: 859
   ISO: US
-  UpdateDay: 2024-08-05T12:01
-  PFirstFoundDay: 2024-07-20T22:38
-  Rank: -390
+  UpdateDay: 2024-08-05T12:32
+  PFirstFoundDay: 2024-07-26T12:17
+  Rank: -4676
 - name: 199.188.106.2:37002@vmess@US
   server: 199.188.106.2
   type: vmess
@@ -226,14 +205,14 @@ proxies:
     path: /path/150227231722
     headers:
       host: 199.188.106.2
-  success_rate: 50
+  success_rate: 66
   minimum: 88888
   maximum: 88888
-  average: 1226
+  average: 1025
   ISO: US
-  UpdateDay: 2024-08-05T12:01
+  UpdateDay: 2024-08-05T12:31
   PFirstFoundDay: 2024-07-20T20:41
-  Rank: -5
+  Rank: -28
 proxy-groups:
 - name: PG-default
   type: fallback
@@ -241,14 +220,13 @@ proxy-groups:
   interval: 200
   strategy: round-robin
   proxies:
-  - 152.70.239.134:34237@trojan@US
   - 51.68.215.55:443@trojan@FR
   - fr1.trojanvpn.de:2053@trojan@MD
+  - 164.38.155.61:443@trojan@GB
   - 23.162.200.227:443@vmess@US
   - 185.133.35.46:443@trojan@BR
-  - 164.38.155.61:443@trojan@GB
   - 38.33.34.38:36000@vmess@US
-  - s1c.v2.v001sss.xyz:2082@vmess@US
+  - 6.724064.xyz:443@vmess@US
   - 199.188.106.2:37002@vmess@US
   tolerance: 250
 rules:
