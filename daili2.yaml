@@ -31,32 +31,6 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
-- name: vc.fly.dev:443@vmess@US
-  server: vc.fly.dev
-  type: vmess
-  country: United States
-  port: 443
-  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
-  alterId: 32
-  cipher: auto
-  network: ws
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  skip-cert-verify: true
-  ws-opts:
-    path: /vc
-    headers:
-      host: vc.fly.dev
-  success_rate: 66
-  minimum: 88888
-  maximum: 88888
-  average: 298
-  ISO: US
-  UpdateDay: 2024-08-08T21:02
-  PFirstFoundDay: 2024-05-07T03:36
-  Rank: -2666
-  Alive: true
 - name: 185.133.35.46:443@trojan@BR
   server: 185.133.35.46
   port: 443
@@ -70,15 +44,64 @@ proxies:
     headers:
       Host: test-a23.pages.dev
   udp: true
-  success_rate: 66
+  success_rate: 83
   minimum: 88888
   maximum: 88888
-  average: 499
+  average: 497
   country: Brazil
   ISO: BR
-  UpdateDay: 2024-08-08T21:01
+  UpdateDay: 2024-08-08T21:31
   PFirstFoundDay: '2024-07-01T20:53:31.812776'
-  Rank: 11136
+  Rank: 11172
+  Alive: true
+- name: 172.64.154.219:8443@trojan@US
+  server: 172.64.154.219
+  type: trojan
+  country: United States
+  port: 8443
+  udp: true
+  password: moist
+  sni: trojan.freenods.sbs
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      Host: trojan.freenods.sbs
+  network: ws
+  success_rate: 60
+  minimum: 88888
+  maximum: 88888
+  average: 528
+  ISO: US
+  UpdateDay: 2024-08-08T21:31
+  PFirstFoundDay: 2024-07-20T20:43
+  Rank: -1235
+  Alive: true
+- name: 23.162.200.227:443@vmess@US
+  server: 23.162.200.227
+  type: vmess
+  country: United States
+  port: 443
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /linkvws
+    headers:
+      host: 23.162.200.227
+  success_rate: 83
+  minimum: 88888
+  maximum: 88888
+  average: 584
+  ISO: US
+  UpdateDay: 2024-08-08T21:31
+  PFirstFoundDay: 2024-06-23T18:52
+  Rank: 22982
   Alive: true
 - name: 156.225.67.98:41004@vmess@SC
   server: 156.225.67.98
@@ -98,22 +121,45 @@ proxies:
     path: /path/340434130032
     headers:
       host: 156.225.67.98
-  success_rate: 50
+  success_rate: 75
   minimum: 88888
   maximum: 88888
-  average: 612
+  average: 600
   ISO: SC
-  UpdateDay: 2024-08-08T21:01
+  UpdateDay: 2024-08-08T21:31
   PFirstFoundDay: 2024-07-19T16:15
-  Rank: 573
+  Rank: 571
   Alive: true
-- name: 23.162.200.227:443@vmess@US
-  server: 23.162.200.227
+- name: 15.222.245.142:2053@trojan@US
+  server: 15.222.245.142
+  type: trojan
+  country: United States
+  port: 2053
+  udp: true
+  password: auto
+  sni: dns68.9166619.xyz
+  ws-opts:
+    path: /
+    headers:
+      Host: dns68.9166619.xyz
+  fingerprint: chrome
+  network: ws
+  success_rate: 60
+  minimum: 88888
+  maximum: 88888
+  average: 604
+  ISO: US
+  UpdateDay: 2024-08-08T21:31
+  PFirstFoundDay: 2024-07-19T10:15
+  Rank: -258
+  Alive: true
+- name: vc.fly.dev:443@vmess@US
+  server: vc.fly.dev
   type: vmess
   country: United States
   port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  alterId: 32
   cipher: auto
   network: ws
   http-opts: {}
@@ -121,17 +167,58 @@ proxies:
   tls: true
   skip-cert-verify: true
   ws-opts:
-    path: /linkvws
+    path: /vc
     headers:
-      host: 23.162.200.227
+      host: vc.fly.dev
+  success_rate: 75
+  minimum: 88888
+  maximum: 88888
+  average: 625
+  ISO: US
+  UpdateDay: 2024-08-08T21:32
+  PFirstFoundDay: 2024-05-07T03:36
+  Rank: 1
+  Alive: true
+- name: 172.64.154.218:8443@trojan@US
+  server: 172.64.154.218
+  type: trojan
+  country: United States
+  port: 8443
+  udp: true
+  password: moist
+  sni: trojan.freenods.sbs
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      Host: trojan.freenods.sbs
+  network: ws
   success_rate: 66
   minimum: 88888
   maximum: 88888
-  average: 644
+  average: 719
   ISO: US
-  UpdateDay: 2024-08-08T21:01
-  PFirstFoundDay: 2024-06-23T18:52
-  Rank: 22946
+  UpdateDay: 2024-08-08T21:31
+  PFirstFoundDay: 2024-07-20T20:15
+  Rank: 1
+  Alive: true
+- name: 129.146.95.165:443@trojan@US
+  server: 129.146.95.165
+  port: 443
+  type: trojan
+  password: 5c542056-a113-43a3-9889-f7ec7884e014
+  sni: download.xn--mirrors-oj8km52txc7d.com
+  skip-cert-verify: true
+  udp: true
+  success_rate: 85
+  minimum: 88888
+  maximum: 88888
+  average: 785
+  country: United States
+  ISO: US
+  UpdateDay: 2024-08-08T21:31
+  PFirstFoundDay: 2024-07-28T12:15
+  Rank: 38
   Alive: true
 - name: 104.17.215.4:443@trojan@US
   server: 104.17.215.4
@@ -149,53 +236,12 @@ proxies:
   success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 991
+  average: 1128
   country: United States
   ISO: US
-  UpdateDay: 2024-08-08T21:01
+  UpdateDay: 2024-08-08T21:31
   PFirstFoundDay: '2024-07-03T16:26:17.445814'
-  Rank: -2103
-  Alive: true
-- name: 129.146.95.165:443@trojan@US
-  server: 129.146.95.165
-  port: 443
-  type: trojan
-  password: 5c542056-a113-43a3-9889-f7ec7884e014
-  sni: download.xn--mirrors-oj8km52txc7d.com
-  skip-cert-verify: true
-  udp: true
-  success_rate: 75
-  minimum: 88888
-  maximum: 88888
-  average: 1183
-  country: United States
-  ISO: US
-  UpdateDay: 2024-08-08T21:01
-  PFirstFoundDay: 2024-07-28T12:15
-  Rank: 1
-  Alive: true
-- name: 198.41.212.2:2053@trojan@US
-  server: 198.41.212.2
-  type: trojan
-  country: United States
-  port: 2053
-  udp: true
-  password: moist
-  sni: trojan.freenods.sbs
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      Host: trojan.freenods.sbs
-  network: ws
-  success_rate: 50
-  minimum: 88888
-  maximum: 88888
-  average: 1237
-  ISO: US
-  UpdateDay: 2024-08-08T21:01
-  PFirstFoundDay: 2024-07-20T20:15
-  Rank: -1682
+  Rank: -2227
   Alive: true
 - name: beyonddsz.cfd:443@vmess@FR
   server: beyonddsz.cfd
@@ -211,15 +257,38 @@ proxies:
     path: /linkws
     headers:
       host: beyonddsz.cfd
-  success_rate: 50
+  success_rate: 75
   minimum: 88888
   maximum: 88888
-  average: 1639
+  average: 1195
   country: France
   ISO: FR
-  UpdateDay: 2024-08-08T21:02
+  UpdateDay: 2024-08-08T21:32
   PFirstFoundDay: 2024-07-10T16:46
-  Rank: 239
+  Rank: 233
+  Alive: true
+- name: 198.41.212.2:2053@trojan@US
+  server: 198.41.212.2
+  type: trojan
+  country: United States
+  port: 2053
+  udp: true
+  password: moist
+  sni: trojan.freenods.sbs
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      Host: trojan.freenods.sbs
+  network: ws
+  success_rate: 75
+  minimum: 88888
+  maximum: 88888
+  average: 1229
+  ISO: US
+  UpdateDay: 2024-08-08T21:31
+  PFirstFoundDay: 2024-07-20T20:15
+  Rank: 1
   Alive: true
 - name: s1c.v2.v001sss.xyz:2082@vmess@US
   server: s1c.v2.v001sss.xyz
@@ -236,15 +305,15 @@ proxies:
     headers:
       host: s1c.v2.v001sss.xyz
   udp: true
-  success_rate: 66
+  success_rate: 83
   minimum: 88888
   maximum: 88888
-  average: 2342
+  average: 1872
   country: United States
   ISO: US
-  UpdateDay: 2024-08-08T21:02
+  UpdateDay: 2024-08-08T21:32
   PFirstFoundDay: 2024-07-20T22:38
-  Rank: -407
+  Rank: 1
   Alive: true
 proxy-groups:
 - name: PG-default
@@ -253,14 +322,17 @@ proxy-groups:
   interval: 200
   strategy: round-robin
   proxies:
-  - vc.fly.dev:443@vmess@US
   - 185.133.35.46:443@trojan@BR
-  - 156.225.67.98:41004@vmess@SC
+  - 172.64.154.219:8443@trojan@US
   - 23.162.200.227:443@vmess@US
-  - 104.17.215.4:443@trojan@US
+  - 156.225.67.98:41004@vmess@SC
+  - 15.222.245.142:2053@trojan@US
+  - vc.fly.dev:443@vmess@US
+  - 172.64.154.218:8443@trojan@US
   - 129.146.95.165:443@trojan@US
-  - 198.41.212.2:2053@trojan@US
+  - 104.17.215.4:443@trojan@US
   - beyonddsz.cfd:443@vmess@FR
+  - 198.41.212.2:2053@trojan@US
   - s1c.v2.v001sss.xyz:2082@vmess@US
   tolerance: 250
 rules:
