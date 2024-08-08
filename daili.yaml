@@ -44,15 +44,15 @@ proxies:
     headers:
       Host: test-a23.pages.dev
   udp: true
-  success_rate: 50
+  success_rate: 66
   minimum: 88888
   maximum: 88888
-  average: 490
+  average: 488
   country: Brazil
   ISO: BR
-  UpdateDay: 2024-08-08T19:01
+  UpdateDay: 2024-08-08T19:31
   PFirstFoundDay: '2024-07-01T20:53:31.812776'
-  Rank: 11203
+  Rank: 11182
   Alive: true
 - name: 23.162.200.227:443@vmess@US
   server: 23.162.200.227
@@ -71,14 +71,14 @@ proxies:
     path: /linkvws
     headers:
       host: 23.162.200.227
-  success_rate: 75
+  success_rate: 85
   minimum: 88888
   maximum: 88888
-  average: 597
+  average: 605
   ISO: US
-  UpdateDay: 2024-08-08T19:01
+  UpdateDay: 2024-08-08T19:31
   PFirstFoundDay: 2024-06-23T18:52
-  Rank: 22766
+  Rank: 22821
   Alive: true
 - name: 156.225.67.98:41004@vmess@SC
   server: 156.225.67.98
@@ -98,14 +98,37 @@ proxies:
     path: /path/340434130032
     headers:
       host: 156.225.67.98
-  success_rate: 50
+  success_rate: 75
   minimum: 88888
   maximum: 88888
-  average: 607
+  average: 676
   ISO: SC
-  UpdateDay: 2024-08-08T19:01
+  UpdateDay: 2024-08-08T19:31
   PFirstFoundDay: 2024-07-19T16:15
-  Rank: 657
+  Rank: 655
+  Alive: true
+- name: 15.222.245.142:2053@trojan@US
+  server: 15.222.245.142
+  type: trojan
+  country: United States
+  port: 2053
+  udp: true
+  password: auto
+  sni: dns68.9166619.xyz
+  ws-opts:
+    path: /
+    headers:
+      Host: dns68.9166619.xyz
+  fingerprint: chrome
+  network: ws
+  success_rate: 60
+  minimum: 88888
+  maximum: 88888
+  average: 815
+  ISO: US
+  UpdateDay: 2024-08-08T19:31
+  PFirstFoundDay: 2024-07-19T10:15
+  Rank: -68
   Alive: true
 - name: beyonddsz.cfd:443@vmess@FR
   server: beyonddsz.cfd
@@ -121,15 +144,40 @@ proxies:
     path: /linkws
     headers:
       host: beyonddsz.cfd
-  success_rate: 66
+  success_rate: 87
   minimum: 88888
   maximum: 88888
-  average: 917
+  average: 864
   country: France
   ISO: FR
-  UpdateDay: 2024-08-08T19:02
+  UpdateDay: 2024-08-08T19:32
   PFirstFoundDay: 2024-07-10T16:46
-  Rank: 65
+  Rank: 135
+  Alive: true
+- name: s1c.v2.v001sss.xyz:2082@vmess@US
+  server: s1c.v2.v001sss.xyz
+  port: 2082
+  type: vmess
+  uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      host: s1c.v2.v001sss.xyz
+  udp: true
+  success_rate: 57
+  minimum: 88888
+  maximum: 88888
+  average: 1517
+  country: United States
+  ISO: US
+  UpdateDay: 2024-08-08T19:32
+  PFirstFoundDay: 2024-07-20T22:38
+  Rank: -234
   Alive: true
 proxy-groups:
 - name: PG-default
@@ -141,7 +189,9 @@ proxy-groups:
   - 185.133.35.46:443@trojan@BR
   - 23.162.200.227:443@vmess@US
   - 156.225.67.98:41004@vmess@SC
+  - 15.222.245.142:2053@trojan@US
   - beyonddsz.cfd:443@vmess@FR
+  - s1c.v2.v001sss.xyz:2082@vmess@US
   tolerance: 250
 rule-providers:
   anting:
