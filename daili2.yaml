@@ -31,21 +31,31 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
-- name: 103.163.218.2:989@ss@VN
-  type: ss
-  server: 103.163.218.2
-  password: f8f7aCzcPKbsF8p3
-  port: 989
-  cipher: aes-256-cfb
-  success_rate: 100
-  minimum: 111.91
-  maximum: 204.28
-  average: 399
-  country: Vietnam
-  ISO: VN
-  UpdateDay: 2024-08-11T02:01
-  PFirstFoundDay: '2023-05-11T10:18:20.021518'
-  Rank: 474
+- name: vc.fly.dev:443@vmess@US
+  server: vc.fly.dev
+  type: vmess
+  country: United States
+  port: 443
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  alterId: 32
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /vc
+    headers:
+      host: vc.fly.dev
+  success_rate: 66
+  minimum: 88888
+  maximum: 88888
+  average: 288
+  ISO: US
+  UpdateDay: 2024-08-11T03:02
+  PFirstFoundDay: 2024-05-07T03:36
+  Rank: -329
   Alive: true
 - name: 198.41.212.2:2053@trojan@US
   server: 198.41.212.2
@@ -61,14 +71,37 @@ proxies:
     headers:
       Host: trojan.freenods.sbs
   network: ws
-  success_rate: 71
+  success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 534
+  average: 551
   ISO: US
-  UpdateDay: 2024-08-11T02:02
+  UpdateDay: 2024-08-11T03:02
   PFirstFoundDay: 2024-07-20T20:15
-  Rank: 1
+  Rank: -79
+  Alive: true
+- name: 185.133.35.46:443@trojan@BR
+  server: 185.133.35.46
+  port: 443
+  type: trojan
+  password: trojan
+  sni: test-a23.pages.dev
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: ''
+    headers:
+      Host: test-a23.pages.dev
+  udp: true
+  success_rate: 66
+  minimum: 88888
+  maximum: 88888
+  average: 575
+  country: Brazil
+  ISO: BR
+  UpdateDay: 2024-08-11T03:01
+  PFirstFoundDay: '2024-07-01T20:53:31.812776'
+  Rank: 11534
   Alive: true
 - name: 23.162.200.227:443@vmess@US
   server: 23.162.200.227
@@ -87,14 +120,14 @@ proxies:
     path: /linkvws
     headers:
       host: 23.162.200.227
-  success_rate: 88
+  success_rate: 66
   minimum: 88888
   maximum: 88888
-  average: 556
+  average: 581
   ISO: US
-  UpdateDay: 2024-08-11T02:02
+  UpdateDay: 2024-08-11T03:02
   PFirstFoundDay: 2024-06-23T18:52
-  Rank: 25636
+  Rank: 25615
   Alive: true
 - name: 15.222.245.142:2053@trojan@US
   server: 15.222.245.142
@@ -110,14 +143,14 @@ proxies:
       Host: dns68.9166619.xyz
   fingerprint: chrome
   network: ws
-  success_rate: 71
+  success_rate: 60
   minimum: 88888
   maximum: 88888
-  average: 597
+  average: 591
   ISO: US
-  UpdateDay: 2024-08-11T02:01
+  UpdateDay: 2024-08-11T03:01
   PFirstFoundDay: 2024-07-19T10:15
-  Rank: 1
+  Rank: -60
   Alive: true
 - name: 172.64.154.219:8443@trojan@US
   server: 172.64.154.219
@@ -133,109 +166,30 @@ proxies:
     headers:
       Host: trojan.freenods.sbs
   network: ws
-  success_rate: 77
+  success_rate: 80
   minimum: 88888
   maximum: 88888
-  average: 613
+  average: 607
   ISO: US
-  UpdateDay: 2024-08-11T02:01
+  UpdateDay: 2024-08-11T03:01
   PFirstFoundDay: 2024-07-20T20:43
-  Rank: 16
+  Rank: 33
   Alive: true
-- name: 185.133.35.46:443@trojan@BR
-  server: 185.133.35.46
-  port: 443
-  type: trojan
-  password: trojan
-  sni: test-a23.pages.dev
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: ''
-    headers:
-      Host: test-a23.pages.dev
-  udp: true
-  success_rate: 87
-  minimum: 88888
-  maximum: 88888
-  average: 681
-  country: Brazil
-  ISO: BR
-  UpdateDay: 2024-08-11T02:01
-  PFirstFoundDay: '2024-07-01T20:53:31.812776'
-  Rank: 11555
-  Alive: true
-- name: vc.fly.dev:443@vmess@US
-  server: vc.fly.dev
-  type: vmess
-  country: United States
-  port: 443
-  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
-  alterId: 32
-  cipher: auto
-  network: ws
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  skip-cert-verify: true
-  ws-opts:
-    path: /vc
-    headers:
-      host: vc.fly.dev
-  success_rate: 60
-  minimum: 88888
-  maximum: 88888
-  average: 706
-  ISO: US
-  UpdateDay: 2024-08-11T02:03
-  PFirstFoundDay: 2024-05-07T03:36
-  Rank: -308
-  Alive: true
-- name: 172.64.154.218:8443@trojan@US
-  server: 172.64.154.218
-  type: trojan
-  country: United States
-  port: 8443
-  udp: true
-  password: moist
-  sni: trojan.freenods.sbs
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      Host: trojan.freenods.sbs
-  network: ws
-  success_rate: 90
-  minimum: 88888
-  maximum: 88888
-  average: 718
-  ISO: US
-  UpdateDay: 2024-08-11T02:01
-  PFirstFoundDay: 2024-07-20T20:15
-  Rank: 113
-  Alive: true
-- name: 104.17.215.4:443@trojan@US
-  server: 104.17.215.4
-  port: 443
-  type: trojan
-  password: cb1f26aa437d4bfa9b841d28503ce8cc
-  sni: jobscareerfortoday.com
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: 6b777a91
-    headers:
-      Host: jobscareerfortoday.com
-  udp: true
-  success_rate: 60
-  minimum: 88888
-  maximum: 88888
-  average: 800
-  country: United States
-  ISO: US
-  UpdateDay: 2024-08-11T02:01
-  PFirstFoundDay: '2024-07-03T16:26:17.445814'
-  Rank: -89
+- name: 103.163.218.2:989@ss@VN
+  type: ss
+  server: 103.163.218.2
+  password: f8f7aCzcPKbsF8p3
+  port: 989
+  cipher: aes-256-cfb
+  success_rate: 50
+  minimum: 111.91
+  maximum: 204.28
+  average: 995
+  country: Vietnam
+  ISO: VN
+  UpdateDay: 2024-08-11T03:01
+  PFirstFoundDay: '2023-05-11T10:18:20.021518'
+  Rank: 434
   Alive: true
 - name: s1c.v2.v001sss.xyz:2082@vmess@US
   server: s1c.v2.v001sss.xyz
@@ -252,15 +206,15 @@ proxies:
     headers:
       host: s1c.v2.v001sss.xyz
   udp: true
-  success_rate: 90
+  success_rate: 66
   minimum: 88888
   maximum: 88888
-  average: 1581
+  average: 1780
   country: United States
   ISO: US
-  UpdateDay: 2024-08-11T02:02
+  UpdateDay: 2024-08-11T03:02
   PFirstFoundDay: 2024-07-20T22:38
-  Rank: 79
+  Rank: 38
   Alive: true
 proxy-groups:
 - name: PG-default
@@ -269,15 +223,13 @@ proxy-groups:
   interval: 200
   strategy: round-robin
   proxies:
-  - 103.163.218.2:989@ss@VN
+  - vc.fly.dev:443@vmess@US
   - 198.41.212.2:2053@trojan@US
+  - 185.133.35.46:443@trojan@BR
   - 23.162.200.227:443@vmess@US
   - 15.222.245.142:2053@trojan@US
   - 172.64.154.219:8443@trojan@US
-  - 185.133.35.46:443@trojan@BR
-  - vc.fly.dev:443@vmess@US
-  - 172.64.154.218:8443@trojan@US
-  - 104.17.215.4:443@trojan@US
+  - 103.163.218.2:989@ss@VN
   - s1c.v2.v001sss.xyz:2082@vmess@US
   tolerance: 250
 rules:
