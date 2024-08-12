@@ -44,38 +44,15 @@ proxies:
     headers:
       Host: test-a23.pages.dev
   udp: true
-  success_rate: 50
+  success_rate: 80
   minimum: 88888
   maximum: 88888
-  average: 515
+  average: 517
   country: Brazil
   ISO: BR
-  UpdateDay: 2024-08-12T09:02
+  UpdateDay: 2024-08-12T09:32
   PFirstFoundDay: '2024-07-01T20:53:31.812776'
-  Rank: 12263
-  Alive: true
-- name: 15.222.245.142:2053@trojan@US
-  server: 15.222.245.142
-  type: trojan
-  country: United States
-  port: 2053
-  udp: true
-  password: auto
-  sni: dns68.9166619.xyz
-  ws-opts:
-    path: /
-    headers:
-      Host: dns68.9166619.xyz
-  fingerprint: chrome
-  network: ws
-  success_rate: 50
-  minimum: 88888
-  maximum: 88888
-  average: 606
-  ISO: US
-  UpdateDay: 2024-08-12T09:01
-  PFirstFoundDay: 2024-07-19T10:15
-  Rank: 12
+  Rank: 12280
   Alive: true
 - name: 23.162.200.227:443@vmess@US
   server: 23.162.200.227
@@ -94,14 +71,37 @@ proxies:
     path: /linkvws
     headers:
       host: 23.162.200.227
-  success_rate: 66
+  success_rate: 83
   minimum: 88888
   maximum: 88888
-  average: 612
+  average: 559
   ISO: US
-  UpdateDay: 2024-08-12T09:02
+  UpdateDay: 2024-08-12T09:32
   PFirstFoundDay: 2024-06-23T18:52
-  Rank: 27523
+  Rank: 27559
+  Alive: true
+- name: 15.222.245.142:2053@trojan@US
+  server: 15.222.245.142
+  type: trojan
+  country: United States
+  port: 2053
+  udp: true
+  password: auto
+  sni: dns68.9166619.xyz
+  ws-opts:
+    path: /
+    headers:
+      Host: dns68.9166619.xyz
+  fingerprint: chrome
+  network: ws
+  success_rate: 77
+  minimum: 88888
+  maximum: 88888
+  average: 603
+  ISO: US
+  UpdateDay: 2024-08-12T09:31
+  PFirstFoundDay: 2024-07-19T10:15
+  Rank: 27
   Alive: true
 - name: beyonddsz.cfd:443@vmess@FR
   server: beyonddsz.cfd
@@ -120,12 +120,66 @@ proxies:
   success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 698
+  average: 704
   country: France
   ISO: FR
-  UpdateDay: 2024-08-12T09:02
+  UpdateDay: 2024-08-12T09:32
   PFirstFoundDay: 2024-07-10T16:46
-  Rank: 29
+  Rank: -51
+  Alive: true
+- name: indiavideo.sbs:443@vmess@FR
+  server: indiavideo.sbs
+  type: vmess
+  country: France
+  port: 443
+  uuid: 425c5e6e-30a0-4984-8a13-ee6f72053162
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: indiavideo.sbs
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /linkws
+    headers:
+      host: indiavideo.sbs
+  success_rate: 77
+  minimum: 88888
+  maximum: 88888
+  average: 864
+  ISO: FR
+  UpdateDay: 2024-08-12T09:32
+  PFirstFoundDay: 2024-07-20T20:41
+  Rank: 47
+  Alive: true
+- name: mankadmu.com:443@vmess@US
+  server: mankadmu.com
+  type: vmess
+  country: United States
+  port: 443
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: mankadmu.com
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /linkvws
+    headers:
+      host: mankadmu.com
+  success_rate: 50
+  minimum: 88888
+  maximum: 88888
+  average: 877
+  ISO: US
+  UpdateDay: 2024-08-12T09:33
+  PFirstFoundDay: 2024-07-09T10:14
+  Rank: -367
   Alive: true
 - name: 38.174.190.75:38007@vmess@US
   server: 38.174.190.75
@@ -144,14 +198,39 @@ proxies:
     path: /path/251724052818
     headers:
       host: 38.174.190.75
-  success_rate: 66
+  success_rate: 85
   minimum: 88888
   maximum: 88888
-  average: 940
+  average: 1014
   ISO: US
-  UpdateDay: 2024-08-12T09:02
+  UpdateDay: 2024-08-12T09:32
   PFirstFoundDay: 2024-07-20T20:41
-  Rank: 12
+  Rank: 59
+  Alive: true
+- name: s1c.v2.v001sss.xyz:2082@vmess@US
+  server: s1c.v2.v001sss.xyz
+  port: 2082
+  type: vmess
+  uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      host: s1c.v2.v001sss.xyz
+  udp: true
+  success_rate: 50
+  minimum: 88888
+  maximum: 88888
+  average: 1679
+  country: United States
+  ISO: US
+  UpdateDay: 2024-08-12T09:33
+  PFirstFoundDay: 2024-07-20T22:38
+  Rank: -953
   Alive: true
 proxy-groups:
 - name: PG-default
@@ -161,10 +240,13 @@ proxy-groups:
   strategy: round-robin
   proxies:
   - 185.133.35.46:443@trojan@BR
-  - 15.222.245.142:2053@trojan@US
   - 23.162.200.227:443@vmess@US
+  - 15.222.245.142:2053@trojan@US
   - beyonddsz.cfd:443@vmess@FR
+  - indiavideo.sbs:443@vmess@FR
+  - mankadmu.com:443@vmess@US
   - 38.174.190.75:38007@vmess@US
+  - s1c.v2.v001sss.xyz:2082@vmess@US
   tolerance: 250
 rule-providers:
   anting:
