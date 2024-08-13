@@ -31,21 +31,30 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
-- name: bgroup.node4.t.nodelist-airport.com:50001@trojan@US
-  server: bgroup.node4.t.nodelist-airport.com
-  type: trojan
-  country: United States
-  port: 50001
-  password: 2155145a-b1b5-443a-8977-670f6bd10f02
+- name: 212.50.254.55:56893@vmess@CA
+  server: 212.50.254.55
+  type: vmess
+  country: Canada
+  port: 56893
+  uuid: 0a59a60b-526e-4378-f9cb-3485e688aa9a
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: a.189.cn
+  http-opts: {}
+  h2-opts: {}
   skip-cert-verify: true
-  udp: true
-  success_rate: 66
+  ws-opts:
+    path: /
+    headers:
+      host: 212.50.254.55
+  success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 387
-  ISO: US
-  UpdateDay: 2024-08-13T10:32
-  PFirstFoundDay: 2024-07-05T18:55
+  average: 126
+  ISO: CA
+  UpdateDay: 2024-08-13T11:02
+  PFirstFoundDay: '2024-06-13T00:49:45.492951'
   Rank: 1
   Alive: true
 - name: 103.163.218.2:989@ss@VN
@@ -54,15 +63,64 @@ proxies:
   password: f8f7aCzcPKbsF8p3
   port: 989
   cipher: aes-256-cfb
-  success_rate: 66
+  success_rate: 50
   minimum: 111.91
   maximum: 204.28
-  average: 476
+  average: 233
   country: Vietnam
   ISO: VN
-  UpdateDay: 2024-08-13T10:31
+  UpdateDay: 2024-08-13T11:01
   PFirstFoundDay: '2023-05-11T10:18:20.021518'
-  Rank: 701
+  Rank: 661
+  Alive: true
+- name: vc.fly.dev:443@vmess@US
+  server: vc.fly.dev
+  type: vmess
+  country: United States
+  port: 443
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  alterId: 32
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /vc
+    headers:
+      host: vc.fly.dev
+  success_rate: 66
+  minimum: 88888
+  maximum: 88888
+  average: 353
+  ISO: US
+  UpdateDay: 2024-08-13T11:03
+  PFirstFoundDay: 2024-05-07T03:36
+  Rank: 1
+  Alive: true
+- name: 198.41.212.2:2053@trojan@US
+  server: 198.41.212.2
+  type: trojan
+  country: United States
+  port: 2053
+  udp: true
+  password: moist
+  sni: trojan.freenods.sbs
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      Host: trojan.freenods.sbs
+  network: ws
+  success_rate: 50
+  minimum: 88888
+  maximum: 88888
+  average: 531
+  ISO: US
+  UpdateDay: 2024-08-13T11:02
+  PFirstFoundDay: 2024-07-20T20:15
+  Rank: 46
   Alive: true
 - name: 185.133.35.46:443@trojan@BR
   server: 185.133.35.46
@@ -77,38 +135,15 @@ proxies:
     headers:
       Host: test-a23.pages.dev
   udp: true
-  success_rate: 50
+  success_rate: 66
   minimum: 88888
   maximum: 88888
-  average: 521
+  average: 576
   country: Brazil
   ISO: BR
-  UpdateDay: 2024-08-13T10:31
+  UpdateDay: 2024-08-13T11:01
   PFirstFoundDay: '2024-07-01T20:53:31.812776'
-  Rank: 12528
-  Alive: true
-- name: 15.222.245.142:2053@trojan@US
-  server: 15.222.245.142
-  type: trojan
-  country: United States
-  port: 2053
-  udp: true
-  password: auto
-  sni: dns68.9166619.xyz
-  ws-opts:
-    path: /
-    headers:
-      Host: dns68.9166619.xyz
-  fingerprint: chrome
-  network: ws
-  success_rate: 50
-  minimum: 88888
-  maximum: 88888
-  average: 598
-  ISO: US
-  UpdateDay: 2024-08-13T10:31
-  PFirstFoundDay: 2024-07-19T10:15
-  Rank: 145
+  Rank: 12507
   Alive: true
 - name: 23.162.200.227:443@vmess@US
   server: 23.162.200.227
@@ -130,37 +165,81 @@ proxies:
   success_rate: 66
   minimum: 88888
   maximum: 88888
-  average: 611
+  average: 580
   ISO: US
-  UpdateDay: 2024-08-13T10:32
+  UpdateDay: 2024-08-13T11:02
   PFirstFoundDay: 2024-06-23T18:52
-  Rank: 28326
+  Rank: 28305
   Alive: true
-- name: vc.fly.dev:443@vmess@US
-  server: vc.fly.dev
-  type: vmess
-  country: United States
+- name: 104.21.109.230:443@trojan@US
+  server: 104.21.109.230
   port: 443
-  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
-  alterId: 32
-  cipher: auto
-  network: ws
-  http-opts: {}
-  h2-opts: {}
-  tls: true
+  type: trojan
+  password: E0002134H
+  sni: 6504e90a.xpxroject.pages.dev
   skip-cert-verify: true
+  network: ws
   ws-opts:
-    path: /vc
+    path: ''
     headers:
-      host: vc.fly.dev
+      Host: 6504e90a.xpxroject.pages.dev
+  udp: true
+  success_rate: 60
+  minimum: 88888
+  maximum: 88888
+  average: 591
+  country: United States
+  ISO: US
+  UpdateDay: 2024-08-13T11:01
+  PFirstFoundDay: '2024-05-26T18:49:54.134583'
+  Rank: 1
+  Alive: true
+- name: 15.222.245.142:2053@trojan@US
+  server: 15.222.245.142
+  type: trojan
+  country: United States
+  port: 2053
+  udp: true
+  password: auto
+  sni: dns68.9166619.xyz
+  ws-opts:
+    path: /
+    headers:
+      Host: dns68.9166619.xyz
+  fingerprint: chrome
+  network: ws
   success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 675
+  average: 599
   ISO: US
-  UpdateDay: 2024-08-13T10:33
-  PFirstFoundDay: 2024-05-07T03:36
-  Rank: 1
+  UpdateDay: 2024-08-13T11:01
+  PFirstFoundDay: 2024-07-19T10:15
+  Rank: 65
+  Alive: true
+- name: beyonddsz.cfd:443@vmess@FR
+  server: beyonddsz.cfd
+  port: 443
+  type: vmess
+  uuid: 9b456c2a-f2c1-45e1-87a9-b7628b04bb24
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /linkws
+    headers:
+      host: beyonddsz.cfd
+  success_rate: 50
+  minimum: 88888
+  maximum: 88888
+  average: 676
+  country: France
+  ISO: FR
+  UpdateDay: 2024-08-13T11:02
+  PFirstFoundDay: 2024-07-10T16:46
+  Rank: 187
   Alive: true
 - name: indiavideo.sbs:443@vmess@FR
   server: indiavideo.sbs
@@ -183,34 +262,11 @@ proxies:
   success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 784
+  average: 705
   ISO: FR
-  UpdateDay: 2024-08-13T10:32
+  UpdateDay: 2024-08-13T11:02
   PFirstFoundDay: 2024-07-20T20:41
-  Rank: 199
-  Alive: true
-- name: 104.18.14.166:8443@trojan@US
-  server: 104.18.14.166
-  type: trojan
-  country: United States
-  port: 8443
-  udp: true
-  password: auto
-  sni: 547c921f-c9b1-4d57-bb25-ff5c79749783.a09c5a67-316e-45c6-a051-e6066737fd47.theworkpc.com
-  ws-opts:
-    path: /abbas.ab841vpn.workers.dev/?ed=2560
-    headers:
-      Host: 547c921f-c9b1-4d57-bb25-ff5c79749783.a09c5a67-316e-45c6-a051-e6066737fd47.theworkpc.com
-  fingerprint: randomized
-  network: ws
-  success_rate: 75
-  minimum: 88888
-  maximum: 88888
-  average: 862
-  ISO: US
-  UpdateDay: 2024-08-13T10:31
-  PFirstFoundDay: '2024-05-20T02:52:05.043788'
-  Rank: 103
+  Rank: 159
   Alive: true
 - name: 38.174.190.75:38007@vmess@US
   server: 38.174.190.75
@@ -232,58 +288,34 @@ proxies:
   success_rate: 66
   minimum: 88888
   maximum: 88888
-  average: 904
+  average: 862
   ISO: US
-  UpdateDay: 2024-08-13T10:32
+  UpdateDay: 2024-08-13T11:02
   PFirstFoundDay: 2024-07-20T20:41
-  Rank: 234
+  Rank: 213
   Alive: true
-- name: beyonddsz.cfd:443@vmess@FR
-  server: beyonddsz.cfd
-  port: 443
-  type: vmess
-  uuid: 9b456c2a-f2c1-45e1-87a9-b7628b04bb24
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /linkws
-    headers:
-      host: beyonddsz.cfd
-  success_rate: 50
-  minimum: 88888
-  maximum: 88888
-  average: 909
-  country: France
-  ISO: FR
-  UpdateDay: 2024-08-13T10:32
-  PFirstFoundDay: 2024-07-10T16:46
-  Rank: 227
-  Alive: true
-- name: 104.17.215.4:443@trojan@US
-  server: 104.17.215.4
-  port: 443
+- name: 104.18.14.166:8443@trojan@US
+  server: 104.18.14.166
   type: trojan
-  password: cb1f26aa437d4bfa9b841d28503ce8cc
-  sni: jobscareerfortoday.com
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: 6b777a91
-    headers:
-      Host: jobscareerfortoday.com
+  country: United States
+  port: 8443
   udp: true
-  success_rate: 50
+  password: auto
+  sni: 547c921f-c9b1-4d57-bb25-ff5c79749783.a09c5a67-316e-45c6-a051-e6066737fd47.theworkpc.com
+  ws-opts:
+    path: /abbas.ab841vpn.workers.dev/?ed=2560
+    headers:
+      Host: 547c921f-c9b1-4d57-bb25-ff5c79749783.a09c5a67-316e-45c6-a051-e6066737fd47.theworkpc.com
+  fingerprint: randomized
+  network: ws
+  success_rate: 66
   minimum: 88888
   maximum: 88888
-  average: 967
-  country: United States
+  average: 914
   ISO: US
-  UpdateDay: 2024-08-13T10:31
-  PFirstFoundDay: '2024-07-03T16:26:17.445814'
-  Rank: 1
+  UpdateDay: 2024-08-13T11:01
+  PFirstFoundDay: '2024-05-20T02:52:05.043788'
+  Rank: 80
   Alive: true
 - name: mankadmu.com:443@vmess@US
   server: mankadmu.com
@@ -303,14 +335,14 @@ proxies:
     path: /linkvws
     headers:
       host: mankadmu.com
-  success_rate: 75
+  success_rate: 100
   minimum: 88888
   maximum: 88888
-  average: 976
+  average: 1510
   ISO: US
-  UpdateDay: 2024-08-13T10:32
+  UpdateDay: 2024-08-13T11:02
   PFirstFoundDay: 2024-07-09T10:14
-  Rank: 734
+  Rank: 771
   Alive: true
 proxy-groups:
 - name: PG-default
@@ -319,17 +351,18 @@ proxy-groups:
   interval: 200
   strategy: round-robin
   proxies:
-  - bgroup.node4.t.nodelist-airport.com:50001@trojan@US
+  - 212.50.254.55:56893@vmess@CA
   - 103.163.218.2:989@ss@VN
-  - 185.133.35.46:443@trojan@BR
-  - 15.222.245.142:2053@trojan@US
-  - 23.162.200.227:443@vmess@US
   - vc.fly.dev:443@vmess@US
-  - indiavideo.sbs:443@vmess@FR
-  - 104.18.14.166:8443@trojan@US
-  - 38.174.190.75:38007@vmess@US
+  - 198.41.212.2:2053@trojan@US
+  - 185.133.35.46:443@trojan@BR
+  - 23.162.200.227:443@vmess@US
+  - 104.21.109.230:443@trojan@US
+  - 15.222.245.142:2053@trojan@US
   - beyonddsz.cfd:443@vmess@FR
-  - 104.17.215.4:443@trojan@US
+  - indiavideo.sbs:443@vmess@FR
+  - 38.174.190.75:38007@vmess@US
+  - 104.18.14.166:8443@trojan@US
   - mankadmu.com:443@vmess@US
   tolerance: 250
 rule-providers:
