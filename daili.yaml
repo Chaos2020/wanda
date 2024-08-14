@@ -31,28 +31,57 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
-- name: 104.21.109.230:443@trojan@US
-  server: 104.21.109.230
-  port: 443
-  type: trojan
-  password: E0002134H
-  sni: 6504e90a.xpxroject.pages.dev
-  skip-cert-verify: true
+- name: ml1.333210.xyz:40000@vmess@KR
+  server: ml1.333210.xyz
+  type: vmess
+  country: South Korea
+  port: 40000
+  uuid: 892e4ff3-f8bb-42ac-9bd5-e103f235fc78
+  alterId: 0
+  cipher: auto
   network: ws
+  servername: ml1.333210.xyz
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
   ws-opts:
-    path: ''
+    path: /
     headers:
-      Host: 6504e90a.xpxroject.pages.dev
-  udp: true
-  success_rate: 100
+      host: ml1.333210.xyz
+  success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 529
+  average: 156
+  ISO: KR
+  UpdateDay: 2024-08-14T12:32
+  PFirstFoundDay: 2024-01-16T14:38
+  Rank: 1
+  Alive: true
+- name: vc.fly.dev:443@vmess@US
+  server: vc.fly.dev
+  type: vmess
   country: United States
+  port: 443
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  alterId: 32
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /vc
+    headers:
+      host: vc.fly.dev
+  success_rate: 75
+  minimum: 88888
+  maximum: 88888
+  average: 274
   ISO: US
-  UpdateDay: 2024-08-14T12:01
-  PFirstFoundDay: '2024-05-26T18:49:54.134583'
-  Rank: 206
+  UpdateDay: 2024-08-14T12:32
+  PFirstFoundDay: 2024-05-07T03:36
+  Rank: 299
   Alive: true
 - name: 185.133.35.46:443@trojan@BR
   server: 185.133.35.46
@@ -67,84 +96,15 @@ proxies:
     headers:
       Host: test-a23.pages.dev
   udp: true
-  success_rate: 83
+  success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 570
+  average: 582
   country: Brazil
   ISO: BR
-  UpdateDay: 2024-08-14T12:01
+  UpdateDay: 2024-08-14T12:31
   PFirstFoundDay: '2024-07-01T20:53:31.812776'
-  Rank: 12915
-  Alive: true
-- name: 172.66.44.249:443@trojan@US
-  server: 172.66.44.249
-  port: 443
-  type: trojan
-  password: auto
-  sni: fe9b5676-a2aa-4b6a-8257-cd2dd0910205.8c98ef2b-bee2-470b-b759-9f5efbc10812.freeddns.org
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /worker-polished-glade-fe47.tahajadidi2022.workers.dev/?ed=2560
-    headers:
-      Host: fe9b5676-a2aa-4b6a-8257-cd2dd0910205.8c98ef2b-bee2-470b-b759-9f5efbc10812.freeddns.org
-  udp: true
-  success_rate: 85
-  minimum: 88888
-  maximum: 88888
-  average: 576
-  country: United States
-  ISO: US
-  UpdateDay: 2024-08-14T12:01
-  PFirstFoundDay: 2024-07-15T10:10
-  Rank: 73
-  Alive: true
-- name: 198.41.212.2:2053@trojan@US
-  server: 198.41.212.2
-  type: trojan
-  country: United States
-  port: 2053
-  udp: true
-  password: moist
-  sni: trojan.freenods.sbs
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      Host: trojan.freenods.sbs
-  network: ws
-  success_rate: 71
-  minimum: 88888
-  maximum: 88888
-  average: 590
-  ISO: US
-  UpdateDay: 2024-08-14T12:01
-  PFirstFoundDay: 2024-07-20T20:15
-  Rank: 1
-  Alive: true
-- name: 172.64.154.219:8443@trojan@US
-  server: 172.64.154.219
-  type: trojan
-  country: United States
-  port: 8443
-  udp: true
-  password: moist
-  sni: trojan.freenods.sbs
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      Host: trojan.freenods.sbs
-  network: ws
-  success_rate: 71
-  minimum: 88888
-  maximum: 88888
-  average: 594
-  ISO: US
-  UpdateDay: 2024-08-14T12:01
-  PFirstFoundDay: 2024-07-20T20:43
-  Rank: 1
+  Rank: 12875
   Alive: true
 - name: 15.222.245.142:2053@trojan@US
   server: 15.222.245.142
@@ -160,14 +120,37 @@ proxies:
       Host: dns68.9166619.xyz
   fingerprint: chrome
   network: ws
-  success_rate: 77
+  success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 601
+  average: 586
   ISO: US
-  UpdateDay: 2024-08-14T12:01
+  UpdateDay: 2024-08-14T12:31
   PFirstFoundDay: 2024-07-19T10:15
-  Rank: 16
+  Rank: 1
+  Alive: true
+- name: 198.41.212.2:2053@trojan@US
+  server: 198.41.212.2
+  type: trojan
+  country: United States
+  port: 2053
+  udp: true
+  password: moist
+  sni: trojan.freenods.sbs
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      Host: trojan.freenods.sbs
+  network: ws
+  success_rate: 50
+  minimum: 88888
+  maximum: 88888
+  average: 611
+  ISO: US
+  UpdateDay: 2024-08-14T12:31
+  PFirstFoundDay: 2024-07-20T20:15
+  Rank: 1
   Alive: true
 - name: 23.162.200.227:443@vmess@US
   server: 23.162.200.227
@@ -186,76 +169,37 @@ proxies:
     path: /linkvws
     headers:
       host: 23.162.200.227
-  success_rate: 100
-  minimum: 88888
-  maximum: 88888
-  average: 604
-  ISO: US
-  UpdateDay: 2024-08-14T12:01
-  PFirstFoundDay: 2024-06-23T18:52
-  Rank: 29870
-  Alive: true
-- name: 172.64.154.218:8443@trojan@US
-  server: 172.64.154.218
-  type: trojan
-  country: United States
-  port: 8443
-  udp: true
-  password: moist
-  sni: trojan.freenods.sbs
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      Host: trojan.freenods.sbs
-  network: ws
   success_rate: 75
   minimum: 88888
   maximum: 88888
-  average: 634
+  average: 648
   ISO: US
-  UpdateDay: 2024-08-14T12:01
-  PFirstFoundDay: 2024-07-20T20:15
-  Rank: 1
+  UpdateDay: 2024-08-14T12:32
+  PFirstFoundDay: 2024-06-23T18:52
+  Rank: 29868
   Alive: true
-- name: 172.66.47.7:443@trojan@US
-  server: 172.66.47.7
+- name: 104.21.109.230:443@trojan@US
+  server: 104.21.109.230
   port: 443
   type: trojan
-  password: auto
-  sni: fe9b5676-a2aa-4b6a-8257-cd2dd0910205.8c98ef2b-bee2-470b-b759-9f5efbc10812.freeddns.org
+  password: E0002134H
+  sni: 6504e90a.xpxroject.pages.dev
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /worker-polished-glade-fe47.tahajadidi2022.workers.dev/?ed=2560
+    path: ''
     headers:
-      Host: fe9b5676-a2aa-4b6a-8257-cd2dd0910205.8c98ef2b-bee2-470b-b759-9f5efbc10812.freeddns.org
+      Host: 6504e90a.xpxroject.pages.dev
   udp: true
-  success_rate: 83
+  success_rate: 66
   minimum: 88888
   maximum: 88888
-  average: 735
+  average: 692
   country: United States
   ISO: US
-  UpdateDay: 2024-08-14T12:01
-  PFirstFoundDay: 2024-07-15T10:11
-  Rank: 285
-  Alive: true
-- name: 103.163.218.2:989@ss@VN
-  type: ss
-  server: 103.163.218.2
-  password: f8f7aCzcPKbsF8p3
-  port: 989
-  cipher: aes-256-cfb
-  success_rate: 80
-  minimum: 111.91
-  maximum: 204.28
-  average: 976
-  country: Vietnam
-  ISO: VN
-  UpdateDay: 2024-08-14T12:01
-  PFirstFoundDay: '2023-05-11T10:18:20.021518'
-  Rank: 1
+  UpdateDay: 2024-08-14T12:31
+  PFirstFoundDay: '2024-05-26T18:49:54.134583'
+  Rank: 185
   Alive: true
 - name: beyonddsz.cfd:443@vmess@FR
   server: beyonddsz.cfd
@@ -271,64 +215,14 @@ proxies:
     path: /linkws
     headers:
       host: beyonddsz.cfd
-  success_rate: 50
+  success_rate: 66
   minimum: 88888
   maximum: 88888
-  average: 998
+  average: 720
   country: France
   ISO: FR
-  UpdateDay: 2024-08-14T12:02
+  UpdateDay: 2024-08-14T12:32
   PFirstFoundDay: 2024-07-10T16:46
-  Rank: 1
-  Alive: true
-- name: 104.17.215.4:443@trojan@US
-  server: 104.17.215.4
-  port: 443
-  type: trojan
-  password: cb1f26aa437d4bfa9b841d28503ce8cc
-  sni: jobscareerfortoday.com
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: 6b777a91
-    headers:
-      Host: jobscareerfortoday.com
-  udp: true
-  success_rate: 60
-  minimum: 88888
-  maximum: 88888
-  average: 1007
-  country: United States
-  ISO: US
-  UpdateDay: 2024-08-14T12:01
-  PFirstFoundDay: '2024-07-03T16:26:17.445814'
-  Rank: 1
-  Alive: true
-- name: cold-dawn-9246.fly.dev:443@vmess@US
-  server: cold-dawn-9246.fly.dev
-  type: vmess
-  country: United States
-  port: 443
-  uuid: ea4909ef-7ca6-4b46-bf2e-6c07896ef338
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: cold-dawn-9246.fly.dev
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  skip-cert-verify: true
-  ws-opts:
-    path: /ea4909ef-7ca6-4b46-bf2e-6c07896ef338-vm
-    headers:
-      host: cold-dawn-9246.fly.dev
-  success_rate: 60
-  minimum: 88888
-  maximum: 88888
-  average: 1059
-  ISO: US
-  UpdateDay: 2024-08-14T12:02
-  PFirstFoundDay: 2024-06-24T18:48
   Rank: 1
   Alive: true
 - name: indiavideo.sbs:443@vmess@FR
@@ -349,13 +243,129 @@ proxies:
     path: /linkws
     headers:
       host: indiavideo.sbs
-  success_rate: 71
+  success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 1108
+  average: 787
   ISO: FR
-  UpdateDay: 2024-08-14T12:02
+  UpdateDay: 2024-08-14T12:32
   PFirstFoundDay: 2024-07-20T20:41
+  Rank: 1
+  Alive: true
+- name: cold-dawn-9246.fly.dev:443@vmess@US
+  server: cold-dawn-9246.fly.dev
+  type: vmess
+  country: United States
+  port: 443
+  uuid: ea4909ef-7ca6-4b46-bf2e-6c07896ef338
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: cold-dawn-9246.fly.dev
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /ea4909ef-7ca6-4b46-bf2e-6c07896ef338-vm
+    headers:
+      host: cold-dawn-9246.fly.dev
+  success_rate: 75
+  minimum: 88888
+  maximum: 88888
+  average: 812
+  ISO: US
+  UpdateDay: 2024-08-14T12:32
+  PFirstFoundDay: 2024-06-24T18:48
+  Rank: 1
+  Alive: true
+- name: 172.64.154.218:8443@trojan@US
+  server: 172.64.154.218
+  type: trojan
+  country: United States
+  port: 8443
+  udp: true
+  password: moist
+  sni: trojan.freenods.sbs
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      Host: trojan.freenods.sbs
+  network: ws
+  success_rate: 50
+  minimum: 88888
+  maximum: 88888
+  average: 913
+  ISO: US
+  UpdateDay: 2024-08-14T12:31
+  PFirstFoundDay: 2024-07-20T20:15
+  Rank: 1
+  Alive: true
+- name: mankadmu.com:443@vmess@US
+  server: mankadmu.com
+  type: vmess
+  country: United States
+  port: 443
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: mankadmu.com
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /linkvws
+    headers:
+      host: mankadmu.com
+  success_rate: 75
+  minimum: 88888
+  maximum: 88888
+  average: 1218
+  ISO: US
+  UpdateDay: 2024-08-14T12:32
+  PFirstFoundDay: 2024-07-09T10:14
+  Rank: 1
+  Alive: true
+- name: 172.66.44.249:443@trojan@US
+  server: 172.66.44.249
+  port: 443
+  type: trojan
+  password: auto
+  sni: fe9b5676-a2aa-4b6a-8257-cd2dd0910205.8c98ef2b-bee2-470b-b759-9f5efbc10812.freeddns.org
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /worker-polished-glade-fe47.tahajadidi2022.workers.dev/?ed=2560
+    headers:
+      Host: fe9b5676-a2aa-4b6a-8257-cd2dd0910205.8c98ef2b-bee2-470b-b759-9f5efbc10812.freeddns.org
+  udp: true
+  success_rate: 66
+  minimum: 88888
+  maximum: 88888
+  average: 1348
+  country: United States
+  ISO: US
+  UpdateDay: 2024-08-14T12:31
+  PFirstFoundDay: 2024-07-15T10:10
+  Rank: 34
+  Alive: true
+- name: 103.163.218.2:989@ss@VN
+  type: ss
+  server: 103.163.218.2
+  password: f8f7aCzcPKbsF8p3
+  port: 989
+  cipher: aes-256-cfb
+  success_rate: 50
+  minimum: 111.91
+  maximum: 204.28
+  average: 1900
+  country: Vietnam
+  ISO: VN
+  UpdateDay: 2024-08-14T12:31
+  PFirstFoundDay: '2023-05-11T10:18:20.021518'
   Rank: 1
   Alive: true
 proxy-groups:
@@ -365,20 +375,20 @@ proxy-groups:
   interval: 200
   strategy: round-robin
   proxies:
-  - 104.21.109.230:443@trojan@US
+  - ml1.333210.xyz:40000@vmess@KR
+  - vc.fly.dev:443@vmess@US
   - 185.133.35.46:443@trojan@BR
-  - 172.66.44.249:443@trojan@US
-  - 198.41.212.2:2053@trojan@US
-  - 172.64.154.219:8443@trojan@US
   - 15.222.245.142:2053@trojan@US
+  - 198.41.212.2:2053@trojan@US
   - 23.162.200.227:443@vmess@US
-  - 172.64.154.218:8443@trojan@US
-  - 172.66.47.7:443@trojan@US
-  - 103.163.218.2:989@ss@VN
+  - 104.21.109.230:443@trojan@US
   - beyonddsz.cfd:443@vmess@FR
-  - 104.17.215.4:443@trojan@US
-  - cold-dawn-9246.fly.dev:443@vmess@US
   - indiavideo.sbs:443@vmess@FR
+  - cold-dawn-9246.fly.dev:443@vmess@US
+  - 172.64.154.218:8443@trojan@US
+  - mankadmu.com:443@vmess@US
+  - 172.66.44.249:443@trojan@US
+  - 103.163.218.2:989@ss@VN
   tolerance: 250
 rule-providers:
   anting:
