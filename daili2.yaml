@@ -31,28 +31,48 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
-- name: 198.41.212.2:2053@trojan@US
-  server: 198.41.212.2
-  type: trojan
-  country: United States
-  port: 2053
-  udp: true
-  password: moist
-  sni: trojan.freenods.sbs
+- name: ml1.333210.xyz:40000@vmess@KR
+  server: ml1.333210.xyz
+  type: vmess
+  country: South Korea
+  port: 40000
+  uuid: 892e4ff3-f8bb-42ac-9bd5-e103f235fc78
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: ml1.333210.xyz
+  http-opts: {}
+  h2-opts: {}
   skip-cert-verify: true
   ws-opts:
     path: /
     headers:
-      Host: trojan.freenods.sbs
-  network: ws
-  success_rate: 80
+      host: ml1.333210.xyz
+  success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 671
+  average: 261
+  ISO: KR
+  UpdateDay: 2024-08-14T22:32
+  PFirstFoundDay: 2024-01-16T14:38
+  Rank: 1
+  Alive: true
+- name: jp006.421421.xyz:20230@trojan@US
+  server: jp006.421421.xyz
+  type: trojan
+  country: United States
+  port: 20230
+  password: ac590e89-ba43-49a1-a8b2-38ec70dc7907
+  skip-cert-verify: true
+  udp: true
+  success_rate: 66
+  minimum: 88888
+  maximum: 88888
+  average: 295
   ISO: US
-  UpdateDay: 2024-08-14T22:01
-  PFirstFoundDay: 2024-07-20T20:15
-  Rank: 35
+  UpdateDay: 2024-08-14T22:32
+  PFirstFoundDay: 2024-07-12T18:13
+  Rank: 1
   Alive: true
 - name: 103.163.218.2:989@ss@VN
   type: ss
@@ -60,61 +80,15 @@ proxies:
   password: f8f7aCzcPKbsF8p3
   port: 989
   cipher: aes-256-cfb
-  success_rate: 62
+  success_rate: 50
   minimum: 111.91
   maximum: 204.28
-  average: 728
+  average: 422
   country: Vietnam
   ISO: VN
-  UpdateDay: 2024-08-14T22:01
+  UpdateDay: 2024-08-14T22:31
   PFirstFoundDay: '2023-05-11T10:18:20.021518'
-  Rank: 28
-  Alive: true
-- name: 172.64.154.218:8443@trojan@US
-  server: 172.64.154.218
-  type: trojan
-  country: United States
-  port: 8443
-  udp: true
-  password: moist
-  sni: trojan.freenods.sbs
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      Host: trojan.freenods.sbs
-  network: ws
-  success_rate: 70
-  minimum: 88888
-  maximum: 88888
-  average: 798
-  ISO: US
-  UpdateDay: 2024-08-14T22:01
-  PFirstFoundDay: 2024-07-20T20:15
   Rank: 1
-  Alive: true
-- name: 185.133.35.46:443@trojan@BR
-  server: 185.133.35.46
-  port: 443
-  type: trojan
-  password: trojan
-  sni: test-a23.pages.dev
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: ''
-    headers:
-      Host: test-a23.pages.dev
-  udp: true
-  success_rate: 80
-  minimum: 88888
-  maximum: 88888
-  average: 948
-  country: Brazil
-  ISO: BR
-  UpdateDay: 2024-08-14T22:01
-  PFirstFoundDay: '2024-07-01T20:53:31.812776'
-  Rank: 12992
   Alive: true
 - name: 23.162.200.227:443@vmess@US
   server: 23.162.200.227
@@ -133,20 +107,20 @@ proxies:
     path: /linkvws
     headers:
       host: 23.162.200.227
-  success_rate: 83
+  success_rate: 75
   minimum: 88888
   maximum: 88888
-  average: 957
+  average: 698
   ISO: US
-  UpdateDay: 2024-08-14T22:01
+  UpdateDay: 2024-08-14T22:32
   PFirstFoundDay: 2024-06-23T18:52
-  Rank: 30281
+  Rank: 30279
   Alive: true
-- name: 172.64.154.219:8443@trojan@US
-  server: 172.64.154.219
+- name: 198.41.212.2:2053@trojan@US
+  server: 198.41.212.2
   type: trojan
   country: United States
-  port: 8443
+  port: 2053
   udp: true
   password: moist
   sni: trojan.freenods.sbs
@@ -156,14 +130,37 @@ proxies:
     headers:
       Host: trojan.freenods.sbs
   network: ws
-  success_rate: 60
+  success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 1017
+  average: 806
   ISO: US
-  UpdateDay: 2024-08-14T22:01
-  PFirstFoundDay: 2024-07-20T20:43
+  UpdateDay: 2024-08-14T22:31
+  PFirstFoundDay: 2024-07-20T20:15
   Rank: 1
+  Alive: true
+- name: 185.133.35.46:443@trojan@BR
+  server: 185.133.35.46
+  port: 443
+  type: trojan
+  password: trojan
+  sni: test-a23.pages.dev
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: ''
+    headers:
+      Host: test-a23.pages.dev
+  udp: true
+  success_rate: 50
+  minimum: 88888
+  maximum: 88888
+  average: 814
+  country: Brazil
+  ISO: BR
+  UpdateDay: 2024-08-14T22:31
+  PFirstFoundDay: '2024-07-01T20:53:31.812776'
+  Rank: 12952
   Alive: true
 - name: mankadmu.com:443@vmess@US
   server: mankadmu.com
@@ -183,13 +180,56 @@ proxies:
     path: /linkvws
     headers:
       host: mankadmu.com
-  success_rate: 57
+  success_rate: 66
   minimum: 88888
   maximum: 88888
-  average: 1538
+  average: 1095
   ISO: US
-  UpdateDay: 2024-08-14T22:02
+  UpdateDay: 2024-08-14T22:32
   PFirstFoundDay: 2024-07-09T10:14
+  Rank: 1
+  Alive: true
+- name: bgroup.node3.t.nodelist-airport.com:50001@trojan@US
+  server: bgroup.node3.t.nodelist-airport.com
+  type: trojan
+  country: United States
+  port: 50001
+  udp: true
+  password: 2155145a-b1b5-443a-8977-670f6bd10f02
+  skip-cert-verify: true
+  success_rate: 66
+  minimum: 88888
+  maximum: 88888
+  average: 1100
+  ISO: US
+  UpdateDay: 2024-08-14T22:32
+  PFirstFoundDay: 2024-07-06T10:47
+  Rank: 1
+  Alive: true
+- name: vc.fly.dev:443@vmess@US
+  server: vc.fly.dev
+  type: vmess
+  country: United States
+  port: 443
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  alterId: 32
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /vc
+    headers:
+      host: vc.fly.dev
+  success_rate: 75
+  minimum: 88888
+  maximum: 88888
+  average: 1112
+  ISO: US
+  UpdateDay: 2024-08-14T22:32
+  PFirstFoundDay: 2024-05-07T03:36
   Rank: 1
   Alive: true
 proxy-groups:
@@ -199,13 +239,15 @@ proxy-groups:
   interval: 200
   strategy: round-robin
   proxies:
-  - 198.41.212.2:2053@trojan@US
+  - ml1.333210.xyz:40000@vmess@KR
+  - jp006.421421.xyz:20230@trojan@US
   - 103.163.218.2:989@ss@VN
-  - 172.64.154.218:8443@trojan@US
-  - 185.133.35.46:443@trojan@BR
   - 23.162.200.227:443@vmess@US
-  - 172.64.154.219:8443@trojan@US
+  - 198.41.212.2:2053@trojan@US
+  - 185.133.35.46:443@trojan@BR
   - mankadmu.com:443@vmess@US
+  - bgroup.node3.t.nodelist-airport.com:50001@trojan@US
+  - vc.fly.dev:443@vmess@US
   tolerance: 250
 rules:
 - MATCH,PG-default
