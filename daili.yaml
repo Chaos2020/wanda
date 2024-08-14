@@ -31,6 +31,32 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
+- name: vc.fly.dev:443@vmess@US
+  server: vc.fly.dev
+  type: vmess
+  country: United States
+  port: 443
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  alterId: 32
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /vc
+    headers:
+      host: vc.fly.dev
+  success_rate: 50
+  minimum: 88888
+  maximum: 88888
+  average: 245
+  ISO: US
+  UpdateDay: 2024-08-15T07:31
+  PFirstFoundDay: 2024-05-07T03:36
+  Rank: 1
+  Alive: true
 - name: 185.133.35.46:443@trojan@BR
   server: 185.133.35.46
   port: 443
@@ -44,15 +70,33 @@ proxies:
     headers:
       Host: test-a23.pages.dev
   udp: true
-  success_rate: 50
+  success_rate: 75
   minimum: 88888
   maximum: 88888
-  average: 527
+  average: 523
   country: Brazil
   ISO: BR
-  UpdateDay: 2024-08-15T07:01
+  UpdateDay: 2024-08-15T07:31
   PFirstFoundDay: '2024-07-01T20:53:31.812776'
-  Rank: 13226
+  Rank: 13224
+  Alive: true
+- name: 212.52.1.236:2053@trojan@LV
+  server: 212.52.1.236
+  port: 2053
+  type: trojan
+  password: befea365-32c2-44a1-b6af-db15596ce622
+  sni: de1.trojanvpn.de
+  skip-cert-verify: true
+  udp: true
+  success_rate: 71
+  minimum: 88888
+  maximum: 88888
+  average: 546
+  country: Latvia
+  ISO: LV
+  UpdateDay: 2024-08-15T07:31
+  PFirstFoundDay: 2024-07-26T10:14
+  Rank: 1
   Alive: true
 - name: 154.197.121.127:443@trojan@SC
   server: 154.197.121.127
@@ -67,15 +111,15 @@ proxies:
     headers:
       Host: trojan.freenods.sbs
   udp: true
-  success_rate: 50
+  success_rate: 80
   minimum: 88888
   maximum: 88888
-  average: 565
+  average: 549
   country: Seychelles
   ISO: SC
-  UpdateDay: 2024-08-15T07:01
+  UpdateDay: 2024-08-15T07:31
   PFirstFoundDay: 2024-07-21T14:15
-  Rank: 157
+  Rank: 174
   Alive: true
 - name: 23.162.200.227:443@vmess@US
   server: 23.162.200.227
@@ -97,11 +141,11 @@ proxies:
   success_rate: 100
   minimum: 88888
   maximum: 88888
-  average: 665
+  average: 573
   ISO: US
-  UpdateDay: 2024-08-15T07:01
+  UpdateDay: 2024-08-15T07:31
   PFirstFoundDay: 2024-06-23T18:52
-  Rank: 30982
+  Rank: 31172
   Alive: true
 - name: cold-dawn-9246.fly.dev:443@vmess@US
   server: cold-dawn-9246.fly.dev
@@ -121,14 +165,14 @@ proxies:
     path: /ea4909ef-7ca6-4b46-bf2e-6c07896ef338-vm
     headers:
       host: cold-dawn-9246.fly.dev
-  success_rate: 75
+  success_rate: 83
   minimum: 88888
   maximum: 88888
-  average: 916
+  average: 846
   ISO: US
-  UpdateDay: 2024-08-15T07:01
+  UpdateDay: 2024-08-15T07:31
   PFirstFoundDay: 2024-06-24T18:48
-  Rank: 1
+  Rank: 35
   Alive: true
 - name: mankadmu.com:443@vmess@US
   server: mankadmu.com
@@ -151,11 +195,11 @@ proxies:
   success_rate: 100
   minimum: 88888
   maximum: 88888
-  average: 947
+  average: 936
   ISO: US
-  UpdateDay: 2024-08-15T07:01
+  UpdateDay: 2024-08-15T07:31
   PFirstFoundDay: 2024-07-09T10:14
-  Rank: 348
+  Rank: 441
   Alive: true
 proxy-groups:
 - name: PG-default
@@ -164,7 +208,9 @@ proxy-groups:
   interval: 200
   strategy: round-robin
   proxies:
+  - vc.fly.dev:443@vmess@US
   - 185.133.35.46:443@trojan@BR
+  - 212.52.1.236:2053@trojan@LV
   - 154.197.121.127:443@trojan@SC
   - 23.162.200.227:443@vmess@US
   - cold-dawn-9246.fly.dev:443@vmess@US
