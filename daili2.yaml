@@ -44,15 +44,15 @@ proxies:
     headers:
       Host: test-a23.pages.dev
   udp: true
-  success_rate: 50
+  success_rate: 75
   minimum: 88888
   maximum: 88888
-  average: 525
+  average: 524
   country: Brazil
   ISO: BR
-  UpdateDay: 2024-08-16T03:01
+  UpdateDay: 2024-08-16T03:31
   PFirstFoundDay: '2024-07-01T20:53:31.812776'
-  Rank: 13194
+  Rank: 13192
   Alive: true
 - name: 23.162.200.227:443@vmess@US
   server: 23.162.200.227
@@ -71,14 +71,37 @@ proxies:
     path: /linkvws
     headers:
       host: 23.162.200.227
-  success_rate: 66
+  success_rate: 80
   minimum: 88888
   maximum: 88888
-  average: 608
+  average: 612
   ISO: US
-  UpdateDay: 2024-08-16T03:01
+  UpdateDay: 2024-08-16T03:31
   PFirstFoundDay: 2024-06-23T18:52
-  Rank: 32504
+  Rank: 32521
+  Alive: true
+- name: 15.222.245.142:2053@trojan@US
+  server: 15.222.245.142
+  type: trojan
+  country: United States
+  port: 2053
+  udp: true
+  password: auto
+  sni: dns68.9166619.xyz
+  ws-opts:
+    path: /
+    headers:
+      Host: dns68.9166619.xyz
+  fingerprint: chrome
+  network: ws
+  success_rate: 60
+  minimum: 88888
+  maximum: 88888
+  average: 654
+  ISO: US
+  UpdateDay: 2024-08-16T03:31
+  PFirstFoundDay: 2024-07-19T10:15
+  Rank: 1
   Alive: true
 proxy-groups:
 - name: PG-default
@@ -89,6 +112,7 @@ proxy-groups:
   proxies:
   - 185.133.35.46:443@trojan@BR
   - 23.162.200.227:443@vmess@US
+  - 15.222.245.142:2053@trojan@US
   tolerance: 250
 rules:
 - MATCH,PG-default
