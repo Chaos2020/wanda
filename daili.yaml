@@ -31,22 +31,30 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
-- name: jp005.421421.xyz:20230@trojan@US
-  server: jp005.421421.xyz
-  type: trojan
-  country: United States
-  port: 20230
-  udp: true
-  password: cf13832b-4ca0-4fee-8e85-2b2411104e75
-  sni: 421421.xyz
+- name: ml1.333210.xyz:40000@vmess@KR
+  server: ml1.333210.xyz
+  type: vmess
+  country: South Korea
+  port: 40000
+  uuid: 892e4ff3-f8bb-42ac-9bd5-e103f235fc78
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: ml1.333210.xyz
+  http-opts: {}
+  h2-opts: {}
   skip-cert-verify: true
-  success_rate: 66
+  ws-opts:
+    path: /
+    headers:
+      host: ml1.333210.xyz
+  success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 206
-  ISO: US
-  UpdateDay: 2024-08-17T14:32
-  PFirstFoundDay: 2024-07-12T18:13
+  average: 265
+  ISO: KR
+  UpdateDay: 2024-08-17T15:02
+  PFirstFoundDay: 2024-01-16T14:38
   Rank: 1
   Alive: true
 - name: fr1.trojanvpn.de:2053@trojan@MD
@@ -57,86 +65,105 @@ proxies:
   password: 5c7941b5-c393-4eea-a76d-d44b59baf8a0
   skip-cert-verify: true
   udp: true
-  success_rate: 66
+  success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 487
+  average: 483
   ISO: MD
-  UpdateDay: 2024-08-17T14:32
+  UpdateDay: 2024-08-17T15:02
   PFirstFoundDay: 2024-07-20T20:41
-  Rank: 363
+  Rank: 323
   Alive: true
-- name: 15.222.245.142:2053@trojan@US
-  server: 15.222.245.142
+- name: sg008.421421.xyz:20230@trojan@US
+  server: sg008.421421.xyz
+  port: 20230
+  type: trojan
+  password: d2382a15-ae45-40ab-8925-84792b584bd8
+  sni: 421421.xyz
+  skip-cert-verify: true
+  udp: true
+  success_rate: 50
+  minimum: 88888
+  maximum: 88888
+  average: 605
+  country: United States
+  ISO: US
+  UpdateDay: 2024-08-17T15:02
+  PFirstFoundDay: 2024-07-12T18:13
+  Rank: 1
+  Alive: true
+- name: 172.64.154.219:8443@trojan@US
+  server: 172.64.154.219
   type: trojan
   country: United States
-  port: 2053
+  port: 8443
   udp: true
-  password: auto
-  sni: dns68.9166619.xyz
+  password: moist
+  sni: trojan.freenods.sbs
+  skip-cert-verify: true
   ws-opts:
     path: /
     headers:
-      Host: dns68.9166619.xyz
-  fingerprint: chrome
+      Host: trojan.freenods.sbs
   network: ws
   success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 633
+  average: 650
   ISO: US
-  UpdateDay: 2024-08-17T14:31
-  PFirstFoundDay: 2024-07-19T10:15
-  Rank: 1
+  UpdateDay: 2024-08-17T15:01
+  PFirstFoundDay: 2024-07-20T20:43
+  Rank: 57
   Alive: true
-- name: 23.162.200.227:443@vmess@US
-  server: 23.162.200.227
+- name: 185.133.35.46:443@trojan@BR
+  server: 185.133.35.46
+  port: 443
+  type: trojan
+  password: trojan
+  sni: test-a23.pages.dev
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: ''
+    headers:
+      Host: test-a23.pages.dev
+  udp: true
+  success_rate: 50
+  minimum: 88888
+  maximum: 88888
+  average: 719
+  country: Brazil
+  ISO: BR
+  UpdateDay: 2024-08-17T15:01
+  PFirstFoundDay: '2024-07-01T20:53:31.812776'
+  Rank: 12941
+  Alive: true
+- name: cold-dawn-9246.fly.dev:443@vmess@US
+  server: cold-dawn-9246.fly.dev
   type: vmess
   country: United States
   port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  uuid: ea4909ef-7ca6-4b46-bf2e-6c07896ef338
   alterId: 0
   cipher: auto
   network: ws
+  servername: cold-dawn-9246.fly.dev
   http-opts: {}
   h2-opts: {}
   tls: true
   skip-cert-verify: true
   ws-opts:
-    path: /linkvws
+    path: /ea4909ef-7ca6-4b46-bf2e-6c07896ef338-vm
     headers:
-      host: 23.162.200.227
+      host: cold-dawn-9246.fly.dev
   success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 711
+  average: 838
   ISO: US
-  UpdateDay: 2024-08-17T14:32
-  PFirstFoundDay: 2024-06-23T18:52
-  Rank: 34508
-  Alive: true
-- name: 27.50.48.108:443@trojan@SG
-  network: ws
-  password: moist
-  port: 443
-  server: 27.50.48.108
-  skip-cert-verify: true
-  sni: trojan.freenods.sbs
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: trojan.freenods.sbs
-    path: /
-  success_rate: 66
-  minimum: 88888
-  maximum: 88888
-  average: 750
-  country: Singapore
-  ISO: SG
-  UpdateDay: 2024-08-17T14:32
-  PFirstFoundDay: 2024-07-21T14:15
-  Rank: 55
+  UpdateDay: 2024-08-17T15:02
+  PFirstFoundDay: 2024-06-24T18:48
+  Rank: 1
   Alive: true
 - name: hms19.best-tizi.top:443@vmess@US
   server: hms19.best-tizi.top
@@ -159,57 +186,132 @@ proxies:
   success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 780
+  average: 907
   ISO: US
-  UpdateDay: 2024-08-17T14:32
+  UpdateDay: 2024-08-17T15:02
   PFirstFoundDay: 2024-07-10T10:18
   Rank: 1
   Alive: true
-- name: 185.133.35.46:443@trojan@BR
-  server: 185.133.35.46
+- name: 23.162.200.227:443@vmess@US
+  server: 23.162.200.227
+  type: vmess
+  country: United States
   port: 443
-  type: trojan
-  password: trojan
-  sni: test-a23.pages.dev
-  skip-cert-verify: true
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
   network: ws
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
   ws-opts:
-    path: ''
+    path: /linkvws
     headers:
-      Host: test-a23.pages.dev
-  udp: true
-  success_rate: 50
+      host: 23.162.200.227
+  success_rate: 66
   minimum: 88888
   maximum: 88888
-  average: 831
-  country: Brazil
-  ISO: BR
-  UpdateDay: 2024-08-17T14:31
-  PFirstFoundDay: '2024-07-01T20:53:31.812776'
-  Rank: 12981
+  average: 957
+  ISO: US
+  UpdateDay: 2024-08-17T15:01
+  PFirstFoundDay: 2024-06-23T18:52
+  Rank: 34485
   Alive: true
-- name: 172.64.154.219:8443@trojan@US
-  server: 172.64.154.219
-  type: trojan
+- name: vc.fly.dev:443@vmess@US
+  server: vc.fly.dev
+  type: vmess
   country: United States
-  port: 8443
-  udp: true
-  password: moist
-  sni: trojan.freenods.sbs
+  port: 443
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  alterId: 32
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  tls: true
   skip-cert-verify: true
   ws-opts:
-    path: /
+    path: /vc
+    headers:
+      host: vc.fly.dev
+  success_rate: 75
+  minimum: 88888
+  maximum: 88888
+  average: 1003
+  ISO: US
+  UpdateDay: 2024-08-17T15:02
+  PFirstFoundDay: 2024-05-07T03:36
+  Rank: 49
+  Alive: true
+- name: 27.50.48.108:443@trojan@SG
+  network: ws
+  password: moist
+  port: 443
+  server: 27.50.48.108
+  skip-cert-verify: true
+  sni: trojan.freenods.sbs
+  type: trojan
+  udp: true
+  ws-opts:
     headers:
       Host: trojan.freenods.sbs
-  network: ws
+    path: /
   success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 937
+  average: 1045
+  country: Singapore
+  ISO: SG
+  UpdateDay: 2024-08-17T15:01
+  PFirstFoundDay: 2024-07-21T14:15
+  Rank: 13
+  Alive: true
+- name: 162.159.133.234:443@trojan@US
+  server: 162.159.133.234
+  port: 443
+  type: trojan
+  password: 559c3b5f-3dd1-47e4-94ad-017cb392a7ba
+  sni: de1.trojanvpn.de
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /path/Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config
+    headers:
+      Host: de1.trojanvpn.de
+  udp: true
+  success_rate: 50
+  minimum: 88888
+  maximum: 88888
+  average: 1095
+  country: United States
   ISO: US
-  UpdateDay: 2024-08-17T14:31
-  PFirstFoundDay: 2024-07-20T20:43
-  Rank: 137
+  UpdateDay: 2024-08-17T15:01
+  PFirstFoundDay: '2024-06-18T10:55:30.297002'
+  Rank: 79
+  Alive: true
+- name: 162.159.130.234:443@trojan@US
+  server: 162.159.130.234
+  port: 443
+  type: trojan
+  password: 559c3b5f-3dd1-47e4-94ad-017cb392a7ba
+  sni: de1.trojanvpn.de
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /path/Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config
+    headers:
+      Host: de1.trojanvpn.de
+  udp: true
+  success_rate: 66
+  minimum: 88888
+  maximum: 88888
+  average: 1110
+  country: United States
+  ISO: US
+  UpdateDay: 2024-08-17T15:01
+  PFirstFoundDay: '2024-05-31T03:39:43.170299'
+  Rank: 297
   Alive: true
 - name: 104.18.14.166:8443@trojan@US
   server: 104.18.14.166
@@ -228,57 +330,11 @@ proxies:
   success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 989
+  average: 1379
   ISO: US
-  UpdateDay: 2024-08-17T14:31
+  UpdateDay: 2024-08-17T15:01
   PFirstFoundDay: '2024-05-20T02:52:05.043788'
   Rank: 1
-  Alive: true
-- name: 162.159.130.234:443@trojan@US
-  server: 162.159.130.234
-  port: 443
-  type: trojan
-  password: 559c3b5f-3dd1-47e4-94ad-017cb392a7ba
-  sni: de1.trojanvpn.de
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /path/Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config
-    headers:
-      Host: de1.trojanvpn.de
-  udp: true
-  success_rate: 50
-  minimum: 88888
-  maximum: 88888
-  average: 1126
-  country: United States
-  ISO: US
-  UpdateDay: 2024-08-17T14:31
-  PFirstFoundDay: '2024-05-31T03:39:43.170299'
-  Rank: 322
-  Alive: true
-- name: 162.159.136.234:443@trojan@US
-  server: 162.159.136.234
-  port: 443
-  type: trojan
-  password: 559c3b5f-3dd1-47e4-94ad-017cb392a7ba
-  sni: de1.trojanvpn.de
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /path/Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config
-    headers:
-      Host: de1.trojanvpn.de
-  udp: true
-  success_rate: 50
-  minimum: 88888
-  maximum: 88888
-  average: 1170
-  country: United States
-  ISO: US
-  UpdateDay: 2024-08-17T14:31
-  PFirstFoundDay: 2024-06-14T18:50
-  Rank: 137
   Alive: true
 - name: 173.245.58.100:443@trojan@US
   server: 173.245.58.100
@@ -293,61 +349,63 @@ proxies:
     headers:
       Host: se1.trojanvpn.de
   udp: true
-  success_rate: 75
+  success_rate: 66
   minimum: 88888
   maximum: 88888
-  average: 1173
+  average: 1410
   country: United States
   ISO: US
-  UpdateDay: 2024-08-17T14:31
+  UpdateDay: 2024-08-17T15:01
   PFirstFoundDay: '2024-07-03T16:26:11.259349'
-  Rank: 1370
+  Rank: 1347
   Alive: true
-- name: 162.159.133.234:443@trojan@US
-  server: 162.159.133.234
-  port: 443
+- name: 172.64.154.218:8443@trojan@US
+  server: 172.64.154.218
   type: trojan
-  password: 559c3b5f-3dd1-47e4-94ad-017cb392a7ba
-  sni: de1.trojanvpn.de
+  country: United States
+  port: 8443
+  udp: true
+  password: moist
+  sni: trojan.freenods.sbs
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      Host: trojan.freenods.sbs
+  network: ws
+  success_rate: 50
+  minimum: 88888
+  maximum: 88888
+  average: 1615
+  ISO: US
+  UpdateDay: 2024-08-17T15:01
+  PFirstFoundDay: 2024-07-20T20:15
+  Rank: 1
+  Alive: true
+- name: s1c.v2.v001sss.xyz:2082@vmess@US
+  server: s1c.v2.v001sss.xyz
+  port: 2082
+  type: vmess
+  uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
+  alterId: 0
+  cipher: auto
+  tls: false
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /path/Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config---Alfred_Config
+    path: /
     headers:
-      Host: de1.trojanvpn.de
+      host: s1c.v2.v001sss.xyz
   udp: true
   success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 1229
+  average: 2123
   country: United States
   ISO: US
-  UpdateDay: 2024-08-17T14:31
-  PFirstFoundDay: '2024-06-18T10:55:30.297002'
-  Rank: 163
-  Alive: true
-- name: 173.245.59.100:443@trojan@US
-  server: 173.245.59.100
-  port: 443
-  type: trojan
-  password: 951bbbc9-c5fd-441e-ac3d-c7fcfbf4a751
-  sni: se1.trojanvpn.de
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /websocket
-    headers:
-      Host: se1.trojanvpn.de
-  udp: true
-  success_rate: 75
-  minimum: 88888
-  maximum: 88888
-  average: 1880
-  country: United States
-  ISO: US
-  UpdateDay: 2024-08-17T14:31
-  PFirstFoundDay: '2024-05-07T09:38:16.577973'
-  Rank: 776
+  UpdateDay: 2024-08-17T15:02
+  PFirstFoundDay: 2024-07-20T22:38
+  Rank: 1
   Alive: true
 proxy-groups:
 - name: PG-default
@@ -356,20 +414,22 @@ proxy-groups:
   interval: 200
   strategy: round-robin
   proxies:
-  - jp005.421421.xyz:20230@trojan@US
+  - ml1.333210.xyz:40000@vmess@KR
   - fr1.trojanvpn.de:2053@trojan@MD
-  - 15.222.245.142:2053@trojan@US
-  - 23.162.200.227:443@vmess@US
-  - 27.50.48.108:443@trojan@SG
-  - hms19.best-tizi.top:443@vmess@US
-  - 185.133.35.46:443@trojan@BR
+  - sg008.421421.xyz:20230@trojan@US
   - 172.64.154.219:8443@trojan@US
-  - 104.18.14.166:8443@trojan@US
-  - 162.159.130.234:443@trojan@US
-  - 162.159.136.234:443@trojan@US
-  - 173.245.58.100:443@trojan@US
+  - 185.133.35.46:443@trojan@BR
+  - cold-dawn-9246.fly.dev:443@vmess@US
+  - hms19.best-tizi.top:443@vmess@US
+  - 23.162.200.227:443@vmess@US
+  - vc.fly.dev:443@vmess@US
+  - 27.50.48.108:443@trojan@SG
   - 162.159.133.234:443@trojan@US
-  - 173.245.59.100:443@trojan@US
+  - 162.159.130.234:443@trojan@US
+  - 104.18.14.166:8443@trojan@US
+  - 173.245.58.100:443@trojan@US
+  - 172.64.154.218:8443@trojan@US
+  - s1c.v2.v001sss.xyz:2082@vmess@US
   tolerance: 250
 rule-providers:
   anting:
