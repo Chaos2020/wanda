@@ -31,22 +31,30 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
-- name: jp005.421421.xyz:20230@trojan@US
-  server: jp005.421421.xyz
-  type: trojan
-  country: United States
-  port: 20230
-  udp: true
-  password: cf13832b-4ca0-4fee-8e85-2b2411104e75
-  sni: 421421.xyz
+- name: ml1.333210.xyz:40000@vmess@KR
+  server: ml1.333210.xyz
+  type: vmess
+  country: South Korea
+  port: 40000
+  uuid: 892e4ff3-f8bb-42ac-9bd5-e103f235fc78
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: ml1.333210.xyz
+  http-opts: {}
+  h2-opts: {}
   skip-cert-verify: true
-  success_rate: 75
+  ws-opts:
+    path: /
+    headers:
+      host: ml1.333210.xyz
+  success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 222
-  ISO: US
-  UpdateDay: 2024-08-18T18:32
-  PFirstFoundDay: 2024-07-12T18:13
+  average: 169
+  ISO: KR
+  UpdateDay: 2024-08-18T19:02
+  PFirstFoundDay: 2024-01-16T14:38
   Rank: 1
   Alive: true
 - name: vc.fly.dev:443@vmess@US
@@ -69,36 +77,11 @@ proxies:
   success_rate: 66
   minimum: 88888
   maximum: 88888
-  average: 346
+  average: 349
   ISO: US
-  UpdateDay: 2024-08-18T18:32
+  UpdateDay: 2024-08-18T19:02
   PFirstFoundDay: 2024-05-07T03:36
-  Rank: 252
-  Alive: true
-- name: tls.96.node-for-bigairport.win:443@vmess@US
-  server: tls.96.node-for-bigairport.win
-  port: 443
-  type: vmess
-  uuid: ef5fca10-41bc-4623-87a3-1170a7b51827
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      host: tls.96.node-for-bigairport.win
-  udp: true
-  success_rate: 50
-  minimum: 88888
-  maximum: 88888
-  average: 412
-  country: United States
-  ISO: US
-  UpdateDay: 2024-08-18T18:32
-  PFirstFoundDay: 2024-01-22T22:39
-  Rank: 1
+  Rank: 231
   Alive: true
 - name: fr1.trojanvpn.de:2053@trojan@MD
   server: fr1.trojanvpn.de
@@ -111,36 +94,34 @@ proxies:
   success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 494
+  average: 488
   ISO: MD
-  UpdateDay: 2024-08-18T18:32
+  UpdateDay: 2024-08-18T19:02
   PFirstFoundDay: 2024-07-20T20:41
-  Rank: 1190
+  Rank: 1150
   Alive: true
-- name: 38.33.34.38:36000@vmess@US
-  server: 38.33.34.38
-  port: 36000
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 64
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /path/273214272322
-    headers:
-      host: 38.33.34.38
+- name: 198.41.212.2:2053@trojan@US
+  server: 198.41.212.2
+  type: trojan
+  country: United States
+  port: 2053
   udp: true
-  success_rate: 75
+  password: moist
+  sni: trojan.freenods.sbs
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      Host: trojan.freenods.sbs
+  network: ws
+  success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 672
-  country: United States
+  average: 638
   ISO: US
-  UpdateDay: 2024-08-18T18:32
-  PFirstFoundDay: '2024-06-08T11:07:21.191446'
-  Rank: 1
+  UpdateDay: 2024-08-18T19:02
+  PFirstFoundDay: 2024-07-20T20:15
+  Rank: 12
   Alive: true
 - name: 23.162.200.227:443@vmess@US
   server: 23.162.200.227
@@ -159,37 +140,14 @@ proxies:
     path: /linkvws
     headers:
       host: 23.162.200.227
-  success_rate: 50
+  success_rate: 75
   minimum: 88888
   maximum: 88888
-  average: 766
+  average: 794
   ISO: US
-  UpdateDay: 2024-08-18T18:32
+  UpdateDay: 2024-08-18T19:02
   PFirstFoundDay: 2024-06-23T18:52
-  Rank: 35136
-  Alive: true
-- name: 104.17.215.4:443@trojan@US
-  server: 104.17.215.4
-  port: 443
-  type: trojan
-  password: cb1f26aa437d4bfa9b841d28503ce8cc
-  sni: jobscareerfortoday.com
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: 6b777a91
-    headers:
-      Host: jobscareerfortoday.com
-  udp: true
-  success_rate: 50
-  minimum: 88888
-  maximum: 88888
-  average: 852
-  country: United States
-  ISO: US
-  UpdateDay: 2024-08-18T18:31
-  PFirstFoundDay: '2024-07-03T16:26:17.445814'
-  Rank: 31
+  Rank: 35134
   Alive: true
 - name: 185.133.35.46:443@trojan@BR
   server: 185.133.35.46
@@ -204,15 +162,15 @@ proxies:
     headers:
       Host: test-a23.pages.dev
   udp: true
-  success_rate: 50
+  success_rate: 66
   minimum: 88888
   maximum: 88888
-  average: 894
+  average: 802
   country: Brazil
   ISO: BR
-  UpdateDay: 2024-08-18T18:31
+  UpdateDay: 2024-08-18T19:01
   PFirstFoundDay: '2024-07-01T20:53:31.812776'
-  Rank: 12887
+  Rank: 12866
   Alive: true
 - name: 173.245.59.100:443@trojan@US
   server: 173.245.59.100
@@ -227,66 +185,41 @@ proxies:
     headers:
       Host: se1.trojanvpn.de
   udp: true
-  success_rate: 75
+  success_rate: 66
   minimum: 88888
   maximum: 88888
-  average: 1123
+  average: 1040
   country: United States
   ISO: US
-  UpdateDay: 2024-08-18T18:31
+  UpdateDay: 2024-08-18T19:01
   PFirstFoundDay: '2024-05-07T09:38:16.577973'
-  Rank: 118
+  Rank: 95
   Alive: true
-- name: jahfkjha.cfd:443@vmess@US
-  server: jahfkjha.cfd
+- name: capellare.com:443@vmess@US
+  server: capellare.com
   type: vmess
   country: United States
   port: 443
-  uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   alterId: 0
   cipher: auto
   network: ws
+  servername: capellare.com
   http-opts: {}
   h2-opts: {}
   tls: true
   skip-cert-verify: true
   ws-opts:
-    path: /linkws
+    path: /linkvws
     headers:
-      host: jahfkjha.cfd
+      host: capellare.com
   success_rate: 50
   minimum: 88888
   maximum: 88888
-  average: 1129
+  average: 1052
   ISO: US
-  UpdateDay: 2024-08-18T18:32
-  PFirstFoundDay: 2024-07-12T20:43
-  Rank: 1
-  Alive: true
-- name: glweidf.cfd:443@vmess@US
-  server: glweidf.cfd
-  type: vmess
-  country: United States
-  port: 443
-  uuid: 1052f24e-7b09-45eb-b0c5-d858eb124192
-  alterId: 0
-  cipher: auto
-  network: ws
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  skip-cert-verify: true
-  ws-opts:
-    path: /linkws
-    headers:
-      host: glweidf.cfd
-  success_rate: 50
-  minimum: 88888
-  maximum: 88888
-  average: 1348
-  ISO: US
-  UpdateDay: 2024-08-18T18:32
-  PFirstFoundDay: 2024-01-21T12:38
+  UpdateDay: 2024-08-18T19:02
+  PFirstFoundDay: 2024-07-09T18:22
   Rank: 1
   Alive: true
 - name: 173.245.58.100:443@trojan@US
@@ -302,15 +235,91 @@ proxies:
     headers:
       Host: se1.trojanvpn.de
   udp: true
-  success_rate: 66
+  success_rate: 75
   minimum: 88888
   maximum: 88888
-  average: 1355
+  average: 1073
   country: United States
   ISO: US
-  UpdateDay: 2024-08-18T18:31
+  UpdateDay: 2024-08-18T19:01
   PFirstFoundDay: '2024-07-03T16:26:11.259349'
-  Rank: 266
+  Rank: 260
+  Alive: true
+- name: pl-a.yuji2022.eu.org:8880@vmess@US
+  server: pl-a.yuji2022.eu.org
+  type: vmess
+  country: United States
+  port: 8880
+  uuid: 4b5e4565-322f-4223-a891-78a84f189726
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: pl-a.yuji2022.eu.org
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /r8ykwif5rffiqJeJ49zLQtAUESmka7PbhWz3wiHs8cSeiRyZL
+    headers:
+      host: pl-a.yuji2022.eu.org
+  success_rate: 50
+  minimum: 88888
+  maximum: 88888
+  average: 1228
+  ISO: US
+  UpdateDay: 2024-08-18T19:02
+  PFirstFoundDay: 2024-02-14T21:59
+  Rank: 1
+  Alive: true
+- name: us3e-mmnnfr9dop0.v2freevpn.com:80@vmess@US
+  server: us3e-mmnnfr9dop0.v2freevpn.com
+  type: vmess
+  country: United States
+  port: 80
+  uuid: 2a8a10fb-9ca3-367e-a234-cf09f841be4f
+  alterId: 0
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /v118-fccxmxm35
+    headers:
+      host: us3e-mmnnfr9dop0.v2freevpn.com
+  success_rate: 50
+  minimum: 88888
+  maximum: 88888
+  average: 1329
+  ISO: US
+  UpdateDay: 2024-08-18T19:02
+  PFirstFoundDay: 2024-07-14T18:12
+  Rank: 1
+  Alive: true
+- name: s1c.v2.v001sss.xyz:2082@vmess@US
+  server: s1c.v2.v001sss.xyz
+  port: 2082
+  type: vmess
+  uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      host: s1c.v2.v001sss.xyz
+  udp: true
+  success_rate: 75
+  minimum: 88888
+  maximum: 88888
+  average: 2268
+  country: United States
+  ISO: US
+  UpdateDay: 2024-08-18T19:02
+  PFirstFoundDay: 2024-07-20T22:38
+  Rank: 1
   Alive: true
 proxy-groups:
 - name: PG-default
@@ -319,18 +328,18 @@ proxy-groups:
   interval: 200
   strategy: round-robin
   proxies:
-  - jp005.421421.xyz:20230@trojan@US
+  - ml1.333210.xyz:40000@vmess@KR
   - vc.fly.dev:443@vmess@US
-  - tls.96.node-for-bigairport.win:443@vmess@US
   - fr1.trojanvpn.de:2053@trojan@MD
-  - 38.33.34.38:36000@vmess@US
+  - 198.41.212.2:2053@trojan@US
   - 23.162.200.227:443@vmess@US
-  - 104.17.215.4:443@trojan@US
   - 185.133.35.46:443@trojan@BR
   - 173.245.59.100:443@trojan@US
-  - jahfkjha.cfd:443@vmess@US
-  - glweidf.cfd:443@vmess@US
+  - capellare.com:443@vmess@US
   - 173.245.58.100:443@trojan@US
+  - pl-a.yuji2022.eu.org:8880@vmess@US
+  - us3e-mmnnfr9dop0.v2freevpn.com:80@vmess@US
+  - s1c.v2.v001sss.xyz:2082@vmess@US
   tolerance: 250
 rule-providers:
   anting:
