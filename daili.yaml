@@ -31,6 +31,30 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
+- name: 23.162.200.227:443@vmess@US
+  server: 23.162.200.227
+  type: vmess
+  country: United States
+  port: 443
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /linkvws
+    headers:
+      host: 23.162.200.227
+  success_rate: 71
+  average: 548
+  ISO: US
+  UpdateDay: 2024-08-20T19:33
+  PFirstFoundDay: 2024-06-23T18:52
+  Rank: 35372
+  Alive: true
 - name: 185.133.35.46:443@trojan@BR
   server: 185.133.35.46
   port: 443
@@ -44,13 +68,13 @@ proxies:
     headers:
       Host: test-a23.pages.dev
   udp: true
-  success_rate: 75
-  average: 1076
+  success_rate: 83
+  average: 891
   country: Brazil
   ISO: BR
-  UpdateDay: 2024-08-20T19:02
+  UpdateDay: 2024-08-20T19:32
   PFirstFoundDay: '2024-07-01T20:53:31.812776'
-  Rank: 12711
+  Rank: 12701
   Alive: true
 - name: us1-july.88888802.xyz:443@trojan@US
   server: us1-july.88888802.xyz
@@ -64,31 +88,31 @@ proxies:
     headers:
       Host: us1-july.88888802.xyz
   network: ws
-  success_rate: 83
-  average: 714
+  success_rate: 88
+  average: 753
   ISO: US
-  UpdateDay: 2024-08-20T19:03
+  UpdateDay: 2024-08-20T19:33
   PFirstFoundDay: 2024-08-04T12:10
-  Rank: 1637
+  Rank: 1700
   Alive: true
-- name: us2-july.88888802.xyz:443@trojan@US
-  server: us2-july.88888802.xyz
+- name: fr2.88888804.xyz:443@trojan@US
+  server: fr2.88888804.xyz
   type: trojan
   country: United States
   port: 443
   udp: true
-  password: f2191442-1436-3d79-801e-80d8de896c73
+  password: 79ddc736-7304-3b95-b814-b27765e59484
   ws-opts:
     path: /91838f3b905c42c7aa5b664b27d8193b
     headers:
-      Host: us2-july.88888802.xyz
+      Host: fr2.88888804.xyz
   network: ws
-  success_rate: 83
-  average: 694
+  success_rate: 100
+  average: 931
   ISO: US
-  UpdateDay: 2024-08-20T19:03
-  PFirstFoundDay: 2024-08-04T12:10
-  Rank: 1546
+  UpdateDay: 2024-08-20T19:33
+  PFirstFoundDay: 2024-08-05T20:41
+  Rank: 1682
   Alive: true
 - name: 43.153.80.208:443@trojan@SG
   network: ws
@@ -104,31 +128,48 @@ proxies:
       Host: aliorg.filegear-sg.me
     path: /?ed=2048
   success_rate: 100
-  average: 631
+  average: 583
   country: Singapore
   ISO: SG
-  UpdateDay: 2024-08-20T19:03
+  UpdateDay: 2024-08-20T19:33
   PFirstFoundDay: 2024-07-03T16:26
-  Rank: 1497
+  Rank: 1646
   Alive: true
-- name: fr2.88888804.xyz:443@trojan@US
-  server: fr2.88888804.xyz
+- name: us2-july.88888802.xyz:443@trojan@US
+  server: us2-july.88888802.xyz
   type: trojan
   country: United States
   port: 443
   udp: true
-  password: 79ddc736-7304-3b95-b814-b27765e59484
+  password: f2191442-1436-3d79-801e-80d8de896c73
   ws-opts:
     path: /91838f3b905c42c7aa5b664b27d8193b
     headers:
-      Host: fr2.88888804.xyz
+      Host: us2-july.88888802.xyz
   network: ws
-  success_rate: 77
-  average: 1117
+  success_rate: 88
+  average: 762
   ISO: US
-  UpdateDay: 2024-08-20T19:03
-  PFirstFoundDay: 2024-08-05T20:41
-  Rank: 1492
+  UpdateDay: 2024-08-20T19:33
+  PFirstFoundDay: 2024-08-04T12:10
+  Rank: 1605
+  Alive: true
+- name: 46.29.162.87:39257@trojan@RU
+  server: 46.29.162.87
+  type: trojan
+  port: 39257
+  password: WyYdHzq88EQJVVThgpupm3wCKVD44jtN
+  sni: ihave.baselinux.net
+  network: grpc
+  grpc-opts:
+    grpc-service-name: discord
+  success_rate: 100
+  average: 429
+  country: Russia
+  ISO: RU
+  UpdateDay: 2024-08-20T19:33
+  PFirstFoundDay: 2024-08-15T22:10
+  Rank: 1372
   Alive: true
 - name: fr3-july.88888802.xyz:443@trojan@US
   server: fr3-july.88888802.xyz
@@ -142,29 +183,12 @@ proxies:
     headers:
       Host: fr3-july.88888802.xyz
   network: ws
-  success_rate: 80
-  average: 1301
+  success_rate: 85
+  average: 1184
   ISO: US
-  UpdateDay: 2024-08-20T19:03
+  UpdateDay: 2024-08-20T19:33
   PFirstFoundDay: 2024-08-04T12:10
-  Rank: 1362
-  Alive: true
-- name: 46.29.162.87:39257@trojan@RU
-  server: 46.29.162.87
-  type: trojan
-  port: 39257
-  password: WyYdHzq88EQJVVThgpupm3wCKVD44jtN
-  sni: ihave.baselinux.net
-  network: grpc
-  grpc-opts:
-    grpc-service-name: discord
-  success_rate: 100
-  average: 406
-  country: Russia
-  ISO: RU
-  UpdateDay: 2024-08-20T19:03
-  PFirstFoundDay: 2024-08-15T22:10
-  Rank: 1265
+  Rank: 1347
   Alive: true
 - name: 59.3.3.161:443@trojan@KR
   server: 59.3.3.161
@@ -179,32 +203,13 @@ proxies:
     path: /?ed=2048
     headers:
       Host: aliorg.filegear-sg.me
-  success_rate: 100
-  average: 673
+  success_rate: 90
+  average: 619
   country: South Korea
   ISO: KR
-  UpdateDay: 2024-08-20T19:03
+  UpdateDay: 2024-08-20T19:33
   PFirstFoundDay: 2024-08-12T10:08
-  Rank: 1247
-  Alive: true
-- name: fr1-july.88888802.xyz:443@trojan@US
-  server: fr1-july.88888802.xyz
-  type: trojan
-  country: United States
-  port: 443
-  udp: true
-  password: f2191442-1436-3d79-801e-80d8de896c73
-  ws-opts:
-    path: /91838f3b905c42c7aa5b664b27d8193b
-    headers:
-      Host: fr1-july.88888802.xyz
-  network: ws
-  success_rate: 100
-  average: 1103
-  ISO: US
-  UpdateDay: 2024-08-20T19:03
-  PFirstFoundDay: 2024-08-04T12:10
-  Rank: 1108
+  Rank: 1335
   Alive: true
 - name: 59.124.90.154:32495@trojan@TW
   server: 59.124.90.154
@@ -219,16 +224,16 @@ proxies:
     headers:
       Host: trojan.freenods.sbs
   udp: true
-  success_rate: 88
-  average: 494
+  success_rate: 100
+  average: 763
   country: Taiwan
   ISO: TW
-  UpdateDay: 2024-08-20T19:03
+  UpdateDay: 2024-08-20T19:33
   PFirstFoundDay: 2024-08-19T09:44
-  Rank: 1083
+  Rank: 1277
   Alive: true
-- name: fr2-july.88888802.xyz:443@trojan@US
-  server: fr2-july.88888802.xyz
+- name: fr1-july.88888802.xyz:443@trojan@US
+  server: fr1-july.88888802.xyz
   type: trojan
   country: United States
   port: 443
@@ -237,77 +242,14 @@ proxies:
   ws-opts:
     path: /91838f3b905c42c7aa5b664b27d8193b
     headers:
-      Host: fr2-july.88888802.xyz
+      Host: fr1-july.88888802.xyz
   network: ws
-  success_rate: 85
-  average: 1251
+  success_rate: 100
+  average: 1159
   ISO: US
-  UpdateDay: 2024-08-20T19:03
+  UpdateDay: 2024-08-20T19:33
   PFirstFoundDay: 2024-08-04T12:10
-  Rank: 1011
-  Alive: true
-- name: vc.fly.dev:443@vmess@US
-  server: vc.fly.dev
-  type: vmess
-  country: United States
-  port: 443
-  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
-  alterId: 32
-  cipher: auto
-  network: ws
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  skip-cert-verify: true
-  ws-opts:
-    path: /vc
-    headers:
-      host: vc.fly.dev
-  success_rate: 71
-  average: 786
-  ISO: US
-  UpdateDay: 2024-08-20T19:03
-  PFirstFoundDay: 2024-05-07T03:36
-  Rank: 986
-  Alive: true
-- name: 154.204.56.238:34237@trojan@SC
-  server: 154.204.56.238
-  type: trojan
-  port: 34237
-  password: CMLiu
-  sni: aliorg.filegear-sg.me
-  skip-cert-verify: true
-  ws-opts:
-    path: /?ed=2048
-    headers:
-      Host: aliorg.filegear-sg.me
-  network: ws
-  success_rate: 66
-  average: 852
-  country: Seychelles
-  ISO: SC
-  UpdateDay: 2024-08-20T19:02
-  PFirstFoundDay: 2024-08-12T10:08
-  Rank: 970
-  Alive: true
-- name: fr3.88888804.xyz:443@trojan@US
-  server: fr3.88888804.xyz
-  type: trojan
-  country: United States
-  port: 443
-  udp: true
-  password: 79ddc736-7304-3b95-b814-b27765e59484
-  ws-opts:
-    path: /91838f3b905c42c7aa5b664b27d8193b
-    headers:
-      Host: fr3.88888804.xyz
-  network: ws
-  success_rate: 80
-  average: 1258
-  ISO: US
-  UpdateDay: 2024-08-20T19:03
-  PFirstFoundDay: 2024-08-05T20:41
-  Rank: 952
+  Rank: 1212
   Alive: true
 - name: 47.236.130.95:2053@trojan@US
   server: 47.236.130.95
@@ -322,12 +264,70 @@ proxies:
       Host: aliorg.filegear-sg.me
   network: ws
   success_rate: 100
-  average: 338
+  average: 265
   country: United States
   ISO: US
-  UpdateDay: 2024-08-20T19:03
+  UpdateDay: 2024-08-20T19:33
   PFirstFoundDay: 2024-08-12T18:39
-  Rank: 843
+  Rank: 1069
+  Alive: true
+- name: fr2-july.88888802.xyz:443@trojan@US
+  server: fr2-july.88888802.xyz
+  type: trojan
+  country: United States
+  port: 443
+  udp: true
+  password: f2191442-1436-3d79-801e-80d8de896c73
+  ws-opts:
+    path: /91838f3b905c42c7aa5b664b27d8193b
+    headers:
+      Host: fr2-july.88888802.xyz
+  network: ws
+  success_rate: 90
+  average: 1157
+  ISO: US
+  UpdateDay: 2024-08-20T19:33
+  PFirstFoundDay: 2024-08-04T12:10
+  Rank: 1053
+  Alive: true
+- name: 154.204.56.238:34237@trojan@SC
+  server: 154.204.56.238
+  type: trojan
+  port: 34237
+  password: CMLiu
+  sni: aliorg.filegear-sg.me
+  skip-cert-verify: true
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: aliorg.filegear-sg.me
+  network: ws
+  success_rate: 80
+  average: 637
+  country: Seychelles
+  ISO: SC
+  UpdateDay: 2024-08-20T19:32
+  PFirstFoundDay: 2024-08-12T10:08
+  Rank: 1035
+  Alive: true
+- name: fr3.88888804.xyz:443@trojan@US
+  server: fr3.88888804.xyz
+  type: trojan
+  country: United States
+  port: 443
+  udp: true
+  password: 79ddc736-7304-3b95-b814-b27765e59484
+  ws-opts:
+    path: /91838f3b905c42c7aa5b664b27d8193b
+    headers:
+      Host: fr3.88888804.xyz
+  network: ws
+  success_rate: 85
+  average: 1218
+  ISO: US
+  UpdateDay: 2024-08-20T19:33
+  PFirstFoundDay: 2024-08-05T20:41
+  Rank: 1017
   Alive: true
 - name: sg1.662668.xyz:12023@trojan@SG
   server: sg1.662668.xyz
@@ -336,13 +336,13 @@ proxies:
   password: 2fe46056-88a9-420f-b21f-3e20ea8eeb49
   skip-cert-verify: true
   udp: true
-  success_rate: 85
-  average: 660
+  success_rate: 90
+  average: 737
   country: Singapore
   ISO: SG
-  UpdateDay: 2024-08-20T19:03
+  UpdateDay: 2024-08-20T19:33
   PFirstFoundDay: 2024-08-17T00:09
-  Rank: 735
+  Rank: 887
   Alive: true
 - name: 141.11.51.168:51635@vmess@FR
   server: 141.11.51.168
@@ -363,11 +363,11 @@ proxies:
   PingAverage: 95
   country: France
   ISO: FR
-  UpdateDay: 2024-08-20T19:02
+  UpdateDay: 2024-08-20T19:32
   PFirstFoundDay: 2024-08-20T14:46
-  Rank: 691
+  Rank: 829
   Alive: true
-  average: 315
+  average: 273
   success_rate: 100
 - name: 185.234.64.146:2053@trojan@MD
   server: 185.234.64.146
@@ -380,30 +380,31 @@ proxies:
   PingRate: 66
   PingAverage: 258
   ISO: MD
-  UpdateDay: 2024-08-20T19:02
+  UpdateDay: 2024-08-20T19:32
   PFirstFoundDay: 2024-08-07T04:09
-  Rank: 420
+  Rank: 627
   Alive: true
-  average: 503
+  average: 505
   success_rate: 100
-- name: 3.78.120.158:22222@trojan@US
-  server: 3.78.120.158
+- name: 218.158.87.155:11423@trojan@KR
   type: trojan
-  country: United States
-  port: 22222
-  password: telegram-id-privatevpns
-  sni: trojan.burgerip.co.uk
+  server: 218.158.87.155
+  port: 11423
+  alterId: 0
+  tls: true
+  password: CMLiu
+  sni: aliorg.filegear-sg.me
   skip-cert-verify: true
+  network: ws
   udp: true
-  PingRate: 100
-  PingAverage: 169
-  ISO: US
-  UpdateDay: 2024-08-20T19:03
-  PFirstFoundDay: 2024-08-19T22:47
-  Rank: 369
+  success_rate: 66
+  average: 812
+  country: South Korea
+  ISO: KR
+  UpdateDay: 2024-08-20T19:33
+  PFirstFoundDay: 2024-08-07T12:08
+  Rank: 376
   Alive: true
-  average: 393
-  success_rate: 70
 - name: 222.97.95.239:10443@trojan@KR
   server: 222.97.95.239
   port: 10443
@@ -415,150 +416,14 @@ proxies:
     path: /
     headers:
       Host: aliorg.filegear-sg.me
-  success_rate: 75
-  average: 1529
+  success_rate: 85
+  average: 1473
   country: South Korea
   ISO: KR
-  UpdateDay: 2024-08-20T19:03
+  UpdateDay: 2024-08-20T19:33
   PFirstFoundDay: 2024-08-12T10:08
-  Rank: 302
+  Rank: 357
   Alive: true
-- name: 3.64.165.112:16584@trojan@US
-  server: 3.64.165.112
-  port: 16584
-  type: trojan
-  password: XNjeoujuIJ(W
-  sni: appsvs.shop
-  skip-cert-verify: false
-  PingRate: 100
-  PingAverage: 165
-  country: United States
-  ISO: US
-  UpdateDay: 2024-08-20T19:03
-  PFirstFoundDay: 2024-08-20T18:10
-  Rank: 247
-  Alive: true
-  average: 605
-  success_rate: 87
-- name: 35.159.119.241:16575@trojan@US
-  server: 35.159.119.241
-  port: 16575
-  type: trojan
-  password: 0FySulMEttP)
-  sni: appsvs.shop
-  skip-cert-verify: false
-  PingRate: 100
-  PingAverage: 148
-  country: United States
-  ISO: US
-  UpdateDay: 2024-08-20T19:03
-  PFirstFoundDay: 2024-08-20T18:10
-  Rank: 146
-  Alive: true
-  average: 361
-  success_rate: 85
-- name: 52.14.198.224:16569@trojan@US
-  server: 52.14.198.224
-  port: 16569
-  type: trojan
-  password: 0fyshGZGFQvE
-  sni: appsvs.shop
-  skip-cert-verify: false
-  PingRate: 100
-  PingAverage: 227
-  country: United States
-  ISO: US
-  UpdateDay: 2024-08-20T19:03
-  PFirstFoundDay: 2024-08-20T18:10
-  Rank: 138
-  Alive: true
-  average: 578
-  success_rate: 85
-- name: 35.92.99.245:16571@trojan@US
-  server: 35.92.99.245
-  port: 16571
-  type: trojan
-  password: 7fgBRildw8wD
-  sni: appsvs.shop
-  skip-cert-verify: false
-  PingRate: 100
-  PingAverage: 174
-  country: United States
-  ISO: US
-  UpdateDay: 2024-08-20T19:03
-  PFirstFoundDay: 2024-08-20T18:10
-  Rank: 119
-  Alive: true
-  average: 460
-  success_rate: 71
-- name: 43.203.201.65:16577@trojan@US
-  server: 43.203.201.65
-  port: 16577
-  type: trojan
-  password: wmzgbtOMiEQ2
-  sni: appsvs.shop
-  skip-cert-verify: false
-  PingRate: 100
-  PingAverage: 131
-  country: United States
-  ISO: US
-  UpdateDay: 2024-08-20T19:03
-  PFirstFoundDay: 2024-08-20T18:10
-  Rank: 115
-  Alive: true
-  average: 365
-  success_rate: 83
-- name: 13.115.164.244:16581@trojan@US
-  server: 13.115.164.244
-  port: 16581
-  type: trojan
-  password: TTZYTN4ttw(g
-  sni: appsvs.shop
-  skip-cert-verify: false
-  PingRate: 100
-  PingAverage: 102
-  country: United States
-  ISO: US
-  UpdateDay: 2024-08-20T19:02
-  PFirstFoundDay: 2024-08-20T18:10
-  Rank: 108
-  Alive: true
-  average: 257
-  success_rate: 71
-- name: 18.170.31.59:16572@trojan@US
-  server: 18.170.31.59
-  port: 16572
-  type: trojan
-  password: 8wbixtpOwUT)
-  sni: appsvs.shop
-  skip-cert-verify: false
-  PingRate: 100
-  PingAverage: 175
-  country: United States
-  ISO: US
-  UpdateDay: 2024-08-20T19:02
-  PFirstFoundDay: 2024-08-20T18:10
-  Rank: 96
-  Alive: true
-  average: 438
-  success_rate: 71
-- name: 35.183.127.67:16575@trojan@US
-  server: 35.183.127.67
-  port: 16575
-  type: trojan
-  password: rF7)r6sMhbqN
-  sni: appsvs.shop
-  skip-cert-verify: false
-  PingRate: 100
-  PingAverage: 248
-  country: United States
-  ISO: US
-  UpdateDay: 2024-08-20T19:03
-  PFirstFoundDay: 2024-08-20T18:10
-  Rank: 87
-  Alive: true
-  average: 743
-  success_rate: 66
 - name: fr1.trojanvpn.de:2053@trojan@MD
   server: fr1.trojanvpn.de
   type: trojan
@@ -570,47 +435,12 @@ proxies:
   PingRate: 100
   PingAverage: 260
   ISO: MD
-  UpdateDay: 2024-08-20T19:03
+  UpdateDay: 2024-08-20T19:33
   PFirstFoundDay: 2024-07-20T20:41
-  Rank: 73
+  Rank: 215
   Alive: true
-  average: 493
-  success_rate: 80
-- name: 35.183.127.152:16586@trojan@US
-  server: 35.183.127.152
-  port: 16586
-  type: trojan
-  password: JkcNLhjtKCyW
-  sni: appsvs.shop
-  skip-cert-verify: false
-  PingRate: 100
-  PingAverage: 242
-  country: United States
-  ISO: US
-  UpdateDay: 2024-08-20T19:03
-  PFirstFoundDay: 2024-08-20T18:10
-  Rank: 69
-  Alive: true
-  average: 561
-  success_rate: 66
-- name: 82.117.226.218:12005@trojan@LU
-  server: 82.117.226.218
-  port: 12005
-  type: trojan
-  password: 3698a3e7-2877-4ded-a665-d81ee3cfd449
-  sni: cn1.cdn.xfltd-cdn.top
-  skip-cert-verify: true
-  udp: true
-  PingRate: 66
-  PingAverage: 1735
-  country: Luxembourg
-  ISO: LU
-  UpdateDay: 2024-08-20T19:03
-  PFirstFoundDay: 2024-08-20T18:14
-  Rank: 65
-  Alive: true
-  average: 1160
-  success_rate: 100
+  average: 499
+  success_rate: 87
 - name: us1.1vpn.sbs:443@vmess@US
   server: us1.1vpn.sbs
   type: vmess
@@ -632,12 +462,122 @@ proxies:
   PingRate: 33
   PingAverage: 201
   ISO: US
-  UpdateDay: 2024-08-20T19:03
+  UpdateDay: 2024-08-20T19:33
   PFirstFoundDay: 2024-08-06T14:22
-  Rank: 57
+  Rank: 199
   Alive: true
-  average: 786
-  success_rate: 71
+  average: 856
+  success_rate: 90
+- name: 82.117.226.218:12005@trojan@LU
+  server: 82.117.226.218
+  port: 12005
+  type: trojan
+  password: 3698a3e7-2877-4ded-a665-d81ee3cfd449
+  sni: cn1.cdn.xfltd-cdn.top
+  skip-cert-verify: true
+  udp: true
+  PingRate: 66
+  PingAverage: 1735
+  country: Luxembourg
+  ISO: LU
+  UpdateDay: 2024-08-20T19:33
+  PFirstFoundDay: 2024-08-20T18:14
+  Rank: 150
+  Alive: true
+  average: 947
+  success_rate: 100
+- name: 47.237.8.82:8443@trojan@US
+  server: 47.237.8.82
+  port: 8443
+  type: trojan
+  password: CMLiu
+  sni: aliorg.filegear-sg.me
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: ''
+    headers:
+      Host: aliorg.filegear-sg.me
+  udp: true
+  PingRate: 66
+  PingAverage: 589
+  country: United States
+  ISO: US
+  UpdateDay: 2024-08-20T19:33
+  PFirstFoundDay: 2024-06-09T14:49
+  Rank: 104
+  Alive: true
+  average: 220
+  success_rate: 70
+- name: 175.199.54.84:38520@trojan@KR
+  server: 175.199.54.84
+  port: 38520
+  type: trojan
+  password: CMLiu
+  sni: aliorg.filegear-sg.me
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: aliorg.filegear-sg.me
+  PingRate: 100
+  PingAverage: 2182
+  country: South Korea
+  ISO: KR
+  UpdateDay: 2024-08-20T19:32
+  PFirstFoundDay: 2024-08-12T10:08
+  Rank: 102
+  Alive: true
+  average: 688
+  success_rate: 66
+- name: pt1.connecton.surf:443@vmess@RU
+  server: pt1.connecton.surf
+  type: vmess
+  country: Russia
+  port: 443
+  uuid: 845010f6-eda9-47c5-9ba4-c5f474fb0c0f
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: pt1.connecton.surf
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: vmess
+    headers:
+      host: pt1.connecton.surf
+  PingRate: 100
+  PingAverage: 250
+  ISO: RU
+  UpdateDay: 2024-08-20T19:33
+  PFirstFoundDay: 2024-08-20T12:16
+  Rank: 95
+  Alive: true
+  average: 694
+  success_rate: 66
+- name: 154.17.21.13:36166@trojan@US
+  type: trojan
+  server: 154.17.21.13
+  port: 36166
+  alterId: 0
+  tls: true
+  password: CMLiu
+  sni: aliorg.filegear-sg.me
+  skip-cert-verify: true
+  network: ws
+  udp: true
+  PingRate: 100
+  PingAverage: 177
+  country: United States
+  ISO: US
+  UpdateDay: 2024-08-20T19:32
+  PFirstFoundDay: 2024-08-12T10:08
+  Rank: 65
+  Alive: true
+  average: 620
+  success_rate: 66
 proxy-groups:
 - name: PG-default
   type: fallback
@@ -645,38 +585,33 @@ proxy-groups:
   interval: 200
   strategy: round-robin
   proxies:
+  - 23.162.200.227:443@vmess@US
   - 185.133.35.46:443@trojan@BR
   - us1-july.88888802.xyz:443@trojan@US
-  - us2-july.88888802.xyz:443@trojan@US
-  - 43.153.80.208:443@trojan@SG
   - fr2.88888804.xyz:443@trojan@US
-  - fr3-july.88888802.xyz:443@trojan@US
+  - 43.153.80.208:443@trojan@SG
+  - us2-july.88888802.xyz:443@trojan@US
   - 46.29.162.87:39257@trojan@RU
+  - fr3-july.88888802.xyz:443@trojan@US
   - 59.3.3.161:443@trojan@KR
-  - fr1-july.88888802.xyz:443@trojan@US
   - 59.124.90.154:32495@trojan@TW
+  - fr1-july.88888802.xyz:443@trojan@US
+  - 47.236.130.95:2053@trojan@US
   - fr2-july.88888802.xyz:443@trojan@US
-  - vc.fly.dev:443@vmess@US
   - 154.204.56.238:34237@trojan@SC
   - fr3.88888804.xyz:443@trojan@US
-  - 47.236.130.95:2053@trojan@US
   - sg1.662668.xyz:12023@trojan@SG
   - 141.11.51.168:51635@vmess@FR
   - 185.234.64.146:2053@trojan@MD
-  - 3.78.120.158:22222@trojan@US
+  - 218.158.87.155:11423@trojan@KR
   - 222.97.95.239:10443@trojan@KR
-  - 3.64.165.112:16584@trojan@US
-  - 35.159.119.241:16575@trojan@US
-  - 52.14.198.224:16569@trojan@US
-  - 35.92.99.245:16571@trojan@US
-  - 43.203.201.65:16577@trojan@US
-  - 13.115.164.244:16581@trojan@US
-  - 18.170.31.59:16572@trojan@US
-  - 35.183.127.67:16575@trojan@US
   - fr1.trojanvpn.de:2053@trojan@MD
-  - 35.183.127.152:16586@trojan@US
-  - 82.117.226.218:12005@trojan@LU
   - us1.1vpn.sbs:443@vmess@US
+  - 82.117.226.218:12005@trojan@LU
+  - 47.237.8.82:8443@trojan@US
+  - 175.199.54.84:38520@trojan@KR
+  - pt1.connecton.surf:443@vmess@RU
+  - 154.17.21.13:36166@trojan@US
   tolerance: 250
 rule-providers:
   anting:
