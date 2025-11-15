@@ -63,11 +63,29 @@ proxies:
   name: v10.heduian.link:30807@vmess@HK
   UpdateDay: 2025-11-15T13:02
   PFirstFoundDay: 2025-07-14T05:01
-  Rank: 21186
+  Rank: 21156
   RescueCount: 0
   Alive: true
   LastWorkDate: 2025-11-15T13:02
   average: 1630
+  success_rate: 50
+- password: '123'
+  port: 10862
+  server: 47.76.175.67
+  type: http
+  username: '123'
+  PingRate: 100
+  PingAverage: 421
+  country: United States
+  ISO: US
+  name: 47.76.175.67:10862@http@US
+  UpdateDay: 2025-11-15T13:02
+  PFirstFoundDay: 2025-09-23T04:41
+  Rank: 10536
+  RescueCount: 0
+  Alive: true
+  LastWorkDate: 2025-11-15T13:02
+  average: 2006
   success_rate: 50
 - password: Ejtp4SfY82
   port: 10881
@@ -81,11 +99,11 @@ proxies:
   name: 38.54.87.34:10881@http@US
   UpdateDay: 2025-11-15T13:02
   PFirstFoundDay: 2025-10-21T05:06
-  Rank: 10236
+  Rank: 10298
   RescueCount: 0
-  Alive: false
+  Alive: true
   LastWorkDate: 2025-11-15T13:02
-  average: 1904
+  average: 1826
   success_rate: 100
 - network: tcp
   password: BxceQaOe
@@ -101,7 +119,7 @@ proxies:
   name: 219.77.239.35:443@trojan@HK
   UpdateDay: 2025-11-15T13:02
   PFirstFoundDay: 2025-11-12T12:23
-  Rank: 10176
+  Rank: 10258
   RescueCount: 0
   Alive: true
   LastWorkDate: 2025-11-15T13:02
@@ -121,7 +139,7 @@ proxies:
   ISO: 'NO'
   UpdateDay: 2025-11-15T13:02
   PFirstFoundDay: 2025-06-12T01:22
-  Rank: 10064
+  Rank: 10044
   RescueCount: 0
   Alive: true
   LastWorkDate: 2025-11-15T13:02
@@ -140,7 +158,7 @@ proxies:
   ISO: HK
   UpdateDay: 2025-11-15T13:02
   PFirstFoundDay: 2025-05-29T17:26
-  Rank: 10013
+  Rank: 9993
   RescueCount: 0
   Alive: true
   LastWorkDate: 2025-11-15T13:02
@@ -159,37 +177,12 @@ proxies:
   ISO: HK
   UpdateDay: 2025-11-15T13:02
   PFirstFoundDay: 2025-05-29T17:26
-  Rank: 8637
+  Rank: 8657
   RescueCount: 0
   Alive: true
   LastWorkDate: 2025-11-15T13:02
   average: 909
   success_rate: 50
-- type: vmess
-  server: vc.fly.dev
-  port: 443
-  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
-  alterId: 32
-  cipher: auto
-  network: ws
-  tls: true
-  ws-opts:
-    path: /vc
-    headers:
-      Host: vc.fly.dev
-  PingRate: 100
-  PingAverage: 1360
-  country: United States
-  ISO: US
-  name: vc.fly.dev:443@vmess@US
-  UpdateDay: 2025-11-15T12:01
-  PFirstFoundDay: 2024-05-07T03:36
-  Rank: 94
-  RescueCount: 0
-  Alive: true
-  LastWorkDate: 2025-11-15T12:01
-  average: 1204
-  success_rate: 30
 proxy-groups:
 - name: PG-default
   type: fallback
@@ -198,12 +191,12 @@ proxy-groups:
   strategy: consistent-hashing
   proxies: &id001
   - v10.heduian.link:30807@vmess@HK
+  - 47.76.175.67:10862@http@US
   - 38.54.87.34:10881@http@US
   - 219.77.239.35:443@trojan@HK
   - 85e272b6-sxe4g0-t1bnjq-1krtb.hkt.cdnhuawei.com:8443@http@NO
   - bab84747-sx30g0-t1bnjq-1krtb.hkt.cdnhuawei.com:8443@http@HK
   - 0a5eba5f-sx15s0-t1bnjq-1krtb.hkt.cdnhuawei.com:8443@http@HK
-  - vc.fly.dev:443@vmess@US
 - name: PG-AnTing
   type: load-balance
   url: http://www.gstatic.com/generate_204
@@ -217,11 +210,11 @@ proxy-groups:
   strategy: round-robin
   proxies:
   - v10.heduian.link:30807@vmess@HK
+  - 47.76.175.67:10862@http@US
   - 38.54.87.34:10881@http@US
   - 219.77.239.35:443@trojan@HK
   - 85e272b6-sxe4g0-t1bnjq-1krtb.hkt.cdnhuawei.com:8443@http@NO
   - bab84747-sx30g0-t1bnjq-1krtb.hkt.cdnhuawei.com:8443@http@HK
   - 0a5eba5f-sx15s0-t1bnjq-1krtb.hkt.cdnhuawei.com:8443@http@HK
-  - vc.fly.dev:443@vmess@US
 rules:
 - MATCH,PG-default
