@@ -45,30 +45,6 @@ dns:
     - 240.0.0.0/4
 proxies:
 - type: trojan
-  server: 3348107.p6.glados-config.net
-  port: 443
-  sni: n2.gladns.com
-  password: de24be07de746f4f
-  udp: true
-  network: grpc
-  alpn:
-  - h2
-  grpc-opts:
-    grpc-service-name: db
-  PingRate: 100
-  PingAverage: 603
-  country: Lithuania
-  ISO: LT
-  name: 3348107.p6.glados-config.net:443@trojan@LT
-  UpdateDay: 2025-12-15T12:01
-  PFirstFoundDay: 2025-12-14T04:23
-  Rank: 13738
-  RescueCount: 0
-  Alive: true
-  LastWorkDate: 2025-12-15T12:01
-  average: 465
-  success_rate: 90
-- type: trojan
   server: 3348107.hc.glados-config.net
   port: 443
   sni: n2.gladns.com
@@ -84,38 +60,32 @@ proxies:
   country: Lithuania
   ISO: LT
   name: 3348107.hc.glados-config.net:443@trojan@LT
-  UpdateDay: 2025-12-15T13:09
+  UpdateDay: 2025-12-15T13:10
   PFirstFoundDay: 2025-12-14T05:03
-  Rank: 12816
+  Rank: 12878
   RescueCount: 0
   Alive: true
-  LastWorkDate: 2025-12-15T13:09
+  LastWorkDate: 2025-12-15T13:10
   average: 1359
   success_rate: 100
-- type: trojan
-  server: 3348107.ha.glados-config.net
-  port: 443
-  sni: n2.gladns.com
-  password: de24be07de746f4f
-  udp: true
-  network: grpc
-  alpn:
-  - h2
-  grpc-opts:
-    grpc-service-name: db
-  PingRate: 100
-  PingAverage: 599
-  country: Lithuania
-  ISO: LT
-  name: 3348107.ha.glados-config.net:443@trojan@LT
-  UpdateDay: 2025-12-15T12:01
-  PFirstFoundDay: 2025-12-14T04:23
-  Rank: 12381
+- password: Ejtp4SfY82
+  port: 10881
+  server: 38.54.87.34
+  type: http
+  username: 09ahaEWmXn
+  PingRate: 66
+  PingAverage: 664
+  country: United States
+  ISO: US
+  name: 38.54.87.34:10881@http@US
+  UpdateDay: 2025-12-15T13:10
+  PFirstFoundDay: 2025-10-21T05:06
+  Rank: 9900
   RescueCount: 0
   Alive: true
-  LastWorkDate: 2025-12-15T12:01
-  average: 537
-  success_rate: 70
+  LastWorkDate: 2025-12-15T13:10
+  average: 1826
+  success_rate: 50
 - type: trojan
   server: 3348107.hb.glados-config.net
   port: 443
@@ -132,39 +102,65 @@ proxies:
   country: Lithuania
   ISO: LT
   name: 3348107.hb.glados-config.net:443@trojan@LT
-  UpdateDay: 2025-12-15T12:01
+  UpdateDay: 2025-12-15T13:10
   PFirstFoundDay: 2025-12-14T12:42
-  Rank: 9621
+  Rank: 9641
   RescueCount: 0
   Alive: true
-  LastWorkDate: 2025-12-15T12:01
-  average: 454
-  success_rate: 40
-- server: 38.33.55.93
-  port: 37002
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 64
-  cipher: auto
-  tls: true
+  LastWorkDate: 2025-12-15T13:10
+  average: 771
+  success_rate: 50
+- type: trojan
+  server: 3348107.he.glados-config.net
+  port: 443
+  sni: n2.gladns.com
+  password: de24be07de746f4f
+  udp: true
+  network: grpc
+  alpn:
+  - h2
+  grpc-opts:
+    grpc-service-name: db
+  PingRate: 100
+  PingAverage: 638
+  country: Lithuania
+  ISO: LT
+  name: 3348107.he.glados-config.net:443@trojan@LT
+  UpdateDay: 2025-12-15T13:10
+  PFirstFoundDay: 2025-12-14T04:25
+  Rank: 8058
+  RescueCount: 0
+  Alive: true
+  LastWorkDate: 2025-12-15T13:10
+  average: 1563
+  success_rate: 50
+- server: 85.234.94.186
+  port: 443
+  type: trojan
+  password: trojan
+  sni: tianjiu.pages.dev
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /path/1735895940886
-  udp: true
-  PingRate: 66
-  PingAverage: 776
-  ISO: US
-  UpdateDay: 2025-12-15T13:09
-  PFirstFoundDay: 2025-01-04T12:10
-  Rank: 9000
+    path: /
+    headers:
+      Host: tianjiu.pages.dev
+    early-data-header-name: Sec-WebSocket-Protocol
+    max-early-data: 2560
+  delay: 1808
+  PingRate: 100
+  PingAverage: 149
+  ISO: GB
+  UpdateDay: 2025-12-15T13:10
+  PFirstFoundDay: 2025-11-22T12:30
+  Rank: 7815
   RescueCount: 0
   Alive: true
-  LastWorkDate: 2025-12-15T13:09
-  average: 1050
-  success_rate: 100
-  country: United States
-  name: 38.33.55.93:37002@vmess@US
+  LastWorkDate: 2025-12-15T13:10
+  average: 508
+  success_rate: 50
+  country: United Kingdom
+  name: 85.234.94.186:443@trojan@GB
 - type: trojan
   server: 3348107.p2.glados-config.net
   port: 443
@@ -181,14 +177,38 @@ proxies:
   country: Lithuania
   ISO: LT
   name: 3348107.p2.glados-config.net:443@trojan@LT
-  UpdateDay: 2025-12-15T12:01
+  UpdateDay: 2025-12-15T13:10
   PFirstFoundDay: 2025-12-14T05:17
-  Rank: 6861
+  Rank: 6881
   RescueCount: 0
-  Alive: false
-  LastWorkDate: 2025-12-15T12:01
-  average: 579
-  success_rate: 60
+  Alive: true
+  LastWorkDate: 2025-12-15T13:10
+  average: 603
+  success_rate: 50
+- type: trojan
+  server: 3348107.p5.glados-config.net
+  port: 443
+  sni: n2.gladns.com
+  password: de24be07de746f4f
+  udp: true
+  network: grpc
+  alpn:
+  - h2
+  grpc-opts:
+    grpc-service-name: db
+  PingRate: 100
+  PingAverage: 1995
+  country: Lithuania
+  ISO: LT
+  name: 3348107.p5.glados-config.net:443@trojan@LT
+  UpdateDay: 2025-12-15T13:10
+  PFirstFoundDay: 2025-12-14T05:17
+  Rank: 6691
+  RescueCount: 0
+  Alive: true
+  LastWorkDate: 2025-12-15T13:10
+  average: 421
+  success_rate: 50
 - type: trojan
   server: 3348107.hd.glados-config.net
   port: 443
@@ -205,34 +225,57 @@ proxies:
   country: Lithuania
   ISO: LT
   name: 3348107.hd.glados-config.net:443@trojan@LT
-  UpdateDay: 2025-12-15T12:01
+  UpdateDay: 2025-12-15T13:10
   PFirstFoundDay: 2025-12-14T04:57
-  Rank: 6680
+  Rank: 6690
   RescueCount: 0
   Alive: true
-  LastWorkDate: 2025-12-15T12:01
-  average: 581
-  success_rate: 40
-- name: 85e272b6-sxe4g0-t1bnjq-1krtb.hkt.cdnhuawei.com:8443@http@NO
-  server: 85e272b6-sxe4g0-t1bnjq-1krtb.hkt.cdnhuawei.com
+  LastWorkDate: 2025-12-15T13:10
+  average: 1637
+  success_rate: 50
+- type: trojan
+  server: 3348107.p4.glados-config.net
+  port: 443
+  sni: n2.gladns.com
+  password: de24be07de746f4f
+  udp: true
+  network: grpc
+  alpn:
+  - h2
+  grpc-opts:
+    grpc-service-name: db
+  PingRate: 100
+  PingAverage: 580
+  country: Lithuania
+  ISO: LT
+  name: 3348107.p4.glados-config.net:443@trojan@LT
+  UpdateDay: 2025-12-15T13:10
+  PFirstFoundDay: 2025-12-14T04:38
+  Rank: 6652
+  RescueCount: 0
+  Alive: true
+  LastWorkDate: 2025-12-15T13:10
+  average: 374
+  success_rate: 50
+- name: 5d847e9d-sxaf40-t1bnjq-1krtb.hkt.cdnhuawei.com:8443@http@NO
+  password: <password>
   port: 8443
+  server: 5d847e9d-sxaf40-t1bnjq-1krtb.hkt.cdnhuawei.com
+  tls: true
   type: http
   username: 60f6b4c4-9d70-11ed-a4d2-f23c9164ca5d
-  password: <password>
-  tls: true
-  udp: true
   PingRate: 0
   PingAverage: 88888
   country: UnKnown
   ISO: 'NO'
-  UpdateDay: 2025-12-15T13:09
-  PFirstFoundDay: 2025-06-12T01:22
-  Rank: 4941
+  UpdateDay: 2025-12-15T13:10
+  PFirstFoundDay: 2025-06-12T01:28
+  Rank: 4990
   RescueCount: 0
   Alive: true
-  LastWorkDate: 2025-12-15T13:09
-  average: 1018
-  success_rate: 100
+  LastWorkDate: 2025-12-15T13:10
+  average: 689
+  success_rate: 50
 - password: <password>
   port: 8443
   server: 999598f4-sx8kg0-t1bnjq-1krtb.hkt.cdnhuawei.com
@@ -242,62 +285,35 @@ proxies:
   PingRate: 100
   PingAverage: 281
   ISO: HK
-  UpdateDay: 2025-12-15T13:09
+  UpdateDay: 2025-12-15T13:10
   PFirstFoundDay: 2025-06-12T01:28
-  Rank: 4910
+  Rank: 4982
   RescueCount: 0
   Alive: true
-  LastWorkDate: 2025-12-15T13:09
-  average: 1476
+  LastWorkDate: 2025-12-15T13:10
+  average: 1080
   success_rate: 100
   country: Hong Kong
   name: 999598f4-sx8kg0-t1bnjq-1krtb.hkt.cdnhuawei.com:8443@http@HK
-- server: 144.202.66.169
-  port: 443
-  type: trojan
-  password: trojan
-  sni: tianjiu.pages.dev
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: tianjiu.pages.dev
-    early-data-header-name: Sec-WebSocket-Protocol
-    max-early-data: 2560
-  delay: 1952
+- password: <password>
+  port: 8443
+  server: 9497cfdb-sx4v40-t1bnjq-1krtb.hkt.cdnhuawei.com
+  tls: true
+  type: http
+  username: 60f6b4c4-9d70-11ed-a4d2-f23c9164ca5d
   PingRate: 100
-  PingAverage: 234
-  country: United States
-  ISO: US
-  name: 144.202.66.169:443@trojan@US
-  UpdateDay: 2025-12-15T13:09
-  PFirstFoundDay: 2025-12-12T12:39
-  Rank: 1
-  RescueCount: 4
-  Alive: true
-  LastWorkDate: 2025-12-15T13:09
-  average: 939
-  success_rate: 100
-- type: trojan
-  server: hyfuuf6.wsone.icu
-  port: 443
-  password: M7v%w11Se*
-  skip-cert-verify: false
-  sni: hyfuuf6.wsone.icu
-  PingRate: 100
-  PingAverage: 851
-  country: United States
-  ISO: US
-  name: hyfuuf6.wsone.icu:443@trojan@US
-  UpdateDay: 2025-12-15T13:09
-  PFirstFoundDay: 2025-11-26T12:28
-  Rank: 1
+  PingAverage: 634
+  ISO: HK
+  UpdateDay: 2025-12-15T13:10
+  PFirstFoundDay: 2025-06-12T01:28
+  Rank: 4448
   RescueCount: 0
   Alive: true
-  LastWorkDate: 2025-12-15T13:09
-  average: 1033
-  success_rate: 100
+  LastWorkDate: 2025-12-15T13:10
+  average: 701
+  success_rate: 50
+  country: Hong Kong
+  name: 9497cfdb-sx4v40-t1bnjq-1krtb.hkt.cdnhuawei.com:8443@http@HK
 - server: xiaoliyu4624.v.jsqcdn.bid
   port: 41313
   type: vmess
@@ -317,12 +333,12 @@ proxies:
   country: China
   ISO: CN
   name: xiaoliyu4624.v.jsqcdn.bid:41313@vmess@CN
-  UpdateDay: 2025-12-15T13:09
+  UpdateDay: 2025-12-15T13:10
   PFirstFoundDay: 2025-12-07T04:53
-  Rank: 1
+  Rank: 22
   RescueCount: 0
-  Alive: true
-  LastWorkDate: 2025-12-15T13:09
+  Alive: false
+  LastWorkDate: 2025-12-15T13:10
   average: 2240
   success_rate: 100
 proxy-groups:
@@ -332,17 +348,18 @@ proxy-groups:
   interval: 200
   strategy: consistent-hashing
   proxies: &id001
-  - 3348107.p6.glados-config.net:443@trojan@LT
   - 3348107.hc.glados-config.net:443@trojan@LT
-  - 3348107.ha.glados-config.net:443@trojan@LT
+  - 38.54.87.34:10881@http@US
   - 3348107.hb.glados-config.net:443@trojan@LT
-  - 38.33.55.93:37002@vmess@US
+  - 3348107.he.glados-config.net:443@trojan@LT
+  - 85.234.94.186:443@trojan@GB
   - 3348107.p2.glados-config.net:443@trojan@LT
+  - 3348107.p5.glados-config.net:443@trojan@LT
   - 3348107.hd.glados-config.net:443@trojan@LT
-  - 85e272b6-sxe4g0-t1bnjq-1krtb.hkt.cdnhuawei.com:8443@http@NO
+  - 3348107.p4.glados-config.net:443@trojan@LT
+  - 5d847e9d-sxaf40-t1bnjq-1krtb.hkt.cdnhuawei.com:8443@http@NO
   - 999598f4-sx8kg0-t1bnjq-1krtb.hkt.cdnhuawei.com:8443@http@HK
-  - 144.202.66.169:443@trojan@US
-  - hyfuuf6.wsone.icu:443@trojan@US
+  - 9497cfdb-sx4v40-t1bnjq-1krtb.hkt.cdnhuawei.com:8443@http@HK
 - name: PG-AnTing
   type: load-balance
   url: http://www.gstatic.com/generate_204
@@ -355,17 +372,18 @@ proxy-groups:
   interval: 300
   strategy: round-robin
   proxies:
-  - 3348107.p6.glados-config.net:443@trojan@LT
   - 3348107.hc.glados-config.net:443@trojan@LT
-  - 3348107.ha.glados-config.net:443@trojan@LT
+  - 38.54.87.34:10881@http@US
   - 3348107.hb.glados-config.net:443@trojan@LT
-  - 38.33.55.93:37002@vmess@US
+  - 3348107.he.glados-config.net:443@trojan@LT
+  - 85.234.94.186:443@trojan@GB
   - 3348107.p2.glados-config.net:443@trojan@LT
+  - 3348107.p5.glados-config.net:443@trojan@LT
   - 3348107.hd.glados-config.net:443@trojan@LT
-  - 85e272b6-sxe4g0-t1bnjq-1krtb.hkt.cdnhuawei.com:8443@http@NO
+  - 3348107.p4.glados-config.net:443@trojan@LT
+  - 5d847e9d-sxaf40-t1bnjq-1krtb.hkt.cdnhuawei.com:8443@http@NO
   - 999598f4-sx8kg0-t1bnjq-1krtb.hkt.cdnhuawei.com:8443@http@HK
-  - 144.202.66.169:443@trojan@US
-  - hyfuuf6.wsone.icu:443@trojan@US
+  - 9497cfdb-sx4v40-t1bnjq-1krtb.hkt.cdnhuawei.com:8443@http@HK
   - xiaoliyu4624.v.jsqcdn.bid:41313@vmess@CN
 rule-providers:
   anting:
