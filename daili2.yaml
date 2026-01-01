@@ -63,55 +63,12 @@ proxies:
   name: one.cf.cdn.hyli.xyz:443@trojan@US
   UpdateDay: 2026-01-01T22:03
   PFirstFoundDay: 2025-12-20T04:38
-  Rank: 148613
-  RescueCount: 0
-  Alive: true
-  LastWorkDate: 2026-01-01T22:03
-  average: 857
-  success_rate: 100
-- type: trojan
-  server: 203.137.166.120
-  port: 50090
-  password: 5a2c16f9
-  udp: true
-  skip-cert-verify: true
-  sni: snippets.kkii.eu.org
-  network: ws
-  ws-opts:
-    path: "/Telegram\u011F\u0178\u2021\u011F\u0178\u2021WangCai2"
-  PingRate: 100
-  PingAverage: 212
-  country: Japan
-  ISO: JP
-  name: 203.137.166.120:50090@trojan@JP
-  UpdateDay: 2026-01-01T22:03
-  PFirstFoundDay: 2025-12-31T15:43
-  Rank: 8963
+  Rank: 148583
   RescueCount: 0
   Alive: false
   LastWorkDate: 2026-01-01T22:03
-  average: 1967
-  success_rate: 100
-- server: a9964e2f-t5gv40-te0r6o-1r7vv.id.oshuawei.com
-  port: 32233
-  type: http
-  username: e515ce48-fdfa-11ee-9970-f23c91cfbbc9
-  password: e515ce48-fdfa-11ee-9970-f23c91cfbbc9
-  tls: true
-  udp: true
-  PingRate: 100
-  PingAverage: 120
-  ISO: CN
-  UpdateDay: 2026-01-01T22:03
-  PFirstFoundDay: 2025-11-10T04:26
-  Rank: 9529
-  RescueCount: 0
-  Alive: true
-  LastWorkDate: 2026-01-01T22:03
-  average: 640
-  success_rate: 100
-  country: China
-  name: a9964e2f-t5gv40-te0r6o-1r7vv.id.oshuawei.com:32233@http@CN
+  average: 1173
+  success_rate: 50
 proxy-groups:
 - name: PG-default
   type: fallback
@@ -120,7 +77,6 @@ proxy-groups:
   strategy: consistent-hashing
   proxies: &id001
   - one.cf.cdn.hyli.xyz:443@trojan@US
-  - 203.137.166.120:50090@trojan@JP
 - name: PG-AnTing
   type: load-balance
   url: http://www.gstatic.com/generate_204
@@ -134,7 +90,5 @@ proxy-groups:
   strategy: round-robin
   proxies:
   - one.cf.cdn.hyli.xyz:443@trojan@US
-  - 203.137.166.120:50090@trojan@JP
-  - a9964e2f-t5gv40-te0r6o-1r7vv.id.oshuawei.com:32233@http@CN
 rules:
 - MATCH,PG-default
