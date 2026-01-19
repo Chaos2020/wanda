@@ -59,7 +59,7 @@ proxies:
   name: testkr3.ssv.vc:30446@http@US
   UpdateDay: 2026-01-20T02:42
   PFirstFoundDay: 2025-07-27T05:01
-  Rank: 129151
+  Rank: 129439
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-01-20T02:42
@@ -80,7 +80,7 @@ proxies:
   ISO: US
   UpdateDay: 2026-01-20T02:42
   PFirstFoundDay: 2026-01-06T18:30
-  Rank: 53656
+  Rank: 53934
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-01-20T02:42
@@ -110,7 +110,7 @@ proxies:
   ISO: US
   UpdateDay: 2026-01-20T02:42
   PFirstFoundDay: 2024-05-06T09:38
-  Rank: 22597
+  Rank: 22997
   Alive: true
   PingRate: 100
   PingAverage: 563
@@ -131,7 +131,7 @@ proxies:
   name: 58.152.46.246:443@trojan@HK
   UpdateDay: 2026-01-20T02:42
   PFirstFoundDay: 2026-01-18T10:25
-  Rank: 10562
+  Rank: 10820
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-01-20T02:42
@@ -159,7 +159,7 @@ proxies:
   name: vc.fly.dev:443@vmess@US
   UpdateDay: 2026-01-20T02:42
   PFirstFoundDay: 2024-05-07T03:36
-  Rank: 9689
+  Rank: 9801
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-01-20T02:42
@@ -178,7 +178,7 @@ proxies:
   name: 58.152.53.219:443@trojan@HK
   UpdateDay: 2026-01-20T02:42
   PFirstFoundDay: 2026-01-13T10:27
-  Rank: 9141
+  Rank: 9241
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-01-20T02:42
@@ -202,7 +202,7 @@ proxies:
   name: v8.hdacd.com:30808@vmess@HK
   UpdateDay: 2026-01-20T02:42
   PFirstFoundDay: 2026-01-18T10:22
-  Rank: 380
+  Rank: 450
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-01-20T02:42
@@ -226,12 +226,39 @@ proxies:
   name: v29.hdacd.com:30829@vmess@HK
   UpdateDay: 2026-01-20T02:42
   PFirstFoundDay: 2026-01-18T12:30
-  Rank: 245
+  Rank: 367
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-01-20T02:42
   average: 1313
   success_rate: 60
+- server: 43.135.165.80
+  port: 30023
+  type: trojan
+  password: trojan
+  sni: tianjiu.pages.dev
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: tianjiu.pages.dev
+    early-data-header-name: Sec-WebSocket-Protocol
+    max-early-data: 2560
+  delay: 1020
+  PingRate: 100
+  PingAverage: 251
+  ISO: SG
+  UpdateDay: 2026-01-20T02:42
+  PFirstFoundDay: 2025-11-22T12:28
+  Rank: 1
+  RescueCount: 1
+  Alive: true
+  LastWorkDate: 2026-01-20T02:42
+  average: 1276
+  success_rate: 40
+  country: Singapore
+  name: 43.135.165.80:30023@trojan@SG
 - type: vmess
   server: ddDFHhj.922922.Shop
   port: 80
@@ -257,33 +284,6 @@ proxies:
   success_rate: 40
   country: United States
   name: ddDFHhj.922922.Shop:80@vmess@US
-- server: 43.135.165.80
-  port: 30023
-  type: trojan
-  password: trojan
-  sni: tianjiu.pages.dev
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: tianjiu.pages.dev
-    early-data-header-name: Sec-WebSocket-Protocol
-    max-early-data: 2560
-  delay: 1020
-  PingRate: 100
-  PingAverage: 251
-  ISO: SG
-  UpdateDay: 2026-01-20T02:42
-  PFirstFoundDay: 2025-11-22T12:28
-  Rank: -1
-  RescueCount: 1
-  Alive: true
-  LastWorkDate: 2026-01-20T02:42
-  average: 1276
-  success_rate: 40
-  country: Singapore
-  name: 43.135.165.80:30023@trojan@SG
 - server: a9964e2f-t5gv40-te0r6o-1r7vv.id.oshuawei.com
   port: 32233
   type: http
@@ -296,7 +296,7 @@ proxies:
   ISO: CN
   UpdateDay: 2026-01-20T02:42
   PFirstFoundDay: 2025-11-10T04:26
-  Rank: 150946
+  Rank: 151204
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-01-20T02:42
@@ -318,7 +318,7 @@ proxies:
   name: 122.225.62.2:7890@http@CN
   UpdateDay: 2026-01-20T02:42
   PFirstFoundDay: 2026-01-12T02:27
-  Rank: 7842
+  Rank: 7822
   RescueCount: 0
   Alive: false
   LastWorkDate: 2026-01-20T02:42
@@ -359,8 +359,8 @@ proxy-groups:
   - 58.152.53.219:443@trojan@HK
   - v8.hdacd.com:30808@vmess@HK
   - v29.hdacd.com:30829@vmess@HK
-  - ddDFHhj.922922.Shop:80@vmess@US
   - 43.135.165.80:30023@trojan@SG
+  - ddDFHhj.922922.Shop:80@vmess@US
 - name: PG-AnTing
   type: load-balance
   url: http://www.gstatic.com/generate_204
@@ -381,8 +381,8 @@ proxy-groups:
   - 58.152.53.219:443@trojan@HK
   - v8.hdacd.com:30808@vmess@HK
   - v29.hdacd.com:30829@vmess@HK
-  - ddDFHhj.922922.Shop:80@vmess@US
   - 43.135.165.80:30023@trojan@SG
+  - ddDFHhj.922922.Shop:80@vmess@US
   - a9964e2f-t5gv40-te0r6o-1r7vv.id.oshuawei.com:32233@http@CN
   - 122.225.62.2:7890@http@CN
   - i1.tjone.cn:3387@trojan@CN
