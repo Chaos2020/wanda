@@ -44,30 +44,34 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
-- network: ws
-  password: trojan
-  port: 10003
-  server: 118.34.36.61
-  skip-cert-verify: true
-  sni: jflsjlaf.pages.dev
+- server: 211.252.46.215
+  port: 27015
   type: trojan
+  password: trojan
+  sni: jflsjlaf.pages.dev
+  skip-cert-verify: true
+  network: ws
   ws-opts:
+    path: /
     headers:
       Host: jflsjlaf.pages.dev
-    path: /
+    early-data-header-name: Sec-WebSocket-Protocol
+    max-early-data: 2560
+  delay: 1272
+  client-fingerprint: chrome
   PingRate: 100
-  PingAverage: 62
+  PingAverage: 402
   country: South Korea
   ISO: KR
-  name: 118.34.36.61:10003@trojan@KR
+  name: 211.252.46.215:27015@trojan@KR
   UpdateDay: 2026-03-14T02:37
-  PFirstFoundDay: 2026-03-07T12:22
-  Rank: 48624
+  PFirstFoundDay: 2026-03-07T12:27
+  Rank: 49024
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
-  average: 1678
-  success_rate: 60
+  average: 366
+  success_rate: 40
 - server: 152.53.60.198
   port: 8444
   type: trojan
@@ -90,12 +94,36 @@ proxies:
   name: 152.53.60.198:8444@trojan@AT
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T04:42
-  Rank: 48563
+  Rank: 48647
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
   average: 813
   success_rate: 70
+- network: ws
+  password: trojan
+  port: 10003
+  server: 118.34.36.61
+  skip-cert-verify: true
+  sni: jflsjlaf.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: jflsjlaf.pages.dev
+    path: /
+  PingRate: 100
+  PingAverage: 62
+  country: South Korea
+  ISO: KR
+  name: 118.34.36.61:10003@trojan@KR
+  UpdateDay: 2026-03-14T02:37
+  PFirstFoundDay: 2026-03-07T12:22
+  Rank: 48556
+  RescueCount: 0
+  Alive: true
+  LastWorkDate: 2026-03-14T02:37
+  average: 1678
+  success_rate: 60
 - server: 46.17.101.136
   port: 7777
   type: trojan
@@ -118,7 +146,7 @@ proxies:
   name: 46.17.101.136:7777@trojan@NL
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T04:49
-  Rank: 48415
+  Rank: 48285
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -146,7 +174,7 @@ proxies:
   name: 152.53.200.54:8444@trojan@AT
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T05:13
-  Rank: 48305
+  Rank: 48195
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -174,7 +202,7 @@ proxies:
   name: 152.53.200.83:8444@trojan@AT
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T05:08
-  Rank: 48010
+  Rank: 48084
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -198,7 +226,7 @@ proxies:
   name: 211.253.199.151:12121@trojan@KR
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T12:24
-  Rank: 47828
+  Rank: 47718
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -226,7 +254,7 @@ proxies:
   name: 85.203.26.26:587@trojan@NL
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T05:07
-  Rank: 47827
+  Rank: 47707
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -254,40 +282,12 @@ proxies:
   name: 5.255.121.66:7788@trojan@NL
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T04:23
-  Rank: 47557
+  Rank: 47651
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
   average: 750
   success_rate: 70
-- server: 152.53.45.251
-  port: 8888
-  type: trojan
-  password: trojan
-  sni: jflsjlaf.pages.dev
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: jflsjlaf.pages.dev
-    early-data-header-name: Sec-WebSocket-Protocol
-    max-early-data: 2560
-  delay: 2911
-  client-fingerprint: chrome
-  PingRate: 100
-  PingAverage: 196
-  country: Austria
-  ISO: AT
-  name: 152.53.45.251:8888@trojan@AT
-  UpdateDay: 2026-03-14T02:37
-  PFirstFoundDay: 2026-03-07T04:26
-  Rank: 47453
-  RescueCount: 0
-  Alive: true
-  LastWorkDate: 2026-03-14T02:37
-  average: 619
-  success_rate: 50
 - server: 130.185.120.119
   port: 2052
   type: trojan
@@ -310,12 +310,40 @@ proxies:
   name: 130.185.120.119:2052@trojan@AE
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T04:44
-  Rank: 47385
+  Rank: 47357
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
   average: 875
   success_rate: 60
+- server: 152.53.45.251
+  port: 8888
+  type: trojan
+  password: trojan
+  sni: jflsjlaf.pages.dev
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: jflsjlaf.pages.dev
+    early-data-header-name: Sec-WebSocket-Protocol
+    max-early-data: 2560
+  delay: 2911
+  client-fingerprint: chrome
+  PingRate: 100
+  PingAverage: 196
+  country: Austria
+  ISO: AT
+  name: 152.53.45.251:8888@trojan@AT
+  UpdateDay: 2026-03-14T02:37
+  PFirstFoundDay: 2026-03-07T04:26
+  Rank: 47353
+  RescueCount: 0
+  Alive: true
+  LastWorkDate: 2026-03-14T02:37
+  average: 619
+  success_rate: 50
 - server: 152.53.200.169
   port: 8444
   type: trojan
@@ -338,7 +366,7 @@ proxies:
   name: 152.53.200.169:8444@trojan@AT
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T05:09
-  Rank: 47240
+  Rank: 47334
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -366,40 +394,12 @@ proxies:
   name: 46.17.97.105:55443@trojan@NL
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T04:40
-  Rank: 47216
+  Rank: 47116
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
   average: 673
   success_rate: 50
-- server: 152.53.200.216
-  port: 8444
-  type: trojan
-  password: trojan
-  sni: jflsjlaf.pages.dev
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: jflsjlaf.pages.dev
-    early-data-header-name: Sec-WebSocket-Protocol
-    max-early-data: 2560
-  delay: 2780
-  client-fingerprint: chrome
-  PingRate: 66
-  PingAverage: 192
-  country: Austria
-  ISO: AT
-  name: 152.53.200.216:8444@trojan@AT
-  UpdateDay: 2026-03-14T02:37
-  PFirstFoundDay: 2026-03-07T05:16
-  Rank: 47107
-  RescueCount: 0
-  Alive: true
-  LastWorkDate: 2026-03-14T02:37
-  average: 804
-  success_rate: 40
 - server: 59.20.121.139
   port: 29999
   type: trojan
@@ -422,7 +422,7 @@ proxies:
   name: 59.20.121.139:29999@trojan@KR
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T12:17
-  Rank: 47074
+  Rank: 46974
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -450,12 +450,40 @@ proxies:
   name: 152.53.200.23:8444@trojan@AT
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T04:20
-  Rank: 46942
+  Rank: 46944
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
   average: 497
   success_rate: 60
+- server: 152.53.200.216
+  port: 8444
+  type: trojan
+  password: trojan
+  sni: jflsjlaf.pages.dev
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: jflsjlaf.pages.dev
+    early-data-header-name: Sec-WebSocket-Protocol
+    max-early-data: 2560
+  delay: 2780
+  client-fingerprint: chrome
+  PingRate: 66
+  PingAverage: 192
+  country: Austria
+  ISO: AT
+  name: 152.53.200.216:8444@trojan@AT
+  UpdateDay: 2026-03-14T02:37
+  PFirstFoundDay: 2026-03-07T05:16
+  Rank: 46885
+  RescueCount: 0
+  Alive: true
+  LastWorkDate: 2026-03-14T02:37
+  average: 804
+  success_rate: 40
 - server: 223.222.74.163
   port: 10035
   type: trojan
@@ -478,7 +506,7 @@ proxies:
   name: 223.222.74.163:10035@trojan@KR
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T04:54
-  Rank: 46700
+  Rank: 46590
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -506,40 +534,12 @@ proxies:
   name: 152.53.200.29:8444@trojan@AT
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T04:45
-  Rank: 46498
+  Rank: 46490
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
   average: 667
   success_rate: 60
-- server: 152.53.200.185
-  port: 8444
-  type: trojan
-  password: trojan
-  sni: jflsjlaf.pages.dev
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: jflsjlaf.pages.dev
-    early-data-header-name: Sec-WebSocket-Protocol
-    max-early-data: 2560
-  delay: 2081
-  client-fingerprint: chrome
-  PingRate: 100
-  PingAverage: 230
-  country: Austria
-  ISO: AT
-  name: 152.53.200.185:8444@trojan@AT
-  UpdateDay: 2026-03-14T02:37
-  PFirstFoundDay: 2026-03-07T04:34
-  Rank: 46355
-  RescueCount: 0
-  Alive: true
-  LastWorkDate: 2026-03-14T02:37
-  average: 989
-  success_rate: 40
 - server: 121.163.244.222
   port: 11001
   type: trojan
@@ -562,12 +562,40 @@ proxies:
   name: 121.163.244.222:11001@trojan@KR
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T12:26
-  Rank: 46234
+  Rank: 46328
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
   average: 537
   success_rate: 70
+- server: 152.53.200.185
+  port: 8444
+  type: trojan
+  password: trojan
+  sni: jflsjlaf.pages.dev
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: jflsjlaf.pages.dev
+    early-data-header-name: Sec-WebSocket-Protocol
+    max-early-data: 2560
+  delay: 2081
+  client-fingerprint: chrome
+  PingRate: 100
+  PingAverage: 230
+  country: Austria
+  ISO: AT
+  name: 152.53.200.185:8444@trojan@AT
+  UpdateDay: 2026-03-14T02:37
+  PFirstFoundDay: 2026-03-07T04:34
+  Rank: 46143
+  RescueCount: 0
+  Alive: true
+  LastWorkDate: 2026-03-14T02:37
+  average: 989
+  success_rate: 40
 - server: 212.23.200.10
   port: 8444
   type: trojan
@@ -590,7 +618,7 @@ proxies:
   name: 212.23.200.10:8444@trojan@LT
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T04:56
-  Rank: 45827
+  Rank: 46115
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -618,7 +646,7 @@ proxies:
   name: 31.172.74.123:443@trojan@ES
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T04:52
-  Rank: 45633
+  Rank: 45707
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -646,7 +674,7 @@ proxies:
   name: 220.92.22.170:11000@trojan@KR
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-08T04:59
-  Rank: 44728
+  Rank: 44720
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -674,11 +702,11 @@ proxies:
   name: 144.21.48.237:30443@trojan@SE
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T05:03
-  Rank: 44638
+  Rank: 44630
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
-  average: 858
+  average: 765
   success_rate: 60
 - server: 62.133.60.159
   port: 2223
@@ -702,7 +730,7 @@ proxies:
   name: 62.133.60.159:2223@trojan@RU
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T04:51
-  Rank: 44597
+  Rank: 44589
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -730,7 +758,7 @@ proxies:
   name: 91.107.173.219:7070@trojan@DE
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T05:02
-  Rank: 44086
+  Rank: 44150
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -758,7 +786,7 @@ proxies:
   name: 91.107.248.253:81@trojan@DE
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T04:40
-  Rank: 43785
+  Rank: 43757
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -786,7 +814,7 @@ proxies:
   name: 5.253.189.205:587@trojan@RO
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T04:40
-  Rank: 43626
+  Rank: 43752
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -814,7 +842,7 @@ proxies:
   name: 91.107.151.136:888@trojan@DE
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T05:00
-  Rank: 43544
+  Rank: 43424
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -842,7 +870,7 @@ proxies:
   name: 217.197.97.121:9527@trojan@GB
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T04:45
-  Rank: 43156
+  Rank: 43108
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -870,7 +898,7 @@ proxies:
   name: 185.204.169.46:2052@trojan@AE
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T04:26
-  Rank: 42467
+  Rank: 42551
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -898,7 +926,7 @@ proxies:
   name: 65.109.190.2:442@trojan@DE
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T05:16
-  Rank: 42087
+  Rank: 42059
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -926,7 +954,7 @@ proxies:
   name: 175.126.186.39:17988@trojan@KR
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-08T04:36
-  Rank: 42039
+  Rank: 41929
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -954,7 +982,7 @@ proxies:
   name: 51.83.47.153:8080@trojan@FR
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T04:29
-  Rank: 41936
+  Rank: 41806
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -982,68 +1010,12 @@ proxies:
   name: 91.107.249.251:6780@trojan@DE
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T05:18
-  Rank: 41567
+  Rank: 41569
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
   average: 765
   success_rate: 60
-- server: 118.35.208.37
-  port: 11434
-  type: trojan
-  password: trojan
-  sni: jflsjlaf.pages.dev
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: jflsjlaf.pages.dev
-    early-data-header-name: Sec-WebSocket-Protocol
-    max-early-data: 2560
-  delay: 938
-  client-fingerprint: chrome
-  PingRate: 100
-  PingAverage: 400
-  country: South Korea
-  ISO: KR
-  name: 118.35.208.37:11434@trojan@KR
-  UpdateDay: 2026-03-14T02:37
-  PFirstFoundDay: 2026-03-08T04:40
-  Rank: 41110
-  RescueCount: 0
-  Alive: true
-  LastWorkDate: 2026-03-14T02:37
-  average: 578
-  success_rate: 40
-- server: 46.62.132.84
-  port: 2525
-  type: trojan
-  password: trojan
-  sni: jflsjlaf.pages.dev
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: jflsjlaf.pages.dev
-    early-data-header-name: Sec-WebSocket-Protocol
-    max-early-data: 2560
-  delay: 1755
-  client-fingerprint: chrome
-  PingRate: 100
-  PingAverage: 303
-  country: Germany
-  ISO: DE
-  name: 46.62.132.84:2525@trojan@DE
-  UpdateDay: 2026-03-14T02:37
-  PFirstFoundDay: 2026-03-07T12:24
-  Rank: 41108
-  RescueCount: 0
-  Alive: true
-  LastWorkDate: 2026-03-14T02:37
-  average: 1416
-  success_rate: 50
 - server: 51.83.45.173
   port: 8080
   type: trojan
@@ -1066,12 +1038,68 @@ proxies:
   name: 51.83.45.173:8080@trojan@FR
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T05:00
-  Rank: 41103
+  Rank: 41187
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
   average: 884
   success_rate: 70
+- server: 118.35.208.37
+  port: 11434
+  type: trojan
+  password: trojan
+  sni: jflsjlaf.pages.dev
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: jflsjlaf.pages.dev
+    early-data-header-name: Sec-WebSocket-Protocol
+    max-early-data: 2560
+  delay: 938
+  client-fingerprint: chrome
+  PingRate: 100
+  PingAverage: 400
+  country: South Korea
+  ISO: KR
+  name: 118.35.208.37:11434@trojan@KR
+  UpdateDay: 2026-03-14T02:37
+  PFirstFoundDay: 2026-03-08T04:40
+  Rank: 41000
+  RescueCount: 0
+  Alive: true
+  LastWorkDate: 2026-03-14T02:37
+  average: 511
+  success_rate: 50
+- server: 46.62.132.84
+  port: 2525
+  type: trojan
+  password: trojan
+  sni: jflsjlaf.pages.dev
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: jflsjlaf.pages.dev
+    early-data-header-name: Sec-WebSocket-Protocol
+    max-early-data: 2560
+  delay: 1755
+  client-fingerprint: chrome
+  PingRate: 100
+  PingAverage: 303
+  country: Germany
+  ISO: DE
+  name: 46.62.132.84:2525@trojan@DE
+  UpdateDay: 2026-03-14T02:37
+  PFirstFoundDay: 2026-03-07T12:24
+  Rank: 40958
+  RescueCount: 0
+  Alive: true
+  LastWorkDate: 2026-03-14T02:37
+  average: 1416
+  success_rate: 50
 - server: 60.248.139.106
   port: 32770
   type: trojan
@@ -1094,7 +1122,7 @@ proxies:
   name: 60.248.139.106:32770@trojan@TW
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-08T04:13
-  Rank: 40874
+  Rank: 40876
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -1122,7 +1150,7 @@ proxies:
   name: 152.53.200.230:8444@trojan@AT
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T12:25
-  Rank: 40593
+  Rank: 40627
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -1146,7 +1174,7 @@ proxies:
   name: 65.109.203.242:8989@trojan@DE
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T08:25
-  Rank: 38141
+  Rank: 38001
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -1174,7 +1202,7 @@ proxies:
   name: 109.172.85.221:6363@trojan@RU
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T15:39
-  Rank: 37632
+  Rank: 37400
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -1198,7 +1226,7 @@ proxies:
   name: 158.69.192.34:8989@trojan@CA
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T12:21
-  Rank: 36281
+  Rank: 36539
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -1226,7 +1254,7 @@ proxies:
   name: 1.32.216.218:587@trojan@SG
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-08T05:05
-  Rank: 35999
+  Rank: 36155
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -1254,7 +1282,7 @@ proxies:
   name: 52.64.121.20:12580@trojan@US
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-08T05:06
-  Rank: 31959
+  Rank: 31707
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -1282,7 +1310,7 @@ proxies:
   name: 136.244.105.89:82@trojan@US
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T12:22
-  Rank: 31668
+  Rank: 31466
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -1310,40 +1338,12 @@ proxies:
   name: 152.53.200.167:8444@trojan@AT
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T04:39
-  Rank: 31072
+  Rank: 30912
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
   average: 1621
   success_rate: 50
-- server: 38.180.18.43
-  port: 8444
-  type: trojan
-  password: trojan
-  sni: jflsjlaf.pages.dev
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: jflsjlaf.pages.dev
-    early-data-header-name: Sec-WebSocket-Protocol
-    max-early-data: 2560
-  delay: 2178
-  client-fingerprint: chrome
-  PingRate: 100
-  PingAverage: 592
-  country: United States
-  ISO: US
-  name: 38.180.18.43:8444@trojan@US
-  UpdateDay: 2026-03-14T02:37
-  PFirstFoundDay: 2026-03-07T05:00
-  Rank: 28544
-  RescueCount: 0
-  Alive: true
-  LastWorkDate: 2026-03-14T02:37
-  average: 1100
-  success_rate: 40
 - server: 154.12.53.125
   port: 54321
   type: trojan
@@ -1366,12 +1366,40 @@ proxies:
   name: 154.12.53.125:54321@trojan@US
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T04:40
-  Rank: 28347
+  Rank: 28349
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
   average: 489
   success_rate: 60
+- server: 38.180.18.43
+  port: 8444
+  type: trojan
+  password: trojan
+  sni: jflsjlaf.pages.dev
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: jflsjlaf.pages.dev
+    early-data-header-name: Sec-WebSocket-Protocol
+    max-early-data: 2560
+  delay: 2178
+  client-fingerprint: chrome
+  PingRate: 100
+  PingAverage: 592
+  country: United States
+  ISO: US
+  name: 38.180.18.43:8444@trojan@US
+  UpdateDay: 2026-03-14T02:37
+  PFirstFoundDay: 2026-03-07T05:00
+  Rank: 28322
+  RescueCount: 0
+  Alive: true
+  LastWorkDate: 2026-03-14T02:37
+  average: 1100
+  success_rate: 40
 - server: 62.113.117.148
   port: 8444
   type: trojan
@@ -1394,7 +1422,7 @@ proxies:
   name: 62.113.117.148:8444@trojan@RU
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-08T12:29
-  Rank: 27026
+  Rank: 26794
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -1422,7 +1450,7 @@ proxies:
   name: 129.150.35.29:587@trojan@US
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-08T04:19
-  Rank: 25859
+  Rank: 25627
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -1446,7 +1474,7 @@ proxies:
   name: 92.223.2.148:7070@trojan@LU
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-08T01:31
-  Rank: 23621
+  Rank: 23655
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -1474,7 +1502,7 @@ proxies:
   name: 92.223.2.148:7777@trojan@LU
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T15:32
-  Rank: 23537
+  Rank: 23377
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -1492,12 +1520,12 @@ proxies:
   ISO: US
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-02-11T01:56
-  Rank: 18369
+  Rank: 18413
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
-  average: 1322
-  success_rate: 60
+  average: 1229
+  success_rate: 70
   country: United States
   name: 4-nknpxry4k.mix.dexiansheng.com:4447@http@US
 - password: 275728c9-07a2-4f21-807f-4e2189f02929
@@ -1512,7 +1540,7 @@ proxies:
   ISO: LU
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-09T02:08
-  Rank: 17863
+  Rank: 17641
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -1532,7 +1560,7 @@ proxies:
   ISO: US
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-02-04T02:25
-  Rank: 16193
+  Rank: 16155
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -1554,7 +1582,7 @@ proxies:
   name: 58.152.25.253:443@trojan@HK
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-08T10:17
-  Rank: 10466
+  Rank: 10346
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -1580,12 +1608,12 @@ proxies:
   country: United States
   ISO: US
   name: vc.fly.dev:443@vmess@US
-  UpdateDay: 2026-03-14T02:37
+  UpdateDay: 2026-03-14T02:38
   PFirstFoundDay: 2024-05-07T03:36
-  Rank: 10010
+  Rank: 10044
   RescueCount: 0
   Alive: true
-  LastWorkDate: 2026-03-14T02:37
+  LastWorkDate: 2026-03-14T02:38
   average: 1282
   success_rate: 70
 - server: 216.173.69.146
@@ -1610,7 +1638,7 @@ proxies:
   name: 216.173.69.146:442@trojan@GB
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T04:19
-  Rank: 5782
+  Rank: 5894
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -1634,7 +1662,7 @@ proxies:
   name: 194.4.51.171:8444@trojan@RU
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T04:38
-  Rank: 5498
+  Rank: 5558
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -1658,7 +1686,7 @@ proxies:
   name: 51.38.35.200:8080@trojan@FR
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-03-07T04:58
-  Rank: 5185
+  Rank: 5183
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -1681,12 +1709,12 @@ proxies:
   country: United Kingdom
   ISO: GB
   name: gtm1.ktmwan.net:12883@vmess@GB
-  UpdateDay: 2026-03-14T02:37
+  UpdateDay: 2026-03-14T02:38
   PFirstFoundDay: 2026-02-18T15:16
-  Rank: 389
+  Rank: 675
   RescueCount: 0
   Alive: true
-  LastWorkDate: 2026-03-14T02:37
+  LastWorkDate: 2026-03-14T02:38
   average: 518
   success_rate: 80
 - server: 85e272b6-sxe4g0-t1bnjq-1krtb.hkt.cdnhuawei.com
@@ -1701,7 +1729,7 @@ proxies:
   ISO: HK
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2025-06-12T01:22
-  Rank: 139
+  Rank: 147
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -1709,26 +1737,6 @@ proxies:
   success_rate: 40
   country: Hong Kong
   name: 85e272b6-sxe4g0-t1bnjq-1krtb.hkt.cdnhuawei.com:8443@http@HK
-- password: <password>
-  port: 8443
-  server: 503cc7e8-ta1og0-taz53d-1j0y6.hkt.cdnhuawei.com
-  sni: 503cc7e8-ta1og0-taz53d-1j0y6.hkt.cdnhuawei.com
-  tls: true
-  type: http
-  username: 1cce7df2-251c-11ee-9409-f23c9164ca5d
-  PingRate: 100
-  PingAverage: 580
-  country: Hong Kong
-  ISO: HK
-  name: 503cc7e8-ta1og0-taz53d-1j0y6.hkt.cdnhuawei.com:8443@http@HK
-  UpdateDay: 2026-03-14T02:37
-  PFirstFoundDay: 2026-02-11T15:35
-  Rank: 81
-  RescueCount: 0
-  Alive: true
-  LastWorkDate: 2026-03-14T02:37
-  average: 816
-  success_rate: 50
 - password: <password>
   port: 8443
   server: dd902adc-sxc9s0-t1bnjq-1krtb.hkt.cdnhuawei.com
@@ -1740,7 +1748,7 @@ proxies:
   ISO: HK
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2025-06-12T08:23
-  Rank: 79
+  Rank: 129
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -1762,7 +1770,7 @@ proxies:
   name: 2b295892-ta1og0-taklwz-12bd.hkt.cdnhuawei.com:8443@http@HK
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-02-05T10:29
-  Rank: 38
+  Rank: 66
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -1782,12 +1790,31 @@ proxies:
   name: 9d45e7b2-t9zts0-tqo482-1ppvf.hkt.cdnhuawei.com:8443@http@HK
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2026-02-05T02:37
-  Rank: 37
+  Rank: 25
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
   average: 1590
   success_rate: 40
+- server: 130.0.233.48
+  port: 443
+  type: trojan
+  password: 7522e2c27233459aab8d0f1d715828d0
+  sni: www.gpt123.one
+  skip-cert-verify: true
+  success_rate: 40
+  average: 1249
+  ISO: GB
+  UpdateDay: 2026-03-14T02:37
+  PFirstFoundDay: 2023-12-27T10:15
+  Rank: 9
+  Alive: true
+  LastWorkDate: 2026-03-14T02:37
+  RescueCount: 0
+  PingRate: 66
+  PingAverage: 264
+  country: United Kingdom
+  name: 130.0.233.48:443@trojan@GB
 - server: a9964e2f-t5gv40-te0r6o-1r7vv.id.oshuawei.com
   port: 32233
   type: http
@@ -1800,7 +1827,7 @@ proxies:
   ISO: CN
   UpdateDay: 2026-03-14T02:37
   PFirstFoundDay: 2025-11-10T04:26
-  Rank: 446697
+  Rank: 446393
   RescueCount: 0
   Alive: true
   LastWorkDate: 2026-03-14T02:37
@@ -1825,14 +1852,14 @@ proxies:
   success_rate: 50
   average: 1046
   ISO: CN
-  UpdateDay: 2026-03-14T02:37
+  UpdateDay: 2026-03-14T02:38
   PFirstFoundDay: 2024-03-10T21:38
-  Rank: 43362
+  Rank: 43232
   PingRate: 66
   PingAverage: 263
   RescueCount: 0
   Alive: true
-  LastWorkDate: 2026-03-14T02:37
+  LastWorkDate: 2026-03-14T02:38
   country: China
   name: smart.2022.2024.mlinuu.top:11006@vmess@CN
 - server: zebra2.2022.2025.mlinuu.top
@@ -1852,14 +1879,14 @@ proxies:
   success_rate: 40
   average: 632
   ISO: CN
-  UpdateDay: 2026-03-14T02:37
+  UpdateDay: 2026-03-14T02:38
   PFirstFoundDay: 2024-03-11T14:38
-  Rank: 41157
+  Rank: 40955
   Alive: true
   RescueCount: 0
   PingRate: 66
   PingAverage: 258
-  LastWorkDate: 2026-03-14T02:37
+  LastWorkDate: 2026-03-14T02:38
   country: China
   name: zebra2.2022.2025.mlinuu.top:4120@vmess@CN
 - server: for2.2022.2026.mlinuu.top
@@ -1879,14 +1906,14 @@ proxies:
   success_rate: 50
   average: 991
   ISO: CN
-  UpdateDay: 2026-03-14T02:37
+  UpdateDay: 2026-03-14T02:38
   PFirstFoundDay: 2024-03-09T06:35
-  Rank: 33199
+  Rank: 33079
   Alive: true
   RescueCount: 0
   PingRate: 33
   PingAverage: 221
-  LastWorkDate: 2026-03-14T02:37
+  LastWorkDate: 2026-03-14T02:38
   country: China
   name: for2.2022.2026.mlinuu.top:4508@vmess@CN
 - alterId: 2
@@ -1903,12 +1930,12 @@ proxies:
   PingRate: 33
   PingAverage: 86
   ISO: CN
-  UpdateDay: 2026-03-14T02:37
+  UpdateDay: 2026-03-14T02:38
   PFirstFoundDay: 2026-02-11T10:25
-  Rank: 387
+  Rank: 405
   RescueCount: 0
   Alive: true
-  LastWorkDate: 2026-03-14T02:37
+  LastWorkDate: 2026-03-14T02:38
   average: 1072
   success_rate: 40
   country: China
@@ -1929,12 +1956,12 @@ proxies:
   country: China
   ISO: CN
   name: v8.hdacd.com:30808@vmess@CN
-  UpdateDay: 2026-03-14T02:37
+  UpdateDay: 2026-03-14T02:38
   PFirstFoundDay: 2026-01-18T10:22
   Rank: 1
   RescueCount: 0
   Alive: false
-  LastWorkDate: 2026-03-14T02:37
+  LastWorkDate: 2026-03-14T02:38
   average: 1508
   success_rate: 30
 - alterId: 2
@@ -1951,12 +1978,12 @@ proxies:
   PingRate: 100
   PingAverage: 1124
   ISO: CN
-  UpdateDay: 2026-03-14T02:37
+  UpdateDay: 2026-03-14T02:38
   PFirstFoundDay: 2026-01-18T12:30
   Rank: 1
   RescueCount: 0
   Alive: true
-  LastWorkDate: 2026-03-14T02:37
+  LastWorkDate: 2026-03-14T02:38
   average: 1985
   success_rate: 30
   country: China
@@ -1968,25 +1995,26 @@ proxy-groups:
   interval: 200
   strategy: consistent-hashing
   proxies: &id001
-  - 118.34.36.61:10003@trojan@KR
+  - 211.252.46.215:27015@trojan@KR
   - 152.53.60.198:8444@trojan@AT
+  - 118.34.36.61:10003@trojan@KR
   - 46.17.101.136:7777@trojan@NL
   - 152.53.200.54:8444@trojan@AT
   - 152.53.200.83:8444@trojan@AT
   - 211.253.199.151:12121@trojan@KR
   - 85.203.26.26:587@trojan@NL
   - 5.255.121.66:7788@trojan@NL
-  - 152.53.45.251:8888@trojan@AT
   - 130.185.120.119:2052@trojan@AE
+  - 152.53.45.251:8888@trojan@AT
   - 152.53.200.169:8444@trojan@AT
   - 46.17.97.105:55443@trojan@NL
-  - 152.53.200.216:8444@trojan@AT
   - 59.20.121.139:29999@trojan@KR
   - 152.53.200.23:8444@trojan@AT
+  - 152.53.200.216:8444@trojan@AT
   - 223.222.74.163:10035@trojan@KR
   - 152.53.200.29:8444@trojan@AT
-  - 152.53.200.185:8444@trojan@AT
   - 121.163.244.222:11001@trojan@KR
+  - 152.53.200.185:8444@trojan@AT
   - 212.23.200.10:8444@trojan@LT
   - 31.172.74.123:443@trojan@ES
   - 220.92.22.170:11000@trojan@KR
@@ -2002,9 +2030,9 @@ proxy-groups:
   - 175.126.186.39:17988@trojan@KR
   - 51.83.47.153:8080@trojan@FR
   - 91.107.249.251:6780@trojan@DE
+  - 51.83.45.173:8080@trojan@FR
   - 118.35.208.37:11434@trojan@KR
   - 46.62.132.84:2525@trojan@DE
-  - 51.83.45.173:8080@trojan@FR
   - 60.248.139.106:32770@trojan@TW
   - 152.53.200.230:8444@trojan@AT
   - 65.109.203.242:8989@trojan@DE
@@ -2014,8 +2042,8 @@ proxy-groups:
   - 52.64.121.20:12580@trojan@US
   - 136.244.105.89:82@trojan@US
   - 152.53.200.167:8444@trojan@AT
-  - 38.180.18.43:8444@trojan@US
   - 154.12.53.125:54321@trojan@US
+  - 38.180.18.43:8444@trojan@US
   - 62.113.117.148:8444@trojan@RU
   - 129.150.35.29:587@trojan@US
   - 92.223.2.148:7070@trojan@LU
@@ -2030,10 +2058,10 @@ proxy-groups:
   - 51.38.35.200:8080@trojan@FR
   - gtm1.ktmwan.net:12883@vmess@GB
   - 85e272b6-sxe4g0-t1bnjq-1krtb.hkt.cdnhuawei.com:8443@http@HK
-  - 503cc7e8-ta1og0-taz53d-1j0y6.hkt.cdnhuawei.com:8443@http@HK
   - dd902adc-sxc9s0-t1bnjq-1krtb.hkt.cdnhuawei.com:8443@http@HK
   - 2b295892-ta1og0-taklwz-12bd.hkt.cdnhuawei.com:8443@http@HK
   - 9d45e7b2-t9zts0-tqo482-1ppvf.hkt.cdnhuawei.com:8443@http@HK
+  - 130.0.233.48:443@trojan@GB
 - name: PG-AnTing
   type: load-balance
   url: http://www.gstatic.com/generate_204
@@ -2046,25 +2074,26 @@ proxy-groups:
   interval: 300
   strategy: round-robin
   proxies:
-  - 118.34.36.61:10003@trojan@KR
+  - 211.252.46.215:27015@trojan@KR
   - 152.53.60.198:8444@trojan@AT
+  - 118.34.36.61:10003@trojan@KR
   - 46.17.101.136:7777@trojan@NL
   - 152.53.200.54:8444@trojan@AT
   - 152.53.200.83:8444@trojan@AT
   - 211.253.199.151:12121@trojan@KR
   - 85.203.26.26:587@trojan@NL
   - 5.255.121.66:7788@trojan@NL
-  - 152.53.45.251:8888@trojan@AT
   - 130.185.120.119:2052@trojan@AE
+  - 152.53.45.251:8888@trojan@AT
   - 152.53.200.169:8444@trojan@AT
   - 46.17.97.105:55443@trojan@NL
-  - 152.53.200.216:8444@trojan@AT
   - 59.20.121.139:29999@trojan@KR
   - 152.53.200.23:8444@trojan@AT
+  - 152.53.200.216:8444@trojan@AT
   - 223.222.74.163:10035@trojan@KR
   - 152.53.200.29:8444@trojan@AT
-  - 152.53.200.185:8444@trojan@AT
   - 121.163.244.222:11001@trojan@KR
+  - 152.53.200.185:8444@trojan@AT
   - 212.23.200.10:8444@trojan@LT
   - 31.172.74.123:443@trojan@ES
   - 220.92.22.170:11000@trojan@KR
@@ -2080,9 +2109,9 @@ proxy-groups:
   - 175.126.186.39:17988@trojan@KR
   - 51.83.47.153:8080@trojan@FR
   - 91.107.249.251:6780@trojan@DE
+  - 51.83.45.173:8080@trojan@FR
   - 118.35.208.37:11434@trojan@KR
   - 46.62.132.84:2525@trojan@DE
-  - 51.83.45.173:8080@trojan@FR
   - 60.248.139.106:32770@trojan@TW
   - 152.53.200.230:8444@trojan@AT
   - 65.109.203.242:8989@trojan@DE
@@ -2092,8 +2121,8 @@ proxy-groups:
   - 52.64.121.20:12580@trojan@US
   - 136.244.105.89:82@trojan@US
   - 152.53.200.167:8444@trojan@AT
-  - 38.180.18.43:8444@trojan@US
   - 154.12.53.125:54321@trojan@US
+  - 38.180.18.43:8444@trojan@US
   - 62.113.117.148:8444@trojan@RU
   - 129.150.35.29:587@trojan@US
   - 92.223.2.148:7070@trojan@LU
@@ -2108,10 +2137,10 @@ proxy-groups:
   - 51.38.35.200:8080@trojan@FR
   - gtm1.ktmwan.net:12883@vmess@GB
   - 85e272b6-sxe4g0-t1bnjq-1krtb.hkt.cdnhuawei.com:8443@http@HK
-  - 503cc7e8-ta1og0-taz53d-1j0y6.hkt.cdnhuawei.com:8443@http@HK
   - dd902adc-sxc9s0-t1bnjq-1krtb.hkt.cdnhuawei.com:8443@http@HK
   - 2b295892-ta1og0-taklwz-12bd.hkt.cdnhuawei.com:8443@http@HK
   - 9d45e7b2-t9zts0-tqo482-1ppvf.hkt.cdnhuawei.com:8443@http@HK
+  - 130.0.233.48:443@trojan@GB
   - a9964e2f-t5gv40-te0r6o-1r7vv.id.oshuawei.com:32233@http@CN
   - smart.2022.2024.mlinuu.top:11006@vmess@CN
   - zebra2.2022.2025.mlinuu.top:4120@vmess@CN
