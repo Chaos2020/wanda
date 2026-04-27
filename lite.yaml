@@ -1676,21 +1676,21 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
   udp: true
-- name: 82.198.246.214@180@vmess@07b2217d
-  type: vmess
-  server: 82.198.246.214
-  port: 180
-  alterId: 0
-  cipher: auto
-  network: tcp
-  udp: true
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
 - name: 82.198.246.214@180@vmess@d6b5d7be
   type: vmess
   server: 82.198.246.214
   port: 180
   alterId: 0
   cipher: aes-128-gcm
+  network: tcp
+  udp: true
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- name: 82.198.246.214@180@vmess@07b2217d
+  type: vmess
+  server: 82.198.246.214
+  port: 180
+  alterId: 0
+  cipher: auto
   network: tcp
   udp: true
   uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
@@ -2184,16 +2184,6 @@ proxies:
   skip-cert-verify: true
   network: tcp
   tls: false
-- name: 82.198.246.97@180@vmess@19cd19ac
-  type: vmess
-  server: 82.198.246.97
-  port: 180
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  skip-cert-verify: true
-  network: tcp
-  tls: false
 - name: 82.198.246.97@180@vmess@293e25ce
   type: vmess
   server: 82.198.246.97
@@ -2303,15 +2293,6 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
   udp: true
-- name: 82.198.246.250@180@vmess@14b43985
-  type: vmess
-  server: 82.198.246.250
-  port: 180
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
 - name: 172.66.44.230@8443@trojan@02348546
   type: trojan
   server: 172.66.44.230
@@ -2324,7 +2305,28 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
   udp: true
+- name: 82.198.246.250@180@vmess@14b43985
+  type: vmess
+  server: 82.198.246.250
+  port: 180
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
 - name: 172.66.44.230@8443@trojan@5f753e16
+  type: trojan
+  server: 172.66.44.230
+  port: 8443
+  password: 8r<[9'l6hAO#8ZQi
+  sni: Koma-YT.PAGeS.Dev
+  network: ws
+  ws-opts:
+    path: /tro8sFW1S91B6sZrM1?ed=2560
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+  udp: true
+- name: 172.66.44.230@8443@trojan@7da9af97
   type: trojan
   server: 172.66.44.230
   port: 8443
@@ -2482,8 +2484,8 @@ proxy-groups:
   - 82.198.246.214@180@vmess@088481a5
   - 172.66.44.230@8443@trojan@c689dcaf
   - 172.66.44.230@8443@trojan@a63edde0
-  - 82.198.246.214@180@vmess@07b2217d
   - 82.198.246.214@180@vmess@d6b5d7be
+  - 82.198.246.214@180@vmess@07b2217d
   - 172.66.44.230@8443@trojan@2de16f02
   - 82.198.246.9@180@vmess@82bd29ad
   - 82.198.246.37@180@vmess@c0d474c5
@@ -2530,7 +2532,6 @@ proxy-groups:
   - 82.198.246.97@180@vmess@cebd9cbf
   - 204.168.173.148@2053@trojan@9891fd90
   - 82.198.246.97@180@vmess@cb223fa6
-  - 82.198.246.97@180@vmess@19cd19ac
   - 82.198.246.97@180@vmess@293e25ce
   - 82.198.246.250@180@vmess@6ba3ba37
   - 172.66.44.230@8443@trojan@6da55135
@@ -2541,9 +2542,10 @@ proxy-groups:
   - 172.66.44.230@8443@trojan@0e647f9e
   - 103.186.154.58@38388@ss@b4b04436
   - 172.66.44.230@8443@trojan@96800c58
-  - 82.198.246.250@180@vmess@14b43985
   - 172.66.44.230@8443@trojan@02348546
+  - 82.198.246.250@180@vmess@14b43985
   - 172.66.44.230@8443@trojan@5f753e16
+  - 172.66.44.230@8443@trojan@7da9af97
 - name: PG-default
   type: fallback
   url: https://www.google.com/generate_204
@@ -2689,8 +2691,8 @@ proxy-groups:
   - 82.198.246.214@180@vmess@088481a5
   - 172.66.44.230@8443@trojan@c689dcaf
   - 172.66.44.230@8443@trojan@a63edde0
-  - 82.198.246.214@180@vmess@07b2217d
   - 82.198.246.214@180@vmess@d6b5d7be
+  - 82.198.246.214@180@vmess@07b2217d
   - 172.66.44.230@8443@trojan@2de16f02
   - 82.198.246.9@180@vmess@82bd29ad
   - 82.198.246.37@180@vmess@c0d474c5
@@ -2737,7 +2739,6 @@ proxy-groups:
   - 82.198.246.97@180@vmess@cebd9cbf
   - 204.168.173.148@2053@trojan@9891fd90
   - 82.198.246.97@180@vmess@cb223fa6
-  - 82.198.246.97@180@vmess@19cd19ac
   - 82.198.246.97@180@vmess@293e25ce
   - 82.198.246.250@180@vmess@6ba3ba37
   - 172.66.44.230@8443@trojan@6da55135
@@ -2748,9 +2749,10 @@ proxy-groups:
   - 172.66.44.230@8443@trojan@0e647f9e
   - 103.186.154.58@38388@ss@b4b04436
   - 172.66.44.230@8443@trojan@96800c58
-  - 82.198.246.250@180@vmess@14b43985
   - 172.66.44.230@8443@trojan@02348546
+  - 82.198.246.250@180@vmess@14b43985
   - 172.66.44.230@8443@trojan@5f753e16
+  - 172.66.44.230@8443@trojan@7da9af97
 - name: PG-AnTing
   type: load-balance
   url: https://www.google.com/generate_204
@@ -2795,8 +2797,8 @@ proxy-groups:
   - 82.198.246.9@180@vmess@b5bb806e
   - 82.198.246.37@180@vmess@3b4aa4f7
   - 82.198.246.214@180@vmess@088481a5
-  - 82.198.246.214@180@vmess@07b2217d
   - 82.198.246.214@180@vmess@d6b5d7be
+  - 82.198.246.214@180@vmess@07b2217d
   - 82.198.246.9@180@vmess@82bd29ad
   - 82.198.246.37@180@vmess@c0d474c5
   - 82.198.246.233@180@vmess@9155a3f5
@@ -2968,7 +2970,6 @@ proxy-groups:
   - 172.66.44.230@8443@trojan@a40af4de
   - 204.168.173.148@2053@trojan@9891fd90
   - 82.198.246.97@180@vmess@cb223fa6
-  - 82.198.246.97@180@vmess@19cd19ac
   - 82.198.246.97@180@vmess@293e25ce
   - 172.66.44.230@8443@trojan@6da55135
   - 172.66.44.230@8443@trojan@1ebccda6
@@ -2979,6 +2980,7 @@ proxy-groups:
   - 172.66.44.230@8443@trojan@96800c58
   - 172.66.44.230@8443@trojan@02348546
   - 172.66.44.230@8443@trojan@5f753e16
+  - 172.66.44.230@8443@trojan@7da9af97
 - name: PG-GitHub
   type: url-test
   url: https://api.github.com
@@ -3004,8 +3006,8 @@ proxy-groups:
   - 82.198.246.9@180@vmess@b5bb806e
   - 82.198.246.37@180@vmess@3b4aa4f7
   - 82.198.246.214@180@vmess@088481a5
-  - 82.198.246.214@180@vmess@07b2217d
   - 82.198.246.214@180@vmess@d6b5d7be
+  - 82.198.246.214@180@vmess@07b2217d
   - 82.198.246.9@180@vmess@82bd29ad
   - 82.198.246.37@180@vmess@c0d474c5
   - 82.198.246.233@180@vmess@9155a3f5
@@ -3177,7 +3179,6 @@ proxy-groups:
   - 172.66.44.230@8443@trojan@a40af4de
   - 204.168.173.148@2053@trojan@9891fd90
   - 82.198.246.97@180@vmess@cb223fa6
-  - 82.198.246.97@180@vmess@19cd19ac
   - 82.198.246.97@180@vmess@293e25ce
   - 172.66.44.230@8443@trojan@6da55135
   - 172.66.44.230@8443@trojan@1ebccda6
@@ -3188,6 +3189,7 @@ proxy-groups:
   - 172.66.44.230@8443@trojan@96800c58
   - 172.66.44.230@8443@trojan@02348546
   - 172.66.44.230@8443@trojan@5f753e16
+  - 172.66.44.230@8443@trojan@7da9af97
 - name: PG-YouTube
   type: load-balance
   url: https://www.youtube.com/generate_204
@@ -3212,8 +3214,8 @@ proxy-groups:
   - 82.198.246.9@180@vmess@b5bb806e
   - 82.198.246.37@180@vmess@3b4aa4f7
   - 82.198.246.214@180@vmess@088481a5
-  - 82.198.246.214@180@vmess@07b2217d
   - 82.198.246.214@180@vmess@d6b5d7be
+  - 82.198.246.214@180@vmess@07b2217d
   - 82.198.246.9@180@vmess@82bd29ad
   - 82.198.246.37@180@vmess@c0d474c5
   - 82.198.246.233@180@vmess@9155a3f5
@@ -3385,7 +3387,6 @@ proxy-groups:
   - 172.66.44.230@8443@trojan@a40af4de
   - 204.168.173.148@2053@trojan@9891fd90
   - 82.198.246.97@180@vmess@cb223fa6
-  - 82.198.246.97@180@vmess@19cd19ac
   - 82.198.246.97@180@vmess@293e25ce
   - 172.66.44.230@8443@trojan@6da55135
   - 172.66.44.230@8443@trojan@1ebccda6
@@ -3396,6 +3397,7 @@ proxy-groups:
   - 172.66.44.230@8443@trojan@96800c58
   - 172.66.44.230@8443@trojan@02348546
   - 172.66.44.230@8443@trojan@5f753e16
+  - 172.66.44.230@8443@trojan@7da9af97
 - name: PG-Twitter
   type: url-test
   url: https://abs.twimg.com/favicons/twitter.2.ico
@@ -3421,8 +3423,8 @@ proxy-groups:
   - 82.198.246.9@180@vmess@b5bb806e
   - 82.198.246.37@180@vmess@3b4aa4f7
   - 82.198.246.214@180@vmess@088481a5
-  - 82.198.246.214@180@vmess@07b2217d
   - 82.198.246.214@180@vmess@d6b5d7be
+  - 82.198.246.214@180@vmess@07b2217d
   - 82.198.246.9@180@vmess@82bd29ad
   - 82.198.246.37@180@vmess@c0d474c5
   - 82.198.246.233@180@vmess@9155a3f5
@@ -3594,7 +3596,6 @@ proxy-groups:
   - 172.66.44.230@8443@trojan@a40af4de
   - 204.168.173.148@2053@trojan@9891fd90
   - 82.198.246.97@180@vmess@cb223fa6
-  - 82.198.246.97@180@vmess@19cd19ac
   - 82.198.246.97@180@vmess@293e25ce
   - 172.66.44.230@8443@trojan@6da55135
   - 172.66.44.230@8443@trojan@1ebccda6
@@ -3605,6 +3606,7 @@ proxy-groups:
   - 172.66.44.230@8443@trojan@96800c58
   - 172.66.44.230@8443@trojan@02348546
   - 172.66.44.230@8443@trojan@5f753e16
+  - 172.66.44.230@8443@trojan@7da9af97
 rule-providers:
   anting:
     type: file
