@@ -69,6 +69,31 @@ dns:
   - dns.msftncsi.com
   - localhost.ptlogin2.qq.com
 proxies:
+- name: 84.200.77.90@2053@vless@09f6dea6
+  type: vless
+  server: 84.200.77.90
+  port: 2053
+  uuid: 3d243df5-9cda-4aac-89d5-354de77d79e2
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc
+- name: 103.186.155.135@38388@ss@a02101d3
+  type: ss
+  server: 103.186.155.135
+  port: 38388
+  skip-cert-verify: false
+  udp: false
+  cipher: aes-256-cfb
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+- name: 103.186.154.172@38388@ss@4ed03133
+  type: ss
+  server: 103.186.154.172
+  port: 38388
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  cipher: aes-256-cfb
 - name: 222.106.183.207@12300@vless@821ed962
   type: vless
   server: 222.106.183.207
@@ -95,33 +120,62 @@ proxies:
   ws-opts:
     path: /7c15de26
   udp: true
-- name: 59.25.212.132@18245@vless@daf0c00b
+- name: 5.129.233.22@443@vless@35fcc738
   type: vless
-  server: 59.25.212.132
-  port: 18245
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  server: 5.129.233.22
+  port: 443
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  ws-opts:
+    path: /?ed=2560&https://t.me/WangCai2🇨🇳
+    headers:
+      Host: sni.111000.v6.army
+- name: 43.165.172.117@443@vless@643be925
+  type: vless
+  server: 43.165.172.117
+  port: 443
   network: ws
   skip-cert-verify: false
+  tfo: false
+  tls: true
+  udp: true
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
   ws-opts:
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: xfxl35a.node-edge.gfw.hidns.co
+    max-early-data: 2560
     path: /danfeng
+- name: 148.113.208.228@443@trojan@5dea17af
+  type: trojan
+  server: 148.113.208.228
+  port: 443
+  password: 3ac6a6ca99f74941b1eaf892818e2ddb
+  skip-cert-verify: true
+  tls: true
+- name: 47.91.31.4@39738@vless@390ddd69
+  type: vless
+  server: 47.91.31.4
+  port: 39738
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
+  tls: true
+  ws-opts:
+    path: /danfeng?ed=2560fp=chrome
     headers:
       Host: ynwta9.api-edge.fgfw.qzz.io
-    early-data-header-name: Sec-WebSocket-Protocol
-    max-early-data: 2560
-  tls: true
-  tfo: false
-  udp: true
-- name: 218.155.125.99@10001@vless@9fd4bebb
+- name: 34.132.50.119@443@vless@0a24f7d7
   type: vless
-  server: 218.155.125.99
-  port: 10001
+  server: 34.132.50.119
+  port: 443
   uuid: 26524cce-d514-4014-a426-365fb266a14d
   udp: true
   tls: true
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /danfeng?ed=2560
+    path: /danfeng
     headers:
       Host: ynwta9.api-edge.fgfw.qzz.io
 - name: 8.39.125.102@443@vless@69ea594d
@@ -137,33 +191,84 @@ proxies:
     headers:
       Host: kalami-eew.pages.dev
     path: /
-- name: 156.243.244.249@443@vless@e42cdc3a
+- name: 172.66.43.27@2096@vless@a5c87b94
   type: vless
-  server: 156.243.244.249
-  port: 443
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  udp: true
+  server: 172.66.43.27
+  port: 2096
+  network: ws
   tls: true
+  udp: true
+  uuid: b8ae3c37-37d6-4d4d-93fc-1ce0bc329ba0
+  ws-opts:
+    headers:
+      Host: free-server.techsonic.ggff.net
+      User-Agent: Mozilla/5.0 (X11; Linux i686) AppleWebKit/534.30 (KHTML, like Gecko)
+        Chrome/12.0.742.100 Safari/534.30
+    path: /@Tech_Sonic
+- name: 172.66.43.27@2096@vless@241f3b30
+  type: vless
+  server: 172.66.43.27
+  port: 2096
+  uuid: b8ae3c37-37d6-4d4d-93fc-1ce0bc329ba0
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    headers:
+      Host: free-server.techsonic.ggff.net
+    path: /@Tech_Sonic
+- name: 45.15.140.128@4443@trojan@cdbe54ad
+  type: trojan
+  server: 45.15.140.128
+  port: 4443
   skip-cert-verify: true
+  password: strong-secret-pass-777
+  network: tcp
+- name: 185.106.176.150@28812@trojan@d669cf59
+  type: trojan
+  server: 185.106.176.150
+  port: 28812
   network: ws
-  ws-opts:
-    path: /danfeng
-    headers:
-      Host: xfxl35a.node-edge.gfw.hidns.co
-- name: 47.79.85.210@11307@vless@5f7d2796
-  type: vless
-  server: 47.79.85.210
-  port: 11307
-  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  skip-cert-verify: true
+  sni: Koma-YT.PAGeS.Dev
   tls: true
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   ws-opts:
     headers:
-      Host: sni.111000.v6.rocks
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/65.0.3325.162 Safari/537.36
-    path: /?ed=2560&https://t.me/WangCai2🇨🇳
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram🇨🇳 @WangCai2
+- name: 185.106.176.150@28812@trojan@b6447e21
+  type: trojan
+  server: 185.106.176.150
+  port: 28812
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  skip-cert-verify: true
+  sni: Koma-YT.PAGeS.Dev
+  tls: true
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram🇨🇳 @WangCai2
+- name: 152.53.200.18@8443@trojan@9da9e7e3
+  type: trojan
+  server: 152.53.200.18
+  port: 8443
+  password: 8r<[9'l6hAO#8ZQi
+  sni: Koma-YT.PAGeS.Dev
+  network: ws
+  ws-opts:
+    path: /trTelegram🇨🇳+@WangCai2
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+- name: 194.33.45.157@443@trojan@42f0ae5d
+  type: trojan
+  server: 194.33.45.157
+  port: 443
+  password: d30ab83dbde4480082048fb315bedebd
+  sni: 194.33.45.157
+  skip-cert-verify: true
+  udp: true
 proxy-groups:
 - name: PG-fast
   type: url-test
@@ -172,13 +277,24 @@ proxy-groups:
   tolerance: 50
   lazy: true
   proxies: &id001
+  - 84.200.77.90@2053@vless@09f6dea6
+  - 103.186.155.135@38388@ss@a02101d3
+  - 103.186.154.172@38388@ss@4ed03133
   - 222.106.183.207@12300@vless@821ed962
   - 8.217.231.146@46964@vless@d9d18bfe
-  - 59.25.212.132@18245@vless@daf0c00b
-  - 218.155.125.99@10001@vless@9fd4bebb
+  - 5.129.233.22@443@vless@35fcc738
+  - 43.165.172.117@443@vless@643be925
+  - 148.113.208.228@443@trojan@5dea17af
+  - 47.91.31.4@39738@vless@390ddd69
+  - 34.132.50.119@443@vless@0a24f7d7
   - 8.39.125.102@443@vless@69ea594d
-  - 156.243.244.249@443@vless@e42cdc3a
-  - 47.79.85.210@11307@vless@5f7d2796
+  - 172.66.43.27@2096@vless@a5c87b94
+  - 172.66.43.27@2096@vless@241f3b30
+  - 45.15.140.128@4443@trojan@cdbe54ad
+  - 185.106.176.150@28812@trojan@d669cf59
+  - 185.106.176.150@28812@trojan@b6447e21
+  - 152.53.200.18@8443@trojan@9da9e7e3
+  - 194.33.45.157@443@trojan@42f0ae5d
 - name: PG-default
   type: fallback
   url: https://www.google.com/generate_204
@@ -186,13 +302,24 @@ proxy-groups:
   lazy: true
   proxies:
   - PG-fast
+  - 84.200.77.90@2053@vless@09f6dea6
+  - 103.186.155.135@38388@ss@a02101d3
+  - 103.186.154.172@38388@ss@4ed03133
   - 222.106.183.207@12300@vless@821ed962
   - 8.217.231.146@46964@vless@d9d18bfe
-  - 59.25.212.132@18245@vless@daf0c00b
-  - 218.155.125.99@10001@vless@9fd4bebb
+  - 5.129.233.22@443@vless@35fcc738
+  - 43.165.172.117@443@vless@643be925
+  - 148.113.208.228@443@trojan@5dea17af
+  - 47.91.31.4@39738@vless@390ddd69
+  - 34.132.50.119@443@vless@0a24f7d7
   - 8.39.125.102@443@vless@69ea594d
-  - 156.243.244.249@443@vless@e42cdc3a
-  - 47.79.85.210@11307@vless@5f7d2796
+  - 172.66.43.27@2096@vless@a5c87b94
+  - 172.66.43.27@2096@vless@241f3b30
+  - 45.15.140.128@4443@trojan@cdbe54ad
+  - 185.106.176.150@28812@trojan@d669cf59
+  - 185.106.176.150@28812@trojan@b6447e21
+  - 152.53.200.18@8443@trojan@9da9e7e3
+  - 194.33.45.157@443@trojan@42f0ae5d
 - name: PG-AnTing
   type: load-balance
   url: https://www.google.com/generate_204
@@ -221,13 +348,24 @@ proxy-groups:
   proxies:
   - PG-default
   - PG-fast
+  - 84.200.77.90@2053@vless@09f6dea6
+  - 103.186.155.135@38388@ss@a02101d3
+  - 103.186.154.172@38388@ss@4ed03133
   - 222.106.183.207@12300@vless@821ed962
   - 8.217.231.146@46964@vless@d9d18bfe
-  - 59.25.212.132@18245@vless@daf0c00b
-  - 218.155.125.99@10001@vless@9fd4bebb
+  - 5.129.233.22@443@vless@35fcc738
+  - 43.165.172.117@443@vless@643be925
+  - 148.113.208.228@443@trojan@5dea17af
+  - 47.91.31.4@39738@vless@390ddd69
+  - 34.132.50.119@443@vless@0a24f7d7
   - 8.39.125.102@443@vless@69ea594d
-  - 156.243.244.249@443@vless@e42cdc3a
-  - 47.79.85.210@11307@vless@5f7d2796
+  - 172.66.43.27@2096@vless@a5c87b94
+  - 172.66.43.27@2096@vless@241f3b30
+  - 45.15.140.128@4443@trojan@cdbe54ad
+  - 185.106.176.150@28812@trojan@d669cf59
+  - 185.106.176.150@28812@trojan@b6447e21
+  - 152.53.200.18@8443@trojan@9da9e7e3
+  - 194.33.45.157@443@trojan@42f0ae5d
 - name: PG-GitHub
   type: url-test
   url: https://api.github.com
@@ -237,13 +375,24 @@ proxy-groups:
   proxies:
   - PG-default
   - PG-fast
+  - 84.200.77.90@2053@vless@09f6dea6
+  - 103.186.155.135@38388@ss@a02101d3
+  - 103.186.154.172@38388@ss@4ed03133
   - 222.106.183.207@12300@vless@821ed962
   - 8.217.231.146@46964@vless@d9d18bfe
-  - 59.25.212.132@18245@vless@daf0c00b
-  - 218.155.125.99@10001@vless@9fd4bebb
+  - 5.129.233.22@443@vless@35fcc738
+  - 43.165.172.117@443@vless@643be925
+  - 148.113.208.228@443@trojan@5dea17af
+  - 47.91.31.4@39738@vless@390ddd69
+  - 34.132.50.119@443@vless@0a24f7d7
   - 8.39.125.102@443@vless@69ea594d
-  - 156.243.244.249@443@vless@e42cdc3a
-  - 47.79.85.210@11307@vless@5f7d2796
+  - 172.66.43.27@2096@vless@a5c87b94
+  - 172.66.43.27@2096@vless@241f3b30
+  - 45.15.140.128@4443@trojan@cdbe54ad
+  - 185.106.176.150@28812@trojan@d669cf59
+  - 185.106.176.150@28812@trojan@b6447e21
+  - 152.53.200.18@8443@trojan@9da9e7e3
+  - 194.33.45.157@443@trojan@42f0ae5d
 - name: PG-YouTube
   type: load-balance
   url: https://www.youtube.com/generate_204
@@ -252,13 +401,24 @@ proxy-groups:
   proxies:
   - PG-default
   - PG-fast
+  - 84.200.77.90@2053@vless@09f6dea6
+  - 103.186.155.135@38388@ss@a02101d3
+  - 103.186.154.172@38388@ss@4ed03133
   - 222.106.183.207@12300@vless@821ed962
   - 8.217.231.146@46964@vless@d9d18bfe
-  - 59.25.212.132@18245@vless@daf0c00b
-  - 218.155.125.99@10001@vless@9fd4bebb
+  - 5.129.233.22@443@vless@35fcc738
+  - 43.165.172.117@443@vless@643be925
+  - 148.113.208.228@443@trojan@5dea17af
+  - 47.91.31.4@39738@vless@390ddd69
+  - 34.132.50.119@443@vless@0a24f7d7
   - 8.39.125.102@443@vless@69ea594d
-  - 156.243.244.249@443@vless@e42cdc3a
-  - 47.79.85.210@11307@vless@5f7d2796
+  - 172.66.43.27@2096@vless@a5c87b94
+  - 172.66.43.27@2096@vless@241f3b30
+  - 45.15.140.128@4443@trojan@cdbe54ad
+  - 185.106.176.150@28812@trojan@d669cf59
+  - 185.106.176.150@28812@trojan@b6447e21
+  - 152.53.200.18@8443@trojan@9da9e7e3
+  - 194.33.45.157@443@trojan@42f0ae5d
 - name: PG-Twitter
   type: url-test
   url: https://abs.twimg.com/favicons/twitter.2.ico
@@ -268,13 +428,24 @@ proxy-groups:
   proxies:
   - PG-default
   - PG-fast
+  - 84.200.77.90@2053@vless@09f6dea6
+  - 103.186.155.135@38388@ss@a02101d3
+  - 103.186.154.172@38388@ss@4ed03133
   - 222.106.183.207@12300@vless@821ed962
   - 8.217.231.146@46964@vless@d9d18bfe
-  - 59.25.212.132@18245@vless@daf0c00b
-  - 218.155.125.99@10001@vless@9fd4bebb
+  - 5.129.233.22@443@vless@35fcc738
+  - 43.165.172.117@443@vless@643be925
+  - 148.113.208.228@443@trojan@5dea17af
+  - 47.91.31.4@39738@vless@390ddd69
+  - 34.132.50.119@443@vless@0a24f7d7
   - 8.39.125.102@443@vless@69ea594d
-  - 156.243.244.249@443@vless@e42cdc3a
-  - 47.79.85.210@11307@vless@5f7d2796
+  - 172.66.43.27@2096@vless@a5c87b94
+  - 172.66.43.27@2096@vless@241f3b30
+  - 45.15.140.128@4443@trojan@cdbe54ad
+  - 185.106.176.150@28812@trojan@d669cf59
+  - 185.106.176.150@28812@trojan@b6447e21
+  - 152.53.200.18@8443@trojan@9da9e7e3
+  - 194.33.45.157@443@trojan@42f0ae5d
 rule-providers:
   anting:
     type: file
