@@ -44,52 +44,6 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
-- sni: Koma-YT.PAGeS.Dev
-  network: ws
-  ws-opts:
-    path: "/trTelegram\U0001F1E8\U0001F1F3+@WangCai2"
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-  type: trojan
-  password: 8r<[9'l6hAO#8ZQi
-  server: 178.156.148.4
-  port: 2053
-  PingRate: 100
-  PingAverage: 686
-  country: Germany
-  ISO: DE
-  name: 178.156.148.4:2053@trojan@DE
-  UpdateDay: 2026-05-10T07:01
-  PFirstFoundDay: 2026-05-01T01:29
-  Rank: 32767
-  RescueCount: 0
-  Alive: false
-  LastWorkDate: 2026-05-10T07:01
-  average: 2490
-  success_rate: 10
-- sni: Koma-YT.PAGeS.Dev
-  network: ws
-  ws-opts:
-    path: "/trTelegram\U0001F1E8\U0001F1F3+@WangCai2"
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-  type: trojan
-  password: 8r<[9'l6hAO#8ZQi
-  server: 45.139.77.175
-  port: 8443
-  PingRate: 100
-  PingAverage: 254
-  country: Russia
-  ISO: RU
-  name: 45.139.77.175:8443@trojan@RU
-  UpdateDay: 2026-05-10T07:01
-  PFirstFoundDay: 2026-04-30T18:23
-  Rank: 19750
-  RescueCount: 0
-  Alive: false
-  LastWorkDate: 2026-05-10T07:01
-  average: 1577
-  success_rate: 10
 - type: trojan
   server: 94.131.18.145
   port: 443
@@ -106,14 +60,14 @@ proxies:
   country: Gibraltar
   ISO: GI
   name: 94.131.18.145:443@trojan@GI
-  UpdateDay: 2026-05-10T07:01
+  UpdateDay: 2026-05-10T07:31
   PFirstFoundDay: 2026-05-07T18:22
-  Rank: 6743
+  Rank: 6585
   RescueCount: 0
   Alive: false
-  LastWorkDate: 2026-05-10T07:01
+  LastWorkDate: 2026-05-10T07:31
   average: 1682
-  success_rate: 12
+  success_rate: 10
 proxy-groups:
 - name: PG-default
   type: fallback
@@ -121,8 +75,6 @@ proxy-groups:
   interval: 200
   strategy: consistent-hashing
   proxies: &id001
-  - 178.156.148.4:2053@trojan@DE
-  - 45.139.77.175:8443@trojan@RU
   - 94.131.18.145:443@trojan@GI
 - name: PG-AnTing
   type: load-balance
@@ -136,8 +88,6 @@ proxy-groups:
   interval: 300
   strategy: round-robin
   proxies:
-  - 178.156.148.4:2053@trojan@DE
-  - 45.139.77.175:8443@trojan@RU
   - 94.131.18.145:443@trojan@GI
 rule-providers:
   anting:
