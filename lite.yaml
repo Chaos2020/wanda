@@ -236,6 +236,41 @@ proxies:
   skip-cert-verify: true
   sni: gh.01.naiun.bilibili.com
   udp: true
+- name: 155.117.198.82@41943@trojan@0da57992
+  type: trojan
+  server: 155.117.198.82
+  port: 41943
+  network: tcp
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  skip-cert-verify: true
+  sni: az.01.naiun.bilibili.com
+  udp: true
+- name: 155.117.198.83@41943@trojan@c4a343f7
+  type: trojan
+  server: 155.117.198.83
+  port: 41943
+  network: tcp
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  skip-cert-verify: true
+  sni: az.01.naiun.bilibili.com
+  udp: true
+- name: 155.117.198.83@47909@trojan@4d168860
+  type: trojan
+  server: 155.117.198.83
+  port: 47909
+  network: tcp
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  skip-cert-verify: true
+  sni: is.01.naiun.bilibili.com
+  udp: true
+- name: 155.117.198.83@46424@trojan@5b4f9f86
+  type: trojan
+  server: 155.117.198.83
+  port: 46424
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  skip-cert-verify: true
+  sni: de.01.naiun.bilibili.com
+  udp: true
 - name: 155.117.198.82@46424@trojan@bb6dadbd
   type: trojan
   server: 155.117.198.82
@@ -417,17 +452,29 @@ proxies:
   tls: false
   skip-cert-verify: true
   udp: true
-- name: v9.hdacd.com@30809@vmess@f970299e
+- name: 172.64.146.102@443@trojan@e6b57584
+  type: trojan
+  server: 172.64.146.102
+  port: 443
+  network: ws
+  password: humanity
+  skip-cert-verify: true
+  sni: www.gossipglove.com
+  ws-opts:
+    headers:
+      Host: www.gossipglove.com
+    path: /assignment
+- name: v4.hdacd.com@30804@vmess@97517f55
   type: vmess
-  server: 172.197.172.86
-  port: 30809
+  server: 172.197.169.235
+  port: 30804
   alterId: 2
   cipher: auto
   h2-opts: {}
   network: tcp
   skip-cert-verify: true
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  sni: v9.hdacd.com
+  sni: v4.hdacd.com
 proxy-groups:
 - name: PG-fast
   type: url-test
@@ -437,6 +484,10 @@ proxy-groups:
   lazy: false
   proxies:
   - 155.117.198.82@48697@trojan@ac0e433f
+  - 155.117.198.82@41943@trojan@0da57992
+  - 155.117.198.83@41943@trojan@c4a343f7
+  - 155.117.198.83@47909@trojan@4d168860
+  - 155.117.198.83@46424@trojan@5b4f9f86
   - 155.117.198.82@46424@trojan@bb6dadbd
   - 155.117.198.82@47909@trojan@0a84df29
   - 155.117.198.82@45553@trojan@563ff701
@@ -458,7 +509,8 @@ proxy-groups:
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
   - 82.198.246.214@180@vmess@2fe041f3
-  - v9.hdacd.com@30809@vmess@f970299e
+  - 172.64.146.102@443@trojan@e6b57584
+  - v4.hdacd.com@30804@vmess@97517f55
 - name: PG-default
   type: fallback
   url: https://www.google.com/generate_204
@@ -467,6 +519,10 @@ proxy-groups:
   proxies:
   - PG-fast
   - 155.117.198.82@48697@trojan@ac0e433f
+  - 155.117.198.82@41943@trojan@0da57992
+  - 155.117.198.83@41943@trojan@c4a343f7
+  - 155.117.198.83@47909@trojan@4d168860
+  - 155.117.198.83@46424@trojan@5b4f9f86
   - 155.117.198.82@46424@trojan@bb6dadbd
   - 155.117.198.82@47909@trojan@0a84df29
   - 155.117.198.82@45553@trojan@563ff701
@@ -488,7 +544,8 @@ proxy-groups:
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
   - 82.198.246.214@180@vmess@2fe041f3
-  - v9.hdacd.com@30809@vmess@f970299e
+  - 172.64.146.102@443@trojan@e6b57584
+  - v4.hdacd.com@30804@vmess@97517f55
   - PG-Maple
 - name: PG-AnTing
   type: load-balance
@@ -498,6 +555,10 @@ proxy-groups:
   strategy: round-robin
   proxies:
   - 155.117.198.82@48697@trojan@ac0e433f
+  - 155.117.198.82@41943@trojan@0da57992
+  - 155.117.198.83@41943@trojan@c4a343f7
+  - 155.117.198.83@47909@trojan@4d168860
+  - 155.117.198.83@46424@trojan@5b4f9f86
   - 155.117.198.82@46424@trojan@bb6dadbd
   - 155.117.198.82@47909@trojan@0a84df29
   - 155.117.198.82@45553@trojan@563ff701
@@ -519,7 +580,8 @@ proxy-groups:
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
   - 82.198.246.214@180@vmess@2fe041f3
-  - v9.hdacd.com@30809@vmess@f970299e
+  - 172.64.146.102@443@trojan@e6b57584
+  - v4.hdacd.com@30804@vmess@97517f55
 - name: PG-Sage
   type: load-balance
   url: http://www.eastmoney.com
@@ -528,6 +590,10 @@ proxy-groups:
   strategy: round-robin
   proxies:
   - 155.117.198.82@48697@trojan@ac0e433f
+  - 155.117.198.82@41943@trojan@0da57992
+  - 155.117.198.83@41943@trojan@c4a343f7
+  - 155.117.198.83@47909@trojan@4d168860
+  - 155.117.198.83@46424@trojan@5b4f9f86
   - 155.117.198.82@46424@trojan@bb6dadbd
   - 155.117.198.82@47909@trojan@0a84df29
   - 155.117.198.82@45553@trojan@563ff701
@@ -549,7 +615,8 @@ proxy-groups:
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
   - 82.198.246.214@180@vmess@2fe041f3
-  - v9.hdacd.com@30809@vmess@f970299e
+  - 172.64.146.102@443@trojan@e6b57584
+  - v4.hdacd.com@30804@vmess@97517f55
 - name: PG-CN
   type: load-balance
   url: https://www.sse.com.cn
@@ -558,6 +625,10 @@ proxy-groups:
   strategy: round-robin
   proxies:
   - 155.117.198.82@48697@trojan@ac0e433f
+  - 155.117.198.82@41943@trojan@0da57992
+  - 155.117.198.83@41943@trojan@c4a343f7
+  - 155.117.198.83@47909@trojan@4d168860
+  - 155.117.198.83@46424@trojan@5b4f9f86
   - 155.117.198.82@46424@trojan@bb6dadbd
   - 155.117.198.82@47909@trojan@0a84df29
   - 155.117.198.82@45553@trojan@563ff701
@@ -579,7 +650,8 @@ proxy-groups:
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
   - 82.198.246.214@180@vmess@2fe041f3
-  - v9.hdacd.com@30809@vmess@f970299e
+  - 172.64.146.102@443@trojan@e6b57584
+  - v4.hdacd.com@30804@vmess@97517f55
 - name: PG-Maple
   type: select
   proxies:
@@ -592,7 +664,12 @@ proxy-groups:
   lazy: true
   proxies:
   - 82.198.246.214@180@vmess@2fe041f3
+  - v4.hdacd.com@30804@vmess@97517f55
   - 155.117.198.82@48697@trojan@ac0e433f
+  - 155.117.198.82@41943@trojan@0da57992
+  - 155.117.198.83@41943@trojan@c4a343f7
+  - 155.117.198.83@47909@trojan@4d168860
+  - 155.117.198.83@46424@trojan@5b4f9f86
   - 155.117.198.82@46424@trojan@bb6dadbd
   - 155.117.198.82@47909@trojan@0a84df29
   - 155.117.198.82@45553@trojan@563ff701
@@ -613,7 +690,7 @@ proxy-groups:
   - 155.117.198.86@48697@trojan@832bd50a
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
-  - v9.hdacd.com@30809@vmess@f970299e
+  - 172.64.146.102@443@trojan@e6b57584
   - PG-fast
   - PG-default
 - name: PG-GitHub
@@ -624,7 +701,12 @@ proxy-groups:
   lazy: true
   proxies:
   - 82.198.246.214@180@vmess@2fe041f3
+  - v4.hdacd.com@30804@vmess@97517f55
   - 155.117.198.82@48697@trojan@ac0e433f
+  - 155.117.198.82@41943@trojan@0da57992
+  - 155.117.198.83@41943@trojan@c4a343f7
+  - 155.117.198.83@47909@trojan@4d168860
+  - 155.117.198.83@46424@trojan@5b4f9f86
   - 155.117.198.82@46424@trojan@bb6dadbd
   - 155.117.198.82@47909@trojan@0a84df29
   - 155.117.198.82@45553@trojan@563ff701
@@ -645,7 +727,7 @@ proxy-groups:
   - 155.117.198.86@48697@trojan@832bd50a
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
-  - v9.hdacd.com@30809@vmess@f970299e
+  - 172.64.146.102@443@trojan@e6b57584
   - PG-fast
   - PG-default
 - name: PG-YouTube
@@ -656,7 +738,12 @@ proxy-groups:
   strategy: round-robin
   proxies:
   - 82.198.246.214@180@vmess@2fe041f3
+  - v4.hdacd.com@30804@vmess@97517f55
   - 155.117.198.82@48697@trojan@ac0e433f
+  - 155.117.198.82@41943@trojan@0da57992
+  - 155.117.198.83@41943@trojan@c4a343f7
+  - 155.117.198.83@47909@trojan@4d168860
+  - 155.117.198.83@46424@trojan@5b4f9f86
   - 155.117.198.82@46424@trojan@bb6dadbd
   - 155.117.198.82@47909@trojan@0a84df29
   - 155.117.198.82@45553@trojan@563ff701
@@ -677,7 +764,7 @@ proxy-groups:
   - 155.117.198.86@48697@trojan@832bd50a
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
-  - v9.hdacd.com@30809@vmess@f970299e
+  - 172.64.146.102@443@trojan@e6b57584
   - PG-fast
   - PG-default
 - name: PG-Twitter
@@ -688,7 +775,12 @@ proxy-groups:
   lazy: true
   proxies:
   - 82.198.246.214@180@vmess@2fe041f3
+  - v4.hdacd.com@30804@vmess@97517f55
   - 155.117.198.82@48697@trojan@ac0e433f
+  - 155.117.198.82@41943@trojan@0da57992
+  - 155.117.198.83@41943@trojan@c4a343f7
+  - 155.117.198.83@47909@trojan@4d168860
+  - 155.117.198.83@46424@trojan@5b4f9f86
   - 155.117.198.82@46424@trojan@bb6dadbd
   - 155.117.198.82@47909@trojan@0a84df29
   - 155.117.198.82@45553@trojan@563ff701
@@ -709,7 +801,7 @@ proxy-groups:
   - 155.117.198.86@48697@trojan@832bd50a
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
-  - v9.hdacd.com@30809@vmess@f970299e
+  - 172.64.146.102@443@trojan@e6b57584
   - PG-fast
   - PG-default
 rule-providers:
