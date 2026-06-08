@@ -453,6 +453,28 @@ proxies:
   network: ws
   ws-opts:
     path: /proxy
+- name: 82.198.246.214@180@vmess@2fe041f3
+  type: vmess
+  server: 82.198.246.214
+  port: 180
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  udp: true
+- name: 172.64.146.102@443@trojan@e6b57584
+  type: trojan
+  server: 172.64.146.102
+  port: 443
+  network: ws
+  password: humanity
+  skip-cert-verify: true
+  sni: www.gossipglove.com
+  ws-opts:
+    headers:
+      Host: www.gossipglove.com
+    path: /assignment
 proxy-groups:
 - name: PG-fast
   type: url-test
@@ -487,6 +509,8 @@ proxy-groups:
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
   - 43.162.85.247@666@vless@46981959
+  - 82.198.246.214@180@vmess@2fe041f3
+  - 172.64.146.102@443@trojan@e6b57584
 - name: PG-default
   type: fallback
   url: https://www.google.com/generate_204
@@ -520,6 +544,8 @@ proxy-groups:
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
   - 43.162.85.247@666@vless@46981959
+  - 82.198.246.214@180@vmess@2fe041f3
+  - 172.64.146.102@443@trojan@e6b57584
   - PG-Maple
 - name: PG-AnTing
   type: load-balance
@@ -554,6 +580,8 @@ proxy-groups:
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
   - 43.162.85.247@666@vless@46981959
+  - 82.198.246.214@180@vmess@2fe041f3
+  - 172.64.146.102@443@trojan@e6b57584
 - name: PG-Sage
   type: load-balance
   url: http://www.eastmoney.com
@@ -587,6 +615,8 @@ proxy-groups:
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
   - 43.162.85.247@666@vless@46981959
+  - 82.198.246.214@180@vmess@2fe041f3
+  - 172.64.146.102@443@trojan@e6b57584
 - name: PG-CN
   type: load-balance
   url: https://www.sse.com.cn
@@ -620,6 +650,8 @@ proxy-groups:
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
   - 43.162.85.247@666@vless@46981959
+  - 82.198.246.214@180@vmess@2fe041f3
+  - 172.64.146.102@443@trojan@e6b57584
 - name: PG-Maple
   type: select
   proxies:
@@ -632,6 +664,7 @@ proxy-groups:
   lazy: true
   proxies:
   - 43.162.85.247@666@vless@46981959
+  - 82.198.246.214@180@vmess@2fe041f3
   - 155.117.198.82@41943@trojan@0da57992
   - 155.117.198.83@41943@trojan@c4a343f7
   - 155.117.198.82@48697@trojan@ac0e433f
@@ -657,6 +690,7 @@ proxy-groups:
   - 155.117.198.86@48697@trojan@832bd50a
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
+  - 172.64.146.102@443@trojan@e6b57584
   - PG-fast
   - PG-default
 - name: PG-GitHub
@@ -667,6 +701,7 @@ proxy-groups:
   lazy: true
   proxies:
   - 43.162.85.247@666@vless@46981959
+  - 82.198.246.214@180@vmess@2fe041f3
   - 155.117.198.82@41943@trojan@0da57992
   - 155.117.198.83@41943@trojan@c4a343f7
   - 155.117.198.82@48697@trojan@ac0e433f
@@ -692,6 +727,7 @@ proxy-groups:
   - 155.117.198.86@48697@trojan@832bd50a
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
+  - 172.64.146.102@443@trojan@e6b57584
   - PG-fast
   - PG-default
 - name: PG-YouTube
@@ -702,6 +738,7 @@ proxy-groups:
   strategy: round-robin
   proxies:
   - 43.162.85.247@666@vless@46981959
+  - 82.198.246.214@180@vmess@2fe041f3
   - 155.117.198.82@41943@trojan@0da57992
   - 155.117.198.83@41943@trojan@c4a343f7
   - 155.117.198.82@48697@trojan@ac0e433f
@@ -727,6 +764,7 @@ proxy-groups:
   - 155.117.198.86@48697@trojan@832bd50a
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
+  - 172.64.146.102@443@trojan@e6b57584
   - PG-fast
   - PG-default
 - name: PG-Twitter
@@ -737,6 +775,7 @@ proxy-groups:
   lazy: true
   proxies:
   - 43.162.85.247@666@vless@46981959
+  - 82.198.246.214@180@vmess@2fe041f3
   - 155.117.198.82@41943@trojan@0da57992
   - 155.117.198.83@41943@trojan@c4a343f7
   - 155.117.198.82@48697@trojan@ac0e433f
@@ -762,6 +801,7 @@ proxy-groups:
   - 155.117.198.86@48697@trojan@832bd50a
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
+  - 172.64.146.102@443@trojan@e6b57584
   - PG-fast
   - PG-default
 rule-providers:
