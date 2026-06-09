@@ -245,15 +245,6 @@ proxies:
   skip-cert-verify: true
   sni: az.01.naiun.bilibili.com
   udp: true
-- name: 155.117.198.83@41943@trojan@c4a343f7
-  type: trojan
-  server: 155.117.198.83
-  port: 41943
-  network: tcp
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  skip-cert-verify: true
-  sni: az.01.naiun.bilibili.com
-  udp: true
 - name: 155.117.198.83@47909@trojan@4d168860
   type: trojan
   server: 155.117.198.83
@@ -262,6 +253,15 @@ proxies:
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
   skip-cert-verify: true
   sni: is.01.naiun.bilibili.com
+  udp: true
+- name: 155.117.198.83@41943@trojan@c4a343f7
+  type: trojan
+  server: 155.117.198.83
+  port: 41943
+  network: tcp
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  skip-cert-verify: true
+  sni: az.01.naiun.bilibili.com
   udp: true
 - name: 155.117.198.83@46424@trojan@5b4f9f86
   type: trojan
@@ -452,18 +452,6 @@ proxies:
   tls: false
   skip-cert-verify: true
   udp: true
-- name: 172.64.146.102@443@trojan@e6b57584
-  type: trojan
-  server: 172.64.146.102
-  port: 443
-  network: ws
-  password: humanity
-  skip-cert-verify: true
-  sni: www.gossipglove.com
-  ws-opts:
-    headers:
-      Host: www.gossipglove.com
-    path: /assignment
 proxy-groups:
 - name: PG-fast
   type: url-test
@@ -474,8 +462,8 @@ proxy-groups:
   proxies:
   - 155.117.198.82@48697@trojan@ac0e433f
   - 155.117.198.82@41943@trojan@0da57992
-  - 155.117.198.83@41943@trojan@c4a343f7
   - 155.117.198.83@47909@trojan@4d168860
+  - 155.117.198.83@41943@trojan@c4a343f7
   - 155.117.198.83@46424@trojan@5b4f9f86
   - 155.117.198.82@47909@trojan@0a84df29
   - 155.117.198.82@45553@trojan@563ff701
@@ -498,7 +486,6 @@ proxy-groups:
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
   - 82.198.246.214@180@vmess@2fe041f3
-  - 172.64.146.102@443@trojan@e6b57584
 - name: PG-default
   type: fallback
   url: https://www.google.com/generate_204
@@ -508,8 +495,8 @@ proxy-groups:
   - PG-fast
   - 155.117.198.82@48697@trojan@ac0e433f
   - 155.117.198.82@41943@trojan@0da57992
-  - 155.117.198.83@41943@trojan@c4a343f7
   - 155.117.198.83@47909@trojan@4d168860
+  - 155.117.198.83@41943@trojan@c4a343f7
   - 155.117.198.83@46424@trojan@5b4f9f86
   - 155.117.198.82@47909@trojan@0a84df29
   - 155.117.198.82@45553@trojan@563ff701
@@ -532,7 +519,6 @@ proxy-groups:
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
   - 82.198.246.214@180@vmess@2fe041f3
-  - 172.64.146.102@443@trojan@e6b57584
   - PG-Maple
 - name: PG-AnTing
   type: load-balance
@@ -543,8 +529,8 @@ proxy-groups:
   proxies:
   - 155.117.198.82@48697@trojan@ac0e433f
   - 155.117.198.82@41943@trojan@0da57992
-  - 155.117.198.83@41943@trojan@c4a343f7
   - 155.117.198.83@47909@trojan@4d168860
+  - 155.117.198.83@41943@trojan@c4a343f7
   - 155.117.198.83@46424@trojan@5b4f9f86
   - 155.117.198.82@47909@trojan@0a84df29
   - 155.117.198.82@45553@trojan@563ff701
@@ -567,7 +553,6 @@ proxy-groups:
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
   - 82.198.246.214@180@vmess@2fe041f3
-  - 172.64.146.102@443@trojan@e6b57584
 - name: PG-Sage
   type: load-balance
   url: http://www.eastmoney.com
@@ -577,8 +562,8 @@ proxy-groups:
   proxies:
   - 155.117.198.82@48697@trojan@ac0e433f
   - 155.117.198.82@41943@trojan@0da57992
-  - 155.117.198.83@41943@trojan@c4a343f7
   - 155.117.198.83@47909@trojan@4d168860
+  - 155.117.198.83@41943@trojan@c4a343f7
   - 155.117.198.83@46424@trojan@5b4f9f86
   - 155.117.198.82@47909@trojan@0a84df29
   - 155.117.198.82@45553@trojan@563ff701
@@ -601,7 +586,6 @@ proxy-groups:
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
   - 82.198.246.214@180@vmess@2fe041f3
-  - 172.64.146.102@443@trojan@e6b57584
 - name: PG-CN
   type: load-balance
   url: https://www.sse.com.cn
@@ -611,8 +595,8 @@ proxy-groups:
   proxies:
   - 155.117.198.82@48697@trojan@ac0e433f
   - 155.117.198.82@41943@trojan@0da57992
-  - 155.117.198.83@41943@trojan@c4a343f7
   - 155.117.198.83@47909@trojan@4d168860
+  - 155.117.198.83@41943@trojan@c4a343f7
   - 155.117.198.83@46424@trojan@5b4f9f86
   - 155.117.198.82@47909@trojan@0a84df29
   - 155.117.198.82@45553@trojan@563ff701
@@ -635,7 +619,6 @@ proxy-groups:
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
   - 82.198.246.214@180@vmess@2fe041f3
-  - 172.64.146.102@443@trojan@e6b57584
 - name: PG-Maple
   type: select
   proxies:
@@ -650,8 +633,8 @@ proxy-groups:
   - 82.198.246.214@180@vmess@2fe041f3
   - 155.117.198.82@48697@trojan@ac0e433f
   - 155.117.198.82@41943@trojan@0da57992
-  - 155.117.198.83@41943@trojan@c4a343f7
   - 155.117.198.83@47909@trojan@4d168860
+  - 155.117.198.83@41943@trojan@c4a343f7
   - 155.117.198.83@46424@trojan@5b4f9f86
   - 155.117.198.82@47909@trojan@0a84df29
   - 155.117.198.82@45553@trojan@563ff701
@@ -673,7 +656,6 @@ proxy-groups:
   - 155.117.198.86@48697@trojan@832bd50a
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
-  - 172.64.146.102@443@trojan@e6b57584
   - PG-fast
   - PG-default
 - name: PG-GitHub
@@ -686,8 +668,8 @@ proxy-groups:
   - 82.198.246.214@180@vmess@2fe041f3
   - 155.117.198.82@48697@trojan@ac0e433f
   - 155.117.198.82@41943@trojan@0da57992
-  - 155.117.198.83@41943@trojan@c4a343f7
   - 155.117.198.83@47909@trojan@4d168860
+  - 155.117.198.83@41943@trojan@c4a343f7
   - 155.117.198.83@46424@trojan@5b4f9f86
   - 155.117.198.82@47909@trojan@0a84df29
   - 155.117.198.82@45553@trojan@563ff701
@@ -709,7 +691,6 @@ proxy-groups:
   - 155.117.198.86@48697@trojan@832bd50a
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
-  - 172.64.146.102@443@trojan@e6b57584
   - PG-fast
   - PG-default
 - name: PG-YouTube
@@ -722,8 +703,8 @@ proxy-groups:
   - 82.198.246.214@180@vmess@2fe041f3
   - 155.117.198.82@48697@trojan@ac0e433f
   - 155.117.198.82@41943@trojan@0da57992
-  - 155.117.198.83@41943@trojan@c4a343f7
   - 155.117.198.83@47909@trojan@4d168860
+  - 155.117.198.83@41943@trojan@c4a343f7
   - 155.117.198.83@46424@trojan@5b4f9f86
   - 155.117.198.82@47909@trojan@0a84df29
   - 155.117.198.82@45553@trojan@563ff701
@@ -745,7 +726,6 @@ proxy-groups:
   - 155.117.198.86@48697@trojan@832bd50a
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
-  - 172.64.146.102@443@trojan@e6b57584
   - PG-fast
   - PG-default
 - name: PG-Twitter
@@ -758,8 +738,8 @@ proxy-groups:
   - 82.198.246.214@180@vmess@2fe041f3
   - 155.117.198.82@48697@trojan@ac0e433f
   - 155.117.198.82@41943@trojan@0da57992
-  - 155.117.198.83@41943@trojan@c4a343f7
   - 155.117.198.83@47909@trojan@4d168860
+  - 155.117.198.83@41943@trojan@c4a343f7
   - 155.117.198.83@46424@trojan@5b4f9f86
   - 155.117.198.82@47909@trojan@0a84df29
   - 155.117.198.82@45553@trojan@563ff701
@@ -781,7 +761,6 @@ proxy-groups:
   - 155.117.198.86@48697@trojan@832bd50a
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
-  - 172.64.146.102@443@trojan@e6b57584
   - PG-fast
   - PG-default
 rule-providers:
