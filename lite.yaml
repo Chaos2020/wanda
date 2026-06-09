@@ -442,18 +442,16 @@ proxies:
   password: qwerREWQ@@
   skip-cert-verify: false
   udp: false
-- name: 172.64.146.102@443@trojan@e6b57584
-  type: trojan
-  server: 172.64.146.102
-  port: 443
-  network: ws
-  password: humanity
+- name: 82.198.246.250@180@vmess@28f563c6
+  type: vmess
+  server: 82.198.246.250
+  port: 180
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  tls: false
   skip-cert-verify: true
-  sni: www.gossipglove.com
-  ws-opts:
-    headers:
-      Host: www.gossipglove.com
-    path: /assignment
+  udp: true
 - name: 69.84.182.152@80@vless@053bbc58
   type: vless
   server: 69.84.182.152
@@ -497,7 +495,7 @@ proxy-groups:
   - 155.117.198.86@48697@trojan@832bd50a
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
-  - 172.64.146.102@443@trojan@e6b57584
+  - 82.198.246.250@180@vmess@28f563c6
   - 69.84.182.152@80@vless@053bbc58
 - name: PG-default
   type: fallback
@@ -531,7 +529,7 @@ proxy-groups:
   - 155.117.198.86@48697@trojan@832bd50a
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
-  - 172.64.146.102@443@trojan@e6b57584
+  - 82.198.246.250@180@vmess@28f563c6
   - 69.84.182.152@80@vless@053bbc58
   - PG-Maple
 - name: PG-AnTing
@@ -566,7 +564,7 @@ proxy-groups:
   - 155.117.198.86@48697@trojan@832bd50a
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
-  - 172.64.146.102@443@trojan@e6b57584
+  - 82.198.246.250@180@vmess@28f563c6
   - 69.84.182.152@80@vless@053bbc58
 - name: PG-Sage
   type: load-balance
@@ -600,7 +598,7 @@ proxy-groups:
   - 155.117.198.86@48697@trojan@832bd50a
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
-  - 172.64.146.102@443@trojan@e6b57584
+  - 82.198.246.250@180@vmess@28f563c6
   - 69.84.182.152@80@vless@053bbc58
 - name: PG-CN
   type: load-balance
@@ -634,7 +632,7 @@ proxy-groups:
   - 155.117.198.86@48697@trojan@832bd50a
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
-  - 172.64.146.102@443@trojan@e6b57584
+  - 82.198.246.250@180@vmess@28f563c6
   - 69.84.182.152@80@vless@053bbc58
 - name: PG-Maple
   type: select
@@ -647,6 +645,7 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
+  - 82.198.246.250@180@vmess@28f563c6
   - 155.117.198.82@48697@trojan@ac0e433f
   - 155.117.198.82@41943@trojan@0da57992
   - 155.117.198.83@47909@trojan@4d168860
@@ -672,7 +671,6 @@ proxy-groups:
   - 155.117.198.86@48697@trojan@832bd50a
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
-  - 172.64.146.102@443@trojan@e6b57584
   - 69.84.182.152@80@vless@053bbc58
   - PG-fast
   - PG-default
@@ -683,6 +681,7 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
+  - 82.198.246.250@180@vmess@28f563c6
   - 155.117.198.82@48697@trojan@ac0e433f
   - 155.117.198.82@41943@trojan@0da57992
   - 155.117.198.83@47909@trojan@4d168860
@@ -708,7 +707,6 @@ proxy-groups:
   - 155.117.198.86@48697@trojan@832bd50a
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
-  - 172.64.146.102@443@trojan@e6b57584
   - 69.84.182.152@80@vless@053bbc58
   - PG-fast
   - PG-default
@@ -719,6 +717,7 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
+  - 82.198.246.250@180@vmess@28f563c6
   - 155.117.198.82@48697@trojan@ac0e433f
   - 155.117.198.82@41943@trojan@0da57992
   - 155.117.198.83@47909@trojan@4d168860
@@ -744,7 +743,6 @@ proxy-groups:
   - 155.117.198.86@48697@trojan@832bd50a
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
-  - 172.64.146.102@443@trojan@e6b57584
   - 69.84.182.152@80@vless@053bbc58
   - PG-fast
   - PG-default
@@ -755,6 +753,7 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
+  - 82.198.246.250@180@vmess@28f563c6
   - 155.117.198.82@48697@trojan@ac0e433f
   - 155.117.198.82@41943@trojan@0da57992
   - 155.117.198.83@47909@trojan@4d168860
@@ -780,7 +779,6 @@ proxy-groups:
   - 155.117.198.86@48697@trojan@832bd50a
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
-  - 172.64.146.102@443@trojan@e6b57584
   - 69.84.182.152@80@vless@053bbc58
   - PG-fast
   - PG-default
