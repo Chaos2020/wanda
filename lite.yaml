@@ -235,26 +235,6 @@ proxies:
   password: qwerREWQ@@
   skip-cert-verify: false
   udp: false
-- name: 82.198.246.250@180@vmess@28f563c6
-  type: vmess
-  server: 82.198.246.250
-  port: 180
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  udp: true
-- name: 82.198.246.214@180@vmess@2fe041f3
-  type: vmess
-  server: 82.198.246.214
-  port: 180
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  udp: true
 - name: v6.hdacd.com@30806@vmess@c4d1fb0a
   type: vmess
   server: 172.197.162.55
@@ -266,9 +246,29 @@ proxies:
   skip-cert-verify: true
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
   sni: v6.hdacd.com
+- name: 82.198.246.214@180@vmess@2fe041f3
+  type: vmess
+  server: 82.198.246.214
+  port: 180
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  udp: true
+- name: 82.198.246.250@180@vmess@28f563c6
+  type: vmess
+  server: 82.198.246.250
+  port: 180
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  udp: true
 - name: v35.hdacd.com@30835@vmess@fed67c9c
   type: vmess
-  server: 172.197.171.54
+  server: 172.197.162.55
   port: 30835
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
   alterId: 2
@@ -298,7 +298,7 @@ proxies:
   sni: v24.hdacd.com
 - name: v36.hdacd.com@30836@vmess@e912117a
   type: vmess
-  server: 172.197.162.55
+  server: 172.197.171.54
   port: 30836
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
   alterId: 2
@@ -339,9 +339,9 @@ proxy-groups:
   lazy: false
   proxies:
   - 218.50.149.114@43034@ss@453aa067
-  - 82.198.246.250@180@vmess@28f563c6
-  - 82.198.246.214@180@vmess@2fe041f3
   - v6.hdacd.com@30806@vmess@c4d1fb0a
+  - 82.198.246.214@180@vmess@2fe041f3
+  - 82.198.246.250@180@vmess@28f563c6
   - v35.hdacd.com@30835@vmess@fed67c9c
   - v4.hdacd.com@30804@vmess@97517f55
   - v24.hdacd.com@30824@vmess@3b8e774e
@@ -357,9 +357,9 @@ proxy-groups:
   proxies:
   - PG-fast
   - 218.50.149.114@43034@ss@453aa067
-  - 82.198.246.250@180@vmess@28f563c6
-  - 82.198.246.214@180@vmess@2fe041f3
   - v6.hdacd.com@30806@vmess@c4d1fb0a
+  - 82.198.246.214@180@vmess@2fe041f3
+  - 82.198.246.250@180@vmess@28f563c6
   - v35.hdacd.com@30835@vmess@fed67c9c
   - v4.hdacd.com@30804@vmess@97517f55
   - v24.hdacd.com@30824@vmess@3b8e774e
@@ -376,9 +376,9 @@ proxy-groups:
   strategy: round-robin
   proxies:
   - 218.50.149.114@43034@ss@453aa067
-  - 82.198.246.250@180@vmess@28f563c6
-  - 82.198.246.214@180@vmess@2fe041f3
   - v6.hdacd.com@30806@vmess@c4d1fb0a
+  - 82.198.246.214@180@vmess@2fe041f3
+  - 82.198.246.250@180@vmess@28f563c6
   - v35.hdacd.com@30835@vmess@fed67c9c
   - v4.hdacd.com@30804@vmess@97517f55
   - v24.hdacd.com@30824@vmess@3b8e774e
@@ -394,9 +394,9 @@ proxy-groups:
   strategy: round-robin
   proxies:
   - 218.50.149.114@43034@ss@453aa067
-  - 82.198.246.250@180@vmess@28f563c6
-  - 82.198.246.214@180@vmess@2fe041f3
   - v6.hdacd.com@30806@vmess@c4d1fb0a
+  - 82.198.246.214@180@vmess@2fe041f3
+  - 82.198.246.250@180@vmess@28f563c6
   - v35.hdacd.com@30835@vmess@fed67c9c
   - v4.hdacd.com@30804@vmess@97517f55
   - v24.hdacd.com@30824@vmess@3b8e774e
@@ -424,8 +424,8 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
-  - 82.198.246.250@180@vmess@28f563c6
   - 82.198.246.214@180@vmess@2fe041f3
+  - 82.198.246.250@180@vmess@28f563c6
   - v4.hdacd.com@30804@vmess@97517f55
   - v24.hdacd.com@30824@vmess@3b8e774e
   - 218.50.149.114@43034@ss@453aa067
@@ -444,8 +444,8 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
-  - 82.198.246.250@180@vmess@28f563c6
   - 82.198.246.214@180@vmess@2fe041f3
+  - 82.198.246.250@180@vmess@28f563c6
   - v4.hdacd.com@30804@vmess@97517f55
   - v24.hdacd.com@30824@vmess@3b8e774e
   - 218.50.149.114@43034@ss@453aa067
@@ -464,8 +464,8 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
-  - 82.198.246.250@180@vmess@28f563c6
   - 82.198.246.214@180@vmess@2fe041f3
+  - 82.198.246.250@180@vmess@28f563c6
   - v4.hdacd.com@30804@vmess@97517f55
   - v24.hdacd.com@30824@vmess@3b8e774e
   - 218.50.149.114@43034@ss@453aa067
@@ -484,8 +484,8 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
-  - 82.198.246.250@180@vmess@28f563c6
   - 82.198.246.214@180@vmess@2fe041f3
+  - 82.198.246.250@180@vmess@28f563c6
   - v4.hdacd.com@30804@vmess@97517f55
   - v24.hdacd.com@30824@vmess@3b8e774e
   - 218.50.149.114@43034@ss@453aa067
