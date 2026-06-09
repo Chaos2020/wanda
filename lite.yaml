@@ -442,47 +442,6 @@ proxies:
   password: qwerREWQ@@
   skip-cert-verify: false
   udp: false
-- name: v6.hdacd.com@30806@vmess@c4d1fb0a
-  type: vmess
-  server: 172.197.160.50
-  port: 30806
-  alterId: 2
-  cipher: auto
-  h2-opts: {}
-  network: tcp
-  skip-cert-verify: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  sni: v6.hdacd.com
-- name: v35.hdacd.com@30835@vmess@fed67c9c
-  type: vmess
-  server: 172.197.160.114
-  port: 30835
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
-  udp: true
-  sni: v35.hdacd.com
-- name: v4.hdacd.com@30804@vmess@97517f55
-  type: vmess
-  server: 172.197.160.50
-  port: 30804
-  alterId: 2
-  cipher: auto
-  h2-opts: {}
-  network: tcp
-  skip-cert-verify: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  sni: v4.hdacd.com
-- name: v24.hdacd.com@30824@vmess@3b8e774e
-  type: vmess
-  server: 172.197.160.50
-  port: 30824
-  alterId: 2
-  cipher: auto
-  network: tcp
-  skip-cert-verify: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  sni: v24.hdacd.com
 - name: 82.198.246.214@180@vmess@2fe041f3
   type: vmess
   server: 82.198.246.214
@@ -493,15 +452,6 @@ proxies:
   tls: false
   skip-cert-verify: true
   udp: true
-- name: v36.hdacd.com@30836@vmess@e912117a
-  type: vmess
-  server: 172.197.160.50
-  port: 30836
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
-  udp: true
-  sni: v36.hdacd.com
 proxy-groups:
 - name: PG-fast
   type: url-test
@@ -535,12 +485,7 @@ proxy-groups:
   - 155.117.198.86@48697@trojan@832bd50a
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
-  - v6.hdacd.com@30806@vmess@c4d1fb0a
-  - v35.hdacd.com@30835@vmess@fed67c9c
-  - v4.hdacd.com@30804@vmess@97517f55
-  - v24.hdacd.com@30824@vmess@3b8e774e
   - 82.198.246.214@180@vmess@2fe041f3
-  - v36.hdacd.com@30836@vmess@e912117a
 - name: PG-default
   type: fallback
   url: https://www.google.com/generate_204
@@ -573,12 +518,7 @@ proxy-groups:
   - 155.117.198.86@48697@trojan@832bd50a
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
-  - v6.hdacd.com@30806@vmess@c4d1fb0a
-  - v35.hdacd.com@30835@vmess@fed67c9c
-  - v4.hdacd.com@30804@vmess@97517f55
-  - v24.hdacd.com@30824@vmess@3b8e774e
   - 82.198.246.214@180@vmess@2fe041f3
-  - v36.hdacd.com@30836@vmess@e912117a
   - PG-Maple
 - name: PG-AnTing
   type: load-balance
@@ -612,12 +552,7 @@ proxy-groups:
   - 155.117.198.86@48697@trojan@832bd50a
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
-  - v6.hdacd.com@30806@vmess@c4d1fb0a
-  - v35.hdacd.com@30835@vmess@fed67c9c
-  - v4.hdacd.com@30804@vmess@97517f55
-  - v24.hdacd.com@30824@vmess@3b8e774e
   - 82.198.246.214@180@vmess@2fe041f3
-  - v36.hdacd.com@30836@vmess@e912117a
 - name: PG-Sage
   type: load-balance
   url: http://www.eastmoney.com
@@ -650,12 +585,7 @@ proxy-groups:
   - 155.117.198.86@48697@trojan@832bd50a
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
-  - v6.hdacd.com@30806@vmess@c4d1fb0a
-  - v35.hdacd.com@30835@vmess@fed67c9c
-  - v4.hdacd.com@30804@vmess@97517f55
-  - v24.hdacd.com@30824@vmess@3b8e774e
   - 82.198.246.214@180@vmess@2fe041f3
-  - v36.hdacd.com@30836@vmess@e912117a
 - name: PG-CN
   type: load-balance
   url: https://www.sse.com.cn
@@ -688,12 +618,7 @@ proxy-groups:
   - 155.117.198.86@48697@trojan@832bd50a
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
-  - v6.hdacd.com@30806@vmess@c4d1fb0a
-  - v35.hdacd.com@30835@vmess@fed67c9c
-  - v4.hdacd.com@30804@vmess@97517f55
-  - v24.hdacd.com@30824@vmess@3b8e774e
   - 82.198.246.214@180@vmess@2fe041f3
-  - v36.hdacd.com@30836@vmess@e912117a
 - name: PG-Maple
   type: select
   proxies:
@@ -705,8 +630,6 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
-  - v4.hdacd.com@30804@vmess@97517f55
-  - v24.hdacd.com@30824@vmess@3b8e774e
   - 82.198.246.214@180@vmess@2fe041f3
   - 155.117.198.82@48697@trojan@ac0e433f
   - 155.117.198.82@41943@trojan@0da57992
@@ -733,9 +656,6 @@ proxy-groups:
   - 155.117.198.86@48697@trojan@832bd50a
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
-  - v6.hdacd.com@30806@vmess@c4d1fb0a
-  - v35.hdacd.com@30835@vmess@fed67c9c
-  - v36.hdacd.com@30836@vmess@e912117a
   - PG-fast
   - PG-default
 - name: PG-GitHub
@@ -745,8 +665,6 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
-  - v4.hdacd.com@30804@vmess@97517f55
-  - v24.hdacd.com@30824@vmess@3b8e774e
   - 82.198.246.214@180@vmess@2fe041f3
   - 155.117.198.82@48697@trojan@ac0e433f
   - 155.117.198.82@41943@trojan@0da57992
@@ -773,9 +691,6 @@ proxy-groups:
   - 155.117.198.86@48697@trojan@832bd50a
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
-  - v6.hdacd.com@30806@vmess@c4d1fb0a
-  - v35.hdacd.com@30835@vmess@fed67c9c
-  - v36.hdacd.com@30836@vmess@e912117a
   - PG-fast
   - PG-default
 - name: PG-YouTube
@@ -785,8 +700,6 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
-  - v4.hdacd.com@30804@vmess@97517f55
-  - v24.hdacd.com@30824@vmess@3b8e774e
   - 82.198.246.214@180@vmess@2fe041f3
   - 155.117.198.82@48697@trojan@ac0e433f
   - 155.117.198.82@41943@trojan@0da57992
@@ -813,9 +726,6 @@ proxy-groups:
   - 155.117.198.86@48697@trojan@832bd50a
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
-  - v6.hdacd.com@30806@vmess@c4d1fb0a
-  - v35.hdacd.com@30835@vmess@fed67c9c
-  - v36.hdacd.com@30836@vmess@e912117a
   - PG-fast
   - PG-default
 - name: PG-Twitter
@@ -825,8 +735,6 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
-  - v4.hdacd.com@30804@vmess@97517f55
-  - v24.hdacd.com@30824@vmess@3b8e774e
   - 82.198.246.214@180@vmess@2fe041f3
   - 155.117.198.82@48697@trojan@ac0e433f
   - 155.117.198.82@41943@trojan@0da57992
@@ -853,9 +761,6 @@ proxy-groups:
   - 155.117.198.86@48697@trojan@832bd50a
   - 155.117.198.86@41943@trojan@3ff3f8cf
   - 218.50.149.114@43034@ss@453aa067
-  - v6.hdacd.com@30806@vmess@c4d1fb0a
-  - v35.hdacd.com@30835@vmess@fed67c9c
-  - v36.hdacd.com@30836@vmess@e912117a
   - PG-fast
   - PG-default
 rule-providers:
