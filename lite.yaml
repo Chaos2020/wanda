@@ -245,29 +245,14 @@ proxies:
   tls: false
   skip-cert-verify: true
   udp: true
-- name: 172.64.146.102@443@trojan@e6b57584
-  type: trojan
-  server: 172.64.146.102
-  port: 443
-  network: ws
-  password: humanity
-  skip-cert-verify: true
-  sni: www.gossipglove.com
-  ws-opts:
-    headers:
-      Host: www.gossipglove.com
-    path: /assignment
-- name: v6.hdacd.com@30806@vmess@c4d1fb0a
+- name: 103.182.97.12@30809@vmess@a042f620
   type: vmess
-  server: 172.197.171.54
-  port: 30806
+  server: 103.182.97.12
+  port: 30809
   alterId: 2
   cipher: auto
-  h2-opts: {}
-  network: tcp
-  skip-cert-verify: true
+  tls: false
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  sni: v6.hdacd.com
 proxy-groups:
 - name: PG-fast
   type: url-test
@@ -278,8 +263,7 @@ proxy-groups:
   proxies:
   - 218.50.149.114@43034@ss@453aa067
   - 82.198.246.214@180@vmess@2fe041f3
-  - 172.64.146.102@443@trojan@e6b57584
-  - v6.hdacd.com@30806@vmess@c4d1fb0a
+  - 103.182.97.12@30809@vmess@a042f620
 - name: PG-default
   type: fallback
   url: https://www.google.com/generate_204
@@ -289,8 +273,7 @@ proxy-groups:
   - PG-fast
   - 218.50.149.114@43034@ss@453aa067
   - 82.198.246.214@180@vmess@2fe041f3
-  - 172.64.146.102@443@trojan@e6b57584
-  - v6.hdacd.com@30806@vmess@c4d1fb0a
+  - 103.182.97.12@30809@vmess@a042f620
   - PG-Maple
 - name: PG-AnTing
   type: load-balance
@@ -301,8 +284,7 @@ proxy-groups:
   proxies:
   - 218.50.149.114@43034@ss@453aa067
   - 82.198.246.214@180@vmess@2fe041f3
-  - 172.64.146.102@443@trojan@e6b57584
-  - v6.hdacd.com@30806@vmess@c4d1fb0a
+  - 103.182.97.12@30809@vmess@a042f620
 - name: PG-Sage
   type: load-balance
   url: http://www.eastmoney.com
@@ -312,8 +294,7 @@ proxy-groups:
   proxies:
   - 218.50.149.114@43034@ss@453aa067
   - 82.198.246.214@180@vmess@2fe041f3
-  - 172.64.146.102@443@trojan@e6b57584
-  - v6.hdacd.com@30806@vmess@c4d1fb0a
+  - 103.182.97.12@30809@vmess@a042f620
 - name: PG-CN
   type: load-balance
   url: https://www.sse.com.cn
@@ -321,10 +302,7 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
-  - 218.50.149.114@43034@ss@453aa067
-  - 82.198.246.214@180@vmess@2fe041f3
-  - 172.64.146.102@443@trojan@e6b57584
-  - v6.hdacd.com@30806@vmess@c4d1fb0a
+  - 103.182.97.12@30809@vmess@a042f620
 - name: PG-Maple
   type: select
   proxies:
@@ -338,8 +316,7 @@ proxy-groups:
   proxies:
   - 82.198.246.214@180@vmess@2fe041f3
   - 218.50.149.114@43034@ss@453aa067
-  - 172.64.146.102@443@trojan@e6b57584
-  - v6.hdacd.com@30806@vmess@c4d1fb0a
+  - 103.182.97.12@30809@vmess@a042f620
   - PG-fast
   - PG-default
 - name: PG-GitHub
@@ -351,8 +328,7 @@ proxy-groups:
   proxies:
   - 82.198.246.214@180@vmess@2fe041f3
   - 218.50.149.114@43034@ss@453aa067
-  - 172.64.146.102@443@trojan@e6b57584
-  - v6.hdacd.com@30806@vmess@c4d1fb0a
+  - 103.182.97.12@30809@vmess@a042f620
   - PG-fast
   - PG-default
 - name: PG-YouTube
@@ -364,8 +340,7 @@ proxy-groups:
   proxies:
   - 82.198.246.214@180@vmess@2fe041f3
   - 218.50.149.114@43034@ss@453aa067
-  - 172.64.146.102@443@trojan@e6b57584
-  - v6.hdacd.com@30806@vmess@c4d1fb0a
+  - 103.182.97.12@30809@vmess@a042f620
   - PG-fast
   - PG-default
 - name: PG-Twitter
@@ -377,8 +352,7 @@ proxy-groups:
   proxies:
   - 82.198.246.214@180@vmess@2fe041f3
   - 218.50.149.114@43034@ss@453aa067
-  - 172.64.146.102@443@trojan@e6b57584
-  - v6.hdacd.com@30806@vmess@c4d1fb0a
+  - 103.182.97.12@30809@vmess@a042f620
   - PG-fast
   - PG-default
 rule-providers:
