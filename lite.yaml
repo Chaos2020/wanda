@@ -227,15 +227,39 @@ proxies:
     headers:
       Host: aflzzul.meiquankongjian.com
   name: aflzzul.meiquankongjian.com:52513@vmess@CN
-- name: v35.hdacd.com@30835@vmess@fed67c9c
+- name: 172.64.146.102@443@trojan@e6b57584
+  type: trojan
+  server: 172.64.146.102
+  port: 443
+  network: ws
+  password: humanity
+  skip-cert-verify: true
+  sni: www.gossipglove.com
+  ws-opts:
+    headers:
+      Host: www.gossipglove.com
+    path: /assignment
+- name: v6.hdacd.com@30806@vmess@c4d1fb0a
   type: vmess
-  server: 172.197.169.172
-  port: 30835
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  server: 85.211.255.137
+  port: 30806
   alterId: 2
   cipher: auto
-  udp: true
-  sni: v35.hdacd.com
+  h2-opts: {}
+  network: tcp
+  skip-cert-verify: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  sni: v6.hdacd.com
+- name: v24.hdacd.com@30824@vmess@3b8e774e
+  type: vmess
+  server: 85.211.255.137
+  port: 30824
+  alterId: 2
+  cipher: auto
+  network: tcp
+  skip-cert-verify: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  sni: v24.hdacd.com
 - name: 211.201.169.70@8314@ss@76cf9f6d
   type: ss
   server: 211.201.169.70
@@ -252,7 +276,9 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - v35.hdacd.com@30835@vmess@fed67c9c
+  - 172.64.146.102@443@trojan@e6b57584
+  - v6.hdacd.com@30806@vmess@c4d1fb0a
+  - v24.hdacd.com@30824@vmess@3b8e774e
   - 211.201.169.70@8314@ss@76cf9f6d
 - name: PG-default
   type: fallback
@@ -261,7 +287,9 @@ proxy-groups:
   lazy: true
   proxies:
   - PG-fast
-  - v35.hdacd.com@30835@vmess@fed67c9c
+  - 172.64.146.102@443@trojan@e6b57584
+  - v6.hdacd.com@30806@vmess@c4d1fb0a
+  - v24.hdacd.com@30824@vmess@3b8e774e
   - 211.201.169.70@8314@ss@76cf9f6d
   - PG-Maple
 - name: PG-AnTing
@@ -271,7 +299,9 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
-  - v35.hdacd.com@30835@vmess@fed67c9c
+  - 172.64.146.102@443@trojan@e6b57584
+  - v6.hdacd.com@30806@vmess@c4d1fb0a
+  - v24.hdacd.com@30824@vmess@3b8e774e
   - 211.201.169.70@8314@ss@76cf9f6d
 - name: PG-Sage
   type: load-balance
@@ -280,7 +310,9 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
-  - v35.hdacd.com@30835@vmess@fed67c9c
+  - 172.64.146.102@443@trojan@e6b57584
+  - v6.hdacd.com@30806@vmess@c4d1fb0a
+  - v24.hdacd.com@30824@vmess@3b8e774e
   - 211.201.169.70@8314@ss@76cf9f6d
 - name: PG-CN
   type: load-balance
@@ -289,7 +321,9 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
-  - v35.hdacd.com@30835@vmess@fed67c9c
+  - 172.64.146.102@443@trojan@e6b57584
+  - v6.hdacd.com@30806@vmess@c4d1fb0a
+  - v24.hdacd.com@30824@vmess@3b8e774e
   - 211.201.169.70@8314@ss@76cf9f6d
 - name: PG-Maple
   type: select
@@ -302,7 +336,9 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
-  - v35.hdacd.com@30835@vmess@fed67c9c
+  - v24.hdacd.com@30824@vmess@3b8e774e
+  - 172.64.146.102@443@trojan@e6b57584
+  - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 211.201.169.70@8314@ss@76cf9f6d
   - PG-fast
   - PG-default
@@ -313,7 +349,9 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
-  - v35.hdacd.com@30835@vmess@fed67c9c
+  - v24.hdacd.com@30824@vmess@3b8e774e
+  - 172.64.146.102@443@trojan@e6b57584
+  - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 211.201.169.70@8314@ss@76cf9f6d
   - PG-fast
   - PG-default
@@ -324,7 +362,9 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
-  - v35.hdacd.com@30835@vmess@fed67c9c
+  - v24.hdacd.com@30824@vmess@3b8e774e
+  - 172.64.146.102@443@trojan@e6b57584
+  - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 211.201.169.70@8314@ss@76cf9f6d
   - PG-fast
   - PG-default
@@ -335,7 +375,9 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
-  - v35.hdacd.com@30835@vmess@fed67c9c
+  - v24.hdacd.com@30824@vmess@3b8e774e
+  - 172.64.146.102@443@trojan@e6b57584
+  - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 211.201.169.70@8314@ss@76cf9f6d
   - PG-fast
   - PG-default
