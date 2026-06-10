@@ -247,9 +247,21 @@ proxies:
   tls: false
   skip-cert-verify: true
   udp: true
+- name: 172.64.146.102@443@trojan@e6b57584
+  type: trojan
+  server: 172.64.146.102
+  port: 443
+  network: ws
+  password: humanity
+  skip-cert-verify: true
+  sni: www.gossipglove.com
+  ws-opts:
+    headers:
+      Host: www.gossipglove.com
+    path: /assignment
 - name: v6.hdacd.com@30806@vmess@c4d1fb0a
   type: vmess
-  server: 172.197.169.172
+  server: 70.153.148.235
   port: 30806
   alterId: 2
   cipher: auto
@@ -260,13 +272,34 @@ proxies:
   sni: v6.hdacd.com
 - name: v35.hdacd.com@30835@vmess@fed67c9c
   type: vmess
-  server: 70.153.148.235
+  server: 172.197.169.172
   port: 30835
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
   alterId: 2
   cipher: auto
   udp: true
   sni: v35.hdacd.com
+- name: v4.hdacd.com@30804@vmess@97517f55
+  type: vmess
+  server: 70.153.148.235
+  port: 30804
+  alterId: 2
+  cipher: auto
+  h2-opts: {}
+  network: tcp
+  skip-cert-verify: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  sni: v4.hdacd.com
+- name: v11.zgtfqs.click@30811@vmess@c468a80e
+  type: vmess
+  server: 218.173.205.108
+  port: 30811
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  network: tcp
+  udp: true
+  sni: v11.zgtfqs.click
 - name: v36.hdacd.com@30836@vmess@e912117a
   type: vmess
   server: 70.153.148.235
@@ -276,6 +309,22 @@ proxies:
   cipher: auto
   udp: true
   sni: v36.hdacd.com
+- name: 211.201.169.70@8314@ss@76cf9f6d
+  type: ss
+  server: 211.201.169.70
+  port: 8314
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
+  skip-cert-verify: false
+  udp: false
+- name: 103.182.97.12@30809@vmess@a042f620
+  type: vmess
+  server: 103.182.97.12
+  port: 30809
+  alterId: 2
+  cipher: auto
+  tls: false
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 proxy-groups:
 - name: PG-fast
   type: url-test
@@ -286,9 +335,14 @@ proxy-groups:
   proxies:
   - 82.198.246.214@180@vmess@2fe041f3
   - 82.198.246.250@180@vmess@28f563c6
+  - 172.64.146.102@443@trojan@e6b57584
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - v35.hdacd.com@30835@vmess@fed67c9c
+  - v4.hdacd.com@30804@vmess@97517f55
+  - v11.zgtfqs.click@30811@vmess@c468a80e
   - v36.hdacd.com@30836@vmess@e912117a
+  - 211.201.169.70@8314@ss@76cf9f6d
+  - 103.182.97.12@30809@vmess@a042f620
 - name: PG-default
   type: fallback
   url: https://www.google.com/generate_204
@@ -298,9 +352,14 @@ proxy-groups:
   - PG-fast
   - 82.198.246.214@180@vmess@2fe041f3
   - 82.198.246.250@180@vmess@28f563c6
+  - 172.64.146.102@443@trojan@e6b57584
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - v35.hdacd.com@30835@vmess@fed67c9c
+  - v4.hdacd.com@30804@vmess@97517f55
+  - v11.zgtfqs.click@30811@vmess@c468a80e
   - v36.hdacd.com@30836@vmess@e912117a
+  - 211.201.169.70@8314@ss@76cf9f6d
+  - 103.182.97.12@30809@vmess@a042f620
   - PG-Maple
 - name: PG-AnTing
   type: load-balance
@@ -311,9 +370,14 @@ proxy-groups:
   proxies:
   - 82.198.246.214@180@vmess@2fe041f3
   - 82.198.246.250@180@vmess@28f563c6
+  - 172.64.146.102@443@trojan@e6b57584
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - v35.hdacd.com@30835@vmess@fed67c9c
+  - v4.hdacd.com@30804@vmess@97517f55
+  - v11.zgtfqs.click@30811@vmess@c468a80e
   - v36.hdacd.com@30836@vmess@e912117a
+  - 211.201.169.70@8314@ss@76cf9f6d
+  - 103.182.97.12@30809@vmess@a042f620
 - name: PG-Sage
   type: load-balance
   url: http://www.eastmoney.com
@@ -323,9 +387,14 @@ proxy-groups:
   proxies:
   - 82.198.246.214@180@vmess@2fe041f3
   - 82.198.246.250@180@vmess@28f563c6
+  - 172.64.146.102@443@trojan@e6b57584
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - v35.hdacd.com@30835@vmess@fed67c9c
+  - v4.hdacd.com@30804@vmess@97517f55
+  - v11.zgtfqs.click@30811@vmess@c468a80e
   - v36.hdacd.com@30836@vmess@e912117a
+  - 211.201.169.70@8314@ss@76cf9f6d
+  - 103.182.97.12@30809@vmess@a042f620
 - name: PG-CN
   type: load-balance
   url: https://www.sse.com.cn
@@ -333,11 +402,7 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
-  - 82.198.246.214@180@vmess@2fe041f3
-  - 82.198.246.250@180@vmess@28f563c6
-  - v6.hdacd.com@30806@vmess@c4d1fb0a
-  - v35.hdacd.com@30835@vmess@fed67c9c
-  - v36.hdacd.com@30836@vmess@e912117a
+  - 103.182.97.12@30809@vmess@a042f620
 - name: PG-Maple
   type: select
   proxies:
@@ -351,9 +416,14 @@ proxy-groups:
   proxies:
   - 82.198.246.214@180@vmess@2fe041f3
   - 82.198.246.250@180@vmess@28f563c6
+  - v4.hdacd.com@30804@vmess@97517f55
+  - 172.64.146.102@443@trojan@e6b57584
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - v35.hdacd.com@30835@vmess@fed67c9c
+  - v11.zgtfqs.click@30811@vmess@c468a80e
   - v36.hdacd.com@30836@vmess@e912117a
+  - 211.201.169.70@8314@ss@76cf9f6d
+  - 103.182.97.12@30809@vmess@a042f620
   - PG-fast
   - PG-default
 - name: PG-GitHub
@@ -365,9 +435,14 @@ proxy-groups:
   proxies:
   - 82.198.246.214@180@vmess@2fe041f3
   - 82.198.246.250@180@vmess@28f563c6
+  - v4.hdacd.com@30804@vmess@97517f55
+  - 172.64.146.102@443@trojan@e6b57584
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - v35.hdacd.com@30835@vmess@fed67c9c
+  - v11.zgtfqs.click@30811@vmess@c468a80e
   - v36.hdacd.com@30836@vmess@e912117a
+  - 211.201.169.70@8314@ss@76cf9f6d
+  - 103.182.97.12@30809@vmess@a042f620
   - PG-fast
   - PG-default
 - name: PG-YouTube
@@ -379,9 +454,14 @@ proxy-groups:
   proxies:
   - 82.198.246.214@180@vmess@2fe041f3
   - 82.198.246.250@180@vmess@28f563c6
+  - v4.hdacd.com@30804@vmess@97517f55
+  - 172.64.146.102@443@trojan@e6b57584
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - v35.hdacd.com@30835@vmess@fed67c9c
+  - v11.zgtfqs.click@30811@vmess@c468a80e
   - v36.hdacd.com@30836@vmess@e912117a
+  - 211.201.169.70@8314@ss@76cf9f6d
+  - 103.182.97.12@30809@vmess@a042f620
   - PG-fast
   - PG-default
 - name: PG-Twitter
@@ -393,9 +473,14 @@ proxy-groups:
   proxies:
   - 82.198.246.214@180@vmess@2fe041f3
   - 82.198.246.250@180@vmess@28f563c6
+  - v4.hdacd.com@30804@vmess@97517f55
+  - 172.64.146.102@443@trojan@e6b57584
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - v35.hdacd.com@30835@vmess@fed67c9c
+  - v11.zgtfqs.click@30811@vmess@c468a80e
   - v36.hdacd.com@30836@vmess@e912117a
+  - 211.201.169.70@8314@ss@76cf9f6d
+  - 103.182.97.12@30809@vmess@a042f620
   - PG-fast
   - PG-default
 rule-providers:
