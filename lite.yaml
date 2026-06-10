@@ -227,38 +227,6 @@ proxies:
     headers:
       Host: aflzzul.meiquankongjian.com
   name: aflzzul.meiquankongjian.com:52513@vmess@CN
-- name: 82.198.246.214@180@vmess@2fe041f3
-  type: vmess
-  server: 82.198.246.214
-  port: 180
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  udp: true
-- name: 172.64.146.102@443@trojan@e6b57584
-  type: trojan
-  server: 172.64.146.102
-  port: 443
-  network: ws
-  password: humanity
-  skip-cert-verify: true
-  sni: www.gossipglove.com
-  ws-opts:
-    headers:
-      Host: www.gossipglove.com
-    path: /assignment
-- name: 82.198.246.250@180@vmess@28f563c6
-  type: vmess
-  server: 82.198.246.250
-  port: 180
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  udp: true
 - name: 211.201.169.70@8314@ss@76cf9f6d
   type: ss
   server: 211.201.169.70
@@ -275,9 +243,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 82.198.246.214@180@vmess@2fe041f3
-  - 172.64.146.102@443@trojan@e6b57584
-  - 82.198.246.250@180@vmess@28f563c6
   - 211.201.169.70@8314@ss@76cf9f6d
 - name: PG-default
   type: fallback
@@ -286,9 +251,6 @@ proxy-groups:
   lazy: true
   proxies:
   - PG-fast
-  - 82.198.246.214@180@vmess@2fe041f3
-  - 172.64.146.102@443@trojan@e6b57584
-  - 82.198.246.250@180@vmess@28f563c6
   - 211.201.169.70@8314@ss@76cf9f6d
   - PG-Maple
 - name: PG-AnTing
@@ -298,9 +260,6 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
-  - 82.198.246.214@180@vmess@2fe041f3
-  - 172.64.146.102@443@trojan@e6b57584
-  - 82.198.246.250@180@vmess@28f563c6
   - 211.201.169.70@8314@ss@76cf9f6d
 - name: PG-Sage
   type: load-balance
@@ -309,9 +268,6 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
-  - 82.198.246.214@180@vmess@2fe041f3
-  - 172.64.146.102@443@trojan@e6b57584
-  - 82.198.246.250@180@vmess@28f563c6
   - 211.201.169.70@8314@ss@76cf9f6d
 - name: PG-CN
   type: load-balance
@@ -320,9 +276,6 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
-  - 82.198.246.214@180@vmess@2fe041f3
-  - 172.64.146.102@443@trojan@e6b57584
-  - 82.198.246.250@180@vmess@28f563c6
   - 211.201.169.70@8314@ss@76cf9f6d
 - name: PG-Maple
   type: select
@@ -335,9 +288,6 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
-  - 82.198.246.214@180@vmess@2fe041f3
-  - 82.198.246.250@180@vmess@28f563c6
-  - 172.64.146.102@443@trojan@e6b57584
   - 211.201.169.70@8314@ss@76cf9f6d
   - PG-fast
   - PG-default
@@ -348,9 +298,6 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
-  - 82.198.246.214@180@vmess@2fe041f3
-  - 82.198.246.250@180@vmess@28f563c6
-  - 172.64.146.102@443@trojan@e6b57584
   - 211.201.169.70@8314@ss@76cf9f6d
   - PG-fast
   - PG-default
@@ -361,9 +308,6 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
-  - 82.198.246.214@180@vmess@2fe041f3
-  - 82.198.246.250@180@vmess@28f563c6
-  - 172.64.146.102@443@trojan@e6b57584
   - 211.201.169.70@8314@ss@76cf9f6d
   - PG-fast
   - PG-default
@@ -374,9 +318,6 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
-  - 82.198.246.214@180@vmess@2fe041f3
-  - 82.198.246.250@180@vmess@28f563c6
-  - 172.64.146.102@443@trojan@e6b57584
   - 211.201.169.70@8314@ss@76cf9f6d
   - PG-fast
   - PG-default
