@@ -227,31 +227,9 @@ proxies:
     headers:
       Host: aflzzul.meiquankongjian.com
   name: aflzzul.meiquankongjian.com:52513@vmess@CN
-- name: 172.64.146.102@443@trojan@e6b57584
-  type: trojan
-  server: 172.64.146.102
-  port: 443
-  network: ws
-  password: humanity
-  skip-cert-verify: true
-  sni: www.gossipglove.com
-  ws-opts:
-    headers:
-      Host: www.gossipglove.com
-    path: /assignment
 - name: 82.198.246.214@180@vmess@2fe041f3
   type: vmess
   server: 82.198.246.214
-  port: 180
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  udp: true
-- name: 82.198.246.250@180@vmess@28f563c6
-  type: vmess
-  server: 82.198.246.250
   port: 180
   uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
   alterId: 0
@@ -267,14 +245,6 @@ proxies:
   password: qwerREWQ@@
   skip-cert-verify: false
   udp: false
-- name: 103.182.97.12@30809@vmess@a042f620
-  type: vmess
-  server: 103.182.97.12
-  port: 30809
-  alterId: 2
-  cipher: auto
-  tls: false
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - name: 42.194.222.222@4201@vless@76d2914a
   type: vless
   server: 42.194.222.222
@@ -291,11 +261,8 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 172.64.146.102@443@trojan@e6b57584
   - 82.198.246.214@180@vmess@2fe041f3
-  - 82.198.246.250@180@vmess@28f563c6
   - 211.201.169.70@8314@ss@76cf9f6d
-  - 103.182.97.12@30809@vmess@a042f620
   - 42.194.222.222@4201@vless@76d2914a
 - name: PG-default
   type: fallback
@@ -304,11 +271,8 @@ proxy-groups:
   lazy: true
   proxies:
   - PG-fast
-  - 172.64.146.102@443@trojan@e6b57584
   - 82.198.246.214@180@vmess@2fe041f3
-  - 82.198.246.250@180@vmess@28f563c6
   - 211.201.169.70@8314@ss@76cf9f6d
-  - 103.182.97.12@30809@vmess@a042f620
   - 42.194.222.222@4201@vless@76d2914a
   - PG-Maple
 - name: PG-AnTing
@@ -318,11 +282,8 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
-  - 172.64.146.102@443@trojan@e6b57584
   - 82.198.246.214@180@vmess@2fe041f3
-  - 82.198.246.250@180@vmess@28f563c6
   - 211.201.169.70@8314@ss@76cf9f6d
-  - 103.182.97.12@30809@vmess@a042f620
   - 42.194.222.222@4201@vless@76d2914a
 - name: PG-Sage
   type: load-balance
@@ -331,11 +292,8 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
-  - 172.64.146.102@443@trojan@e6b57584
   - 82.198.246.214@180@vmess@2fe041f3
-  - 82.198.246.250@180@vmess@28f563c6
   - 211.201.169.70@8314@ss@76cf9f6d
-  - 103.182.97.12@30809@vmess@a042f620
   - 42.194.222.222@4201@vless@76d2914a
 - name: PG-CN
   type: load-balance
@@ -344,7 +302,9 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
-  - 103.182.97.12@30809@vmess@a042f620
+  - 82.198.246.214@180@vmess@2fe041f3
+  - 211.201.169.70@8314@ss@76cf9f6d
+  - 42.194.222.222@4201@vless@76d2914a
 - name: PG-Maple
   type: select
   proxies:
@@ -357,10 +317,7 @@ proxy-groups:
   lazy: true
   proxies:
   - 82.198.246.214@180@vmess@2fe041f3
-  - 82.198.246.250@180@vmess@28f563c6
-  - 172.64.146.102@443@trojan@e6b57584
   - 211.201.169.70@8314@ss@76cf9f6d
-  - 103.182.97.12@30809@vmess@a042f620
   - 42.194.222.222@4201@vless@76d2914a
   - PG-fast
   - PG-default
@@ -372,10 +329,7 @@ proxy-groups:
   lazy: true
   proxies:
   - 82.198.246.214@180@vmess@2fe041f3
-  - 82.198.246.250@180@vmess@28f563c6
-  - 172.64.146.102@443@trojan@e6b57584
   - 211.201.169.70@8314@ss@76cf9f6d
-  - 103.182.97.12@30809@vmess@a042f620
   - 42.194.222.222@4201@vless@76d2914a
   - PG-fast
   - PG-default
@@ -387,10 +341,7 @@ proxy-groups:
   strategy: round-robin
   proxies:
   - 82.198.246.214@180@vmess@2fe041f3
-  - 82.198.246.250@180@vmess@28f563c6
-  - 172.64.146.102@443@trojan@e6b57584
   - 211.201.169.70@8314@ss@76cf9f6d
-  - 103.182.97.12@30809@vmess@a042f620
   - 42.194.222.222@4201@vless@76d2914a
   - PG-fast
   - PG-default
@@ -402,10 +353,7 @@ proxy-groups:
   lazy: true
   proxies:
   - 82.198.246.214@180@vmess@2fe041f3
-  - 82.198.246.250@180@vmess@28f563c6
-  - 172.64.146.102@443@trojan@e6b57584
   - 211.201.169.70@8314@ss@76cf9f6d
-  - 103.182.97.12@30809@vmess@a042f620
   - 42.194.222.222@4201@vless@76d2914a
   - PG-fast
   - PG-default
