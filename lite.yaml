@@ -235,14 +235,6 @@ proxies:
   password: qwerREWQ@@
   skip-cert-verify: false
   udp: false
-- name: 42.194.222.222@4201@vless@76d2914a
-  type: vless
-  server: 42.194.222.222
-  port: 4201
-  network: tcp
-  skip-cert-verify: false
-  udp: true
-  uuid: 4ce3835a-c01d-4ffe-b8cf-774f6d7f2abd
 proxy-groups:
 - name: PG-fast
   type: url-test
@@ -252,7 +244,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 211.201.169.70@8314@ss@76cf9f6d
-  - 42.194.222.222@4201@vless@76d2914a
 - name: PG-default
   type: fallback
   url: https://www.google.com/generate_204
@@ -261,7 +252,6 @@ proxy-groups:
   proxies:
   - PG-fast
   - 211.201.169.70@8314@ss@76cf9f6d
-  - 42.194.222.222@4201@vless@76d2914a
   - PG-Maple
 - name: PG-AnTing
   type: load-balance
@@ -271,7 +261,6 @@ proxy-groups:
   strategy: round-robin
   proxies:
   - 211.201.169.70@8314@ss@76cf9f6d
-  - 42.194.222.222@4201@vless@76d2914a
 - name: PG-Sage
   type: load-balance
   url: http://www.eastmoney.com
@@ -280,7 +269,6 @@ proxy-groups:
   strategy: round-robin
   proxies:
   - 211.201.169.70@8314@ss@76cf9f6d
-  - 42.194.222.222@4201@vless@76d2914a
 - name: PG-CN
   type: load-balance
   url: https://www.sse.com.cn
@@ -289,7 +277,6 @@ proxy-groups:
   strategy: round-robin
   proxies:
   - 211.201.169.70@8314@ss@76cf9f6d
-  - 42.194.222.222@4201@vless@76d2914a
 - name: PG-Maple
   type: select
   proxies:
@@ -302,7 +289,6 @@ proxy-groups:
   lazy: true
   proxies:
   - 211.201.169.70@8314@ss@76cf9f6d
-  - 42.194.222.222@4201@vless@76d2914a
   - PG-fast
   - PG-default
 - name: PG-GitHub
@@ -313,7 +299,6 @@ proxy-groups:
   lazy: true
   proxies:
   - 211.201.169.70@8314@ss@76cf9f6d
-  - 42.194.222.222@4201@vless@76d2914a
   - PG-fast
   - PG-default
 - name: PG-YouTube
@@ -324,7 +309,6 @@ proxy-groups:
   strategy: round-robin
   proxies:
   - 211.201.169.70@8314@ss@76cf9f6d
-  - 42.194.222.222@4201@vless@76d2914a
   - PG-fast
   - PG-default
 - name: PG-Twitter
@@ -335,7 +319,6 @@ proxy-groups:
   lazy: true
   proxies:
   - 211.201.169.70@8314@ss@76cf9f6d
-  - 42.194.222.222@4201@vless@76d2914a
   - PG-fast
   - PG-default
 rule-providers:
