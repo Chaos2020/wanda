@@ -227,23 +227,13 @@ proxies:
     headers:
       Host: aflzzul.meiquankongjian.com
   name: aflzzul.meiquankongjian.com:52513@vmess@CN
-- name: v4.hdacd.com@30804@vmess@97517f55
-  type: vmess
-  server: 34.146.138.59
-  port: 30804
-  alterId: 2
-  cipher: auto
-  h2-opts: {}
-  network: tcp
-  skip-cert-verify: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  sni: v4.hdacd.com
-- name: 103.182.97.12@30824@vmess@6b6fad15
+- name: 103.182.97.12@30809@vmess@a042f620
   type: vmess
   server: 103.182.97.12
-  port: 30824
+  port: 30809
   alterId: 2
   cipher: auto
+  tls: false
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 proxy-groups:
 - name: PG-fast
@@ -253,8 +243,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - v4.hdacd.com@30804@vmess@97517f55
-  - 103.182.97.12@30824@vmess@6b6fad15
+  - 103.182.97.12@30809@vmess@a042f620
 - name: PG-default
   type: fallback
   url: https://www.google.com/generate_204
@@ -262,8 +251,7 @@ proxy-groups:
   lazy: true
   proxies:
   - PG-fast
-  - v4.hdacd.com@30804@vmess@97517f55
-  - 103.182.97.12@30824@vmess@6b6fad15
+  - 103.182.97.12@30809@vmess@a042f620
   - PG-Maple
 - name: PG-AnTing
   type: load-balance
@@ -272,8 +260,7 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
-  - v4.hdacd.com@30804@vmess@97517f55
-  - 103.182.97.12@30824@vmess@6b6fad15
+  - 103.182.97.12@30809@vmess@a042f620
 - name: PG-Sage
   type: load-balance
   url: http://www.eastmoney.com
@@ -281,8 +268,7 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
-  - v4.hdacd.com@30804@vmess@97517f55
-  - 103.182.97.12@30824@vmess@6b6fad15
+  - 103.182.97.12@30809@vmess@a042f620
 - name: PG-CN
   type: load-balance
   url: https://www.sse.com.cn
@@ -290,7 +276,7 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
-  - 103.182.97.12@30824@vmess@6b6fad15
+  - 103.182.97.12@30809@vmess@a042f620
 - name: PG-Maple
   type: select
   proxies:
@@ -302,8 +288,7 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
-  - v4.hdacd.com@30804@vmess@97517f55
-  - 103.182.97.12@30824@vmess@6b6fad15
+  - 103.182.97.12@30809@vmess@a042f620
   - PG-fast
   - PG-default
 - name: PG-GitHub
@@ -313,8 +298,7 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
-  - v4.hdacd.com@30804@vmess@97517f55
-  - 103.182.97.12@30824@vmess@6b6fad15
+  - 103.182.97.12@30809@vmess@a042f620
   - PG-fast
   - PG-default
 - name: PG-YouTube
@@ -324,8 +308,7 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
-  - v4.hdacd.com@30804@vmess@97517f55
-  - 103.182.97.12@30824@vmess@6b6fad15
+  - 103.182.97.12@30809@vmess@a042f620
   - PG-fast
   - PG-default
 - name: PG-Twitter
@@ -335,8 +318,7 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
-  - v4.hdacd.com@30804@vmess@97517f55
-  - 103.182.97.12@30824@vmess@6b6fad15
+  - 103.182.97.12@30809@vmess@a042f620
   - PG-fast
   - PG-default
 rule-providers:
