@@ -227,6 +227,17 @@ proxies:
     headers:
       Host: aflzzul.meiquankongjian.com
   name: aflzzul.meiquankongjian.com:52513@vmess@CN
+- name: v6.hdacd.com@30806@vmess@c4d1fb0a
+  type: vmess
+  server: 85.211.192.105
+  port: 30806
+  alterId: 2
+  cipher: auto
+  h2-opts: {}
+  network: tcp
+  skip-cert-verify: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  sni: v6.hdacd.com
 - name: 103.182.97.12@30824@vmess@6b6fad15
   type: vmess
   server: 103.182.97.12
@@ -234,6 +245,15 @@ proxies:
   alterId: 2
   cipher: auto
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- name: v35.hdacd.com@30835@vmess@fed67c9c
+  type: vmess
+  server: 85.211.194.201
+  port: 30835
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  udp: true
+  sni: v35.hdacd.com
 - name: 103.182.97.12@30809@vmess@a042f620
   type: vmess
   server: 103.182.97.12
@@ -250,7 +270,9 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
+  - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 103.182.97.12@30824@vmess@6b6fad15
+  - v35.hdacd.com@30835@vmess@fed67c9c
   - 103.182.97.12@30809@vmess@a042f620
 - name: PG-default
   type: fallback
@@ -259,7 +281,9 @@ proxy-groups:
   lazy: true
   proxies:
   - PG-fast
+  - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 103.182.97.12@30824@vmess@6b6fad15
+  - v35.hdacd.com@30835@vmess@fed67c9c
   - 103.182.97.12@30809@vmess@a042f620
   - PG-Maple
 - name: PG-AnTing
@@ -269,7 +293,9 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
+  - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 103.182.97.12@30824@vmess@6b6fad15
+  - v35.hdacd.com@30835@vmess@fed67c9c
   - 103.182.97.12@30809@vmess@a042f620
 - name: PG-Sage
   type: load-balance
@@ -278,7 +304,9 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
+  - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 103.182.97.12@30824@vmess@6b6fad15
+  - v35.hdacd.com@30835@vmess@fed67c9c
   - 103.182.97.12@30809@vmess@a042f620
 - name: PG-CN
   type: load-balance
@@ -300,7 +328,9 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
+  - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 103.182.97.12@30824@vmess@6b6fad15
+  - v35.hdacd.com@30835@vmess@fed67c9c
   - 103.182.97.12@30809@vmess@a042f620
   - PG-fast
   - PG-default
@@ -311,7 +341,9 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
+  - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 103.182.97.12@30824@vmess@6b6fad15
+  - v35.hdacd.com@30835@vmess@fed67c9c
   - 103.182.97.12@30809@vmess@a042f620
   - PG-fast
   - PG-default
@@ -322,7 +354,9 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
+  - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 103.182.97.12@30824@vmess@6b6fad15
+  - v35.hdacd.com@30835@vmess@fed67c9c
   - 103.182.97.12@30809@vmess@a042f620
   - PG-fast
   - PG-default
@@ -333,7 +367,9 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
+  - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 103.182.97.12@30824@vmess@6b6fad15
+  - v35.hdacd.com@30835@vmess@fed67c9c
   - 103.182.97.12@30809@vmess@a042f620
   - PG-fast
   - PG-default
