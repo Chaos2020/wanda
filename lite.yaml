@@ -79,18 +79,6 @@ dns:
   - +.ntp.org.cn
   - push.apple.com
 proxies:
-- name: maple
-  type: vless
-  server: maple.chinainvestors.xyz
-  port: 443
-  uuid: bf875c0d-d1c4-40a3-825f-d28a47a98894
-  network: ws
-  tls: true
-  ws-opts:
-    path: /
-    headers:
-      Host: maple.chinainvestors.xyz
-  sni: maple.chinainvestors.xyz
 - server: vip1.kaixincloud.top
   port: 443
   type: trojan
@@ -227,13 +215,17 @@ proxies:
     headers:
       Host: aflzzul.meiquankongjian.com
   name: aflzzul.meiquankongjian.com:52513@vmess@CN
-- name: 103.182.97.12@30824@vmess@6b6fad15
+- name: v6.hdacd.com@30806@vmess@c4d1fb0a
   type: vmess
-  server: 103.182.97.12
-  port: 30824
+  server: 34.146.138.59
+  port: 30806
   alterId: 2
   cipher: auto
+  h2-opts: {}
+  network: tcp
+  skip-cert-verify: true
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  sni: v6.hdacd.com
 proxy-groups:
 - name: PG-fast
   type: url-test
@@ -242,7 +234,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 103.182.97.12@30824@vmess@6b6fad15
+  - v6.hdacd.com@30806@vmess@c4d1fb0a
 - name: PG-default
   type: fallback
   url: https://www.google.com/generate_204
@@ -250,8 +242,7 @@ proxy-groups:
   lazy: true
   proxies:
   - PG-fast
-  - 103.182.97.12@30824@vmess@6b6fad15
-  - PG-Maple
+  - v6.hdacd.com@30806@vmess@c4d1fb0a
 - name: PG-AnTing
   type: load-balance
   url: https://www.google.com/generate_204
@@ -259,7 +250,7 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
-  - 103.182.97.12@30824@vmess@6b6fad15
+  - v6.hdacd.com@30806@vmess@c4d1fb0a
 - name: PG-Sage
   type: load-balance
   url: http://www.eastmoney.com
@@ -267,7 +258,7 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
-  - 103.182.97.12@30824@vmess@6b6fad15
+  - v6.hdacd.com@30806@vmess@c4d1fb0a
 - name: PG-CN
   type: load-balance
   url: https://www.sse.com.cn
@@ -275,11 +266,7 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
-  - 103.182.97.12@30824@vmess@6b6fad15
-- name: PG-Maple
-  type: select
-  proxies:
-  - maple
+  - v6.hdacd.com@30806@vmess@c4d1fb0a
 - name: PG-Google
   type: url-test
   url: https://www.google.com/generate_204
@@ -287,7 +274,7 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
-  - 103.182.97.12@30824@vmess@6b6fad15
+  - v6.hdacd.com@30806@vmess@c4d1fb0a
   - PG-fast
   - PG-default
 - name: PG-GitHub
@@ -297,7 +284,7 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
-  - 103.182.97.12@30824@vmess@6b6fad15
+  - v6.hdacd.com@30806@vmess@c4d1fb0a
   - PG-fast
   - PG-default
 - name: PG-YouTube
@@ -307,7 +294,7 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
-  - 103.182.97.12@30824@vmess@6b6fad15
+  - v6.hdacd.com@30806@vmess@c4d1fb0a
   - PG-fast
   - PG-default
 - name: PG-Twitter
@@ -317,7 +304,7 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
-  - 103.182.97.12@30824@vmess@6b6fad15
+  - v6.hdacd.com@30806@vmess@c4d1fb0a
   - PG-fast
   - PG-default
 rule-providers:
