@@ -215,6 +215,21 @@ proxies:
     headers:
       Host: aflzzul.meiquankongjian.com
   name: aflzzul.meiquankongjian.com:52513@vmess@CN
+- name: 103.182.97.12@30824@vmess@6b6fad15
+  type: vmess
+  server: 103.182.97.12
+  port: 30824
+  alterId: 2
+  cipher: auto
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- name: 103.182.97.12@30809@vmess@a042f620
+  type: vmess
+  server: 103.182.97.12
+  port: 30809
+  alterId: 2
+  cipher: auto
+  tls: false
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - name: 61.171.92.202@1001@ss@c5a112b9
   type: ss
   server: 61.171.92.202
@@ -231,6 +246,8 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
+  - 103.182.97.12@30824@vmess@6b6fad15
+  - 103.182.97.12@30809@vmess@a042f620
   - 61.171.92.202@1001@ss@c5a112b9
 - name: PG-default
   type: fallback
@@ -239,6 +256,8 @@ proxy-groups:
   lazy: true
   proxies:
   - PG-fast
+  - 103.182.97.12@30824@vmess@6b6fad15
+  - 103.182.97.12@30809@vmess@a042f620
   - 61.171.92.202@1001@ss@c5a112b9
 - name: PG-AnTing
   type: load-balance
@@ -247,6 +266,8 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
+  - 103.182.97.12@30824@vmess@6b6fad15
+  - 103.182.97.12@30809@vmess@a042f620
   - 61.171.92.202@1001@ss@c5a112b9
 - name: PG-Sage
   type: load-balance
@@ -255,6 +276,8 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
+  - 103.182.97.12@30824@vmess@6b6fad15
+  - 103.182.97.12@30809@vmess@a042f620
   - 61.171.92.202@1001@ss@c5a112b9
 - name: PG-CN
   type: load-balance
@@ -263,6 +286,8 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
+  - 103.182.97.12@30824@vmess@6b6fad15
+  - 103.182.97.12@30809@vmess@a042f620
   - 61.171.92.202@1001@ss@c5a112b9
 - name: PG-Google
   type: url-test
@@ -271,6 +296,8 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
+  - 103.182.97.12@30824@vmess@6b6fad15
+  - 103.182.97.12@30809@vmess@a042f620
   - 61.171.92.202@1001@ss@c5a112b9
   - PG-fast
   - PG-default
@@ -281,6 +308,8 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
+  - 103.182.97.12@30824@vmess@6b6fad15
+  - 103.182.97.12@30809@vmess@a042f620
   - 61.171.92.202@1001@ss@c5a112b9
   - PG-fast
   - PG-default
@@ -291,6 +320,8 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
+  - 103.182.97.12@30824@vmess@6b6fad15
+  - 103.182.97.12@30809@vmess@a042f620
   - 61.171.92.202@1001@ss@c5a112b9
   - PG-fast
   - PG-default
@@ -301,6 +332,8 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
+  - 103.182.97.12@30824@vmess@6b6fad15
+  - 103.182.97.12@30809@vmess@a042f620
   - 61.171.92.202@1001@ss@c5a112b9
   - PG-fast
   - PG-default
