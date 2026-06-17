@@ -217,6 +217,24 @@ proxies:
     headers:
       Host: aflzzul.meiquankongjian.com
   name: aflzzul.meiquankongjian.com:52513@vmess@CN
+- name: 194.5.193.58@42549@trojan@3deb6a17
+  type: trojan
+  server: 194.5.193.58
+  port: 42549
+  password: SoftNetConnect
+  sni: www.speedtest.net
+  skip-cert-verify: true
+  udp: true
+- name: 45.159.12.30@8443@vless@54b68448
+  type: vless
+  server: 45.159.12.30
+  port: 8443
+  udp: true
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  network: tcp
+  tls: true
+  servername: ams1.fromblancwithlove.com
+  client-fingerprint: chrome
 - name: 45.159.12.33@8443@vless@fb0f0d39
   type: vless
   server: 45.159.12.33
@@ -229,36 +247,90 @@ proxies:
   udp: true
   uuid: 394f6981-a782-4779-9a85-e6cf22935d93
   xudp: true
-- name: 45.159.12.9@8443@vless@be657cde
+- name: 106.52.215.138@7890@socks5@8700574f
+  type: socks5
+  server: 106.52.215.138
+  port: 7890
+- name: 168.222.43.127@2082@vless@b94004f0
   type: vless
-  server: 45.159.12.9
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  tls: true
+  server: 168.222.43.127
+  port: 2082
+  encryption: none
+  network: ws
+  packet-encoding: xudp
   skip-cert-verify: false
-  client-fingerprint: chrome
-  servername: ams1.fromblancwithlove.com
+  tls: false
   udp: true
-- name: 45.159.12.34@8443@vless@2e58e4dd
+  uuid: 964014f3-d3eb-48a0-9695-f18b5cceaa18
+  ws-opts:
+    headers:
+      Host: 168.222.43.127
+    path: /
+- name: 144.31.128.61@443@vless@03204923
   type: vless
-  server: 45.159.12.34
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  tls: true
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  servername: ams1.fromblancwithlove.com
-  udp: true
-- name: 45.159.12.30@8443@vless@54b68448
-  type: vless
-  server: 45.159.12.30
-  port: 8443
-  udp: true
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  server: 144.31.128.61
+  port: 443
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
   network: tcp
+  packet-encoding: xudp
+  reality-opts:
+    public-key: xx8vYPWtNhcn3i4iprMYCsURqX9hmTz_8tA_vuE1_GI
+    short-id: fe12
+  servername: www.intel.com
+  skip-cert-verify: false
   tls: true
-  servername: ams1.fromblancwithlove.com
+  udp: true
+  uuid: e8bf51de-efc9-42a4-be50-1a6bc3170c63
+- name: 2.27.26.41@443@vless@71389ed9
+  type: vless
+  server: 2.27.26.41
+  port: 443
   client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  network: tcp
+  packet-encoding: xudp
+  reality-opts:
+    public-key: xx8vYPWtNhcn3i4iprMYCsURqX9hmTz_8tA_vuE1_GI
+    short-id: fe12
+  servername: www.intel.com
+  skip-cert-verify: true
+  tls: true
+  udp: true
+  uuid: e8bf51de-efc9-42a4-be50-1a6bc3170c63
+- name: 104.24.0.146@443@vless@d06f2761
+  type: vless
+  server: 104.24.0.146
+  port: 443
+  uuid: dd7755b0-7773-4077-8a62-5b8fb3504b81
+  udp: true
+  tls: true
+  servername: tinypiing.caffebazar.qzz.io
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /TinyPiing=?ed=2560
+    headers:
+      Host: tinypiing.caffebazar.qzz.io
+- name: 142.171.48.179@28167@vmess@6e131b2d
+  type: vmess
+  server: 142.171.48.179
+  port: 28167
+  uuid: 2b990b4d-3eca-4735-bf03-b921b91e5532
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: gw.alicdn.com
+- name: 103.182.97.12@30824@vmess@6b6fad15
+  type: vmess
+  server: 103.182.97.12
+  port: 30824
+  alterId: 2
+  cipher: auto
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - name: 61.171.92.202@1001@ss@c5a112b9
   type: ss
   server: 61.171.92.202
@@ -275,10 +347,16 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 45.159.12.33@8443@vless@fb0f0d39
-  - 45.159.12.9@8443@vless@be657cde
-  - 45.159.12.34@8443@vless@2e58e4dd
+  - 194.5.193.58@42549@trojan@3deb6a17
   - 45.159.12.30@8443@vless@54b68448
+  - 45.159.12.33@8443@vless@fb0f0d39
+  - 106.52.215.138@7890@socks5@8700574f
+  - 168.222.43.127@2082@vless@b94004f0
+  - 144.31.128.61@443@vless@03204923
+  - 2.27.26.41@443@vless@71389ed9
+  - 104.24.0.146@443@vless@d06f2761
+  - 142.171.48.179@28167@vmess@6e131b2d
+  - 103.182.97.12@30824@vmess@6b6fad15
   - 61.171.92.202@1001@ss@c5a112b9
 - name: PG-default
   type: fallback
@@ -287,10 +365,16 @@ proxy-groups:
   lazy: true
   proxies:
   - PG-fast
-  - 45.159.12.33@8443@vless@fb0f0d39
-  - 45.159.12.9@8443@vless@be657cde
-  - 45.159.12.34@8443@vless@2e58e4dd
+  - 194.5.193.58@42549@trojan@3deb6a17
   - 45.159.12.30@8443@vless@54b68448
+  - 45.159.12.33@8443@vless@fb0f0d39
+  - 106.52.215.138@7890@socks5@8700574f
+  - 168.222.43.127@2082@vless@b94004f0
+  - 144.31.128.61@443@vless@03204923
+  - 2.27.26.41@443@vless@71389ed9
+  - 104.24.0.146@443@vless@d06f2761
+  - 142.171.48.179@28167@vmess@6e131b2d
+  - 103.182.97.12@30824@vmess@6b6fad15
   - 61.171.92.202@1001@ss@c5a112b9
 - name: PG-AnTing
   type: load-balance
@@ -299,10 +383,16 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
-  - 45.159.12.33@8443@vless@fb0f0d39
-  - 45.159.12.9@8443@vless@be657cde
-  - 45.159.12.34@8443@vless@2e58e4dd
+  - 194.5.193.58@42549@trojan@3deb6a17
   - 45.159.12.30@8443@vless@54b68448
+  - 45.159.12.33@8443@vless@fb0f0d39
+  - 106.52.215.138@7890@socks5@8700574f
+  - 168.222.43.127@2082@vless@b94004f0
+  - 144.31.128.61@443@vless@03204923
+  - 2.27.26.41@443@vless@71389ed9
+  - 104.24.0.146@443@vless@d06f2761
+  - 142.171.48.179@28167@vmess@6e131b2d
+  - 103.182.97.12@30824@vmess@6b6fad15
   - 61.171.92.202@1001@ss@c5a112b9
 - name: PG-Sage
   type: load-balance
@@ -311,10 +401,16 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
-  - 45.159.12.33@8443@vless@fb0f0d39
-  - 45.159.12.9@8443@vless@be657cde
-  - 45.159.12.34@8443@vless@2e58e4dd
+  - 194.5.193.58@42549@trojan@3deb6a17
   - 45.159.12.30@8443@vless@54b68448
+  - 45.159.12.33@8443@vless@fb0f0d39
+  - 106.52.215.138@7890@socks5@8700574f
+  - 168.222.43.127@2082@vless@b94004f0
+  - 144.31.128.61@443@vless@03204923
+  - 2.27.26.41@443@vless@71389ed9
+  - 104.24.0.146@443@vless@d06f2761
+  - 142.171.48.179@28167@vmess@6e131b2d
+  - 103.182.97.12@30824@vmess@6b6fad15
   - 61.171.92.202@1001@ss@c5a112b9
 - name: PG-CN
   type: load-balance
@@ -323,6 +419,8 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
+  - 106.52.215.138@7890@socks5@8700574f
+  - 103.182.97.12@30824@vmess@6b6fad15
   - 61.171.92.202@1001@ss@c5a112b9
 - name: PG-Google
   type: url-test
@@ -331,10 +429,16 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
-  - 45.159.12.33@8443@vless@fb0f0d39
-  - 45.159.12.9@8443@vless@be657cde
-  - 45.159.12.34@8443@vless@2e58e4dd
+  - 142.171.48.179@28167@vmess@6e131b2d
+  - 194.5.193.58@42549@trojan@3deb6a17
   - 45.159.12.30@8443@vless@54b68448
+  - 45.159.12.33@8443@vless@fb0f0d39
+  - 106.52.215.138@7890@socks5@8700574f
+  - 168.222.43.127@2082@vless@b94004f0
+  - 144.31.128.61@443@vless@03204923
+  - 2.27.26.41@443@vless@71389ed9
+  - 104.24.0.146@443@vless@d06f2761
+  - 103.182.97.12@30824@vmess@6b6fad15
   - 61.171.92.202@1001@ss@c5a112b9
   - PG-fast
   - PG-default
@@ -345,10 +449,16 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
-  - 45.159.12.33@8443@vless@fb0f0d39
-  - 45.159.12.9@8443@vless@be657cde
-  - 45.159.12.34@8443@vless@2e58e4dd
+  - 142.171.48.179@28167@vmess@6e131b2d
+  - 194.5.193.58@42549@trojan@3deb6a17
   - 45.159.12.30@8443@vless@54b68448
+  - 45.159.12.33@8443@vless@fb0f0d39
+  - 106.52.215.138@7890@socks5@8700574f
+  - 168.222.43.127@2082@vless@b94004f0
+  - 144.31.128.61@443@vless@03204923
+  - 2.27.26.41@443@vless@71389ed9
+  - 104.24.0.146@443@vless@d06f2761
+  - 103.182.97.12@30824@vmess@6b6fad15
   - 61.171.92.202@1001@ss@c5a112b9
   - PG-fast
   - PG-default
@@ -359,10 +469,16 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
-  - 45.159.12.33@8443@vless@fb0f0d39
-  - 45.159.12.9@8443@vless@be657cde
-  - 45.159.12.34@8443@vless@2e58e4dd
+  - 142.171.48.179@28167@vmess@6e131b2d
+  - 194.5.193.58@42549@trojan@3deb6a17
   - 45.159.12.30@8443@vless@54b68448
+  - 45.159.12.33@8443@vless@fb0f0d39
+  - 106.52.215.138@7890@socks5@8700574f
+  - 168.222.43.127@2082@vless@b94004f0
+  - 144.31.128.61@443@vless@03204923
+  - 2.27.26.41@443@vless@71389ed9
+  - 104.24.0.146@443@vless@d06f2761
+  - 103.182.97.12@30824@vmess@6b6fad15
   - 61.171.92.202@1001@ss@c5a112b9
   - PG-fast
   - PG-default
@@ -373,10 +489,16 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
-  - 45.159.12.33@8443@vless@fb0f0d39
-  - 45.159.12.9@8443@vless@be657cde
-  - 45.159.12.34@8443@vless@2e58e4dd
+  - 142.171.48.179@28167@vmess@6e131b2d
+  - 194.5.193.58@42549@trojan@3deb6a17
   - 45.159.12.30@8443@vless@54b68448
+  - 45.159.12.33@8443@vless@fb0f0d39
+  - 106.52.215.138@7890@socks5@8700574f
+  - 168.222.43.127@2082@vless@b94004f0
+  - 144.31.128.61@443@vless@03204923
+  - 2.27.26.41@443@vless@71389ed9
+  - 104.24.0.146@443@vless@d06f2761
+  - 103.182.97.12@30824@vmess@6b6fad15
   - 61.171.92.202@1001@ss@c5a112b9
   - PG-fast
   - PG-default
