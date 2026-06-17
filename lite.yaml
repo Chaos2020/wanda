@@ -217,43 +217,6 @@ proxies:
     headers:
       Host: aflzzul.meiquankongjian.com
   name: aflzzul.meiquankongjian.com:52513@vmess@CN
-- name: 194.5.193.58@42549@trojan@2c424ecb
-  type: trojan
-  server: 194.5.193.58
-  port: 42549
-  password: SoftNetConnect
-  skip-cert-verify: true
-  sni: www.speedtest.net
-- name: 45.159.12.30@8443@vless@54b68448
-  type: vless
-  server: 45.159.12.30
-  port: 8443
-  udp: true
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  network: tcp
-  tls: true
-  servername: ams1.fromblancwithlove.com
-  client-fingerprint: chrome
-- name: 45.159.12.34@8443@vless@2e58e4dd
-  type: vless
-  server: 45.159.12.34
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  tls: true
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  servername: ams1.fromblancwithlove.com
-  udp: true
-- name: 45.159.12.9@8443@vless@be657cde
-  type: vless
-  server: 45.159.12.9
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  tls: true
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  servername: ams1.fromblancwithlove.com
-  udp: true
 - name: 45.159.12.33@8443@vless@fb0f0d39
   type: vless
   server: 45.159.12.33
@@ -266,19 +229,36 @@ proxies:
   udp: true
   uuid: 394f6981-a782-4779-9a85-e6cf22935d93
   xudp: true
-- name: 168.222.43.127@2082@vless@9ff3f9c2
+- name: 45.159.12.9@8443@vless@be657cde
   type: vless
-  server: 168.222.43.127
-  port: 2082
-  udp: true
-  uuid: 964014f3-d3eb-48a0-9695-f18b5cceaa18
-  network: ws
-  tls: false
+  server: 45.159.12.9
+  port: 8443
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  tls: true
+  skip-cert-verify: false
   client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: 168.222.43.127
+  servername: ams1.fromblancwithlove.com
+  udp: true
+- name: 45.159.12.34@8443@vless@2e58e4dd
+  type: vless
+  server: 45.159.12.34
+  port: 8443
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  tls: true
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  servername: ams1.fromblancwithlove.com
+  udp: true
+- name: 45.159.12.30@8443@vless@54b68448
+  type: vless
+  server: 45.159.12.30
+  port: 8443
+  udp: true
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  network: tcp
+  tls: true
+  servername: ams1.fromblancwithlove.com
+  client-fingerprint: chrome
 - name: 61.171.92.202@1001@ss@c5a112b9
   type: ss
   server: 61.171.92.202
@@ -295,12 +275,10 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 194.5.193.58@42549@trojan@2c424ecb
-  - 45.159.12.30@8443@vless@54b68448
-  - 45.159.12.34@8443@vless@2e58e4dd
-  - 45.159.12.9@8443@vless@be657cde
   - 45.159.12.33@8443@vless@fb0f0d39
-  - 168.222.43.127@2082@vless@9ff3f9c2
+  - 45.159.12.9@8443@vless@be657cde
+  - 45.159.12.34@8443@vless@2e58e4dd
+  - 45.159.12.30@8443@vless@54b68448
   - 61.171.92.202@1001@ss@c5a112b9
 - name: PG-default
   type: fallback
@@ -309,12 +287,10 @@ proxy-groups:
   lazy: true
   proxies:
   - PG-fast
-  - 194.5.193.58@42549@trojan@2c424ecb
-  - 45.159.12.30@8443@vless@54b68448
-  - 45.159.12.34@8443@vless@2e58e4dd
-  - 45.159.12.9@8443@vless@be657cde
   - 45.159.12.33@8443@vless@fb0f0d39
-  - 168.222.43.127@2082@vless@9ff3f9c2
+  - 45.159.12.9@8443@vless@be657cde
+  - 45.159.12.34@8443@vless@2e58e4dd
+  - 45.159.12.30@8443@vless@54b68448
   - 61.171.92.202@1001@ss@c5a112b9
 - name: PG-AnTing
   type: load-balance
@@ -323,12 +299,10 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
-  - 194.5.193.58@42549@trojan@2c424ecb
-  - 45.159.12.30@8443@vless@54b68448
-  - 45.159.12.34@8443@vless@2e58e4dd
-  - 45.159.12.9@8443@vless@be657cde
   - 45.159.12.33@8443@vless@fb0f0d39
-  - 168.222.43.127@2082@vless@9ff3f9c2
+  - 45.159.12.9@8443@vless@be657cde
+  - 45.159.12.34@8443@vless@2e58e4dd
+  - 45.159.12.30@8443@vless@54b68448
   - 61.171.92.202@1001@ss@c5a112b9
 - name: PG-Sage
   type: load-balance
@@ -337,12 +311,10 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
-  - 194.5.193.58@42549@trojan@2c424ecb
-  - 45.159.12.30@8443@vless@54b68448
-  - 45.159.12.34@8443@vless@2e58e4dd
-  - 45.159.12.9@8443@vless@be657cde
   - 45.159.12.33@8443@vless@fb0f0d39
-  - 168.222.43.127@2082@vless@9ff3f9c2
+  - 45.159.12.9@8443@vless@be657cde
+  - 45.159.12.34@8443@vless@2e58e4dd
+  - 45.159.12.30@8443@vless@54b68448
   - 61.171.92.202@1001@ss@c5a112b9
 - name: PG-CN
   type: load-balance
@@ -359,12 +331,10 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
-  - 194.5.193.58@42549@trojan@2c424ecb
-  - 45.159.12.30@8443@vless@54b68448
-  - 45.159.12.34@8443@vless@2e58e4dd
-  - 45.159.12.9@8443@vless@be657cde
   - 45.159.12.33@8443@vless@fb0f0d39
-  - 168.222.43.127@2082@vless@9ff3f9c2
+  - 45.159.12.9@8443@vless@be657cde
+  - 45.159.12.34@8443@vless@2e58e4dd
+  - 45.159.12.30@8443@vless@54b68448
   - 61.171.92.202@1001@ss@c5a112b9
   - PG-fast
   - PG-default
@@ -375,12 +345,10 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
-  - 194.5.193.58@42549@trojan@2c424ecb
-  - 45.159.12.30@8443@vless@54b68448
-  - 45.159.12.34@8443@vless@2e58e4dd
-  - 45.159.12.9@8443@vless@be657cde
   - 45.159.12.33@8443@vless@fb0f0d39
-  - 168.222.43.127@2082@vless@9ff3f9c2
+  - 45.159.12.9@8443@vless@be657cde
+  - 45.159.12.34@8443@vless@2e58e4dd
+  - 45.159.12.30@8443@vless@54b68448
   - 61.171.92.202@1001@ss@c5a112b9
   - PG-fast
   - PG-default
@@ -391,12 +359,10 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
-  - 194.5.193.58@42549@trojan@2c424ecb
-  - 45.159.12.30@8443@vless@54b68448
-  - 45.159.12.34@8443@vless@2e58e4dd
-  - 45.159.12.9@8443@vless@be657cde
   - 45.159.12.33@8443@vless@fb0f0d39
-  - 168.222.43.127@2082@vless@9ff3f9c2
+  - 45.159.12.9@8443@vless@be657cde
+  - 45.159.12.34@8443@vless@2e58e4dd
+  - 45.159.12.30@8443@vless@54b68448
   - 61.171.92.202@1001@ss@c5a112b9
   - PG-fast
   - PG-default
@@ -407,12 +373,10 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
-  - 194.5.193.58@42549@trojan@2c424ecb
-  - 45.159.12.30@8443@vless@54b68448
-  - 45.159.12.34@8443@vless@2e58e4dd
-  - 45.159.12.9@8443@vless@be657cde
   - 45.159.12.33@8443@vless@fb0f0d39
-  - 168.222.43.127@2082@vless@9ff3f9c2
+  - 45.159.12.9@8443@vless@be657cde
+  - 45.159.12.34@8443@vless@2e58e4dd
+  - 45.159.12.30@8443@vless@54b68448
   - 61.171.92.202@1001@ss@c5a112b9
   - PG-fast
   - PG-default
