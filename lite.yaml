@@ -217,16 +217,6 @@ proxies:
     headers:
       Host: aflzzul.meiquankongjian.com
   name: aflzzul.meiquankongjian.com:52513@vmess@CN
-- name: 45.159.12.123@8443@vless@ea0f266f
-  type: vless
-  server: 45.159.12.123
-  port: 8443
-  udp: true
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  network: tcp
-  tls: true
-  servername: ams1.fromblancwithlove.com
-  client-fingerprint: firefox
 - name: 79.127.249.221@8443@vless@3291db19
   type: vless
   server: 79.127.249.221
@@ -240,14 +230,6 @@ proxies:
 - name: 45.159.12.162@8443@vless@db8de98b
   type: vless
   server: 45.159.12.162
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  network: tcp
-  tls: true
-  servername: ams1.fromblancwithlove.com
-- name: 45.159.12.192@8443@vless@097510fb
-  type: vless
-  server: 45.159.12.192
   port: 8443
   uuid: 394f6981-a782-4779-9a85-e6cf22935d93
   network: tcp
@@ -269,13 +251,6 @@ proxies:
   network: tcp
   tls: true
   servername: ams1.fromblancwithlove.com
-- name: 221.150.109.89@59490@ss@698c9fc5
-  type: ss
-  server: 221.150.109.89
-  port: 59490
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-  udp: true
 - name: 154.37.223.25@41729@vmess@35508258
   type: vmess
   server: 154.37.223.25
@@ -285,6 +260,13 @@ proxies:
   cipher: auto
   network: http
   tls: false
+- name: 221.150.109.89@59490@ss@698c9fc5
+  type: ss
+  server: 221.150.109.89
+  port: 59490
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
+  udp: true
 - name: 45.159.12.119@8443@vless@f0bdaed0
   type: vless
   server: 45.159.12.119
@@ -356,6 +338,15 @@ proxies:
   tls: true
   skip-cert-verify: true
   udp: true
+- name: 5.83.129.123@443@vless@748c9178
+  type: vless
+  server: 5.83.129.123
+  port: 443
+  uuid: b0330523-8796-4167-8848-8d409f1ae7f1
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  servername: 50gport1.potatosubge20.org
 - name: 61.171.92.202@1001@ss@c5a112b9
   type: ss
   server: 61.171.92.202
@@ -371,6 +362,33 @@ proxies:
   alterId: 2
   cipher: auto
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- name: 104.194.148.56@22263@vless@610bded2
+  type: vless
+  server: 104.194.148.56
+  port: 22263
+  uuid: 05671cd1-ab2f-4f64-a926-b655f199a23d
+  network: tcp
+  flow: ''
+- name: 84.32.209.130@443@vless@6e9dc8dd
+  type: vless
+  server: 84.32.209.130
+  port: 443
+  uuid: b0330523-8796-4167-8848-8d409f1ae7f1
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  servername: ltcher26.potatosubge20.org
+- name: 188.253.118.174@443@trojan@24282b29
+  type: trojan
+  server: 188.253.118.174
+  port: 443
+  network: ws
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  sni: hhcm.hhxaf.cc.cd
+  ws-opts:
+    headers:
+      Host: hhcm.hhxaf.cc.cd
+    path: /
 - name: 103.182.97.12@30809@vmess@a042f620
   type: vmess
   server: 103.182.97.12
@@ -387,14 +405,12 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 45.159.12.123@8443@vless@ea0f266f
   - 79.127.249.221@8443@vless@3291db19
   - 45.159.12.162@8443@vless@db8de98b
-  - 45.159.12.192@8443@vless@097510fb
   - 45.159.12.25@8443@vless@05907f4f
   - 45.159.12.8@8443@vless@3e9d0325
-  - 221.150.109.89@59490@ss@698c9fc5
   - 154.37.223.25@41729@vmess@35508258
+  - 221.150.109.89@59490@ss@698c9fc5
   - 45.159.12.119@8443@vless@f0bdaed0
   - 45.159.12.121@8443@vless@9d808015
   - 146.103.99.45@443@vless@cdb80241
@@ -402,8 +418,12 @@ proxy-groups:
   - 93.190.247.106@443@vless@1dc04d20
   - 116.203.94.160@2089@vless@ae2d2968
   - 152.233.28.201@8443@vless@e39058f9
+  - 5.83.129.123@443@vless@748c9178
   - 61.171.92.202@1001@ss@c5a112b9
   - 103.182.97.12@30824@vmess@6b6fad15
+  - 104.194.148.56@22263@vless@610bded2
+  - 84.32.209.130@443@vless@6e9dc8dd
+  - 188.253.118.174@443@trojan@24282b29
   - 103.182.97.12@30809@vmess@a042f620
 - name: PG-default
   type: fallback
@@ -412,14 +432,12 @@ proxy-groups:
   lazy: true
   proxies:
   - PG-fast
-  - 45.159.12.123@8443@vless@ea0f266f
   - 79.127.249.221@8443@vless@3291db19
   - 45.159.12.162@8443@vless@db8de98b
-  - 45.159.12.192@8443@vless@097510fb
   - 45.159.12.25@8443@vless@05907f4f
   - 45.159.12.8@8443@vless@3e9d0325
-  - 221.150.109.89@59490@ss@698c9fc5
   - 154.37.223.25@41729@vmess@35508258
+  - 221.150.109.89@59490@ss@698c9fc5
   - 45.159.12.119@8443@vless@f0bdaed0
   - 45.159.12.121@8443@vless@9d808015
   - 146.103.99.45@443@vless@cdb80241
@@ -427,8 +445,12 @@ proxy-groups:
   - 93.190.247.106@443@vless@1dc04d20
   - 116.203.94.160@2089@vless@ae2d2968
   - 152.233.28.201@8443@vless@e39058f9
+  - 5.83.129.123@443@vless@748c9178
   - 61.171.92.202@1001@ss@c5a112b9
   - 103.182.97.12@30824@vmess@6b6fad15
+  - 104.194.148.56@22263@vless@610bded2
+  - 84.32.209.130@443@vless@6e9dc8dd
+  - 188.253.118.174@443@trojan@24282b29
   - 103.182.97.12@30809@vmess@a042f620
 - name: PG-AnTing
   type: load-balance
@@ -437,14 +459,12 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
-  - 45.159.12.123@8443@vless@ea0f266f
   - 79.127.249.221@8443@vless@3291db19
   - 45.159.12.162@8443@vless@db8de98b
-  - 45.159.12.192@8443@vless@097510fb
   - 45.159.12.25@8443@vless@05907f4f
   - 45.159.12.8@8443@vless@3e9d0325
-  - 221.150.109.89@59490@ss@698c9fc5
   - 154.37.223.25@41729@vmess@35508258
+  - 221.150.109.89@59490@ss@698c9fc5
   - 45.159.12.119@8443@vless@f0bdaed0
   - 45.159.12.121@8443@vless@9d808015
   - 146.103.99.45@443@vless@cdb80241
@@ -452,8 +472,12 @@ proxy-groups:
   - 93.190.247.106@443@vless@1dc04d20
   - 116.203.94.160@2089@vless@ae2d2968
   - 152.233.28.201@8443@vless@e39058f9
+  - 5.83.129.123@443@vless@748c9178
   - 61.171.92.202@1001@ss@c5a112b9
   - 103.182.97.12@30824@vmess@6b6fad15
+  - 104.194.148.56@22263@vless@610bded2
+  - 84.32.209.130@443@vless@6e9dc8dd
+  - 188.253.118.174@443@trojan@24282b29
   - 103.182.97.12@30809@vmess@a042f620
 - name: PG-Sage
   type: load-balance
@@ -462,14 +486,12 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
-  - 45.159.12.123@8443@vless@ea0f266f
   - 79.127.249.221@8443@vless@3291db19
   - 45.159.12.162@8443@vless@db8de98b
-  - 45.159.12.192@8443@vless@097510fb
   - 45.159.12.25@8443@vless@05907f4f
   - 45.159.12.8@8443@vless@3e9d0325
-  - 221.150.109.89@59490@ss@698c9fc5
   - 154.37.223.25@41729@vmess@35508258
+  - 221.150.109.89@59490@ss@698c9fc5
   - 45.159.12.119@8443@vless@f0bdaed0
   - 45.159.12.121@8443@vless@9d808015
   - 146.103.99.45@443@vless@cdb80241
@@ -477,8 +499,12 @@ proxy-groups:
   - 93.190.247.106@443@vless@1dc04d20
   - 116.203.94.160@2089@vless@ae2d2968
   - 152.233.28.201@8443@vless@e39058f9
+  - 5.83.129.123@443@vless@748c9178
   - 61.171.92.202@1001@ss@c5a112b9
   - 103.182.97.12@30824@vmess@6b6fad15
+  - 104.194.148.56@22263@vless@610bded2
+  - 84.32.209.130@443@vless@6e9dc8dd
+  - 188.253.118.174@443@trojan@24282b29
   - 103.182.97.12@30809@vmess@a042f620
 - name: PG-CN
   type: load-balance
@@ -497,14 +523,12 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
-  - 45.159.12.123@8443@vless@ea0f266f
   - 79.127.249.221@8443@vless@3291db19
   - 45.159.12.162@8443@vless@db8de98b
-  - 45.159.12.192@8443@vless@097510fb
   - 45.159.12.25@8443@vless@05907f4f
   - 45.159.12.8@8443@vless@3e9d0325
-  - 221.150.109.89@59490@ss@698c9fc5
   - 154.37.223.25@41729@vmess@35508258
+  - 221.150.109.89@59490@ss@698c9fc5
   - 45.159.12.119@8443@vless@f0bdaed0
   - 45.159.12.121@8443@vless@9d808015
   - 146.103.99.45@443@vless@cdb80241
@@ -512,8 +536,12 @@ proxy-groups:
   - 93.190.247.106@443@vless@1dc04d20
   - 116.203.94.160@2089@vless@ae2d2968
   - 152.233.28.201@8443@vless@e39058f9
+  - 5.83.129.123@443@vless@748c9178
   - 61.171.92.202@1001@ss@c5a112b9
   - 103.182.97.12@30824@vmess@6b6fad15
+  - 104.194.148.56@22263@vless@610bded2
+  - 84.32.209.130@443@vless@6e9dc8dd
+  - 188.253.118.174@443@trojan@24282b29
   - 103.182.97.12@30809@vmess@a042f620
   - PG-fast
   - PG-default
@@ -524,14 +552,12 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
-  - 45.159.12.123@8443@vless@ea0f266f
   - 79.127.249.221@8443@vless@3291db19
   - 45.159.12.162@8443@vless@db8de98b
-  - 45.159.12.192@8443@vless@097510fb
   - 45.159.12.25@8443@vless@05907f4f
   - 45.159.12.8@8443@vless@3e9d0325
-  - 221.150.109.89@59490@ss@698c9fc5
   - 154.37.223.25@41729@vmess@35508258
+  - 221.150.109.89@59490@ss@698c9fc5
   - 45.159.12.119@8443@vless@f0bdaed0
   - 45.159.12.121@8443@vless@9d808015
   - 146.103.99.45@443@vless@cdb80241
@@ -539,8 +565,12 @@ proxy-groups:
   - 93.190.247.106@443@vless@1dc04d20
   - 116.203.94.160@2089@vless@ae2d2968
   - 152.233.28.201@8443@vless@e39058f9
+  - 5.83.129.123@443@vless@748c9178
   - 61.171.92.202@1001@ss@c5a112b9
   - 103.182.97.12@30824@vmess@6b6fad15
+  - 104.194.148.56@22263@vless@610bded2
+  - 84.32.209.130@443@vless@6e9dc8dd
+  - 188.253.118.174@443@trojan@24282b29
   - 103.182.97.12@30809@vmess@a042f620
   - PG-fast
   - PG-default
@@ -551,14 +581,12 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
-  - 45.159.12.123@8443@vless@ea0f266f
   - 79.127.249.221@8443@vless@3291db19
   - 45.159.12.162@8443@vless@db8de98b
-  - 45.159.12.192@8443@vless@097510fb
   - 45.159.12.25@8443@vless@05907f4f
   - 45.159.12.8@8443@vless@3e9d0325
-  - 221.150.109.89@59490@ss@698c9fc5
   - 154.37.223.25@41729@vmess@35508258
+  - 221.150.109.89@59490@ss@698c9fc5
   - 45.159.12.119@8443@vless@f0bdaed0
   - 45.159.12.121@8443@vless@9d808015
   - 146.103.99.45@443@vless@cdb80241
@@ -566,8 +594,12 @@ proxy-groups:
   - 93.190.247.106@443@vless@1dc04d20
   - 116.203.94.160@2089@vless@ae2d2968
   - 152.233.28.201@8443@vless@e39058f9
+  - 5.83.129.123@443@vless@748c9178
   - 61.171.92.202@1001@ss@c5a112b9
   - 103.182.97.12@30824@vmess@6b6fad15
+  - 104.194.148.56@22263@vless@610bded2
+  - 84.32.209.130@443@vless@6e9dc8dd
+  - 188.253.118.174@443@trojan@24282b29
   - 103.182.97.12@30809@vmess@a042f620
   - PG-fast
   - PG-default
@@ -578,14 +610,12 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
-  - 45.159.12.123@8443@vless@ea0f266f
   - 79.127.249.221@8443@vless@3291db19
   - 45.159.12.162@8443@vless@db8de98b
-  - 45.159.12.192@8443@vless@097510fb
   - 45.159.12.25@8443@vless@05907f4f
   - 45.159.12.8@8443@vless@3e9d0325
-  - 221.150.109.89@59490@ss@698c9fc5
   - 154.37.223.25@41729@vmess@35508258
+  - 221.150.109.89@59490@ss@698c9fc5
   - 45.159.12.119@8443@vless@f0bdaed0
   - 45.159.12.121@8443@vless@9d808015
   - 146.103.99.45@443@vless@cdb80241
@@ -593,8 +623,12 @@ proxy-groups:
   - 93.190.247.106@443@vless@1dc04d20
   - 116.203.94.160@2089@vless@ae2d2968
   - 152.233.28.201@8443@vless@e39058f9
+  - 5.83.129.123@443@vless@748c9178
   - 61.171.92.202@1001@ss@c5a112b9
   - 103.182.97.12@30824@vmess@6b6fad15
+  - 104.194.148.56@22263@vless@610bded2
+  - 84.32.209.130@443@vless@6e9dc8dd
+  - 188.253.118.174@443@trojan@24282b29
   - 103.182.97.12@30809@vmess@a042f620
   - PG-fast
   - PG-default
