@@ -217,18 +217,6 @@ proxies:
     headers:
       Host: aflzzul.meiquankongjian.com
   name: aflzzul.meiquankongjian.com:52513@vmess@CN
-- name: 45.159.12.33@8443@vless@fb0f0d39
-  type: vless
-  server: 45.159.12.33
-  port: 8443
-  client-fingerprint: chrome
-  encryption: none
-  network: tcp
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  udp: true
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  xudp: true
 - name: 45.159.12.123@8443@vless@ea0f266f
   type: vless
   server: 45.159.12.123
@@ -239,17 +227,6 @@ proxies:
   tls: true
   servername: ams1.fromblancwithlove.com
   client-fingerprint: firefox
-- name: 45.159.12.9@8443@vless@a1a301e2
-  type: vless
-  server: 45.159.12.9
-  port: 8443
-  client-fingerprint: chrome
-  network: tcp
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  udp: true
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  xudp: true
 - name: 79.127.249.221@8443@vless@3291db19
   type: vless
   server: 79.127.249.221
@@ -369,14 +346,6 @@ proxies:
   uuid: 36562b99-aadd-4e38-b566-24e0d219b1d6
   network: ws
   flow: ''
-- name: 61.171.92.202@1001@ss@c5a112b9
-  type: ss
-  server: 61.171.92.202
-  port: 1001
-  cipher: aes-256-gcm
-  password: '123'
-  skip-cert-verify: false
-  udp: false
 - name: 116.203.94.160@2089@vless@ae2d2968
   type: vless
   server: 116.203.94.160
@@ -407,6 +376,21 @@ proxies:
     path: /api/v1/stream
     headers:
       Host: sync.amordad.xyz
+- name: 103.182.97.12@30824@vmess@6b6fad15
+  type: vmess
+  server: 103.182.97.12
+  port: 30824
+  alterId: 2
+  cipher: auto
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- name: 103.182.97.12@30809@vmess@a042f620
+  type: vmess
+  server: 103.182.97.12
+  port: 30809
+  alterId: 2
+  cipher: auto
+  tls: false
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 proxy-groups:
 - name: PG-fast
   type: url-test
@@ -415,9 +399,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 45.159.12.33@8443@vless@fb0f0d39
   - 45.159.12.123@8443@vless@ea0f266f
-  - 45.159.12.9@8443@vless@a1a301e2
   - 79.127.249.221@8443@vless@3291db19
   - 45.159.12.162@8443@vless@db8de98b
   - 45.159.12.192@8443@vless@097510fb
@@ -431,10 +413,11 @@ proxy-groups:
   - 82.40.23.19@443@vless@4ddb1b1c
   - 2.27.22.238@110@vless@55b8cb00
   - 93.190.247.106@443@vless@1dc04d20
-  - 61.171.92.202@1001@ss@c5a112b9
   - 116.203.94.160@2089@vless@ae2d2968
   - 152.233.28.201@8443@vless@e39058f9
   - 63.141.128.8@443@vless@dc3e0950
+  - 103.182.97.12@30824@vmess@6b6fad15
+  - 103.182.97.12@30809@vmess@a042f620
 - name: PG-default
   type: fallback
   url: https://www.google.com/generate_204
@@ -442,9 +425,7 @@ proxy-groups:
   lazy: true
   proxies:
   - PG-fast
-  - 45.159.12.33@8443@vless@fb0f0d39
   - 45.159.12.123@8443@vless@ea0f266f
-  - 45.159.12.9@8443@vless@a1a301e2
   - 79.127.249.221@8443@vless@3291db19
   - 45.159.12.162@8443@vless@db8de98b
   - 45.159.12.192@8443@vless@097510fb
@@ -458,10 +439,11 @@ proxy-groups:
   - 82.40.23.19@443@vless@4ddb1b1c
   - 2.27.22.238@110@vless@55b8cb00
   - 93.190.247.106@443@vless@1dc04d20
-  - 61.171.92.202@1001@ss@c5a112b9
   - 116.203.94.160@2089@vless@ae2d2968
   - 152.233.28.201@8443@vless@e39058f9
   - 63.141.128.8@443@vless@dc3e0950
+  - 103.182.97.12@30824@vmess@6b6fad15
+  - 103.182.97.12@30809@vmess@a042f620
 - name: PG-AnTing
   type: load-balance
   url: https://www.google.com/generate_204
@@ -469,9 +451,7 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
-  - 45.159.12.33@8443@vless@fb0f0d39
   - 45.159.12.123@8443@vless@ea0f266f
-  - 45.159.12.9@8443@vless@a1a301e2
   - 79.127.249.221@8443@vless@3291db19
   - 45.159.12.162@8443@vless@db8de98b
   - 45.159.12.192@8443@vless@097510fb
@@ -485,10 +465,11 @@ proxy-groups:
   - 82.40.23.19@443@vless@4ddb1b1c
   - 2.27.22.238@110@vless@55b8cb00
   - 93.190.247.106@443@vless@1dc04d20
-  - 61.171.92.202@1001@ss@c5a112b9
   - 116.203.94.160@2089@vless@ae2d2968
   - 152.233.28.201@8443@vless@e39058f9
   - 63.141.128.8@443@vless@dc3e0950
+  - 103.182.97.12@30824@vmess@6b6fad15
+  - 103.182.97.12@30809@vmess@a042f620
 - name: PG-Sage
   type: load-balance
   url: http://www.eastmoney.com
@@ -496,9 +477,7 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
-  - 45.159.12.33@8443@vless@fb0f0d39
   - 45.159.12.123@8443@vless@ea0f266f
-  - 45.159.12.9@8443@vless@a1a301e2
   - 79.127.249.221@8443@vless@3291db19
   - 45.159.12.162@8443@vless@db8de98b
   - 45.159.12.192@8443@vless@097510fb
@@ -512,10 +491,11 @@ proxy-groups:
   - 82.40.23.19@443@vless@4ddb1b1c
   - 2.27.22.238@110@vless@55b8cb00
   - 93.190.247.106@443@vless@1dc04d20
-  - 61.171.92.202@1001@ss@c5a112b9
   - 116.203.94.160@2089@vless@ae2d2968
   - 152.233.28.201@8443@vless@e39058f9
   - 63.141.128.8@443@vless@dc3e0950
+  - 103.182.97.12@30824@vmess@6b6fad15
+  - 103.182.97.12@30809@vmess@a042f620
 - name: PG-CN
   type: load-balance
   url: https://www.sse.com.cn
@@ -523,7 +503,8 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
-  - 61.171.92.202@1001@ss@c5a112b9
+  - 103.182.97.12@30824@vmess@6b6fad15
+  - 103.182.97.12@30809@vmess@a042f620
 - name: PG-Google
   type: url-test
   url: https://www.google.com/generate_204
@@ -531,9 +512,7 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
-  - 45.159.12.33@8443@vless@fb0f0d39
   - 45.159.12.123@8443@vless@ea0f266f
-  - 45.159.12.9@8443@vless@a1a301e2
   - 79.127.249.221@8443@vless@3291db19
   - 45.159.12.162@8443@vless@db8de98b
   - 45.159.12.192@8443@vless@097510fb
@@ -547,10 +526,11 @@ proxy-groups:
   - 82.40.23.19@443@vless@4ddb1b1c
   - 2.27.22.238@110@vless@55b8cb00
   - 93.190.247.106@443@vless@1dc04d20
-  - 61.171.92.202@1001@ss@c5a112b9
   - 116.203.94.160@2089@vless@ae2d2968
   - 152.233.28.201@8443@vless@e39058f9
   - 63.141.128.8@443@vless@dc3e0950
+  - 103.182.97.12@30824@vmess@6b6fad15
+  - 103.182.97.12@30809@vmess@a042f620
   - PG-fast
   - PG-default
 - name: PG-GitHub
@@ -560,9 +540,7 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
-  - 45.159.12.33@8443@vless@fb0f0d39
   - 45.159.12.123@8443@vless@ea0f266f
-  - 45.159.12.9@8443@vless@a1a301e2
   - 79.127.249.221@8443@vless@3291db19
   - 45.159.12.162@8443@vless@db8de98b
   - 45.159.12.192@8443@vless@097510fb
@@ -576,10 +554,11 @@ proxy-groups:
   - 82.40.23.19@443@vless@4ddb1b1c
   - 2.27.22.238@110@vless@55b8cb00
   - 93.190.247.106@443@vless@1dc04d20
-  - 61.171.92.202@1001@ss@c5a112b9
   - 116.203.94.160@2089@vless@ae2d2968
   - 152.233.28.201@8443@vless@e39058f9
   - 63.141.128.8@443@vless@dc3e0950
+  - 103.182.97.12@30824@vmess@6b6fad15
+  - 103.182.97.12@30809@vmess@a042f620
   - PG-fast
   - PG-default
 - name: PG-YouTube
@@ -589,9 +568,7 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
-  - 45.159.12.33@8443@vless@fb0f0d39
   - 45.159.12.123@8443@vless@ea0f266f
-  - 45.159.12.9@8443@vless@a1a301e2
   - 79.127.249.221@8443@vless@3291db19
   - 45.159.12.162@8443@vless@db8de98b
   - 45.159.12.192@8443@vless@097510fb
@@ -605,10 +582,11 @@ proxy-groups:
   - 82.40.23.19@443@vless@4ddb1b1c
   - 2.27.22.238@110@vless@55b8cb00
   - 93.190.247.106@443@vless@1dc04d20
-  - 61.171.92.202@1001@ss@c5a112b9
   - 116.203.94.160@2089@vless@ae2d2968
   - 152.233.28.201@8443@vless@e39058f9
   - 63.141.128.8@443@vless@dc3e0950
+  - 103.182.97.12@30824@vmess@6b6fad15
+  - 103.182.97.12@30809@vmess@a042f620
   - PG-fast
   - PG-default
 - name: PG-Twitter
@@ -618,9 +596,7 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
-  - 45.159.12.33@8443@vless@fb0f0d39
   - 45.159.12.123@8443@vless@ea0f266f
-  - 45.159.12.9@8443@vless@a1a301e2
   - 79.127.249.221@8443@vless@3291db19
   - 45.159.12.162@8443@vless@db8de98b
   - 45.159.12.192@8443@vless@097510fb
@@ -634,10 +610,11 @@ proxy-groups:
   - 82.40.23.19@443@vless@4ddb1b1c
   - 2.27.22.238@110@vless@55b8cb00
   - 93.190.247.106@443@vless@1dc04d20
-  - 61.171.92.202@1001@ss@c5a112b9
   - 116.203.94.160@2089@vless@ae2d2968
   - 152.233.28.201@8443@vless@e39058f9
   - 63.141.128.8@443@vless@dc3e0950
+  - 103.182.97.12@30824@vmess@6b6fad15
+  - 103.182.97.12@30809@vmess@a042f620
   - PG-fast
   - PG-default
 rule-providers:
