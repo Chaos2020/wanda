@@ -315,6 +315,20 @@ proxies:
   tls: true
   udp: true
   uuid: 7896c501-248f-4068-bc2f-363c91ba5122
+- name: 172.86.91.58@8443@vless@34dd7a86
+  type: vless
+  server: 172.86.91.58
+  port: 8443
+  uuid: c81f0504-2c7c-11f1-9ec5-baabcd4be2cd
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: FVL0r87K3-vUP2KXQX1juLMFEHJtvxwKM-nm6_PYllc
+    short-id: cafe01234567
+  flow: xtls-rprx-vision
 - name: 154.37.223.25@52080@vmess@e45a5ab9
   type: vmess
   server: 154.37.223.25
@@ -341,20 +355,14 @@ proxies:
   network: http
   tls: false
   uuid: db35e047-9b1d-4f8a-b0ca-21318018fec2
-- name: 46.8.236.129@26140@vless@4aca10ce
-  type: vless
-  server: 46.8.236.129
-  port: 26140
-  uuid: ee443a49-47a0-445c-8e2a-c7efbc74f483
-  udp: true
-  tls: true
+- name: 43.198.84.209@11035@trojan@396c8828
+  type: trojan
+  server: 43.198.84.209
+  port: 11035
+  password: BxceQaOe
+  sni: t.me/ripaojiedian
   skip-cert-verify: true
-  servername: yahoo.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: cEKeWhExRbsgjk8qAd0KvDNnWRK4Sm9NYHH62sdVUH0
-    short-id: fa893256a458b8a0
-  flow: xtls-rprx-vision
+  udp: true
 - name: 62.106.66.131@8443@vless@0e3e6517
   type: vless
   server: 62.106.66.131
@@ -370,14 +378,6 @@ proxies:
     short-id: e1b479cb7d44519f
   grpc-opts:
     grpc-service-name: api.v1.telemetry.EventStream
-- name: 43.198.84.209@11035@trojan@396c8828
-  type: trojan
-  server: 43.198.84.209
-  port: 11035
-  password: BxceQaOe
-  sni: t.me/ripaojiedian
-  skip-cert-verify: true
-  udp: true
 - name: 152.233.28.200@8443@vless@6f85674d
   type: vless
   server: 152.233.28.200
@@ -421,49 +421,30 @@ proxies:
   udp: true
   uuid: f68435e2-ac00-4374-8c03-c1d36e171088
   xudp: true
-- name: 63.141.128.8@443@vless@dc3e0950
+- name: 87.120.126.218@443@vless@036c7d8f
   type: vless
-  server: 63.141.128.8
+  server: 87.120.126.218
   port: 443
-  uuid: 5b6be23b-dff4-428f-8a60-4f11568abe12
+  uuid: ded3638e-ab7f-4ff8-bc60-9fc6666cff22
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: sync.amordad.xyz
-  network: ws
-  ws-opts:
-    path: /api/v1/stream
-    headers:
-      Host: sync.amordad.xyz
-- name: 92.242.61.92@543@vless@572f2478
-  type: vless
-  server: 92.242.61.92
-  port: 543
-  udp: true
-  uuid: 1dd5f2be-f124-4f35-9239-8abc042829c2
-  network: tcp
-  tls: true
-  servername: max.ru
+  servername: mageia.ubuntuhosting.host
   client-fingerprint: firefox
-  flow: xtls-rprx-vision
   reality-opts:
-    public-key: H4VeKzsqesO2LggCpL0WuYRojKXWNF_y4UABkGRadxs
-    short-id: d898401f400ccf57
-- name: 80.253.251.157@443@vless@0b98fb99
-  type: vless
-  server: 80.253.251.157
-  port: 443
-  client-fingerprint: chrome
-  encryption: none
-  network: tcp
-  reality-opts:
-    public-key: GzOdZG9TCQSrZV7ivcmOq9tKWUf37QnoTxSHf32OfAs
-    short-id: '1680'
-  servername: www.samsung.com
-  tls: true
-  udp: true
-  uuid: 612c872d-1370-4109-8644-f0755f97e33f
-  xudp: true
+    public-key: QJW15WZWLNjA8KEpe4GqSdOe4rfW8KgqjjVmKxPk-ng
+    short-id: 3fa234ea9feaa048
+  network: grpc
+  grpc-opts:
+    grpc-service-name: gun
+- name: 61.171.92.202@1001@ss@c5a112b9
+  type: ss
+  server: 61.171.92.202
+  port: 1001
+  cipher: aes-256-gcm
+  password: '123'
+  skip-cert-verify: false
+  udp: false
 - name: 154.36.176.47@8443@vless@116fbab1
   type: vless
   server: 154.36.176.47
@@ -493,27 +474,49 @@ proxies:
   tls: true
   udp: true
   uuid: f265505f-a2cf-4b50-8ea1-d250313d0f52
-- name: 91.186.215.199@443@vless@eb761fa3
+- name: swebasic1.mkeycon.com@443@vless@623be48f
   type: vless
-  server: 91.186.215.199
+  server: 31.76.32.105
   port: 443
   udp: true
-  uuid: a2fde8c9-00ee-4f7f-af28-38b669623b99
+  uuid: d6b49049-2f22-4f96-88de-70a56c9e6b3d
   network: tcp
   tls: true
   servername: www.microsoft.com
   client-fingerprint: chrome
+  flow: xtls-rprx-vision
   reality-opts:
-    public-key: 3crBPZzqZ_QFzPD0mde5jmuqkVokupWB8Nz_xehlmic
-    short-id: 972f5c0c231aaeab
-- name: 61.171.92.202@1001@ss@c5a112b9
-  type: ss
-  server: 61.171.92.202
-  port: 1001
-  cipher: aes-256-gcm
-  password: '123'
-  skip-cert-verify: false
-  udp: false
+    public-key: hMznhtCZ73uHuz4izVUSJiGxlZf2vouFb4rqcOhpr2w
+    short-id: 57f82e58e1b2cad6
+  sni: swebasic1.mkeycon.com
+- name: yixixiawa.xyz@25676@vless@bd1055f1
+  type: vless
+  server: 111.119.240.8
+  port: 25676
+  udp: true
+  uuid: 5607a2a3-f40b-408a-91d1-2b60f8397f79
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: edge
+  reality-opts:
+    public-key: qzoJdZ6dTqapZ2SKlNZ5tvU2JfbxfPJ3vubdZ4264EU
+    short-id: 7d93be5bb180
+  sni: yixixiawa.xyz
+- name: 149.33.31.115@14302@vless@502bf2e7
+  type: vless
+  server: 149.33.31.115
+  port: 14302
+  udp: true
+  uuid: 1dd5f2be-f124-4f35-9239-8abc042829c2
+  network: tcp
+  tls: true
+  servername: www.samsung.com
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: lw7-Msn5E2O6HbBdqMw9SvoDJgbDIvHss0UVQ9iZFRc
+    short-id: 106f1604d65bb70c
 proxy-groups:
 - name: PG-fast
   type: url-test
@@ -531,21 +534,21 @@ proxy-groups:
   - 221.150.109.89@59490@ss@698c9fc5
   - 93.190.247.106@443@vless@6ff143d5
   - 45.198.87.223@8443@vless@4317b0a5
+  - 172.86.91.58@8443@vless@34dd7a86
   - 154.37.223.25@52080@vmess@e45a5ab9
   - 154.37.223.25@11685@vmess@4bae9c37
-  - 46.8.236.129@26140@vless@4aca10ce
-  - 62.106.66.131@8443@vless@0e3e6517
   - 43.198.84.209@11035@trojan@396c8828
+  - 62.106.66.131@8443@vless@0e3e6517
   - 152.233.28.200@8443@vless@6f85674d
   - bypass.grinoree.ru@8443@vless@5bed4832
   - 193.3.189.38@1443@vless@6e16bfd3
-  - 63.141.128.8@443@vless@dc3e0950
-  - 92.242.61.92@543@vless@572f2478
-  - 80.253.251.157@443@vless@0b98fb99
+  - 87.120.126.218@443@vless@036c7d8f
+  - 61.171.92.202@1001@ss@c5a112b9
   - 154.36.176.47@8443@vless@116fbab1
   - 149.28.87.17@443@vless@a1bde089
-  - 91.186.215.199@443@vless@eb761fa3
-  - 61.171.92.202@1001@ss@c5a112b9
+  - swebasic1.mkeycon.com@443@vless@623be48f
+  - yixixiawa.xyz@25676@vless@bd1055f1
+  - 149.33.31.115@14302@vless@502bf2e7
 - name: PG-default
   type: fallback
   url: https://www.google.com/generate_204
@@ -562,21 +565,21 @@ proxy-groups:
   - 221.150.109.89@59490@ss@698c9fc5
   - 93.190.247.106@443@vless@6ff143d5
   - 45.198.87.223@8443@vless@4317b0a5
+  - 172.86.91.58@8443@vless@34dd7a86
   - 154.37.223.25@52080@vmess@e45a5ab9
   - 154.37.223.25@11685@vmess@4bae9c37
-  - 46.8.236.129@26140@vless@4aca10ce
-  - 62.106.66.131@8443@vless@0e3e6517
   - 43.198.84.209@11035@trojan@396c8828
+  - 62.106.66.131@8443@vless@0e3e6517
   - 152.233.28.200@8443@vless@6f85674d
   - bypass.grinoree.ru@8443@vless@5bed4832
   - 193.3.189.38@1443@vless@6e16bfd3
-  - 63.141.128.8@443@vless@dc3e0950
-  - 92.242.61.92@543@vless@572f2478
-  - 80.253.251.157@443@vless@0b98fb99
+  - 87.120.126.218@443@vless@036c7d8f
+  - 61.171.92.202@1001@ss@c5a112b9
   - 154.36.176.47@8443@vless@116fbab1
   - 149.28.87.17@443@vless@a1bde089
-  - 91.186.215.199@443@vless@eb761fa3
-  - 61.171.92.202@1001@ss@c5a112b9
+  - swebasic1.mkeycon.com@443@vless@623be48f
+  - yixixiawa.xyz@25676@vless@bd1055f1
+  - 149.33.31.115@14302@vless@502bf2e7
 - name: PG-AnTing
   type: load-balance
   url: https://www.google.com/generate_204
@@ -593,21 +596,21 @@ proxy-groups:
   - 221.150.109.89@59490@ss@698c9fc5
   - 93.190.247.106@443@vless@6ff143d5
   - 45.198.87.223@8443@vless@4317b0a5
+  - 172.86.91.58@8443@vless@34dd7a86
   - 154.37.223.25@52080@vmess@e45a5ab9
   - 154.37.223.25@11685@vmess@4bae9c37
-  - 46.8.236.129@26140@vless@4aca10ce
-  - 62.106.66.131@8443@vless@0e3e6517
   - 43.198.84.209@11035@trojan@396c8828
+  - 62.106.66.131@8443@vless@0e3e6517
   - 152.233.28.200@8443@vless@6f85674d
   - bypass.grinoree.ru@8443@vless@5bed4832
   - 193.3.189.38@1443@vless@6e16bfd3
-  - 63.141.128.8@443@vless@dc3e0950
-  - 92.242.61.92@543@vless@572f2478
-  - 80.253.251.157@443@vless@0b98fb99
+  - 87.120.126.218@443@vless@036c7d8f
+  - 61.171.92.202@1001@ss@c5a112b9
   - 154.36.176.47@8443@vless@116fbab1
   - 149.28.87.17@443@vless@a1bde089
-  - 91.186.215.199@443@vless@eb761fa3
-  - 61.171.92.202@1001@ss@c5a112b9
+  - swebasic1.mkeycon.com@443@vless@623be48f
+  - yixixiawa.xyz@25676@vless@bd1055f1
+  - 149.33.31.115@14302@vless@502bf2e7
 - name: PG-Sage
   type: load-balance
   url: http://www.eastmoney.com
@@ -624,21 +627,21 @@ proxy-groups:
   - 221.150.109.89@59490@ss@698c9fc5
   - 93.190.247.106@443@vless@6ff143d5
   - 45.198.87.223@8443@vless@4317b0a5
+  - 172.86.91.58@8443@vless@34dd7a86
   - 154.37.223.25@52080@vmess@e45a5ab9
   - 154.37.223.25@11685@vmess@4bae9c37
-  - 46.8.236.129@26140@vless@4aca10ce
-  - 62.106.66.131@8443@vless@0e3e6517
   - 43.198.84.209@11035@trojan@396c8828
+  - 62.106.66.131@8443@vless@0e3e6517
   - 152.233.28.200@8443@vless@6f85674d
   - bypass.grinoree.ru@8443@vless@5bed4832
   - 193.3.189.38@1443@vless@6e16bfd3
-  - 63.141.128.8@443@vless@dc3e0950
-  - 92.242.61.92@543@vless@572f2478
-  - 80.253.251.157@443@vless@0b98fb99
+  - 87.120.126.218@443@vless@036c7d8f
+  - 61.171.92.202@1001@ss@c5a112b9
   - 154.36.176.47@8443@vless@116fbab1
   - 149.28.87.17@443@vless@a1bde089
-  - 91.186.215.199@443@vless@eb761fa3
-  - 61.171.92.202@1001@ss@c5a112b9
+  - swebasic1.mkeycon.com@443@vless@623be48f
+  - yixixiawa.xyz@25676@vless@bd1055f1
+  - 149.33.31.115@14302@vless@502bf2e7
 - name: PG-CN
   type: load-balance
   url: https://www.sse.com.cn
@@ -654,6 +657,7 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
+  - 172.86.91.58@8443@vless@34dd7a86
   - 149.28.87.17@443@vless@a1bde089
   - 79.127.249.221@8443@vless@3291db19
   - 45.159.12.25@8443@vless@05907f4f
@@ -666,18 +670,17 @@ proxy-groups:
   - 45.198.87.223@8443@vless@4317b0a5
   - 154.37.223.25@52080@vmess@e45a5ab9
   - 154.37.223.25@11685@vmess@4bae9c37
-  - 46.8.236.129@26140@vless@4aca10ce
-  - 62.106.66.131@8443@vless@0e3e6517
   - 43.198.84.209@11035@trojan@396c8828
+  - 62.106.66.131@8443@vless@0e3e6517
   - 152.233.28.200@8443@vless@6f85674d
   - bypass.grinoree.ru@8443@vless@5bed4832
   - 193.3.189.38@1443@vless@6e16bfd3
-  - 63.141.128.8@443@vless@dc3e0950
-  - 92.242.61.92@543@vless@572f2478
-  - 80.253.251.157@443@vless@0b98fb99
-  - 154.36.176.47@8443@vless@116fbab1
-  - 91.186.215.199@443@vless@eb761fa3
+  - 87.120.126.218@443@vless@036c7d8f
   - 61.171.92.202@1001@ss@c5a112b9
+  - 154.36.176.47@8443@vless@116fbab1
+  - swebasic1.mkeycon.com@443@vless@623be48f
+  - yixixiawa.xyz@25676@vless@bd1055f1
+  - 149.33.31.115@14302@vless@502bf2e7
   - PG-fast
   - PG-default
 - name: PG-GitHub
@@ -687,6 +690,7 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
+  - 172.86.91.58@8443@vless@34dd7a86
   - 149.28.87.17@443@vless@a1bde089
   - 79.127.249.221@8443@vless@3291db19
   - 45.159.12.25@8443@vless@05907f4f
@@ -699,18 +703,17 @@ proxy-groups:
   - 45.198.87.223@8443@vless@4317b0a5
   - 154.37.223.25@52080@vmess@e45a5ab9
   - 154.37.223.25@11685@vmess@4bae9c37
-  - 46.8.236.129@26140@vless@4aca10ce
-  - 62.106.66.131@8443@vless@0e3e6517
   - 43.198.84.209@11035@trojan@396c8828
+  - 62.106.66.131@8443@vless@0e3e6517
   - 152.233.28.200@8443@vless@6f85674d
   - bypass.grinoree.ru@8443@vless@5bed4832
   - 193.3.189.38@1443@vless@6e16bfd3
-  - 63.141.128.8@443@vless@dc3e0950
-  - 92.242.61.92@543@vless@572f2478
-  - 80.253.251.157@443@vless@0b98fb99
-  - 154.36.176.47@8443@vless@116fbab1
-  - 91.186.215.199@443@vless@eb761fa3
+  - 87.120.126.218@443@vless@036c7d8f
   - 61.171.92.202@1001@ss@c5a112b9
+  - 154.36.176.47@8443@vless@116fbab1
+  - swebasic1.mkeycon.com@443@vless@623be48f
+  - yixixiawa.xyz@25676@vless@bd1055f1
+  - 149.33.31.115@14302@vless@502bf2e7
   - PG-fast
   - PG-default
 - name: PG-YouTube
@@ -720,6 +723,7 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
+  - 172.86.91.58@8443@vless@34dd7a86
   - 149.28.87.17@443@vless@a1bde089
   - 79.127.249.221@8443@vless@3291db19
   - 45.159.12.25@8443@vless@05907f4f
@@ -732,18 +736,17 @@ proxy-groups:
   - 45.198.87.223@8443@vless@4317b0a5
   - 154.37.223.25@52080@vmess@e45a5ab9
   - 154.37.223.25@11685@vmess@4bae9c37
-  - 46.8.236.129@26140@vless@4aca10ce
-  - 62.106.66.131@8443@vless@0e3e6517
   - 43.198.84.209@11035@trojan@396c8828
+  - 62.106.66.131@8443@vless@0e3e6517
   - 152.233.28.200@8443@vless@6f85674d
   - bypass.grinoree.ru@8443@vless@5bed4832
   - 193.3.189.38@1443@vless@6e16bfd3
-  - 63.141.128.8@443@vless@dc3e0950
-  - 92.242.61.92@543@vless@572f2478
-  - 80.253.251.157@443@vless@0b98fb99
-  - 154.36.176.47@8443@vless@116fbab1
-  - 91.186.215.199@443@vless@eb761fa3
+  - 87.120.126.218@443@vless@036c7d8f
   - 61.171.92.202@1001@ss@c5a112b9
+  - 154.36.176.47@8443@vless@116fbab1
+  - swebasic1.mkeycon.com@443@vless@623be48f
+  - yixixiawa.xyz@25676@vless@bd1055f1
+  - 149.33.31.115@14302@vless@502bf2e7
   - PG-fast
   - PG-default
 - name: PG-Twitter
@@ -753,6 +756,7 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
+  - 172.86.91.58@8443@vless@34dd7a86
   - 149.28.87.17@443@vless@a1bde089
   - 79.127.249.221@8443@vless@3291db19
   - 45.159.12.25@8443@vless@05907f4f
@@ -765,18 +769,17 @@ proxy-groups:
   - 45.198.87.223@8443@vless@4317b0a5
   - 154.37.223.25@52080@vmess@e45a5ab9
   - 154.37.223.25@11685@vmess@4bae9c37
-  - 46.8.236.129@26140@vless@4aca10ce
-  - 62.106.66.131@8443@vless@0e3e6517
   - 43.198.84.209@11035@trojan@396c8828
+  - 62.106.66.131@8443@vless@0e3e6517
   - 152.233.28.200@8443@vless@6f85674d
   - bypass.grinoree.ru@8443@vless@5bed4832
   - 193.3.189.38@1443@vless@6e16bfd3
-  - 63.141.128.8@443@vless@dc3e0950
-  - 92.242.61.92@543@vless@572f2478
-  - 80.253.251.157@443@vless@0b98fb99
-  - 154.36.176.47@8443@vless@116fbab1
-  - 91.186.215.199@443@vless@eb761fa3
+  - 87.120.126.218@443@vless@036c7d8f
   - 61.171.92.202@1001@ss@c5a112b9
+  - 154.36.176.47@8443@vless@116fbab1
+  - swebasic1.mkeycon.com@443@vless@623be48f
+  - yixixiawa.xyz@25676@vless@bd1055f1
+  - 149.33.31.115@14302@vless@502bf2e7
   - PG-fast
   - PG-default
 rule-providers:
