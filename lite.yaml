@@ -355,18 +355,6 @@ proxies:
     public-key: FVL0r87K3-vUP2KXQX1juLMFEHJtvxwKM-nm6_PYllc
     short-id: cafe01234567
   flow: xtls-rprx-vision
-- name: 152.233.28.200@8443@vless@6f85674d
-  type: vless
-  server: 152.233.28.200
-  port: 8443
-  client-fingerprint: chrome
-  encryption: none
-  network: tcp
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  udp: true
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  xudp: true
 - name: bypass.grinoree.ru@8443@vless@5bed4832
   type: vless
   server: 45.198.87.84
@@ -396,6 +384,36 @@ proxies:
   tls: true
   udp: true
   uuid: f265505f-a2cf-4b50-8ea1-d250313d0f52
+- name: 87.120.126.218@443@vless@036c7d8f
+  type: vless
+  server: 87.120.126.218
+  port: 443
+  uuid: ded3638e-ab7f-4ff8-bc60-9fc6666cff22
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: mageia.ubuntuhosting.host
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: QJW15WZWLNjA8KEpe4GqSdOe4rfW8KgqjjVmKxPk-ng
+    short-id: 3fa234ea9feaa048
+  network: grpc
+  grpc-opts:
+    grpc-service-name: gun
+- name: 63.141.128.8@443@vless@dc3e0950
+  type: vless
+  server: 63.141.128.8
+  port: 443
+  uuid: 5b6be23b-dff4-428f-8a60-4f11568abe12
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: sync.amordad.xyz
+  network: ws
+  ws-opts:
+    path: /api/v1/stream
+    headers:
+      Host: sync.amordad.xyz
 - name: 154.36.176.47@8443@vless@116fbab1
   type: vless
   server: 154.36.176.47
@@ -432,20 +450,20 @@ proxies:
   reality-opts:
     public-key: lw7-Msn5E2O6HbBdqMw9SvoDJgbDIvHss0UVQ9iZFRc
     short-id: 106f1604d65bb70c
-- name: 192.200.160.252@443@vless@1b324bb0
+- name: yixixiawa.xyz@25676@vless@bd1055f1
   type: vless
-  server: 192.200.160.252
-  port: 443
-  network: ws
-  servername: sync.amordad.xyz
-  skip-cert-verify: false
-  tfo: false
+  server: 111.119.240.8
+  port: 25676
+  udp: true
+  uuid: 5607a2a3-f40b-408a-91d1-2b60f8397f79
+  network: tcp
   tls: true
-  uuid: 5b6be23b-dff4-428f-8a60-4f11568abe12
-  ws-opts:
-    headers:
-      Host: sync.amordad.xyz
-    path: /api/v1/stream
+  servername: www.apple.com
+  client-fingerprint: edge
+  reality-opts:
+    public-key: qzoJdZ6dTqapZ2SKlNZ5tvU2JfbxfPJ3vubdZ4264EU
+    short-id: 7d93be5bb180
+  sni: yixixiawa.xyz
 - name: 61.171.92.202@1001@ss@c5a112b9
   type: ss
   server: 61.171.92.202
@@ -454,19 +472,6 @@ proxies:
   password: '123'
   skip-cert-verify: false
   udp: false
-- name: 91.186.215.199@443@vless@eb761fa3
-  type: vless
-  server: 91.186.215.199
-  port: 443
-  udp: true
-  uuid: a2fde8c9-00ee-4f7f-af28-38b669623b99
-  network: tcp
-  tls: true
-  servername: www.microsoft.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 3crBPZzqZ_QFzPD0mde5jmuqkVokupWB8Nz_xehlmic
-    short-id: 972f5c0c231aaeab
 proxy-groups:
 - name: PG-fast
   type: url-test
@@ -487,15 +492,15 @@ proxy-groups:
   - 154.37.223.25@52080@vmess@e45a5ab9
   - 154.37.223.25@11685@vmess@4bae9c37
   - 172.86.91.58@8443@vless@34dd7a86
-  - 152.233.28.200@8443@vless@6f85674d
   - bypass.grinoree.ru@8443@vless@5bed4832
   - 149.28.87.17@443@vless@a1bde089
+  - 87.120.126.218@443@vless@036c7d8f
+  - 63.141.128.8@443@vless@dc3e0950
   - 154.36.176.47@8443@vless@116fbab1
   - 141.227.152.129@8388@ss@d7364e9d
   - 149.33.31.115@14302@vless@502bf2e7
-  - 192.200.160.252@443@vless@1b324bb0
+  - yixixiawa.xyz@25676@vless@bd1055f1
   - 61.171.92.202@1001@ss@c5a112b9
-  - 91.186.215.199@443@vless@eb761fa3
 - name: PG-default
   type: fallback
   url: https://www.google.com/generate_204
@@ -515,15 +520,15 @@ proxy-groups:
   - 154.37.223.25@52080@vmess@e45a5ab9
   - 154.37.223.25@11685@vmess@4bae9c37
   - 172.86.91.58@8443@vless@34dd7a86
-  - 152.233.28.200@8443@vless@6f85674d
   - bypass.grinoree.ru@8443@vless@5bed4832
   - 149.28.87.17@443@vless@a1bde089
+  - 87.120.126.218@443@vless@036c7d8f
+  - 63.141.128.8@443@vless@dc3e0950
   - 154.36.176.47@8443@vless@116fbab1
   - 141.227.152.129@8388@ss@d7364e9d
   - 149.33.31.115@14302@vless@502bf2e7
-  - 192.200.160.252@443@vless@1b324bb0
+  - yixixiawa.xyz@25676@vless@bd1055f1
   - 61.171.92.202@1001@ss@c5a112b9
-  - 91.186.215.199@443@vless@eb761fa3
 - name: PG-AnTing
   type: load-balance
   url: https://www.google.com/generate_204
@@ -543,15 +548,15 @@ proxy-groups:
   - 154.37.223.25@52080@vmess@e45a5ab9
   - 154.37.223.25@11685@vmess@4bae9c37
   - 172.86.91.58@8443@vless@34dd7a86
-  - 152.233.28.200@8443@vless@6f85674d
   - bypass.grinoree.ru@8443@vless@5bed4832
   - 149.28.87.17@443@vless@a1bde089
+  - 87.120.126.218@443@vless@036c7d8f
+  - 63.141.128.8@443@vless@dc3e0950
   - 154.36.176.47@8443@vless@116fbab1
   - 141.227.152.129@8388@ss@d7364e9d
   - 149.33.31.115@14302@vless@502bf2e7
-  - 192.200.160.252@443@vless@1b324bb0
+  - yixixiawa.xyz@25676@vless@bd1055f1
   - 61.171.92.202@1001@ss@c5a112b9
-  - 91.186.215.199@443@vless@eb761fa3
 - name: PG-Sage
   type: load-balance
   url: http://www.eastmoney.com
@@ -571,15 +576,15 @@ proxy-groups:
   - 154.37.223.25@52080@vmess@e45a5ab9
   - 154.37.223.25@11685@vmess@4bae9c37
   - 172.86.91.58@8443@vless@34dd7a86
-  - 152.233.28.200@8443@vless@6f85674d
   - bypass.grinoree.ru@8443@vless@5bed4832
   - 149.28.87.17@443@vless@a1bde089
+  - 87.120.126.218@443@vless@036c7d8f
+  - 63.141.128.8@443@vless@dc3e0950
   - 154.36.176.47@8443@vless@116fbab1
   - 141.227.152.129@8388@ss@d7364e9d
   - 149.33.31.115@14302@vless@502bf2e7
-  - 192.200.160.252@443@vless@1b324bb0
+  - yixixiawa.xyz@25676@vless@bd1055f1
   - 61.171.92.202@1001@ss@c5a112b9
-  - 91.186.215.199@443@vless@eb761fa3
 - name: PG-CN
   type: load-balance
   url: https://www.sse.com.cn
@@ -608,14 +613,14 @@ proxy-groups:
   - 45.198.87.223@8443@vless@4317b0a5
   - 154.37.223.25@52080@vmess@e45a5ab9
   - 154.37.223.25@11685@vmess@4bae9c37
-  - 152.233.28.200@8443@vless@6f85674d
   - bypass.grinoree.ru@8443@vless@5bed4832
+  - 87.120.126.218@443@vless@036c7d8f
+  - 63.141.128.8@443@vless@dc3e0950
   - 154.36.176.47@8443@vless@116fbab1
   - 141.227.152.129@8388@ss@d7364e9d
   - 149.33.31.115@14302@vless@502bf2e7
-  - 192.200.160.252@443@vless@1b324bb0
+  - yixixiawa.xyz@25676@vless@bd1055f1
   - 61.171.92.202@1001@ss@c5a112b9
-  - 91.186.215.199@443@vless@eb761fa3
   - PG-fast
   - PG-default
 - name: PG-GitHub
@@ -638,14 +643,14 @@ proxy-groups:
   - 45.198.87.223@8443@vless@4317b0a5
   - 154.37.223.25@52080@vmess@e45a5ab9
   - 154.37.223.25@11685@vmess@4bae9c37
-  - 152.233.28.200@8443@vless@6f85674d
   - bypass.grinoree.ru@8443@vless@5bed4832
+  - 87.120.126.218@443@vless@036c7d8f
+  - 63.141.128.8@443@vless@dc3e0950
   - 154.36.176.47@8443@vless@116fbab1
   - 141.227.152.129@8388@ss@d7364e9d
   - 149.33.31.115@14302@vless@502bf2e7
-  - 192.200.160.252@443@vless@1b324bb0
+  - yixixiawa.xyz@25676@vless@bd1055f1
   - 61.171.92.202@1001@ss@c5a112b9
-  - 91.186.215.199@443@vless@eb761fa3
   - PG-fast
   - PG-default
 - name: PG-YouTube
@@ -668,14 +673,14 @@ proxy-groups:
   - 45.198.87.223@8443@vless@4317b0a5
   - 154.37.223.25@52080@vmess@e45a5ab9
   - 154.37.223.25@11685@vmess@4bae9c37
-  - 152.233.28.200@8443@vless@6f85674d
   - bypass.grinoree.ru@8443@vless@5bed4832
+  - 87.120.126.218@443@vless@036c7d8f
+  - 63.141.128.8@443@vless@dc3e0950
   - 154.36.176.47@8443@vless@116fbab1
   - 141.227.152.129@8388@ss@d7364e9d
   - 149.33.31.115@14302@vless@502bf2e7
-  - 192.200.160.252@443@vless@1b324bb0
+  - yixixiawa.xyz@25676@vless@bd1055f1
   - 61.171.92.202@1001@ss@c5a112b9
-  - 91.186.215.199@443@vless@eb761fa3
   - PG-fast
   - PG-default
 - name: PG-Twitter
@@ -698,14 +703,14 @@ proxy-groups:
   - 45.198.87.223@8443@vless@4317b0a5
   - 154.37.223.25@52080@vmess@e45a5ab9
   - 154.37.223.25@11685@vmess@4bae9c37
-  - 152.233.28.200@8443@vless@6f85674d
   - bypass.grinoree.ru@8443@vless@5bed4832
+  - 87.120.126.218@443@vless@036c7d8f
+  - 63.141.128.8@443@vless@dc3e0950
   - 154.36.176.47@8443@vless@116fbab1
   - 141.227.152.129@8388@ss@d7364e9d
   - 149.33.31.115@14302@vless@502bf2e7
-  - 192.200.160.252@443@vless@1b324bb0
+  - yixixiawa.xyz@25676@vless@bd1055f1
   - 61.171.92.202@1001@ss@c5a112b9
-  - 91.186.215.199@443@vless@eb761fa3
   - PG-fast
   - PG-default
 rule-providers:
