@@ -227,22 +227,6 @@ proxies:
   skip-cert-verify: true
   servername: ams1.fromblancwithlove.com
   client-fingerprint: chrome
-- name: 45.159.12.8@8443@vless@3e9d0325
-  type: vless
-  server: 45.159.12.8
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  network: tcp
-  tls: true
-  servername: ams1.fromblancwithlove.com
-- name: 45.159.12.25@8443@vless@05907f4f
-  type: vless
-  server: 45.159.12.25
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  network: tcp
-  tls: true
-  servername: ams1.fromblancwithlove.com
 - name: 82.40.23.19@443@vless@4ddb1b1c
   type: vless
   server: 82.40.23.19
@@ -417,24 +401,20 @@ proxies:
     headers:
       Host: s5.868001.xyz
     path: /proxyip=tw.william.us.ci
-- name: 63.141.128.8@443@vless@dc3e0950
+- name: 192.200.160.252@443@vless@1b324bb0
   type: vless
-  server: 63.141.128.8
+  server: 192.200.160.252
   port: 443
-  uuid: 5b6be23b-dff4-428f-8a60-4f11568abe12
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: sync.amordad.xyz
   network: ws
+  servername: sync.amordad.xyz
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  uuid: 5b6be23b-dff4-428f-8a60-4f11568abe12
   ws-opts:
-    path: /api/v1/stream
     headers:
       Host: sync.amordad.xyz
-- name: 106.52.215.138@7890@socks5@8700574f
-  type: socks5
-  server: 106.52.215.138
-  port: 7890
+    path: /api/v1/stream
 - name: yixixiawa.xyz@25676@vless@bd1055f1
   type: vless
   server: 111.119.240.8
@@ -449,29 +429,18 @@ proxies:
     public-key: qzoJdZ6dTqapZ2SKlNZ5tvU2JfbxfPJ3vubdZ4264EU
     short-id: 7d93be5bb180
   sni: yixixiawa.xyz
-- name: 13.206.30.146@443@vless@d2b54b0d
-  type: vless
-  server: 13.206.30.146
-  port: 443
-  client-fingerprint: chrome
-  encryption: none
-  flow: xtls-rprx-vision
-  network: tcp
-  packet-encoding: xudp
-  reality-opts:
-    public-key: dh7j66CLSJLbHIagVfK1U05LC2EPaZ-Puo4KYbQgsTI
-    short-id: db055ed7c3b11623
-  servername: www.microsoft.com
-  skip-cert-verify: false
-  tls: true
-  udp: true
-  uuid: 74c5238a-79a8-4723-aaf9-7b4ac7cb86bd
 - name: 23.149.28.8.sslip.io@8443@trojan@044cc738
   type: trojan
   server: 23.149.28.8.sslip.io
   port: 8443
   password: 78c6cf8f30399bad3f63f15a9600a8ef
   udp: true
+- name: 167.233.116.204@37716@vless@a07bdbac
+  type: vless
+  server: 167.233.116.204
+  port: 37716
+  uuid: 9d09a22b-acf7-4da2-923c-3dc3a3442fbb
+  network: tcp
 - name: 152.233.28.202@8443@vless@b0bb6023
   type: vless
   server: 152.233.28.202
@@ -498,12 +467,6 @@ proxies:
     public-key: Dgu9RaToLbQcM1NCf_pS3ezHj6LsBQSYu50zWs5A6Qk
     short-id: 57cc65bfd5ef7465
   client-fingerprint: chrome
-- name: 167.233.116.204@37716@vless@a07bdbac
-  type: vless
-  server: 167.233.116.204
-  port: 37716
-  uuid: 9d09a22b-acf7-4da2-923c-3dc3a3442fbb
-  network: tcp
 - name: 107.173.27.219@6666@vmess@3f406f3a
   type: vmess
   server: 107.173.27.219
@@ -516,6 +479,14 @@ proxies:
   ws-opts:
     host: youtube.com
     path: /youtube
+- name: 61.171.92.202@1001@ss@c5a112b9
+  type: ss
+  server: 61.171.92.202
+  port: 1001
+  cipher: aes-256-gcm
+  password: '123'
+  skip-cert-verify: false
+  udp: false
 - name: 217.28.48.29@25752@vless@e7955d3b
   type: vless
   server: 217.28.48.29
@@ -532,8 +503,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 79.127.249.221@8443@vless@3291db19
-  - 45.159.12.8@8443@vless@3e9d0325
-  - 45.159.12.25@8443@vless@05907f4f
   - 82.40.23.19@443@vless@4ddb1b1c
   - 154.37.223.25@41729@vmess@35508258
   - 152.233.28.201@8443@vless@e35ee19c
@@ -548,15 +517,14 @@ proxy-groups:
   - 103.182.97.12@30824@vmess@6b6fad15
   - 149.33.31.115@14302@vless@502bf2e7
   - 154.36.176.47@8443@vless@a66d7539
-  - 63.141.128.8@443@vless@dc3e0950
-  - 106.52.215.138@7890@socks5@8700574f
+  - 192.200.160.252@443@vless@1b324bb0
   - yixixiawa.xyz@25676@vless@bd1055f1
-  - 13.206.30.146@443@vless@d2b54b0d
   - 23.149.28.8.sslip.io@8443@trojan@044cc738
+  - 167.233.116.204@37716@vless@a07bdbac
   - 152.233.28.202@8443@vless@b0bb6023
   - 78.40.117.131@443@vless@7af1e9e3
-  - 167.233.116.204@37716@vless@a07bdbac
   - 107.173.27.219@6666@vmess@3f406f3a
+  - 61.171.92.202@1001@ss@c5a112b9
   - 217.28.48.29@25752@vless@e7955d3b
 - name: PG-default
   type: fallback
@@ -566,8 +534,6 @@ proxy-groups:
   proxies:
   - PG-fast
   - 79.127.249.221@8443@vless@3291db19
-  - 45.159.12.8@8443@vless@3e9d0325
-  - 45.159.12.25@8443@vless@05907f4f
   - 82.40.23.19@443@vless@4ddb1b1c
   - 154.37.223.25@41729@vmess@35508258
   - 152.233.28.201@8443@vless@e35ee19c
@@ -582,15 +548,14 @@ proxy-groups:
   - 103.182.97.12@30824@vmess@6b6fad15
   - 149.33.31.115@14302@vless@502bf2e7
   - 154.36.176.47@8443@vless@a66d7539
-  - 63.141.128.8@443@vless@dc3e0950
-  - 106.52.215.138@7890@socks5@8700574f
+  - 192.200.160.252@443@vless@1b324bb0
   - yixixiawa.xyz@25676@vless@bd1055f1
-  - 13.206.30.146@443@vless@d2b54b0d
   - 23.149.28.8.sslip.io@8443@trojan@044cc738
+  - 167.233.116.204@37716@vless@a07bdbac
   - 152.233.28.202@8443@vless@b0bb6023
   - 78.40.117.131@443@vless@7af1e9e3
-  - 167.233.116.204@37716@vless@a07bdbac
   - 107.173.27.219@6666@vmess@3f406f3a
+  - 61.171.92.202@1001@ss@c5a112b9
   - 217.28.48.29@25752@vless@e7955d3b
 - name: PG-AnTing
   type: load-balance
@@ -600,8 +565,6 @@ proxy-groups:
   strategy: round-robin
   proxies:
   - 79.127.249.221@8443@vless@3291db19
-  - 45.159.12.8@8443@vless@3e9d0325
-  - 45.159.12.25@8443@vless@05907f4f
   - 82.40.23.19@443@vless@4ddb1b1c
   - 154.37.223.25@41729@vmess@35508258
   - 152.233.28.201@8443@vless@e35ee19c
@@ -616,15 +579,14 @@ proxy-groups:
   - 103.182.97.12@30824@vmess@6b6fad15
   - 149.33.31.115@14302@vless@502bf2e7
   - 154.36.176.47@8443@vless@a66d7539
-  - 63.141.128.8@443@vless@dc3e0950
-  - 106.52.215.138@7890@socks5@8700574f
+  - 192.200.160.252@443@vless@1b324bb0
   - yixixiawa.xyz@25676@vless@bd1055f1
-  - 13.206.30.146@443@vless@d2b54b0d
   - 23.149.28.8.sslip.io@8443@trojan@044cc738
+  - 167.233.116.204@37716@vless@a07bdbac
   - 152.233.28.202@8443@vless@b0bb6023
   - 78.40.117.131@443@vless@7af1e9e3
-  - 167.233.116.204@37716@vless@a07bdbac
   - 107.173.27.219@6666@vmess@3f406f3a
+  - 61.171.92.202@1001@ss@c5a112b9
   - 217.28.48.29@25752@vless@e7955d3b
 - name: PG-Sage
   type: load-balance
@@ -634,8 +596,6 @@ proxy-groups:
   strategy: round-robin
   proxies:
   - 79.127.249.221@8443@vless@3291db19
-  - 45.159.12.8@8443@vless@3e9d0325
-  - 45.159.12.25@8443@vless@05907f4f
   - 82.40.23.19@443@vless@4ddb1b1c
   - 154.37.223.25@41729@vmess@35508258
   - 152.233.28.201@8443@vless@e35ee19c
@@ -650,15 +610,14 @@ proxy-groups:
   - 103.182.97.12@30824@vmess@6b6fad15
   - 149.33.31.115@14302@vless@502bf2e7
   - 154.36.176.47@8443@vless@a66d7539
-  - 63.141.128.8@443@vless@dc3e0950
-  - 106.52.215.138@7890@socks5@8700574f
+  - 192.200.160.252@443@vless@1b324bb0
   - yixixiawa.xyz@25676@vless@bd1055f1
-  - 13.206.30.146@443@vless@d2b54b0d
   - 23.149.28.8.sslip.io@8443@trojan@044cc738
+  - 167.233.116.204@37716@vless@a07bdbac
   - 152.233.28.202@8443@vless@b0bb6023
   - 78.40.117.131@443@vless@7af1e9e3
-  - 167.233.116.204@37716@vless@a07bdbac
   - 107.173.27.219@6666@vmess@3f406f3a
+  - 61.171.92.202@1001@ss@c5a112b9
   - 217.28.48.29@25752@vless@e7955d3b
 - name: PG-CN
   type: load-balance
@@ -668,7 +627,7 @@ proxy-groups:
   strategy: round-robin
   proxies:
   - 103.182.97.12@30824@vmess@6b6fad15
-  - 106.52.215.138@7890@socks5@8700574f
+  - 61.171.92.202@1001@ss@c5a112b9
 - name: PG-Google
   type: url-test
   url: https://www.google.com/generate_204
@@ -681,8 +640,6 @@ proxy-groups:
   - 23.149.28.8.sslip.io@8443@trojan@044cc738
   - 107.173.27.219@6666@vmess@3f406f3a
   - 79.127.249.221@8443@vless@3291db19
-  - 45.159.12.8@8443@vless@3e9d0325
-  - 45.159.12.25@8443@vless@05907f4f
   - 82.40.23.19@443@vless@4ddb1b1c
   - 154.37.223.25@41729@vmess@35508258
   - 152.233.28.201@8443@vless@e35ee19c
@@ -695,13 +652,12 @@ proxy-groups:
   - 103.182.97.12@30824@vmess@6b6fad15
   - 149.33.31.115@14302@vless@502bf2e7
   - 154.36.176.47@8443@vless@a66d7539
-  - 63.141.128.8@443@vless@dc3e0950
-  - 106.52.215.138@7890@socks5@8700574f
+  - 192.200.160.252@443@vless@1b324bb0
   - yixixiawa.xyz@25676@vless@bd1055f1
-  - 13.206.30.146@443@vless@d2b54b0d
+  - 167.233.116.204@37716@vless@a07bdbac
   - 152.233.28.202@8443@vless@b0bb6023
   - 78.40.117.131@443@vless@7af1e9e3
-  - 167.233.116.204@37716@vless@a07bdbac
+  - 61.171.92.202@1001@ss@c5a112b9
   - 217.28.48.29@25752@vless@e7955d3b
   - PG-fast
   - PG-default
@@ -717,8 +673,6 @@ proxy-groups:
   - 23.149.28.8.sslip.io@8443@trojan@044cc738
   - 107.173.27.219@6666@vmess@3f406f3a
   - 79.127.249.221@8443@vless@3291db19
-  - 45.159.12.8@8443@vless@3e9d0325
-  - 45.159.12.25@8443@vless@05907f4f
   - 82.40.23.19@443@vless@4ddb1b1c
   - 154.37.223.25@41729@vmess@35508258
   - 152.233.28.201@8443@vless@e35ee19c
@@ -731,13 +685,12 @@ proxy-groups:
   - 103.182.97.12@30824@vmess@6b6fad15
   - 149.33.31.115@14302@vless@502bf2e7
   - 154.36.176.47@8443@vless@a66d7539
-  - 63.141.128.8@443@vless@dc3e0950
-  - 106.52.215.138@7890@socks5@8700574f
+  - 192.200.160.252@443@vless@1b324bb0
   - yixixiawa.xyz@25676@vless@bd1055f1
-  - 13.206.30.146@443@vless@d2b54b0d
+  - 167.233.116.204@37716@vless@a07bdbac
   - 152.233.28.202@8443@vless@b0bb6023
   - 78.40.117.131@443@vless@7af1e9e3
-  - 167.233.116.204@37716@vless@a07bdbac
+  - 61.171.92.202@1001@ss@c5a112b9
   - 217.28.48.29@25752@vless@e7955d3b
   - PG-fast
   - PG-default
@@ -753,8 +706,6 @@ proxy-groups:
   - 23.149.28.8.sslip.io@8443@trojan@044cc738
   - 107.173.27.219@6666@vmess@3f406f3a
   - 79.127.249.221@8443@vless@3291db19
-  - 45.159.12.8@8443@vless@3e9d0325
-  - 45.159.12.25@8443@vless@05907f4f
   - 82.40.23.19@443@vless@4ddb1b1c
   - 154.37.223.25@41729@vmess@35508258
   - 152.233.28.201@8443@vless@e35ee19c
@@ -767,13 +718,12 @@ proxy-groups:
   - 103.182.97.12@30824@vmess@6b6fad15
   - 149.33.31.115@14302@vless@502bf2e7
   - 154.36.176.47@8443@vless@a66d7539
-  - 63.141.128.8@443@vless@dc3e0950
-  - 106.52.215.138@7890@socks5@8700574f
+  - 192.200.160.252@443@vless@1b324bb0
   - yixixiawa.xyz@25676@vless@bd1055f1
-  - 13.206.30.146@443@vless@d2b54b0d
+  - 167.233.116.204@37716@vless@a07bdbac
   - 152.233.28.202@8443@vless@b0bb6023
   - 78.40.117.131@443@vless@7af1e9e3
-  - 167.233.116.204@37716@vless@a07bdbac
+  - 61.171.92.202@1001@ss@c5a112b9
   - 217.28.48.29@25752@vless@e7955d3b
   - PG-fast
   - PG-default
@@ -789,8 +739,6 @@ proxy-groups:
   - 23.149.28.8.sslip.io@8443@trojan@044cc738
   - 107.173.27.219@6666@vmess@3f406f3a
   - 79.127.249.221@8443@vless@3291db19
-  - 45.159.12.8@8443@vless@3e9d0325
-  - 45.159.12.25@8443@vless@05907f4f
   - 82.40.23.19@443@vless@4ddb1b1c
   - 154.37.223.25@41729@vmess@35508258
   - 152.233.28.201@8443@vless@e35ee19c
@@ -803,13 +751,12 @@ proxy-groups:
   - 103.182.97.12@30824@vmess@6b6fad15
   - 149.33.31.115@14302@vless@502bf2e7
   - 154.36.176.47@8443@vless@a66d7539
-  - 63.141.128.8@443@vless@dc3e0950
-  - 106.52.215.138@7890@socks5@8700574f
+  - 192.200.160.252@443@vless@1b324bb0
   - yixixiawa.xyz@25676@vless@bd1055f1
-  - 13.206.30.146@443@vless@d2b54b0d
+  - 167.233.116.204@37716@vless@a07bdbac
   - 152.233.28.202@8443@vless@b0bb6023
   - 78.40.117.131@443@vless@7af1e9e3
-  - 167.233.116.204@37716@vless@a07bdbac
+  - 61.171.92.202@1001@ss@c5a112b9
   - 217.28.48.29@25752@vless@e7955d3b
   - PG-fast
   - PG-default
