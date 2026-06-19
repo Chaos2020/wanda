@@ -243,15 +243,6 @@ proxies:
   tls: true
   udp: true
   uuid: ff19693c-11f3-4df9-8713-79a85a5ca090
-- name: 154.37.223.25@41729@vmess@35508258
-  type: vmess
-  server: 154.37.223.25
-  port: 41729
-  uuid: 27d3dffc-1f3a-4bff-efd0-32ac3e786a7e
-  alterId: 0
-  cipher: auto
-  network: http
-  tls: false
 - name: 152.233.28.201@8443@vless@e35ee19c
   type: vless
   server: 152.233.28.201
@@ -264,6 +255,15 @@ proxies:
   udp: true
   uuid: 394f6981-a782-4779-9a85-e6cf22935d93
   xudp: true
+- name: 154.37.223.25@41729@vmess@35508258
+  type: vmess
+  server: 154.37.223.25
+  port: 41729
+  uuid: 27d3dffc-1f3a-4bff-efd0-32ac3e786a7e
+  alterId: 0
+  cipher: auto
+  network: http
+  tls: false
 - name: 221.150.109.89@59490@ss@698c9fc5
   type: ss
   server: 221.150.109.89
@@ -287,32 +287,6 @@ proxies:
   tls: true
   udp: true
   uuid: 7896c501-248f-4068-bc2f-363c91ba5122
-- name: 154.37.223.25@11685@vmess@4bae9c37
-  type: vmess
-  server: 154.37.223.25
-  port: 11685
-  alterId: 0
-  cipher: auto
-  http-opts:
-    method: GET
-    path:
-    - /
-  network: http
-  tls: false
-  uuid: db35e047-9b1d-4f8a-b0ca-21318018fec2
-- name: 154.37.223.25@52080@vmess@e45a5ab9
-  type: vmess
-  server: 154.37.223.25
-  port: 52080
-  alterId: 0
-  cipher: auto
-  http-opts:
-    method: GET
-    path:
-    - /QQqun-737805443
-  network: http
-  tls: false
-  uuid: 065c9832-3869-44c6-8883-b80013cb6397
 - name: bypass.grinoree.ru@8443@vless@5bed4832
   type: vless
   server: 45.198.87.84
@@ -342,6 +316,32 @@ proxies:
     public-key: FVL0r87K3-vUP2KXQX1juLMFEHJtvxwKM-nm6_PYllc
     short-id: cafe01234567
   flow: xtls-rprx-vision
+- name: 154.37.223.25@11685@vmess@4bae9c37
+  type: vmess
+  server: 154.37.223.25
+  port: 11685
+  alterId: 0
+  cipher: auto
+  http-opts:
+    method: GET
+    path:
+    - /
+  network: http
+  tls: false
+  uuid: db35e047-9b1d-4f8a-b0ca-21318018fec2
+- name: 154.37.223.25@52080@vmess@e45a5ab9
+  type: vmess
+  server: 154.37.223.25
+  port: 52080
+  alterId: 0
+  cipher: auto
+  http-opts:
+    method: GET
+    path:
+    - /QQqun-737805443
+  network: http
+  tls: false
+  uuid: 065c9832-3869-44c6-8883-b80013cb6397
 - name: 152.233.28.200@8443@vless@d57ede19
   type: vless
   server: 152.233.28.200
@@ -401,20 +401,38 @@ proxies:
     headers:
       Host: s5.868001.xyz
     path: /proxyip=tw.william.us.ci
-- name: 192.200.160.252@443@vless@1b324bb0
+- name: 63.141.128.8@443@vless@dc3e0950
   type: vless
-  server: 192.200.160.252
+  server: 63.141.128.8
   port: 443
-  network: ws
-  servername: sync.amordad.xyz
-  skip-cert-verify: false
-  tfo: false
-  tls: true
   uuid: 5b6be23b-dff4-428f-8a60-4f11568abe12
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: sync.amordad.xyz
+  network: ws
   ws-opts:
+    path: /api/v1/stream
     headers:
       Host: sync.amordad.xyz
-    path: /api/v1/stream
+- name: 23.149.28.8.sslip.io@8443@trojan@044cc738
+  type: trojan
+  server: 23.149.28.8.sslip.io
+  port: 8443
+  password: 78c6cf8f30399bad3f63f15a9600a8ef
+  udp: true
+- name: 107.173.27.219@6666@vmess@3f406f3a
+  type: vmess
+  server: 107.173.27.219
+  port: 6666
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  uuid: f0a2fbe5-29bf-468c-ddc1-b524552d1a23
+  ws-opts:
+    host: youtube.com
+    path: /youtube
 - name: yixixiawa.xyz@25676@vless@bd1055f1
   type: vless
   server: 111.119.240.8
@@ -429,56 +447,30 @@ proxies:
     public-key: qzoJdZ6dTqapZ2SKlNZ5tvU2JfbxfPJ3vubdZ4264EU
     short-id: 7d93be5bb180
   sni: yixixiawa.xyz
-- name: 23.149.28.8.sslip.io@8443@trojan@044cc738
-  type: trojan
-  server: 23.149.28.8.sslip.io
-  port: 8443
-  password: 78c6cf8f30399bad3f63f15a9600a8ef
-  udp: true
-- name: 167.233.116.204@37716@vless@a07bdbac
+- name: 217.28.48.29@25752@vless@e7955d3b
   type: vless
-  server: 167.233.116.204
-  port: 37716
-  uuid: 9d09a22b-acf7-4da2-923c-3dc3a3442fbb
-  network: tcp
-- name: 152.233.28.202@8443@vless@b0bb6023
+  server: 217.28.48.29
+  port: 25752
+  uuid: 27f2ae85-3e15-4a9a-9c71-49ee032e7b26
+  network: 'tcp '
+  flow: ''
+- name: 13.206.30.146@443@vless@d2b54b0d
   type: vless
-  server: 152.233.28.202
-  port: 8443
+  server: 13.206.30.146
+  port: 443
+  client-fingerprint: chrome
   encryption: none
+  flow: xtls-rprx-vision
   network: tcp
   packet-encoding: xudp
-  servername: ams1.fromblancwithlove.com
+  reality-opts:
+    public-key: dh7j66CLSJLbHIagVfK1U05LC2EPaZ-Puo4KYbQgsTI
+    short-id: db055ed7c3b11623
+  servername: www.microsoft.com
   skip-cert-verify: false
   tls: true
   udp: true
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-- name: 78.40.117.131@443@vless@7af1e9e3
-  type: vless
-  server: 78.40.117.131
-  port: 443
-  uuid: 1281ef13-f1cd-493b-903e-4c2f4ffe1eba
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: ikea.com
-  skip-cert-verify: true
-  reality-opts:
-    public-key: Dgu9RaToLbQcM1NCf_pS3ezHj6LsBQSYu50zWs5A6Qk
-    short-id: 57cc65bfd5ef7465
-  client-fingerprint: chrome
-- name: 107.173.27.219@6666@vmess@3f406f3a
-  type: vmess
-  server: 107.173.27.219
-  port: 6666
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  uuid: f0a2fbe5-29bf-468c-ddc1-b524552d1a23
-  ws-opts:
-    host: youtube.com
-    path: /youtube
+  uuid: 74c5238a-79a8-4723-aaf9-7b4ac7cb86bd
 - name: 61.171.92.202@1001@ss@c5a112b9
   type: ss
   server: 61.171.92.202
@@ -487,13 +479,14 @@ proxies:
   password: '123'
   skip-cert-verify: false
   udp: false
-- name: 217.28.48.29@25752@vless@e7955d3b
-  type: vless
-  server: 217.28.48.29
-  port: 25752
-  uuid: 27f2ae85-3e15-4a9a-9c71-49ee032e7b26
-  network: 'tcp '
-  flow: ''
+- name: 103.182.97.12@30809@vmess@a042f620
+  type: vmess
+  server: 103.182.97.12
+  port: 30809
+  alterId: 2
+  cipher: auto
+  tls: false
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 proxy-groups:
 - name: PG-fast
   type: url-test
@@ -504,28 +497,27 @@ proxy-groups:
   proxies:
   - 79.127.249.221@8443@vless@3291db19
   - 82.40.23.19@443@vless@4ddb1b1c
-  - 154.37.223.25@41729@vmess@35508258
   - 152.233.28.201@8443@vless@e35ee19c
+  - 154.37.223.25@41729@vmess@35508258
   - 221.150.109.89@59490@ss@698c9fc5
   - 45.198.87.223@8443@vless@4317b0a5
-  - 154.37.223.25@11685@vmess@4bae9c37
-  - 154.37.223.25@52080@vmess@e45a5ab9
   - bypass.grinoree.ru@8443@vless@5bed4832
   - 172.86.91.58@8443@vless@34dd7a86
+  - 154.37.223.25@11685@vmess@4bae9c37
+  - 154.37.223.25@52080@vmess@e45a5ab9
   - 152.233.28.200@8443@vless@d57ede19
   - 149.28.87.17@443@vless@a1bde089
   - 103.182.97.12@30824@vmess@6b6fad15
   - 149.33.31.115@14302@vless@502bf2e7
   - 154.36.176.47@8443@vless@a66d7539
-  - 192.200.160.252@443@vless@1b324bb0
-  - yixixiawa.xyz@25676@vless@bd1055f1
+  - 63.141.128.8@443@vless@dc3e0950
   - 23.149.28.8.sslip.io@8443@trojan@044cc738
-  - 167.233.116.204@37716@vless@a07bdbac
-  - 152.233.28.202@8443@vless@b0bb6023
-  - 78.40.117.131@443@vless@7af1e9e3
   - 107.173.27.219@6666@vmess@3f406f3a
-  - 61.171.92.202@1001@ss@c5a112b9
+  - yixixiawa.xyz@25676@vless@bd1055f1
   - 217.28.48.29@25752@vless@e7955d3b
+  - 13.206.30.146@443@vless@d2b54b0d
+  - 61.171.92.202@1001@ss@c5a112b9
+  - 103.182.97.12@30809@vmess@a042f620
 - name: PG-default
   type: fallback
   url: https://www.google.com/generate_204
@@ -535,28 +527,27 @@ proxy-groups:
   - PG-fast
   - 79.127.249.221@8443@vless@3291db19
   - 82.40.23.19@443@vless@4ddb1b1c
-  - 154.37.223.25@41729@vmess@35508258
   - 152.233.28.201@8443@vless@e35ee19c
+  - 154.37.223.25@41729@vmess@35508258
   - 221.150.109.89@59490@ss@698c9fc5
   - 45.198.87.223@8443@vless@4317b0a5
-  - 154.37.223.25@11685@vmess@4bae9c37
-  - 154.37.223.25@52080@vmess@e45a5ab9
   - bypass.grinoree.ru@8443@vless@5bed4832
   - 172.86.91.58@8443@vless@34dd7a86
+  - 154.37.223.25@11685@vmess@4bae9c37
+  - 154.37.223.25@52080@vmess@e45a5ab9
   - 152.233.28.200@8443@vless@d57ede19
   - 149.28.87.17@443@vless@a1bde089
   - 103.182.97.12@30824@vmess@6b6fad15
   - 149.33.31.115@14302@vless@502bf2e7
   - 154.36.176.47@8443@vless@a66d7539
-  - 192.200.160.252@443@vless@1b324bb0
-  - yixixiawa.xyz@25676@vless@bd1055f1
+  - 63.141.128.8@443@vless@dc3e0950
   - 23.149.28.8.sslip.io@8443@trojan@044cc738
-  - 167.233.116.204@37716@vless@a07bdbac
-  - 152.233.28.202@8443@vless@b0bb6023
-  - 78.40.117.131@443@vless@7af1e9e3
   - 107.173.27.219@6666@vmess@3f406f3a
-  - 61.171.92.202@1001@ss@c5a112b9
+  - yixixiawa.xyz@25676@vless@bd1055f1
   - 217.28.48.29@25752@vless@e7955d3b
+  - 13.206.30.146@443@vless@d2b54b0d
+  - 61.171.92.202@1001@ss@c5a112b9
+  - 103.182.97.12@30809@vmess@a042f620
 - name: PG-AnTing
   type: load-balance
   url: https://www.google.com/generate_204
@@ -566,28 +557,27 @@ proxy-groups:
   proxies:
   - 79.127.249.221@8443@vless@3291db19
   - 82.40.23.19@443@vless@4ddb1b1c
-  - 154.37.223.25@41729@vmess@35508258
   - 152.233.28.201@8443@vless@e35ee19c
+  - 154.37.223.25@41729@vmess@35508258
   - 221.150.109.89@59490@ss@698c9fc5
   - 45.198.87.223@8443@vless@4317b0a5
-  - 154.37.223.25@11685@vmess@4bae9c37
-  - 154.37.223.25@52080@vmess@e45a5ab9
   - bypass.grinoree.ru@8443@vless@5bed4832
   - 172.86.91.58@8443@vless@34dd7a86
+  - 154.37.223.25@11685@vmess@4bae9c37
+  - 154.37.223.25@52080@vmess@e45a5ab9
   - 152.233.28.200@8443@vless@d57ede19
   - 149.28.87.17@443@vless@a1bde089
   - 103.182.97.12@30824@vmess@6b6fad15
   - 149.33.31.115@14302@vless@502bf2e7
   - 154.36.176.47@8443@vless@a66d7539
-  - 192.200.160.252@443@vless@1b324bb0
-  - yixixiawa.xyz@25676@vless@bd1055f1
+  - 63.141.128.8@443@vless@dc3e0950
   - 23.149.28.8.sslip.io@8443@trojan@044cc738
-  - 167.233.116.204@37716@vless@a07bdbac
-  - 152.233.28.202@8443@vless@b0bb6023
-  - 78.40.117.131@443@vless@7af1e9e3
   - 107.173.27.219@6666@vmess@3f406f3a
-  - 61.171.92.202@1001@ss@c5a112b9
+  - yixixiawa.xyz@25676@vless@bd1055f1
   - 217.28.48.29@25752@vless@e7955d3b
+  - 13.206.30.146@443@vless@d2b54b0d
+  - 61.171.92.202@1001@ss@c5a112b9
+  - 103.182.97.12@30809@vmess@a042f620
 - name: PG-Sage
   type: load-balance
   url: http://www.eastmoney.com
@@ -597,28 +587,27 @@ proxy-groups:
   proxies:
   - 79.127.249.221@8443@vless@3291db19
   - 82.40.23.19@443@vless@4ddb1b1c
-  - 154.37.223.25@41729@vmess@35508258
   - 152.233.28.201@8443@vless@e35ee19c
+  - 154.37.223.25@41729@vmess@35508258
   - 221.150.109.89@59490@ss@698c9fc5
   - 45.198.87.223@8443@vless@4317b0a5
-  - 154.37.223.25@11685@vmess@4bae9c37
-  - 154.37.223.25@52080@vmess@e45a5ab9
   - bypass.grinoree.ru@8443@vless@5bed4832
   - 172.86.91.58@8443@vless@34dd7a86
+  - 154.37.223.25@11685@vmess@4bae9c37
+  - 154.37.223.25@52080@vmess@e45a5ab9
   - 152.233.28.200@8443@vless@d57ede19
   - 149.28.87.17@443@vless@a1bde089
   - 103.182.97.12@30824@vmess@6b6fad15
   - 149.33.31.115@14302@vless@502bf2e7
   - 154.36.176.47@8443@vless@a66d7539
-  - 192.200.160.252@443@vless@1b324bb0
-  - yixixiawa.xyz@25676@vless@bd1055f1
+  - 63.141.128.8@443@vless@dc3e0950
   - 23.149.28.8.sslip.io@8443@trojan@044cc738
-  - 167.233.116.204@37716@vless@a07bdbac
-  - 152.233.28.202@8443@vless@b0bb6023
-  - 78.40.117.131@443@vless@7af1e9e3
   - 107.173.27.219@6666@vmess@3f406f3a
-  - 61.171.92.202@1001@ss@c5a112b9
+  - yixixiawa.xyz@25676@vless@bd1055f1
   - 217.28.48.29@25752@vless@e7955d3b
+  - 13.206.30.146@443@vless@d2b54b0d
+  - 61.171.92.202@1001@ss@c5a112b9
+  - 103.182.97.12@30809@vmess@a042f620
 - name: PG-CN
   type: load-balance
   url: https://www.sse.com.cn
@@ -628,6 +617,7 @@ proxy-groups:
   proxies:
   - 103.182.97.12@30824@vmess@6b6fad15
   - 61.171.92.202@1001@ss@c5a112b9
+  - 103.182.97.12@30809@vmess@a042f620
 - name: PG-Google
   type: url-test
   url: https://www.google.com/generate_204
@@ -641,24 +631,23 @@ proxy-groups:
   - 107.173.27.219@6666@vmess@3f406f3a
   - 79.127.249.221@8443@vless@3291db19
   - 82.40.23.19@443@vless@4ddb1b1c
-  - 154.37.223.25@41729@vmess@35508258
   - 152.233.28.201@8443@vless@e35ee19c
+  - 154.37.223.25@41729@vmess@35508258
   - 221.150.109.89@59490@ss@698c9fc5
   - 45.198.87.223@8443@vless@4317b0a5
+  - bypass.grinoree.ru@8443@vless@5bed4832
   - 154.37.223.25@11685@vmess@4bae9c37
   - 154.37.223.25@52080@vmess@e45a5ab9
-  - bypass.grinoree.ru@8443@vless@5bed4832
   - 152.233.28.200@8443@vless@d57ede19
   - 103.182.97.12@30824@vmess@6b6fad15
   - 149.33.31.115@14302@vless@502bf2e7
   - 154.36.176.47@8443@vless@a66d7539
-  - 192.200.160.252@443@vless@1b324bb0
+  - 63.141.128.8@443@vless@dc3e0950
   - yixixiawa.xyz@25676@vless@bd1055f1
-  - 167.233.116.204@37716@vless@a07bdbac
-  - 152.233.28.202@8443@vless@b0bb6023
-  - 78.40.117.131@443@vless@7af1e9e3
-  - 61.171.92.202@1001@ss@c5a112b9
   - 217.28.48.29@25752@vless@e7955d3b
+  - 13.206.30.146@443@vless@d2b54b0d
+  - 61.171.92.202@1001@ss@c5a112b9
+  - 103.182.97.12@30809@vmess@a042f620
   - PG-fast
   - PG-default
 - name: PG-GitHub
@@ -674,24 +663,23 @@ proxy-groups:
   - 107.173.27.219@6666@vmess@3f406f3a
   - 79.127.249.221@8443@vless@3291db19
   - 82.40.23.19@443@vless@4ddb1b1c
-  - 154.37.223.25@41729@vmess@35508258
   - 152.233.28.201@8443@vless@e35ee19c
+  - 154.37.223.25@41729@vmess@35508258
   - 221.150.109.89@59490@ss@698c9fc5
   - 45.198.87.223@8443@vless@4317b0a5
+  - bypass.grinoree.ru@8443@vless@5bed4832
   - 154.37.223.25@11685@vmess@4bae9c37
   - 154.37.223.25@52080@vmess@e45a5ab9
-  - bypass.grinoree.ru@8443@vless@5bed4832
   - 152.233.28.200@8443@vless@d57ede19
   - 103.182.97.12@30824@vmess@6b6fad15
   - 149.33.31.115@14302@vless@502bf2e7
   - 154.36.176.47@8443@vless@a66d7539
-  - 192.200.160.252@443@vless@1b324bb0
+  - 63.141.128.8@443@vless@dc3e0950
   - yixixiawa.xyz@25676@vless@bd1055f1
-  - 167.233.116.204@37716@vless@a07bdbac
-  - 152.233.28.202@8443@vless@b0bb6023
-  - 78.40.117.131@443@vless@7af1e9e3
-  - 61.171.92.202@1001@ss@c5a112b9
   - 217.28.48.29@25752@vless@e7955d3b
+  - 13.206.30.146@443@vless@d2b54b0d
+  - 61.171.92.202@1001@ss@c5a112b9
+  - 103.182.97.12@30809@vmess@a042f620
   - PG-fast
   - PG-default
 - name: PG-YouTube
@@ -707,24 +695,23 @@ proxy-groups:
   - 107.173.27.219@6666@vmess@3f406f3a
   - 79.127.249.221@8443@vless@3291db19
   - 82.40.23.19@443@vless@4ddb1b1c
-  - 154.37.223.25@41729@vmess@35508258
   - 152.233.28.201@8443@vless@e35ee19c
+  - 154.37.223.25@41729@vmess@35508258
   - 221.150.109.89@59490@ss@698c9fc5
   - 45.198.87.223@8443@vless@4317b0a5
+  - bypass.grinoree.ru@8443@vless@5bed4832
   - 154.37.223.25@11685@vmess@4bae9c37
   - 154.37.223.25@52080@vmess@e45a5ab9
-  - bypass.grinoree.ru@8443@vless@5bed4832
   - 152.233.28.200@8443@vless@d57ede19
   - 103.182.97.12@30824@vmess@6b6fad15
   - 149.33.31.115@14302@vless@502bf2e7
   - 154.36.176.47@8443@vless@a66d7539
-  - 192.200.160.252@443@vless@1b324bb0
+  - 63.141.128.8@443@vless@dc3e0950
   - yixixiawa.xyz@25676@vless@bd1055f1
-  - 167.233.116.204@37716@vless@a07bdbac
-  - 152.233.28.202@8443@vless@b0bb6023
-  - 78.40.117.131@443@vless@7af1e9e3
-  - 61.171.92.202@1001@ss@c5a112b9
   - 217.28.48.29@25752@vless@e7955d3b
+  - 13.206.30.146@443@vless@d2b54b0d
+  - 61.171.92.202@1001@ss@c5a112b9
+  - 103.182.97.12@30809@vmess@a042f620
   - PG-fast
   - PG-default
 - name: PG-Twitter
@@ -740,24 +727,23 @@ proxy-groups:
   - 107.173.27.219@6666@vmess@3f406f3a
   - 79.127.249.221@8443@vless@3291db19
   - 82.40.23.19@443@vless@4ddb1b1c
-  - 154.37.223.25@41729@vmess@35508258
   - 152.233.28.201@8443@vless@e35ee19c
+  - 154.37.223.25@41729@vmess@35508258
   - 221.150.109.89@59490@ss@698c9fc5
   - 45.198.87.223@8443@vless@4317b0a5
+  - bypass.grinoree.ru@8443@vless@5bed4832
   - 154.37.223.25@11685@vmess@4bae9c37
   - 154.37.223.25@52080@vmess@e45a5ab9
-  - bypass.grinoree.ru@8443@vless@5bed4832
   - 152.233.28.200@8443@vless@d57ede19
   - 103.182.97.12@30824@vmess@6b6fad15
   - 149.33.31.115@14302@vless@502bf2e7
   - 154.36.176.47@8443@vless@a66d7539
-  - 192.200.160.252@443@vless@1b324bb0
+  - 63.141.128.8@443@vless@dc3e0950
   - yixixiawa.xyz@25676@vless@bd1055f1
-  - 167.233.116.204@37716@vless@a07bdbac
-  - 152.233.28.202@8443@vless@b0bb6023
-  - 78.40.117.131@443@vless@7af1e9e3
-  - 61.171.92.202@1001@ss@c5a112b9
   - 217.28.48.29@25752@vless@e7955d3b
+  - 13.206.30.146@443@vless@d2b54b0d
+  - 61.171.92.202@1001@ss@c5a112b9
+  - 103.182.97.12@30809@vmess@a042f620
   - PG-fast
   - PG-default
 rule-providers:
