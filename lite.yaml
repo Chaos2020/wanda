@@ -340,12 +340,22 @@ proxies:
   flow: ''
   tls: true
   servername: ams1.fromblancwithlove.com
-- name: 23.149.28.8.sslip.io@8443@trojan@1a4b8488
-  type: trojan
-  server: 23.149.28.8.sslip.io
+- name: 45.198.87.223@8443@vless@4317b0a5
+  type: vless
+  server: 45.198.87.223
   port: 8443
-  password: 78c6cf8f30399bad3f63f15a9600a8ef
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  network: tcp
+  packet-encoding: xudp
+  reality-opts:
+    public-key: 7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg
+    short-id: 2715592069f36fe7
+  servername: storage.yandex.net
+  skip-cert-verify: false
+  tls: true
   udp: true
+  uuid: 7896c501-248f-4068-bc2f-363c91ba5122
 - name: proxy.netraidly.ru@40443@vless@370e1f1b
   type: vless
   server: 186.246.19.138
@@ -639,38 +649,9 @@ proxies:
     mode: packet-up
     path: /xn--q9jyb4c
     x-padding-bytes: 100-1000
-- name: 192.200.160.252@443@vless@1b324bb0
-  type: vless
-  server: 192.200.160.252
-  port: 443
-  network: ws
-  servername: sync.amordad.xyz
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  uuid: 5b6be23b-dff4-428f-8a60-4f11568abe12
-  ws-opts:
-    headers:
-      Host: sync.amordad.xyz
-    path: /api/v1/stream
-- name: vagina.zestful.bond@3443@vless@5cd527f7
-  type: vless
-  server: 31.76.110.6
-  port: 3443
-  udp: true
-  uuid: 967064b5-3272-431e-8dce-9519acfb94be
-  network: tcp
-  tls: true
-  servername: myzh.pro
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: KS0F6q2PTY1s6y2sH5PdrznYqprIkUBtS1masvcrJjo
-    short-id: 823257b7b9ab9d02
-  sni: vagina.zestful.bond
 - name: lv.faygo.bot@443@vless@20e01c4f
   type: vless
-  server: 217.217.244.131
+  server: 217.217.244.129
   port: 443
   udp: true
   uuid: 8ca5cbd3-ec16-4728-bedc-2bc0d82f0922
@@ -727,10 +708,6 @@ proxies:
     path: /fp=chrome
     headers:
       Host: newgit.jisucf.cloudns.biz
-- name: 106.52.215.138@7890@socks5@8700574f
-  type: socks5
-  server: 106.52.215.138
-  port: 7890
 - name: 82.40.23.180@443@vless@82440f93
   type: vless
   server: 82.40.23.180
@@ -764,25 +741,6 @@ proxies:
   udp: true
   uuid: 967064b5-3272-431e-8dce-9519acfb94be
   sni: usa.zestful.bond
-- name: cdn7-83.cdn-vkvideo.com@443@vless@e405c236
-  type: vless
-  server: 95.85.229.155
-  port: 443
-  client-fingerprint: firefox
-  encryption: none
-  flow: xtls-rprx-vision
-  network: tcp
-  packet-encoding: xudp
-  reality-opts:
-    _spider-x: /s/v1/ig1
-    public-key: TAuNlz-dk89N90idGXqPxKCDYVhufl_jCg-W1BjMEiQ
-    short-id: b0d8f964b7ac8ac9
-  servername: cdn7-83.cdn-vkvideo.com
-  skip-cert-verify: false
-  tls: true
-  udp: true
-  uuid: 9a2573c5-936f-4f93-8409-e43164793176
-  sni: cdn7-83.cdn-vkvideo.com
 - name: 31.77.131.86@443@vless@dbf8a939
   type: vless
   server: 31.77.131.86
@@ -814,15 +772,6 @@ proxies:
     public-key: 5mfLd7cQ9DsVW2_cHPPucMWv9MDN1kW6JORPNZIAyy8
     short-id: b0d8f964b7ac8ac9
   sni: cdn2-51.cdn-vkvideo.com
-- name: fin.oplatasite.ru@8443@vless@2bde5709
-  type: vless
-  server: 31.13.208.45
-  port: 8443
-  uuid: 9cc56b5d-2a44-4fd1-91e3-659b06255c11
-  network: tcp
-  tls: true
-  servername: vpn.oplatasite.ru
-  sni: fin.oplatasite.ru
 - name: 31.77.158.216@443@vless@559e8a26
   type: vless
   server: 31.77.158.216
@@ -839,15 +788,34 @@ proxies:
   tls: true
   udp: true
   uuid: 967064b5-3272-431e-8dce-9519acfb94be
-- name: vpn.oplatasite.ru@8443@vless@8eae78e0
+- name: cdn7-83.cdn-vkvideo.com@443@vless@e405c236
   type: vless
-  server: 87.120.166.118
+  server: 95.85.229.155
+  port: 443
+  client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  network: tcp
+  packet-encoding: xudp
+  reality-opts:
+    _spider-x: /s/v1/ig1
+    public-key: TAuNlz-dk89N90idGXqPxKCDYVhufl_jCg-W1BjMEiQ
+    short-id: b0d8f964b7ac8ac9
+  servername: cdn7-83.cdn-vkvideo.com
+  skip-cert-verify: false
+  tls: true
+  udp: true
+  uuid: 9a2573c5-936f-4f93-8409-e43164793176
+  sni: cdn7-83.cdn-vkvideo.com
+- name: fin.oplatasite.ru@8443@vless@2bde5709
+  type: vless
+  server: 31.13.208.45
   port: 8443
   uuid: 9cc56b5d-2a44-4fd1-91e3-659b06255c11
   network: tcp
   tls: true
   servername: vpn.oplatasite.ru
-  sni: vpn.oplatasite.ru
+  sni: fin.oplatasite.ru
 - name: 94.156.179.71@443@vless@ec954106
   type: vless
   server: 94.156.179.71
@@ -862,6 +830,15 @@ proxies:
   reality-opts:
     public-key: KS0F6q2PTY1s6y2sH5PdrznYqprIkUBtS1masvcrJjo
     short-id: 823257b7b9ab9d02
+- name: vpn.oplatasite.ru@8443@vless@8eae78e0
+  type: vless
+  server: 87.120.166.118
+  port: 8443
+  uuid: 9cc56b5d-2a44-4fd1-91e3-659b06255c11
+  network: tcp
+  tls: true
+  servername: vpn.oplatasite.ru
+  sni: vpn.oplatasite.ru
 - name: nl.oplatasite.ru@8443@vless@0144bcfd
   type: vless
   server: 2.26.83.47
@@ -872,6 +849,30 @@ proxies:
   tls: true
   servername: vpn.oplatasite.ru
   sni: nl.oplatasite.ru
+- name: 83.228.224.161@42549@trojan@c9937251
+  type: trojan
+  server: 83.228.224.161
+  port: 42549
+  password: SoftNetConnect
+  skip-cert-verify: true
+  sni: 'www.speedtest.net '
+- name: 45.198.87.238@8443@vless@33d43f92
+  type: vless
+  server: 45.198.87.238
+  port: 8443
+  client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  network: tcp
+  packet-encoding: xudp
+  reality-opts:
+    public-key: 7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg
+    short-id: 2715592069f36fe7
+  servername: storage.yandex.net
+  skip-cert-verify: false
+  tls: true
+  udp: true
+  uuid: 7896c501-248f-4068-bc2f-363c91ba5122
 proxy-groups:
 - name: PG-fast
   type: url-test
@@ -891,7 +892,7 @@ proxy-groups:
   - 221.150.109.89@59490@ss@698c9fc5
   - 107.173.27.219@6666@vmess@42627277
   - 152.233.28.202@8443@vless@36df3278
-  - 23.149.28.8.sslip.io@8443@trojan@1a4b8488
+  - 45.198.87.223@8443@vless@4317b0a5
   - proxy.netraidly.ru@40443@vless@370e1f1b
   - 142.91.108.139@443@vless@c2d67b67
   - storage.netraidly.ru@40443@vless@1facc314
@@ -913,24 +914,23 @@ proxy-groups:
   - 87.121.105.33@443@vless@31da6f6d
   - 216.227.169.104@443@vless@73e680aa
   - 8.6.112.121@443@vless@13a33bc4
-  - 192.200.160.252@443@vless@1b324bb0
-  - vagina.zestful.bond@3443@vless@5cd527f7
   - lv.faygo.bot@443@vless@20e01c4f
   - 157.254.223.44@34567@mieru@7af1c875
   - 43.198.206.201@37973@trojan@6e4f07f3
   - sv2.azparadox.ir@8880@vless@5deb93a1
   - 104.17.9.5@443@vless@6bb4f2b5
-  - 106.52.215.138@7890@socks5@8700574f
   - 82.40.23.180@443@vless@82440f93
   - usa.zestful.bond@443@vless@060bfc3a
-  - cdn7-83.cdn-vkvideo.com@443@vless@e405c236
   - 31.77.131.86@443@vless@dbf8a939
   - cdn2-51.cdn-vkvideo.com@443@vless@4b6d22bc
-  - fin.oplatasite.ru@8443@vless@2bde5709
   - 31.77.158.216@443@vless@559e8a26
-  - vpn.oplatasite.ru@8443@vless@8eae78e0
+  - cdn7-83.cdn-vkvideo.com@443@vless@e405c236
+  - fin.oplatasite.ru@8443@vless@2bde5709
   - 94.156.179.71@443@vless@ec954106
+  - vpn.oplatasite.ru@8443@vless@8eae78e0
   - nl.oplatasite.ru@8443@vless@0144bcfd
+  - 83.228.224.161@42549@trojan@c9937251
+  - 45.198.87.238@8443@vless@33d43f92
 - name: PG-default
   type: fallback
   url: https://www.google.com/generate_204
@@ -949,7 +949,7 @@ proxy-groups:
   - 221.150.109.89@59490@ss@698c9fc5
   - 107.173.27.219@6666@vmess@42627277
   - 152.233.28.202@8443@vless@36df3278
-  - 23.149.28.8.sslip.io@8443@trojan@1a4b8488
+  - 45.198.87.223@8443@vless@4317b0a5
   - proxy.netraidly.ru@40443@vless@370e1f1b
   - 142.91.108.139@443@vless@c2d67b67
   - storage.netraidly.ru@40443@vless@1facc314
@@ -971,24 +971,23 @@ proxy-groups:
   - 87.121.105.33@443@vless@31da6f6d
   - 216.227.169.104@443@vless@73e680aa
   - 8.6.112.121@443@vless@13a33bc4
-  - 192.200.160.252@443@vless@1b324bb0
-  - vagina.zestful.bond@3443@vless@5cd527f7
   - lv.faygo.bot@443@vless@20e01c4f
   - 157.254.223.44@34567@mieru@7af1c875
   - 43.198.206.201@37973@trojan@6e4f07f3
   - sv2.azparadox.ir@8880@vless@5deb93a1
   - 104.17.9.5@443@vless@6bb4f2b5
-  - 106.52.215.138@7890@socks5@8700574f
   - 82.40.23.180@443@vless@82440f93
   - usa.zestful.bond@443@vless@060bfc3a
-  - cdn7-83.cdn-vkvideo.com@443@vless@e405c236
   - 31.77.131.86@443@vless@dbf8a939
   - cdn2-51.cdn-vkvideo.com@443@vless@4b6d22bc
-  - fin.oplatasite.ru@8443@vless@2bde5709
   - 31.77.158.216@443@vless@559e8a26
-  - vpn.oplatasite.ru@8443@vless@8eae78e0
+  - cdn7-83.cdn-vkvideo.com@443@vless@e405c236
+  - fin.oplatasite.ru@8443@vless@2bde5709
   - 94.156.179.71@443@vless@ec954106
+  - vpn.oplatasite.ru@8443@vless@8eae78e0
   - nl.oplatasite.ru@8443@vless@0144bcfd
+  - 83.228.224.161@42549@trojan@c9937251
+  - 45.198.87.238@8443@vless@33d43f92
 - name: PG-AnTing
   type: load-balance
   url: https://www.google.com/generate_204
@@ -1007,7 +1006,7 @@ proxy-groups:
   - 221.150.109.89@59490@ss@698c9fc5
   - 107.173.27.219@6666@vmess@42627277
   - 152.233.28.202@8443@vless@36df3278
-  - 23.149.28.8.sslip.io@8443@trojan@1a4b8488
+  - 45.198.87.223@8443@vless@4317b0a5
   - proxy.netraidly.ru@40443@vless@370e1f1b
   - 142.91.108.139@443@vless@c2d67b67
   - storage.netraidly.ru@40443@vless@1facc314
@@ -1029,24 +1028,23 @@ proxy-groups:
   - 87.121.105.33@443@vless@31da6f6d
   - 216.227.169.104@443@vless@73e680aa
   - 8.6.112.121@443@vless@13a33bc4
-  - 192.200.160.252@443@vless@1b324bb0
-  - vagina.zestful.bond@3443@vless@5cd527f7
   - lv.faygo.bot@443@vless@20e01c4f
   - 157.254.223.44@34567@mieru@7af1c875
   - 43.198.206.201@37973@trojan@6e4f07f3
   - sv2.azparadox.ir@8880@vless@5deb93a1
   - 104.17.9.5@443@vless@6bb4f2b5
-  - 106.52.215.138@7890@socks5@8700574f
   - 82.40.23.180@443@vless@82440f93
   - usa.zestful.bond@443@vless@060bfc3a
-  - cdn7-83.cdn-vkvideo.com@443@vless@e405c236
   - 31.77.131.86@443@vless@dbf8a939
   - cdn2-51.cdn-vkvideo.com@443@vless@4b6d22bc
-  - fin.oplatasite.ru@8443@vless@2bde5709
   - 31.77.158.216@443@vless@559e8a26
-  - vpn.oplatasite.ru@8443@vless@8eae78e0
+  - cdn7-83.cdn-vkvideo.com@443@vless@e405c236
+  - fin.oplatasite.ru@8443@vless@2bde5709
   - 94.156.179.71@443@vless@ec954106
+  - vpn.oplatasite.ru@8443@vless@8eae78e0
   - nl.oplatasite.ru@8443@vless@0144bcfd
+  - 83.228.224.161@42549@trojan@c9937251
+  - 45.198.87.238@8443@vless@33d43f92
 - name: PG-Sage
   type: load-balance
   url: http://www.eastmoney.com
@@ -1065,7 +1063,7 @@ proxy-groups:
   - 221.150.109.89@59490@ss@698c9fc5
   - 107.173.27.219@6666@vmess@42627277
   - 152.233.28.202@8443@vless@36df3278
-  - 23.149.28.8.sslip.io@8443@trojan@1a4b8488
+  - 45.198.87.223@8443@vless@4317b0a5
   - proxy.netraidly.ru@40443@vless@370e1f1b
   - 142.91.108.139@443@vless@c2d67b67
   - storage.netraidly.ru@40443@vless@1facc314
@@ -1087,24 +1085,23 @@ proxy-groups:
   - 87.121.105.33@443@vless@31da6f6d
   - 216.227.169.104@443@vless@73e680aa
   - 8.6.112.121@443@vless@13a33bc4
-  - 192.200.160.252@443@vless@1b324bb0
-  - vagina.zestful.bond@3443@vless@5cd527f7
   - lv.faygo.bot@443@vless@20e01c4f
   - 157.254.223.44@34567@mieru@7af1c875
   - 43.198.206.201@37973@trojan@6e4f07f3
   - sv2.azparadox.ir@8880@vless@5deb93a1
   - 104.17.9.5@443@vless@6bb4f2b5
-  - 106.52.215.138@7890@socks5@8700574f
   - 82.40.23.180@443@vless@82440f93
   - usa.zestful.bond@443@vless@060bfc3a
-  - cdn7-83.cdn-vkvideo.com@443@vless@e405c236
   - 31.77.131.86@443@vless@dbf8a939
   - cdn2-51.cdn-vkvideo.com@443@vless@4b6d22bc
-  - fin.oplatasite.ru@8443@vless@2bde5709
   - 31.77.158.216@443@vless@559e8a26
-  - vpn.oplatasite.ru@8443@vless@8eae78e0
+  - cdn7-83.cdn-vkvideo.com@443@vless@e405c236
+  - fin.oplatasite.ru@8443@vless@2bde5709
   - 94.156.179.71@443@vless@ec954106
+  - vpn.oplatasite.ru@8443@vless@8eae78e0
   - nl.oplatasite.ru@8443@vless@0144bcfd
+  - 83.228.224.161@42549@trojan@c9937251
+  - 45.198.87.238@8443@vless@33d43f92
 - name: PG-CN
   type: load-balance
   url: https://www.sse.com.cn
@@ -1112,7 +1109,56 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
-  - 106.52.215.138@7890@socks5@8700574f
+  - 79.127.249.221@8443@vless@3291db19
+  - 152.233.28.201@8443@vless@b0d5c11f
+  - 82.40.23.19@443@vless@4ddb1b1c
+  - 154.37.223.25@41729@vmess@35508258
+  - 154.37.223.25@11685@vmess@4bae9c37
+  - 152.233.28.200@8443@vless@d57ede19
+  - 172.86.91.58@8443@vless@34dd7a86
+  - 154.37.223.25@52080@vmess@e45a5ab9
+  - 221.150.109.89@59490@ss@698c9fc5
+  - 107.173.27.219@6666@vmess@42627277
+  - 152.233.28.202@8443@vless@36df3278
+  - 45.198.87.223@8443@vless@4317b0a5
+  - proxy.netraidly.ru@40443@vless@370e1f1b
+  - 142.91.108.139@443@vless@c2d67b67
+  - storage.netraidly.ru@40443@vless@1facc314
+  - 217.28.48.29@25752@vless@e7955d3b
+  - 185.186.245.63@81@vless@40f51a6b
+  - 193.247.82.40@448@vless@9e3d9456
+  - docs.netraidly.ru@40443@vless@9e859726
+  - 185.147.127.101@40443@vless@e7295446
+  - 217.217.247.252@443@vless@156520d4
+  - 35.77.34.38@29642@trojan@b3fbf0c3
+  - 35.77.34.38@49277@trojan@0f0237b5
+  - 185.91.126.49@448@vless@7d0f60d1
+  - d1.cvbesty.ir@35304@vless@d6fc1732
+  - 150.241.102.175@443@vless@c9c057e7
+  - 72.56.112.226@40443@vless@ef5bf78f
+  - 64.186.242.72@443@vless@909f5cad
+  - 217.217.244.131@443@vless@7f67b45b
+  - 217.217.244.129@443@vless@ffa8ca2d
+  - 87.121.105.33@443@vless@31da6f6d
+  - 216.227.169.104@443@vless@73e680aa
+  - 8.6.112.121@443@vless@13a33bc4
+  - lv.faygo.bot@443@vless@20e01c4f
+  - 157.254.223.44@34567@mieru@7af1c875
+  - 43.198.206.201@37973@trojan@6e4f07f3
+  - sv2.azparadox.ir@8880@vless@5deb93a1
+  - 104.17.9.5@443@vless@6bb4f2b5
+  - 82.40.23.180@443@vless@82440f93
+  - usa.zestful.bond@443@vless@060bfc3a
+  - 31.77.131.86@443@vless@dbf8a939
+  - cdn2-51.cdn-vkvideo.com@443@vless@4b6d22bc
+  - 31.77.158.216@443@vless@559e8a26
+  - cdn7-83.cdn-vkvideo.com@443@vless@e405c236
+  - fin.oplatasite.ru@8443@vless@2bde5709
+  - 94.156.179.71@443@vless@ec954106
+  - vpn.oplatasite.ru@8443@vless@8eae78e0
+  - nl.oplatasite.ru@8443@vless@0144bcfd
+  - 83.228.224.161@42549@trojan@c9937251
+  - 45.198.87.238@8443@vless@33d43f92
 - name: PG-Google
   type: url-test
   url: https://www.google.com/generate_204
@@ -1122,7 +1168,6 @@ proxy-groups:
   proxies:
   - 172.86.91.58@8443@vless@34dd7a86
   - 107.173.27.219@6666@vmess@42627277
-  - 23.149.28.8.sslip.io@8443@trojan@1a4b8488
   - proxy.netraidly.ru@40443@vless@370e1f1b
   - 185.186.245.63@81@vless@40f51a6b
   - 35.77.34.38@49277@trojan@0f0237b5
@@ -1141,6 +1186,7 @@ proxy-groups:
   - 154.37.223.25@52080@vmess@e45a5ab9
   - 221.150.109.89@59490@ss@698c9fc5
   - 152.233.28.202@8443@vless@36df3278
+  - 45.198.87.223@8443@vless@4317b0a5
   - 142.91.108.139@443@vless@c2d67b67
   - storage.netraidly.ru@40443@vless@1facc314
   - 217.28.48.29@25752@vless@e7955d3b
@@ -1157,20 +1203,19 @@ proxy-groups:
   - 217.217.244.129@443@vless@ffa8ca2d
   - 87.121.105.33@443@vless@31da6f6d
   - 8.6.112.121@443@vless@13a33bc4
-  - 192.200.160.252@443@vless@1b324bb0
-  - vagina.zestful.bond@3443@vless@5cd527f7
   - lv.faygo.bot@443@vless@20e01c4f
   - 43.198.206.201@37973@trojan@6e4f07f3
-  - 106.52.215.138@7890@socks5@8700574f
   - 82.40.23.180@443@vless@82440f93
-  - cdn7-83.cdn-vkvideo.com@443@vless@e405c236
   - 31.77.131.86@443@vless@dbf8a939
   - cdn2-51.cdn-vkvideo.com@443@vless@4b6d22bc
-  - fin.oplatasite.ru@8443@vless@2bde5709
   - 31.77.158.216@443@vless@559e8a26
-  - vpn.oplatasite.ru@8443@vless@8eae78e0
+  - cdn7-83.cdn-vkvideo.com@443@vless@e405c236
+  - fin.oplatasite.ru@8443@vless@2bde5709
   - 94.156.179.71@443@vless@ec954106
+  - vpn.oplatasite.ru@8443@vless@8eae78e0
   - nl.oplatasite.ru@8443@vless@0144bcfd
+  - 83.228.224.161@42549@trojan@c9937251
+  - 45.198.87.238@8443@vless@33d43f92
   - PG-fast
   - PG-default
 - name: PG-GitHub
@@ -1182,7 +1227,6 @@ proxy-groups:
   proxies:
   - 172.86.91.58@8443@vless@34dd7a86
   - 107.173.27.219@6666@vmess@42627277
-  - 23.149.28.8.sslip.io@8443@trojan@1a4b8488
   - proxy.netraidly.ru@40443@vless@370e1f1b
   - 185.186.245.63@81@vless@40f51a6b
   - 35.77.34.38@49277@trojan@0f0237b5
@@ -1201,6 +1245,7 @@ proxy-groups:
   - 154.37.223.25@52080@vmess@e45a5ab9
   - 221.150.109.89@59490@ss@698c9fc5
   - 152.233.28.202@8443@vless@36df3278
+  - 45.198.87.223@8443@vless@4317b0a5
   - 142.91.108.139@443@vless@c2d67b67
   - storage.netraidly.ru@40443@vless@1facc314
   - 217.28.48.29@25752@vless@e7955d3b
@@ -1217,20 +1262,19 @@ proxy-groups:
   - 217.217.244.129@443@vless@ffa8ca2d
   - 87.121.105.33@443@vless@31da6f6d
   - 8.6.112.121@443@vless@13a33bc4
-  - 192.200.160.252@443@vless@1b324bb0
-  - vagina.zestful.bond@3443@vless@5cd527f7
   - lv.faygo.bot@443@vless@20e01c4f
   - 43.198.206.201@37973@trojan@6e4f07f3
-  - 106.52.215.138@7890@socks5@8700574f
   - 82.40.23.180@443@vless@82440f93
-  - cdn7-83.cdn-vkvideo.com@443@vless@e405c236
   - 31.77.131.86@443@vless@dbf8a939
   - cdn2-51.cdn-vkvideo.com@443@vless@4b6d22bc
-  - fin.oplatasite.ru@8443@vless@2bde5709
   - 31.77.158.216@443@vless@559e8a26
-  - vpn.oplatasite.ru@8443@vless@8eae78e0
+  - cdn7-83.cdn-vkvideo.com@443@vless@e405c236
+  - fin.oplatasite.ru@8443@vless@2bde5709
   - 94.156.179.71@443@vless@ec954106
+  - vpn.oplatasite.ru@8443@vless@8eae78e0
   - nl.oplatasite.ru@8443@vless@0144bcfd
+  - 83.228.224.161@42549@trojan@c9937251
+  - 45.198.87.238@8443@vless@33d43f92
   - PG-fast
   - PG-default
 - name: PG-YouTube
@@ -1242,7 +1286,6 @@ proxy-groups:
   proxies:
   - 172.86.91.58@8443@vless@34dd7a86
   - 107.173.27.219@6666@vmess@42627277
-  - 23.149.28.8.sslip.io@8443@trojan@1a4b8488
   - proxy.netraidly.ru@40443@vless@370e1f1b
   - 185.186.245.63@81@vless@40f51a6b
   - 35.77.34.38@49277@trojan@0f0237b5
@@ -1261,6 +1304,7 @@ proxy-groups:
   - 154.37.223.25@52080@vmess@e45a5ab9
   - 221.150.109.89@59490@ss@698c9fc5
   - 152.233.28.202@8443@vless@36df3278
+  - 45.198.87.223@8443@vless@4317b0a5
   - 142.91.108.139@443@vless@c2d67b67
   - storage.netraidly.ru@40443@vless@1facc314
   - 217.28.48.29@25752@vless@e7955d3b
@@ -1277,20 +1321,19 @@ proxy-groups:
   - 217.217.244.129@443@vless@ffa8ca2d
   - 87.121.105.33@443@vless@31da6f6d
   - 8.6.112.121@443@vless@13a33bc4
-  - 192.200.160.252@443@vless@1b324bb0
-  - vagina.zestful.bond@3443@vless@5cd527f7
   - lv.faygo.bot@443@vless@20e01c4f
   - 43.198.206.201@37973@trojan@6e4f07f3
-  - 106.52.215.138@7890@socks5@8700574f
   - 82.40.23.180@443@vless@82440f93
-  - cdn7-83.cdn-vkvideo.com@443@vless@e405c236
   - 31.77.131.86@443@vless@dbf8a939
   - cdn2-51.cdn-vkvideo.com@443@vless@4b6d22bc
-  - fin.oplatasite.ru@8443@vless@2bde5709
   - 31.77.158.216@443@vless@559e8a26
-  - vpn.oplatasite.ru@8443@vless@8eae78e0
+  - cdn7-83.cdn-vkvideo.com@443@vless@e405c236
+  - fin.oplatasite.ru@8443@vless@2bde5709
   - 94.156.179.71@443@vless@ec954106
+  - vpn.oplatasite.ru@8443@vless@8eae78e0
   - nl.oplatasite.ru@8443@vless@0144bcfd
+  - 83.228.224.161@42549@trojan@c9937251
+  - 45.198.87.238@8443@vless@33d43f92
   - PG-fast
   - PG-default
 - name: PG-Twitter
@@ -1302,7 +1345,6 @@ proxy-groups:
   proxies:
   - 172.86.91.58@8443@vless@34dd7a86
   - 107.173.27.219@6666@vmess@42627277
-  - 23.149.28.8.sslip.io@8443@trojan@1a4b8488
   - proxy.netraidly.ru@40443@vless@370e1f1b
   - 185.186.245.63@81@vless@40f51a6b
   - 35.77.34.38@49277@trojan@0f0237b5
@@ -1321,6 +1363,7 @@ proxy-groups:
   - 154.37.223.25@52080@vmess@e45a5ab9
   - 221.150.109.89@59490@ss@698c9fc5
   - 152.233.28.202@8443@vless@36df3278
+  - 45.198.87.223@8443@vless@4317b0a5
   - 142.91.108.139@443@vless@c2d67b67
   - storage.netraidly.ru@40443@vless@1facc314
   - 217.28.48.29@25752@vless@e7955d3b
@@ -1337,20 +1380,19 @@ proxy-groups:
   - 217.217.244.129@443@vless@ffa8ca2d
   - 87.121.105.33@443@vless@31da6f6d
   - 8.6.112.121@443@vless@13a33bc4
-  - 192.200.160.252@443@vless@1b324bb0
-  - vagina.zestful.bond@3443@vless@5cd527f7
   - lv.faygo.bot@443@vless@20e01c4f
   - 43.198.206.201@37973@trojan@6e4f07f3
-  - 106.52.215.138@7890@socks5@8700574f
   - 82.40.23.180@443@vless@82440f93
-  - cdn7-83.cdn-vkvideo.com@443@vless@e405c236
   - 31.77.131.86@443@vless@dbf8a939
   - cdn2-51.cdn-vkvideo.com@443@vless@4b6d22bc
-  - fin.oplatasite.ru@8443@vless@2bde5709
   - 31.77.158.216@443@vless@559e8a26
-  - vpn.oplatasite.ru@8443@vless@8eae78e0
+  - cdn7-83.cdn-vkvideo.com@443@vless@e405c236
+  - fin.oplatasite.ru@8443@vless@2bde5709
   - 94.156.179.71@443@vless@ec954106
+  - vpn.oplatasite.ru@8443@vless@8eae78e0
   - nl.oplatasite.ru@8443@vless@0144bcfd
+  - 83.228.224.161@42549@trojan@c9937251
+  - 45.198.87.238@8443@vless@33d43f92
   - PG-fast
   - PG-default
 rule-providers:
