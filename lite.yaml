@@ -298,13 +298,6 @@ proxies:
   network: http
   tls: false
   uuid: db35e047-9b1d-4f8a-b0ca-21318018fec2
-- name: 221.150.109.89@59490@ss@698c9fc5
-  type: ss
-  server: 221.150.109.89
-  port: 59490
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-  udp: true
 - name: 152.233.28.202@8443@vless@f7282b72
   type: vless
   server: 152.233.28.202
@@ -315,21 +308,25 @@ proxies:
   tls: true
   servername: ams1.fromblancwithlove.com
   client-fingerprint: firefox
-- name: proxy.netraidly.ru@40443@vless@370e1f1b
-  type: vless
-  server: 186.246.19.138
-  port: 40443
+- name: 221.150.109.89@59490@ss@698c9fc5
+  type: ss
+  server: 221.150.109.89
+  port: 59490
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
   udp: true
-  uuid: 7c8a88e7-527f-4e7f-91eb-f2a7dc8255e4
-  network: tcp
-  tls: true
-  servername: deepl.com
-  client-fingerprint: qq
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: mimJ_uInBYERt8TayjrHu5Kmq4b1ko39G6WD72SUkGw
-    short-id: 75cf
-  sni: proxy.netraidly.ru
+- name: 107.173.27.219@6666@vmess@42627277
+  type: vmess
+  server: 107.173.27.219
+  port: 6666
+  uuid: f0a2fbe5-29bf-468c-ddc1-b524552d1a23
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /youtube
+    headers: {}
 - name: 45.198.87.223@8443@vless@4317b0a5
   type: vless
   server: 45.198.87.223
@@ -375,6 +372,21 @@ proxies:
     public-key: IOO3P6BDqBjUA0gB4tgpvxrXL6Fit88QgpJ1y6GYyz0
     short-id: 0f4dacf88202e05f
   client-fingerprint: chrome
+- name: proxy.netraidly.ru@40443@vless@370e1f1b
+  type: vless
+  server: 186.246.19.138
+  port: 40443
+  udp: true
+  uuid: 7c8a88e7-527f-4e7f-91eb-f2a7dc8255e4
+  network: tcp
+  tls: true
+  servername: deepl.com
+  client-fingerprint: qq
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: mimJ_uInBYERt8TayjrHu5Kmq4b1ko39G6WD72SUkGw
+    short-id: 75cf
+  sni: proxy.netraidly.ru
 - name: 193.247.82.40@448@vless@9e3d9456
   type: vless
   server: 193.247.82.40
@@ -403,6 +415,20 @@ proxies:
     path: /TG@wxgqlfx
     headers:
       Host: us2.wxgqlfx.icu
+- name: 172.86.91.58@8443@vless@34dd7a86
+  type: vless
+  server: 172.86.91.58
+  port: 8443
+  uuid: c81f0504-2c7c-11f1-9ec5-baabcd4be2cd
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: FVL0r87K3-vUP2KXQX1juLMFEHJtvxwKM-nm6_PYllc
+    short-id: cafe01234567
+  flow: xtls-rprx-vision
 - name: 217.217.247.252@443@vless@156520d4
   type: vless
   server: 217.217.247.252
@@ -581,9 +607,17 @@ proxies:
     mode: packet-up
     path: /xn--q9jyb4c
     x-padding-bytes: 100-1000
+- name: 157.254.223.44@34567@mieru@7af1c875
+  type: mieru
+  server: 157.254.223.44
+  port: 34567
+  multiplexing: MULTIPLEXING_LOW
+  password: dongtaiwang.com
+  transport: TCP
+  username: dongtaiwang.com
 - name: lv.faygo.bot@443@vless@20e01c4f
   type: vless
-  server: 217.217.244.130
+  server: 217.217.244.131
   port: 443
   udp: true
   uuid: 8ca5cbd3-ec16-4728-bedc-2bc0d82f0922
@@ -596,17 +630,9 @@ proxies:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
     short-id: 6ba85179e30d4fc2
   sni: lv.faygo.bot
-- name: 157.254.223.44@34567@mieru@7af1c875
-  type: mieru
-  server: 157.254.223.44
-  port: 34567
-  multiplexing: MULTIPLEXING_LOW
-  password: dongtaiwang.com
-  transport: TCP
-  username: dongtaiwang.com
 - name: sv2.azparadox.ir@8880@vless@5deb93a1
   type: vless
-  server: 193.176.240.129
+  server: 10.10.34.36
   port: 8880
   udp: true
   uuid: d9307ab3-1ed0-4b6d-bfd0-e104c7ccc25a
@@ -633,35 +659,6 @@ proxies:
     public-key: KS0F6q2PTY1s6y2sH5PdrznYqprIkUBtS1masvcrJjo
     short-id: 823257b7b9ab9d02
   sni: vagina.zestful.bond
-- name: 192.200.160.252@443@vless@1b324bb0
-  type: vless
-  server: 192.200.160.252
-  port: 443
-  network: ws
-  servername: sync.amordad.xyz
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  uuid: 5b6be23b-dff4-428f-8a60-4f11568abe12
-  ws-opts:
-    headers:
-      Host: sync.amordad.xyz
-    path: /api/v1/stream
-- name: 82.40.23.180@443@vless@82440f93
-  type: vless
-  server: 82.40.23.180
-  port: 443
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  network: tcp
-  packet-encoding: xudp
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  servername: sellflow.org
-  skip-cert-verify: false
-  tls: true
-  udp: true
-  uuid: ff19693c-11f3-4df9-8713-79a85a5ca090
 - name: usa.zestful.bond@443@vless@060bfc3a
   type: vless
   server: 150.241.102.175
@@ -680,6 +677,35 @@ proxies:
   udp: true
   uuid: 967064b5-3272-431e-8dce-9519acfb94be
   sni: usa.zestful.bond
+- name: 82.40.23.180@443@vless@82440f93
+  type: vless
+  server: 82.40.23.180
+  port: 443
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  network: tcp
+  packet-encoding: xudp
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  servername: sellflow.org
+  skip-cert-verify: false
+  tls: true
+  udp: true
+  uuid: ff19693c-11f3-4df9-8713-79a85a5ca090
+- name: 192.200.160.252@443@vless@1b324bb0
+  type: vless
+  server: 192.200.160.252
+  port: 443
+  network: ws
+  servername: sync.amordad.xyz
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  uuid: 5b6be23b-dff4-428f-8a60-4f11568abe12
+  ws-opts:
+    headers:
+      Host: sync.amordad.xyz
+    path: /api/v1/stream
 - name: 31.77.131.86@443@vless@dbf8a939
   type: vless
   server: 31.77.131.86
@@ -735,44 +761,6 @@ proxies:
   password: SoftNetConnect
   skip-cert-verify: true
   sni: www.speedtest.net
-- name: 18.162.50.252@11035@trojan@64db6a11
-  type: trojan
-  server: 18.162.50.252
-  port: 11035
-  password: BxceQaOe
-  skip-cert-verify: true
-  sni: t.me/ripaojiedian
-- name: 172.252.125.77@443@vless@ff758661
-  type: vless
-  server: 172.252.125.77
-  port: 443
-  client-fingerprint: chrome
-  encryption: none
-  flow: xtls-rprx-vision
-  network: tcp
-  packet-encoding: xudp
-  reality-opts:
-    public-key: wLfv-FK7CWwt57C7Ye-zx0MNraxYoQXAsjIx4f27WWY
-    short-id: a88038293e33
-  servername: arxiv.org
-  skip-cert-verify: false
-  tls: true
-  udp: true
-  uuid: 217d5b38-a3a9-4ee1-9ca4-20667ee85933
-- name: 217.217.247.253@443@vless@a4837747
-  type: vless
-  server: 217.217.247.253
-  port: 443
-  uuid: 8ca5cbd3-ec16-4728-bedc-2bc0d82f0922
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: enterprisekitten.com
-  skip-cert-verify: true
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-    short-id: 6ba85179e30d4fc2
-  client-fingerprint: chrome
 - name: 217.217.247.254@443@vless@df54cfa2
   type: vless
   server: 217.217.247.254
@@ -805,24 +793,122 @@ proxies:
   tls: true
   udp: true
   uuid: 8ca5cbd3-ec16-4728-bedc-2bc0d82f0922
-- name: 106.52.215.138@7890@socks5@8700574f
-  type: socks5
-  server: 106.52.215.138
-  port: 7890
-- name: 103.127.243.54@53229@vmess@38e6bb22
-  type: vmess
-  server: 103.127.243.54
-  port: 53229
-  alterId: 0
-  cipher: auto
+- name: 172.252.125.77@443@vless@ff758661
+  type: vless
+  server: 172.252.125.77
+  port: 443
   client-fingerprint: chrome
-  http-opts:
-    method: GET
-    path:
-    - /ABCDE
-  network: http
-  tls: false
-  uuid: 2f50f5ef-1a3a-4585-a3c9-3a860d37b134
+  encryption: none
+  flow: xtls-rprx-vision
+  network: tcp
+  packet-encoding: xudp
+  reality-opts:
+    public-key: wLfv-FK7CWwt57C7Ye-zx0MNraxYoQXAsjIx4f27WWY
+    short-id: a88038293e33
+  servername: arxiv.org
+  skip-cert-verify: false
+  tls: true
+  udp: true
+  uuid: 217d5b38-a3a9-4ee1-9ca4-20667ee85933
+- name: 217.217.247.253@443@vless@a4837747
+  type: vless
+  server: 217.217.247.253
+  port: 443
+  uuid: 8ca5cbd3-ec16-4728-bedc-2bc0d82f0922
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: enterprisekitten.com
+  skip-cert-verify: true
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    short-id: 6ba85179e30d4fc2
+  client-fingerprint: chrome
+- name: 89.125.20.106@443@vless@a7ab575f
+  type: vless
+  server: 89.125.20.106
+  port: 443
+  udp: true
+  uuid: 546d7622-cdf6-4d39-af34-9060c5720f57
+  network: tcp
+  tls: true
+  servername: auto.malina24.xyz
+  client-fingerprint: qq
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: V6FabatADtcX7aO9KMjGCadJC4LuQ_5nRViab-z-nFQ
+    short-id: abcd
+- name: 52.58.146.145@22224@vless@b0ac511b
+  type: vless
+  server: 52.58.146.145
+  port: 22224
+  uuid: 05519058-d2ac-4f28-9e4a-2b2a1386749e
+  udp: true
+  tls: true
+  servername: trojan.burgerip.co.uk
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /telegram-channel-vlessconfig
+    headers: {}
+- name: 52.58.146.145@22222@trojan@f05f1a93
+  type: trojan
+  server: 52.58.146.145
+  port: 22222
+  password: telegram-id-privatevpns
+  sni: trojan.burgerip.co.uk
+  skip-cert-verify: true
+  udp: true
+- name: 52.58.146.145@22223@trojan@42adc969
+  type: trojan
+  server: 52.58.146.145
+  port: 22223
+  password: telegram-id-directvpn
+  sni: trojan.burgerip.co.uk
+  skip-cert-verify: true
+  udp: true
+- name: 13.37.68.185@22223@trojan@41be6342
+  type: trojan
+  server: 13.37.68.185
+  port: 22223
+  password: telegram-id-directvpn
+  sni: trojan.burgerip.co.uk
+  skip-cert-verify: true
+  udp: true
+- name: 45.90.97.132@443@vless@4e5a0756
+  type: vless
+  server: 45.90.97.132
+  port: 443
+  udp: true
+  uuid: 52b71b75-4b77-4cec-990b-046ec1938e1f
+  network: tcp
+  tls: true
+  servername: fr.bvps.cloud
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 65T6l7e51lwKu1rzQ4FgqVPe-JyG43IqPLw6r9U2v10
+    short-id: 0befa76540b5db79
+- name: 5.101.87.3@443@vless@4027193f
+  type: vless
+  server: 5.101.87.3
+  port: 443
+  udp: true
+  uuid: 5c417415-5c79-4447-a8bd-fd9f73a89fb9
+  network: tcp
+  tls: true
+  servername: www.microsoft.com
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: ztJq-ujdckOvXgiARRnTean6syVqoBBWw0s5tL5IkhE
+- name: 3.126.148.235@22223@trojan@00b02b62
+  type: trojan
+  server: 3.126.148.235
+  port: 22223
+  password: telegram-id-directvpn
+  sni: trojan.burgerip.co.uk
+  skip-cert-verify: true
   udp: true
 - name: 213.176.17.186@443@vless@df52cf05
   type: vless
@@ -841,85 +927,6 @@ proxies:
   uuid: 2065a8c9-8b3d-4dba-b0ce-90d649aa3da7
   xhttp-opts:
     path: /xhttp
-- name: 89.125.20.106@443@vless@a7ab575f
-  type: vless
-  server: 89.125.20.106
-  port: 443
-  udp: true
-  uuid: 546d7622-cdf6-4d39-af34-9060c5720f57
-  network: tcp
-  tls: true
-  servername: auto.malina24.xyz
-  client-fingerprint: qq
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: V6FabatADtcX7aO9KMjGCadJC4LuQ_5nRViab-z-nFQ
-    short-id: abcd
-- name: 52.58.146.145@22222@trojan@f05f1a93
-  type: trojan
-  server: 52.58.146.145
-  port: 22222
-  password: telegram-id-privatevpns
-  sni: trojan.burgerip.co.uk
-  skip-cert-verify: true
-  udp: true
-- name: 18.162.190.157@17005@trojan@0203e7d7
-  type: trojan
-  server: 18.162.190.157
-  port: 17005
-  password: e0195c73018d597b1c2f0ea89d8676ae
-  skip-cert-verify: true
-  sni: www.nintendogames.net
-- name: 52.58.146.145@22224@vless@b0ac511b
-  type: vless
-  server: 52.58.146.145
-  port: 22224
-  uuid: 05519058-d2ac-4f28-9e4a-2b2a1386749e
-  udp: true
-  tls: true
-  servername: trojan.burgerip.co.uk
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /telegram-channel-vlessconfig
-    headers: {}
-- name: 43.198.206.201@49277@trojan@6baa0127
-  type: trojan
-  server: 43.198.206.201
-  port: 49277
-  password: e0195c73018d597b1c2f0ea89d8676ae
-  skip-cert-verify: true
-  sni: www.nintendogames.net
-- name: 43.198.206.201@48738@trojan@633823bf
-  type: trojan
-  server: 43.198.206.201
-  port: 48738
-  password: e0195c73018d597b1c2f0ea89d8676ae
-  skip-cert-verify: true
-  sni: www.nintendogames.net
-- name: 18.163.80.94@17801@trojan@a41baa39
-  type: trojan
-  server: 18.163.80.94
-  port: 17801
-  password: BxceQaOe
-  skip-cert-verify: true
-  sni: t.me/ripaojiedian
-- name: 52.58.146.145@22223@trojan@42adc969
-  type: trojan
-  server: 52.58.146.145
-  port: 22223
-  password: telegram-id-directvpn
-  sni: trojan.burgerip.co.uk
-  skip-cert-verify: true
-  udp: true
-- name: 13.37.68.185@22223@trojan@41be6342
-  type: trojan
-  server: 13.37.68.185
-  port: 22223
-  password: telegram-id-directvpn
-  sni: trojan.burgerip.co.uk
-  skip-cert-verify: true
-  udp: true
 - name: 77.74.123.132@448@vless@80a42277
   type: vless
   server: 77.74.123.132
@@ -933,35 +940,6 @@ proxies:
   reality-opts:
     public-key: i3cJbIu8AN7qCD7xQTVfCN7de9RkxVohk_PGQgHqRl8
     short-id: 52a74e01683e9173
-- name: 45.90.97.132@443@vless@4e5a0756
-  type: vless
-  server: 45.90.97.132
-  port: 443
-  udp: true
-  uuid: 52b71b75-4b77-4cec-990b-046ec1938e1f
-  network: tcp
-  tls: true
-  servername: fr.bvps.cloud
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 65T6l7e51lwKu1rzQ4FgqVPe-JyG43IqPLw6r9U2v10
-    short-id: 0befa76540b5db79
-- name: 3.126.148.235@22223@trojan@00b02b62
-  type: trojan
-  server: 3.126.148.235
-  port: 22223
-  password: telegram-id-directvpn
-  sni: trojan.burgerip.co.uk
-  skip-cert-verify: true
-  udp: true
-- name: 35.77.34.38@5701@trojan@7a0d5289
-  type: trojan
-  server: 35.77.34.38
-  port: 5701
-  password: e0195c73018d597b1c2f0ea89d8676ae
-  skip-cert-verify: true
-  sni: www.nintendogames.net
 - name: 83.228.224.161@2083@vless@e0b1a5c9
   type: vless
   server: 83.228.224.161
@@ -980,43 +958,6 @@ proxies:
   tls: true
   udp: true
   uuid: 89049f79-320b-48a0-b1cf-110165cae30c
-- name: 95.133.242.210@443@vless@c2372311
-  type: vless
-  server: 95.133.242.210
-  port: 443
-  client-fingerprint: chrome
-  encryption: none
-  flow: xtls-rprx-vision
-  network: tcp
-  packet-encoding: xudp
-  reality-opts:
-    public-key: U_E3xSI6QY_Mj-3zjkB4esvMj0aVvYH6W6oHOR50XBs
-    short-id: 10debbdf94767541
-  servername: filesconvert.org
-  skip-cert-verify: false
-  tls: true
-  udp: true
-  uuid: 5982d32f-f2e4-4267-a8ad-48492e65344c
-- name: 43.200.180.167@8686@vless@c6008cae
-  type: vless
-  server: 43.200.180.167
-  port: 8686
-  udp: true
-  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw
-    short-id: 628b3c90c98ead4f
-- name: 54.65.32.119@5408@trojan@cc088734
-  type: trojan
-  server: 54.65.32.119
-  port: 5408
-  password: BxceQaOe
-  skip-cert-verify: true
-  sni: t.me%2Fripaojiedian
 - name: 61.171.92.202@1001@ss@c5a112b9
   type: ss
   server: 61.171.92.202
@@ -1040,14 +981,16 @@ proxy-groups:
   - 152.233.28.200@8443@vless@d57ede19
   - 154.37.223.25@52080@vmess@e45a5ab9
   - 154.37.223.25@11685@vmess@4bae9c37
-  - 221.150.109.89@59490@ss@698c9fc5
   - 152.233.28.202@8443@vless@f7282b72
-  - proxy.netraidly.ru@40443@vless@370e1f1b
+  - 221.150.109.89@59490@ss@698c9fc5
+  - 107.173.27.219@6666@vmess@42627277
   - 45.198.87.223@8443@vless@4317b0a5
   - storage.netraidly.ru@40443@vless@1facc314
   - 142.91.108.139@443@vless@0e7dfcdb
+  - proxy.netraidly.ru@40443@vless@370e1f1b
   - 193.247.82.40@448@vless@9e3d9456
   - 185.186.245.63@81@vless@40f51a6b
+  - 172.86.91.58@8443@vless@34dd7a86
   - 217.217.247.252@443@vless@156520d4
   - 35.77.34.38@29642@trojan@a5ba903a
   - 185.91.126.49@448@vless@7d0f60d1
@@ -1060,42 +1003,32 @@ proxy-groups:
   - 87.121.105.33@443@vless@31da6f6d
   - 216.227.169.104@443@vless@73e680aa
   - 8.6.112.121@443@vless@13a33bc4
-  - lv.faygo.bot@443@vless@20e01c4f
   - 157.254.223.44@34567@mieru@7af1c875
+  - lv.faygo.bot@443@vless@20e01c4f
   - sv2.azparadox.ir@8880@vless@5deb93a1
   - vagina.zestful.bond@3443@vless@5cd527f7
-  - 192.200.160.252@443@vless@1b324bb0
-  - 82.40.23.180@443@vless@82440f93
   - usa.zestful.bond@443@vless@060bfc3a
+  - 82.40.23.180@443@vless@82440f93
+  - 192.200.160.252@443@vless@1b324bb0
   - 31.77.131.86@443@vless@dbf8a939
   - 94.156.179.71@443@vless@ec954106
   - 31.77.158.216@443@vless@559e8a26
   - 83.228.224.161@42549@trojan@4e869014
-  - 18.162.50.252@11035@trojan@64db6a11
-  - 172.252.125.77@443@vless@ff758661
-  - 217.217.247.253@443@vless@a4837747
   - 217.217.247.254@443@vless@df54cfa2
   - 217.217.244.130@443@vless@a67530ad
-  - 106.52.215.138@7890@socks5@8700574f
-  - 103.127.243.54@53229@vmess@38e6bb22
-  - 213.176.17.186@443@vless@df52cf05
+  - 172.252.125.77@443@vless@ff758661
+  - 217.217.247.253@443@vless@a4837747
   - 89.125.20.106@443@vless@a7ab575f
-  - 52.58.146.145@22222@trojan@f05f1a93
-  - 18.162.190.157@17005@trojan@0203e7d7
   - 52.58.146.145@22224@vless@b0ac511b
-  - 43.198.206.201@49277@trojan@6baa0127
-  - 43.198.206.201@48738@trojan@633823bf
-  - 18.163.80.94@17801@trojan@a41baa39
+  - 52.58.146.145@22222@trojan@f05f1a93
   - 52.58.146.145@22223@trojan@42adc969
   - 13.37.68.185@22223@trojan@41be6342
-  - 77.74.123.132@448@vless@80a42277
   - 45.90.97.132@443@vless@4e5a0756
+  - 5.101.87.3@443@vless@4027193f
   - 3.126.148.235@22223@trojan@00b02b62
-  - 35.77.34.38@5701@trojan@7a0d5289
+  - 213.176.17.186@443@vless@df52cf05
+  - 77.74.123.132@448@vless@80a42277
   - 83.228.224.161@2083@vless@e0b1a5c9
-  - 95.133.242.210@443@vless@c2372311
-  - 43.200.180.167@8686@vless@c6008cae
-  - 54.65.32.119@5408@trojan@cc088734
   - 61.171.92.202@1001@ss@c5a112b9
 - name: PG-default
   type: fallback
@@ -1111,14 +1044,16 @@ proxy-groups:
   - 152.233.28.200@8443@vless@d57ede19
   - 154.37.223.25@52080@vmess@e45a5ab9
   - 154.37.223.25@11685@vmess@4bae9c37
-  - 221.150.109.89@59490@ss@698c9fc5
   - 152.233.28.202@8443@vless@f7282b72
-  - proxy.netraidly.ru@40443@vless@370e1f1b
+  - 221.150.109.89@59490@ss@698c9fc5
+  - 107.173.27.219@6666@vmess@42627277
   - 45.198.87.223@8443@vless@4317b0a5
   - storage.netraidly.ru@40443@vless@1facc314
   - 142.91.108.139@443@vless@0e7dfcdb
+  - proxy.netraidly.ru@40443@vless@370e1f1b
   - 193.247.82.40@448@vless@9e3d9456
   - 185.186.245.63@81@vless@40f51a6b
+  - 172.86.91.58@8443@vless@34dd7a86
   - 217.217.247.252@443@vless@156520d4
   - 35.77.34.38@29642@trojan@a5ba903a
   - 185.91.126.49@448@vless@7d0f60d1
@@ -1131,42 +1066,32 @@ proxy-groups:
   - 87.121.105.33@443@vless@31da6f6d
   - 216.227.169.104@443@vless@73e680aa
   - 8.6.112.121@443@vless@13a33bc4
-  - lv.faygo.bot@443@vless@20e01c4f
   - 157.254.223.44@34567@mieru@7af1c875
+  - lv.faygo.bot@443@vless@20e01c4f
   - sv2.azparadox.ir@8880@vless@5deb93a1
   - vagina.zestful.bond@3443@vless@5cd527f7
-  - 192.200.160.252@443@vless@1b324bb0
-  - 82.40.23.180@443@vless@82440f93
   - usa.zestful.bond@443@vless@060bfc3a
+  - 82.40.23.180@443@vless@82440f93
+  - 192.200.160.252@443@vless@1b324bb0
   - 31.77.131.86@443@vless@dbf8a939
   - 94.156.179.71@443@vless@ec954106
   - 31.77.158.216@443@vless@559e8a26
   - 83.228.224.161@42549@trojan@4e869014
-  - 18.162.50.252@11035@trojan@64db6a11
-  - 172.252.125.77@443@vless@ff758661
-  - 217.217.247.253@443@vless@a4837747
   - 217.217.247.254@443@vless@df54cfa2
   - 217.217.244.130@443@vless@a67530ad
-  - 106.52.215.138@7890@socks5@8700574f
-  - 103.127.243.54@53229@vmess@38e6bb22
-  - 213.176.17.186@443@vless@df52cf05
+  - 172.252.125.77@443@vless@ff758661
+  - 217.217.247.253@443@vless@a4837747
   - 89.125.20.106@443@vless@a7ab575f
-  - 52.58.146.145@22222@trojan@f05f1a93
-  - 18.162.190.157@17005@trojan@0203e7d7
   - 52.58.146.145@22224@vless@b0ac511b
-  - 43.198.206.201@49277@trojan@6baa0127
-  - 43.198.206.201@48738@trojan@633823bf
-  - 18.163.80.94@17801@trojan@a41baa39
+  - 52.58.146.145@22222@trojan@f05f1a93
   - 52.58.146.145@22223@trojan@42adc969
   - 13.37.68.185@22223@trojan@41be6342
-  - 77.74.123.132@448@vless@80a42277
   - 45.90.97.132@443@vless@4e5a0756
+  - 5.101.87.3@443@vless@4027193f
   - 3.126.148.235@22223@trojan@00b02b62
-  - 35.77.34.38@5701@trojan@7a0d5289
+  - 213.176.17.186@443@vless@df52cf05
+  - 77.74.123.132@448@vless@80a42277
   - 83.228.224.161@2083@vless@e0b1a5c9
-  - 95.133.242.210@443@vless@c2372311
-  - 43.200.180.167@8686@vless@c6008cae
-  - 54.65.32.119@5408@trojan@cc088734
   - 61.171.92.202@1001@ss@c5a112b9
 - name: PG-AnTing
   type: load-balance
@@ -1182,14 +1107,16 @@ proxy-groups:
   - 152.233.28.200@8443@vless@d57ede19
   - 154.37.223.25@52080@vmess@e45a5ab9
   - 154.37.223.25@11685@vmess@4bae9c37
-  - 221.150.109.89@59490@ss@698c9fc5
   - 152.233.28.202@8443@vless@f7282b72
-  - proxy.netraidly.ru@40443@vless@370e1f1b
+  - 221.150.109.89@59490@ss@698c9fc5
+  - 107.173.27.219@6666@vmess@42627277
   - 45.198.87.223@8443@vless@4317b0a5
   - storage.netraidly.ru@40443@vless@1facc314
   - 142.91.108.139@443@vless@0e7dfcdb
+  - proxy.netraidly.ru@40443@vless@370e1f1b
   - 193.247.82.40@448@vless@9e3d9456
   - 185.186.245.63@81@vless@40f51a6b
+  - 172.86.91.58@8443@vless@34dd7a86
   - 217.217.247.252@443@vless@156520d4
   - 35.77.34.38@29642@trojan@a5ba903a
   - 185.91.126.49@448@vless@7d0f60d1
@@ -1202,42 +1129,32 @@ proxy-groups:
   - 87.121.105.33@443@vless@31da6f6d
   - 216.227.169.104@443@vless@73e680aa
   - 8.6.112.121@443@vless@13a33bc4
-  - lv.faygo.bot@443@vless@20e01c4f
   - 157.254.223.44@34567@mieru@7af1c875
+  - lv.faygo.bot@443@vless@20e01c4f
   - sv2.azparadox.ir@8880@vless@5deb93a1
   - vagina.zestful.bond@3443@vless@5cd527f7
-  - 192.200.160.252@443@vless@1b324bb0
-  - 82.40.23.180@443@vless@82440f93
   - usa.zestful.bond@443@vless@060bfc3a
+  - 82.40.23.180@443@vless@82440f93
+  - 192.200.160.252@443@vless@1b324bb0
   - 31.77.131.86@443@vless@dbf8a939
   - 94.156.179.71@443@vless@ec954106
   - 31.77.158.216@443@vless@559e8a26
   - 83.228.224.161@42549@trojan@4e869014
-  - 18.162.50.252@11035@trojan@64db6a11
-  - 172.252.125.77@443@vless@ff758661
-  - 217.217.247.253@443@vless@a4837747
   - 217.217.247.254@443@vless@df54cfa2
   - 217.217.244.130@443@vless@a67530ad
-  - 106.52.215.138@7890@socks5@8700574f
-  - 103.127.243.54@53229@vmess@38e6bb22
-  - 213.176.17.186@443@vless@df52cf05
+  - 172.252.125.77@443@vless@ff758661
+  - 217.217.247.253@443@vless@a4837747
   - 89.125.20.106@443@vless@a7ab575f
-  - 52.58.146.145@22222@trojan@f05f1a93
-  - 18.162.190.157@17005@trojan@0203e7d7
   - 52.58.146.145@22224@vless@b0ac511b
-  - 43.198.206.201@49277@trojan@6baa0127
-  - 43.198.206.201@48738@trojan@633823bf
-  - 18.163.80.94@17801@trojan@a41baa39
+  - 52.58.146.145@22222@trojan@f05f1a93
   - 52.58.146.145@22223@trojan@42adc969
   - 13.37.68.185@22223@trojan@41be6342
-  - 77.74.123.132@448@vless@80a42277
   - 45.90.97.132@443@vless@4e5a0756
+  - 5.101.87.3@443@vless@4027193f
   - 3.126.148.235@22223@trojan@00b02b62
-  - 35.77.34.38@5701@trojan@7a0d5289
+  - 213.176.17.186@443@vless@df52cf05
+  - 77.74.123.132@448@vless@80a42277
   - 83.228.224.161@2083@vless@e0b1a5c9
-  - 95.133.242.210@443@vless@c2372311
-  - 43.200.180.167@8686@vless@c6008cae
-  - 54.65.32.119@5408@trojan@cc088734
   - 61.171.92.202@1001@ss@c5a112b9
 - name: PG-Sage
   type: load-balance
@@ -1253,14 +1170,16 @@ proxy-groups:
   - 152.233.28.200@8443@vless@d57ede19
   - 154.37.223.25@52080@vmess@e45a5ab9
   - 154.37.223.25@11685@vmess@4bae9c37
-  - 221.150.109.89@59490@ss@698c9fc5
   - 152.233.28.202@8443@vless@f7282b72
-  - proxy.netraidly.ru@40443@vless@370e1f1b
+  - 221.150.109.89@59490@ss@698c9fc5
+  - 107.173.27.219@6666@vmess@42627277
   - 45.198.87.223@8443@vless@4317b0a5
   - storage.netraidly.ru@40443@vless@1facc314
   - 142.91.108.139@443@vless@0e7dfcdb
+  - proxy.netraidly.ru@40443@vless@370e1f1b
   - 193.247.82.40@448@vless@9e3d9456
   - 185.186.245.63@81@vless@40f51a6b
+  - 172.86.91.58@8443@vless@34dd7a86
   - 217.217.247.252@443@vless@156520d4
   - 35.77.34.38@29642@trojan@a5ba903a
   - 185.91.126.49@448@vless@7d0f60d1
@@ -1273,42 +1192,32 @@ proxy-groups:
   - 87.121.105.33@443@vless@31da6f6d
   - 216.227.169.104@443@vless@73e680aa
   - 8.6.112.121@443@vless@13a33bc4
-  - lv.faygo.bot@443@vless@20e01c4f
   - 157.254.223.44@34567@mieru@7af1c875
+  - lv.faygo.bot@443@vless@20e01c4f
   - sv2.azparadox.ir@8880@vless@5deb93a1
   - vagina.zestful.bond@3443@vless@5cd527f7
-  - 192.200.160.252@443@vless@1b324bb0
-  - 82.40.23.180@443@vless@82440f93
   - usa.zestful.bond@443@vless@060bfc3a
+  - 82.40.23.180@443@vless@82440f93
+  - 192.200.160.252@443@vless@1b324bb0
   - 31.77.131.86@443@vless@dbf8a939
   - 94.156.179.71@443@vless@ec954106
   - 31.77.158.216@443@vless@559e8a26
   - 83.228.224.161@42549@trojan@4e869014
-  - 18.162.50.252@11035@trojan@64db6a11
-  - 172.252.125.77@443@vless@ff758661
-  - 217.217.247.253@443@vless@a4837747
   - 217.217.247.254@443@vless@df54cfa2
   - 217.217.244.130@443@vless@a67530ad
-  - 106.52.215.138@7890@socks5@8700574f
-  - 103.127.243.54@53229@vmess@38e6bb22
-  - 213.176.17.186@443@vless@df52cf05
+  - 172.252.125.77@443@vless@ff758661
+  - 217.217.247.253@443@vless@a4837747
   - 89.125.20.106@443@vless@a7ab575f
-  - 52.58.146.145@22222@trojan@f05f1a93
-  - 18.162.190.157@17005@trojan@0203e7d7
   - 52.58.146.145@22224@vless@b0ac511b
-  - 43.198.206.201@49277@trojan@6baa0127
-  - 43.198.206.201@48738@trojan@633823bf
-  - 18.163.80.94@17801@trojan@a41baa39
+  - 52.58.146.145@22222@trojan@f05f1a93
   - 52.58.146.145@22223@trojan@42adc969
   - 13.37.68.185@22223@trojan@41be6342
-  - 77.74.123.132@448@vless@80a42277
   - 45.90.97.132@443@vless@4e5a0756
+  - 5.101.87.3@443@vless@4027193f
   - 3.126.148.235@22223@trojan@00b02b62
-  - 35.77.34.38@5701@trojan@7a0d5289
+  - 213.176.17.186@443@vless@df52cf05
+  - 77.74.123.132@448@vless@80a42277
   - 83.228.224.161@2083@vless@e0b1a5c9
-  - 95.133.242.210@443@vless@c2372311
-  - 43.200.180.167@8686@vless@c6008cae
-  - 54.65.32.119@5408@trojan@cc088734
   - 61.171.92.202@1001@ss@c5a112b9
 - name: PG-CN
   type: load-balance
@@ -1317,7 +1226,6 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
-  - 106.52.215.138@7890@socks5@8700574f
   - 61.171.92.202@1001@ss@c5a112b9
 - name: PG-Google
   type: url-test
@@ -1326,17 +1234,16 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
+  - 107.173.27.219@6666@vmess@42627277
   - proxy.netraidly.ru@40443@vless@370e1f1b
   - 185.186.245.63@81@vless@40f51a6b
+  - 172.86.91.58@8443@vless@34dd7a86
   - 150.241.102.175@443@vless@c9c057e7
   - 216.227.169.104@443@vless@73e680aa
   - 157.254.223.44@34567@mieru@7af1c875
   - sv2.azparadox.ir@8880@vless@5deb93a1
   - usa.zestful.bond@443@vless@060bfc3a
   - 172.252.125.77@443@vless@ff758661
-  - 18.162.190.157@17005@trojan@0203e7d7
-  - 43.198.206.201@49277@trojan@6baa0127
-  - 18.163.80.94@17801@trojan@a41baa39
   - 79.127.249.221@8443@vless@3291db19
   - 152.233.28.201@8443@vless@b0d5c11f
   - 82.40.23.19@443@vless@4ddb1b1c
@@ -1344,8 +1251,8 @@ proxy-groups:
   - 152.233.28.200@8443@vless@d57ede19
   - 154.37.223.25@52080@vmess@e45a5ab9
   - 154.37.223.25@11685@vmess@4bae9c37
-  - 221.150.109.89@59490@ss@698c9fc5
   - 152.233.28.202@8443@vless@f7282b72
+  - 221.150.109.89@59490@ss@698c9fc5
   - 45.198.87.223@8443@vless@4317b0a5
   - storage.netraidly.ru@40443@vless@1facc314
   - 142.91.108.139@443@vless@0e7dfcdb
@@ -1362,33 +1269,26 @@ proxy-groups:
   - 8.6.112.121@443@vless@13a33bc4
   - lv.faygo.bot@443@vless@20e01c4f
   - vagina.zestful.bond@3443@vless@5cd527f7
-  - 192.200.160.252@443@vless@1b324bb0
   - 82.40.23.180@443@vless@82440f93
+  - 192.200.160.252@443@vless@1b324bb0
   - 31.77.131.86@443@vless@dbf8a939
   - 94.156.179.71@443@vless@ec954106
   - 31.77.158.216@443@vless@559e8a26
   - 83.228.224.161@42549@trojan@4e869014
-  - 18.162.50.252@11035@trojan@64db6a11
-  - 217.217.247.253@443@vless@a4837747
   - 217.217.247.254@443@vless@df54cfa2
   - 217.217.244.130@443@vless@a67530ad
-  - 106.52.215.138@7890@socks5@8700574f
-  - 103.127.243.54@53229@vmess@38e6bb22
-  - 213.176.17.186@443@vless@df52cf05
+  - 217.217.247.253@443@vless@a4837747
   - 89.125.20.106@443@vless@a7ab575f
-  - 52.58.146.145@22222@trojan@f05f1a93
   - 52.58.146.145@22224@vless@b0ac511b
-  - 43.198.206.201@48738@trojan@633823bf
+  - 52.58.146.145@22222@trojan@f05f1a93
   - 52.58.146.145@22223@trojan@42adc969
   - 13.37.68.185@22223@trojan@41be6342
-  - 77.74.123.132@448@vless@80a42277
   - 45.90.97.132@443@vless@4e5a0756
+  - 5.101.87.3@443@vless@4027193f
   - 3.126.148.235@22223@trojan@00b02b62
-  - 35.77.34.38@5701@trojan@7a0d5289
+  - 213.176.17.186@443@vless@df52cf05
+  - 77.74.123.132@448@vless@80a42277
   - 83.228.224.161@2083@vless@e0b1a5c9
-  - 95.133.242.210@443@vless@c2372311
-  - 43.200.180.167@8686@vless@c6008cae
-  - 54.65.32.119@5408@trojan@cc088734
   - 61.171.92.202@1001@ss@c5a112b9
   - PG-fast
   - PG-default
@@ -1399,17 +1299,16 @@ proxy-groups:
   interval: 60
   lazy: true
   proxies:
+  - 107.173.27.219@6666@vmess@42627277
   - proxy.netraidly.ru@40443@vless@370e1f1b
   - 185.186.245.63@81@vless@40f51a6b
+  - 172.86.91.58@8443@vless@34dd7a86
   - 150.241.102.175@443@vless@c9c057e7
   - 216.227.169.104@443@vless@73e680aa
   - 157.254.223.44@34567@mieru@7af1c875
   - sv2.azparadox.ir@8880@vless@5deb93a1
   - usa.zestful.bond@443@vless@060bfc3a
   - 172.252.125.77@443@vless@ff758661
-  - 18.162.190.157@17005@trojan@0203e7d7
-  - 43.198.206.201@49277@trojan@6baa0127
-  - 18.163.80.94@17801@trojan@a41baa39
   - 79.127.249.221@8443@vless@3291db19
   - 152.233.28.201@8443@vless@b0d5c11f
   - 82.40.23.19@443@vless@4ddb1b1c
@@ -1417,8 +1316,8 @@ proxy-groups:
   - 152.233.28.200@8443@vless@d57ede19
   - 154.37.223.25@52080@vmess@e45a5ab9
   - 154.37.223.25@11685@vmess@4bae9c37
-  - 221.150.109.89@59490@ss@698c9fc5
   - 152.233.28.202@8443@vless@f7282b72
+  - 221.150.109.89@59490@ss@698c9fc5
   - 45.198.87.223@8443@vless@4317b0a5
   - storage.netraidly.ru@40443@vless@1facc314
   - 142.91.108.139@443@vless@0e7dfcdb
@@ -1435,33 +1334,26 @@ proxy-groups:
   - 8.6.112.121@443@vless@13a33bc4
   - lv.faygo.bot@443@vless@20e01c4f
   - vagina.zestful.bond@3443@vless@5cd527f7
-  - 192.200.160.252@443@vless@1b324bb0
   - 82.40.23.180@443@vless@82440f93
+  - 192.200.160.252@443@vless@1b324bb0
   - 31.77.131.86@443@vless@dbf8a939
   - 94.156.179.71@443@vless@ec954106
   - 31.77.158.216@443@vless@559e8a26
   - 83.228.224.161@42549@trojan@4e869014
-  - 18.162.50.252@11035@trojan@64db6a11
-  - 217.217.247.253@443@vless@a4837747
   - 217.217.247.254@443@vless@df54cfa2
   - 217.217.244.130@443@vless@a67530ad
-  - 106.52.215.138@7890@socks5@8700574f
-  - 103.127.243.54@53229@vmess@38e6bb22
-  - 213.176.17.186@443@vless@df52cf05
+  - 217.217.247.253@443@vless@a4837747
   - 89.125.20.106@443@vless@a7ab575f
-  - 52.58.146.145@22222@trojan@f05f1a93
   - 52.58.146.145@22224@vless@b0ac511b
-  - 43.198.206.201@48738@trojan@633823bf
+  - 52.58.146.145@22222@trojan@f05f1a93
   - 52.58.146.145@22223@trojan@42adc969
   - 13.37.68.185@22223@trojan@41be6342
-  - 77.74.123.132@448@vless@80a42277
   - 45.90.97.132@443@vless@4e5a0756
+  - 5.101.87.3@443@vless@4027193f
   - 3.126.148.235@22223@trojan@00b02b62
-  - 35.77.34.38@5701@trojan@7a0d5289
+  - 213.176.17.186@443@vless@df52cf05
+  - 77.74.123.132@448@vless@80a42277
   - 83.228.224.161@2083@vless@e0b1a5c9
-  - 95.133.242.210@443@vless@c2372311
-  - 43.200.180.167@8686@vless@c6008cae
-  - 54.65.32.119@5408@trojan@cc088734
   - 61.171.92.202@1001@ss@c5a112b9
   - PG-fast
   - PG-default
@@ -1472,17 +1364,16 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
+  - 107.173.27.219@6666@vmess@42627277
   - proxy.netraidly.ru@40443@vless@370e1f1b
   - 185.186.245.63@81@vless@40f51a6b
+  - 172.86.91.58@8443@vless@34dd7a86
   - 150.241.102.175@443@vless@c9c057e7
   - 216.227.169.104@443@vless@73e680aa
   - 157.254.223.44@34567@mieru@7af1c875
   - sv2.azparadox.ir@8880@vless@5deb93a1
   - usa.zestful.bond@443@vless@060bfc3a
   - 172.252.125.77@443@vless@ff758661
-  - 18.162.190.157@17005@trojan@0203e7d7
-  - 43.198.206.201@49277@trojan@6baa0127
-  - 18.163.80.94@17801@trojan@a41baa39
   - 79.127.249.221@8443@vless@3291db19
   - 152.233.28.201@8443@vless@b0d5c11f
   - 82.40.23.19@443@vless@4ddb1b1c
@@ -1490,8 +1381,8 @@ proxy-groups:
   - 152.233.28.200@8443@vless@d57ede19
   - 154.37.223.25@52080@vmess@e45a5ab9
   - 154.37.223.25@11685@vmess@4bae9c37
-  - 221.150.109.89@59490@ss@698c9fc5
   - 152.233.28.202@8443@vless@f7282b72
+  - 221.150.109.89@59490@ss@698c9fc5
   - 45.198.87.223@8443@vless@4317b0a5
   - storage.netraidly.ru@40443@vless@1facc314
   - 142.91.108.139@443@vless@0e7dfcdb
@@ -1508,33 +1399,26 @@ proxy-groups:
   - 8.6.112.121@443@vless@13a33bc4
   - lv.faygo.bot@443@vless@20e01c4f
   - vagina.zestful.bond@3443@vless@5cd527f7
-  - 192.200.160.252@443@vless@1b324bb0
   - 82.40.23.180@443@vless@82440f93
+  - 192.200.160.252@443@vless@1b324bb0
   - 31.77.131.86@443@vless@dbf8a939
   - 94.156.179.71@443@vless@ec954106
   - 31.77.158.216@443@vless@559e8a26
   - 83.228.224.161@42549@trojan@4e869014
-  - 18.162.50.252@11035@trojan@64db6a11
-  - 217.217.247.253@443@vless@a4837747
   - 217.217.247.254@443@vless@df54cfa2
   - 217.217.244.130@443@vless@a67530ad
-  - 106.52.215.138@7890@socks5@8700574f
-  - 103.127.243.54@53229@vmess@38e6bb22
-  - 213.176.17.186@443@vless@df52cf05
+  - 217.217.247.253@443@vless@a4837747
   - 89.125.20.106@443@vless@a7ab575f
-  - 52.58.146.145@22222@trojan@f05f1a93
   - 52.58.146.145@22224@vless@b0ac511b
-  - 43.198.206.201@48738@trojan@633823bf
+  - 52.58.146.145@22222@trojan@f05f1a93
   - 52.58.146.145@22223@trojan@42adc969
   - 13.37.68.185@22223@trojan@41be6342
-  - 77.74.123.132@448@vless@80a42277
   - 45.90.97.132@443@vless@4e5a0756
+  - 5.101.87.3@443@vless@4027193f
   - 3.126.148.235@22223@trojan@00b02b62
-  - 35.77.34.38@5701@trojan@7a0d5289
+  - 213.176.17.186@443@vless@df52cf05
+  - 77.74.123.132@448@vless@80a42277
   - 83.228.224.161@2083@vless@e0b1a5c9
-  - 95.133.242.210@443@vless@c2372311
-  - 43.200.180.167@8686@vless@c6008cae
-  - 54.65.32.119@5408@trojan@cc088734
   - 61.171.92.202@1001@ss@c5a112b9
   - PG-fast
   - PG-default
@@ -1545,17 +1429,16 @@ proxy-groups:
   tolerance: 150
   lazy: true
   proxies:
+  - 107.173.27.219@6666@vmess@42627277
   - proxy.netraidly.ru@40443@vless@370e1f1b
   - 185.186.245.63@81@vless@40f51a6b
+  - 172.86.91.58@8443@vless@34dd7a86
   - 150.241.102.175@443@vless@c9c057e7
   - 216.227.169.104@443@vless@73e680aa
   - 157.254.223.44@34567@mieru@7af1c875
   - sv2.azparadox.ir@8880@vless@5deb93a1
   - usa.zestful.bond@443@vless@060bfc3a
   - 172.252.125.77@443@vless@ff758661
-  - 18.162.190.157@17005@trojan@0203e7d7
-  - 43.198.206.201@49277@trojan@6baa0127
-  - 18.163.80.94@17801@trojan@a41baa39
   - 79.127.249.221@8443@vless@3291db19
   - 152.233.28.201@8443@vless@b0d5c11f
   - 82.40.23.19@443@vless@4ddb1b1c
@@ -1563,8 +1446,8 @@ proxy-groups:
   - 152.233.28.200@8443@vless@d57ede19
   - 154.37.223.25@52080@vmess@e45a5ab9
   - 154.37.223.25@11685@vmess@4bae9c37
-  - 221.150.109.89@59490@ss@698c9fc5
   - 152.233.28.202@8443@vless@f7282b72
+  - 221.150.109.89@59490@ss@698c9fc5
   - 45.198.87.223@8443@vless@4317b0a5
   - storage.netraidly.ru@40443@vless@1facc314
   - 142.91.108.139@443@vless@0e7dfcdb
@@ -1581,33 +1464,26 @@ proxy-groups:
   - 8.6.112.121@443@vless@13a33bc4
   - lv.faygo.bot@443@vless@20e01c4f
   - vagina.zestful.bond@3443@vless@5cd527f7
-  - 192.200.160.252@443@vless@1b324bb0
   - 82.40.23.180@443@vless@82440f93
+  - 192.200.160.252@443@vless@1b324bb0
   - 31.77.131.86@443@vless@dbf8a939
   - 94.156.179.71@443@vless@ec954106
   - 31.77.158.216@443@vless@559e8a26
   - 83.228.224.161@42549@trojan@4e869014
-  - 18.162.50.252@11035@trojan@64db6a11
-  - 217.217.247.253@443@vless@a4837747
   - 217.217.247.254@443@vless@df54cfa2
   - 217.217.244.130@443@vless@a67530ad
-  - 106.52.215.138@7890@socks5@8700574f
-  - 103.127.243.54@53229@vmess@38e6bb22
-  - 213.176.17.186@443@vless@df52cf05
+  - 217.217.247.253@443@vless@a4837747
   - 89.125.20.106@443@vless@a7ab575f
-  - 52.58.146.145@22222@trojan@f05f1a93
   - 52.58.146.145@22224@vless@b0ac511b
-  - 43.198.206.201@48738@trojan@633823bf
+  - 52.58.146.145@22222@trojan@f05f1a93
   - 52.58.146.145@22223@trojan@42adc969
   - 13.37.68.185@22223@trojan@41be6342
-  - 77.74.123.132@448@vless@80a42277
   - 45.90.97.132@443@vless@4e5a0756
+  - 5.101.87.3@443@vless@4027193f
   - 3.126.148.235@22223@trojan@00b02b62
-  - 35.77.34.38@5701@trojan@7a0d5289
+  - 213.176.17.186@443@vless@df52cf05
+  - 77.74.123.132@448@vless@80a42277
   - 83.228.224.161@2083@vless@e0b1a5c9
-  - 95.133.242.210@443@vless@c2372311
-  - 43.200.180.167@8686@vless@c6008cae
-  - 54.65.32.119@5408@trojan@cc088734
   - 61.171.92.202@1001@ss@c5a112b9
   - PG-fast
   - PG-default
