@@ -240,36 +240,6 @@ proxies:
   password: dongtaiwang.com
   transport: TCP
   username: dongtaiwang.com
-- name: 151.101.191.151@80@vless@8333e8b2
-  type: vless
-  server: 151.101.191.151
-  port: 80
-  encryption: none
-  network: ws
-  packet-encoding: xudp
-  skip-cert-verify: false
-  tls: false
-  udp: true
-  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
-  ws-opts:
-    headers:
-      Host: max-gb1.global.ssl.fastly.net
-    path: /
-- name: 103.227.84.59@443@vless@922eb13d
-  type: vless
-  server: 103.227.84.59
-  port: 443
-  udp: true
-  uuid: d56897c3-a83d-4572-9b97-25440bb189c5
-  network: grpc
-  tls: true
-  servername: www.microsoft.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: cjCwI7alv-GUgef0TW7i-S7jNgnIoZ6aooGYH7Nopxs
-    short-id: deadbeef
-  grpc-opts:
-    grpc-service-name: GrpcFuckRKN
 - name: 151.101.27.151@80@vless@52cfa368
   type: vless
   server: 151.101.27.151
@@ -300,18 +270,6 @@ proxies:
   tls: false
   uuid: 2f50f5ef-1a3a-4585-a3c9-3a860d37b134
   udp: true
-- name: 43.164.0.59@666@vless@3c0e9087
-  type: vless
-  server: 43.164.0.59
-  port: 666
-  uuid: 8d5e7f2a-3c1b-4d9e-a6f8-2b5c0e7d4a19
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: 43.164.0.59
-  network: ws
-  ws-opts:
-    path: /proxy
 - name: 104.21.6.82@8080@vless@a735ffab
   type: vless
   server: 104.21.6.82
@@ -328,6 +286,33 @@ proxies:
       Host: server7.wimig16819.workers.dev
     max-early-data: 2560
     path: /eyJqdW5rIjoiSWdvVk5ETHBhRnNQamIiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iXX0=
+- name: 103.227.84.59@443@vless@922eb13d
+  type: vless
+  server: 103.227.84.59
+  port: 443
+  udp: true
+  uuid: d56897c3-a83d-4572-9b97-25440bb189c5
+  network: grpc
+  tls: true
+  servername: www.microsoft.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: cjCwI7alv-GUgef0TW7i-S7jNgnIoZ6aooGYH7Nopxs
+    short-id: deadbeef
+  grpc-opts:
+    grpc-service-name: GrpcFuckRKN
+- name: 43.164.0.59@666@vless@3c0e9087
+  type: vless
+  server: 43.164.0.59
+  port: 666
+  uuid: 8d5e7f2a-3c1b-4d9e-a6f8-2b5c0e7d4a19
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: 43.164.0.59
+  network: ws
+  ws-opts:
+    path: /proxy
 - name: 91.193.59.22@2083@vless@f2357081
   type: vless
   server: 91.193.59.22
@@ -342,6 +327,21 @@ proxies:
     path: /
     headers:
       Host: edgetunnel-cmliu.lyqnihao.dpdns.org
+- name: 151.101.191.151@80@vless@8333e8b2
+  type: vless
+  server: 151.101.191.151
+  port: 80
+  encryption: none
+  network: ws
+  packet-encoding: xudp
+  skip-cert-verify: false
+  tls: false
+  udp: true
+  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
+  ws-opts:
+    headers:
+      Host: max-gb1.global.ssl.fastly.net
+    path: /
 - name: 172.67.134.161@8080@vless@890c862e
   type: vless
   server: 172.67.134.161
@@ -375,6 +375,19 @@ proxies:
   tls: true
   udp: true
   uuid: 02dd2e7c-77c6-4384-9b16-453fd4e95a4c
+- name: 154.37.223.56@35115@vmess@46ca092b
+  type: vmess
+  server: 154.37.223.56
+  port: 35115
+  alterId: 0
+  cipher: auto
+  http-opts:
+    method: GET
+    path:
+    - /
+  network: http
+  tls: false
+  uuid: b95adf02-8d54-482f-8b26-e49450c873ce
 - name: 104.21.39.53@8080@vless@0210cabb
   type: vless
   server: 104.21.39.53
@@ -437,20 +450,6 @@ proxies:
     headers:
       Host: www.calmloud.com
     path: /assignment
-- name: 154.37.223.56@13659@vmess@b7bc7813
-  type: vmess
-  server: 154.37.223.56
-  port: 13659
-  alterId: 0
-  cipher: auto
-  http-opts:
-    method: GET
-    path:
-    - /
-  network: http
-  tls: false
-  uuid: 137fcb24-2538-49ef-ce1e-329ebe5edcbe
-  udp: true
 - name: 153.76.112.64@1080@ss@874af255
   type: ss
   server: 153.76.112.64
@@ -459,6 +458,19 @@ proxies:
   password: qSD_rJKu3Xazdb4ybvHupw
   skip-cert-verify: false
   udp: false
+- name: 154.37.223.56@43203@vmess@1d35bf03
+  type: vmess
+  server: 154.37.223.56
+  port: 43203
+  alterId: 0
+  cipher: auto
+  http-opts:
+    method: GET
+    path:
+    - /
+  network: http
+  tls: false
+  uuid: 68bd04a1-0547-46a6-cdb2-c8ac3fce1e67
 - name: 82.39.213.150@443@vless@70060b76
   type: vless
   server: 82.39.213.150
@@ -483,6 +495,15 @@ proxies:
     path: /eyJqdW5rIjoiaEhLN095OU11YyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=?ed=2560
     headers:
       Host: arkamoshtari.peghmoshtari.workers.dev
+- name: 206.82.3.131@443@vless@c7ba1c35
+  type: vless
+  server: 206.82.3.131
+  port: 443
+  encryption: none
+  network: tcp
+  udp: true
+  uuid: d26598cf-2cdf-4219-80d0-94646dff160d
+  xudp: true
 - name: 104.16.72.70@8443@vless@760371dd
   type: vless
   server: 104.16.72.70
@@ -495,6 +516,20 @@ proxies:
     path: /@IRAN_V2RAY1-@IRAN_V2RAY1-@IRAN_V2RAY1-@IRAN_V2RAY1-@IRAN_V2RAY1-@IRAN_V2RAY1-@IRAN_V2RAY1-
     host: sa.sorixset.ir
     mode: auto
+- name: 217.9.12.58@443@vless@5f9631c8
+  type: vless
+  server: 217.9.12.58
+  port: 443
+  uuid: 02dd2e7c-77c6-4384-9b16-453fd4e95a4c
+  tls: true
+  servername: www.microsoft.com
+  reality-opts:
+    public-key: hLx8TLJmiERzIkXT1rpRgV8S1oN-i9cE2N5o7Wi_0TQ
+    short-id: 7a3f9e2b1c8d4f6a
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc
 - name: 195.85.59.187@2095@vless@71e19dfc
   type: vless
   server: 195.85.59.187
@@ -572,73 +607,6 @@ proxies:
   tls: true
   udp: true
   uuid: 599907db-9e9e-4c50-b9f1-d1b42cdec21f
-- name: v9.hdacd.com@30809@vmess@f970299e
-  type: vmess
-  server: 136.110.40.163
-  port: 30809
-  alterId: 2
-  cipher: auto
-  h2-opts: {}
-  http-opts: {}
-  network: tcp
-  skip-cert-verify: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  sni: v9.hdacd.com
-- name: 52.58.3.46@22223@trojan@26a46d48
-  type: trojan
-  server: 52.58.3.46
-  port: 22223
-  password: telegram-id-directvpn
-  sni: trojan.burgerip.co.uk
-  skip-cert-verify: true
-  udp: true
-- name: 15.237.241.88@22222@trojan@b4cca3ad
-  type: trojan
-  server: 15.237.241.88
-  port: 22222
-  password: telegram-id-privatevpns
-  sni: trojan.burgerip.co.uk
-  skip-cert-verify: true
-  udp: true
-- name: 15.237.241.88@22223@trojan@0e7967ac
-  type: trojan
-  server: 15.237.241.88
-  port: 22223
-  password: telegram-id-directvpn
-  sni: trojan.burgerip.co.uk
-  skip-cert-verify: true
-  udp: true
-- name: 45.155.102.46@443@vless@6cb86a11
-  type: vless
-  server: 45.155.102.46
-  port: 443
-  client-fingerprint: qq
-  encryption: none
-  grpc-opts:
-    grpc-service-name: web-grpc
-  network: grpc
-  packet-encoding: xudp
-  reality-opts:
-    public-key: epKxGHvul2A8tNMFsEDFN2P71B-WbEEwbqbPLyNlYFg
-    short-id: e549af0908
-  servername: dzen.ru
-  skip-cert-verify: false
-  tls: true
-  udp: true
-  uuid: c63c03b0-2cc1-4063-b8c1-2eb64138f72f
-- name: v29.hdacd.com@30829@vmess@6a3c7508
-  type: vmess
-  server: 136.110.40.163
-  port: 30829
-  alterId: 2
-  cipher: auto
-  http-opts: {}
-  network: tcp
-  skip-cert-verify: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  ws-opts:
-    path: /
-  sni: v29.hdacd.com
 - name: 104.21.74.23@8080@vless@32b64445
   type: vless
   server: 104.21.74.23
@@ -685,9 +653,25 @@ proxies:
     path: /bing
     headers:
       Host: kra.hterre.me
-- name: 13.36.118.76@22223@trojan@c15c5600
+- name: 15.237.241.88@22222@trojan@b4cca3ad
   type: trojan
-  server: 13.36.118.76
+  server: 15.237.241.88
+  port: 22222
+  password: telegram-id-privatevpns
+  sni: trojan.burgerip.co.uk
+  skip-cert-verify: true
+  udp: true
+- name: 52.58.3.46@22223@trojan@26a46d48
+  type: trojan
+  server: 52.58.3.46
+  port: 22223
+  password: telegram-id-directvpn
+  sni: trojan.burgerip.co.uk
+  skip-cert-verify: true
+  udp: true
+- name: 15.237.241.88@22223@trojan@0e7967ac
+  type: trojan
+  server: 15.237.241.88
   port: 22223
   password: telegram-id-directvpn
   sni: trojan.burgerip.co.uk
@@ -706,36 +690,14 @@ proxies:
   ws-opts:
     path: /telegram-channel-vlessconfig
     headers: {}
-- name: 104.21.15.55@80@vless@83a01b70
-  type: vless
-  server: 104.21.15.55
-  port: 80
-  client-fingerprint: chrome
-  network: ws
-  packet-encoding: xudp
-  servername: ez-09ed80.test-env-52424b.workers.dev
-  skip-cert-verify: false
+- name: 13.36.118.76@22223@trojan@c15c5600
+  type: trojan
+  server: 13.36.118.76
+  port: 22223
+  password: telegram-id-directvpn
+  sni: trojan.burgerip.co.uk
+  skip-cert-verify: true
   udp: true
-  uuid: 09e81f69-b010-4f31-8752-8cefbdc30f9d
-  ws-opts:
-    headers:
-      Host: ez-09ed80.test-env-52424b.workers.dev
-    path: /
-- name: 172.67.161.185@80@vless@d7e35264
-  type: vless
-  server: 172.67.161.185
-  port: 80
-  client-fingerprint: chrome
-  network: ws
-  packet-encoding: xudp
-  servername: ez-09ed80.test-env-52424b.workers.dev
-  skip-cert-verify: false
-  udp: true
-  uuid: 09e81f69-b010-4f31-8752-8cefbdc30f9d
-  ws-opts:
-    headers:
-      Host: ez-09ed80.test-env-52424b.workers.dev
-    path: /
 - name: 13.36.118.76@22222@trojan@dc1751c3
   type: trojan
   server: 13.36.118.76
@@ -744,6 +706,10 @@ proxies:
   sni: trojan.burgerip.co.uk
   skip-cert-verify: true
   udp: true
+- name: 106.52.215.138@7890@socks5@8700574f
+  type: socks5
+  server: 106.52.215.138
+  port: 7890
 - name: 61.171.92.202@1001@ss@c5a112b9
   type: ss
   server: 61.171.92.202
@@ -766,24 +732,6 @@ proxies:
     path: /ws
     tls: false
   udp: true
-- name: 146.0.75.144@443@vless@057309c0
-  type: vless
-  server: 146.0.75.144
-  port: 443
-  client-fingerprint: qq
-  encryption: none
-  grpc-opts:
-    grpc-service-name: web-grpc
-  network: grpc
-  packet-encoding: xudp
-  reality-opts:
-    public-key: epKxGHvul2A8tNMFsEDFN2P71B-WbEEwbqbPLyNlYFg
-    short-id: e549af0908
-  servername: dzen.ru
-  skip-cert-verify: false
-  tls: true
-  udp: true
-  uuid: c63c03b0-2cc1-4063-b8c1-2eb64138f72f
 - name: 138.16.152.178@9443@vless@14a255d5
   type: vless
   server: 138.16.152.178
@@ -801,16 +749,28 @@ proxies:
   tls: true
   udp: true
   uuid: ba302f7c-8ded-4ea6-99be-5abfd3ab6b3e
-- name: 50.62.195.30@8880@vless@8f3cf83b
-  type: vless
-  server: 50.62.195.30
-  port: 8880
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime38.workers.dev
+- name: 134.195.101.115@2377@ss@f95240ea
+  type: ss
+  server: 134.195.101.115
+  port: 2377
+  cipher: chacha20-ietf-poly1305
+  password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv
+  plugin: obfs
+  plugin-opts:
+    host: 817aa69.default.nintendo.com:112719
+    mode: tls
+  udp: true
+- name: 134.195.101.117@2377@ss@230aa9e0
+  type: ss
+  server: 134.195.101.117
+  port: 2377
+  cipher: chacha20-ietf-poly1305
+  password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv
+  plugin: obfs
+  plugin-opts:
+    host: 817aa69.default.nintendo.com:112719
+    mode: tls
+  udp: true
 proxy-groups:
 - name: PG-fast
   type: url-test
@@ -821,48 +781,47 @@ proxy-groups:
   proxies:
   - 82.40.23.180@443@vless@82440f93
   - 157.254.223.44@34567@mieru@7af1c875
-  - 151.101.191.151@80@vless@8333e8b2
-  - 103.227.84.59@443@vless@922eb13d
   - 151.101.27.151@80@vless@52cfa368
   - 103.127.243.54@53229@vmess@38e6bb22
-  - 43.164.0.59@666@vless@3c0e9087
   - 104.21.6.82@8080@vless@a735ffab
+  - 103.227.84.59@443@vless@922eb13d
+  - 43.164.0.59@666@vless@3c0e9087
   - 91.193.59.22@2083@vless@f2357081
+  - 151.101.191.151@80@vless@8333e8b2
   - 172.67.134.161@8080@vless@890c862e
   - 132.243.65.252@443@vless@5cfd4b20
+  - 154.37.223.56@35115@vmess@46ca092b
   - 104.21.39.53@8080@vless@0210cabb
   - 172.67.143.139@8080@vless@2fa51af6
   - 161.104.48.27@443@vless@25f56235
   - 104.18.17.216@443@trojan@42d13e15
-  - 154.37.223.56@13659@vmess@b7bc7813
   - 153.76.112.64@1080@ss@874af255
+  - 154.37.223.56@43203@vmess@1d35bf03
   - 82.39.213.150@443@vless@70060b76
   - 69.84.182.152@80@vless@053bbc58
+  - 206.82.3.131@443@vless@c7ba1c35
   - 104.16.72.70@8443@vless@760371dd
+  - 217.9.12.58@443@vless@5f9631c8
   - 195.85.59.187@2095@vless@71e19dfc
   - 31.76.91.29@443@vless@b12f6df2
   - 47.254.156.143@443@vless@a098e50a
   - 89.124.123.50@443@vless@9b65a8bf
   - 185.229.9.78@6443@vless@2f5f38a7
-  - v9.hdacd.com@30809@vmess@f970299e
-  - 52.58.3.46@22223@trojan@26a46d48
-  - 15.237.241.88@22222@trojan@b4cca3ad
-  - 15.237.241.88@22223@trojan@0e7967ac
-  - 45.155.102.46@443@vless@6cb86a11
-  - v29.hdacd.com@30829@vmess@6a3c7508
   - 104.21.74.23@8080@vless@32b64445
   - 172.67.153.109@8080@vless@6a5ff822
   - 34.150.126.210@443@vless@98b27cc8
-  - 13.36.118.76@22223@trojan@c15c5600
+  - 15.237.241.88@22222@trojan@b4cca3ad
+  - 52.58.3.46@22223@trojan@26a46d48
+  - 15.237.241.88@22223@trojan@0e7967ac
   - 13.36.118.76@22224@vless@6958f30c
-  - 104.21.15.55@80@vless@83a01b70
-  - 172.67.161.185@80@vless@d7e35264
+  - 13.36.118.76@22223@trojan@c15c5600
   - 13.36.118.76@22222@trojan@dc1751c3
+  - 106.52.215.138@7890@socks5@8700574f
   - 61.171.92.202@1001@ss@c5a112b9
   - 104.128.72.119@80@ss@99398782
-  - 146.0.75.144@443@vless@057309c0
   - 138.16.152.178@9443@vless@14a255d5
-  - 50.62.195.30@8880@vless@8f3cf83b
+  - 134.195.101.115@2377@ss@f95240ea
+  - 134.195.101.117@2377@ss@230aa9e0
 - name: PG-default
   type: fallback
   url: https://www.google.com/generate_204
@@ -872,48 +831,47 @@ proxy-groups:
   - PG-fast
   - 82.40.23.180@443@vless@82440f93
   - 157.254.223.44@34567@mieru@7af1c875
-  - 151.101.191.151@80@vless@8333e8b2
-  - 103.227.84.59@443@vless@922eb13d
   - 151.101.27.151@80@vless@52cfa368
   - 103.127.243.54@53229@vmess@38e6bb22
-  - 43.164.0.59@666@vless@3c0e9087
   - 104.21.6.82@8080@vless@a735ffab
+  - 103.227.84.59@443@vless@922eb13d
+  - 43.164.0.59@666@vless@3c0e9087
   - 91.193.59.22@2083@vless@f2357081
+  - 151.101.191.151@80@vless@8333e8b2
   - 172.67.134.161@8080@vless@890c862e
   - 132.243.65.252@443@vless@5cfd4b20
+  - 154.37.223.56@35115@vmess@46ca092b
   - 104.21.39.53@8080@vless@0210cabb
   - 172.67.143.139@8080@vless@2fa51af6
   - 161.104.48.27@443@vless@25f56235
   - 104.18.17.216@443@trojan@42d13e15
-  - 154.37.223.56@13659@vmess@b7bc7813
   - 153.76.112.64@1080@ss@874af255
+  - 154.37.223.56@43203@vmess@1d35bf03
   - 82.39.213.150@443@vless@70060b76
   - 69.84.182.152@80@vless@053bbc58
+  - 206.82.3.131@443@vless@c7ba1c35
   - 104.16.72.70@8443@vless@760371dd
+  - 217.9.12.58@443@vless@5f9631c8
   - 195.85.59.187@2095@vless@71e19dfc
   - 31.76.91.29@443@vless@b12f6df2
   - 47.254.156.143@443@vless@a098e50a
   - 89.124.123.50@443@vless@9b65a8bf
   - 185.229.9.78@6443@vless@2f5f38a7
-  - v9.hdacd.com@30809@vmess@f970299e
-  - 52.58.3.46@22223@trojan@26a46d48
-  - 15.237.241.88@22222@trojan@b4cca3ad
-  - 15.237.241.88@22223@trojan@0e7967ac
-  - 45.155.102.46@443@vless@6cb86a11
-  - v29.hdacd.com@30829@vmess@6a3c7508
   - 104.21.74.23@8080@vless@32b64445
   - 172.67.153.109@8080@vless@6a5ff822
   - 34.150.126.210@443@vless@98b27cc8
-  - 13.36.118.76@22223@trojan@c15c5600
+  - 15.237.241.88@22222@trojan@b4cca3ad
+  - 52.58.3.46@22223@trojan@26a46d48
+  - 15.237.241.88@22223@trojan@0e7967ac
   - 13.36.118.76@22224@vless@6958f30c
-  - 104.21.15.55@80@vless@83a01b70
-  - 172.67.161.185@80@vless@d7e35264
+  - 13.36.118.76@22223@trojan@c15c5600
   - 13.36.118.76@22222@trojan@dc1751c3
+  - 106.52.215.138@7890@socks5@8700574f
   - 61.171.92.202@1001@ss@c5a112b9
   - 104.128.72.119@80@ss@99398782
-  - 146.0.75.144@443@vless@057309c0
   - 138.16.152.178@9443@vless@14a255d5
-  - 50.62.195.30@8880@vless@8f3cf83b
+  - 134.195.101.115@2377@ss@f95240ea
+  - 134.195.101.117@2377@ss@230aa9e0
 - name: PG-AnTing
   type: load-balance
   url: https://www.google.com/generate_204
@@ -923,48 +881,47 @@ proxy-groups:
   proxies:
   - 82.40.23.180@443@vless@82440f93
   - 157.254.223.44@34567@mieru@7af1c875
-  - 151.101.191.151@80@vless@8333e8b2
-  - 103.227.84.59@443@vless@922eb13d
   - 151.101.27.151@80@vless@52cfa368
   - 103.127.243.54@53229@vmess@38e6bb22
-  - 43.164.0.59@666@vless@3c0e9087
   - 104.21.6.82@8080@vless@a735ffab
+  - 103.227.84.59@443@vless@922eb13d
+  - 43.164.0.59@666@vless@3c0e9087
   - 91.193.59.22@2083@vless@f2357081
+  - 151.101.191.151@80@vless@8333e8b2
   - 172.67.134.161@8080@vless@890c862e
   - 132.243.65.252@443@vless@5cfd4b20
+  - 154.37.223.56@35115@vmess@46ca092b
   - 104.21.39.53@8080@vless@0210cabb
   - 172.67.143.139@8080@vless@2fa51af6
   - 161.104.48.27@443@vless@25f56235
   - 104.18.17.216@443@trojan@42d13e15
-  - 154.37.223.56@13659@vmess@b7bc7813
   - 153.76.112.64@1080@ss@874af255
+  - 154.37.223.56@43203@vmess@1d35bf03
   - 82.39.213.150@443@vless@70060b76
   - 69.84.182.152@80@vless@053bbc58
+  - 206.82.3.131@443@vless@c7ba1c35
   - 104.16.72.70@8443@vless@760371dd
+  - 217.9.12.58@443@vless@5f9631c8
   - 195.85.59.187@2095@vless@71e19dfc
   - 31.76.91.29@443@vless@b12f6df2
   - 47.254.156.143@443@vless@a098e50a
   - 89.124.123.50@443@vless@9b65a8bf
   - 185.229.9.78@6443@vless@2f5f38a7
-  - v9.hdacd.com@30809@vmess@f970299e
-  - 52.58.3.46@22223@trojan@26a46d48
-  - 15.237.241.88@22222@trojan@b4cca3ad
-  - 15.237.241.88@22223@trojan@0e7967ac
-  - 45.155.102.46@443@vless@6cb86a11
-  - v29.hdacd.com@30829@vmess@6a3c7508
   - 104.21.74.23@8080@vless@32b64445
   - 172.67.153.109@8080@vless@6a5ff822
   - 34.150.126.210@443@vless@98b27cc8
-  - 13.36.118.76@22223@trojan@c15c5600
+  - 15.237.241.88@22222@trojan@b4cca3ad
+  - 52.58.3.46@22223@trojan@26a46d48
+  - 15.237.241.88@22223@trojan@0e7967ac
   - 13.36.118.76@22224@vless@6958f30c
-  - 104.21.15.55@80@vless@83a01b70
-  - 172.67.161.185@80@vless@d7e35264
+  - 13.36.118.76@22223@trojan@c15c5600
   - 13.36.118.76@22222@trojan@dc1751c3
+  - 106.52.215.138@7890@socks5@8700574f
   - 61.171.92.202@1001@ss@c5a112b9
   - 104.128.72.119@80@ss@99398782
-  - 146.0.75.144@443@vless@057309c0
   - 138.16.152.178@9443@vless@14a255d5
-  - 50.62.195.30@8880@vless@8f3cf83b
+  - 134.195.101.115@2377@ss@f95240ea
+  - 134.195.101.117@2377@ss@230aa9e0
 - name: PG-Sage
   type: load-balance
   url: http://www.eastmoney.com
@@ -974,48 +931,47 @@ proxy-groups:
   proxies:
   - 82.40.23.180@443@vless@82440f93
   - 157.254.223.44@34567@mieru@7af1c875
-  - 151.101.191.151@80@vless@8333e8b2
-  - 103.227.84.59@443@vless@922eb13d
   - 151.101.27.151@80@vless@52cfa368
   - 103.127.243.54@53229@vmess@38e6bb22
-  - 43.164.0.59@666@vless@3c0e9087
   - 104.21.6.82@8080@vless@a735ffab
+  - 103.227.84.59@443@vless@922eb13d
+  - 43.164.0.59@666@vless@3c0e9087
   - 91.193.59.22@2083@vless@f2357081
+  - 151.101.191.151@80@vless@8333e8b2
   - 172.67.134.161@8080@vless@890c862e
   - 132.243.65.252@443@vless@5cfd4b20
+  - 154.37.223.56@35115@vmess@46ca092b
   - 104.21.39.53@8080@vless@0210cabb
   - 172.67.143.139@8080@vless@2fa51af6
   - 161.104.48.27@443@vless@25f56235
   - 104.18.17.216@443@trojan@42d13e15
-  - 154.37.223.56@13659@vmess@b7bc7813
   - 153.76.112.64@1080@ss@874af255
+  - 154.37.223.56@43203@vmess@1d35bf03
   - 82.39.213.150@443@vless@70060b76
   - 69.84.182.152@80@vless@053bbc58
+  - 206.82.3.131@443@vless@c7ba1c35
   - 104.16.72.70@8443@vless@760371dd
+  - 217.9.12.58@443@vless@5f9631c8
   - 195.85.59.187@2095@vless@71e19dfc
   - 31.76.91.29@443@vless@b12f6df2
   - 47.254.156.143@443@vless@a098e50a
   - 89.124.123.50@443@vless@9b65a8bf
   - 185.229.9.78@6443@vless@2f5f38a7
-  - v9.hdacd.com@30809@vmess@f970299e
-  - 52.58.3.46@22223@trojan@26a46d48
-  - 15.237.241.88@22222@trojan@b4cca3ad
-  - 15.237.241.88@22223@trojan@0e7967ac
-  - 45.155.102.46@443@vless@6cb86a11
-  - v29.hdacd.com@30829@vmess@6a3c7508
   - 104.21.74.23@8080@vless@32b64445
   - 172.67.153.109@8080@vless@6a5ff822
   - 34.150.126.210@443@vless@98b27cc8
-  - 13.36.118.76@22223@trojan@c15c5600
+  - 15.237.241.88@22222@trojan@b4cca3ad
+  - 52.58.3.46@22223@trojan@26a46d48
+  - 15.237.241.88@22223@trojan@0e7967ac
   - 13.36.118.76@22224@vless@6958f30c
-  - 104.21.15.55@80@vless@83a01b70
-  - 172.67.161.185@80@vless@d7e35264
+  - 13.36.118.76@22223@trojan@c15c5600
   - 13.36.118.76@22222@trojan@dc1751c3
+  - 106.52.215.138@7890@socks5@8700574f
   - 61.171.92.202@1001@ss@c5a112b9
   - 104.128.72.119@80@ss@99398782
-  - 146.0.75.144@443@vless@057309c0
   - 138.16.152.178@9443@vless@14a255d5
-  - 50.62.195.30@8880@vless@8f3cf83b
+  - 134.195.101.115@2377@ss@f95240ea
+  - 134.195.101.117@2377@ss@230aa9e0
 - name: PG-CN
   type: load-balance
   url: https://www.sse.com.cn
@@ -1023,6 +979,7 @@ proxy-groups:
   lazy: true
   strategy: round-robin
   proxies:
+  - 106.52.215.138@7890@socks5@8700574f
   - 61.171.92.202@1001@ss@c5a112b9
 - name: PG-Google
   type: url-test
@@ -1035,45 +992,44 @@ proxy-groups:
   - 91.193.59.22@2083@vless@f2357081
   - 132.243.65.252@443@vless@5cfd4b20
   - 153.76.112.64@1080@ss@874af255
+  - 206.82.3.131@443@vless@c7ba1c35
   - 195.85.59.187@2095@vless@71e19dfc
-  - v29.hdacd.com@30829@vmess@6a3c7508
   - 104.128.72.119@80@ss@99398782
-  - 50.62.195.30@8880@vless@8f3cf83b
+  - 134.195.101.115@2377@ss@f95240ea
+  - 134.195.101.117@2377@ss@230aa9e0
   - 82.40.23.180@443@vless@82440f93
-  - 151.101.191.151@80@vless@8333e8b2
-  - 103.227.84.59@443@vless@922eb13d
   - 151.101.27.151@80@vless@52cfa368
   - 103.127.243.54@53229@vmess@38e6bb22
-  - 43.164.0.59@666@vless@3c0e9087
   - 104.21.6.82@8080@vless@a735ffab
+  - 103.227.84.59@443@vless@922eb13d
+  - 43.164.0.59@666@vless@3c0e9087
+  - 151.101.191.151@80@vless@8333e8b2
   - 172.67.134.161@8080@vless@890c862e
+  - 154.37.223.56@35115@vmess@46ca092b
   - 104.21.39.53@8080@vless@0210cabb
   - 172.67.143.139@8080@vless@2fa51af6
   - 161.104.48.27@443@vless@25f56235
   - 104.18.17.216@443@trojan@42d13e15
-  - 154.37.223.56@13659@vmess@b7bc7813
+  - 154.37.223.56@43203@vmess@1d35bf03
   - 82.39.213.150@443@vless@70060b76
   - 69.84.182.152@80@vless@053bbc58
   - 104.16.72.70@8443@vless@760371dd
+  - 217.9.12.58@443@vless@5f9631c8
   - 31.76.91.29@443@vless@b12f6df2
   - 47.254.156.143@443@vless@a098e50a
   - 89.124.123.50@443@vless@9b65a8bf
   - 185.229.9.78@6443@vless@2f5f38a7
-  - v9.hdacd.com@30809@vmess@f970299e
-  - 52.58.3.46@22223@trojan@26a46d48
-  - 15.237.241.88@22222@trojan@b4cca3ad
-  - 15.237.241.88@22223@trojan@0e7967ac
-  - 45.155.102.46@443@vless@6cb86a11
   - 104.21.74.23@8080@vless@32b64445
   - 172.67.153.109@8080@vless@6a5ff822
   - 34.150.126.210@443@vless@98b27cc8
-  - 13.36.118.76@22223@trojan@c15c5600
+  - 15.237.241.88@22222@trojan@b4cca3ad
+  - 52.58.3.46@22223@trojan@26a46d48
+  - 15.237.241.88@22223@trojan@0e7967ac
   - 13.36.118.76@22224@vless@6958f30c
-  - 104.21.15.55@80@vless@83a01b70
-  - 172.67.161.185@80@vless@d7e35264
+  - 13.36.118.76@22223@trojan@c15c5600
   - 13.36.118.76@22222@trojan@dc1751c3
+  - 106.52.215.138@7890@socks5@8700574f
   - 61.171.92.202@1001@ss@c5a112b9
-  - 146.0.75.144@443@vless@057309c0
   - 138.16.152.178@9443@vless@14a255d5
   - PG-fast
   - PG-default
@@ -1088,45 +1044,44 @@ proxy-groups:
   - 91.193.59.22@2083@vless@f2357081
   - 132.243.65.252@443@vless@5cfd4b20
   - 153.76.112.64@1080@ss@874af255
+  - 206.82.3.131@443@vless@c7ba1c35
   - 195.85.59.187@2095@vless@71e19dfc
-  - v29.hdacd.com@30829@vmess@6a3c7508
   - 104.128.72.119@80@ss@99398782
-  - 50.62.195.30@8880@vless@8f3cf83b
+  - 134.195.101.115@2377@ss@f95240ea
+  - 134.195.101.117@2377@ss@230aa9e0
   - 82.40.23.180@443@vless@82440f93
-  - 151.101.191.151@80@vless@8333e8b2
-  - 103.227.84.59@443@vless@922eb13d
   - 151.101.27.151@80@vless@52cfa368
   - 103.127.243.54@53229@vmess@38e6bb22
-  - 43.164.0.59@666@vless@3c0e9087
   - 104.21.6.82@8080@vless@a735ffab
+  - 103.227.84.59@443@vless@922eb13d
+  - 43.164.0.59@666@vless@3c0e9087
+  - 151.101.191.151@80@vless@8333e8b2
   - 172.67.134.161@8080@vless@890c862e
+  - 154.37.223.56@35115@vmess@46ca092b
   - 104.21.39.53@8080@vless@0210cabb
   - 172.67.143.139@8080@vless@2fa51af6
   - 161.104.48.27@443@vless@25f56235
   - 104.18.17.216@443@trojan@42d13e15
-  - 154.37.223.56@13659@vmess@b7bc7813
+  - 154.37.223.56@43203@vmess@1d35bf03
   - 82.39.213.150@443@vless@70060b76
   - 69.84.182.152@80@vless@053bbc58
   - 104.16.72.70@8443@vless@760371dd
+  - 217.9.12.58@443@vless@5f9631c8
   - 31.76.91.29@443@vless@b12f6df2
   - 47.254.156.143@443@vless@a098e50a
   - 89.124.123.50@443@vless@9b65a8bf
   - 185.229.9.78@6443@vless@2f5f38a7
-  - v9.hdacd.com@30809@vmess@f970299e
-  - 52.58.3.46@22223@trojan@26a46d48
-  - 15.237.241.88@22222@trojan@b4cca3ad
-  - 15.237.241.88@22223@trojan@0e7967ac
-  - 45.155.102.46@443@vless@6cb86a11
   - 104.21.74.23@8080@vless@32b64445
   - 172.67.153.109@8080@vless@6a5ff822
   - 34.150.126.210@443@vless@98b27cc8
-  - 13.36.118.76@22223@trojan@c15c5600
+  - 15.237.241.88@22222@trojan@b4cca3ad
+  - 52.58.3.46@22223@trojan@26a46d48
+  - 15.237.241.88@22223@trojan@0e7967ac
   - 13.36.118.76@22224@vless@6958f30c
-  - 104.21.15.55@80@vless@83a01b70
-  - 172.67.161.185@80@vless@d7e35264
+  - 13.36.118.76@22223@trojan@c15c5600
   - 13.36.118.76@22222@trojan@dc1751c3
+  - 106.52.215.138@7890@socks5@8700574f
   - 61.171.92.202@1001@ss@c5a112b9
-  - 146.0.75.144@443@vless@057309c0
   - 138.16.152.178@9443@vless@14a255d5
   - PG-fast
   - PG-default
@@ -1141,45 +1096,44 @@ proxy-groups:
   - 91.193.59.22@2083@vless@f2357081
   - 132.243.65.252@443@vless@5cfd4b20
   - 153.76.112.64@1080@ss@874af255
+  - 206.82.3.131@443@vless@c7ba1c35
   - 195.85.59.187@2095@vless@71e19dfc
-  - v29.hdacd.com@30829@vmess@6a3c7508
   - 104.128.72.119@80@ss@99398782
-  - 50.62.195.30@8880@vless@8f3cf83b
+  - 134.195.101.115@2377@ss@f95240ea
+  - 134.195.101.117@2377@ss@230aa9e0
   - 82.40.23.180@443@vless@82440f93
-  - 151.101.191.151@80@vless@8333e8b2
-  - 103.227.84.59@443@vless@922eb13d
   - 151.101.27.151@80@vless@52cfa368
   - 103.127.243.54@53229@vmess@38e6bb22
-  - 43.164.0.59@666@vless@3c0e9087
   - 104.21.6.82@8080@vless@a735ffab
+  - 103.227.84.59@443@vless@922eb13d
+  - 43.164.0.59@666@vless@3c0e9087
+  - 151.101.191.151@80@vless@8333e8b2
   - 172.67.134.161@8080@vless@890c862e
+  - 154.37.223.56@35115@vmess@46ca092b
   - 104.21.39.53@8080@vless@0210cabb
   - 172.67.143.139@8080@vless@2fa51af6
   - 161.104.48.27@443@vless@25f56235
   - 104.18.17.216@443@trojan@42d13e15
-  - 154.37.223.56@13659@vmess@b7bc7813
+  - 154.37.223.56@43203@vmess@1d35bf03
   - 82.39.213.150@443@vless@70060b76
   - 69.84.182.152@80@vless@053bbc58
   - 104.16.72.70@8443@vless@760371dd
+  - 217.9.12.58@443@vless@5f9631c8
   - 31.76.91.29@443@vless@b12f6df2
   - 47.254.156.143@443@vless@a098e50a
   - 89.124.123.50@443@vless@9b65a8bf
   - 185.229.9.78@6443@vless@2f5f38a7
-  - v9.hdacd.com@30809@vmess@f970299e
-  - 52.58.3.46@22223@trojan@26a46d48
-  - 15.237.241.88@22222@trojan@b4cca3ad
-  - 15.237.241.88@22223@trojan@0e7967ac
-  - 45.155.102.46@443@vless@6cb86a11
   - 104.21.74.23@8080@vless@32b64445
   - 172.67.153.109@8080@vless@6a5ff822
   - 34.150.126.210@443@vless@98b27cc8
-  - 13.36.118.76@22223@trojan@c15c5600
+  - 15.237.241.88@22222@trojan@b4cca3ad
+  - 52.58.3.46@22223@trojan@26a46d48
+  - 15.237.241.88@22223@trojan@0e7967ac
   - 13.36.118.76@22224@vless@6958f30c
-  - 104.21.15.55@80@vless@83a01b70
-  - 172.67.161.185@80@vless@d7e35264
+  - 13.36.118.76@22223@trojan@c15c5600
   - 13.36.118.76@22222@trojan@dc1751c3
+  - 106.52.215.138@7890@socks5@8700574f
   - 61.171.92.202@1001@ss@c5a112b9
-  - 146.0.75.144@443@vless@057309c0
   - 138.16.152.178@9443@vless@14a255d5
   - PG-fast
   - PG-default
@@ -1194,45 +1148,44 @@ proxy-groups:
   - 91.193.59.22@2083@vless@f2357081
   - 132.243.65.252@443@vless@5cfd4b20
   - 153.76.112.64@1080@ss@874af255
+  - 206.82.3.131@443@vless@c7ba1c35
   - 195.85.59.187@2095@vless@71e19dfc
-  - v29.hdacd.com@30829@vmess@6a3c7508
   - 104.128.72.119@80@ss@99398782
-  - 50.62.195.30@8880@vless@8f3cf83b
+  - 134.195.101.115@2377@ss@f95240ea
+  - 134.195.101.117@2377@ss@230aa9e0
   - 82.40.23.180@443@vless@82440f93
-  - 151.101.191.151@80@vless@8333e8b2
-  - 103.227.84.59@443@vless@922eb13d
   - 151.101.27.151@80@vless@52cfa368
   - 103.127.243.54@53229@vmess@38e6bb22
-  - 43.164.0.59@666@vless@3c0e9087
   - 104.21.6.82@8080@vless@a735ffab
+  - 103.227.84.59@443@vless@922eb13d
+  - 43.164.0.59@666@vless@3c0e9087
+  - 151.101.191.151@80@vless@8333e8b2
   - 172.67.134.161@8080@vless@890c862e
+  - 154.37.223.56@35115@vmess@46ca092b
   - 104.21.39.53@8080@vless@0210cabb
   - 172.67.143.139@8080@vless@2fa51af6
   - 161.104.48.27@443@vless@25f56235
   - 104.18.17.216@443@trojan@42d13e15
-  - 154.37.223.56@13659@vmess@b7bc7813
+  - 154.37.223.56@43203@vmess@1d35bf03
   - 82.39.213.150@443@vless@70060b76
   - 69.84.182.152@80@vless@053bbc58
   - 104.16.72.70@8443@vless@760371dd
+  - 217.9.12.58@443@vless@5f9631c8
   - 31.76.91.29@443@vless@b12f6df2
   - 47.254.156.143@443@vless@a098e50a
   - 89.124.123.50@443@vless@9b65a8bf
   - 185.229.9.78@6443@vless@2f5f38a7
-  - v9.hdacd.com@30809@vmess@f970299e
-  - 52.58.3.46@22223@trojan@26a46d48
-  - 15.237.241.88@22222@trojan@b4cca3ad
-  - 15.237.241.88@22223@trojan@0e7967ac
-  - 45.155.102.46@443@vless@6cb86a11
   - 104.21.74.23@8080@vless@32b64445
   - 172.67.153.109@8080@vless@6a5ff822
   - 34.150.126.210@443@vless@98b27cc8
-  - 13.36.118.76@22223@trojan@c15c5600
+  - 15.237.241.88@22222@trojan@b4cca3ad
+  - 52.58.3.46@22223@trojan@26a46d48
+  - 15.237.241.88@22223@trojan@0e7967ac
   - 13.36.118.76@22224@vless@6958f30c
-  - 104.21.15.55@80@vless@83a01b70
-  - 172.67.161.185@80@vless@d7e35264
+  - 13.36.118.76@22223@trojan@c15c5600
   - 13.36.118.76@22222@trojan@dc1751c3
+  - 106.52.215.138@7890@socks5@8700574f
   - 61.171.92.202@1001@ss@c5a112b9
-  - 146.0.75.144@443@vless@057309c0
   - 138.16.152.178@9443@vless@14a255d5
   - PG-fast
   - PG-default
