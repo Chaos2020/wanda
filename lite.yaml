@@ -1197,8 +1197,8 @@ proxy-groups:
 - name: PG-default
   type: fallback
   url: https://www.google.com/generate_204
-  interval: 360
-  lazy: true
+  interval: 780
+  lazy: false
   proxies:
   - PG-fast
   - 82.40.23.180@443@vless@82440f93
@@ -1272,8 +1272,8 @@ proxy-groups:
 - name: PG-AnTing
   type: load-balance
   url: https://www.google.com/generate_204
-  interval: 420
-  lazy: true
+  interval: 1020
+  lazy: false
   strategy: round-robin
   proxies:
   - 82.40.23.180@443@vless@82440f93
@@ -1347,8 +1347,8 @@ proxy-groups:
 - name: PG-Sage
   type: load-balance
   url: http://www.eastmoney.com
-  interval: 480
-  lazy: true
+  interval: 1140
+  lazy: false
   strategy: round-robin
   proxies:
   - 82.40.23.180@443@vless@82440f93
@@ -1422,17 +1422,17 @@ proxy-groups:
 - name: PG-CN
   type: load-balance
   url: https://www.sse.com.cn
-  interval: 540
-  lazy: true
+  interval: 1500
+  lazy: false
   strategy: round-robin
   proxies:
   - 61.171.92.202@1001@ss@c5a112b9
 - name: PG-Google
   type: url-test
   url: https://www.google.com/generate_204
-  interval: 600
+  interval: 660
   tolerance: 150
-  lazy: true
+  lazy: false
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
   - 206.82.3.131@443@vless@86c079d7
@@ -1508,8 +1508,8 @@ proxy-groups:
   type: load-balance
   strategy: round-robin
   url: https://github.com/favicon.ico
-  interval: 60
-  lazy: true
+  interval: 840
+  lazy: false
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
   - 206.82.3.131@443@vless@86c079d7
@@ -1584,8 +1584,8 @@ proxy-groups:
 - name: PG-YouTube
   type: load-balance
   url: https://www.youtube.com/generate_204
-  interval: 432
-  lazy: true
+  interval: 1380
+  lazy: false
   strategy: round-robin
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
@@ -1661,9 +1661,9 @@ proxy-groups:
 - name: PG-Twitter
   type: url-test
   url: https://x.com/robots.txt
-  interval: 498
+  interval: 900
   tolerance: 150
-  lazy: true
+  lazy: false
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
   - 206.82.3.131@443@vless@86c079d7
