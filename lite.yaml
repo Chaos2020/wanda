@@ -331,21 +331,6 @@ proxies:
   tls: true
   udp: true
   uuid: 7896c501-248f-4068-bc2f-363c91ba5122
-- name: 103.127.243.54@53229@vmess@38e6bb22
-  type: vmess
-  server: 103.127.243.54
-  port: 53229
-  alterId: 0
-  cipher: auto
-  client-fingerprint: chrome
-  http-opts:
-    method: GET
-    path:
-    - /ABCDE
-  network: http
-  tls: false
-  uuid: 2f50f5ef-1a3a-4585-a3c9-3a860d37b134
-  udp: true
 - name: 45.198.87.236@8443@vless@b0f66cdb
   type: vless
   server: 45.198.87.236
@@ -484,20 +469,6 @@ proxies:
     public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
     short-id: 2cfb5a0ae8ab0cb0
   client-fingerprint: chrome
-- name: 185.137.157.72@443@vless@5374dabd
-  type: vless
-  server: 185.137.157.72
-  port: 443
-  udp: true
-  uuid: 55a5044d-5b35-405f-971c-ea7aacaafcb4
-  network: tcp
-  tls: true
-  servername: www.nvidia.com
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: z6_OFl0jskilOOxkQcUcdQOCS4-LVndwFF9i7kIOPzg
-    short-id: d23753491eefde7e
 - name: 45.194.10.106@8443@vless@c83db958
   type: vless
   server: 45.194.10.106
@@ -565,6 +536,21 @@ proxies:
     host: 817aa69.default.nintendo.com:112719
     mode: tls
   udp: true
+- name: 103.127.243.54@53229@vmess@38e6bb22
+  type: vmess
+  server: 103.127.243.54
+  port: 53229
+  alterId: 0
+  cipher: auto
+  client-fingerprint: chrome
+  http-opts:
+    method: GET
+    path:
+    - /ABCDE
+  network: http
+  tls: false
+  uuid: 2f50f5ef-1a3a-4585-a3c9-3a860d37b134
+  udp: true
 - name: 79.137.206.166@57988@vless@5bba9100
   type: vless
   server: 79.137.206.166
@@ -612,23 +598,6 @@ proxies:
   tls: true
   udp: true
   uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-- name: 45.194.10.148@8443@vless@91fce5d9
-  type: vless
-  server: 45.194.10.148
-  port: 8443
-  client-fingerprint: chrome
-  encryption: none
-  flow: xtls-rprx-vision
-  network: tcp
-  packet-encoding: xudp
-  reality-opts:
-    public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
-    short-id: 2cfb5a0ae8ab0cb0
-  servername: storage.yandex.net
-  skip-cert-verify: false
-  tls: true
-  udp: true
-  uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
 - name: 45.194.10.175@8443@vless@002777a3
   type: vless
   server: 45.194.10.175
@@ -646,6 +615,20 @@ proxies:
   tls: true
   udp: true
   uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+- name: 185.137.157.72@443@vless@5374dabd
+  type: vless
+  server: 185.137.157.72
+  port: 443
+  udp: true
+  uuid: 55a5044d-5b35-405f-971c-ea7aacaafcb4
+  network: tcp
+  tls: true
+  servername: www.nvidia.com
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: z6_OFl0jskilOOxkQcUcdQOCS4-LVndwFF9i7kIOPzg
+    short-id: d23753491eefde7e
 - name: 45.198.80.187@8443@vless@6fe5be33
   type: vless
   server: 45.198.80.187
@@ -685,9 +668,15 @@ proxies:
     short-id: c457b36dfffec3bb
   grpc-opts:
     grpc-service-name: xyz
+- name: 80.208.229.172@443@ss@cb34235c
+  type: ss
+  server: 80.208.229.172
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: 4LuSQluWs3meAy5vOo7ikZ
 - name: v24.hdacd.com@30824@vmess@3b8e774e
   type: vmess
-  server: 34.146.52.55
+  server: 34.146.58.42
   port: 30824
   alterId: 2
   cipher: auto
@@ -698,27 +687,6 @@ proxies:
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
   ws-path: /
   sni: v24.hdacd.com
-- name: 104.128.72.119@80@ss@99398782
-  type: ss
-  server: 104.128.72.119
-  port: 80
-  cipher: 2022-blake3-aes-128-gcm
-  password: YTE1ZWU4ZTEyZjc3YmEzZA==:Y2JhZTU3ODYtZjg3MC00NA==
-  plugin: gost-plugin
-  plugin-opts:
-    host: one.local
-    mode: websocket
-    mux: true
-    path: /ws
-    tls: false
-  udp: true
-- name: 5.230.184.16@443@ss@2dcb687b
-  type: ss
-  server: 5.230.184.16
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: 453u6Gcei04NyXbrWLKa0M
-  udp: true
 - name: 38.244.21.144@443@vless@e35dc4b4
   type: vless
   server: 38.244.21.144
@@ -747,20 +715,20 @@ proxies:
   reality-opts:
     public-key: HCa-dCIFGG7LF3wPOBlrRzk_T1m-YIkhmupepQy0bzI
     short-id: 616ead1cdc4486ca
-- name: 31.76.113.92@443@vless@dfd66678
-  type: vless
-  server: 31.76.113.92
-  port: 443
-  uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
+- name: 104.128.72.119@80@ss@99398782
+  type: ss
+  server: 104.128.72.119
+  port: 80
+  cipher: 2022-blake3-aes-128-gcm
+  password: YTE1ZWU4ZTEyZjc3YmEzZA==:Y2JhZTU3ODYtZjg3MC00NA==
+  plugin: gost-plugin
+  plugin-opts:
+    host: one.local
+    mode: websocket
+    mux: true
+    path: /ws
+    tls: false
   udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: it.s3-cloud.xyz
-  skip-cert-verify: true
-  reality-opts:
-    public-key: zPi2L9vrl2hkaCTT3lZTzBna-qz6JrteRjDz1i-DsxY
-    short-id: 7a3f9e2b1c8d4f6a
-  client-fingerprint: chrome
 - name: v6.hdacd.com@30806@vmess@c4d1fb0a
   type: vmess
   server: 34.146.58.42
@@ -801,6 +769,18 @@ proxies:
   reality-opts:
     public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
     short-id: 2cfb5a0ae8ab0cb0
+- name: v9.hdacd.com@30809@vmess@f970299e
+  type: vmess
+  server: 34.124.237.80
+  port: 30809
+  alterId: 2
+  cipher: auto
+  h2-opts: {}
+  http-opts: {}
+  network: tcp
+  skip-cert-verify: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  sni: v9.hdacd.com
 - name: 45.194.10.158@8443@vless@6e26d841
   type: vless
   server: 45.194.10.158
@@ -828,15 +808,34 @@ proxies:
     headers:
       Host: xinnusvpn.duckdns.org
   sni: xinnusvpn.duckdns.org
+- name: 103.149.182.79@8388@ss@6bb86606
+  type: ss
+  server: 103.149.182.79
+  port: 8388
+  cipher: chacha20-ietf
+  password: asd123456
 - name: v36.hdacd.com@30836@vmess@e912117a
   type: vmess
-  server: 34.126.178.212
+  server: 34.146.58.42
   port: 30836
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
   alterId: 2
   cipher: auto
   udp: true
   sni: v36.hdacd.com
+- name: v29.hdacd.com@30829@vmess@6a3c7508
+  type: vmess
+  server: 34.146.58.42
+  port: 30829
+  alterId: 2
+  cipher: auto
+  http-opts: {}
+  network: tcp
+  skip-cert-verify: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  ws-opts:
+    path: /
+  sni: v29.hdacd.com
 proxy-groups:
 - name: PG-fast
   type: url-test
@@ -853,7 +852,6 @@ proxy-groups:
   - 45.198.87.117@8443@vless@9fcc9ba3
   - 45.198.87.31@8443@vless@a19582b8
   - 45.198.87.148@8443@vless@e6e5f7a4
-  - 103.127.243.54@53229@vmess@38e6bb22
   - 45.198.87.236@8443@vless@b0f66cdb
   - 45.194.10.211@8443@vless@9eb4f88e
   - 45.198.87.102@8443@vless@8e43bc92
@@ -864,32 +862,34 @@ proxy-groups:
   - 45.194.10.35@8443@vless@eaf84b68
   - 45.194.10.24@8443@vless@1c0c4f3a
   - 45.194.10.125@8443@vless@7601ff06
-  - 185.137.157.72@443@vless@5374dabd
   - 45.194.10.106@8443@vless@c83db958
   - 45.194.10.171@8443@vless@5d2ab1c7
   - 45.194.10.4@8443@vless@f61ac584
   - 134.195.101.125@2377@ss@93e29e23
   - 134.195.101.119@2377@ss@bc08ccd4
+  - 103.127.243.54@53229@vmess@38e6bb22
   - 79.137.206.166@57988@vless@5bba9100
   - 45.194.10.141@8443@vless@a1564e76
   - 45.194.10.205@8443@vless@ef56e0da
-  - 45.194.10.148@8443@vless@91fce5d9
   - 45.194.10.175@8443@vless@002777a3
+  - 185.137.157.72@443@vless@5374dabd
   - 45.198.80.187@8443@vless@6fe5be33
   - 134.195.101.126@2377@ss@74325b7d
   - 62.133.61.231@443@vless@45c2f93a
+  - 80.208.229.172@443@ss@cb34235c
   - v24.hdacd.com@30824@vmess@3b8e774e
-  - 104.128.72.119@80@ss@99398782
-  - 5.230.184.16@443@ss@2dcb687b
   - 38.244.21.144@443@vless@e35dc4b4
   - 38.244.20.47@443@vless@cad7870b
-  - 31.76.113.92@443@vless@dfd66678
+  - 104.128.72.119@80@ss@99398782
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 45.195.137.187@8443@vless@51db9d84
   - 45.194.10.156@8443@vless@5bd979c4
+  - v9.hdacd.com@30809@vmess@f970299e
   - 45.194.10.158@8443@vless@6e26d841
   - xinnusvpn.duckdns.org@8443@vless@cf839874
+  - 103.149.182.79@8388@ss@6bb86606
   - v36.hdacd.com@30836@vmess@e912117a
+  - v29.hdacd.com@30829@vmess@6a3c7508
 - name: PG-default
   type: fallback
   url: https://www.google.com/generate_204
@@ -905,7 +905,6 @@ proxy-groups:
   - 45.198.87.117@8443@vless@9fcc9ba3
   - 45.198.87.31@8443@vless@a19582b8
   - 45.198.87.148@8443@vless@e6e5f7a4
-  - 103.127.243.54@53229@vmess@38e6bb22
   - 45.198.87.236@8443@vless@b0f66cdb
   - 45.194.10.211@8443@vless@9eb4f88e
   - 45.198.87.102@8443@vless@8e43bc92
@@ -916,32 +915,34 @@ proxy-groups:
   - 45.194.10.35@8443@vless@eaf84b68
   - 45.194.10.24@8443@vless@1c0c4f3a
   - 45.194.10.125@8443@vless@7601ff06
-  - 185.137.157.72@443@vless@5374dabd
   - 45.194.10.106@8443@vless@c83db958
   - 45.194.10.171@8443@vless@5d2ab1c7
   - 45.194.10.4@8443@vless@f61ac584
   - 134.195.101.125@2377@ss@93e29e23
   - 134.195.101.119@2377@ss@bc08ccd4
+  - 103.127.243.54@53229@vmess@38e6bb22
   - 79.137.206.166@57988@vless@5bba9100
   - 45.194.10.141@8443@vless@a1564e76
   - 45.194.10.205@8443@vless@ef56e0da
-  - 45.194.10.148@8443@vless@91fce5d9
   - 45.194.10.175@8443@vless@002777a3
+  - 185.137.157.72@443@vless@5374dabd
   - 45.198.80.187@8443@vless@6fe5be33
   - 134.195.101.126@2377@ss@74325b7d
   - 62.133.61.231@443@vless@45c2f93a
+  - 80.208.229.172@443@ss@cb34235c
   - v24.hdacd.com@30824@vmess@3b8e774e
-  - 104.128.72.119@80@ss@99398782
-  - 5.230.184.16@443@ss@2dcb687b
   - 38.244.21.144@443@vless@e35dc4b4
   - 38.244.20.47@443@vless@cad7870b
-  - 31.76.113.92@443@vless@dfd66678
+  - 104.128.72.119@80@ss@99398782
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 45.195.137.187@8443@vless@51db9d84
   - 45.194.10.156@8443@vless@5bd979c4
+  - v9.hdacd.com@30809@vmess@f970299e
   - 45.194.10.158@8443@vless@6e26d841
   - xinnusvpn.duckdns.org@8443@vless@cf839874
+  - 103.149.182.79@8388@ss@6bb86606
   - v36.hdacd.com@30836@vmess@e912117a
+  - v29.hdacd.com@30829@vmess@6a3c7508
 - name: PG-AnTing
   type: load-balance
   url: https://www.google.com/generate_204
@@ -957,7 +958,6 @@ proxy-groups:
   - 45.198.87.117@8443@vless@9fcc9ba3
   - 45.198.87.31@8443@vless@a19582b8
   - 45.198.87.148@8443@vless@e6e5f7a4
-  - 103.127.243.54@53229@vmess@38e6bb22
   - 45.198.87.236@8443@vless@b0f66cdb
   - 45.194.10.211@8443@vless@9eb4f88e
   - 45.198.87.102@8443@vless@8e43bc92
@@ -968,32 +968,34 @@ proxy-groups:
   - 45.194.10.35@8443@vless@eaf84b68
   - 45.194.10.24@8443@vless@1c0c4f3a
   - 45.194.10.125@8443@vless@7601ff06
-  - 185.137.157.72@443@vless@5374dabd
   - 45.194.10.106@8443@vless@c83db958
   - 45.194.10.171@8443@vless@5d2ab1c7
   - 45.194.10.4@8443@vless@f61ac584
   - 134.195.101.125@2377@ss@93e29e23
   - 134.195.101.119@2377@ss@bc08ccd4
+  - 103.127.243.54@53229@vmess@38e6bb22
   - 79.137.206.166@57988@vless@5bba9100
   - 45.194.10.141@8443@vless@a1564e76
   - 45.194.10.205@8443@vless@ef56e0da
-  - 45.194.10.148@8443@vless@91fce5d9
   - 45.194.10.175@8443@vless@002777a3
+  - 185.137.157.72@443@vless@5374dabd
   - 45.198.80.187@8443@vless@6fe5be33
   - 134.195.101.126@2377@ss@74325b7d
   - 62.133.61.231@443@vless@45c2f93a
+  - 80.208.229.172@443@ss@cb34235c
   - v24.hdacd.com@30824@vmess@3b8e774e
-  - 104.128.72.119@80@ss@99398782
-  - 5.230.184.16@443@ss@2dcb687b
   - 38.244.21.144@443@vless@e35dc4b4
   - 38.244.20.47@443@vless@cad7870b
-  - 31.76.113.92@443@vless@dfd66678
+  - 104.128.72.119@80@ss@99398782
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 45.195.137.187@8443@vless@51db9d84
   - 45.194.10.156@8443@vless@5bd979c4
+  - v9.hdacd.com@30809@vmess@f970299e
   - 45.194.10.158@8443@vless@6e26d841
   - xinnusvpn.duckdns.org@8443@vless@cf839874
+  - 103.149.182.79@8388@ss@6bb86606
   - v36.hdacd.com@30836@vmess@e912117a
+  - v29.hdacd.com@30829@vmess@6a3c7508
 - name: PG-Sage
   type: load-balance
   url: http://www.eastmoney.com
@@ -1009,7 +1011,6 @@ proxy-groups:
   - 45.198.87.117@8443@vless@9fcc9ba3
   - 45.198.87.31@8443@vless@a19582b8
   - 45.198.87.148@8443@vless@e6e5f7a4
-  - 103.127.243.54@53229@vmess@38e6bb22
   - 45.198.87.236@8443@vless@b0f66cdb
   - 45.194.10.211@8443@vless@9eb4f88e
   - 45.198.87.102@8443@vless@8e43bc92
@@ -1020,32 +1021,34 @@ proxy-groups:
   - 45.194.10.35@8443@vless@eaf84b68
   - 45.194.10.24@8443@vless@1c0c4f3a
   - 45.194.10.125@8443@vless@7601ff06
-  - 185.137.157.72@443@vless@5374dabd
   - 45.194.10.106@8443@vless@c83db958
   - 45.194.10.171@8443@vless@5d2ab1c7
   - 45.194.10.4@8443@vless@f61ac584
   - 134.195.101.125@2377@ss@93e29e23
   - 134.195.101.119@2377@ss@bc08ccd4
+  - 103.127.243.54@53229@vmess@38e6bb22
   - 79.137.206.166@57988@vless@5bba9100
   - 45.194.10.141@8443@vless@a1564e76
   - 45.194.10.205@8443@vless@ef56e0da
-  - 45.194.10.148@8443@vless@91fce5d9
   - 45.194.10.175@8443@vless@002777a3
+  - 185.137.157.72@443@vless@5374dabd
   - 45.198.80.187@8443@vless@6fe5be33
   - 134.195.101.126@2377@ss@74325b7d
   - 62.133.61.231@443@vless@45c2f93a
+  - 80.208.229.172@443@ss@cb34235c
   - v24.hdacd.com@30824@vmess@3b8e774e
-  - 104.128.72.119@80@ss@99398782
-  - 5.230.184.16@443@ss@2dcb687b
   - 38.244.21.144@443@vless@e35dc4b4
   - 38.244.20.47@443@vless@cad7870b
-  - 31.76.113.92@443@vless@dfd66678
+  - 104.128.72.119@80@ss@99398782
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 45.195.137.187@8443@vless@51db9d84
   - 45.194.10.156@8443@vless@5bd979c4
+  - v9.hdacd.com@30809@vmess@f970299e
   - 45.194.10.158@8443@vless@6e26d841
   - xinnusvpn.duckdns.org@8443@vless@cf839874
+  - 103.149.182.79@8388@ss@6bb86606
   - v36.hdacd.com@30836@vmess@e912117a
+  - v29.hdacd.com@30829@vmess@6a3c7508
 - name: PG-CN
   type: load-balance
   url: https://www.sse.com.cn
@@ -1061,7 +1064,6 @@ proxy-groups:
   - 45.198.87.117@8443@vless@9fcc9ba3
   - 45.198.87.31@8443@vless@a19582b8
   - 45.198.87.148@8443@vless@e6e5f7a4
-  - 103.127.243.54@53229@vmess@38e6bb22
   - 45.198.87.236@8443@vless@b0f66cdb
   - 45.194.10.211@8443@vless@9eb4f88e
   - 45.198.87.102@8443@vless@8e43bc92
@@ -1072,32 +1074,34 @@ proxy-groups:
   - 45.194.10.35@8443@vless@eaf84b68
   - 45.194.10.24@8443@vless@1c0c4f3a
   - 45.194.10.125@8443@vless@7601ff06
-  - 185.137.157.72@443@vless@5374dabd
   - 45.194.10.106@8443@vless@c83db958
   - 45.194.10.171@8443@vless@5d2ab1c7
   - 45.194.10.4@8443@vless@f61ac584
   - 134.195.101.125@2377@ss@93e29e23
   - 134.195.101.119@2377@ss@bc08ccd4
+  - 103.127.243.54@53229@vmess@38e6bb22
   - 79.137.206.166@57988@vless@5bba9100
   - 45.194.10.141@8443@vless@a1564e76
   - 45.194.10.205@8443@vless@ef56e0da
-  - 45.194.10.148@8443@vless@91fce5d9
   - 45.194.10.175@8443@vless@002777a3
+  - 185.137.157.72@443@vless@5374dabd
   - 45.198.80.187@8443@vless@6fe5be33
   - 134.195.101.126@2377@ss@74325b7d
   - 62.133.61.231@443@vless@45c2f93a
+  - 80.208.229.172@443@ss@cb34235c
   - v24.hdacd.com@30824@vmess@3b8e774e
-  - 104.128.72.119@80@ss@99398782
-  - 5.230.184.16@443@ss@2dcb687b
   - 38.244.21.144@443@vless@e35dc4b4
   - 38.244.20.47@443@vless@cad7870b
-  - 31.76.113.92@443@vless@dfd66678
+  - 104.128.72.119@80@ss@99398782
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 45.195.137.187@8443@vless@51db9d84
   - 45.194.10.156@8443@vless@5bd979c4
+  - v9.hdacd.com@30809@vmess@f970299e
   - 45.194.10.158@8443@vless@6e26d841
   - xinnusvpn.duckdns.org@8443@vless@cf839874
+  - 103.149.182.79@8388@ss@6bb86606
   - v36.hdacd.com@30836@vmess@e912117a
+  - v29.hdacd.com@30829@vmess@6a3c7508
 - name: PG-Google
   type: url-test
   url: https://www.google.com/generate_204
@@ -1112,9 +1116,10 @@ proxy-groups:
   - 134.195.101.119@2377@ss@bc08ccd4
   - 134.195.101.126@2377@ss@74325b7d
   - v24.hdacd.com@30824@vmess@3b8e774e
-  - 104.128.72.119@80@ss@99398782
   - 38.244.21.144@443@vless@e35dc4b4
   - 38.244.20.47@443@vless@cad7870b
+  - 104.128.72.119@80@ss@99398782
+  - v29.hdacd.com@30829@vmess@6a3c7508
   - 2.26.2.173@443@vless@1aa388a1
   - 2.26.96.208@443@vless@af8c120a
   - 47.254.156.143@443@vless@a098e50a
@@ -1122,7 +1127,6 @@ proxy-groups:
   - 45.198.87.117@8443@vless@9fcc9ba3
   - 45.198.87.31@8443@vless@a19582b8
   - 45.198.87.148@8443@vless@e6e5f7a4
-  - 103.127.243.54@53229@vmess@38e6bb22
   - 45.198.87.236@8443@vless@b0f66cdb
   - 45.194.10.211@8443@vless@9eb4f88e
   - 45.198.87.102@8443@vless@8e43bc92
@@ -1131,24 +1135,25 @@ proxy-groups:
   - 45.194.10.35@8443@vless@eaf84b68
   - 45.194.10.24@8443@vless@1c0c4f3a
   - 45.194.10.125@8443@vless@7601ff06
-  - 185.137.157.72@443@vless@5374dabd
   - 45.194.10.106@8443@vless@c83db958
   - 45.194.10.171@8443@vless@5d2ab1c7
   - 45.194.10.4@8443@vless@f61ac584
+  - 103.127.243.54@53229@vmess@38e6bb22
   - 79.137.206.166@57988@vless@5bba9100
   - 45.194.10.141@8443@vless@a1564e76
   - 45.194.10.205@8443@vless@ef56e0da
-  - 45.194.10.148@8443@vless@91fce5d9
   - 45.194.10.175@8443@vless@002777a3
+  - 185.137.157.72@443@vless@5374dabd
   - 45.198.80.187@8443@vless@6fe5be33
   - 62.133.61.231@443@vless@45c2f93a
-  - 5.230.184.16@443@ss@2dcb687b
-  - 31.76.113.92@443@vless@dfd66678
+  - 80.208.229.172@443@ss@cb34235c
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 45.195.137.187@8443@vless@51db9d84
   - 45.194.10.156@8443@vless@5bd979c4
+  - v9.hdacd.com@30809@vmess@f970299e
   - 45.194.10.158@8443@vless@6e26d841
   - xinnusvpn.duckdns.org@8443@vless@cf839874
+  - 103.149.182.79@8388@ss@6bb86606
   - v36.hdacd.com@30836@vmess@e912117a
   - PG-fast
   - PG-default
@@ -1166,9 +1171,10 @@ proxy-groups:
   - 134.195.101.119@2377@ss@bc08ccd4
   - 134.195.101.126@2377@ss@74325b7d
   - v24.hdacd.com@30824@vmess@3b8e774e
-  - 104.128.72.119@80@ss@99398782
   - 38.244.21.144@443@vless@e35dc4b4
   - 38.244.20.47@443@vless@cad7870b
+  - 104.128.72.119@80@ss@99398782
+  - v29.hdacd.com@30829@vmess@6a3c7508
   - 2.26.2.173@443@vless@1aa388a1
   - 2.26.96.208@443@vless@af8c120a
   - 47.254.156.143@443@vless@a098e50a
@@ -1176,7 +1182,6 @@ proxy-groups:
   - 45.198.87.117@8443@vless@9fcc9ba3
   - 45.198.87.31@8443@vless@a19582b8
   - 45.198.87.148@8443@vless@e6e5f7a4
-  - 103.127.243.54@53229@vmess@38e6bb22
   - 45.198.87.236@8443@vless@b0f66cdb
   - 45.194.10.211@8443@vless@9eb4f88e
   - 45.198.87.102@8443@vless@8e43bc92
@@ -1185,24 +1190,25 @@ proxy-groups:
   - 45.194.10.35@8443@vless@eaf84b68
   - 45.194.10.24@8443@vless@1c0c4f3a
   - 45.194.10.125@8443@vless@7601ff06
-  - 185.137.157.72@443@vless@5374dabd
   - 45.194.10.106@8443@vless@c83db958
   - 45.194.10.171@8443@vless@5d2ab1c7
   - 45.194.10.4@8443@vless@f61ac584
+  - 103.127.243.54@53229@vmess@38e6bb22
   - 79.137.206.166@57988@vless@5bba9100
   - 45.194.10.141@8443@vless@a1564e76
   - 45.194.10.205@8443@vless@ef56e0da
-  - 45.194.10.148@8443@vless@91fce5d9
   - 45.194.10.175@8443@vless@002777a3
+  - 185.137.157.72@443@vless@5374dabd
   - 45.198.80.187@8443@vless@6fe5be33
   - 62.133.61.231@443@vless@45c2f93a
-  - 5.230.184.16@443@ss@2dcb687b
-  - 31.76.113.92@443@vless@dfd66678
+  - 80.208.229.172@443@ss@cb34235c
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 45.195.137.187@8443@vless@51db9d84
   - 45.194.10.156@8443@vless@5bd979c4
+  - v9.hdacd.com@30809@vmess@f970299e
   - 45.194.10.158@8443@vless@6e26d841
   - xinnusvpn.duckdns.org@8443@vless@cf839874
+  - 103.149.182.79@8388@ss@6bb86606
   - v36.hdacd.com@30836@vmess@e912117a
   - PG-fast
   - PG-default
@@ -1220,9 +1226,10 @@ proxy-groups:
   - 134.195.101.119@2377@ss@bc08ccd4
   - 134.195.101.126@2377@ss@74325b7d
   - v24.hdacd.com@30824@vmess@3b8e774e
-  - 104.128.72.119@80@ss@99398782
   - 38.244.21.144@443@vless@e35dc4b4
   - 38.244.20.47@443@vless@cad7870b
+  - 104.128.72.119@80@ss@99398782
+  - v29.hdacd.com@30829@vmess@6a3c7508
   - 2.26.2.173@443@vless@1aa388a1
   - 2.26.96.208@443@vless@af8c120a
   - 47.254.156.143@443@vless@a098e50a
@@ -1230,7 +1237,6 @@ proxy-groups:
   - 45.198.87.117@8443@vless@9fcc9ba3
   - 45.198.87.31@8443@vless@a19582b8
   - 45.198.87.148@8443@vless@e6e5f7a4
-  - 103.127.243.54@53229@vmess@38e6bb22
   - 45.198.87.236@8443@vless@b0f66cdb
   - 45.194.10.211@8443@vless@9eb4f88e
   - 45.198.87.102@8443@vless@8e43bc92
@@ -1239,24 +1245,25 @@ proxy-groups:
   - 45.194.10.35@8443@vless@eaf84b68
   - 45.194.10.24@8443@vless@1c0c4f3a
   - 45.194.10.125@8443@vless@7601ff06
-  - 185.137.157.72@443@vless@5374dabd
   - 45.194.10.106@8443@vless@c83db958
   - 45.194.10.171@8443@vless@5d2ab1c7
   - 45.194.10.4@8443@vless@f61ac584
+  - 103.127.243.54@53229@vmess@38e6bb22
   - 79.137.206.166@57988@vless@5bba9100
   - 45.194.10.141@8443@vless@a1564e76
   - 45.194.10.205@8443@vless@ef56e0da
-  - 45.194.10.148@8443@vless@91fce5d9
   - 45.194.10.175@8443@vless@002777a3
+  - 185.137.157.72@443@vless@5374dabd
   - 45.198.80.187@8443@vless@6fe5be33
   - 62.133.61.231@443@vless@45c2f93a
-  - 5.230.184.16@443@ss@2dcb687b
-  - 31.76.113.92@443@vless@dfd66678
+  - 80.208.229.172@443@ss@cb34235c
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 45.195.137.187@8443@vless@51db9d84
   - 45.194.10.156@8443@vless@5bd979c4
+  - v9.hdacd.com@30809@vmess@f970299e
   - 45.194.10.158@8443@vless@6e26d841
   - xinnusvpn.duckdns.org@8443@vless@cf839874
+  - 103.149.182.79@8388@ss@6bb86606
   - v36.hdacd.com@30836@vmess@e912117a
   - PG-fast
   - PG-default
@@ -1274,9 +1281,10 @@ proxy-groups:
   - 134.195.101.119@2377@ss@bc08ccd4
   - 134.195.101.126@2377@ss@74325b7d
   - v24.hdacd.com@30824@vmess@3b8e774e
-  - 104.128.72.119@80@ss@99398782
   - 38.244.21.144@443@vless@e35dc4b4
   - 38.244.20.47@443@vless@cad7870b
+  - 104.128.72.119@80@ss@99398782
+  - v29.hdacd.com@30829@vmess@6a3c7508
   - 2.26.2.173@443@vless@1aa388a1
   - 2.26.96.208@443@vless@af8c120a
   - 47.254.156.143@443@vless@a098e50a
@@ -1284,7 +1292,6 @@ proxy-groups:
   - 45.198.87.117@8443@vless@9fcc9ba3
   - 45.198.87.31@8443@vless@a19582b8
   - 45.198.87.148@8443@vless@e6e5f7a4
-  - 103.127.243.54@53229@vmess@38e6bb22
   - 45.198.87.236@8443@vless@b0f66cdb
   - 45.194.10.211@8443@vless@9eb4f88e
   - 45.198.87.102@8443@vless@8e43bc92
@@ -1293,24 +1300,25 @@ proxy-groups:
   - 45.194.10.35@8443@vless@eaf84b68
   - 45.194.10.24@8443@vless@1c0c4f3a
   - 45.194.10.125@8443@vless@7601ff06
-  - 185.137.157.72@443@vless@5374dabd
   - 45.194.10.106@8443@vless@c83db958
   - 45.194.10.171@8443@vless@5d2ab1c7
   - 45.194.10.4@8443@vless@f61ac584
+  - 103.127.243.54@53229@vmess@38e6bb22
   - 79.137.206.166@57988@vless@5bba9100
   - 45.194.10.141@8443@vless@a1564e76
   - 45.194.10.205@8443@vless@ef56e0da
-  - 45.194.10.148@8443@vless@91fce5d9
   - 45.194.10.175@8443@vless@002777a3
+  - 185.137.157.72@443@vless@5374dabd
   - 45.198.80.187@8443@vless@6fe5be33
   - 62.133.61.231@443@vless@45c2f93a
-  - 5.230.184.16@443@ss@2dcb687b
-  - 31.76.113.92@443@vless@dfd66678
+  - 80.208.229.172@443@ss@cb34235c
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 45.195.137.187@8443@vless@51db9d84
   - 45.194.10.156@8443@vless@5bd979c4
+  - v9.hdacd.com@30809@vmess@f970299e
   - 45.194.10.158@8443@vless@6e26d841
   - xinnusvpn.duckdns.org@8443@vless@cf839874
+  - 103.149.182.79@8388@ss@6bb86606
   - v36.hdacd.com@30836@vmess@e912117a
   - PG-fast
   - PG-default
