@@ -404,17 +404,6 @@ proxies:
   tls: false
   uuid: 2f50f5ef-1a3a-4585-a3c9-3a860d37b134
   udp: true
-- name: 104.18.17.216@443@trojan@42d13e15
-  type: trojan
-  server: 104.18.17.216
-  port: 443
-  network: ws
-  password: humanity
-  sni: www.calmloud.com
-  ws-opts:
-    headers:
-      Host: www.calmloud.com
-    path: /assignment
 - name: 185.137.157.72@443@vless@5374dabd
   type: vless
   server: 185.137.157.72
@@ -431,7 +420,7 @@ proxies:
     short-id: d23753491eefde7e
 - name: v24.hdacd.com@30824@vmess@3b8e774e
   type: vmess
-  server: 34.143.135.32
+  server: 34.146.52.55
   port: 30824
   alterId: 2
   cipher: auto
@@ -444,7 +433,7 @@ proxies:
   sni: v24.hdacd.com
 - name: v6.hdacd.com@30806@vmess@c4d1fb0a
   type: vmess
-  server: 34.143.135.32
+  server: 34.142.187.27
   port: 30806
   alterId: 2
   cipher: auto
@@ -454,36 +443,33 @@ proxies:
   skip-cert-verify: true
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
   sni: v6.hdacd.com
-- name: 104.128.72.119@80@ss@99398782
-  type: ss
-  server: 104.128.72.119
-  port: 80
-  cipher: 2022-blake3-aes-128-gcm
-  password: YTE1ZWU4ZTEyZjc3YmEzZA==:Y2JhZTU3ODYtZjg3MC00NA==
-  plugin: gost-plugin
-  plugin-opts:
-    host: one.local
-    mode: websocket
-    mux: true
-    path: /ws
-    tls: false
-  udp: true
+- name: v9.hdacd.com@30809@vmess@f970299e
+  type: vmess
+  server: 34.142.187.27
+  port: 30809
+  alterId: 2
+  cipher: auto
+  h2-opts: {}
+  http-opts: {}
+  network: tcp
+  skip-cert-verify: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  sni: v9.hdacd.com
 - name: 106.52.215.138@7890@socks5@8700574f
   type: socks5
   server: 106.52.215.138
   port: 7890
-- name: v36.hdacd.com@30836@vmess@e912117a
-  type: vmess
-  server: 34.143.135.32
-  port: 30836
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
+- name: 37.156.44.215@42549@trojan@e58643b2
+  type: trojan
+  server: 37.156.44.215
+  port: 42549
+  password: SoftNetConnect
+  sni: www.speedtest.net
+  skip-cert-verify: true
   udp: true
-  sni: v36.hdacd.com
 - name: v29.hdacd.com@30829@vmess@6a3c7508
   type: vmess
-  server: 34.143.135.32
+  server: 34.142.187.27
   port: 30829
   alterId: 2
   cipher: auto
@@ -494,10 +480,22 @@ proxies:
   ws-opts:
     path: /
   sni: v29.hdacd.com
+- name: 87.120.106.164@8443@vless@c3253e68
+  type: vless
+  server: 87.120.106.164
+  port: 8443
+  uuid: c08dc9a6-40ac-4253-a778-8a5a433eaaa7
+  udp: true
 - name: 47.83.168.191@5000@socks5@c3a6317f
   type: socks5
   server: 47.83.168.191
   port: 5000
+- name: 103.149.182.79@8388@ss@6bb86606
+  type: ss
+  server: 103.149.182.79
+  port: 8388
+  cipher: chacha20-ietf
+  password: asd123456
 proxy-groups:
 - name: PG-fast
   type: url-test
@@ -519,15 +517,16 @@ proxy-groups:
   - 45.195.137.187@8443@vless@51db9d84
   - 79.137.206.166@57988@vless@5bba9100
   - 103.127.243.54@53229@vmess@38e6bb22
-  - 104.18.17.216@443@trojan@42d13e15
   - 185.137.157.72@443@vless@5374dabd
   - v24.hdacd.com@30824@vmess@3b8e774e
   - v6.hdacd.com@30806@vmess@c4d1fb0a
-  - 104.128.72.119@80@ss@99398782
+  - v9.hdacd.com@30809@vmess@f970299e
   - 106.52.215.138@7890@socks5@8700574f
-  - v36.hdacd.com@30836@vmess@e912117a
+  - 37.156.44.215@42549@trojan@e58643b2
   - v29.hdacd.com@30829@vmess@6a3c7508
+  - 87.120.106.164@8443@vless@c3253e68
   - 47.83.168.191@5000@socks5@c3a6317f
+  - 103.149.182.79@8388@ss@6bb86606
 - name: PG-default
   type: fallback
   url: https://www.google.com/generate_204
@@ -548,15 +547,16 @@ proxy-groups:
   - 45.195.137.187@8443@vless@51db9d84
   - 79.137.206.166@57988@vless@5bba9100
   - 103.127.243.54@53229@vmess@38e6bb22
-  - 104.18.17.216@443@trojan@42d13e15
   - 185.137.157.72@443@vless@5374dabd
   - v24.hdacd.com@30824@vmess@3b8e774e
   - v6.hdacd.com@30806@vmess@c4d1fb0a
-  - 104.128.72.119@80@ss@99398782
+  - v9.hdacd.com@30809@vmess@f970299e
   - 106.52.215.138@7890@socks5@8700574f
-  - v36.hdacd.com@30836@vmess@e912117a
+  - 37.156.44.215@42549@trojan@e58643b2
   - v29.hdacd.com@30829@vmess@6a3c7508
+  - 87.120.106.164@8443@vless@c3253e68
   - 47.83.168.191@5000@socks5@c3a6317f
+  - 103.149.182.79@8388@ss@6bb86606
 - name: PG-AnTing
   type: load-balance
   url: https://www.google.com/generate_204
@@ -577,15 +577,16 @@ proxy-groups:
   - 45.195.137.187@8443@vless@51db9d84
   - 79.137.206.166@57988@vless@5bba9100
   - 103.127.243.54@53229@vmess@38e6bb22
-  - 104.18.17.216@443@trojan@42d13e15
   - 185.137.157.72@443@vless@5374dabd
   - v24.hdacd.com@30824@vmess@3b8e774e
   - v6.hdacd.com@30806@vmess@c4d1fb0a
-  - 104.128.72.119@80@ss@99398782
+  - v9.hdacd.com@30809@vmess@f970299e
   - 106.52.215.138@7890@socks5@8700574f
-  - v36.hdacd.com@30836@vmess@e912117a
+  - 37.156.44.215@42549@trojan@e58643b2
   - v29.hdacd.com@30829@vmess@6a3c7508
+  - 87.120.106.164@8443@vless@c3253e68
   - 47.83.168.191@5000@socks5@c3a6317f
+  - 103.149.182.79@8388@ss@6bb86606
 - name: PG-Sage
   type: load-balance
   url: http://www.eastmoney.com
@@ -606,15 +607,16 @@ proxy-groups:
   - 45.195.137.187@8443@vless@51db9d84
   - 79.137.206.166@57988@vless@5bba9100
   - 103.127.243.54@53229@vmess@38e6bb22
-  - 104.18.17.216@443@trojan@42d13e15
   - 185.137.157.72@443@vless@5374dabd
   - v24.hdacd.com@30824@vmess@3b8e774e
   - v6.hdacd.com@30806@vmess@c4d1fb0a
-  - 104.128.72.119@80@ss@99398782
+  - v9.hdacd.com@30809@vmess@f970299e
   - 106.52.215.138@7890@socks5@8700574f
-  - v36.hdacd.com@30836@vmess@e912117a
+  - 37.156.44.215@42549@trojan@e58643b2
   - v29.hdacd.com@30829@vmess@6a3c7508
+  - 87.120.106.164@8443@vless@c3253e68
   - 47.83.168.191@5000@socks5@c3a6317f
+  - 103.149.182.79@8388@ss@6bb86606
 - name: PG-CN
   type: load-balance
   url: https://www.sse.com.cn
@@ -632,7 +634,6 @@ proxy-groups:
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
   - v24.hdacd.com@30824@vmess@3b8e774e
-  - 104.128.72.119@80@ss@99398782
   - v29.hdacd.com@30829@vmess@6a3c7508
   - 2.26.2.173@443@vless@1aa388a1
   - 47.254.156.143@443@vless@a098e50a
@@ -646,12 +647,14 @@ proxy-groups:
   - 45.195.137.187@8443@vless@51db9d84
   - 79.137.206.166@57988@vless@5bba9100
   - 103.127.243.54@53229@vmess@38e6bb22
-  - 104.18.17.216@443@trojan@42d13e15
   - 185.137.157.72@443@vless@5374dabd
   - v6.hdacd.com@30806@vmess@c4d1fb0a
+  - v9.hdacd.com@30809@vmess@f970299e
   - 106.52.215.138@7890@socks5@8700574f
-  - v36.hdacd.com@30836@vmess@e912117a
+  - 37.156.44.215@42549@trojan@e58643b2
+  - 87.120.106.164@8443@vless@c3253e68
   - 47.83.168.191@5000@socks5@c3a6317f
+  - 103.149.182.79@8388@ss@6bb86606
   - PG-fast
   - PG-default
 - name: PG-GitHub
@@ -663,7 +666,6 @@ proxy-groups:
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
   - v24.hdacd.com@30824@vmess@3b8e774e
-  - 104.128.72.119@80@ss@99398782
   - v29.hdacd.com@30829@vmess@6a3c7508
   - 2.26.2.173@443@vless@1aa388a1
   - 47.254.156.143@443@vless@a098e50a
@@ -677,12 +679,14 @@ proxy-groups:
   - 45.195.137.187@8443@vless@51db9d84
   - 79.137.206.166@57988@vless@5bba9100
   - 103.127.243.54@53229@vmess@38e6bb22
-  - 104.18.17.216@443@trojan@42d13e15
   - 185.137.157.72@443@vless@5374dabd
   - v6.hdacd.com@30806@vmess@c4d1fb0a
+  - v9.hdacd.com@30809@vmess@f970299e
   - 106.52.215.138@7890@socks5@8700574f
-  - v36.hdacd.com@30836@vmess@e912117a
+  - 37.156.44.215@42549@trojan@e58643b2
+  - 87.120.106.164@8443@vless@c3253e68
   - 47.83.168.191@5000@socks5@c3a6317f
+  - 103.149.182.79@8388@ss@6bb86606
   - PG-fast
   - PG-default
 - name: PG-YouTube
@@ -694,7 +698,6 @@ proxy-groups:
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
   - v24.hdacd.com@30824@vmess@3b8e774e
-  - 104.128.72.119@80@ss@99398782
   - v29.hdacd.com@30829@vmess@6a3c7508
   - 2.26.2.173@443@vless@1aa388a1
   - 47.254.156.143@443@vless@a098e50a
@@ -708,12 +711,14 @@ proxy-groups:
   - 45.195.137.187@8443@vless@51db9d84
   - 79.137.206.166@57988@vless@5bba9100
   - 103.127.243.54@53229@vmess@38e6bb22
-  - 104.18.17.216@443@trojan@42d13e15
   - 185.137.157.72@443@vless@5374dabd
   - v6.hdacd.com@30806@vmess@c4d1fb0a
+  - v9.hdacd.com@30809@vmess@f970299e
   - 106.52.215.138@7890@socks5@8700574f
-  - v36.hdacd.com@30836@vmess@e912117a
+  - 37.156.44.215@42549@trojan@e58643b2
+  - 87.120.106.164@8443@vless@c3253e68
   - 47.83.168.191@5000@socks5@c3a6317f
+  - 103.149.182.79@8388@ss@6bb86606
   - PG-fast
   - PG-default
 - name: PG-Twitter
@@ -725,7 +730,6 @@ proxy-groups:
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
   - v24.hdacd.com@30824@vmess@3b8e774e
-  - 104.128.72.119@80@ss@99398782
   - v29.hdacd.com@30829@vmess@6a3c7508
   - 2.26.2.173@443@vless@1aa388a1
   - 47.254.156.143@443@vless@a098e50a
@@ -739,12 +743,14 @@ proxy-groups:
   - 45.195.137.187@8443@vless@51db9d84
   - 79.137.206.166@57988@vless@5bba9100
   - 103.127.243.54@53229@vmess@38e6bb22
-  - 104.18.17.216@443@trojan@42d13e15
   - 185.137.157.72@443@vless@5374dabd
   - v6.hdacd.com@30806@vmess@c4d1fb0a
+  - v9.hdacd.com@30809@vmess@f970299e
   - 106.52.215.138@7890@socks5@8700574f
-  - v36.hdacd.com@30836@vmess@e912117a
+  - 37.156.44.215@42549@trojan@e58643b2
+  - 87.120.106.164@8443@vless@c3253e68
   - 47.83.168.191@5000@socks5@c3a6317f
+  - 103.149.182.79@8388@ss@6bb86606
   - PG-fast
   - PG-default
 rule-providers:
