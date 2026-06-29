@@ -340,7 +340,7 @@ proxies:
   uuid: 7896c501-248f-4068-bc2f-363c91ba5122
 - name: v24.hdacd.com@30824@vmess@3b8e774e
   type: vmess
-  server: 103.181.164.21
+  server: 103.181.164.210
   port: 30824
   alterId: 2
   cipher: auto
@@ -376,6 +376,19 @@ proxies:
   network: http
   tls: false
   uuid: b95adf02-8d54-482f-8b26-e49450c873ce
+- name: 154.37.223.56@43203@vmess@1d35bf03
+  type: vmess
+  server: 154.37.223.56
+  port: 43203
+  alterId: 0
+  cipher: auto
+  http-opts:
+    method: GET
+    path:
+    - /
+  network: http
+  tls: false
+  uuid: 68bd04a1-0547-46a6-cdb2-c8ac3fce1e67
 - name: 154.37.223.56@52080@vmess@2331dcf9
   type: vmess
   server: 154.37.223.56
@@ -431,27 +444,13 @@ proxies:
   sni: v9.hdacd.com
 - name: v36.hdacd.com@30836@vmess@e912117a
   type: vmess
-  server: 103.181.164.21
+  server: 103.181.164.210
   port: 30836
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
   alterId: 2
   cipher: auto
   udp: true
   sni: v36.hdacd.com
-- name: 104.128.72.119@80@ss@99398782
-  type: ss
-  server: 104.128.72.119
-  port: 80
-  cipher: 2022-blake3-aes-128-gcm
-  password: YTE1ZWU4ZTEyZjc3YmEzZA==:Y2JhZTU3ODYtZjg3MC00NA==
-  plugin: gost-plugin
-  plugin-opts:
-    host: one.local
-    mode: websocket
-    mux: true
-    path: /ws
-    tls: false
-  udp: true
 - name: 61.171.92.202@1001@ss@c5a112b9
   type: ss
   server: 61.171.92.202
@@ -483,12 +482,12 @@ proxy-groups:
   - v24.hdacd.com@30824@vmess@3b8e774e
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 154.37.223.56@35115@vmess@46ca092b
+  - 154.37.223.56@43203@vmess@1d35bf03
   - 154.37.223.56@52080@vmess@2331dcf9
   - 154.37.223.56@13659@vmess@b7bc7813
   - 23.94.36.26@443@vless@a8823a74
   - v9.hdacd.com@30809@vmess@f970299e
   - v36.hdacd.com@30836@vmess@e912117a
-  - 104.128.72.119@80@ss@99398782
   - 61.171.92.202@1001@ss@c5a112b9
   - 47.83.168.191@5000@socks5@c3a6317f
 - name: PG-default
@@ -509,12 +508,12 @@ proxy-groups:
   - v24.hdacd.com@30824@vmess@3b8e774e
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 154.37.223.56@35115@vmess@46ca092b
+  - 154.37.223.56@43203@vmess@1d35bf03
   - 154.37.223.56@52080@vmess@2331dcf9
   - 154.37.223.56@13659@vmess@b7bc7813
   - 23.94.36.26@443@vless@a8823a74
   - v9.hdacd.com@30809@vmess@f970299e
   - v36.hdacd.com@30836@vmess@e912117a
-  - 104.128.72.119@80@ss@99398782
   - 61.171.92.202@1001@ss@c5a112b9
   - 47.83.168.191@5000@socks5@c3a6317f
 - name: PG-AnTing
@@ -535,12 +534,12 @@ proxy-groups:
   - v24.hdacd.com@30824@vmess@3b8e774e
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 154.37.223.56@35115@vmess@46ca092b
+  - 154.37.223.56@43203@vmess@1d35bf03
   - 154.37.223.56@52080@vmess@2331dcf9
   - 154.37.223.56@13659@vmess@b7bc7813
   - 23.94.36.26@443@vless@a8823a74
   - v9.hdacd.com@30809@vmess@f970299e
   - v36.hdacd.com@30836@vmess@e912117a
-  - 104.128.72.119@80@ss@99398782
   - 61.171.92.202@1001@ss@c5a112b9
   - 47.83.168.191@5000@socks5@c3a6317f
 - name: PG-Sage
@@ -561,12 +560,12 @@ proxy-groups:
   - v24.hdacd.com@30824@vmess@3b8e774e
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 154.37.223.56@35115@vmess@46ca092b
+  - 154.37.223.56@43203@vmess@1d35bf03
   - 154.37.223.56@52080@vmess@2331dcf9
   - 154.37.223.56@13659@vmess@b7bc7813
   - 23.94.36.26@443@vless@a8823a74
   - v9.hdacd.com@30809@vmess@f970299e
   - v36.hdacd.com@30836@vmess@e912117a
-  - 104.128.72.119@80@ss@99398782
   - 61.171.92.202@1001@ss@c5a112b9
   - 47.83.168.191@5000@socks5@c3a6317f
 - name: PG-CN
@@ -587,7 +586,6 @@ proxy-groups:
   - 157.254.223.44@34567@mieru@7af1c875
   - v24.hdacd.com@30824@vmess@3b8e774e
   - 23.94.36.26@443@vless@a8823a74
-  - 104.128.72.119@80@ss@99398782
   - 47.254.156.143@443@vless@a098e50a
   - 45.194.10.153@8443@vless@36e01b9b
   - 45.194.10.141@8443@vless@a1564e76
@@ -597,6 +595,7 @@ proxy-groups:
   - 45.198.87.238@8443@vless@33d43f92
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 154.37.223.56@35115@vmess@46ca092b
+  - 154.37.223.56@43203@vmess@1d35bf03
   - 154.37.223.56@52080@vmess@2331dcf9
   - 154.37.223.56@13659@vmess@b7bc7813
   - v9.hdacd.com@30809@vmess@f970299e
@@ -615,7 +614,6 @@ proxy-groups:
   - 157.254.223.44@34567@mieru@7af1c875
   - v24.hdacd.com@30824@vmess@3b8e774e
   - 23.94.36.26@443@vless@a8823a74
-  - 104.128.72.119@80@ss@99398782
   - 47.254.156.143@443@vless@a098e50a
   - 45.194.10.153@8443@vless@36e01b9b
   - 45.194.10.141@8443@vless@a1564e76
@@ -625,6 +623,7 @@ proxy-groups:
   - 45.198.87.238@8443@vless@33d43f92
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 154.37.223.56@35115@vmess@46ca092b
+  - 154.37.223.56@43203@vmess@1d35bf03
   - 154.37.223.56@52080@vmess@2331dcf9
   - 154.37.223.56@13659@vmess@b7bc7813
   - v9.hdacd.com@30809@vmess@f970299e
@@ -643,7 +642,6 @@ proxy-groups:
   - 157.254.223.44@34567@mieru@7af1c875
   - v24.hdacd.com@30824@vmess@3b8e774e
   - 23.94.36.26@443@vless@a8823a74
-  - 104.128.72.119@80@ss@99398782
   - 47.254.156.143@443@vless@a098e50a
   - 45.194.10.153@8443@vless@36e01b9b
   - 45.194.10.141@8443@vless@a1564e76
@@ -653,6 +651,7 @@ proxy-groups:
   - 45.198.87.238@8443@vless@33d43f92
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 154.37.223.56@35115@vmess@46ca092b
+  - 154.37.223.56@43203@vmess@1d35bf03
   - 154.37.223.56@52080@vmess@2331dcf9
   - 154.37.223.56@13659@vmess@b7bc7813
   - v9.hdacd.com@30809@vmess@f970299e
@@ -671,7 +670,6 @@ proxy-groups:
   - 157.254.223.44@34567@mieru@7af1c875
   - v24.hdacd.com@30824@vmess@3b8e774e
   - 23.94.36.26@443@vless@a8823a74
-  - 104.128.72.119@80@ss@99398782
   - 47.254.156.143@443@vless@a098e50a
   - 45.194.10.153@8443@vless@36e01b9b
   - 45.194.10.141@8443@vless@a1564e76
@@ -681,6 +679,7 @@ proxy-groups:
   - 45.198.87.238@8443@vless@33d43f92
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 154.37.223.56@35115@vmess@46ca092b
+  - 154.37.223.56@43203@vmess@1d35bf03
   - 154.37.223.56@52080@vmess@2331dcf9
   - 154.37.223.56@13659@vmess@b7bc7813
   - v9.hdacd.com@30809@vmess@f970299e
