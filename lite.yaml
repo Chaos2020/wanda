@@ -340,7 +340,7 @@ proxies:
   uuid: 7896c501-248f-4068-bc2f-363c91ba5122
 - name: v24.hdacd.com@30824@vmess@3b8e774e
   type: vmess
-  server: 103.181.164.212
+  server: 103.181.164.21
   port: 30824
   alterId: 2
   cipher: auto
@@ -353,7 +353,7 @@ proxies:
   sni: v24.hdacd.com
 - name: v6.hdacd.com@30806@vmess@c4d1fb0a
   type: vmess
-  server: 103.181.164.210
+  server: 103.181.164.21
   port: 30806
   alterId: 2
   cipher: auto
@@ -432,7 +432,7 @@ proxies:
   flow: xtls-rprx-vision
 - name: v9.hdacd.com@30809@vmess@f970299e
   type: vmess
-  server: 103.181.164.210
+  server: 103.181.164.21
   port: 30809
   alterId: 2
   cipher: auto
@@ -456,22 +456,19 @@ proxies:
     path: /ws
     tls: false
   udp: true
+- name: v36.hdacd.com@30836@vmess@e912117a
+  type: vmess
+  server: 103.181.164.21
+  port: 30836
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  udp: true
+  sni: v36.hdacd.com
 - name: 106.52.215.138@7890@socks5@8700574f
   type: socks5
   server: 106.52.215.138
   port: 7890
-- name: 61.171.92.202@1001@ss@c5a112b9
-  type: ss
-  server: 61.171.92.202
-  port: 1001
-  cipher: aes-256-gcm
-  password: '123'
-  skip-cert-verify: false
-  udp: false
-- name: 47.83.168.191@5000@socks5@c3a6317f
-  type: socks5
-  server: 47.83.168.191
-  port: 5000
 proxy-groups:
 - name: PG-fast
   type: url-test
@@ -497,9 +494,8 @@ proxy-groups:
   - 23.94.36.26@443@vless@a8823a74
   - v9.hdacd.com@30809@vmess@f970299e
   - 104.128.72.119@80@ss@99398782
+  - v36.hdacd.com@30836@vmess@e912117a
   - 106.52.215.138@7890@socks5@8700574f
-  - 61.171.92.202@1001@ss@c5a112b9
-  - 47.83.168.191@5000@socks5@c3a6317f
 - name: PG-default
   type: fallback
   url: https://www.google.com/generate_204
@@ -524,9 +520,8 @@ proxy-groups:
   - 23.94.36.26@443@vless@a8823a74
   - v9.hdacd.com@30809@vmess@f970299e
   - 104.128.72.119@80@ss@99398782
+  - v36.hdacd.com@30836@vmess@e912117a
   - 106.52.215.138@7890@socks5@8700574f
-  - 61.171.92.202@1001@ss@c5a112b9
-  - 47.83.168.191@5000@socks5@c3a6317f
 - name: PG-AnTing
   type: load-balance
   url: https://www.google.com/generate_204
@@ -551,9 +546,8 @@ proxy-groups:
   - 23.94.36.26@443@vless@a8823a74
   - v9.hdacd.com@30809@vmess@f970299e
   - 104.128.72.119@80@ss@99398782
+  - v36.hdacd.com@30836@vmess@e912117a
   - 106.52.215.138@7890@socks5@8700574f
-  - 61.171.92.202@1001@ss@c5a112b9
-  - 47.83.168.191@5000@socks5@c3a6317f
 - name: PG-Sage
   type: load-balance
   url: http://www.eastmoney.com
@@ -578,9 +572,8 @@ proxy-groups:
   - 23.94.36.26@443@vless@a8823a74
   - v9.hdacd.com@30809@vmess@f970299e
   - 104.128.72.119@80@ss@99398782
+  - v36.hdacd.com@30836@vmess@e912117a
   - 106.52.215.138@7890@socks5@8700574f
-  - 61.171.92.202@1001@ss@c5a112b9
-  - 47.83.168.191@5000@socks5@c3a6317f
 - name: PG-CN
   type: load-balance
   url: https://www.sse.com.cn
@@ -589,7 +582,6 @@ proxy-groups:
   strategy: round-robin
   proxies:
   - 106.52.215.138@7890@socks5@8700574f
-  - 61.171.92.202@1001@ss@c5a112b9
 - name: PG-Google
   type: url-test
   url: https://www.google.com/generate_204
@@ -614,9 +606,8 @@ proxy-groups:
   - 154.37.223.56@52080@vmess@2331dcf9
   - 154.37.223.56@13659@vmess@b7bc7813
   - v9.hdacd.com@30809@vmess@f970299e
+  - v36.hdacd.com@30836@vmess@e912117a
   - 106.52.215.138@7890@socks5@8700574f
-  - 61.171.92.202@1001@ss@c5a112b9
-  - 47.83.168.191@5000@socks5@c3a6317f
   - PG-fast
   - PG-default
 - name: PG-GitHub
@@ -643,9 +634,8 @@ proxy-groups:
   - 154.37.223.56@52080@vmess@2331dcf9
   - 154.37.223.56@13659@vmess@b7bc7813
   - v9.hdacd.com@30809@vmess@f970299e
+  - v36.hdacd.com@30836@vmess@e912117a
   - 106.52.215.138@7890@socks5@8700574f
-  - 61.171.92.202@1001@ss@c5a112b9
-  - 47.83.168.191@5000@socks5@c3a6317f
   - PG-fast
   - PG-default
 - name: PG-YouTube
@@ -672,9 +662,8 @@ proxy-groups:
   - 154.37.223.56@52080@vmess@2331dcf9
   - 154.37.223.56@13659@vmess@b7bc7813
   - v9.hdacd.com@30809@vmess@f970299e
+  - v36.hdacd.com@30836@vmess@e912117a
   - 106.52.215.138@7890@socks5@8700574f
-  - 61.171.92.202@1001@ss@c5a112b9
-  - 47.83.168.191@5000@socks5@c3a6317f
   - PG-fast
   - PG-default
 - name: PG-Twitter
@@ -701,9 +690,8 @@ proxy-groups:
   - 154.37.223.56@52080@vmess@2331dcf9
   - 154.37.223.56@13659@vmess@b7bc7813
   - v9.hdacd.com@30809@vmess@f970299e
+  - v36.hdacd.com@30836@vmess@e912117a
   - 106.52.215.138@7890@socks5@8700574f
-  - 61.171.92.202@1001@ss@c5a112b9
-  - 47.83.168.191@5000@socks5@c3a6317f
   - PG-fast
   - PG-default
 rule-providers:
