@@ -265,22 +265,6 @@ proxies:
     path: /eyJqdW5rIjoiaEhLN095OU11YyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=?ed=2560
     headers:
       Host: arkamoshtari.peghmoshtari.workers.dev
-- name: 104.21.39.53@8080@vless@0210cabb
-  type: vless
-  server: 104.21.39.53
-  port: 8080
-  network: ws
-  packet-encoding: xudp
-  skip-cert-verify: false
-  tls: false
-  udp: true
-  uuid: 18907dc3-7e4c-476f-9ed8-b360db563bf9
-  ws-opts:
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: server8.faway91418.workers.dev
-    max-early-data: 2560
-    path: /eyJqdW5rIjoiN3FOeFprWFkiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iXX0=
 - name: 172.67.143.139@8080@vless@2fa51af6
   type: vless
   server: 172.67.143.139
@@ -313,6 +297,33 @@ proxies:
       Host: server7.wimig16819.workers.dev
     max-early-data: 2560
     path: /eyJqdW5rIjoiSWdvVk5ETHBhRnNQamIiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iXX0=
+- name: 104.21.39.53@8080@vless@0210cabb
+  type: vless
+  server: 104.21.39.53
+  port: 8080
+  network: ws
+  packet-encoding: xudp
+  skip-cert-verify: false
+  tls: false
+  udp: true
+  uuid: 18907dc3-7e4c-476f-9ed8-b360db563bf9
+  ws-opts:
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: server8.faway91418.workers.dev
+    max-early-data: 2560
+    path: /eyJqdW5rIjoiN3FOeFprWFkiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iXX0=
+- name: 104.18.17.216@443@trojan@42d13e15
+  type: trojan
+  server: 104.18.17.216
+  port: 443
+  network: ws
+  password: humanity
+  sni: www.calmloud.com
+  ws-opts:
+    headers:
+      Host: www.calmloud.com
+    path: /assignment
 - name: v6.hdacd.com@30806@vmess@c4d1fb0a
   type: vmess
   server: 103.181.164.212
@@ -325,19 +336,6 @@ proxies:
   skip-cert-verify: true
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
   sni: v6.hdacd.com
-- name: v24.hdacd.com@30824@vmess@3b8e774e
-  type: vmess
-  server: 103.181.164.210
-  port: 30824
-  alterId: 2
-  cipher: auto
-  delay: 887
-  http-opts: {}
-  network: tcp
-  skip-cert-verify: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  ws-path: /
-  sni: v24.hdacd.com
 - name: v35.hdacd.com@30835@vmess@fed67c9c
   type: vmess
   server: 103.181.164.212
@@ -347,19 +345,6 @@ proxies:
   cipher: auto
   udp: true
   sni: v35.hdacd.com
-- name: 154.37.223.56@35115@vmess@46ca092b
-  type: vmess
-  server: 154.37.223.56
-  port: 35115
-  alterId: 0
-  cipher: auto
-  http-opts:
-    method: GET
-    path:
-    - /
-  network: http
-  tls: false
-  uuid: b95adf02-8d54-482f-8b26-e49450c873ce
 - name: 45.155.102.46@443@vless@6cb86a11
   type: vless
   server: 45.155.102.46
@@ -390,18 +375,19 @@ proxies:
     mode: tls
   skip-cert-verify: false
   udp: false
-- name: v9.hdacd.com@30809@vmess@f970299e
-  type: vmess
-  server: 103.181.164.212
-  port: 30809
-  alterId: 2
-  cipher: auto
-  h2-opts: {}
-  http-opts: {}
-  network: tcp
-  skip-cert-verify: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  sni: v9.hdacd.com
+- name: xinnusvpn.duckdns.org@8443@vless@cf839874
+  type: vless
+  server: 5.129.238.144
+  port: 8443
+  uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
+  network: ws
+  tls: true
+  servername: xinnusvpn.duckdns.org
+  ws-opts:
+    path: /wsnl
+    headers:
+      Host: xinnusvpn.duckdns.org
+  sni: xinnusvpn.duckdns.org
 - name: 213.176.17.186@443@vless@df52cf05
   type: vless
   server: 213.176.17.186
@@ -419,6 +405,23 @@ proxies:
   uuid: 2065a8c9-8b3d-4dba-b0ce-90d649aa3da7
   xhttp-opts:
     path: /xhttp
+- name: 47.83.168.191@5000@socks5@c3a6317f
+  type: socks5
+  server: 47.83.168.191
+  port: 5000
+- name: v29.hdacd.com@30829@vmess@6a3c7508
+  type: vmess
+  server: 103.181.164.210
+  port: 30829
+  alterId: 2
+  cipher: auto
+  http-opts: {}
+  network: tcp
+  skip-cert-verify: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  ws-opts:
+    path: /
+  sni: v29.hdacd.com
 proxy-groups:
 - name: PG-fast
   type: url-test
@@ -431,17 +434,18 @@ proxy-groups:
   - 47.254.156.143@443@vless@a098e50a
   - 104.21.6.82@8080@vless@a735ffab
   - 69.84.182.152@80@vless@053bbc58
-  - 104.21.39.53@8080@vless@0210cabb
   - 172.67.143.139@8080@vless@2fa51af6
   - 172.67.134.161@8080@vless@890c862e
+  - 104.21.39.53@8080@vless@0210cabb
+  - 104.18.17.216@443@trojan@42d13e15
   - v6.hdacd.com@30806@vmess@c4d1fb0a
-  - v24.hdacd.com@30824@vmess@3b8e774e
   - v35.hdacd.com@30835@vmess@fed67c9c
-  - 154.37.223.56@35115@vmess@46ca092b
   - 45.155.102.46@443@vless@6cb86a11
   - 134.195.101.116@2377@ss@46f6c891
-  - v9.hdacd.com@30809@vmess@f970299e
+  - xinnusvpn.duckdns.org@8443@vless@cf839874
   - 213.176.17.186@443@vless@df52cf05
+  - 47.83.168.191@5000@socks5@c3a6317f
+  - v29.hdacd.com@30829@vmess@6a3c7508
 - name: PG-default
   type: fallback
   url: https://www.google.com/generate_204
@@ -453,17 +457,18 @@ proxy-groups:
   - 47.254.156.143@443@vless@a098e50a
   - 104.21.6.82@8080@vless@a735ffab
   - 69.84.182.152@80@vless@053bbc58
-  - 104.21.39.53@8080@vless@0210cabb
   - 172.67.143.139@8080@vless@2fa51af6
   - 172.67.134.161@8080@vless@890c862e
+  - 104.21.39.53@8080@vless@0210cabb
+  - 104.18.17.216@443@trojan@42d13e15
   - v6.hdacd.com@30806@vmess@c4d1fb0a
-  - v24.hdacd.com@30824@vmess@3b8e774e
   - v35.hdacd.com@30835@vmess@fed67c9c
-  - 154.37.223.56@35115@vmess@46ca092b
   - 45.155.102.46@443@vless@6cb86a11
   - 134.195.101.116@2377@ss@46f6c891
-  - v9.hdacd.com@30809@vmess@f970299e
+  - xinnusvpn.duckdns.org@8443@vless@cf839874
   - 213.176.17.186@443@vless@df52cf05
+  - 47.83.168.191@5000@socks5@c3a6317f
+  - v29.hdacd.com@30829@vmess@6a3c7508
 - name: PG-AnTing
   type: load-balance
   url: https://www.google.com/generate_204
@@ -475,17 +480,18 @@ proxy-groups:
   - 47.254.156.143@443@vless@a098e50a
   - 104.21.6.82@8080@vless@a735ffab
   - 69.84.182.152@80@vless@053bbc58
-  - 104.21.39.53@8080@vless@0210cabb
   - 172.67.143.139@8080@vless@2fa51af6
   - 172.67.134.161@8080@vless@890c862e
+  - 104.21.39.53@8080@vless@0210cabb
+  - 104.18.17.216@443@trojan@42d13e15
   - v6.hdacd.com@30806@vmess@c4d1fb0a
-  - v24.hdacd.com@30824@vmess@3b8e774e
   - v35.hdacd.com@30835@vmess@fed67c9c
-  - 154.37.223.56@35115@vmess@46ca092b
   - 45.155.102.46@443@vless@6cb86a11
   - 134.195.101.116@2377@ss@46f6c891
-  - v9.hdacd.com@30809@vmess@f970299e
+  - xinnusvpn.duckdns.org@8443@vless@cf839874
   - 213.176.17.186@443@vless@df52cf05
+  - 47.83.168.191@5000@socks5@c3a6317f
+  - v29.hdacd.com@30829@vmess@6a3c7508
 - name: PG-Sage
   type: load-balance
   url: http://www.eastmoney.com
@@ -497,17 +503,18 @@ proxy-groups:
   - 47.254.156.143@443@vless@a098e50a
   - 104.21.6.82@8080@vless@a735ffab
   - 69.84.182.152@80@vless@053bbc58
-  - 104.21.39.53@8080@vless@0210cabb
   - 172.67.143.139@8080@vless@2fa51af6
   - 172.67.134.161@8080@vless@890c862e
+  - 104.21.39.53@8080@vless@0210cabb
+  - 104.18.17.216@443@trojan@42d13e15
   - v6.hdacd.com@30806@vmess@c4d1fb0a
-  - v24.hdacd.com@30824@vmess@3b8e774e
   - v35.hdacd.com@30835@vmess@fed67c9c
-  - 154.37.223.56@35115@vmess@46ca092b
   - 45.155.102.46@443@vless@6cb86a11
   - 134.195.101.116@2377@ss@46f6c891
-  - v9.hdacd.com@30809@vmess@f970299e
+  - xinnusvpn.duckdns.org@8443@vless@cf839874
   - 213.176.17.186@443@vless@df52cf05
+  - 47.83.168.191@5000@socks5@c3a6317f
+  - v29.hdacd.com@30829@vmess@6a3c7508
 - name: PG-CN
   type: load-balance
   url: https://www.sse.com.cn
@@ -519,17 +526,18 @@ proxy-groups:
   - 47.254.156.143@443@vless@a098e50a
   - 104.21.6.82@8080@vless@a735ffab
   - 69.84.182.152@80@vless@053bbc58
-  - 104.21.39.53@8080@vless@0210cabb
   - 172.67.143.139@8080@vless@2fa51af6
   - 172.67.134.161@8080@vless@890c862e
+  - 104.21.39.53@8080@vless@0210cabb
+  - 104.18.17.216@443@trojan@42d13e15
   - v6.hdacd.com@30806@vmess@c4d1fb0a
-  - v24.hdacd.com@30824@vmess@3b8e774e
   - v35.hdacd.com@30835@vmess@fed67c9c
-  - 154.37.223.56@35115@vmess@46ca092b
   - 45.155.102.46@443@vless@6cb86a11
   - 134.195.101.116@2377@ss@46f6c891
-  - v9.hdacd.com@30809@vmess@f970299e
+  - xinnusvpn.duckdns.org@8443@vless@cf839874
   - 213.176.17.186@443@vless@df52cf05
+  - 47.83.168.191@5000@socks5@c3a6317f
+  - v29.hdacd.com@30829@vmess@6a3c7508
 - name: PG-Google
   type: url-test
   url: https://www.google.com/generate_204
@@ -538,20 +546,21 @@ proxy-groups:
   lazy: false
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
-  - v24.hdacd.com@30824@vmess@3b8e774e
   - 134.195.101.116@2377@ss@46f6c891
+  - v29.hdacd.com@30829@vmess@6a3c7508
   - 47.254.156.143@443@vless@a098e50a
   - 104.21.6.82@8080@vless@a735ffab
   - 69.84.182.152@80@vless@053bbc58
-  - 104.21.39.53@8080@vless@0210cabb
   - 172.67.143.139@8080@vless@2fa51af6
   - 172.67.134.161@8080@vless@890c862e
+  - 104.21.39.53@8080@vless@0210cabb
+  - 104.18.17.216@443@trojan@42d13e15
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - v35.hdacd.com@30835@vmess@fed67c9c
-  - 154.37.223.56@35115@vmess@46ca092b
   - 45.155.102.46@443@vless@6cb86a11
-  - v9.hdacd.com@30809@vmess@f970299e
+  - xinnusvpn.duckdns.org@8443@vless@cf839874
   - 213.176.17.186@443@vless@df52cf05
+  - 47.83.168.191@5000@socks5@c3a6317f
   - PG-fast
   - PG-default
 - name: PG-GitHub
@@ -562,20 +571,21 @@ proxy-groups:
   lazy: false
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
-  - v24.hdacd.com@30824@vmess@3b8e774e
   - 134.195.101.116@2377@ss@46f6c891
+  - v29.hdacd.com@30829@vmess@6a3c7508
   - 47.254.156.143@443@vless@a098e50a
   - 104.21.6.82@8080@vless@a735ffab
   - 69.84.182.152@80@vless@053bbc58
-  - 104.21.39.53@8080@vless@0210cabb
   - 172.67.143.139@8080@vless@2fa51af6
   - 172.67.134.161@8080@vless@890c862e
+  - 104.21.39.53@8080@vless@0210cabb
+  - 104.18.17.216@443@trojan@42d13e15
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - v35.hdacd.com@30835@vmess@fed67c9c
-  - 154.37.223.56@35115@vmess@46ca092b
   - 45.155.102.46@443@vless@6cb86a11
-  - v9.hdacd.com@30809@vmess@f970299e
+  - xinnusvpn.duckdns.org@8443@vless@cf839874
   - 213.176.17.186@443@vless@df52cf05
+  - 47.83.168.191@5000@socks5@c3a6317f
   - PG-fast
   - PG-default
 - name: PG-YouTube
@@ -586,20 +596,21 @@ proxy-groups:
   strategy: round-robin
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
-  - v24.hdacd.com@30824@vmess@3b8e774e
   - 134.195.101.116@2377@ss@46f6c891
+  - v29.hdacd.com@30829@vmess@6a3c7508
   - 47.254.156.143@443@vless@a098e50a
   - 104.21.6.82@8080@vless@a735ffab
   - 69.84.182.152@80@vless@053bbc58
-  - 104.21.39.53@8080@vless@0210cabb
   - 172.67.143.139@8080@vless@2fa51af6
   - 172.67.134.161@8080@vless@890c862e
+  - 104.21.39.53@8080@vless@0210cabb
+  - 104.18.17.216@443@trojan@42d13e15
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - v35.hdacd.com@30835@vmess@fed67c9c
-  - 154.37.223.56@35115@vmess@46ca092b
   - 45.155.102.46@443@vless@6cb86a11
-  - v9.hdacd.com@30809@vmess@f970299e
+  - xinnusvpn.duckdns.org@8443@vless@cf839874
   - 213.176.17.186@443@vless@df52cf05
+  - 47.83.168.191@5000@socks5@c3a6317f
   - PG-fast
   - PG-default
 - name: PG-Twitter
@@ -610,20 +621,21 @@ proxy-groups:
   lazy: false
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
-  - v24.hdacd.com@30824@vmess@3b8e774e
   - 134.195.101.116@2377@ss@46f6c891
+  - v29.hdacd.com@30829@vmess@6a3c7508
   - 47.254.156.143@443@vless@a098e50a
   - 104.21.6.82@8080@vless@a735ffab
   - 69.84.182.152@80@vless@053bbc58
-  - 104.21.39.53@8080@vless@0210cabb
   - 172.67.143.139@8080@vless@2fa51af6
   - 172.67.134.161@8080@vless@890c862e
+  - 104.21.39.53@8080@vless@0210cabb
+  - 104.18.17.216@443@trojan@42d13e15
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - v35.hdacd.com@30835@vmess@fed67c9c
-  - 154.37.223.56@35115@vmess@46ca092b
   - 45.155.102.46@443@vless@6cb86a11
-  - v9.hdacd.com@30809@vmess@f970299e
+  - xinnusvpn.duckdns.org@8443@vless@cf839874
   - 213.176.17.186@443@vless@df52cf05
+  - 47.83.168.191@5000@socks5@c3a6317f
   - PG-fast
   - PG-default
 rule-providers:
