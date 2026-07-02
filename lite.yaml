@@ -225,6 +225,20 @@ proxies:
   password: dongtaiwang.com
   transport: TCP
   username: dongtaiwang.com
+- name: 47.254.156.143@443@vless@a098e50a
+  type: vless
+  server: 47.254.156.143
+  port: 443
+  client-fingerprint: chrome
+  network: tcp
+  packet-encoding: xudp
+  reality-opts:
+    public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
+  servername: api.company-target.com
+  skip-cert-verify: false
+  tls: true
+  udp: true
+  uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
 - name: xinnusvpn.duckdns.org@8443@vless@cf839874
   type: vless
   server: 5.129.238.144
@@ -252,43 +266,27 @@ proxies:
   sni: v6.hdacd.com
 - name: v35.hdacd.com@30835@vmess@fed67c9c
   type: vmess
-  server: 103.181.164.212
+  server: 103.181.164.210
   port: 30835
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
   alterId: 2
   cipher: auto
   udp: true
   sni: v35.hdacd.com
-- name: v24.hdacd.com@30824@vmess@3b8e774e
-  type: vmess
-  server: 103.181.164.21
-  port: 30824
-  alterId: 2
-  cipher: auto
-  delay: 887
-  http-opts: {}
-  network: tcp
-  skip-cert-verify: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  ws-path: /
-  sni: v24.hdacd.com
-- name: 104.128.72.119@80@ss@99398782
-  type: ss
-  server: 104.128.72.119
-  port: 80
-  cipher: 2022-blake3-aes-128-gcm
-  password: YTE1ZWU4ZTEyZjc3YmEzZA==:Y2JhZTU3ODYtZjg3MC00NA==
-  plugin: gost-plugin
-  plugin-opts:
-    host: one.local
-    mode: websocket
-    mux: true
-    path: /ws
-    tls: false
-  udp: true
+- name: 104.18.17.216@443@trojan@42d13e15
+  type: trojan
+  server: 104.18.17.216
+  port: 443
+  network: ws
+  password: humanity
+  sni: www.calmloud.com
+  ws-opts:
+    headers:
+      Host: www.calmloud.com
+    path: /assignment
 - name: v9.hdacd.com@30809@vmess@f970299e
   type: vmess
-  server: 103.181.164.212
+  server: 103.181.164.21
   port: 30809
   alterId: 2
   cipher: auto
@@ -322,23 +320,6 @@ proxies:
     short-id: ee
   grpc-opts:
     grpc-service-name: gun
-- name: v29.hdacd.com@30829@vmess@6a3c7508
-  type: vmess
-  server: 103.181.164.212
-  port: 30829
-  alterId: 2
-  cipher: auto
-  http-opts: {}
-  network: tcp
-  skip-cert-verify: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  ws-opts:
-    path: /
-  sni: v29.hdacd.com
-- name: 125.227.45.184@5001@socks5@630ab630
-  type: socks5
-  server: 125.227.45.184
-  port: 5001
 proxy-groups:
 - name: PG-fast
   type: url-test
@@ -348,16 +329,14 @@ proxy-groups:
   lazy: false
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
+  - 47.254.156.143@443@vless@a098e50a
   - xinnusvpn.duckdns.org@8443@vless@cf839874
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - v35.hdacd.com@30835@vmess@fed67c9c
-  - v24.hdacd.com@30824@vmess@3b8e774e
-  - 104.128.72.119@80@ss@99398782
+  - 104.18.17.216@443@trojan@42d13e15
   - v9.hdacd.com@30809@vmess@f970299e
   - v36.hdacd.com@30836@vmess@e912117a
   - 37.9.4.168@443@vless@32d16149
-  - v29.hdacd.com@30829@vmess@6a3c7508
-  - 125.227.45.184@5001@socks5@630ab630
 - name: PG-default
   type: fallback
   url: https://www.google.com/generate_204
@@ -366,16 +345,14 @@ proxy-groups:
   proxies:
   - PG-fast
   - 157.254.223.44@34567@mieru@7af1c875
+  - 47.254.156.143@443@vless@a098e50a
   - xinnusvpn.duckdns.org@8443@vless@cf839874
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - v35.hdacd.com@30835@vmess@fed67c9c
-  - v24.hdacd.com@30824@vmess@3b8e774e
-  - 104.128.72.119@80@ss@99398782
+  - 104.18.17.216@443@trojan@42d13e15
   - v9.hdacd.com@30809@vmess@f970299e
   - v36.hdacd.com@30836@vmess@e912117a
   - 37.9.4.168@443@vless@32d16149
-  - v29.hdacd.com@30829@vmess@6a3c7508
-  - 125.227.45.184@5001@socks5@630ab630
 - name: PG-AnTing
   type: load-balance
   url: https://www.google.com/generate_204
@@ -384,16 +361,14 @@ proxy-groups:
   strategy: round-robin
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
+  - 47.254.156.143@443@vless@a098e50a
   - xinnusvpn.duckdns.org@8443@vless@cf839874
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - v35.hdacd.com@30835@vmess@fed67c9c
-  - v24.hdacd.com@30824@vmess@3b8e774e
-  - 104.128.72.119@80@ss@99398782
+  - 104.18.17.216@443@trojan@42d13e15
   - v9.hdacd.com@30809@vmess@f970299e
   - v36.hdacd.com@30836@vmess@e912117a
   - 37.9.4.168@443@vless@32d16149
-  - v29.hdacd.com@30829@vmess@6a3c7508
-  - 125.227.45.184@5001@socks5@630ab630
 - name: PG-Sage
   type: load-balance
   url: http://www.eastmoney.com
@@ -402,16 +377,14 @@ proxy-groups:
   strategy: round-robin
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
+  - 47.254.156.143@443@vless@a098e50a
   - xinnusvpn.duckdns.org@8443@vless@cf839874
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - v35.hdacd.com@30835@vmess@fed67c9c
-  - v24.hdacd.com@30824@vmess@3b8e774e
-  - 104.128.72.119@80@ss@99398782
+  - 104.18.17.216@443@trojan@42d13e15
   - v9.hdacd.com@30809@vmess@f970299e
   - v36.hdacd.com@30836@vmess@e912117a
   - 37.9.4.168@443@vless@32d16149
-  - v29.hdacd.com@30829@vmess@6a3c7508
-  - 125.227.45.184@5001@socks5@630ab630
 - name: PG-CN
   type: load-balance
   url: https://www.sse.com.cn
@@ -420,16 +393,14 @@ proxy-groups:
   strategy: round-robin
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
+  - 47.254.156.143@443@vless@a098e50a
   - xinnusvpn.duckdns.org@8443@vless@cf839874
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - v35.hdacd.com@30835@vmess@fed67c9c
-  - v24.hdacd.com@30824@vmess@3b8e774e
-  - 104.128.72.119@80@ss@99398782
+  - 104.18.17.216@443@trojan@42d13e15
   - v9.hdacd.com@30809@vmess@f970299e
   - v36.hdacd.com@30836@vmess@e912117a
   - 37.9.4.168@443@vless@32d16149
-  - v29.hdacd.com@30829@vmess@6a3c7508
-  - 125.227.45.184@5001@socks5@630ab630
 - name: PG-Google
   type: url-test
   url: https://www.google.com/generate_204
@@ -438,16 +409,14 @@ proxy-groups:
   lazy: false
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
-  - v24.hdacd.com@30824@vmess@3b8e774e
-  - 104.128.72.119@80@ss@99398782
-  - v29.hdacd.com@30829@vmess@6a3c7508
+  - 47.254.156.143@443@vless@a098e50a
   - xinnusvpn.duckdns.org@8443@vless@cf839874
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - v35.hdacd.com@30835@vmess@fed67c9c
+  - 104.18.17.216@443@trojan@42d13e15
   - v9.hdacd.com@30809@vmess@f970299e
   - v36.hdacd.com@30836@vmess@e912117a
   - 37.9.4.168@443@vless@32d16149
-  - 125.227.45.184@5001@socks5@630ab630
   - PG-fast
   - PG-default
 - name: PG-GitHub
@@ -458,16 +427,14 @@ proxy-groups:
   lazy: false
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
-  - v24.hdacd.com@30824@vmess@3b8e774e
-  - 104.128.72.119@80@ss@99398782
-  - v29.hdacd.com@30829@vmess@6a3c7508
+  - 47.254.156.143@443@vless@a098e50a
   - xinnusvpn.duckdns.org@8443@vless@cf839874
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - v35.hdacd.com@30835@vmess@fed67c9c
+  - 104.18.17.216@443@trojan@42d13e15
   - v9.hdacd.com@30809@vmess@f970299e
   - v36.hdacd.com@30836@vmess@e912117a
   - 37.9.4.168@443@vless@32d16149
-  - 125.227.45.184@5001@socks5@630ab630
   - PG-fast
   - PG-default
 - name: PG-YouTube
@@ -478,16 +445,14 @@ proxy-groups:
   strategy: round-robin
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
-  - v24.hdacd.com@30824@vmess@3b8e774e
-  - 104.128.72.119@80@ss@99398782
-  - v29.hdacd.com@30829@vmess@6a3c7508
+  - 47.254.156.143@443@vless@a098e50a
   - xinnusvpn.duckdns.org@8443@vless@cf839874
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - v35.hdacd.com@30835@vmess@fed67c9c
+  - 104.18.17.216@443@trojan@42d13e15
   - v9.hdacd.com@30809@vmess@f970299e
   - v36.hdacd.com@30836@vmess@e912117a
   - 37.9.4.168@443@vless@32d16149
-  - 125.227.45.184@5001@socks5@630ab630
   - PG-fast
   - PG-default
 - name: PG-Twitter
@@ -498,16 +463,14 @@ proxy-groups:
   lazy: false
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
-  - v24.hdacd.com@30824@vmess@3b8e774e
-  - 104.128.72.119@80@ss@99398782
-  - v29.hdacd.com@30829@vmess@6a3c7508
+  - 47.254.156.143@443@vless@a098e50a
   - xinnusvpn.duckdns.org@8443@vless@cf839874
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - v35.hdacd.com@30835@vmess@fed67c9c
+  - 104.18.17.216@443@trojan@42d13e15
   - v9.hdacd.com@30809@vmess@f970299e
   - v36.hdacd.com@30836@vmess@e912117a
   - 37.9.4.168@443@vless@32d16149
-  - 125.227.45.184@5001@socks5@630ab630
   - PG-fast
   - PG-default
 rule-providers:
