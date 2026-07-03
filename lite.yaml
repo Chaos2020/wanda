@@ -235,17 +235,27 @@ proxies:
     path: /eyJqdW5rIjoiaEhLN095OU11YyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=?ed=2560
     headers:
       Host: arkamoshtari.peghmoshtari.workers.dev
-- name: 104.18.17.216@443@trojan@42d13e15
-  type: trojan
-  server: 104.18.17.216
+- name: 47.254.156.143@443@vless@a098e50a
+  type: vless
+  server: 47.254.156.143
   port: 443
-  network: ws
-  password: humanity
-  sni: www.calmloud.com
-  ws-opts:
-    headers:
-      Host: www.calmloud.com
-    path: /assignment
+  client-fingerprint: chrome
+  network: tcp
+  packet-encoding: xudp
+  reality-opts:
+    public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
+  servername: api.company-target.com
+  skip-cert-verify: false
+  tls: true
+  udp: true
+  uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
+- name: 46.29.163.30@30129@ss@8474ae46
+  type: ss
+  server: 46.29.163.30
+  port: 30129
+  cipher: aes-256-gcm
+  password: 32c0ea6e823341a2
+  udp: true
 - name: 104.128.72.119@80@ss@99398782
   type: ss
   server: 104.128.72.119
@@ -260,28 +270,38 @@ proxies:
     path: /ws
     tls: false
   udp: true
-- name: 46.29.163.30@30129@ss@8474ae46
-  type: ss
-  server: 46.29.163.30
-  port: 30129
-  cipher: aes-256-gcm
-  password: 32c0ea6e823341a2
-  udp: true
-- name: 37.9.4.168@443@vless@32d16149
+- name: 106.52.215.138@7890@socks5@8700574f
+  type: socks5
+  server: 106.52.215.138
+  port: 7890
+- name: 157.90.183.51@5555@socks5@0dd59775
+  type: socks5
+  server: 157.90.183.51
+  port: 5555
+  password: ''
+  skip-cert-verify: true
+  username: ''
+- name: 45.194.10.233@8443@vless@ac6d5d6d
   type: vless
-  server: 37.9.4.168
-  port: 443
-  udp: true
-  uuid: c918927a-a4cf-45ad-a5c8-e135129ee1d4
-  network: grpc
-  tls: true
-  servername: centos.ubuntuhosting.host
-  client-fingerprint: firefox
+  server: 45.194.10.233
+  port: 8443
+  client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  network: tcp
+  packet-encoding: xudp
   reality-opts:
-    public-key: xSBUeRP0UXGevxr3zKTskWvYG6vJSjlZYc4lYIIurmU
-    short-id: ee
-  grpc-opts:
-    grpc-service-name: gun
+    public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+    short-id: 2cfb5a0ae8ab0cb0
+  servername: storage.yandex.net
+  skip-cert-verify: false
+  tls: true
+  udp: true
+  uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+- name: 5.255.117.127@1080@socks5@8c672508
+  type: socks5
+  server: 5.255.117.127
+  port: 1080
 - name: 47.83.168.191@5000@socks5@c3a6317f
   type: socks5
   server: 47.83.168.191
@@ -296,10 +316,13 @@ proxy-groups:
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
   - 69.84.182.152@80@vless@053bbc58
-  - 104.18.17.216@443@trojan@42d13e15
-  - 104.128.72.119@80@ss@99398782
+  - 47.254.156.143@443@vless@a098e50a
   - 46.29.163.30@30129@ss@8474ae46
-  - 37.9.4.168@443@vless@32d16149
+  - 104.128.72.119@80@ss@99398782
+  - 106.52.215.138@7890@socks5@8700574f
+  - 157.90.183.51@5555@socks5@0dd59775
+  - 45.194.10.233@8443@vless@ac6d5d6d
+  - 5.255.117.127@1080@socks5@8c672508
   - 47.83.168.191@5000@socks5@c3a6317f
 - name: PG-default
   type: fallback
@@ -310,10 +333,13 @@ proxy-groups:
   - PG-fast
   - 157.254.223.44@34567@mieru@7af1c875
   - 69.84.182.152@80@vless@053bbc58
-  - 104.18.17.216@443@trojan@42d13e15
-  - 104.128.72.119@80@ss@99398782
+  - 47.254.156.143@443@vless@a098e50a
   - 46.29.163.30@30129@ss@8474ae46
-  - 37.9.4.168@443@vless@32d16149
+  - 104.128.72.119@80@ss@99398782
+  - 106.52.215.138@7890@socks5@8700574f
+  - 157.90.183.51@5555@socks5@0dd59775
+  - 45.194.10.233@8443@vless@ac6d5d6d
+  - 5.255.117.127@1080@socks5@8c672508
   - 47.83.168.191@5000@socks5@c3a6317f
 - name: PG-AnTing
   type: load-balance
@@ -324,10 +350,13 @@ proxy-groups:
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
   - 69.84.182.152@80@vless@053bbc58
-  - 104.18.17.216@443@trojan@42d13e15
-  - 104.128.72.119@80@ss@99398782
+  - 47.254.156.143@443@vless@a098e50a
   - 46.29.163.30@30129@ss@8474ae46
-  - 37.9.4.168@443@vless@32d16149
+  - 104.128.72.119@80@ss@99398782
+  - 106.52.215.138@7890@socks5@8700574f
+  - 157.90.183.51@5555@socks5@0dd59775
+  - 45.194.10.233@8443@vless@ac6d5d6d
+  - 5.255.117.127@1080@socks5@8c672508
   - 47.83.168.191@5000@socks5@c3a6317f
 - name: PG-Sage
   type: load-balance
@@ -338,10 +367,13 @@ proxy-groups:
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
   - 69.84.182.152@80@vless@053bbc58
-  - 104.18.17.216@443@trojan@42d13e15
-  - 104.128.72.119@80@ss@99398782
+  - 47.254.156.143@443@vless@a098e50a
   - 46.29.163.30@30129@ss@8474ae46
-  - 37.9.4.168@443@vless@32d16149
+  - 104.128.72.119@80@ss@99398782
+  - 106.52.215.138@7890@socks5@8700574f
+  - 157.90.183.51@5555@socks5@0dd59775
+  - 45.194.10.233@8443@vless@ac6d5d6d
+  - 5.255.117.127@1080@socks5@8c672508
   - 47.83.168.191@5000@socks5@c3a6317f
 - name: PG-CN
   type: load-balance
@@ -350,13 +382,7 @@ proxy-groups:
   lazy: false
   strategy: round-robin
   proxies:
-  - 157.254.223.44@34567@mieru@7af1c875
-  - 69.84.182.152@80@vless@053bbc58
-  - 104.18.17.216@443@trojan@42d13e15
-  - 104.128.72.119@80@ss@99398782
-  - 46.29.163.30@30129@ss@8474ae46
-  - 37.9.4.168@443@vless@32d16149
-  - 47.83.168.191@5000@socks5@c3a6317f
+  - 106.52.215.138@7890@socks5@8700574f
 - name: PG-Google
   type: url-test
   url: https://www.google.com/generate_204
@@ -367,9 +393,12 @@ proxy-groups:
   - 157.254.223.44@34567@mieru@7af1c875
   - 104.128.72.119@80@ss@99398782
   - 69.84.182.152@80@vless@053bbc58
-  - 104.18.17.216@443@trojan@42d13e15
+  - 47.254.156.143@443@vless@a098e50a
   - 46.29.163.30@30129@ss@8474ae46
-  - 37.9.4.168@443@vless@32d16149
+  - 106.52.215.138@7890@socks5@8700574f
+  - 157.90.183.51@5555@socks5@0dd59775
+  - 45.194.10.233@8443@vless@ac6d5d6d
+  - 5.255.117.127@1080@socks5@8c672508
   - 47.83.168.191@5000@socks5@c3a6317f
   - PG-fast
   - PG-default
@@ -381,11 +410,14 @@ proxy-groups:
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
   - 69.84.182.152@80@vless@053bbc58
-  - 104.18.17.216@443@trojan@42d13e15
+  - 47.254.156.143@443@vless@a098e50a
   - 104.128.72.119@80@ss@99398782
   - 46.29.163.30@30129@ss@8474ae46
-  - 37.9.4.168@443@vless@32d16149
+  - 157.90.183.51@5555@socks5@0dd59775
+  - 5.255.117.127@1080@socks5@8c672508
   - 47.83.168.191@5000@socks5@c3a6317f
+  - 106.52.215.138@7890@socks5@8700574f
+  - 45.194.10.233@8443@vless@ac6d5d6d
   - PG-fast
   - PG-default
 - name: PG-YouTube
@@ -398,9 +430,12 @@ proxy-groups:
   - 157.254.223.44@34567@mieru@7af1c875
   - 104.128.72.119@80@ss@99398782
   - 69.84.182.152@80@vless@053bbc58
-  - 104.18.17.216@443@trojan@42d13e15
+  - 47.254.156.143@443@vless@a098e50a
   - 46.29.163.30@30129@ss@8474ae46
-  - 37.9.4.168@443@vless@32d16149
+  - 106.52.215.138@7890@socks5@8700574f
+  - 157.90.183.51@5555@socks5@0dd59775
+  - 45.194.10.233@8443@vless@ac6d5d6d
+  - 5.255.117.127@1080@socks5@8c672508
   - 47.83.168.191@5000@socks5@c3a6317f
   - PG-fast
   - PG-default
@@ -414,9 +449,12 @@ proxy-groups:
   - 157.254.223.44@34567@mieru@7af1c875
   - 104.128.72.119@80@ss@99398782
   - 69.84.182.152@80@vless@053bbc58
-  - 104.18.17.216@443@trojan@42d13e15
+  - 47.254.156.143@443@vless@a098e50a
   - 46.29.163.30@30129@ss@8474ae46
-  - 37.9.4.168@443@vless@32d16149
+  - 106.52.215.138@7890@socks5@8700574f
+  - 157.90.183.51@5555@socks5@0dd59775
+  - 45.194.10.233@8443@vless@ac6d5d6d
+  - 5.255.117.127@1080@socks5@8c672508
   - 47.83.168.191@5000@socks5@c3a6317f
   - PG-fast
   - PG-default
