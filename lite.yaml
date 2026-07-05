@@ -253,17 +253,74 @@ proxies:
     path: /ws
     tls: false
   udp: true
-- name: 157.90.183.51@5555@socks5@0dd59775
+- name: 106.52.215.138@7890@socks5@8700574f
   type: socks5
-  server: 157.90.183.51
-  port: 5555
-  password: ''
-  skip-cert-verify: true
-  username: ''
-- name: 47.83.168.191@5000@socks5@c3a6317f
-  type: socks5
-  server: 47.83.168.191
-  port: 5000
+  server: 106.52.215.138
+  port: 7890
+- name: 45.198.87.223@8443@vless@4317b0a5
+  type: vless
+  server: 45.198.87.223
+  port: 8443
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  network: tcp
+  packet-encoding: xudp
+  reality-opts:
+    public-key: 7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg
+    short-id: 2715592069f36fe7
+  servername: storage.yandex.net
+  skip-cert-verify: false
+  tls: true
+  udp: true
+  uuid: 7896c501-248f-4068-bc2f-363c91ba5122
+- name: 45.198.87.31@8443@vless@a19582b8
+  type: vless
+  server: 45.198.87.31
+  port: 8443
+  client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  network: tcp
+  packet-encoding: xudp
+  reality-opts:
+    public-key: 7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg
+    short-id: 2715592069f36fe7
+  servername: storage.yandex.net
+  skip-cert-verify: false
+  tls: true
+  udp: true
+  uuid: 7896c501-248f-4068-bc2f-363c91ba5122
+- name: 45.198.87.148@8443@vless@e6e5f7a4
+  type: vless
+  server: 45.198.87.148
+  port: 8443
+  client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  network: tcp
+  packet-encoding: xudp
+  reality-opts:
+    public-key: 7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg
+    short-id: 2715592069f36fe7
+  servername: storage.yandex.net
+  skip-cert-verify: false
+  tls: true
+  udp: true
+  uuid: 7896c501-248f-4068-bc2f-363c91ba5122
+- name: 45.198.87.102@8443@vless@8e43bc92
+  type: vless
+  server: 45.198.87.102
+  port: 8443
+  udp: true
+  uuid: 7896c501-248f-4068-bc2f-363c91ba5122
+  network: tcp
+  tls: true
+  servername: storage.yandex.net
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg
+    short-id: 2715592069f36fe7
 proxy-groups:
 - name: PG-fast
   type: url-test
@@ -275,8 +332,11 @@ proxy-groups:
   - 157.254.223.44@34567@mieru@7af1c875
   - 47.254.156.143@443@vless@a098e50a
   - 104.128.72.119@80@ss@99398782
-  - 157.90.183.51@5555@socks5@0dd59775
-  - 47.83.168.191@5000@socks5@c3a6317f
+  - 106.52.215.138@7890@socks5@8700574f
+  - 45.198.87.223@8443@vless@4317b0a5
+  - 45.198.87.31@8443@vless@a19582b8
+  - 45.198.87.148@8443@vless@e6e5f7a4
+  - 45.198.87.102@8443@vless@8e43bc92
 - name: PG-default
   type: fallback
   url: https://www.google.com/generate_204
@@ -287,8 +347,11 @@ proxy-groups:
   - 157.254.223.44@34567@mieru@7af1c875
   - 47.254.156.143@443@vless@a098e50a
   - 104.128.72.119@80@ss@99398782
-  - 157.90.183.51@5555@socks5@0dd59775
-  - 47.83.168.191@5000@socks5@c3a6317f
+  - 106.52.215.138@7890@socks5@8700574f
+  - 45.198.87.223@8443@vless@4317b0a5
+  - 45.198.87.31@8443@vless@a19582b8
+  - 45.198.87.148@8443@vless@e6e5f7a4
+  - 45.198.87.102@8443@vless@8e43bc92
 - name: PG-AnTing
   type: load-balance
   url: https://www.google.com/generate_204
@@ -299,8 +362,11 @@ proxy-groups:
   - 157.254.223.44@34567@mieru@7af1c875
   - 47.254.156.143@443@vless@a098e50a
   - 104.128.72.119@80@ss@99398782
-  - 157.90.183.51@5555@socks5@0dd59775
-  - 47.83.168.191@5000@socks5@c3a6317f
+  - 106.52.215.138@7890@socks5@8700574f
+  - 45.198.87.223@8443@vless@4317b0a5
+  - 45.198.87.31@8443@vless@a19582b8
+  - 45.198.87.148@8443@vless@e6e5f7a4
+  - 45.198.87.102@8443@vless@8e43bc92
 - name: PG-Sage
   type: load-balance
   url: http://www.eastmoney.com
@@ -311,8 +377,11 @@ proxy-groups:
   - 157.254.223.44@34567@mieru@7af1c875
   - 47.254.156.143@443@vless@a098e50a
   - 104.128.72.119@80@ss@99398782
-  - 157.90.183.51@5555@socks5@0dd59775
-  - 47.83.168.191@5000@socks5@c3a6317f
+  - 106.52.215.138@7890@socks5@8700574f
+  - 45.198.87.223@8443@vless@4317b0a5
+  - 45.198.87.31@8443@vless@a19582b8
+  - 45.198.87.148@8443@vless@e6e5f7a4
+  - 45.198.87.102@8443@vless@8e43bc92
 - name: PG-CN
   type: load-balance
   url: https://www.sse.com.cn
@@ -320,11 +389,7 @@ proxy-groups:
   lazy: false
   strategy: round-robin
   proxies:
-  - 157.254.223.44@34567@mieru@7af1c875
-  - 47.254.156.143@443@vless@a098e50a
-  - 104.128.72.119@80@ss@99398782
-  - 157.90.183.51@5555@socks5@0dd59775
-  - 47.83.168.191@5000@socks5@c3a6317f
+  - 106.52.215.138@7890@socks5@8700574f
 - name: PG-Google
   type: url-test
   url: https://www.google.com/generate_204
@@ -335,8 +400,11 @@ proxy-groups:
   - 157.254.223.44@34567@mieru@7af1c875
   - 104.128.72.119@80@ss@99398782
   - 47.254.156.143@443@vless@a098e50a
-  - 157.90.183.51@5555@socks5@0dd59775
-  - 47.83.168.191@5000@socks5@c3a6317f
+  - 106.52.215.138@7890@socks5@8700574f
+  - 45.198.87.223@8443@vless@4317b0a5
+  - 45.198.87.31@8443@vless@a19582b8
+  - 45.198.87.148@8443@vless@e6e5f7a4
+  - 45.198.87.102@8443@vless@8e43bc92
   - PG-fast
   - PG-default
 - name: PG-GitHub
@@ -348,8 +416,11 @@ proxy-groups:
   - 157.254.223.44@34567@mieru@7af1c875
   - 47.254.156.143@443@vless@a098e50a
   - 104.128.72.119@80@ss@99398782
-  - 157.90.183.51@5555@socks5@0dd59775
-  - 47.83.168.191@5000@socks5@c3a6317f
+  - 45.198.87.223@8443@vless@4317b0a5
+  - 45.198.87.31@8443@vless@a19582b8
+  - 45.198.87.148@8443@vless@e6e5f7a4
+  - 45.198.87.102@8443@vless@8e43bc92
+  - 106.52.215.138@7890@socks5@8700574f
   - PG-fast
   - PG-default
 - name: PG-YouTube
@@ -362,8 +433,11 @@ proxy-groups:
   - 157.254.223.44@34567@mieru@7af1c875
   - 104.128.72.119@80@ss@99398782
   - 47.254.156.143@443@vless@a098e50a
-  - 157.90.183.51@5555@socks5@0dd59775
-  - 47.83.168.191@5000@socks5@c3a6317f
+  - 106.52.215.138@7890@socks5@8700574f
+  - 45.198.87.223@8443@vless@4317b0a5
+  - 45.198.87.31@8443@vless@a19582b8
+  - 45.198.87.148@8443@vless@e6e5f7a4
+  - 45.198.87.102@8443@vless@8e43bc92
   - PG-fast
   - PG-default
 - name: PG-Twitter
@@ -376,8 +450,11 @@ proxy-groups:
   - 157.254.223.44@34567@mieru@7af1c875
   - 104.128.72.119@80@ss@99398782
   - 47.254.156.143@443@vless@a098e50a
-  - 157.90.183.51@5555@socks5@0dd59775
-  - 47.83.168.191@5000@socks5@c3a6317f
+  - 106.52.215.138@7890@socks5@8700574f
+  - 45.198.87.223@8443@vless@4317b0a5
+  - 45.198.87.31@8443@vless@a19582b8
+  - 45.198.87.148@8443@vless@e6e5f7a4
+  - 45.198.87.102@8443@vless@8e43bc92
   - PG-fast
   - PG-default
 rule-providers:
