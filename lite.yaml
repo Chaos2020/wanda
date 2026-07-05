@@ -225,20 +225,6 @@ proxies:
   password: dongtaiwang.com
   transport: TCP
   username: dongtaiwang.com
-- name: 47.254.156.143@443@vless@a098e50a
-  type: vless
-  server: 47.254.156.143
-  port: 443
-  client-fingerprint: chrome
-  network: tcp
-  packet-encoding: xudp
-  reality-opts:
-    public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
-  servername: api.company-target.com
-  skip-cert-verify: false
-  tls: true
-  udp: true
-  uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
 - name: 104.128.72.119@80@ss@99398782
   type: ss
   server: 104.128.72.119
@@ -253,10 +239,51 @@ proxies:
     path: /ws
     tls: false
   udp: true
-- name: 106.52.215.138@7890@socks5@8700574f
-  type: socks5
-  server: 106.52.215.138
-  port: 7890
+- name: 47.254.156.143@443@vless@a098e50a
+  type: vless
+  server: 47.254.156.143
+  port: 443
+  client-fingerprint: chrome
+  network: tcp
+  packet-encoding: xudp
+  reality-opts:
+    public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
+  servername: api.company-target.com
+  skip-cert-verify: false
+  tls: true
+  udp: true
+  uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
+- name: 104.18.17.216@443@trojan@42d13e15
+  type: trojan
+  server: 104.18.17.216
+  port: 443
+  network: ws
+  password: humanity
+  sni: www.calmloud.com
+  ws-opts:
+    headers:
+      Host: www.calmloud.com
+    path: /assignment
+- name: v24.hdacd.com@30824@vmess@3b8e774e
+  type: vmess
+  server: v24.hdacd.com
+  port: 30824
+  alterId: 2
+  cipher: auto
+  delay: 887
+  http-opts: {}
+  network: tcp
+  skip-cert-verify: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  ws-path: /
+- name: v35.hdacd.com@30835@vmess@fed67c9c
+  type: vmess
+  server: v35.hdacd.com
+  port: 30835
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  udp: true
 - name: 45.198.87.223@8443@vless@4317b0a5
   type: vless
   server: 45.198.87.223
@@ -330,9 +357,11 @@ proxy-groups:
   lazy: false
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
-  - 47.254.156.143@443@vless@a098e50a
   - 104.128.72.119@80@ss@99398782
-  - 106.52.215.138@7890@socks5@8700574f
+  - 47.254.156.143@443@vless@a098e50a
+  - 104.18.17.216@443@trojan@42d13e15
+  - v24.hdacd.com@30824@vmess@3b8e774e
+  - v35.hdacd.com@30835@vmess@fed67c9c
   - 45.198.87.223@8443@vless@4317b0a5
   - 45.198.87.31@8443@vless@a19582b8
   - 45.198.87.148@8443@vless@e6e5f7a4
@@ -345,9 +374,11 @@ proxy-groups:
   proxies:
   - PG-fast
   - 157.254.223.44@34567@mieru@7af1c875
-  - 47.254.156.143@443@vless@a098e50a
   - 104.128.72.119@80@ss@99398782
-  - 106.52.215.138@7890@socks5@8700574f
+  - 47.254.156.143@443@vless@a098e50a
+  - 104.18.17.216@443@trojan@42d13e15
+  - v24.hdacd.com@30824@vmess@3b8e774e
+  - v35.hdacd.com@30835@vmess@fed67c9c
   - 45.198.87.223@8443@vless@4317b0a5
   - 45.198.87.31@8443@vless@a19582b8
   - 45.198.87.148@8443@vless@e6e5f7a4
@@ -360,9 +391,11 @@ proxy-groups:
   strategy: round-robin
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
-  - 47.254.156.143@443@vless@a098e50a
   - 104.128.72.119@80@ss@99398782
-  - 106.52.215.138@7890@socks5@8700574f
+  - 47.254.156.143@443@vless@a098e50a
+  - 104.18.17.216@443@trojan@42d13e15
+  - v24.hdacd.com@30824@vmess@3b8e774e
+  - v35.hdacd.com@30835@vmess@fed67c9c
   - 45.198.87.223@8443@vless@4317b0a5
   - 45.198.87.31@8443@vless@a19582b8
   - 45.198.87.148@8443@vless@e6e5f7a4
@@ -375,9 +408,11 @@ proxy-groups:
   strategy: round-robin
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
-  - 47.254.156.143@443@vless@a098e50a
   - 104.128.72.119@80@ss@99398782
-  - 106.52.215.138@7890@socks5@8700574f
+  - 47.254.156.143@443@vless@a098e50a
+  - 104.18.17.216@443@trojan@42d13e15
+  - v24.hdacd.com@30824@vmess@3b8e774e
+  - v35.hdacd.com@30835@vmess@fed67c9c
   - 45.198.87.223@8443@vless@4317b0a5
   - 45.198.87.31@8443@vless@a19582b8
   - 45.198.87.148@8443@vless@e6e5f7a4
@@ -389,7 +424,16 @@ proxy-groups:
   lazy: false
   strategy: round-robin
   proxies:
-  - 106.52.215.138@7890@socks5@8700574f
+  - 157.254.223.44@34567@mieru@7af1c875
+  - 104.128.72.119@80@ss@99398782
+  - 47.254.156.143@443@vless@a098e50a
+  - 104.18.17.216@443@trojan@42d13e15
+  - v24.hdacd.com@30824@vmess@3b8e774e
+  - v35.hdacd.com@30835@vmess@fed67c9c
+  - 45.198.87.223@8443@vless@4317b0a5
+  - 45.198.87.31@8443@vless@a19582b8
+  - 45.198.87.148@8443@vless@e6e5f7a4
+  - 45.198.87.102@8443@vless@8e43bc92
 - name: PG-Google
   type: url-test
   url: https://www.google.com/generate_204
@@ -399,8 +443,10 @@ proxy-groups:
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
   - 104.128.72.119@80@ss@99398782
+  - v24.hdacd.com@30824@vmess@3b8e774e
   - 47.254.156.143@443@vless@a098e50a
-  - 106.52.215.138@7890@socks5@8700574f
+  - 104.18.17.216@443@trojan@42d13e15
+  - v35.hdacd.com@30835@vmess@fed67c9c
   - 45.198.87.223@8443@vless@4317b0a5
   - 45.198.87.31@8443@vless@a19582b8
   - 45.198.87.148@8443@vless@e6e5f7a4
@@ -414,13 +460,15 @@ proxy-groups:
   lazy: false
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
-  - 47.254.156.143@443@vless@a098e50a
   - 104.128.72.119@80@ss@99398782
+  - 104.18.17.216@443@trojan@42d13e15
+  - 47.254.156.143@443@vless@a098e50a
+  - v35.hdacd.com@30835@vmess@fed67c9c
+  - v24.hdacd.com@30824@vmess@3b8e774e
   - 45.198.87.223@8443@vless@4317b0a5
   - 45.198.87.31@8443@vless@a19582b8
   - 45.198.87.148@8443@vless@e6e5f7a4
   - 45.198.87.102@8443@vless@8e43bc92
-  - 106.52.215.138@7890@socks5@8700574f
   - PG-fast
   - PG-default
 - name: PG-YouTube
@@ -432,8 +480,10 @@ proxy-groups:
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
   - 104.128.72.119@80@ss@99398782
+  - v24.hdacd.com@30824@vmess@3b8e774e
   - 47.254.156.143@443@vless@a098e50a
-  - 106.52.215.138@7890@socks5@8700574f
+  - 104.18.17.216@443@trojan@42d13e15
+  - v35.hdacd.com@30835@vmess@fed67c9c
   - 45.198.87.223@8443@vless@4317b0a5
   - 45.198.87.31@8443@vless@a19582b8
   - 45.198.87.148@8443@vless@e6e5f7a4
@@ -449,8 +499,10 @@ proxy-groups:
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
   - 104.128.72.119@80@ss@99398782
+  - v24.hdacd.com@30824@vmess@3b8e774e
   - 47.254.156.143@443@vless@a098e50a
-  - 106.52.215.138@7890@socks5@8700574f
+  - 104.18.17.216@443@trojan@42d13e15
+  - v35.hdacd.com@30835@vmess@fed67c9c
   - 45.198.87.223@8443@vless@4317b0a5
   - 45.198.87.31@8443@vless@a19582b8
   - 45.198.87.148@8443@vless@e6e5f7a4
