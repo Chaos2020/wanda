@@ -239,6 +239,17 @@ proxies:
   tls: true
   udp: true
   uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
+- name: 104.18.17.216@443@trojan@42d13e15
+  type: trojan
+  server: 104.18.17.216
+  port: 443
+  network: ws
+  password: humanity
+  sni: www.calmloud.com
+  ws-opts:
+    headers:
+      Host: www.calmloud.com
+    path: /assignment
 - name: 104.128.72.119@80@ss@99398782
   type: ss
   server: 104.128.72.119
@@ -253,25 +264,72 @@ proxies:
     path: /ws
     tls: false
   udp: true
-- name: 106.52.215.138@7890@socks5@8700574f
+- name: 45.198.87.223@8443@vless@4317b0a5
+  type: vless
+  server: 45.198.87.223
+  port: 8443
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  network: tcp
+  packet-encoding: xudp
+  reality-opts:
+    public-key: 7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg
+    short-id: 2715592069f36fe7
+  servername: storage.yandex.net
+  skip-cert-verify: false
+  tls: true
+  udp: true
+  uuid: 7896c501-248f-4068-bc2f-363c91ba5122
+- name: 45.198.87.31@8443@vless@a19582b8
+  type: vless
+  server: 45.198.87.31
+  port: 8443
+  client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  network: tcp
+  packet-encoding: xudp
+  reality-opts:
+    public-key: 7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg
+    short-id: 2715592069f36fe7
+  servername: storage.yandex.net
+  skip-cert-verify: false
+  tls: true
+  udp: true
+  uuid: 7896c501-248f-4068-bc2f-363c91ba5122
+- name: 45.198.87.148@8443@vless@e6e5f7a4
+  type: vless
+  server: 45.198.87.148
+  port: 8443
+  client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  network: tcp
+  packet-encoding: xudp
+  reality-opts:
+    public-key: 7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg
+    short-id: 2715592069f36fe7
+  servername: storage.yandex.net
+  skip-cert-verify: false
+  tls: true
+  udp: true
+  uuid: 7896c501-248f-4068-bc2f-363c91ba5122
+- name: 47.253.211.16@1080@socks5@18ca66a1
   type: socks5
-  server: 106.52.215.138
-  port: 7890
-- name: 204.48.29.137@1088@socks5@09bb7403
-  type: socks5
-  server: 204.48.29.137
-  port: 1088
-  password: ''
-  skip-cert-verify: true
-  username: ''
-- name: 5.255.117.127@1080@socks5@8c672508
-  type: socks5
-  server: 5.255.117.127
+  server: 47.253.211.16
   port: 1080
-- name: 125.227.45.184@5001@socks5@630ab630
+  password: ''
+  username: ''
+- name: 47.83.168.191@5000@socks5@c3a6317f
   type: socks5
-  server: 125.227.45.184
-  port: 5001
+  server: 47.83.168.191
+  port: 5000
+- name: 103.149.182.79@8388@ss@6bb86606
+  type: ss
+  server: 103.149.182.79
+  port: 8388
+  cipher: chacha20-ietf
+  password: asd123456
 proxy-groups:
 - name: PG-fast
   type: url-test
@@ -282,11 +340,14 @@ proxy-groups:
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
   - 47.254.156.143@443@vless@a098e50a
+  - 104.18.17.216@443@trojan@42d13e15
   - 104.128.72.119@80@ss@99398782
-  - 106.52.215.138@7890@socks5@8700574f
-  - 204.48.29.137@1088@socks5@09bb7403
-  - 5.255.117.127@1080@socks5@8c672508
-  - 125.227.45.184@5001@socks5@630ab630
+  - 45.198.87.223@8443@vless@4317b0a5
+  - 45.198.87.31@8443@vless@a19582b8
+  - 45.198.87.148@8443@vless@e6e5f7a4
+  - 47.253.211.16@1080@socks5@18ca66a1
+  - 47.83.168.191@5000@socks5@c3a6317f
+  - 103.149.182.79@8388@ss@6bb86606
 - name: PG-default
   type: fallback
   url: https://www.google.com/generate_204
@@ -296,11 +357,14 @@ proxy-groups:
   - PG-fast
   - 157.254.223.44@34567@mieru@7af1c875
   - 47.254.156.143@443@vless@a098e50a
+  - 104.18.17.216@443@trojan@42d13e15
   - 104.128.72.119@80@ss@99398782
-  - 106.52.215.138@7890@socks5@8700574f
-  - 204.48.29.137@1088@socks5@09bb7403
-  - 5.255.117.127@1080@socks5@8c672508
-  - 125.227.45.184@5001@socks5@630ab630
+  - 45.198.87.223@8443@vless@4317b0a5
+  - 45.198.87.31@8443@vless@a19582b8
+  - 45.198.87.148@8443@vless@e6e5f7a4
+  - 47.253.211.16@1080@socks5@18ca66a1
+  - 47.83.168.191@5000@socks5@c3a6317f
+  - 103.149.182.79@8388@ss@6bb86606
 - name: PG-AnTing
   type: load-balance
   url: https://www.google.com/generate_204
@@ -310,11 +374,14 @@ proxy-groups:
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
   - 47.254.156.143@443@vless@a098e50a
+  - 104.18.17.216@443@trojan@42d13e15
   - 104.128.72.119@80@ss@99398782
-  - 106.52.215.138@7890@socks5@8700574f
-  - 204.48.29.137@1088@socks5@09bb7403
-  - 5.255.117.127@1080@socks5@8c672508
-  - 125.227.45.184@5001@socks5@630ab630
+  - 45.198.87.223@8443@vless@4317b0a5
+  - 45.198.87.31@8443@vless@a19582b8
+  - 45.198.87.148@8443@vless@e6e5f7a4
+  - 47.253.211.16@1080@socks5@18ca66a1
+  - 47.83.168.191@5000@socks5@c3a6317f
+  - 103.149.182.79@8388@ss@6bb86606
 - name: PG-Sage
   type: load-balance
   url: http://www.eastmoney.com
@@ -324,11 +391,14 @@ proxy-groups:
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
   - 47.254.156.143@443@vless@a098e50a
+  - 104.18.17.216@443@trojan@42d13e15
   - 104.128.72.119@80@ss@99398782
-  - 106.52.215.138@7890@socks5@8700574f
-  - 204.48.29.137@1088@socks5@09bb7403
-  - 5.255.117.127@1080@socks5@8c672508
-  - 125.227.45.184@5001@socks5@630ab630
+  - 45.198.87.223@8443@vless@4317b0a5
+  - 45.198.87.31@8443@vless@a19582b8
+  - 45.198.87.148@8443@vless@e6e5f7a4
+  - 47.253.211.16@1080@socks5@18ca66a1
+  - 47.83.168.191@5000@socks5@c3a6317f
+  - 103.149.182.79@8388@ss@6bb86606
 - name: PG-CN
   type: load-balance
   url: https://www.sse.com.cn
@@ -336,7 +406,16 @@ proxy-groups:
   lazy: false
   strategy: round-robin
   proxies:
-  - 106.52.215.138@7890@socks5@8700574f
+  - 157.254.223.44@34567@mieru@7af1c875
+  - 47.254.156.143@443@vless@a098e50a
+  - 104.18.17.216@443@trojan@42d13e15
+  - 104.128.72.119@80@ss@99398782
+  - 45.198.87.223@8443@vless@4317b0a5
+  - 45.198.87.31@8443@vless@a19582b8
+  - 45.198.87.148@8443@vless@e6e5f7a4
+  - 47.253.211.16@1080@socks5@18ca66a1
+  - 47.83.168.191@5000@socks5@c3a6317f
+  - 103.149.182.79@8388@ss@6bb86606
 - name: PG-Google
   type: url-test
   url: https://www.google.com/generate_204
@@ -346,11 +425,14 @@ proxy-groups:
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
   - 104.128.72.119@80@ss@99398782
-  - 204.48.29.137@1088@socks5@09bb7403
+  - 47.253.211.16@1080@socks5@18ca66a1
   - 47.254.156.143@443@vless@a098e50a
-  - 106.52.215.138@7890@socks5@8700574f
-  - 5.255.117.127@1080@socks5@8c672508
-  - 125.227.45.184@5001@socks5@630ab630
+  - 104.18.17.216@443@trojan@42d13e15
+  - 45.198.87.223@8443@vless@4317b0a5
+  - 45.198.87.31@8443@vless@a19582b8
+  - 45.198.87.148@8443@vless@e6e5f7a4
+  - 47.83.168.191@5000@socks5@c3a6317f
+  - 103.149.182.79@8388@ss@6bb86606
   - PG-fast
   - PG-default
 - name: PG-GitHub
@@ -361,11 +443,14 @@ proxy-groups:
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
   - 47.254.156.143@443@vless@a098e50a
+  - 104.18.17.216@443@trojan@42d13e15
   - 104.128.72.119@80@ss@99398782
-  - 204.48.29.137@1088@socks5@09bb7403
-  - 5.255.117.127@1080@socks5@8c672508
-  - 125.227.45.184@5001@socks5@630ab630
-  - 106.52.215.138@7890@socks5@8700574f
+  - 45.198.87.223@8443@vless@4317b0a5
+  - 45.198.87.31@8443@vless@a19582b8
+  - 45.198.87.148@8443@vless@e6e5f7a4
+  - 47.253.211.16@1080@socks5@18ca66a1
+  - 47.83.168.191@5000@socks5@c3a6317f
+  - 103.149.182.79@8388@ss@6bb86606
   - PG-fast
   - PG-default
 - name: PG-YouTube
@@ -377,11 +462,14 @@ proxy-groups:
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
   - 104.128.72.119@80@ss@99398782
-  - 204.48.29.137@1088@socks5@09bb7403
+  - 47.253.211.16@1080@socks5@18ca66a1
   - 47.254.156.143@443@vless@a098e50a
-  - 106.52.215.138@7890@socks5@8700574f
-  - 5.255.117.127@1080@socks5@8c672508
-  - 125.227.45.184@5001@socks5@630ab630
+  - 104.18.17.216@443@trojan@42d13e15
+  - 45.198.87.223@8443@vless@4317b0a5
+  - 45.198.87.31@8443@vless@a19582b8
+  - 45.198.87.148@8443@vless@e6e5f7a4
+  - 47.83.168.191@5000@socks5@c3a6317f
+  - 103.149.182.79@8388@ss@6bb86606
   - PG-fast
   - PG-default
 - name: PG-Twitter
@@ -393,11 +481,14 @@ proxy-groups:
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
   - 104.128.72.119@80@ss@99398782
-  - 204.48.29.137@1088@socks5@09bb7403
+  - 47.253.211.16@1080@socks5@18ca66a1
   - 47.254.156.143@443@vless@a098e50a
-  - 106.52.215.138@7890@socks5@8700574f
-  - 5.255.117.127@1080@socks5@8c672508
-  - 125.227.45.184@5001@socks5@630ab630
+  - 104.18.17.216@443@trojan@42d13e15
+  - 45.198.87.223@8443@vless@4317b0a5
+  - 45.198.87.31@8443@vless@a19582b8
+  - 45.198.87.148@8443@vless@e6e5f7a4
+  - 47.83.168.191@5000@socks5@c3a6317f
+  - 103.149.182.79@8388@ss@6bb86606
   - PG-fast
   - PG-default
 rule-providers:
