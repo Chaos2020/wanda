@@ -312,22 +312,6 @@ proxies:
   password: ''
   skip-cert-verify: true
   username: ''
-- name: 38.244.21.105@443@vless@c99c6ec4
-  type: vless
-  server: 38.244.21.105
-  port: 443
-  client-fingerprint: chrome
-  encryption: none
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: toVw4zhkNKNX-ky2Ps7qz7dMMmwmfVUHNN611-M8qA8
-    short-id: 76140dbf02d4b52a
-  servername: www.apple.com
-  tls: true
-  udp: true
-  uuid: a19133c6-8e5d-4bbf-acdc-d88a628ab9c1
-  xudp: true
 - name: v35.hdacd.com@30835@vmess@fed67c9c
   type: vmess
   server: v35.hdacd.com
@@ -335,6 +319,14 @@ proxies:
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
   alterId: 2
   cipher: auto
+  udp: true
+- name: 3.147.78.9@443@ss@c7b85acb
+  type: ss
+  server: 3.147.78.9
+  port: 443
+  cipher: aes-256-cfb
+  password: amazonskr05
+  sub_tag: A004-260618
   udp: true
 - name: iv2yun.iv2yunch.work@63353@vmess@a012b114
   type: vmess
@@ -349,18 +341,6 @@ proxies:
     path: /
     headers:
       Host: iv2yun.iv2yunch.work
-- name: v24.hdacd.com@30824@vmess@3b8e774e
-  type: vmess
-  server: v24.hdacd.com
-  port: 30824
-  alterId: 2
-  cipher: auto
-  delay: 887
-  http-opts: {}
-  network: tcp
-  skip-cert-verify: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  ws-path: /
 - name: gt-fr-01.live@443@vless@25db7a0e
   type: vless
   server: gt-fr-01.live
@@ -374,6 +354,18 @@ proxies:
     short-id: 364994a6f61fc955
   sni: yandex.net
   client-fingerprint: firefox
+- name: v24.hdacd.com@30824@vmess@3b8e774e
+  type: vmess
+  server: v24.hdacd.com
+  port: 30824
+  alterId: 2
+  cipher: auto
+  delay: 887
+  http-opts: {}
+  network: tcp
+  skip-cert-verify: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  ws-path: /
 - name: v36.hdacd.com@30836@vmess@e912117a
   type: vmess
   server: v36.hdacd.com
@@ -396,22 +388,27 @@ proxies:
   reality-opts:
     public-key: 9Y-_jCI3Z1x6SXK2tHdZ6V1CN9IJPNPnoxSW0cbXxD8
     short-id: 50e09046c0c00159
-- name: v29.hdacd.com@30829@vmess@6a3c7508
-  type: vmess
-  server: v29.hdacd.com
-  port: 30829
-  alterId: 2
-  cipher: auto
-  http-opts: {}
-  network: tcp
-  skip-cert-verify: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  ws-opts:
-    path: /
 - name: 106.52.215.138@7890@socks5@8700574f
   type: socks5
   server: 106.52.215.138
   port: 7890
+- name: 87.120.106.52@8081@vless@50194073
+  type: vless
+  server: 87.120.106.52
+  port: 8081
+  encryption: none
+  http-opts:
+    headers:
+      Host:
+      - Chess.com
+    path:
+    - /ELiV2Ray--ELiV2Ray--ELiV2Ray--ELiV2Ray--ELiV2Ray--ELiV2Ray
+  network: http
+  sub_tag: B007-260618
+  udp: true
+  uuid: 449b7dd6-6ad2-4ce6-b4aa-6c7060e143fb
+  xudp: true
+  packet-encoding: xudp
 - name: 157.90.183.51@5555@socks5@0dd59775
   type: socks5
   server: 157.90.183.51
@@ -419,39 +416,125 @@ proxies:
   password: ''
   skip-cert-verify: true
   username: ''
-- name: 217.142.138.61@80@vmess@59ec1861
-  type: vmess
-  server: 217.142.138.61
-  port: 80
-  alterId: 0
-  cipher: auto
-  http-opts:
-    method: GET
-    path:
-    - /
-  network: http
+- name: itv.dimple35.shop@10325@hysteria2@077c593a
+  type: hysteria2
+  server: itv.dimple35.shop
+  port: 10325
+  password: Yn3Yb1SxkpWHvyi0PDsSPIiHVQ2I3raE
+  sni: bing.com
   skip-cert-verify: true
-  tls: false
-  udp: true
-  uuid: ac1b933d-afff-4487-93ef-f57130a55dff
+- name: ecm.crystal63.shop@10457@hysteria2@32c20971
+  type: hysteria2
+  server: ecm.crystal63.shop
+  port: 10457
+  password: LQzKSf45H5RDqsdkp2ZIDbf5Po13TQlp
+  sni: bing.com
+  skip-cert-verify: true
+- name: sca.crystal63.shop@14380@anytls@3037ebf0
+  type: anytls
+  server: sca.crystal63.shop
+  port: 14380
+  password: 3481bf23-04d6-4a63-a584-654e0a9fde58
+  client-fingerprint: chrome
+  sni: sca.crystal63.shop
+  skip-cert-verify: true
+  alpn:
+  - h2
+- name: bip.contact09.shop@9844@anytls@7589197e
+  type: anytls
+  server: bip.contact09.shop
+  port: 9844
+  password: d09e4973-70ec-465e-b71b-08ea9c367698
+  client-fingerprint: chrome
+  sni: bip.contact09.shop
+  skip-cert-verify: true
+  alpn:
+  - h2
+- name: rpm.cyclic02.cyou@10748@hysteria2@3c0a0c19
+  type: hysteria2
+  server: rpm.cyclic02.cyou
+  port: 10748
+  password: N0YXfQ4qPvC380T3BtUZbhF49dlbQ37J
+  sni: bing.com
+  skip-cert-verify: true
+- name: gms.doubl02.shop@6622@hysteria2@1beba44b
+  type: hysteria2
+  server: gms.doubl02.shop
+  port: 6622
+  password: vKXpTbNOdS2kTHLvXSvTW3gOsvLJjhPD
+  sni: bing.com
+  skip-cert-verify: true
+- name: tld.const98.cfd@14257@hysteria2@32d63a65
+  type: hysteria2
+  server: tld.const98.cfd
+  port: 14257
+  password: EpgPZNDSxckzi1SqpyKUo7t1iJGE1Blm
+  sni: bing.com
+  skip-cert-verify: true
+- name: rad.const98.cfd@4633@anytls@eba51fe0
+  type: anytls
+  server: rad.const98.cfd
+  port: 4633
+  password: be7afa4c-874f-4323-86ec-3a00a2489423
+  client-fingerprint: chrome
+  sni: rad.const98.cfd
+  skip-cert-verify: true
+  alpn:
+  - h2
+- name: pim.depreca09.cyou@3637@hysteria2@d9705693
+  type: hysteria2
+  server: pim.depreca09.cyou
+  port: 3637
+  password: oONSf6jzQzQ8JF7QxPmmDuPksP6FfnDz
+  sni: bing.com
+  skip-cert-verify: true
+- name: fdc.contact09.shop@7599@hysteria2@a5e674bb
+  type: hysteria2
+  server: fdc.contact09.shop
+  port: 7599
+  password: dhojTI2fcr1XE6dzjKHQ0pOhXMwwwEic
+  sni: bing.com
+  skip-cert-verify: true
+- name: vip.curvy45.cfd@14953@hysteria2@26c3af2b
+  type: hysteria2
+  server: vip.curvy45.cfd
+  port: 14953
+  password: WWV8e9G0VaoZNXgC570ON4tNV3vWDWNA
+  sni: bing.com
+  skip-cert-verify: true
+- name: irc.deduce5.cyou@14575@hysteria2@2f9434a9
+  type: hysteria2
+  server: irc.deduce5.cyou
+  port: 14575
+  password: u0TpYqMakQPO4Si5bhJkT7ZIMWAL64jp
+  sni: bing.com
+  skip-cert-verify: true
 - name: 5.255.117.127@1080@socks5@8c672508
   type: socks5
   server: 5.255.117.127
   port: 1080
-- name: 103.76.85.197@443@vless@5dc21697
+- name: 104.17.147.22@2053@vless@a087b94c
   type: vless
-  server: 103.76.85.197
-  port: 443
-  udp: true
-  uuid: ade5c8c0-c93d-4552-b110-0e210c293265
-  network: tcp
-  tls: true
-  servername: www.apple.com
+  server: 104.17.147.22
+  port: 2053
+  alpn:
+  - h2
+  - http/1.1
   client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: q4J2HtgjtrBqAe_mYEDR3n9NW0eLFuGqw3Ja5OQmJyY
-    short-id: 804462f3c3e9053c
+  encryption: none
+  network: xhttp
+  sub_tag: B007-260618
+  tls: true
+  udp: true
+  uuid: 4c41d237-630a-4d02-8ec0-c3b775190ee5
+  xhttp-opts:
+    host: digiac.riziro.ir
+    mode: auto
+    path: /HOLLWOCON--HOLLOWCON--HOLLOWCON--HOLLOWCON--HOLLOWCON--HOLLOWCON--HOLLOWCON--HOLLOWCON--HOLLOWCON
+    x-padding-bytes: 100-1000
+  xudp: true
+  packet-encoding: xudp
+  servername: digiac.riziro.ir
 - name: 47.253.211.16@1080@socks5@18ca66a1
   type: socks5
   server: 47.253.211.16
@@ -474,19 +557,30 @@ proxy-groups:
   - 45.194.10.141@8443@vless@a1564e76
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 204.48.29.137@1088@socks5@09bb7403
-  - 38.244.21.105@443@vless@c99c6ec4
   - v35.hdacd.com@30835@vmess@fed67c9c
+  - 3.147.78.9@443@ss@c7b85acb
   - iv2yun.iv2yunch.work@63353@vmess@a012b114
-  - v24.hdacd.com@30824@vmess@3b8e774e
   - gt-fr-01.live@443@vless@25db7a0e
+  - v24.hdacd.com@30824@vmess@3b8e774e
   - v36.hdacd.com@30836@vmess@e912117a
   - 45.194.71.186@443@vless@1e46b729
-  - v29.hdacd.com@30829@vmess@6a3c7508
   - 106.52.215.138@7890@socks5@8700574f
+  - 87.120.106.52@8081@vless@50194073
   - 157.90.183.51@5555@socks5@0dd59775
-  - 217.142.138.61@80@vmess@59ec1861
+  - itv.dimple35.shop@10325@hysteria2@077c593a
+  - ecm.crystal63.shop@10457@hysteria2@32c20971
+  - sca.crystal63.shop@14380@anytls@3037ebf0
+  - bip.contact09.shop@9844@anytls@7589197e
+  - rpm.cyclic02.cyou@10748@hysteria2@3c0a0c19
+  - gms.doubl02.shop@6622@hysteria2@1beba44b
+  - tld.const98.cfd@14257@hysteria2@32d63a65
+  - rad.const98.cfd@4633@anytls@eba51fe0
+  - pim.depreca09.cyou@3637@hysteria2@d9705693
+  - fdc.contact09.shop@7599@hysteria2@a5e674bb
+  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
+  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
   - 5.255.117.127@1080@socks5@8c672508
-  - 103.76.85.197@443@vless@5dc21697
+  - 104.17.147.22@2053@vless@a087b94c
   - 47.253.211.16@1080@socks5@18ca66a1
 - name: PG-default
   type: fallback
@@ -503,19 +597,30 @@ proxy-groups:
   - 45.194.10.141@8443@vless@a1564e76
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 204.48.29.137@1088@socks5@09bb7403
-  - 38.244.21.105@443@vless@c99c6ec4
   - v35.hdacd.com@30835@vmess@fed67c9c
+  - 3.147.78.9@443@ss@c7b85acb
   - iv2yun.iv2yunch.work@63353@vmess@a012b114
-  - v24.hdacd.com@30824@vmess@3b8e774e
   - gt-fr-01.live@443@vless@25db7a0e
+  - v24.hdacd.com@30824@vmess@3b8e774e
   - v36.hdacd.com@30836@vmess@e912117a
   - 45.194.71.186@443@vless@1e46b729
-  - v29.hdacd.com@30829@vmess@6a3c7508
   - 106.52.215.138@7890@socks5@8700574f
+  - 87.120.106.52@8081@vless@50194073
   - 157.90.183.51@5555@socks5@0dd59775
-  - 217.142.138.61@80@vmess@59ec1861
+  - itv.dimple35.shop@10325@hysteria2@077c593a
+  - ecm.crystal63.shop@10457@hysteria2@32c20971
+  - sca.crystal63.shop@14380@anytls@3037ebf0
+  - bip.contact09.shop@9844@anytls@7589197e
+  - rpm.cyclic02.cyou@10748@hysteria2@3c0a0c19
+  - gms.doubl02.shop@6622@hysteria2@1beba44b
+  - tld.const98.cfd@14257@hysteria2@32d63a65
+  - rad.const98.cfd@4633@anytls@eba51fe0
+  - pim.depreca09.cyou@3637@hysteria2@d9705693
+  - fdc.contact09.shop@7599@hysteria2@a5e674bb
+  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
+  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
   - 5.255.117.127@1080@socks5@8c672508
-  - 103.76.85.197@443@vless@5dc21697
+  - 104.17.147.22@2053@vless@a087b94c
   - 47.253.211.16@1080@socks5@18ca66a1
 - name: PG-AnTing
   type: load-balance
@@ -532,19 +637,30 @@ proxy-groups:
   - 45.194.10.141@8443@vless@a1564e76
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 204.48.29.137@1088@socks5@09bb7403
-  - 38.244.21.105@443@vless@c99c6ec4
   - v35.hdacd.com@30835@vmess@fed67c9c
+  - 3.147.78.9@443@ss@c7b85acb
   - iv2yun.iv2yunch.work@63353@vmess@a012b114
-  - v24.hdacd.com@30824@vmess@3b8e774e
   - gt-fr-01.live@443@vless@25db7a0e
+  - v24.hdacd.com@30824@vmess@3b8e774e
   - v36.hdacd.com@30836@vmess@e912117a
   - 45.194.71.186@443@vless@1e46b729
-  - v29.hdacd.com@30829@vmess@6a3c7508
   - 106.52.215.138@7890@socks5@8700574f
+  - 87.120.106.52@8081@vless@50194073
   - 157.90.183.51@5555@socks5@0dd59775
-  - 217.142.138.61@80@vmess@59ec1861
+  - itv.dimple35.shop@10325@hysteria2@077c593a
+  - ecm.crystal63.shop@10457@hysteria2@32c20971
+  - sca.crystal63.shop@14380@anytls@3037ebf0
+  - bip.contact09.shop@9844@anytls@7589197e
+  - rpm.cyclic02.cyou@10748@hysteria2@3c0a0c19
+  - gms.doubl02.shop@6622@hysteria2@1beba44b
+  - tld.const98.cfd@14257@hysteria2@32d63a65
+  - rad.const98.cfd@4633@anytls@eba51fe0
+  - pim.depreca09.cyou@3637@hysteria2@d9705693
+  - fdc.contact09.shop@7599@hysteria2@a5e674bb
+  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
+  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
   - 5.255.117.127@1080@socks5@8c672508
-  - 103.76.85.197@443@vless@5dc21697
+  - 104.17.147.22@2053@vless@a087b94c
   - 47.253.211.16@1080@socks5@18ca66a1
 - name: PG-Sage
   type: load-balance
@@ -561,19 +677,30 @@ proxy-groups:
   - 45.194.10.141@8443@vless@a1564e76
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 204.48.29.137@1088@socks5@09bb7403
-  - 38.244.21.105@443@vless@c99c6ec4
   - v35.hdacd.com@30835@vmess@fed67c9c
+  - 3.147.78.9@443@ss@c7b85acb
   - iv2yun.iv2yunch.work@63353@vmess@a012b114
-  - v24.hdacd.com@30824@vmess@3b8e774e
   - gt-fr-01.live@443@vless@25db7a0e
+  - v24.hdacd.com@30824@vmess@3b8e774e
   - v36.hdacd.com@30836@vmess@e912117a
   - 45.194.71.186@443@vless@1e46b729
-  - v29.hdacd.com@30829@vmess@6a3c7508
   - 106.52.215.138@7890@socks5@8700574f
+  - 87.120.106.52@8081@vless@50194073
   - 157.90.183.51@5555@socks5@0dd59775
-  - 217.142.138.61@80@vmess@59ec1861
+  - itv.dimple35.shop@10325@hysteria2@077c593a
+  - ecm.crystal63.shop@10457@hysteria2@32c20971
+  - sca.crystal63.shop@14380@anytls@3037ebf0
+  - bip.contact09.shop@9844@anytls@7589197e
+  - rpm.cyclic02.cyou@10748@hysteria2@3c0a0c19
+  - gms.doubl02.shop@6622@hysteria2@1beba44b
+  - tld.const98.cfd@14257@hysteria2@32d63a65
+  - rad.const98.cfd@4633@anytls@eba51fe0
+  - pim.depreca09.cyou@3637@hysteria2@d9705693
+  - fdc.contact09.shop@7599@hysteria2@a5e674bb
+  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
+  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
   - 5.255.117.127@1080@socks5@8c672508
-  - 103.76.85.197@443@vless@5dc21697
+  - 104.17.147.22@2053@vless@a087b94c
   - 47.253.211.16@1080@socks5@18ca66a1
 - name: PG-CN
   type: load-balance
@@ -593,9 +720,20 @@ proxy-groups:
   - 157.254.223.44@34567@mieru@7af1c875
   - 104.128.72.119@80@ss@99398782
   - 204.48.29.137@1088@socks5@09bb7403
-  - 38.244.21.105@443@vless@c99c6ec4
+  - 3.147.78.9@443@ss@c7b85acb
   - v24.hdacd.com@30824@vmess@3b8e774e
-  - v29.hdacd.com@30829@vmess@6a3c7508
+  - itv.dimple35.shop@10325@hysteria2@077c593a
+  - ecm.crystal63.shop@10457@hysteria2@32c20971
+  - sca.crystal63.shop@14380@anytls@3037ebf0
+  - bip.contact09.shop@9844@anytls@7589197e
+  - rpm.cyclic02.cyou@10748@hysteria2@3c0a0c19
+  - gms.doubl02.shop@6622@hysteria2@1beba44b
+  - tld.const98.cfd@14257@hysteria2@32d63a65
+  - rad.const98.cfd@4633@anytls@eba51fe0
+  - pim.depreca09.cyou@3637@hysteria2@d9705693
+  - fdc.contact09.shop@7599@hysteria2@a5e674bb
+  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
+  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
   - 47.253.211.16@1080@socks5@18ca66a1
   - xinnusvpn.duckdns.org@8443@vless@cf839874
   - 47.254.156.143@443@vless@a098e50a
@@ -608,10 +746,10 @@ proxy-groups:
   - v36.hdacd.com@30836@vmess@e912117a
   - 45.194.71.186@443@vless@1e46b729
   - 106.52.215.138@7890@socks5@8700574f
+  - 87.120.106.52@8081@vless@50194073
   - 157.90.183.51@5555@socks5@0dd59775
-  - 217.142.138.61@80@vmess@59ec1861
   - 5.255.117.127@1080@socks5@8c672508
-  - 103.76.85.197@443@vless@5dc21697
+  - 104.17.147.22@2053@vless@a087b94c
   - PG-fast
   - PG-default
 - name: PG-GitHub
@@ -622,26 +760,37 @@ proxy-groups:
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
   - xinnusvpn.duckdns.org@8443@vless@cf839874
-  - 47.254.156.143@443@vless@a098e50a
   - 104.18.17.216@443@trojan@42d13e15
+  - 47.254.156.143@443@vless@a098e50a
   - 104.128.72.119@80@ss@99398782
-  - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 45.194.10.141@8443@vless@a1564e76
+  - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 204.48.29.137@1088@socks5@09bb7403
-  - 38.244.21.105@443@vless@c99c6ec4
   - iv2yun.iv2yunch.work@63353@vmess@a012b114
   - v35.hdacd.com@30835@vmess@fed67c9c
   - 45.194.71.186@443@vless@1e46b729
   - gt-fr-01.live@443@vless@25db7a0e
   - v36.hdacd.com@30836@vmess@e912117a
   - v24.hdacd.com@30824@vmess@3b8e774e
-  - v29.hdacd.com@30829@vmess@6a3c7508
+  - 3.147.78.9@443@ss@c7b85acb
   - 157.90.183.51@5555@socks5@0dd59775
-  - 217.142.138.61@80@vmess@59ec1861
-  - 103.76.85.197@443@vless@5dc21697
   - 5.255.117.127@1080@socks5@8c672508
-  - 106.52.215.138@7890@socks5@8700574f
+  - 87.120.106.52@8081@vless@50194073
+  - itv.dimple35.shop@10325@hysteria2@077c593a
+  - ecm.crystal63.shop@10457@hysteria2@32c20971
+  - sca.crystal63.shop@14380@anytls@3037ebf0
+  - bip.contact09.shop@9844@anytls@7589197e
+  - rpm.cyclic02.cyou@10748@hysteria2@3c0a0c19
+  - gms.doubl02.shop@6622@hysteria2@1beba44b
+  - tld.const98.cfd@14257@hysteria2@32d63a65
+  - rad.const98.cfd@4633@anytls@eba51fe0
+  - pim.depreca09.cyou@3637@hysteria2@d9705693
+  - fdc.contact09.shop@7599@hysteria2@a5e674bb
+  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
+  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
+  - 104.17.147.22@2053@vless@a087b94c
   - 47.253.211.16@1080@socks5@18ca66a1
+  - 106.52.215.138@7890@socks5@8700574f
   - PG-fast
   - PG-default
 - name: PG-YouTube
@@ -654,9 +803,20 @@ proxy-groups:
   - 157.254.223.44@34567@mieru@7af1c875
   - 104.128.72.119@80@ss@99398782
   - 204.48.29.137@1088@socks5@09bb7403
-  - 38.244.21.105@443@vless@c99c6ec4
+  - 3.147.78.9@443@ss@c7b85acb
   - v24.hdacd.com@30824@vmess@3b8e774e
-  - v29.hdacd.com@30829@vmess@6a3c7508
+  - itv.dimple35.shop@10325@hysteria2@077c593a
+  - ecm.crystal63.shop@10457@hysteria2@32c20971
+  - sca.crystal63.shop@14380@anytls@3037ebf0
+  - bip.contact09.shop@9844@anytls@7589197e
+  - rpm.cyclic02.cyou@10748@hysteria2@3c0a0c19
+  - gms.doubl02.shop@6622@hysteria2@1beba44b
+  - tld.const98.cfd@14257@hysteria2@32d63a65
+  - rad.const98.cfd@4633@anytls@eba51fe0
+  - pim.depreca09.cyou@3637@hysteria2@d9705693
+  - fdc.contact09.shop@7599@hysteria2@a5e674bb
+  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
+  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
   - 47.253.211.16@1080@socks5@18ca66a1
   - xinnusvpn.duckdns.org@8443@vless@cf839874
   - 47.254.156.143@443@vless@a098e50a
@@ -669,10 +829,10 @@ proxy-groups:
   - v36.hdacd.com@30836@vmess@e912117a
   - 45.194.71.186@443@vless@1e46b729
   - 106.52.215.138@7890@socks5@8700574f
+  - 87.120.106.52@8081@vless@50194073
   - 157.90.183.51@5555@socks5@0dd59775
-  - 217.142.138.61@80@vmess@59ec1861
   - 5.255.117.127@1080@socks5@8c672508
-  - 103.76.85.197@443@vless@5dc21697
+  - 104.17.147.22@2053@vless@a087b94c
   - PG-fast
   - PG-default
 - name: PG-Twitter
@@ -685,9 +845,20 @@ proxy-groups:
   - 157.254.223.44@34567@mieru@7af1c875
   - 104.128.72.119@80@ss@99398782
   - 204.48.29.137@1088@socks5@09bb7403
-  - 38.244.21.105@443@vless@c99c6ec4
+  - 3.147.78.9@443@ss@c7b85acb
   - v24.hdacd.com@30824@vmess@3b8e774e
-  - v29.hdacd.com@30829@vmess@6a3c7508
+  - itv.dimple35.shop@10325@hysteria2@077c593a
+  - ecm.crystal63.shop@10457@hysteria2@32c20971
+  - sca.crystal63.shop@14380@anytls@3037ebf0
+  - bip.contact09.shop@9844@anytls@7589197e
+  - rpm.cyclic02.cyou@10748@hysteria2@3c0a0c19
+  - gms.doubl02.shop@6622@hysteria2@1beba44b
+  - tld.const98.cfd@14257@hysteria2@32d63a65
+  - rad.const98.cfd@4633@anytls@eba51fe0
+  - pim.depreca09.cyou@3637@hysteria2@d9705693
+  - fdc.contact09.shop@7599@hysteria2@a5e674bb
+  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
+  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
   - 47.253.211.16@1080@socks5@18ca66a1
   - xinnusvpn.duckdns.org@8443@vless@cf839874
   - 47.254.156.143@443@vless@a098e50a
@@ -700,10 +871,10 @@ proxy-groups:
   - v36.hdacd.com@30836@vmess@e912117a
   - 45.194.71.186@443@vless@1e46b729
   - 106.52.215.138@7890@socks5@8700574f
+  - 87.120.106.52@8081@vless@50194073
   - 157.90.183.51@5555@socks5@0dd59775
-  - 217.142.138.61@80@vmess@59ec1861
   - 5.255.117.127@1080@socks5@8c672508
-  - 103.76.85.197@443@vless@5dc21697
+  - 104.17.147.22@2053@vless@a087b94c
   - PG-fast
   - PG-default
 rule-providers:
