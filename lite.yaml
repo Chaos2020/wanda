@@ -251,6 +251,19 @@ proxies:
     path: /
     headers:
       Host: iv2yun.iv2yunch.work
+- name: gt-fr-01.live@443@vless@25db7a0e
+  type: vless
+  server: gt-fr-01.live
+  port: 443
+  uuid: 8e729c48-a2fa-4446-bdec-47d4aeae61fe
+  network: tcp
+  flow: 'xtls-rprx-vision '
+  tls: true
+  reality-opts:
+    public-key: 1oUeBtHH4DskTM_jCh-6enWRkFMDX9l1OU5kWYl4kxA
+    short-id: 364994a6f61fc955
+  sni: yandex.net
+  client-fingerprint: firefox
 - name: 47.254.156.143@443@vless@a098e50a
   type: vless
   server: 47.254.156.143
@@ -265,45 +278,43 @@ proxies:
   tls: true
   udp: true
   uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
-- name: gt-fr-01.live@443@vless@25db7a0e
-  type: vless
-  server: gt-fr-01.live
+- name: 104.128.72.119@80@ss@99398782
+  type: ss
+  server: 104.128.72.119
+  port: 80
+  cipher: 2022-blake3-aes-128-gcm
+  password: YTE1ZWU4ZTEyZjc3YmEzZA==:Y2JhZTU3ODYtZjg3MC00NA==
+  plugin: gost-plugin
+  plugin-opts:
+    host: one.local
+    mode: websocket
+    mux: true
+    path: /ws
+    tls: false
+  udp: true
+- name: 104.18.17.216@443@trojan@42d13e15
+  type: trojan
+  server: 104.18.17.216
   port: 443
-  uuid: 8e729c48-a2fa-4446-bdec-47d4aeae61fe
-  network: tcp
-  flow: 'xtls-rprx-vision '
-  tls: true
-  reality-opts:
-    public-key: 1oUeBtHH4DskTM_jCh-6enWRkFMDX9l1OU5kWYl4kxA
-    short-id: 364994a6f61fc955
-  sni: yandex.net
-  client-fingerprint: firefox
-- name: pim.depreca09.cyou@3637@hysteria2@d9705693
-  type: hysteria2
-  server: pim.depreca09.cyou
-  port: 3637
-  password: oONSf6jzQzQ8JF7QxPmmDuPksP6FfnDz
-  sni: bing.com
-  skip-cert-verify: true
-- name: irc.deduce5.cyou@14575@hysteria2@2f9434a9
-  type: hysteria2
-  server: irc.deduce5.cyou
-  port: 14575
-  password: u0TpYqMakQPO4Si5bhJkT7ZIMWAL64jp
-  sni: bing.com
-  skip-cert-verify: true
-- name: ecm.crystal63.shop@10457@hysteria2@32c20971
-  type: hysteria2
-  server: ecm.crystal63.shop
-  port: 10457
-  password: LQzKSf45H5RDqsdkp2ZIDbf5Po13TQlp
-  sni: bing.com
-  skip-cert-verify: true
+  network: ws
+  password: humanity
+  sni: www.calmloud.com
+  ws-opts:
+    headers:
+      Host: www.calmloud.com
+    path: /assignment
 - name: itv.dimple35.shop@10325@hysteria2@077c593a
   type: hysteria2
   server: itv.dimple35.shop
   port: 10325
   password: Yn3Yb1SxkpWHvyi0PDsSPIiHVQ2I3raE
+  sni: bing.com
+  skip-cert-verify: true
+- name: pim.depreca09.cyou@3637@hysteria2@d9705693
+  type: hysteria2
+  server: pim.depreca09.cyou
+  port: 3637
+  password: oONSf6jzQzQ8JF7QxPmmDuPksP6FfnDz
   sni: bing.com
   skip-cert-verify: true
 - name: gms.doubl02.shop@6622@hysteria2@1beba44b
@@ -313,11 +324,11 @@ proxies:
   password: vKXpTbNOdS2kTHLvXSvTW3gOsvLJjhPD
   sni: bing.com
   skip-cert-verify: true
-- name: vip.curvy45.cfd@14953@hysteria2@26c3af2b
+- name: fdc.contact09.shop@7599@hysteria2@a5e674bb
   type: hysteria2
-  server: vip.curvy45.cfd
-  port: 14953
-  password: WWV8e9G0VaoZNXgC570ON4tNV3vWDWNA
+  server: fdc.contact09.shop
+  port: 7599
+  password: dhojTI2fcr1XE6dzjKHQ0pOhXMwwwEic
   sni: bing.com
   skip-cert-verify: true
 - name: rpm.cyclic02.cyou@10748@hysteria2@3c0a0c19
@@ -334,11 +345,25 @@ proxies:
   password: EpgPZNDSxckzi1SqpyKUo7t1iJGE1Blm
   sni: bing.com
   skip-cert-verify: true
-- name: fdc.contact09.shop@7599@hysteria2@a5e674bb
+- name: irc.deduce5.cyou@14575@hysteria2@2f9434a9
   type: hysteria2
-  server: fdc.contact09.shop
-  port: 7599
-  password: dhojTI2fcr1XE6dzjKHQ0pOhXMwwwEic
+  server: irc.deduce5.cyou
+  port: 14575
+  password: u0TpYqMakQPO4Si5bhJkT7ZIMWAL64jp
+  sni: bing.com
+  skip-cert-verify: true
+- name: vip.curvy45.cfd@14953@hysteria2@26c3af2b
+  type: hysteria2
+  server: vip.curvy45.cfd
+  port: 14953
+  password: WWV8e9G0VaoZNXgC570ON4tNV3vWDWNA
+  sni: bing.com
+  skip-cert-verify: true
+- name: ecm.crystal63.shop@10457@hysteria2@32c20971
+  type: hysteria2
+  server: ecm.crystal63.shop
+  port: 10457
+  password: LQzKSf45H5RDqsdkp2ZIDbf5Po13TQlp
   sni: bing.com
   skip-cert-verify: true
 - name: sca.crystal63.shop@14380@anytls@3037ebf0
@@ -371,23 +396,6 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h2
-- name: 45.194.10.141@8443@vless@a1564e76
-  type: vless
-  server: 45.194.10.141
-  port: 8443
-  client-fingerprint: chrome
-  encryption: none
-  flow: xtls-rprx-vision
-  network: tcp
-  packet-encoding: xudp
-  reality-opts:
-    public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
-    short-id: 2cfb5a0ae8ab0cb0
-  servername: storage.yandex.net
-  skip-cert-verify: false
-  tls: true
-  udp: true
-  uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
 - name: v6.hdacd.com@30806@vmess@c4d1fb0a
   type: vmess
   server: v6.hdacd.com
@@ -430,40 +438,6 @@ proxies:
     short-id: 9e53379f048436bf
   sni: pol02.port-server.online
   client-fingerprint: firefox
-- name: 45.195.137.169@8443@vless@eb4256c8
-  type: vless
-  server: 45.195.137.169
-  port: 8443
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: IdqrygjwHBEMCOamBl7a504TVk6uMAtTRj0xLWcFcxY
-    short-id: cf9d145ad8f1ea55
-  sub_tag: P002-260618
-  tls: true
-  udp: true
-  uuid: daff1228-8d1a-4812-a57a-09604faa5e0c
-  xudp: true
-  packet-encoding: xudp
-  servername: storage.yandex.net
-- name: 45.195.137.206@8443@vless@24e061fe
-  type: vless
-  server: 45.195.137.206
-  port: 8443
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: IdqrygjwHBEMCOamBl7a504TVk6uMAtTRj0xLWcFcxY
-    short-id: cf9d145ad8f1ea55
-  sub_tag: P002-260618
-  tls: true
-  udp: true
-  uuid: daff1228-8d1a-4812-a57a-09604faa5e0c
-  xudp: true
-  packet-encoding: xudp
-  servername: storage.yandex.net
 - name: frank-piranha.rooster465.autos@443@trojan@23919b44
   type: trojan
   server: frank-piranha.rooster465.autos
@@ -500,13 +474,6 @@ proxies:
   password: XG59623478
   skip-cert-verify: true
   sni: novel-bat.rooster465.autos
-- name: 204.48.29.137@1088@socks5@09bb7403
-  type: socks5
-  server: 204.48.29.137
-  port: 1088
-  password: ''
-  skip-cert-verify: true
-  username: ''
 - name: v36.hdacd.com@30836@vmess@e912117a
   type: vmess
   server: v36.hdacd.com
@@ -515,6 +482,21 @@ proxies:
   alterId: 2
   cipher: auto
   udp: true
+- name: 217.142.138.61@80@vmess@59ec1861
+  type: vmess
+  server: 217.142.138.61
+  port: 80
+  alterId: 0
+  cipher: auto
+  http-opts:
+    method: GET
+    path:
+    - /
+  network: http
+  skip-cert-verify: true
+  tls: false
+  udp: true
+  uuid: ac1b933d-afff-4487-93ef-f57130a55dff
 - name: v24.hdacd.com@30824@vmess@3b8e774e
   type: vmess
   server: v24.hdacd.com
@@ -538,13 +520,6 @@ proxies:
   sni: singular-lark.rooster465.autos
   sub_tag: C002-260622
   udp: true
-- name: 157.90.183.51@5555@socks5@0dd59775
-  type: socks5
-  server: 157.90.183.51
-  port: 5555
-  password: ''
-  skip-cert-verify: true
-  username: ''
 - name: 185.36.192.228@35488@vmess@b9bd3e43
   type: vmess
   server: 185.36.192.228
@@ -566,16 +541,151 @@ proxies:
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
   ws-opts:
     path: /
+- name: pl.karzino-connected.com@443@vless@b37257e2
+  type: vless
+  server: pl.karzino-connected.com
+  port: 443
+  uuid: ef3e206d-3cbc-4254-8374-df04fe35a762
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: v78yAb9eo19LuR0e08mB_cnAS-QLlvqRkEZoKs7q2mU
+    short-id: 30e530274c0c72cc
+  sni: pl.karzino-connected.com
+  client-fingerprint: edge
+- name: jason.ilovezhenjiu.top@42670@vless@42bad451
+  type: vless
+  server: jason.ilovezhenjiu.top
+  port: 42670
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  network: tcp
+  sub_tag: K001-260618
+  tls: true
+  udp: true
+  uuid: 4dbb4d3f-2b9a-45b6-b741-e839c570ffd8
+  xudp: true
+  packet-encoding: xudp
+  servername: jason.ilovezhenjiu.top
 - name: 5.255.117.127@1080@socks5@8c672508
   type: socks5
   server: 5.255.117.127
   port: 1080
+- name: 114.80.8.128@39001@trojan@09c684e9
+  type: trojan
+  server: 114.80.8.128
+  port: 39001
+  password: 1df3ece1218bedba28c6c6ac726a07bb
+  skip-cert-verify: true
+  sni: www.yrtok.com
+- name: 144.31.87.16@2096@vless@e3667c60
+  type: vless
+  server: 144.31.87.16
+  port: 2096
+  client-fingerprint: chrome
+  encryption: none
+  grpc-opts:
+    grpc-service-name: grpc
+  network: grpc
+  reality-opts:
+    public-key: HdIk7jX58DtK-PGVKoU587O4w1KrDiej1qz8J2SmRA8
+    short-id: a7bf40db1b0e566a
+  sub_tag: P002-260618
+  tls: true
+  udp: true
+  uuid: c40f773e-3b96-417e-b22c-e48cb63ca7d9
+  xudp: true
+  packet-encoding: xudp
+  servername: www.avito.ru
+- name: zt-ai.cloud@443@vmess@d7d39ca1
+  type: vmess
+  server: zt-ai.cloud
+  port: 443
+  uuid: fce3d6a4-0f12-49b5-a810-84bcf0fde202
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
+  ws-opts:
+    path: /v2ray
+    headers:
+      Host: ''
+- name: turki.gelqino.ir@17830@vless@a2e2c052
+  type: vless
+  server: turki.gelqino.ir
+  port: 17830
+  encryption: none
+  network: ws
+  sub_tag: S004-260618
+  udp: true
+  uuid: e1c7f7ce-5bf8-41a8-87d5-896d2659f08a
+  ws-opts:
+    headers:
+      Host: turki.gelqino.ir
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/63.0.3239.132 Safari/537.36
+    path: /vless
+  xudp: true
+  packet-encoding: xudp
+- name: 207.57.131.128@55538@vless@5434decc
+  type: vless
+  server: 207.57.131.128
+  port: 55538
+  uuid: a0c1f44e-7260-4611-9a5d-e647722d08a7
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: kSAhVaoRtsRLSWjEso6wOY9Op8m7CPh2qMGVBAG8MWc
+    short-id: ''
+  sni: www.cloudflare.com
+  client-fingerprint: chrome
+- name: dingyue.zhangxiao5118.top@8880@vmess@2b5d0c24
+  type: vmess
+  server: dingyue.zhangxiao5118.top
+  port: 8880
+  uuid: 086c48ad-0c68-4d88-8a6f-a36abb96a0d1
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  ws-opts:
+    path: /36598kl
+    headers:
+      Host: ''
+- name: panel.karmatel.ir@8880@vless@4f3a1fad
+  type: vless
+  server: panel.karmatel.ir
+  port: 8880
+  uuid: 4b310d54-6938-4b89-9414-dfc7c6fdae06
+  network: ws
+  flow: ''
+  tls: true
+  servername: panel.karmatel.ir
+  ws-opts:
+    path: /
+- name: vip.karmatel.ir@8443@vless@6a7d3734
+  type: vless
+  server: vip.karmatel.ir
+  port: 8443
+  uuid: 4b310d54-6938-4b89-9414-dfc7c6fdae06
+  network: xhttp
+  flow: ''
+  tls: true
+  servername: vip.karmatel.ir
 - name: 47.253.211.16@1080@socks5@18ca66a1
   type: socks5
   server: 47.253.211.16
   port: 1080
   password: ''
   username: ''
+- name: 103.149.182.79@8388@ss@6bb86606
+  type: ss
+  server: 103.149.182.79
+  port: 8388
+  cipher: chacha20-ietf
+  password: asd123456
 proxy-groups:
 - name: PG-fast
   type: url-test
@@ -587,39 +697,48 @@ proxy-groups:
   - 157.254.223.44@34567@mieru@7af1c875
   - xinnusvpn.duckdns.org@8443@vless@cf839874
   - iv2yun.iv2yunch.work@63353@vmess@a012b114
-  - 47.254.156.143@443@vless@a098e50a
   - gt-fr-01.live@443@vless@25db7a0e
-  - pim.depreca09.cyou@3637@hysteria2@d9705693
-  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
-  - ecm.crystal63.shop@10457@hysteria2@32c20971
+  - 47.254.156.143@443@vless@a098e50a
+  - 104.128.72.119@80@ss@99398782
+  - 104.18.17.216@443@trojan@42d13e15
   - itv.dimple35.shop@10325@hysteria2@077c593a
+  - pim.depreca09.cyou@3637@hysteria2@d9705693
   - gms.doubl02.shop@6622@hysteria2@1beba44b
-  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
+  - fdc.contact09.shop@7599@hysteria2@a5e674bb
   - rpm.cyclic02.cyou@10748@hysteria2@3c0a0c19
   - tld.const98.cfd@14257@hysteria2@32d63a65
-  - fdc.contact09.shop@7599@hysteria2@a5e674bb
+  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
+  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
+  - ecm.crystal63.shop@10457@hysteria2@32c20971
   - sca.crystal63.shop@14380@anytls@3037ebf0
   - rad.const98.cfd@4633@anytls@eba51fe0
   - bip.contact09.shop@9844@anytls@7589197e
-  - 45.194.10.141@8443@vless@a1564e76
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 45.39.230.228@443@vless@06b0bd6b
   - pol02.port-server.online@443@vless@9b78606c
-  - 45.195.137.169@8443@vless@eb4256c8
-  - 45.195.137.206@8443@vless@24e061fe
   - frank-piranha.rooster465.autos@443@trojan@23919b44
   - classic-duckling.rooster465.autos@443@trojan@3c3f69c6
   - included-hedgehog.rooster465.autos@443@trojan@49ad5ef8
   - novel-bat.rooster465.autos@443@trojan@98ce92fe
-  - 204.48.29.137@1088@socks5@09bb7403
   - v36.hdacd.com@30836@vmess@e912117a
+  - 217.142.138.61@80@vmess@59ec1861
   - v24.hdacd.com@30824@vmess@3b8e774e
   - singular-lark.rooster465.autos@443@trojan@191198d5
-  - 157.90.183.51@5555@socks5@0dd59775
   - 185.36.192.228@35488@vmess@b9bd3e43
   - v29.hdacd.com@30829@vmess@6a3c7508
+  - pl.karzino-connected.com@443@vless@b37257e2
+  - jason.ilovezhenjiu.top@42670@vless@42bad451
   - 5.255.117.127@1080@socks5@8c672508
+  - 114.80.8.128@39001@trojan@09c684e9
+  - 144.31.87.16@2096@vless@e3667c60
+  - zt-ai.cloud@443@vmess@d7d39ca1
+  - turki.gelqino.ir@17830@vless@a2e2c052
+  - 207.57.131.128@55538@vless@5434decc
+  - dingyue.zhangxiao5118.top@8880@vmess@2b5d0c24
+  - panel.karmatel.ir@8880@vless@4f3a1fad
+  - vip.karmatel.ir@8443@vless@6a7d3734
   - 47.253.211.16@1080@socks5@18ca66a1
+  - 103.149.182.79@8388@ss@6bb86606
 - name: PG-default
   type: fallback
   url: https://www.google.com/generate_204
@@ -630,39 +749,48 @@ proxy-groups:
   - 157.254.223.44@34567@mieru@7af1c875
   - xinnusvpn.duckdns.org@8443@vless@cf839874
   - iv2yun.iv2yunch.work@63353@vmess@a012b114
-  - 47.254.156.143@443@vless@a098e50a
   - gt-fr-01.live@443@vless@25db7a0e
-  - pim.depreca09.cyou@3637@hysteria2@d9705693
-  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
-  - ecm.crystal63.shop@10457@hysteria2@32c20971
+  - 47.254.156.143@443@vless@a098e50a
+  - 104.128.72.119@80@ss@99398782
+  - 104.18.17.216@443@trojan@42d13e15
   - itv.dimple35.shop@10325@hysteria2@077c593a
+  - pim.depreca09.cyou@3637@hysteria2@d9705693
   - gms.doubl02.shop@6622@hysteria2@1beba44b
-  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
+  - fdc.contact09.shop@7599@hysteria2@a5e674bb
   - rpm.cyclic02.cyou@10748@hysteria2@3c0a0c19
   - tld.const98.cfd@14257@hysteria2@32d63a65
-  - fdc.contact09.shop@7599@hysteria2@a5e674bb
+  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
+  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
+  - ecm.crystal63.shop@10457@hysteria2@32c20971
   - sca.crystal63.shop@14380@anytls@3037ebf0
   - rad.const98.cfd@4633@anytls@eba51fe0
   - bip.contact09.shop@9844@anytls@7589197e
-  - 45.194.10.141@8443@vless@a1564e76
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 45.39.230.228@443@vless@06b0bd6b
   - pol02.port-server.online@443@vless@9b78606c
-  - 45.195.137.169@8443@vless@eb4256c8
-  - 45.195.137.206@8443@vless@24e061fe
   - frank-piranha.rooster465.autos@443@trojan@23919b44
   - classic-duckling.rooster465.autos@443@trojan@3c3f69c6
   - included-hedgehog.rooster465.autos@443@trojan@49ad5ef8
   - novel-bat.rooster465.autos@443@trojan@98ce92fe
-  - 204.48.29.137@1088@socks5@09bb7403
   - v36.hdacd.com@30836@vmess@e912117a
+  - 217.142.138.61@80@vmess@59ec1861
   - v24.hdacd.com@30824@vmess@3b8e774e
   - singular-lark.rooster465.autos@443@trojan@191198d5
-  - 157.90.183.51@5555@socks5@0dd59775
   - 185.36.192.228@35488@vmess@b9bd3e43
   - v29.hdacd.com@30829@vmess@6a3c7508
+  - pl.karzino-connected.com@443@vless@b37257e2
+  - jason.ilovezhenjiu.top@42670@vless@42bad451
   - 5.255.117.127@1080@socks5@8c672508
+  - 114.80.8.128@39001@trojan@09c684e9
+  - 144.31.87.16@2096@vless@e3667c60
+  - zt-ai.cloud@443@vmess@d7d39ca1
+  - turki.gelqino.ir@17830@vless@a2e2c052
+  - 207.57.131.128@55538@vless@5434decc
+  - dingyue.zhangxiao5118.top@8880@vmess@2b5d0c24
+  - panel.karmatel.ir@8880@vless@4f3a1fad
+  - vip.karmatel.ir@8443@vless@6a7d3734
   - 47.253.211.16@1080@socks5@18ca66a1
+  - 103.149.182.79@8388@ss@6bb86606
 - name: PG-AnTing
   type: load-balance
   url: https://www.google.com/generate_204
@@ -673,39 +801,48 @@ proxy-groups:
   - 157.254.223.44@34567@mieru@7af1c875
   - xinnusvpn.duckdns.org@8443@vless@cf839874
   - iv2yun.iv2yunch.work@63353@vmess@a012b114
-  - 47.254.156.143@443@vless@a098e50a
   - gt-fr-01.live@443@vless@25db7a0e
-  - pim.depreca09.cyou@3637@hysteria2@d9705693
-  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
-  - ecm.crystal63.shop@10457@hysteria2@32c20971
+  - 47.254.156.143@443@vless@a098e50a
+  - 104.128.72.119@80@ss@99398782
+  - 104.18.17.216@443@trojan@42d13e15
   - itv.dimple35.shop@10325@hysteria2@077c593a
+  - pim.depreca09.cyou@3637@hysteria2@d9705693
   - gms.doubl02.shop@6622@hysteria2@1beba44b
-  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
+  - fdc.contact09.shop@7599@hysteria2@a5e674bb
   - rpm.cyclic02.cyou@10748@hysteria2@3c0a0c19
   - tld.const98.cfd@14257@hysteria2@32d63a65
-  - fdc.contact09.shop@7599@hysteria2@a5e674bb
+  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
+  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
+  - ecm.crystal63.shop@10457@hysteria2@32c20971
   - sca.crystal63.shop@14380@anytls@3037ebf0
   - rad.const98.cfd@4633@anytls@eba51fe0
   - bip.contact09.shop@9844@anytls@7589197e
-  - 45.194.10.141@8443@vless@a1564e76
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 45.39.230.228@443@vless@06b0bd6b
   - pol02.port-server.online@443@vless@9b78606c
-  - 45.195.137.169@8443@vless@eb4256c8
-  - 45.195.137.206@8443@vless@24e061fe
   - frank-piranha.rooster465.autos@443@trojan@23919b44
   - classic-duckling.rooster465.autos@443@trojan@3c3f69c6
   - included-hedgehog.rooster465.autos@443@trojan@49ad5ef8
   - novel-bat.rooster465.autos@443@trojan@98ce92fe
-  - 204.48.29.137@1088@socks5@09bb7403
   - v36.hdacd.com@30836@vmess@e912117a
+  - 217.142.138.61@80@vmess@59ec1861
   - v24.hdacd.com@30824@vmess@3b8e774e
   - singular-lark.rooster465.autos@443@trojan@191198d5
-  - 157.90.183.51@5555@socks5@0dd59775
   - 185.36.192.228@35488@vmess@b9bd3e43
   - v29.hdacd.com@30829@vmess@6a3c7508
+  - pl.karzino-connected.com@443@vless@b37257e2
+  - jason.ilovezhenjiu.top@42670@vless@42bad451
   - 5.255.117.127@1080@socks5@8c672508
+  - 114.80.8.128@39001@trojan@09c684e9
+  - 144.31.87.16@2096@vless@e3667c60
+  - zt-ai.cloud@443@vmess@d7d39ca1
+  - turki.gelqino.ir@17830@vless@a2e2c052
+  - 207.57.131.128@55538@vless@5434decc
+  - dingyue.zhangxiao5118.top@8880@vmess@2b5d0c24
+  - panel.karmatel.ir@8880@vless@4f3a1fad
+  - vip.karmatel.ir@8443@vless@6a7d3734
   - 47.253.211.16@1080@socks5@18ca66a1
+  - 103.149.182.79@8388@ss@6bb86606
 - name: PG-Sage
   type: load-balance
   url: http://www.eastmoney.com
@@ -716,39 +853,48 @@ proxy-groups:
   - 157.254.223.44@34567@mieru@7af1c875
   - xinnusvpn.duckdns.org@8443@vless@cf839874
   - iv2yun.iv2yunch.work@63353@vmess@a012b114
-  - 47.254.156.143@443@vless@a098e50a
   - gt-fr-01.live@443@vless@25db7a0e
-  - pim.depreca09.cyou@3637@hysteria2@d9705693
-  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
-  - ecm.crystal63.shop@10457@hysteria2@32c20971
+  - 47.254.156.143@443@vless@a098e50a
+  - 104.128.72.119@80@ss@99398782
+  - 104.18.17.216@443@trojan@42d13e15
   - itv.dimple35.shop@10325@hysteria2@077c593a
+  - pim.depreca09.cyou@3637@hysteria2@d9705693
   - gms.doubl02.shop@6622@hysteria2@1beba44b
-  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
+  - fdc.contact09.shop@7599@hysteria2@a5e674bb
   - rpm.cyclic02.cyou@10748@hysteria2@3c0a0c19
   - tld.const98.cfd@14257@hysteria2@32d63a65
-  - fdc.contact09.shop@7599@hysteria2@a5e674bb
+  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
+  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
+  - ecm.crystal63.shop@10457@hysteria2@32c20971
   - sca.crystal63.shop@14380@anytls@3037ebf0
   - rad.const98.cfd@4633@anytls@eba51fe0
   - bip.contact09.shop@9844@anytls@7589197e
-  - 45.194.10.141@8443@vless@a1564e76
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 45.39.230.228@443@vless@06b0bd6b
   - pol02.port-server.online@443@vless@9b78606c
-  - 45.195.137.169@8443@vless@eb4256c8
-  - 45.195.137.206@8443@vless@24e061fe
   - frank-piranha.rooster465.autos@443@trojan@23919b44
   - classic-duckling.rooster465.autos@443@trojan@3c3f69c6
   - included-hedgehog.rooster465.autos@443@trojan@49ad5ef8
   - novel-bat.rooster465.autos@443@trojan@98ce92fe
-  - 204.48.29.137@1088@socks5@09bb7403
   - v36.hdacd.com@30836@vmess@e912117a
+  - 217.142.138.61@80@vmess@59ec1861
   - v24.hdacd.com@30824@vmess@3b8e774e
   - singular-lark.rooster465.autos@443@trojan@191198d5
-  - 157.90.183.51@5555@socks5@0dd59775
   - 185.36.192.228@35488@vmess@b9bd3e43
   - v29.hdacd.com@30829@vmess@6a3c7508
+  - pl.karzino-connected.com@443@vless@b37257e2
+  - jason.ilovezhenjiu.top@42670@vless@42bad451
   - 5.255.117.127@1080@socks5@8c672508
+  - 114.80.8.128@39001@trojan@09c684e9
+  - 144.31.87.16@2096@vless@e3667c60
+  - zt-ai.cloud@443@vmess@d7d39ca1
+  - turki.gelqino.ir@17830@vless@a2e2c052
+  - 207.57.131.128@55538@vless@5434decc
+  - dingyue.zhangxiao5118.top@8880@vmess@2b5d0c24
+  - panel.karmatel.ir@8880@vless@4f3a1fad
+  - vip.karmatel.ir@8443@vless@6a7d3734
   - 47.253.211.16@1080@socks5@18ca66a1
+  - 103.149.182.79@8388@ss@6bb86606
 - name: PG-CN
   type: load-balance
   url: https://www.sse.com.cn
@@ -759,39 +905,48 @@ proxy-groups:
   - 157.254.223.44@34567@mieru@7af1c875
   - xinnusvpn.duckdns.org@8443@vless@cf839874
   - iv2yun.iv2yunch.work@63353@vmess@a012b114
-  - 47.254.156.143@443@vless@a098e50a
   - gt-fr-01.live@443@vless@25db7a0e
-  - pim.depreca09.cyou@3637@hysteria2@d9705693
-  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
-  - ecm.crystal63.shop@10457@hysteria2@32c20971
+  - 47.254.156.143@443@vless@a098e50a
+  - 104.128.72.119@80@ss@99398782
+  - 104.18.17.216@443@trojan@42d13e15
   - itv.dimple35.shop@10325@hysteria2@077c593a
+  - pim.depreca09.cyou@3637@hysteria2@d9705693
   - gms.doubl02.shop@6622@hysteria2@1beba44b
-  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
+  - fdc.contact09.shop@7599@hysteria2@a5e674bb
   - rpm.cyclic02.cyou@10748@hysteria2@3c0a0c19
   - tld.const98.cfd@14257@hysteria2@32d63a65
-  - fdc.contact09.shop@7599@hysteria2@a5e674bb
+  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
+  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
+  - ecm.crystal63.shop@10457@hysteria2@32c20971
   - sca.crystal63.shop@14380@anytls@3037ebf0
   - rad.const98.cfd@4633@anytls@eba51fe0
   - bip.contact09.shop@9844@anytls@7589197e
-  - 45.194.10.141@8443@vless@a1564e76
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 45.39.230.228@443@vless@06b0bd6b
   - pol02.port-server.online@443@vless@9b78606c
-  - 45.195.137.169@8443@vless@eb4256c8
-  - 45.195.137.206@8443@vless@24e061fe
   - frank-piranha.rooster465.autos@443@trojan@23919b44
   - classic-duckling.rooster465.autos@443@trojan@3c3f69c6
   - included-hedgehog.rooster465.autos@443@trojan@49ad5ef8
   - novel-bat.rooster465.autos@443@trojan@98ce92fe
-  - 204.48.29.137@1088@socks5@09bb7403
   - v36.hdacd.com@30836@vmess@e912117a
+  - 217.142.138.61@80@vmess@59ec1861
   - v24.hdacd.com@30824@vmess@3b8e774e
   - singular-lark.rooster465.autos@443@trojan@191198d5
-  - 157.90.183.51@5555@socks5@0dd59775
   - 185.36.192.228@35488@vmess@b9bd3e43
   - v29.hdacd.com@30829@vmess@6a3c7508
+  - pl.karzino-connected.com@443@vless@b37257e2
+  - jason.ilovezhenjiu.top@42670@vless@42bad451
   - 5.255.117.127@1080@socks5@8c672508
+  - 114.80.8.128@39001@trojan@09c684e9
+  - 144.31.87.16@2096@vless@e3667c60
+  - zt-ai.cloud@443@vmess@d7d39ca1
+  - turki.gelqino.ir@17830@vless@a2e2c052
+  - 207.57.131.128@55538@vless@5434decc
+  - dingyue.zhangxiao5118.top@8880@vmess@2b5d0c24
+  - panel.karmatel.ir@8880@vless@4f3a1fad
+  - vip.karmatel.ir@8443@vless@6a7d3734
   - 47.253.211.16@1080@socks5@18ca66a1
+  - 103.149.182.79@8388@ss@6bb86606
 - name: PG-Google
   type: url-test
   url: https://www.google.com/generate_204
@@ -800,15 +955,16 @@ proxy-groups:
   lazy: false
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
-  - pim.depreca09.cyou@3637@hysteria2@d9705693
-  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
-  - ecm.crystal63.shop@10457@hysteria2@32c20971
+  - 104.128.72.119@80@ss@99398782
   - itv.dimple35.shop@10325@hysteria2@077c593a
+  - pim.depreca09.cyou@3637@hysteria2@d9705693
   - gms.doubl02.shop@6622@hysteria2@1beba44b
-  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
+  - fdc.contact09.shop@7599@hysteria2@a5e674bb
   - rpm.cyclic02.cyou@10748@hysteria2@3c0a0c19
   - tld.const98.cfd@14257@hysteria2@32d63a65
-  - fdc.contact09.shop@7599@hysteria2@a5e674bb
+  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
+  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
+  - ecm.crystal63.shop@10457@hysteria2@32c20971
   - sca.crystal63.shop@14380@anytls@3037ebf0
   - rad.const98.cfd@4633@anytls@eba51fe0
   - bip.contact09.shop@9844@anytls@7589197e
@@ -816,25 +972,33 @@ proxy-groups:
   - pol02.port-server.online@443@vless@9b78606c
   - frank-piranha.rooster465.autos@443@trojan@23919b44
   - novel-bat.rooster465.autos@443@trojan@98ce92fe
-  - 204.48.29.137@1088@socks5@09bb7403
   - v24.hdacd.com@30824@vmess@3b8e774e
   - v29.hdacd.com@30829@vmess@6a3c7508
+  - 207.57.131.128@55538@vless@5434decc
+  - dingyue.zhangxiao5118.top@8880@vmess@2b5d0c24
   - 47.253.211.16@1080@socks5@18ca66a1
   - xinnusvpn.duckdns.org@8443@vless@cf839874
   - iv2yun.iv2yunch.work@63353@vmess@a012b114
-  - 47.254.156.143@443@vless@a098e50a
   - gt-fr-01.live@443@vless@25db7a0e
-  - 45.194.10.141@8443@vless@a1564e76
+  - 47.254.156.143@443@vless@a098e50a
+  - 104.18.17.216@443@trojan@42d13e15
   - v6.hdacd.com@30806@vmess@c4d1fb0a
-  - 45.195.137.169@8443@vless@eb4256c8
-  - 45.195.137.206@8443@vless@24e061fe
   - classic-duckling.rooster465.autos@443@trojan@3c3f69c6
   - included-hedgehog.rooster465.autos@443@trojan@49ad5ef8
   - v36.hdacd.com@30836@vmess@e912117a
+  - 217.142.138.61@80@vmess@59ec1861
   - singular-lark.rooster465.autos@443@trojan@191198d5
-  - 157.90.183.51@5555@socks5@0dd59775
   - 185.36.192.228@35488@vmess@b9bd3e43
+  - pl.karzino-connected.com@443@vless@b37257e2
+  - jason.ilovezhenjiu.top@42670@vless@42bad451
   - 5.255.117.127@1080@socks5@8c672508
+  - 114.80.8.128@39001@trojan@09c684e9
+  - 144.31.87.16@2096@vless@e3667c60
+  - zt-ai.cloud@443@vmess@d7d39ca1
+  - turki.gelqino.ir@17830@vless@a2e2c052
+  - panel.karmatel.ir@8880@vless@4f3a1fad
+  - vip.karmatel.ir@8443@vless@6a7d3734
+  - 103.149.182.79@8388@ss@6bb86606
   - PG-fast
   - PG-default
 - name: PG-GitHub
@@ -847,38 +1011,47 @@ proxy-groups:
   - xinnusvpn.duckdns.org@8443@vless@cf839874
   - iv2yun.iv2yunch.work@63353@vmess@a012b114
   - gt-fr-01.live@443@vless@25db7a0e
+  - 104.128.72.119@80@ss@99398782
   - 47.254.156.143@443@vless@a098e50a
-  - pim.depreca09.cyou@3637@hysteria2@d9705693
-  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
-  - ecm.crystal63.shop@10457@hysteria2@32c20971
+  - 104.18.17.216@443@trojan@42d13e15
   - itv.dimple35.shop@10325@hysteria2@077c593a
+  - pim.depreca09.cyou@3637@hysteria2@d9705693
   - gms.doubl02.shop@6622@hysteria2@1beba44b
-  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
+  - fdc.contact09.shop@7599@hysteria2@a5e674bb
   - rpm.cyclic02.cyou@10748@hysteria2@3c0a0c19
   - tld.const98.cfd@14257@hysteria2@32d63a65
-  - fdc.contact09.shop@7599@hysteria2@a5e674bb
+  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
+  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
+  - ecm.crystal63.shop@10457@hysteria2@32c20971
   - sca.crystal63.shop@14380@anytls@3037ebf0
   - rad.const98.cfd@4633@anytls@eba51fe0
   - bip.contact09.shop@9844@anytls@7589197e
-  - 45.194.10.141@8443@vless@a1564e76
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 45.39.230.228@443@vless@06b0bd6b
-  - 45.195.137.169@8443@vless@eb4256c8
   - pol02.port-server.online@443@vless@9b78606c
-  - 45.195.137.206@8443@vless@24e061fe
   - frank-piranha.rooster465.autos@443@trojan@23919b44
   - classic-duckling.rooster465.autos@443@trojan@3c3f69c6
-  - 204.48.29.137@1088@socks5@09bb7403
   - novel-bat.rooster465.autos@443@trojan@98ce92fe
   - included-hedgehog.rooster465.autos@443@trojan@49ad5ef8
   - v36.hdacd.com@30836@vmess@e912117a
-  - 157.90.183.51@5555@socks5@0dd59775
+  - 217.142.138.61@80@vmess@59ec1861
   - singular-lark.rooster465.autos@443@trojan@191198d5
   - 185.36.192.228@35488@vmess@b9bd3e43
-  - 5.255.117.127@1080@socks5@8c672508
   - v29.hdacd.com@30829@vmess@6a3c7508
   - v24.hdacd.com@30824@vmess@3b8e774e
+  - jason.ilovezhenjiu.top@42670@vless@42bad451
+  - 5.255.117.127@1080@socks5@8c672508
+  - pl.karzino-connected.com@443@vless@b37257e2
+  - zt-ai.cloud@443@vmess@d7d39ca1
+  - 144.31.87.16@2096@vless@e3667c60
+  - turki.gelqino.ir@17830@vless@a2e2c052
+  - 207.57.131.128@55538@vless@5434decc
+  - dingyue.zhangxiao5118.top@8880@vmess@2b5d0c24
   - 47.253.211.16@1080@socks5@18ca66a1
+  - 114.80.8.128@39001@trojan@09c684e9
+  - panel.karmatel.ir@8880@vless@4f3a1fad
+  - vip.karmatel.ir@8443@vless@6a7d3734
+  - 103.149.182.79@8388@ss@6bb86606
   - PG-fast
   - PG-default
 - name: PG-YouTube
@@ -889,15 +1062,16 @@ proxy-groups:
   strategy: round-robin
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
-  - pim.depreca09.cyou@3637@hysteria2@d9705693
-  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
-  - ecm.crystal63.shop@10457@hysteria2@32c20971
+  - 104.128.72.119@80@ss@99398782
   - itv.dimple35.shop@10325@hysteria2@077c593a
+  - pim.depreca09.cyou@3637@hysteria2@d9705693
   - gms.doubl02.shop@6622@hysteria2@1beba44b
-  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
+  - fdc.contact09.shop@7599@hysteria2@a5e674bb
   - rpm.cyclic02.cyou@10748@hysteria2@3c0a0c19
   - tld.const98.cfd@14257@hysteria2@32d63a65
-  - fdc.contact09.shop@7599@hysteria2@a5e674bb
+  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
+  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
+  - ecm.crystal63.shop@10457@hysteria2@32c20971
   - sca.crystal63.shop@14380@anytls@3037ebf0
   - rad.const98.cfd@4633@anytls@eba51fe0
   - bip.contact09.shop@9844@anytls@7589197e
@@ -905,25 +1079,33 @@ proxy-groups:
   - pol02.port-server.online@443@vless@9b78606c
   - frank-piranha.rooster465.autos@443@trojan@23919b44
   - novel-bat.rooster465.autos@443@trojan@98ce92fe
-  - 204.48.29.137@1088@socks5@09bb7403
   - v24.hdacd.com@30824@vmess@3b8e774e
   - v29.hdacd.com@30829@vmess@6a3c7508
+  - 207.57.131.128@55538@vless@5434decc
+  - dingyue.zhangxiao5118.top@8880@vmess@2b5d0c24
   - 47.253.211.16@1080@socks5@18ca66a1
   - xinnusvpn.duckdns.org@8443@vless@cf839874
   - iv2yun.iv2yunch.work@63353@vmess@a012b114
-  - 47.254.156.143@443@vless@a098e50a
   - gt-fr-01.live@443@vless@25db7a0e
-  - 45.194.10.141@8443@vless@a1564e76
+  - 47.254.156.143@443@vless@a098e50a
+  - 104.18.17.216@443@trojan@42d13e15
   - v6.hdacd.com@30806@vmess@c4d1fb0a
-  - 45.195.137.169@8443@vless@eb4256c8
-  - 45.195.137.206@8443@vless@24e061fe
   - classic-duckling.rooster465.autos@443@trojan@3c3f69c6
   - included-hedgehog.rooster465.autos@443@trojan@49ad5ef8
   - v36.hdacd.com@30836@vmess@e912117a
+  - 217.142.138.61@80@vmess@59ec1861
   - singular-lark.rooster465.autos@443@trojan@191198d5
-  - 157.90.183.51@5555@socks5@0dd59775
   - 185.36.192.228@35488@vmess@b9bd3e43
+  - pl.karzino-connected.com@443@vless@b37257e2
+  - jason.ilovezhenjiu.top@42670@vless@42bad451
   - 5.255.117.127@1080@socks5@8c672508
+  - 114.80.8.128@39001@trojan@09c684e9
+  - 144.31.87.16@2096@vless@e3667c60
+  - zt-ai.cloud@443@vmess@d7d39ca1
+  - turki.gelqino.ir@17830@vless@a2e2c052
+  - panel.karmatel.ir@8880@vless@4f3a1fad
+  - vip.karmatel.ir@8443@vless@6a7d3734
+  - 103.149.182.79@8388@ss@6bb86606
   - PG-fast
   - PG-default
 - name: PG-Twitter
@@ -934,15 +1116,16 @@ proxy-groups:
   lazy: false
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
-  - pim.depreca09.cyou@3637@hysteria2@d9705693
-  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
-  - ecm.crystal63.shop@10457@hysteria2@32c20971
+  - 104.128.72.119@80@ss@99398782
   - itv.dimple35.shop@10325@hysteria2@077c593a
+  - pim.depreca09.cyou@3637@hysteria2@d9705693
   - gms.doubl02.shop@6622@hysteria2@1beba44b
-  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
+  - fdc.contact09.shop@7599@hysteria2@a5e674bb
   - rpm.cyclic02.cyou@10748@hysteria2@3c0a0c19
   - tld.const98.cfd@14257@hysteria2@32d63a65
-  - fdc.contact09.shop@7599@hysteria2@a5e674bb
+  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
+  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
+  - ecm.crystal63.shop@10457@hysteria2@32c20971
   - sca.crystal63.shop@14380@anytls@3037ebf0
   - rad.const98.cfd@4633@anytls@eba51fe0
   - bip.contact09.shop@9844@anytls@7589197e
@@ -950,25 +1133,33 @@ proxy-groups:
   - pol02.port-server.online@443@vless@9b78606c
   - frank-piranha.rooster465.autos@443@trojan@23919b44
   - novel-bat.rooster465.autos@443@trojan@98ce92fe
-  - 204.48.29.137@1088@socks5@09bb7403
   - v24.hdacd.com@30824@vmess@3b8e774e
   - v29.hdacd.com@30829@vmess@6a3c7508
+  - 207.57.131.128@55538@vless@5434decc
+  - dingyue.zhangxiao5118.top@8880@vmess@2b5d0c24
   - 47.253.211.16@1080@socks5@18ca66a1
   - xinnusvpn.duckdns.org@8443@vless@cf839874
   - iv2yun.iv2yunch.work@63353@vmess@a012b114
-  - 47.254.156.143@443@vless@a098e50a
   - gt-fr-01.live@443@vless@25db7a0e
-  - 45.194.10.141@8443@vless@a1564e76
+  - 47.254.156.143@443@vless@a098e50a
+  - 104.18.17.216@443@trojan@42d13e15
   - v6.hdacd.com@30806@vmess@c4d1fb0a
-  - 45.195.137.169@8443@vless@eb4256c8
-  - 45.195.137.206@8443@vless@24e061fe
   - classic-duckling.rooster465.autos@443@trojan@3c3f69c6
   - included-hedgehog.rooster465.autos@443@trojan@49ad5ef8
   - v36.hdacd.com@30836@vmess@e912117a
+  - 217.142.138.61@80@vmess@59ec1861
   - singular-lark.rooster465.autos@443@trojan@191198d5
-  - 157.90.183.51@5555@socks5@0dd59775
   - 185.36.192.228@35488@vmess@b9bd3e43
+  - pl.karzino-connected.com@443@vless@b37257e2
+  - jason.ilovezhenjiu.top@42670@vless@42bad451
   - 5.255.117.127@1080@socks5@8c672508
+  - 114.80.8.128@39001@trojan@09c684e9
+  - 144.31.87.16@2096@vless@e3667c60
+  - zt-ai.cloud@443@vmess@d7d39ca1
+  - turki.gelqino.ir@17830@vless@a2e2c052
+  - panel.karmatel.ir@8880@vless@4f3a1fad
+  - vip.karmatel.ir@8443@vless@6a7d3734
+  - 103.149.182.79@8388@ss@6bb86606
   - PG-fast
   - PG-default
 rule-providers:
