@@ -238,38 +238,6 @@ proxies:
     headers:
       Host: xinnusvpn.duckdns.org
   sni: xinnusvpn.duckdns.org
-- name: 172.67.143.139@8080@vless@2fa51af6
-  type: vless
-  server: 172.67.143.139
-  port: 8080
-  network: ws
-  packet-encoding: xudp
-  skip-cert-verify: false
-  tls: false
-  udp: true
-  uuid: 18907dc3-7e4c-476f-9ed8-b360db563bf9
-  ws-opts:
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: server8.faway91418.workers.dev
-    max-early-data: 2560
-    path: /eyJqdW5rIjoiN3FOeFprWFkiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iXX0=
-- name: 104.21.39.53@8080@vless@0210cabb
-  type: vless
-  server: 104.21.39.53
-  port: 8080
-  network: ws
-  packet-encoding: xudp
-  skip-cert-verify: false
-  tls: false
-  udp: true
-  uuid: 18907dc3-7e4c-476f-9ed8-b360db563bf9
-  ws-opts:
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: server8.faway91418.workers.dev
-    max-early-data: 2560
-    path: /eyJqdW5rIjoiN3FOeFprWFkiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iXX0=
 - name: 104.18.17.216@443@trojan@42d13e15
   type: trojan
   server: 104.18.17.216
@@ -281,6 +249,20 @@ proxies:
     headers:
       Host: www.calmloud.com
     path: /assignment
+- name: 104.128.72.119@80@ss@99398782
+  type: ss
+  server: 104.128.72.119
+  port: 80
+  cipher: 2022-blake3-aes-128-gcm
+  password: YTE1ZWU4ZTEyZjc3YmEzZA==:Y2JhZTU3ODYtZjg3MC00NA==
+  plugin: gost-plugin
+  plugin-opts:
+    host: one.local
+    mode: websocket
+    mux: true
+    path: /ws
+    tls: false
+  udp: true
 - name: iv2yun.iv2yunch.work@63353@vmess@a012b114
   type: vmess
   server: iv2yun.iv2yunch.work
@@ -307,28 +289,25 @@ proxies:
     short-id: 364994a6f61fc955
   sni: yandex.net
   client-fingerprint: firefox
-- name: 45.194.10.141@8443@vless@a1564e76
-  type: vless
-  server: 45.194.10.141
-  port: 8443
-  client-fingerprint: chrome
-  encryption: none
-  flow: xtls-rprx-vision
-  network: tcp
-  packet-encoding: xudp
-  reality-opts:
-    public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
-    short-id: 2cfb5a0ae8ab0cb0
-  servername: storage.yandex.net
-  skip-cert-verify: false
-  tls: true
-  udp: true
-  uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+- name: irc.deduce5.cyou@14575@hysteria2@2f9434a9
+  type: hysteria2
+  server: irc.deduce5.cyou
+  port: 14575
+  password: u0TpYqMakQPO4Si5bhJkT7ZIMWAL64jp
+  sni: bing.com
+  skip-cert-verify: true
 - name: vip.curvy45.cfd@14953@hysteria2@26c3af2b
   type: hysteria2
   server: vip.curvy45.cfd
   port: 14953
   password: WWV8e9G0VaoZNXgC570ON4tNV3vWDWNA
+  sni: bing.com
+  skip-cert-verify: true
+- name: itv.dimple35.shop@10325@hysteria2@077c593a
+  type: hysteria2
+  server: itv.dimple35.shop
+  port: 10325
+  password: Yn3Yb1SxkpWHvyi0PDsSPIiHVQ2I3raE
   sni: bing.com
   skip-cert-verify: true
 - name: fdc.contact09.shop@7599@hysteria2@a5e674bb
@@ -345,6 +324,20 @@ proxies:
   password: oONSf6jzQzQ8JF7QxPmmDuPksP6FfnDz
   sni: bing.com
   skip-cert-verify: true
+- name: ecm.crystal63.shop@10457@hysteria2@32c20971
+  type: hysteria2
+  server: ecm.crystal63.shop
+  port: 10457
+  password: LQzKSf45H5RDqsdkp2ZIDbf5Po13TQlp
+  sni: bing.com
+  skip-cert-verify: true
+- name: gms.doubl02.shop@6622@hysteria2@1beba44b
+  type: hysteria2
+  server: gms.doubl02.shop
+  port: 6622
+  password: vKXpTbNOdS2kTHLvXSvTW3gOsvLJjhPD
+  sni: bing.com
+  skip-cert-verify: true
 - name: tld.const98.cfd@14257@hysteria2@32d63a65
   type: hysteria2
   server: tld.const98.cfd
@@ -359,34 +352,6 @@ proxies:
   password: N0YXfQ4qPvC380T3BtUZbhF49dlbQ37J
   sni: bing.com
   skip-cert-verify: true
-- name: gms.doubl02.shop@6622@hysteria2@1beba44b
-  type: hysteria2
-  server: gms.doubl02.shop
-  port: 6622
-  password: vKXpTbNOdS2kTHLvXSvTW3gOsvLJjhPD
-  sni: bing.com
-  skip-cert-verify: true
-- name: irc.deduce5.cyou@14575@hysteria2@2f9434a9
-  type: hysteria2
-  server: irc.deduce5.cyou
-  port: 14575
-  password: u0TpYqMakQPO4Si5bhJkT7ZIMWAL64jp
-  sni: bing.com
-  skip-cert-verify: true
-- name: ecm.crystal63.shop@10457@hysteria2@32c20971
-  type: hysteria2
-  server: ecm.crystal63.shop
-  port: 10457
-  password: LQzKSf45H5RDqsdkp2ZIDbf5Po13TQlp
-  sni: bing.com
-  skip-cert-verify: true
-- name: itv.dimple35.shop@10325@hysteria2@077c593a
-  type: hysteria2
-  server: itv.dimple35.shop
-  port: 10325
-  password: Yn3Yb1SxkpWHvyi0PDsSPIiHVQ2I3raE
-  sni: bing.com
-  skip-cert-verify: true
 - name: sca.crystal63.shop@14380@anytls@3037ebf0
   type: anytls
   server: sca.crystal63.shop
@@ -397,16 +362,6 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h2
-- name: bip.contact09.shop@9844@anytls@7589197e
-  type: anytls
-  server: bip.contact09.shop
-  port: 9844
-  password: d09e4973-70ec-465e-b71b-08ea9c367698
-  client-fingerprint: chrome
-  sni: bip.contact09.shop
-  skip-cert-verify: true
-  alpn:
-  - h2
 - name: rad.const98.cfd@4633@anytls@eba51fe0
   type: anytls
   server: rad.const98.cfd
@@ -414,6 +369,16 @@ proxies:
   password: be7afa4c-874f-4323-86ec-3a00a2489423
   client-fingerprint: chrome
   sni: rad.const98.cfd
+  skip-cert-verify: true
+  alpn:
+  - h2
+- name: bip.contact09.shop@9844@anytls@7589197e
+  type: anytls
+  server: bip.contact09.shop
+  port: 9844
+  password: d09e4973-70ec-465e-b71b-08ea9c367698
+  client-fingerprint: chrome
+  sni: bip.contact09.shop
   skip-cert-verify: true
   alpn:
   - h2
@@ -446,36 +411,6 @@ proxies:
   xudp: true
   packet-encoding: xudp
   servername: www.yahoo.com
-- name: pol02.port-server.online@443@vless@9b78606c
-  type: vless
-  server: pol02.port-server.online
-  port: 443
-  uuid: 45c876f9-4900-40c0-b269-94871e78df54
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: hopci7XVq-CJh15pjLw7lNIybwwVZfA2XgV2VAkxsR0
-    short-id: 9e53379f048436bf
-  sni: pol02.port-server.online
-  client-fingerprint: firefox
-- name: 82.29.43.26@443@vless@e45a1e71
-  type: vless
-  server: 82.29.43.26
-  port: 443
-  client-fingerprint: qq
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: V6FabatADtcX7aO9KMjGCadJC4LuQ_5nRViab-z-nFQ
-    short-id: abcd
-  sub_tag: F003-260618
-  tls: true
-  udp: true
-  uuid: ad2c4a66-2b1b-472a-922a-9f88b0b48390
-  xudp: true
-  packet-encoding: xudp
-  servername: auto.malina24.xyz
 - name: 45.195.137.169@8443@vless@eb4256c8
   type: vless
   server: 45.195.137.169
@@ -493,6 +428,19 @@ proxies:
   xudp: true
   packet-encoding: xudp
   servername: storage.yandex.net
+- name: pol02.port-server.online@443@vless@9b78606c
+  type: vless
+  server: pol02.port-server.online
+  port: 443
+  uuid: 45c876f9-4900-40c0-b269-94871e78df54
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: hopci7XVq-CJh15pjLw7lNIybwwVZfA2XgV2VAkxsR0
+    short-id: 9e53379f048436bf
+  sni: pol02.port-server.online
+  client-fingerprint: firefox
 - name: 45.195.137.206@8443@vless@24e061fe
   type: vless
   server: 45.195.137.206
@@ -517,47 +465,6 @@ proxies:
   password: ''
   skip-cert-verify: true
   username: ''
-- name: 204.44.74.240@25367@vless@2db3660c
-  type: vless
-  server: 204.44.74.240
-  port: 25367
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: g-oxbqigzCaXqARxuyD2_vbTYeMD9zn8wnTo02S69QM
-    short-id: ''
-  sub_tag: F003-260618
-  tls: true
-  udp: true
-  uuid: 24888476-ff0d-4048-de06-14f895e09430
-  xudp: true
-  packet-encoding: xudp
-  servername: www.speedtest.org
-- name: 144.225.187.153@25367@vless@0de30932
-  type: vless
-  server: 144.225.187.153
-  port: 25367
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: IiuIighvDsor2v-vb5s3IJbNiqwLw568auiqoXxc7FM
-    short-id: ''
-  sub_tag: F003-260618
-  tls: true
-  udp: true
-  uuid: a7ea25a4-3f86-47e4-a490-5f7212ddc3cf
-  xudp: true
-  packet-encoding: xudp
-  servername: www.speedtest.org
-- name: cnn-2.hysteria.ltd@6443@trojan@242365dc
-  type: trojan
-  server: cnn-2.hysteria.ltd
-  port: 6443
-  password: SqJydYxsuCEX9RpFUXcbK7GLeZ-baJe4
-  skip-cert-verify: false
-  sni: cnn-2.hysteria.ltd
 - name: open-octopus.rooster465.autos@443@trojan@3209a50d
   type: trojan
   server: open-octopus.rooster465.autos
@@ -580,83 +487,6 @@ proxies:
   sni: frank-piranha.rooster465.autos
   sub_tag: C002-260622
   udp: true
-- name: novel-bat.rooster465.autos@443@trojan@c1b3f0b2
-  type: trojan
-  server: novel-bat.rooster465.autos
-  port: 443
-  client-fingerprint: chrome
-  network: tcp
-  password: XG59623478
-  skip-cert-verify: false
-  sni: novel-bat.rooster465.autos
-  sub_tag: C002-260622
-  udp: true
-- name: funny-squid.rooster465.autos@443@trojan@bee33153
-  type: trojan
-  server: funny-squid.rooster465.autos
-  port: 443
-  client-fingerprint: chrome
-  network: tcp
-  password: XG59623478
-  skip-cert-verify: false
-  sni: funny-squid.rooster465.autos
-  sub_tag: C002-260622
-  udp: true
-- name: pleased-lobster.rooster465.autos@443@trojan@6be6b79a
-  type: trojan
-  server: pleased-lobster.rooster465.autos
-  port: 443
-  client-fingerprint: chrome
-  network: tcp
-  password: XG59623478
-  skip-cert-verify: false
-  sni: pleased-lobster.rooster465.autos
-  sub_tag: C002-260622
-  udp: true
-- name: nl-ws-33.hysteria.ltd@5443@trojan@ed67dd8a
-  type: trojan
-  server: nl-ws-33.hysteria.ltd
-  port: 5443
-  client-fingerprint: chrome
-  password: SqJydYxsuCEX9RpFUXcbK7GLeZ-baJe4
-  skip-cert-verify: false
-  sub_tag: B007-260618
-  udp: true
-  network: tcp
-  sni: nl-ws-33.hysteria.ltd
-- name: renewed-chigger.rooster465.autos@443@trojan@8ca33ce5
-  type: trojan
-  server: renewed-chigger.rooster465.autos
-  port: 443
-  client-fingerprint: chrome
-  network: tcp
-  password: XG59623478
-  skip-cert-verify: false
-  sni: renewed-chigger.rooster465.autos
-  sub_tag: C002-260622
-  udp: true
-- name: improved-anteater.rooster465.autos@443@trojan@c6d90802
-  type: trojan
-  server: improved-anteater.rooster465.autos
-  port: 443
-  client-fingerprint: chrome
-  network: tcp
-  password: XG59623478
-  skip-cert-verify: false
-  sni: improved-anteater.rooster465.autos
-  sub_tag: C002-260622
-  udp: true
-- name: included-hedgehog.rooster465.autos@443@trojan@f4edb168
-  type: trojan
-  server: included-hedgehog.rooster465.autos
-  port: 443
-  client-fingerprint: chrome
-  network: tcp
-  password: XG59623478
-  skip-cert-verify: false
-  sni: included-hedgehog.rooster465.autos
-  sub_tag: C002-260622
-  udp: true
 - name: classic-duckling.rooster465.autos@443@trojan@3c3f69c6
   type: trojan
   server: classic-duckling.rooster465.autos
@@ -668,242 +498,6 @@ proxies:
   sni: classic-duckling.rooster465.autos
   sub_tag: C002-260622
   udp: true
-- name: cnn-1.hysteria.ltd@7443@trojan@e7167606
-  type: trojan
-  server: cnn-1.hysteria.ltd
-  port: 7443
-  client-fingerprint: chrome
-  password: SqJydYxsuCEX9RpFUXcbK7GLeZ-baJe4
-  skip-cert-verify: false
-  sub_tag: B007-260618
-  udp: true
-  network: tcp
-  sni: cnn-1.hysteria.ltd
-- name: 144.24.87.69@50001@vless@c0567d04
-  type: vless
-  server: 144.24.87.69
-  port: 50001
-  client-fingerprint: chrome
-  network: ws
-  sub_tag: F003-260618
-  tls: true
-  udp: true
-  uuid: 76138152-68ea-471f-8c6e-c440907058cf
-  ws-opts:
-    headers:
-      Host: us2.wxgqlfx.icu
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/49.0.2623.110 Safari/537.36
-    path: /TG@wxgqlfx
-  xudp: true
-  packet-encoding: xudp
-  servername: us2.wxgqlfx.icu
-- name: 192.9.156.27@587@vless@5af9acaf
-  type: vless
-  server: 192.9.156.27
-  port: 587
-  client-fingerprint: chrome
-  network: ws
-  sub_tag: F003-260618
-  tls: true
-  udp: true
-  uuid: 76138152-68ea-471f-8c6e-c440907058cf
-  ws-opts:
-    headers:
-      Host: us2.wxgqlfx.icu
-      User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko)
-        Chrome/70.0.3538.102 Safari/537.36
-    path: /TG@wxgqlfx
-  xudp: true
-  packet-encoding: xudp
-  servername: us2.wxgqlfx.icu
-- name: 172.96.192.114@44855@vless@2d4b4cab
-  type: vless
-  server: 172.96.192.114
-  port: 44855
-  client-fingerprint: chrome
-  network: ws
-  sub_tag: F003-260618
-  tls: true
-  udp: true
-  uuid: 76138152-68ea-471f-8c6e-c440907058cf
-  ws-opts:
-    headers:
-      Host: us2.wxgqlfx.icu
-      User-Agent: Mozilla/5.0 (Linux; Android 6.0.1; SM-J500M Build/MMB29M) AppleWebKit/537.36
-        (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36
-    path: /TG@wxgqlfx
-  xudp: true
-  packet-encoding: xudp
-  servername: us2.wxgqlfx.icu
-- name: 185.186.245.206@81@vless@adbb78f1
-  type: vless
-  server: 185.186.245.206
-  port: 81
-  client-fingerprint: chrome
-  network: ws
-  sub_tag: F003-260618
-  tls: true
-  udp: true
-  uuid: 76138152-68ea-471f-8c6e-c440907058cf
-  ws-opts:
-    headers:
-      Host: us2.wxgqlfx.icu
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/46.0.2490.86 Safari/537.36
-    path: /TG@wxgqlfx
-  xudp: true
-  packet-encoding: xudp
-  servername: us2.wxgqlfx.icu
-- name: 157.90.183.51@5555@socks5@0dd59775
-  type: socks5
-  server: 157.90.183.51
-  port: 5555
-  password: ''
-  skip-cert-verify: true
-  username: ''
-- name: 104.17.223.92@8443@vless@eade5ff9
-  type: vless
-  server: 104.17.223.92
-  port: 8443
-  client-fingerprint: chrome
-  network: ws
-  sub_tag: F003-260618
-  tls: true
-  udp: true
-  uuid: f3b8c2a1-9d4e-4b7f-a6c5-2e8d1f0b4a93
-  ws-opts:
-    headers:
-      Host: srv10.perfectbulk.info
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/70.0.3538.67 Safari/537.36
-    path: /
-  xudp: true
-  packet-encoding: xudp
-  servername: srv10.perfectbulk.info
-- name: 167.88.160.144@8443@vless@e2c75484
-  type: vless
-  server: 167.88.160.144
-  port: 8443
-  client-fingerprint: chrome
-  network: ws
-  sub_tag: F003-260618
-  tls: true
-  udp: true
-  uuid: 76138152-68ea-471f-8c6e-c440907058cf
-  ws-opts:
-    headers:
-      Host: us2.wxgqlfx.icu
-      User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/62.0.3202.94 Safari/537.36
-    path: /TG@wxgqlfx
-  xudp: true
-  packet-encoding: xudp
-  servername: us2.wxgqlfx.icu
-- name: 43.133.237.158@8443@vless@bfd20782
-  type: vless
-  server: 43.133.237.158
-  port: 8443
-  alpn:
-  - http/1.1
-  - ''
-  client-fingerprint: firefox
-  encryption: none
-  network: ws
-  sub_tag: S001-260618
-  tls: true
-  udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  ws-opts:
-    headers:
-      Host: wgl.cdn-c.gfw.qzz.io
-      User-Agent: Mozilla/5.0 (Linux; Android 4.4.2; de-de; SAMSUNG GT-I9195 Build/KOT49H)
-        AppleWebKit/537.36 (KHTML, like Gecko) Version/1.5 Chrome/28.0.1500.94 Mobile
-        Safari/537.36
-    path: /danfeng-jh5qzt-fk3fns-mqcd-34e34dzl
-    early-data-header-name: Sec-WebSocket-Protocol
-    max-early-data: 2560
-  xudp: true
-  packet-encoding: xudp
-  servername: wgl.cdn-c.gfw.qzz.io
-- name: 31.220.31.67@443@vless@58580c20
-  type: vless
-  server: 31.220.31.67
-  port: 443
-  client-fingerprint: chrome
-  network: ws
-  sub_tag: F003-260618
-  tls: true
-  udp: true
-  uuid: 76138152-68ea-471f-8c6e-c440907058cf
-  ws-opts:
-    headers:
-      Host: us2.wxgqlfx.icu
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/54.0.2840.99 Safari/537.36
-    path: /TG@wxgqlfx
-  xudp: true
-  packet-encoding: xudp
-  servername: us2.wxgqlfx.icu
-- name: 204.44.74.220@25367@vless@e4b9f52c
-  type: vless
-  server: 204.44.74.220
-  port: 25367
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: cDaDzPr3PlS3NM8lreHZbdo-Mhqz8vMBzMSkHXhGIUA
-    short-id: ''
-  sub_tag: F003-260618
-  tls: true
-  udp: true
-  uuid: d2c183aa-a8b1-4935-907a-24f016f1910c
-  xudp: true
-  packet-encoding: xudp
-  servername: www.cloudflare.com
-- name: 146.56.99.255@56789@vless@5a0622a1
-  type: vless
-  server: 146.56.99.255
-  port: 56789
-  client-fingerprint: chrome
-  network: ws
-  sub_tag: F003-260618
-  tls: true
-  udp: true
-  uuid: 76138152-68ea-471f-8c6e-c440907058cf
-  ws-opts:
-    headers:
-      Host: us2.wxgqlfx.icu
-      User-Agent: Mozilla/5.0 (Linux; Android 7.0; SM-G610M) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/70.0.3538.80 Mobile Safari/537.36
-    path: /TG@wxgqlfx
-  xudp: true
-  packet-encoding: xudp
-  servername: us2.wxgqlfx.icu
-- name: 31.59.136.248@2053@vless@4f4c5098
-  type: vless
-  server: 31.59.136.248
-  port: 2053
-  client-fingerprint: chrome
-  network: ws
-  sub_tag: F003-260618
-  tls: true
-  udp: true
-  uuid: 76138152-68ea-471f-8c6e-c440907058cf
-  ws-opts:
-    headers:
-      Host: us2.wxgqlfx.icu
-      User-Agent: Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.3
-        (KHTML, like Gecko) Chrome/6.0.472.63 Safari/534.3
-    path: /TG@wxgqlfx
-  xudp: true
-  packet-encoding: xudp
-  servername: us2.wxgqlfx.icu
-- name: 106.52.215.138@7890@socks5@8700574f
-  type: socks5
-  server: 106.52.215.138
-  port: 7890
 - name: 146.75.119.82@80@vless@9d475935
   type: vless
   server: 146.75.119.82
@@ -921,6 +515,49 @@ proxies:
     path: /ws/?ed=2048/@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz/?2048
   xudp: true
   packet-encoding: xudp
+- name: 106.52.215.138@7890@socks5@8700574f
+  type: socks5
+  server: 106.52.215.138
+  port: 7890
+- name: 5.255.117.127@1080@socks5@8c672508
+  type: socks5
+  server: 5.255.117.127
+  port: 1080
+- name: ansooyefilter-production.up.railway.app@443@vless@5ae1921e
+  type: vless
+  server: ansooyefilter-production.up.railway.app
+  port: 443
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  encryption: none
+  network: ws
+  sub_tag: V006-260618
+  tls: true
+  udp: true
+  uuid: b521cf5a-91a8-7fad-3702-698a57b8a50e
+  ws-opts:
+    headers:
+      Host: ansooyefilter-production.up.railway.app
+      User-Agent: Mozilla/5.0 (Unknown; Linux) AppleWebKit/538.1 (KHTML, like Gecko)
+        Chrome/v1.0.0 Safari/538.1
+    path: /ws/b521cf5a-91a8-7fad-3702-698a57b8a50e
+  xudp: true
+  packet-encoding: xudp
+  servername: ansooyefilter-production.up.railway.app
+- name: 45.88.42.29@50117@hysteria2@62d78a9e
+  type: hysteria2
+  server: 45.88.42.29
+  port: 50117
+  down: ''
+  fingerprint: ''
+  obfs: ''
+  obfs-password: ''
+  password: 13d29042-ab82-4195-9cd4-2bafc518e201
+  skip-cert-verify: true
+  sni: iosapps.itunes.apple.com
+  sub_tag: S001-260618
+  up: ''
 - name: 114.80.8.128@39001@trojan@09c684e9
   type: trojan
   server: 114.80.8.128
@@ -928,119 +565,12 @@ proxies:
   password: 1df3ece1218bedba28c6c6ac726a07bb
   skip-cert-verify: true
   sni: www.yrtok.com
-- name: 5.255.117.127@1080@socks5@8c672508
-  type: socks5
-  server: 5.255.117.127
-  port: 1080
-- name: united-grouse.rooster465.autos@443@trojan@9b3f9294
-  type: trojan
-  server: united-grouse.rooster465.autos
-  port: 443
-  client-fingerprint: chrome
-  network: tcp
-  password: XG59623478
-  skip-cert-verify: false
-  sni: united-grouse.rooster465.autos
-  sub_tag: C002-260622
-  udp: true
-- name: flying-escargot.rooster465.autos@443@trojan@89a2e5dd
-  type: trojan
-  server: flying-escargot.rooster465.autos
-  port: 443
-  client-fingerprint: chrome
-  network: tcp
-  password: XG59623478
-  skip-cert-verify: false
-  sni: flying-escargot.rooster465.autos
-  sub_tag: C002-260622
-  udp: true
-- name: immense-eagle.rooster465.autos@443@trojan@e769c3f7
-  type: trojan
-  server: immense-eagle.rooster465.autos
-  port: 443
-  client-fingerprint: chrome
-  network: tcp
-  password: XG59623478
-  skip-cert-verify: false
-  sni: immense-eagle.rooster465.autos
-  sub_tag: C002-260622
-  udp: true
-- name: wise-rhino.rooster465.autos@443@trojan@8f3c8420
-  type: trojan
-  server: wise-rhino.rooster465.autos
-  port: 443
-  client-fingerprint: chrome
-  network: tcp
-  password: XG59623478
-  skip-cert-verify: false
-  sni: wise-rhino.rooster465.autos
-  sub_tag: C002-260622
-  udp: true
-- name: allowed-hermit.rooster465.autos@443@trojan@b46b8459
-  type: trojan
-  server: allowed-hermit.rooster465.autos
-  port: 443
-  client-fingerprint: chrome
-  network: tcp
-  password: XG59623478
-  skip-cert-verify: false
-  sni: allowed-hermit.rooster465.autos
-  sub_tag: C002-260622
-  udp: true
-- name: dashing-bedbug.rooster465.autos@443@trojan@acd72d31
-  type: trojan
-  server: dashing-bedbug.rooster465.autos
-  port: 443
-  client-fingerprint: chrome
-  network: tcp
-  password: XG59623478
-  skip-cert-verify: false
-  sni: dashing-bedbug.rooster465.autos
-  sub_tag: C002-260622
-  udp: true
-- name: rational-joey.rooster465.autos@443@trojan@008806fd
-  type: trojan
-  server: rational-joey.rooster465.autos
-  port: 443
-  client-fingerprint: chrome
-  network: tcp
-  password: XG59623478
-  skip-cert-verify: false
-  sni: rational-joey.rooster465.autos
-  sub_tag: C002-260622
-  udp: true
-- name: allowing-ram.rooster465.autos@443@trojan@a752526a
-  type: trojan
-  server: allowing-ram.rooster465.autos
-  port: 443
-  client-fingerprint: chrome
-  network: tcp
-  password: XG59623478
-  skip-cert-verify: false
-  sni: allowing-ram.rooster465.autos
-  sub_tag: C002-260622
-  udp: true
-- name: composed-sheep.rooster465.autos@443@trojan@23c4b83c
-  type: trojan
-  server: composed-sheep.rooster465.autos
-  port: 443
-  client-fingerprint: chrome
-  network: tcp
-  password: XG59623478
-  skip-cert-verify: false
-  sni: composed-sheep.rooster465.autos
-  sub_tag: C002-260622
-  udp: true
 - name: 47.253.211.16@1080@socks5@18ca66a1
   type: socks5
   server: 47.253.211.16
   port: 1080
   password: ''
   username: ''
-- name: 141.11.76.234@5555@socks5@c0db1ccd
-  type: socks5
-  server: 141.11.76.234
-  port: 5555
 proxy-groups:
 - name: PG-fast
   type: url-test
@@ -1051,72 +581,38 @@ proxy-groups:
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
   - xinnusvpn.duckdns.org@8443@vless@cf839874
-  - 172.67.143.139@8080@vless@2fa51af6
-  - 104.21.39.53@8080@vless@0210cabb
   - 104.18.17.216@443@trojan@42d13e15
+  - 104.128.72.119@80@ss@99398782
   - iv2yun.iv2yunch.work@63353@vmess@a012b114
   - gt-fr-01.live@443@vless@25db7a0e
-  - 45.194.10.141@8443@vless@a1564e76
+  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
   - vip.curvy45.cfd@14953@hysteria2@26c3af2b
+  - itv.dimple35.shop@10325@hysteria2@077c593a
   - fdc.contact09.shop@7599@hysteria2@a5e674bb
   - pim.depreca09.cyou@3637@hysteria2@d9705693
+  - ecm.crystal63.shop@10457@hysteria2@32c20971
+  - gms.doubl02.shop@6622@hysteria2@1beba44b
   - tld.const98.cfd@14257@hysteria2@32d63a65
   - rpm.cyclic02.cyou@10748@hysteria2@3c0a0c19
-  - gms.doubl02.shop@6622@hysteria2@1beba44b
-  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
-  - ecm.crystal63.shop@10457@hysteria2@32c20971
-  - itv.dimple35.shop@10325@hysteria2@077c593a
   - sca.crystal63.shop@14380@anytls@3037ebf0
-  - bip.contact09.shop@9844@anytls@7589197e
   - rad.const98.cfd@4633@anytls@eba51fe0
+  - bip.contact09.shop@9844@anytls@7589197e
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 45.39.230.228@443@vless@06b0bd6b
-  - pol02.port-server.online@443@vless@9b78606c
-  - 82.29.43.26@443@vless@e45a1e71
   - 45.195.137.169@8443@vless@eb4256c8
+  - pol02.port-server.online@443@vless@9b78606c
   - 45.195.137.206@8443@vless@24e061fe
   - 204.48.29.137@1088@socks5@09bb7403
-  - 204.44.74.240@25367@vless@2db3660c
-  - 144.225.187.153@25367@vless@0de30932
-  - cnn-2.hysteria.ltd@6443@trojan@242365dc
   - open-octopus.rooster465.autos@443@trojan@3209a50d
   - frank-piranha.rooster465.autos@443@trojan@23919b44
-  - novel-bat.rooster465.autos@443@trojan@c1b3f0b2
-  - funny-squid.rooster465.autos@443@trojan@bee33153
-  - pleased-lobster.rooster465.autos@443@trojan@6be6b79a
-  - nl-ws-33.hysteria.ltd@5443@trojan@ed67dd8a
-  - renewed-chigger.rooster465.autos@443@trojan@8ca33ce5
-  - improved-anteater.rooster465.autos@443@trojan@c6d90802
-  - included-hedgehog.rooster465.autos@443@trojan@f4edb168
   - classic-duckling.rooster465.autos@443@trojan@3c3f69c6
-  - cnn-1.hysteria.ltd@7443@trojan@e7167606
-  - 144.24.87.69@50001@vless@c0567d04
-  - 192.9.156.27@587@vless@5af9acaf
-  - 172.96.192.114@44855@vless@2d4b4cab
-  - 185.186.245.206@81@vless@adbb78f1
-  - 157.90.183.51@5555@socks5@0dd59775
-  - 104.17.223.92@8443@vless@eade5ff9
-  - 167.88.160.144@8443@vless@e2c75484
-  - 43.133.237.158@8443@vless@bfd20782
-  - 31.220.31.67@443@vless@58580c20
-  - 204.44.74.220@25367@vless@e4b9f52c
-  - 146.56.99.255@56789@vless@5a0622a1
-  - 31.59.136.248@2053@vless@4f4c5098
-  - 106.52.215.138@7890@socks5@8700574f
   - 146.75.119.82@80@vless@9d475935
-  - 114.80.8.128@39001@trojan@09c684e9
+  - 106.52.215.138@7890@socks5@8700574f
   - 5.255.117.127@1080@socks5@8c672508
-  - united-grouse.rooster465.autos@443@trojan@9b3f9294
-  - flying-escargot.rooster465.autos@443@trojan@89a2e5dd
-  - immense-eagle.rooster465.autos@443@trojan@e769c3f7
-  - wise-rhino.rooster465.autos@443@trojan@8f3c8420
-  - allowed-hermit.rooster465.autos@443@trojan@b46b8459
-  - dashing-bedbug.rooster465.autos@443@trojan@acd72d31
-  - rational-joey.rooster465.autos@443@trojan@008806fd
-  - allowing-ram.rooster465.autos@443@trojan@a752526a
-  - composed-sheep.rooster465.autos@443@trojan@23c4b83c
+  - ansooyefilter-production.up.railway.app@443@vless@5ae1921e
+  - 45.88.42.29@50117@hysteria2@62d78a9e
+  - 114.80.8.128@39001@trojan@09c684e9
   - 47.253.211.16@1080@socks5@18ca66a1
-  - 141.11.76.234@5555@socks5@c0db1ccd
 - name: PG-default
   type: fallback
   url: https://www.google.com/generate_204
@@ -1126,72 +622,38 @@ proxy-groups:
   - PG-fast
   - 157.254.223.44@34567@mieru@7af1c875
   - xinnusvpn.duckdns.org@8443@vless@cf839874
-  - 172.67.143.139@8080@vless@2fa51af6
-  - 104.21.39.53@8080@vless@0210cabb
   - 104.18.17.216@443@trojan@42d13e15
+  - 104.128.72.119@80@ss@99398782
   - iv2yun.iv2yunch.work@63353@vmess@a012b114
   - gt-fr-01.live@443@vless@25db7a0e
-  - 45.194.10.141@8443@vless@a1564e76
+  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
   - vip.curvy45.cfd@14953@hysteria2@26c3af2b
+  - itv.dimple35.shop@10325@hysteria2@077c593a
   - fdc.contact09.shop@7599@hysteria2@a5e674bb
   - pim.depreca09.cyou@3637@hysteria2@d9705693
+  - ecm.crystal63.shop@10457@hysteria2@32c20971
+  - gms.doubl02.shop@6622@hysteria2@1beba44b
   - tld.const98.cfd@14257@hysteria2@32d63a65
   - rpm.cyclic02.cyou@10748@hysteria2@3c0a0c19
-  - gms.doubl02.shop@6622@hysteria2@1beba44b
-  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
-  - ecm.crystal63.shop@10457@hysteria2@32c20971
-  - itv.dimple35.shop@10325@hysteria2@077c593a
   - sca.crystal63.shop@14380@anytls@3037ebf0
-  - bip.contact09.shop@9844@anytls@7589197e
   - rad.const98.cfd@4633@anytls@eba51fe0
+  - bip.contact09.shop@9844@anytls@7589197e
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 45.39.230.228@443@vless@06b0bd6b
-  - pol02.port-server.online@443@vless@9b78606c
-  - 82.29.43.26@443@vless@e45a1e71
   - 45.195.137.169@8443@vless@eb4256c8
+  - pol02.port-server.online@443@vless@9b78606c
   - 45.195.137.206@8443@vless@24e061fe
   - 204.48.29.137@1088@socks5@09bb7403
-  - 204.44.74.240@25367@vless@2db3660c
-  - 144.225.187.153@25367@vless@0de30932
-  - cnn-2.hysteria.ltd@6443@trojan@242365dc
   - open-octopus.rooster465.autos@443@trojan@3209a50d
   - frank-piranha.rooster465.autos@443@trojan@23919b44
-  - novel-bat.rooster465.autos@443@trojan@c1b3f0b2
-  - funny-squid.rooster465.autos@443@trojan@bee33153
-  - pleased-lobster.rooster465.autos@443@trojan@6be6b79a
-  - nl-ws-33.hysteria.ltd@5443@trojan@ed67dd8a
-  - renewed-chigger.rooster465.autos@443@trojan@8ca33ce5
-  - improved-anteater.rooster465.autos@443@trojan@c6d90802
-  - included-hedgehog.rooster465.autos@443@trojan@f4edb168
   - classic-duckling.rooster465.autos@443@trojan@3c3f69c6
-  - cnn-1.hysteria.ltd@7443@trojan@e7167606
-  - 144.24.87.69@50001@vless@c0567d04
-  - 192.9.156.27@587@vless@5af9acaf
-  - 172.96.192.114@44855@vless@2d4b4cab
-  - 185.186.245.206@81@vless@adbb78f1
-  - 157.90.183.51@5555@socks5@0dd59775
-  - 104.17.223.92@8443@vless@eade5ff9
-  - 167.88.160.144@8443@vless@e2c75484
-  - 43.133.237.158@8443@vless@bfd20782
-  - 31.220.31.67@443@vless@58580c20
-  - 204.44.74.220@25367@vless@e4b9f52c
-  - 146.56.99.255@56789@vless@5a0622a1
-  - 31.59.136.248@2053@vless@4f4c5098
-  - 106.52.215.138@7890@socks5@8700574f
   - 146.75.119.82@80@vless@9d475935
-  - 114.80.8.128@39001@trojan@09c684e9
+  - 106.52.215.138@7890@socks5@8700574f
   - 5.255.117.127@1080@socks5@8c672508
-  - united-grouse.rooster465.autos@443@trojan@9b3f9294
-  - flying-escargot.rooster465.autos@443@trojan@89a2e5dd
-  - immense-eagle.rooster465.autos@443@trojan@e769c3f7
-  - wise-rhino.rooster465.autos@443@trojan@8f3c8420
-  - allowed-hermit.rooster465.autos@443@trojan@b46b8459
-  - dashing-bedbug.rooster465.autos@443@trojan@acd72d31
-  - rational-joey.rooster465.autos@443@trojan@008806fd
-  - allowing-ram.rooster465.autos@443@trojan@a752526a
-  - composed-sheep.rooster465.autos@443@trojan@23c4b83c
+  - ansooyefilter-production.up.railway.app@443@vless@5ae1921e
+  - 45.88.42.29@50117@hysteria2@62d78a9e
+  - 114.80.8.128@39001@trojan@09c684e9
   - 47.253.211.16@1080@socks5@18ca66a1
-  - 141.11.76.234@5555@socks5@c0db1ccd
 - name: PG-AnTing
   type: load-balance
   url: https://www.google.com/generate_204
@@ -1201,72 +663,38 @@ proxy-groups:
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
   - xinnusvpn.duckdns.org@8443@vless@cf839874
-  - 172.67.143.139@8080@vless@2fa51af6
-  - 104.21.39.53@8080@vless@0210cabb
   - 104.18.17.216@443@trojan@42d13e15
+  - 104.128.72.119@80@ss@99398782
   - iv2yun.iv2yunch.work@63353@vmess@a012b114
   - gt-fr-01.live@443@vless@25db7a0e
-  - 45.194.10.141@8443@vless@a1564e76
+  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
   - vip.curvy45.cfd@14953@hysteria2@26c3af2b
+  - itv.dimple35.shop@10325@hysteria2@077c593a
   - fdc.contact09.shop@7599@hysteria2@a5e674bb
   - pim.depreca09.cyou@3637@hysteria2@d9705693
+  - ecm.crystal63.shop@10457@hysteria2@32c20971
+  - gms.doubl02.shop@6622@hysteria2@1beba44b
   - tld.const98.cfd@14257@hysteria2@32d63a65
   - rpm.cyclic02.cyou@10748@hysteria2@3c0a0c19
-  - gms.doubl02.shop@6622@hysteria2@1beba44b
-  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
-  - ecm.crystal63.shop@10457@hysteria2@32c20971
-  - itv.dimple35.shop@10325@hysteria2@077c593a
   - sca.crystal63.shop@14380@anytls@3037ebf0
-  - bip.contact09.shop@9844@anytls@7589197e
   - rad.const98.cfd@4633@anytls@eba51fe0
+  - bip.contact09.shop@9844@anytls@7589197e
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 45.39.230.228@443@vless@06b0bd6b
-  - pol02.port-server.online@443@vless@9b78606c
-  - 82.29.43.26@443@vless@e45a1e71
   - 45.195.137.169@8443@vless@eb4256c8
+  - pol02.port-server.online@443@vless@9b78606c
   - 45.195.137.206@8443@vless@24e061fe
   - 204.48.29.137@1088@socks5@09bb7403
-  - 204.44.74.240@25367@vless@2db3660c
-  - 144.225.187.153@25367@vless@0de30932
-  - cnn-2.hysteria.ltd@6443@trojan@242365dc
   - open-octopus.rooster465.autos@443@trojan@3209a50d
   - frank-piranha.rooster465.autos@443@trojan@23919b44
-  - novel-bat.rooster465.autos@443@trojan@c1b3f0b2
-  - funny-squid.rooster465.autos@443@trojan@bee33153
-  - pleased-lobster.rooster465.autos@443@trojan@6be6b79a
-  - nl-ws-33.hysteria.ltd@5443@trojan@ed67dd8a
-  - renewed-chigger.rooster465.autos@443@trojan@8ca33ce5
-  - improved-anteater.rooster465.autos@443@trojan@c6d90802
-  - included-hedgehog.rooster465.autos@443@trojan@f4edb168
   - classic-duckling.rooster465.autos@443@trojan@3c3f69c6
-  - cnn-1.hysteria.ltd@7443@trojan@e7167606
-  - 144.24.87.69@50001@vless@c0567d04
-  - 192.9.156.27@587@vless@5af9acaf
-  - 172.96.192.114@44855@vless@2d4b4cab
-  - 185.186.245.206@81@vless@adbb78f1
-  - 157.90.183.51@5555@socks5@0dd59775
-  - 104.17.223.92@8443@vless@eade5ff9
-  - 167.88.160.144@8443@vless@e2c75484
-  - 43.133.237.158@8443@vless@bfd20782
-  - 31.220.31.67@443@vless@58580c20
-  - 204.44.74.220@25367@vless@e4b9f52c
-  - 146.56.99.255@56789@vless@5a0622a1
-  - 31.59.136.248@2053@vless@4f4c5098
-  - 106.52.215.138@7890@socks5@8700574f
   - 146.75.119.82@80@vless@9d475935
-  - 114.80.8.128@39001@trojan@09c684e9
+  - 106.52.215.138@7890@socks5@8700574f
   - 5.255.117.127@1080@socks5@8c672508
-  - united-grouse.rooster465.autos@443@trojan@9b3f9294
-  - flying-escargot.rooster465.autos@443@trojan@89a2e5dd
-  - immense-eagle.rooster465.autos@443@trojan@e769c3f7
-  - wise-rhino.rooster465.autos@443@trojan@8f3c8420
-  - allowed-hermit.rooster465.autos@443@trojan@b46b8459
-  - dashing-bedbug.rooster465.autos@443@trojan@acd72d31
-  - rational-joey.rooster465.autos@443@trojan@008806fd
-  - allowing-ram.rooster465.autos@443@trojan@a752526a
-  - composed-sheep.rooster465.autos@443@trojan@23c4b83c
+  - ansooyefilter-production.up.railway.app@443@vless@5ae1921e
+  - 45.88.42.29@50117@hysteria2@62d78a9e
+  - 114.80.8.128@39001@trojan@09c684e9
   - 47.253.211.16@1080@socks5@18ca66a1
-  - 141.11.76.234@5555@socks5@c0db1ccd
 - name: PG-Sage
   type: load-balance
   url: http://www.eastmoney.com
@@ -1276,72 +704,38 @@ proxy-groups:
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
   - xinnusvpn.duckdns.org@8443@vless@cf839874
-  - 172.67.143.139@8080@vless@2fa51af6
-  - 104.21.39.53@8080@vless@0210cabb
   - 104.18.17.216@443@trojan@42d13e15
+  - 104.128.72.119@80@ss@99398782
   - iv2yun.iv2yunch.work@63353@vmess@a012b114
   - gt-fr-01.live@443@vless@25db7a0e
-  - 45.194.10.141@8443@vless@a1564e76
+  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
   - vip.curvy45.cfd@14953@hysteria2@26c3af2b
+  - itv.dimple35.shop@10325@hysteria2@077c593a
   - fdc.contact09.shop@7599@hysteria2@a5e674bb
   - pim.depreca09.cyou@3637@hysteria2@d9705693
+  - ecm.crystal63.shop@10457@hysteria2@32c20971
+  - gms.doubl02.shop@6622@hysteria2@1beba44b
   - tld.const98.cfd@14257@hysteria2@32d63a65
   - rpm.cyclic02.cyou@10748@hysteria2@3c0a0c19
-  - gms.doubl02.shop@6622@hysteria2@1beba44b
-  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
-  - ecm.crystal63.shop@10457@hysteria2@32c20971
-  - itv.dimple35.shop@10325@hysteria2@077c593a
   - sca.crystal63.shop@14380@anytls@3037ebf0
-  - bip.contact09.shop@9844@anytls@7589197e
   - rad.const98.cfd@4633@anytls@eba51fe0
+  - bip.contact09.shop@9844@anytls@7589197e
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 45.39.230.228@443@vless@06b0bd6b
-  - pol02.port-server.online@443@vless@9b78606c
-  - 82.29.43.26@443@vless@e45a1e71
   - 45.195.137.169@8443@vless@eb4256c8
+  - pol02.port-server.online@443@vless@9b78606c
   - 45.195.137.206@8443@vless@24e061fe
   - 204.48.29.137@1088@socks5@09bb7403
-  - 204.44.74.240@25367@vless@2db3660c
-  - 144.225.187.153@25367@vless@0de30932
-  - cnn-2.hysteria.ltd@6443@trojan@242365dc
   - open-octopus.rooster465.autos@443@trojan@3209a50d
   - frank-piranha.rooster465.autos@443@trojan@23919b44
-  - novel-bat.rooster465.autos@443@trojan@c1b3f0b2
-  - funny-squid.rooster465.autos@443@trojan@bee33153
-  - pleased-lobster.rooster465.autos@443@trojan@6be6b79a
-  - nl-ws-33.hysteria.ltd@5443@trojan@ed67dd8a
-  - renewed-chigger.rooster465.autos@443@trojan@8ca33ce5
-  - improved-anteater.rooster465.autos@443@trojan@c6d90802
-  - included-hedgehog.rooster465.autos@443@trojan@f4edb168
   - classic-duckling.rooster465.autos@443@trojan@3c3f69c6
-  - cnn-1.hysteria.ltd@7443@trojan@e7167606
-  - 144.24.87.69@50001@vless@c0567d04
-  - 192.9.156.27@587@vless@5af9acaf
-  - 172.96.192.114@44855@vless@2d4b4cab
-  - 185.186.245.206@81@vless@adbb78f1
-  - 157.90.183.51@5555@socks5@0dd59775
-  - 104.17.223.92@8443@vless@eade5ff9
-  - 167.88.160.144@8443@vless@e2c75484
-  - 43.133.237.158@8443@vless@bfd20782
-  - 31.220.31.67@443@vless@58580c20
-  - 204.44.74.220@25367@vless@e4b9f52c
-  - 146.56.99.255@56789@vless@5a0622a1
-  - 31.59.136.248@2053@vless@4f4c5098
-  - 106.52.215.138@7890@socks5@8700574f
   - 146.75.119.82@80@vless@9d475935
-  - 114.80.8.128@39001@trojan@09c684e9
+  - 106.52.215.138@7890@socks5@8700574f
   - 5.255.117.127@1080@socks5@8c672508
-  - united-grouse.rooster465.autos@443@trojan@9b3f9294
-  - flying-escargot.rooster465.autos@443@trojan@89a2e5dd
-  - immense-eagle.rooster465.autos@443@trojan@e769c3f7
-  - wise-rhino.rooster465.autos@443@trojan@8f3c8420
-  - allowed-hermit.rooster465.autos@443@trojan@b46b8459
-  - dashing-bedbug.rooster465.autos@443@trojan@acd72d31
-  - rational-joey.rooster465.autos@443@trojan@008806fd
-  - allowing-ram.rooster465.autos@443@trojan@a752526a
-  - composed-sheep.rooster465.autos@443@trojan@23c4b83c
+  - ansooyefilter-production.up.railway.app@443@vless@5ae1921e
+  - 45.88.42.29@50117@hysteria2@62d78a9e
+  - 114.80.8.128@39001@trojan@09c684e9
   - 47.253.211.16@1080@socks5@18ca66a1
-  - 141.11.76.234@5555@socks5@c0db1ccd
 - name: PG-CN
   type: load-balance
   url: https://www.sse.com.cn
@@ -1358,73 +752,39 @@ proxy-groups:
   lazy: false
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
+  - 104.128.72.119@80@ss@99398782
+  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
   - vip.curvy45.cfd@14953@hysteria2@26c3af2b
+  - itv.dimple35.shop@10325@hysteria2@077c593a
   - fdc.contact09.shop@7599@hysteria2@a5e674bb
   - pim.depreca09.cyou@3637@hysteria2@d9705693
+  - ecm.crystal63.shop@10457@hysteria2@32c20971
+  - gms.doubl02.shop@6622@hysteria2@1beba44b
   - tld.const98.cfd@14257@hysteria2@32d63a65
   - rpm.cyclic02.cyou@10748@hysteria2@3c0a0c19
-  - gms.doubl02.shop@6622@hysteria2@1beba44b
-  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
-  - ecm.crystal63.shop@10457@hysteria2@32c20971
-  - itv.dimple35.shop@10325@hysteria2@077c593a
   - sca.crystal63.shop@14380@anytls@3037ebf0
-  - bip.contact09.shop@9844@anytls@7589197e
   - rad.const98.cfd@4633@anytls@eba51fe0
+  - bip.contact09.shop@9844@anytls@7589197e
   - 45.39.230.228@443@vless@06b0bd6b
   - pol02.port-server.online@443@vless@9b78606c
   - 204.48.29.137@1088@socks5@09bb7403
-  - 204.44.74.240@25367@vless@2db3660c
-  - 144.225.187.153@25367@vless@0de30932
   - frank-piranha.rooster465.autos@443@trojan@23919b44
-  - novel-bat.rooster465.autos@443@trojan@c1b3f0b2
-  - funny-squid.rooster465.autos@443@trojan@bee33153
-  - pleased-lobster.rooster465.autos@443@trojan@6be6b79a
-  - 144.24.87.69@50001@vless@c0567d04
-  - 192.9.156.27@587@vless@5af9acaf
-  - 172.96.192.114@44855@vless@2d4b4cab
-  - 185.186.245.206@81@vless@adbb78f1
-  - 167.88.160.144@8443@vless@e2c75484
-  - 31.220.31.67@443@vless@58580c20
-  - 204.44.74.220@25367@vless@e4b9f52c
-  - 146.56.99.255@56789@vless@5a0622a1
-  - 31.59.136.248@2053@vless@4f4c5098
+  - ansooyefilter-production.up.railway.app@443@vless@5ae1921e
   - 47.253.211.16@1080@socks5@18ca66a1
   - xinnusvpn.duckdns.org@8443@vless@cf839874
-  - 172.67.143.139@8080@vless@2fa51af6
-  - 104.21.39.53@8080@vless@0210cabb
   - 104.18.17.216@443@trojan@42d13e15
   - iv2yun.iv2yunch.work@63353@vmess@a012b114
   - gt-fr-01.live@443@vless@25db7a0e
-  - 45.194.10.141@8443@vless@a1564e76
   - v6.hdacd.com@30806@vmess@c4d1fb0a
-  - 82.29.43.26@443@vless@e45a1e71
   - 45.195.137.169@8443@vless@eb4256c8
   - 45.195.137.206@8443@vless@24e061fe
-  - cnn-2.hysteria.ltd@6443@trojan@242365dc
   - open-octopus.rooster465.autos@443@trojan@3209a50d
-  - nl-ws-33.hysteria.ltd@5443@trojan@ed67dd8a
-  - renewed-chigger.rooster465.autos@443@trojan@8ca33ce5
-  - improved-anteater.rooster465.autos@443@trojan@c6d90802
-  - included-hedgehog.rooster465.autos@443@trojan@f4edb168
   - classic-duckling.rooster465.autos@443@trojan@3c3f69c6
-  - cnn-1.hysteria.ltd@7443@trojan@e7167606
-  - 157.90.183.51@5555@socks5@0dd59775
-  - 104.17.223.92@8443@vless@eade5ff9
-  - 43.133.237.158@8443@vless@bfd20782
-  - 106.52.215.138@7890@socks5@8700574f
   - 146.75.119.82@80@vless@9d475935
-  - 114.80.8.128@39001@trojan@09c684e9
+  - 106.52.215.138@7890@socks5@8700574f
   - 5.255.117.127@1080@socks5@8c672508
-  - united-grouse.rooster465.autos@443@trojan@9b3f9294
-  - flying-escargot.rooster465.autos@443@trojan@89a2e5dd
-  - immense-eagle.rooster465.autos@443@trojan@e769c3f7
-  - wise-rhino.rooster465.autos@443@trojan@8f3c8420
-  - allowed-hermit.rooster465.autos@443@trojan@b46b8459
-  - dashing-bedbug.rooster465.autos@443@trojan@acd72d31
-  - rational-joey.rooster465.autos@443@trojan@008806fd
-  - allowing-ram.rooster465.autos@443@trojan@a752526a
-  - composed-sheep.rooster465.autos@443@trojan@23c4b83c
-  - 141.11.76.234@5555@socks5@c0db1ccd
+  - 45.88.42.29@50117@hysteria2@62d78a9e
+  - 114.80.8.128@39001@trojan@09c684e9
   - PG-fast
   - PG-default
 - name: PG-GitHub
@@ -1435,72 +795,38 @@ proxy-groups:
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
   - xinnusvpn.duckdns.org@8443@vless@cf839874
-  - 172.67.143.139@8080@vless@2fa51af6
   - 104.18.17.216@443@trojan@42d13e15
-  - 104.21.39.53@8080@vless@0210cabb
   - iv2yun.iv2yunch.work@63353@vmess@a012b114
+  - 104.128.72.119@80@ss@99398782
   - gt-fr-01.live@443@vless@25db7a0e
-  - 45.194.10.141@8443@vless@a1564e76
+  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
   - vip.curvy45.cfd@14953@hysteria2@26c3af2b
+  - itv.dimple35.shop@10325@hysteria2@077c593a
   - fdc.contact09.shop@7599@hysteria2@a5e674bb
   - pim.depreca09.cyou@3637@hysteria2@d9705693
+  - ecm.crystal63.shop@10457@hysteria2@32c20971
+  - gms.doubl02.shop@6622@hysteria2@1beba44b
   - tld.const98.cfd@14257@hysteria2@32d63a65
   - rpm.cyclic02.cyou@10748@hysteria2@3c0a0c19
-  - gms.doubl02.shop@6622@hysteria2@1beba44b
-  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
-  - ecm.crystal63.shop@10457@hysteria2@32c20971
-  - itv.dimple35.shop@10325@hysteria2@077c593a
   - sca.crystal63.shop@14380@anytls@3037ebf0
-  - bip.contact09.shop@9844@anytls@7589197e
   - rad.const98.cfd@4633@anytls@eba51fe0
+  - bip.contact09.shop@9844@anytls@7589197e
   - v6.hdacd.com@30806@vmess@c4d1fb0a
   - 45.39.230.228@443@vless@06b0bd6b
-  - pol02.port-server.online@443@vless@9b78606c
   - 45.195.137.169@8443@vless@eb4256c8
+  - pol02.port-server.online@443@vless@9b78606c
   - 45.195.137.206@8443@vless@24e061fe
   - 204.48.29.137@1088@socks5@09bb7403
-  - 204.44.74.240@25367@vless@2db3660c
-  - 82.29.43.26@443@vless@e45a1e71
-  - cnn-2.hysteria.ltd@6443@trojan@242365dc
   - open-octopus.rooster465.autos@443@trojan@3209a50d
   - frank-piranha.rooster465.autos@443@trojan@23919b44
-  - novel-bat.rooster465.autos@443@trojan@c1b3f0b2
-  - funny-squid.rooster465.autos@443@trojan@bee33153
-  - pleased-lobster.rooster465.autos@443@trojan@6be6b79a
-  - nl-ws-33.hysteria.ltd@5443@trojan@ed67dd8a
-  - renewed-chigger.rooster465.autos@443@trojan@8ca33ce5
-  - improved-anteater.rooster465.autos@443@trojan@c6d90802
-  - included-hedgehog.rooster465.autos@443@trojan@f4edb168
   - classic-duckling.rooster465.autos@443@trojan@3c3f69c6
-  - 157.90.183.51@5555@socks5@0dd59775
-  - cnn-1.hysteria.ltd@7443@trojan@e7167606
-  - 104.17.223.92@8443@vless@eade5ff9
-  - 144.225.187.153@25367@vless@0de30932
-  - 144.24.87.69@50001@vless@c0567d04
-  - 167.88.160.144@8443@vless@e2c75484
-  - 192.9.156.27@587@vless@5af9acaf
-  - 172.96.192.114@44855@vless@2d4b4cab
-  - 185.186.245.206@81@vless@adbb78f1
-  - 43.133.237.158@8443@vless@bfd20782
-  - 204.44.74.220@25367@vless@e4b9f52c
-  - 31.220.31.67@443@vless@58580c20
-  - 31.59.136.248@2053@vless@4f4c5098
-  - 146.56.99.255@56789@vless@5a0622a1
-  - 5.255.117.127@1080@socks5@8c672508
   - 146.75.119.82@80@vless@9d475935
+  - 5.255.117.127@1080@socks5@8c672508
+  - ansooyefilter-production.up.railway.app@443@vless@5ae1921e
   - 47.253.211.16@1080@socks5@18ca66a1
-  - united-grouse.rooster465.autos@443@trojan@9b3f9294
-  - flying-escargot.rooster465.autos@443@trojan@89a2e5dd
-  - immense-eagle.rooster465.autos@443@trojan@e769c3f7
-  - wise-rhino.rooster465.autos@443@trojan@8f3c8420
-  - allowed-hermit.rooster465.autos@443@trojan@b46b8459
-  - dashing-bedbug.rooster465.autos@443@trojan@acd72d31
-  - rational-joey.rooster465.autos@443@trojan@008806fd
-  - allowing-ram.rooster465.autos@443@trojan@a752526a
-  - composed-sheep.rooster465.autos@443@trojan@23c4b83c
+  - 45.88.42.29@50117@hysteria2@62d78a9e
   - 106.52.215.138@7890@socks5@8700574f
   - 114.80.8.128@39001@trojan@09c684e9
-  - 141.11.76.234@5555@socks5@c0db1ccd
   - PG-fast
   - PG-default
 - name: PG-YouTube
@@ -1511,73 +837,39 @@ proxy-groups:
   strategy: round-robin
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
+  - 104.128.72.119@80@ss@99398782
+  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
   - vip.curvy45.cfd@14953@hysteria2@26c3af2b
+  - itv.dimple35.shop@10325@hysteria2@077c593a
   - fdc.contact09.shop@7599@hysteria2@a5e674bb
   - pim.depreca09.cyou@3637@hysteria2@d9705693
+  - ecm.crystal63.shop@10457@hysteria2@32c20971
+  - gms.doubl02.shop@6622@hysteria2@1beba44b
   - tld.const98.cfd@14257@hysteria2@32d63a65
   - rpm.cyclic02.cyou@10748@hysteria2@3c0a0c19
-  - gms.doubl02.shop@6622@hysteria2@1beba44b
-  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
-  - ecm.crystal63.shop@10457@hysteria2@32c20971
-  - itv.dimple35.shop@10325@hysteria2@077c593a
   - sca.crystal63.shop@14380@anytls@3037ebf0
-  - bip.contact09.shop@9844@anytls@7589197e
   - rad.const98.cfd@4633@anytls@eba51fe0
+  - bip.contact09.shop@9844@anytls@7589197e
   - 45.39.230.228@443@vless@06b0bd6b
   - pol02.port-server.online@443@vless@9b78606c
   - 204.48.29.137@1088@socks5@09bb7403
-  - 204.44.74.240@25367@vless@2db3660c
-  - 144.225.187.153@25367@vless@0de30932
   - frank-piranha.rooster465.autos@443@trojan@23919b44
-  - novel-bat.rooster465.autos@443@trojan@c1b3f0b2
-  - funny-squid.rooster465.autos@443@trojan@bee33153
-  - pleased-lobster.rooster465.autos@443@trojan@6be6b79a
-  - 144.24.87.69@50001@vless@c0567d04
-  - 192.9.156.27@587@vless@5af9acaf
-  - 172.96.192.114@44855@vless@2d4b4cab
-  - 185.186.245.206@81@vless@adbb78f1
-  - 167.88.160.144@8443@vless@e2c75484
-  - 31.220.31.67@443@vless@58580c20
-  - 204.44.74.220@25367@vless@e4b9f52c
-  - 146.56.99.255@56789@vless@5a0622a1
-  - 31.59.136.248@2053@vless@4f4c5098
+  - ansooyefilter-production.up.railway.app@443@vless@5ae1921e
   - 47.253.211.16@1080@socks5@18ca66a1
   - xinnusvpn.duckdns.org@8443@vless@cf839874
-  - 172.67.143.139@8080@vless@2fa51af6
-  - 104.21.39.53@8080@vless@0210cabb
   - 104.18.17.216@443@trojan@42d13e15
   - iv2yun.iv2yunch.work@63353@vmess@a012b114
   - gt-fr-01.live@443@vless@25db7a0e
-  - 45.194.10.141@8443@vless@a1564e76
   - v6.hdacd.com@30806@vmess@c4d1fb0a
-  - 82.29.43.26@443@vless@e45a1e71
   - 45.195.137.169@8443@vless@eb4256c8
   - 45.195.137.206@8443@vless@24e061fe
-  - cnn-2.hysteria.ltd@6443@trojan@242365dc
   - open-octopus.rooster465.autos@443@trojan@3209a50d
-  - nl-ws-33.hysteria.ltd@5443@trojan@ed67dd8a
-  - renewed-chigger.rooster465.autos@443@trojan@8ca33ce5
-  - improved-anteater.rooster465.autos@443@trojan@c6d90802
-  - included-hedgehog.rooster465.autos@443@trojan@f4edb168
   - classic-duckling.rooster465.autos@443@trojan@3c3f69c6
-  - cnn-1.hysteria.ltd@7443@trojan@e7167606
-  - 157.90.183.51@5555@socks5@0dd59775
-  - 104.17.223.92@8443@vless@eade5ff9
-  - 43.133.237.158@8443@vless@bfd20782
-  - 106.52.215.138@7890@socks5@8700574f
   - 146.75.119.82@80@vless@9d475935
-  - 114.80.8.128@39001@trojan@09c684e9
+  - 106.52.215.138@7890@socks5@8700574f
   - 5.255.117.127@1080@socks5@8c672508
-  - united-grouse.rooster465.autos@443@trojan@9b3f9294
-  - flying-escargot.rooster465.autos@443@trojan@89a2e5dd
-  - immense-eagle.rooster465.autos@443@trojan@e769c3f7
-  - wise-rhino.rooster465.autos@443@trojan@8f3c8420
-  - allowed-hermit.rooster465.autos@443@trojan@b46b8459
-  - dashing-bedbug.rooster465.autos@443@trojan@acd72d31
-  - rational-joey.rooster465.autos@443@trojan@008806fd
-  - allowing-ram.rooster465.autos@443@trojan@a752526a
-  - composed-sheep.rooster465.autos@443@trojan@23c4b83c
-  - 141.11.76.234@5555@socks5@c0db1ccd
+  - 45.88.42.29@50117@hysteria2@62d78a9e
+  - 114.80.8.128@39001@trojan@09c684e9
   - PG-fast
   - PG-default
 - name: PG-Twitter
@@ -1588,73 +880,39 @@ proxy-groups:
   lazy: false
   proxies:
   - 157.254.223.44@34567@mieru@7af1c875
+  - 104.128.72.119@80@ss@99398782
+  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
   - vip.curvy45.cfd@14953@hysteria2@26c3af2b
+  - itv.dimple35.shop@10325@hysteria2@077c593a
   - fdc.contact09.shop@7599@hysteria2@a5e674bb
   - pim.depreca09.cyou@3637@hysteria2@d9705693
+  - ecm.crystal63.shop@10457@hysteria2@32c20971
+  - gms.doubl02.shop@6622@hysteria2@1beba44b
   - tld.const98.cfd@14257@hysteria2@32d63a65
   - rpm.cyclic02.cyou@10748@hysteria2@3c0a0c19
-  - gms.doubl02.shop@6622@hysteria2@1beba44b
-  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
-  - ecm.crystal63.shop@10457@hysteria2@32c20971
-  - itv.dimple35.shop@10325@hysteria2@077c593a
   - sca.crystal63.shop@14380@anytls@3037ebf0
-  - bip.contact09.shop@9844@anytls@7589197e
   - rad.const98.cfd@4633@anytls@eba51fe0
+  - bip.contact09.shop@9844@anytls@7589197e
   - 45.39.230.228@443@vless@06b0bd6b
   - pol02.port-server.online@443@vless@9b78606c
   - 204.48.29.137@1088@socks5@09bb7403
-  - 204.44.74.240@25367@vless@2db3660c
-  - 144.225.187.153@25367@vless@0de30932
   - frank-piranha.rooster465.autos@443@trojan@23919b44
-  - novel-bat.rooster465.autos@443@trojan@c1b3f0b2
-  - funny-squid.rooster465.autos@443@trojan@bee33153
-  - pleased-lobster.rooster465.autos@443@trojan@6be6b79a
-  - 144.24.87.69@50001@vless@c0567d04
-  - 192.9.156.27@587@vless@5af9acaf
-  - 172.96.192.114@44855@vless@2d4b4cab
-  - 185.186.245.206@81@vless@adbb78f1
-  - 167.88.160.144@8443@vless@e2c75484
-  - 31.220.31.67@443@vless@58580c20
-  - 204.44.74.220@25367@vless@e4b9f52c
-  - 146.56.99.255@56789@vless@5a0622a1
-  - 31.59.136.248@2053@vless@4f4c5098
+  - ansooyefilter-production.up.railway.app@443@vless@5ae1921e
   - 47.253.211.16@1080@socks5@18ca66a1
   - xinnusvpn.duckdns.org@8443@vless@cf839874
-  - 172.67.143.139@8080@vless@2fa51af6
-  - 104.21.39.53@8080@vless@0210cabb
   - 104.18.17.216@443@trojan@42d13e15
   - iv2yun.iv2yunch.work@63353@vmess@a012b114
   - gt-fr-01.live@443@vless@25db7a0e
-  - 45.194.10.141@8443@vless@a1564e76
   - v6.hdacd.com@30806@vmess@c4d1fb0a
-  - 82.29.43.26@443@vless@e45a1e71
   - 45.195.137.169@8443@vless@eb4256c8
   - 45.195.137.206@8443@vless@24e061fe
-  - cnn-2.hysteria.ltd@6443@trojan@242365dc
   - open-octopus.rooster465.autos@443@trojan@3209a50d
-  - nl-ws-33.hysteria.ltd@5443@trojan@ed67dd8a
-  - renewed-chigger.rooster465.autos@443@trojan@8ca33ce5
-  - improved-anteater.rooster465.autos@443@trojan@c6d90802
-  - included-hedgehog.rooster465.autos@443@trojan@f4edb168
   - classic-duckling.rooster465.autos@443@trojan@3c3f69c6
-  - cnn-1.hysteria.ltd@7443@trojan@e7167606
-  - 157.90.183.51@5555@socks5@0dd59775
-  - 104.17.223.92@8443@vless@eade5ff9
-  - 43.133.237.158@8443@vless@bfd20782
-  - 106.52.215.138@7890@socks5@8700574f
   - 146.75.119.82@80@vless@9d475935
-  - 114.80.8.128@39001@trojan@09c684e9
+  - 106.52.215.138@7890@socks5@8700574f
   - 5.255.117.127@1080@socks5@8c672508
-  - united-grouse.rooster465.autos@443@trojan@9b3f9294
-  - flying-escargot.rooster465.autos@443@trojan@89a2e5dd
-  - immense-eagle.rooster465.autos@443@trojan@e769c3f7
-  - wise-rhino.rooster465.autos@443@trojan@8f3c8420
-  - allowed-hermit.rooster465.autos@443@trojan@b46b8459
-  - dashing-bedbug.rooster465.autos@443@trojan@acd72d31
-  - rational-joey.rooster465.autos@443@trojan@008806fd
-  - allowing-ram.rooster465.autos@443@trojan@a752526a
-  - composed-sheep.rooster465.autos@443@trojan@23c4b83c
-  - 141.11.76.234@5555@socks5@c0db1ccd
+  - 45.88.42.29@50117@hysteria2@62d78a9e
+  - 114.80.8.128@39001@trojan@09c684e9
   - PG-fast
   - PG-default
 rule-providers:
