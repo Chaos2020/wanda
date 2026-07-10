@@ -226,39 +226,11 @@ proxies:
   sub_tag: P002-260618
   transport: TCP
   username: dongtaiwang.com
-- name: itv.dimple35.shop@10325@hysteria2@077c593a
-  type: hysteria2
-  server: itv.dimple35.shop
-  port: 10325
-  password: Yn3Yb1SxkpWHvyi0PDsSPIiHVQ2I3raE
-  sni: bing.com
-  skip-cert-verify: true
-- name: vip.curvy45.cfd@14953@hysteria2@26c3af2b
-  type: hysteria2
-  server: vip.curvy45.cfd
-  port: 14953
-  password: WWV8e9G0VaoZNXgC570ON4tNV3vWDWNA
-  sni: bing.com
-  skip-cert-verify: true
-- name: fdc.contact09.shop@7599@hysteria2@a5e674bb
-  type: hysteria2
-  server: fdc.contact09.shop
-  port: 7599
-  password: dhojTI2fcr1XE6dzjKHQ0pOhXMwwwEic
-  sni: bing.com
-  skip-cert-verify: true
 - name: ecm.crystal63.shop@10457@hysteria2@32c20971
   type: hysteria2
   server: ecm.crystal63.shop
   port: 10457
   password: LQzKSf45H5RDqsdkp2ZIDbf5Po13TQlp
-  sni: bing.com
-  skip-cert-verify: true
-- name: tld.const98.cfd@14257@hysteria2@32d63a65
-  type: hysteria2
-  server: tld.const98.cfd
-  port: 14257
-  password: EpgPZNDSxckzi1SqpyKUo7t1iJGE1Blm
   sni: bing.com
   skip-cert-verify: true
 - name: rpm.cyclic02.cyou@10748@hysteria2@3c0a0c19
@@ -268,11 +240,32 @@ proxies:
   password: N0YXfQ4qPvC380T3BtUZbhF49dlbQ37J
   sni: bing.com
   skip-cert-verify: true
-- name: pim.depreca09.cyou@3637@hysteria2@d9705693
+- name: tld.const98.cfd@14257@hysteria2@32d63a65
   type: hysteria2
-  server: pim.depreca09.cyou
-  port: 3637
-  password: oONSf6jzQzQ8JF7QxPmmDuPksP6FfnDz
+  server: tld.const98.cfd
+  port: 14257
+  password: EpgPZNDSxckzi1SqpyKUo7t1iJGE1Blm
+  sni: bing.com
+  skip-cert-verify: true
+- name: itv.dimple35.shop@10325@hysteria2@077c593a
+  type: hysteria2
+  server: itv.dimple35.shop
+  port: 10325
+  password: Yn3Yb1SxkpWHvyi0PDsSPIiHVQ2I3raE
+  sni: bing.com
+  skip-cert-verify: true
+- name: fdc.contact09.shop@7599@hysteria2@a5e674bb
+  type: hysteria2
+  server: fdc.contact09.shop
+  port: 7599
+  password: dhojTI2fcr1XE6dzjKHQ0pOhXMwwwEic
+  sni: bing.com
+  skip-cert-verify: true
+- name: vip.curvy45.cfd@14953@hysteria2@26c3af2b
+  type: hysteria2
+  server: vip.curvy45.cfd
+  port: 14953
+  password: WWV8e9G0VaoZNXgC570ON4tNV3vWDWNA
   sni: bing.com
   skip-cert-verify: true
 - name: irc.deduce5.cyou@14575@hysteria2@2f9434a9
@@ -280,6 +273,13 @@ proxies:
   server: irc.deduce5.cyou
   port: 14575
   password: u0TpYqMakQPO4Si5bhJkT7ZIMWAL64jp
+  sni: bing.com
+  skip-cert-verify: true
+- name: pim.depreca09.cyou@3637@hysteria2@d9705693
+  type: hysteria2
+  server: pim.depreca09.cyou
+  port: 3637
+  password: oONSf6jzQzQ8JF7QxPmmDuPksP6FfnDz
   sni: bing.com
   skip-cert-verify: true
 - name: gms.doubl02.shop@6622@hysteria2@1beba44b
@@ -336,6 +336,33 @@ proxies:
   type: vmess
   server: iv2yun.iv2yunch.work
   port: 63353
+  uuid: d73c2cea-34e9-380d-8511-bb8521aa6183
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  ws-opts:
+    path: /
+    headers:
+      Host: iv2yun.iv2yunch.work
+- name: 104.128.72.119@80@ss@99398782
+  type: ss
+  server: 104.128.72.119
+  port: 80
+  cipher: 2022-blake3-aes-128-gcm
+  password: YTE1ZWU4ZTEyZjc3YmEzZA==:Y2JhZTU3ODYtZjg3MC00NA==
+  plugin: gost-plugin
+  plugin-opts:
+    host: one.local
+    mode: websocket
+    mux: true
+    path: /ws
+    tls: false
+  udp: true
+- name: iv2yun.iv2yunch.work@61519@vmess@40b1edb8
+  type: vmess
+  server: iv2yun.iv2yunch.work
+  port: 61519
   uuid: d73c2cea-34e9-380d-8511-bb8521aa6183
   alterId: 0
   cipher: auto
@@ -415,59 +442,22 @@ proxies:
   down: 1000 Mbps
   alpn:
   - h3
-- name: kz.hagrid-connected.com@443@vless@f60f047f
+- name: zadefree-hyperlink.hyperfreelink.com@443@vless@667e809c
   type: vless
-  server: kz.hagrid-connected.com
-  port: 443
-  client-fingerprint: edge
-  encryption: none
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: nfkwd9xJCoNuWrvvieBB9VfpcDldsARAdFPL0dF5A1Q
-    short-id: 305570274c0c72cc
-  sub_tag: M002-260618
-  tls: true
-  udp: true
-  uuid: 7499f0a0-3670-4cf6-a31c-ad4cd943cf18
-  xudp: true
-  packet-encoding: xudp
-  servername: kz.hagrid-connected.com
-- name: pl.hagrid-connected.com@443@vless@a5d607e0
-  type: vless
-  server: pl.hagrid-connected.com
-  port: 443
-  uuid: 7499f0a0-3670-4cf6-a31c-ad4cd943cf18
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: nfkwd9xJCoNuWrvvieBB9VfpcDldsARAdFPL0dF5A1Q
-    short-id: 305570274c0c72cc
-  sni: pl.hagrid-connected.com
-  client-fingerprint: edge
-- name: w.r.stockym.com@443@vless@1f2540c6
-  type: vless
-  server: w.r.stockym.com
+  server: zadefree-hyperlink.hyperfreelink.com
   port: 443
   client-fingerprint: chrome
-  encryption: mlkem768x25519plus.native.0rtt.fPamMrnyoRBAgbIO56QFrFLxt-1X-jiSj7gsBKddrB8
-  flow: xtls-rprx-vision
+  encryption: none
   network: xhttp
-  reality-opts:
-    public-key: GvxmgqCvG-o1x6V2huK5WlSmTbGxmGyQkT-IiDJuCGA
-    short-id: a2289eaf45db54
-  sub_tag: B007-260618
+  sub_tag: S004-260618
   tls: true
   udp: true
-  uuid: f09d18a9-d778-4e00-a49a-c0063d1c1b11
+  uuid: 3e725086-dabd-ae9d-ffa5-3bab782249e1
   xhttp-opts:
-    mode: auto
-    path: /
-    x-padding-bytes: 100-1000
+    path: /video
   xudp: true
   packet-encoding: xudp
-  servername: www.cloudflare.com
+  servername: zadefree-hyperlink.hyperfreelink.com
 - name: log.bpminecraft.com@8880@vless@e892d40f
   type: vless
   server: log.bpminecraft.com
@@ -484,16 +474,25 @@ proxies:
     path: /pyip=ProxyIP.US.CMLiussss.net
   xudp: true
   packet-encoding: xudp
-- name: argg6.auragg.org@443@vless@90c3ef8f
+- name: 185.18.250.157@443@vless@7d9b6e10
   type: vless
-  server: argg6.auragg.org
+  server: 185.18.250.157
   port: 443
-  uuid: 837e9ea2-cf0b-46a1-93a8-7e25c3a4066c
-  network: grpc
+  client-fingerprint: chrome
+  network: ws
+  sub_tag: A001-260618
   tls: true
-  servername: argg6.auragg.org
-  grpc-opts:
-    grpc-service-name: media.session.poll
+  udp: true
+  uuid: insta:mahan_vpn
+  ws-opts:
+    headers:
+      Host: mAhaNrEaliteAm.MaHkHan.iR
+      User-Agent: Mozilla/5.0 (X11; Datanyze; Linux x86_64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/65.0.3325.181 Safari/537.36
+    path: /?ed=2560fp=chrome
+  xudp: true
+  packet-encoding: xudp
+  servername: mAhaNrEaliteAm.MaHkHan.iR
 - name: uk.r.stockym.com@23564@vless@569a97ad
   type: vless
   server: uk.r.stockym.com
@@ -516,16 +515,6 @@ proxies:
   xudp: true
   packet-encoding: xudp
   servername: gpuopen.com
-- name: argg4.auragg.org@443@vless@4b9e9beb
-  type: vless
-  server: argg4.auragg.org
-  port: 443
-  uuid: 98dab41c-f18a-406b-8de2-3cc8bb797d5d
-  network: grpc
-  tls: true
-  servername: argg4.auragg.org
-  grpc-opts:
-    grpc-service-name: media.session.poll
 - name: ppm.nsuex.com@55715@vless@86770fa6
   type: vless
   server: ppm.nsuex.com
@@ -554,6 +543,21 @@ proxies:
   xudp: true
   packet-encoding: xudp
   servername: yahoo.com
+- name: 204.48.29.137@1088@socks5@09bb7403
+  type: socks5
+  server: 204.48.29.137
+  port: 1088
+  password: ''
+  skip-cert-verify: true
+  username: ''
+- name: 3.16.130.237@443@ss@0de4178f
+  type: ss
+  server: 3.16.130.237
+  port: 443
+  cipher: aes-256-cfb
+  password: amazonskr05
+  sub_tag: S001-260618
+  udp: true
 - name: 13.38.46.189@443@ss@da77bacd
   type: ss
   server: 13.38.46.189
@@ -621,15 +625,9 @@ proxies:
   port: 443
   password: 8bc63720-5ec8-45b5-b6a6-9a21ffb490e8
   sni: argg3.auragg.org
-- name: argg2.auragg.org@443@hysteria2@d727c3be
-  type: hysteria2
-  server: argg2.auragg.org
-  port: 443
-  password: 8bc63720-5ec8-45b5-b6a6-9a21ffb490e8
-  sni: argg2.auragg.org
-- name: 13.58.60.229@443@ss@38431de4
+- name: 3.14.249.239@443@ss@e78e719d
   type: ss
-  server: 13.58.60.229
+  server: 3.14.249.239
   port: 443
   cipher: aes-256-cfb
   password: amazonskr05
@@ -639,6 +637,28 @@ proxies:
   type: socks5
   server: 47.102.150.0
   port: 7890
+- name: 13.58.60.229@443@ss@38431de4
+  type: ss
+  server: 13.58.60.229
+  port: 443
+  cipher: aes-256-cfb
+  password: amazonskr05
+  sub_tag: P002-260618
+  udp: true
+- name: argg2.auragg.org@443@hysteria2@d727c3be
+  type: hysteria2
+  server: argg2.auragg.org
+  port: 443
+  password: 8bc63720-5ec8-45b5-b6a6-9a21ffb490e8
+  sni: argg2.auragg.org
+- name: 35.180.199.237@443@ss@95990817
+  type: ss
+  server: 35.180.199.237
+  port: 443
+  cipher: aes-256-cfb
+  password: amazonskr05
+  sub_tag: S001-260618
+  udp: true
 - name: am.janvpn.ru@443@vless@f06d1eed
   type: vless
   server: am.janvpn.ru
@@ -734,6 +754,39 @@ proxies:
     path: /pyip=ProxyIP.KR.CMLiussss.net
   xudp: true
   packet-encoding: xudp
+- name: v9.hdacd.com@30809@vmess@f970299e
+  type: vmess
+  server: v9.hdacd.com
+  port: 30809
+  alterId: 2
+  cipher: auto
+  h2-opts: {}
+  http-opts: {}
+  network: tcp
+  skip-cert-verify: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- name: 45.130.125.101@8443@vless@7f998de6
+  type: vless
+  server: 45.130.125.101
+  port: 8443
+  alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  encryption: none
+  network: xhttp
+  sub_tag: B007-260618
+  tls: true
+  udp: true
+  uuid: 48006c58-db4f-467f-9652-b7a296de83c0
+  xhttp-opts:
+    host: directturk.gsmonline.top
+    mode: auto
+    path: /
+    x-padding-bytes: 100-1000
+  xudp: true
+  packet-encoding: xudp
+  servername: directturk.gsmonline.top
 - name: 69.48.229.50@40443@vless@ea5caaf5
   type: vless
   server: 69.48.229.50
@@ -751,17 +804,6 @@ proxies:
   xudp: true
   packet-encoding: xudp
   servername: deepl.com
-- name: happy-monkfish.rooster465.autos@443@trojan@f5123ce6
-  type: trojan
-  server: happy-monkfish.rooster465.autos
-  port: 443
-  client-fingerprint: chrome
-  network: tcp
-  password: HW85960347
-  skip-cert-verify: false
-  sni: happy-monkfish.rooster465.autos
-  sub_tag: S001-260618
-  udp: true
 - name: 43.133.182.111@443@vless@d88eb3cc
   type: vless
   server: 43.133.182.111
@@ -782,6 +824,17 @@ proxies:
   xudp: true
   packet-encoding: xudp
   servername: gy.hhawks.kdns.fr
+- name: happy-monkfish.rooster465.autos@443@trojan@f5123ce6
+  type: trojan
+  server: happy-monkfish.rooster465.autos
+  port: 443
+  client-fingerprint: chrome
+  network: tcp
+  password: HW85960347
+  skip-cert-verify: false
+  sni: happy-monkfish.rooster465.autos
+  sub_tag: S001-260618
+  udp: true
 - name: 5.83.129.153@20088@hysteria@db36c238
   type: hysteria
   server: 5.83.129.153
@@ -793,6 +846,35 @@ proxies:
   down: 1000 Mbps
   alpn:
   - h3
+- name: v36.hdacd.com@30836@vmess@e912117a
+  type: vmess
+  server: v36.hdacd.com
+  port: 30836
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  udp: true
+- name: v24.hdacd.com@30824@vmess@3b8e774e
+  type: vmess
+  server: v24.hdacd.com
+  port: 30824
+  alterId: 2
+  cipher: auto
+  delay: 887
+  http-opts: {}
+  network: tcp
+  skip-cert-verify: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  ws-path: /
+- name: 82.47.22.163@443@vless@642bd61d
+  type: vless
+  server: 82.47.22.163
+  port: 443
+  uuid: 5d02517f-63d5-3e9f-b467-1bcf4d4e25d3
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  servername: u695099u540f16e2s501.okgfw.top
 - name: s561.gogocs.xyz@443@vless@8d6ccb10
   type: vless
   server: s561.gogocs.xyz
@@ -811,27 +893,17 @@ proxies:
   flow: xtls-rprx-vision
   tls: true
   servername: u695099u540f16e2s501.okgfw.top
-- name: 82.47.22.163@443@vless@642bd61d
-  type: vless
-  server: 82.47.22.163
-  port: 443
-  uuid: 5d02517f-63d5-3e9f-b467-1bcf4d4e25d3
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  servername: u695099u540f16e2s501.okgfw.top
 - name: 119.166.114.153@5000@socks5@22bfc44b
   type: socks5
   server: 119.166.114.153
   port: 5000
-- name: 51.210.5.144@1088@socks5@97b8cf1e
-  type: socks5
-  server: 51.210.5.144
-  port: 1088
-  password: ''
-  skip-cert-verify: true
-  sub_tag: S001-260618
-  username: ''
+- name: 13.193.101.147@443@ss@8f6437e6
+  type: ss
+  server: 13.193.101.147
+  port: 443
+  cipher: aes-256-cfb
+  password: amazonskr05
+  udp: true
 - name: 13.192.184.199@443@ss@ddd7d1f9
   type: ss
   server: 13.192.184.199
@@ -840,68 +912,96 @@ proxies:
   password: amazonskr05
   sub_tag: S001-260618
   udp: true
-- name: 185.185.80.58@1088@socks5@0219a1be
-  type: socks5
-  server: 185.185.80.58
-  port: 1088
 - name: 47.253.211.16@1080@socks5@18ca66a1
   type: socks5
   server: 47.253.211.16
   port: 1080
   password: ''
   username: ''
-- name: 111.229.76.29@1080@socks5@4bf14c37
+- name: 185.185.80.58@1088@socks5@0219a1be
   type: socks5
-  server: 111.229.76.29
+  server: 185.185.80.58
+  port: 1088
+- name: 206.123.156.199@5827@socks5@8d62c9b9
+  type: socks5
+  server: 206.123.156.199
+  port: 5827
+- name: 47.94.255.116@7890@socks5@74cbfeac
+  type: socks5
+  server: 47.94.255.116
+  port: 7890
+- name: 206.123.156.215@7425@socks5@bfac4170
+  type: socks5
+  server: 206.123.156.215
+  port: 7425
+- name: 115.239.244.142@8310@socks5@4b4ed3db
+  type: socks5
+  server: 115.239.244.142
+  port: 8310
+- name: 156.238.232.133@5555@socks5@280ebece
+  type: socks5
+  server: 156.238.232.133
+  port: 5555
+- name: 203.189.135.105@1080@socks5@988b837a
+  type: socks5
+  server: 203.189.135.105
   port: 1080
-- name: 59.36.210.211@13552@socks5@70112259
-  type: socks5
-  server: 59.36.210.211
-  port: 13552
-- name: 218.95.39.106@59999@socks5@da5d7022
-  type: socks5
-  server: 218.95.39.106
-  port: 59999
-- name: 183.6.115.212@19450@socks5@3124caf8
-  type: socks5
-  server: 183.6.115.212
-  port: 19450
-- name: 39.105.12.149@8888@socks5@32d01e91
-  type: socks5
-  server: 39.105.12.149
-  port: 8888
-- name: 8.163.50.134@19837@socks5@a9ed61f9
-  type: socks5
-  server: 8.163.50.134
-  port: 19837
-- name: 206.123.156.217@4771@socks5@a6651d05
-  type: socks5
-  server: 206.123.156.217
-  port: 4771
-- name: 79.174.85.32@1080@socks5@80f39abc
-  type: socks5
-  server: 79.174.85.32
-  port: 1080
-- name: 206.123.156.219@5709@socks5@a3555756
+- name: 206.123.156.219@7992@socks5@7d0e60f3
   type: socks5
   server: 206.123.156.219
-  port: 5709
-- name: 206.123.156.228@10816@socks5@a855914b
+  port: 7992
+- name: 178.216.152.110@1359@socks5@a13e650c
+  type: socks5
+  server: 178.216.152.110
+  port: 1359
+- name: 206.123.156.219@10319@socks5@09f0f536
+  type: socks5
+  server: 206.123.156.219
+  port: 10319
+- name: 206.123.156.209@5456@socks5@e8129797
+  type: socks5
+  server: 206.123.156.209
+  port: 5456
+- name: 206.123.156.230@4488@socks5@d1305607
+  type: socks5
+  server: 206.123.156.230
+  port: 4488
+- name: 206.123.156.215@4178@socks5@b4bb3d69
+  type: socks5
+  server: 206.123.156.215
+  port: 4178
+- name: 206.123.156.215@31338@socks5@4c99ae23
+  type: socks5
+  server: 206.123.156.215
+  port: 31338
+- name: 206.123.156.199@5862@socks5@b3cdf81d
+  type: socks5
+  server: 206.123.156.199
+  port: 5862
+- name: 206.123.156.228@8188@socks5@dff9d7d6
   type: socks5
   server: 206.123.156.228
-  port: 10816
-- name: 122.224.198.218@1080@socks5@d109ed0f
+  port: 8188
+- name: 206.123.156.236@45525@socks5@86e444c0
   type: socks5
-  server: 122.224.198.218
-  port: 1080
-- name: 39.97.249.14@7890@socks5@3ee7aa6f
+  server: 206.123.156.236
+  port: 45525
+- name: 206.123.156.228@8355@socks5@d1c547d8
   type: socks5
-  server: 39.97.249.14
-  port: 7890
-- name: 206.123.156.235@7786@socks5@1b5aa506
+  server: 206.123.156.228
+  port: 8355
+- name: 206.123.156.215@27860@socks5@d8f2ae4d
   type: socks5
-  server: 206.123.156.235
-  port: 7786
+  server: 206.123.156.215
+  port: 27860
+- name: 206.123.156.215@15348@socks5@e54b1a92
+  type: socks5
+  server: 206.123.156.215
+  port: 15348
+- name: 206.123.156.215@31051@socks5@02e2efed
+  type: socks5
+  server: 206.123.156.215
+  port: 31051
 proxy-groups:
 - name: PG-fast
   type: url-test
@@ -911,73 +1011,87 @@ proxy-groups:
   lazy: false
   proxies:
   - 157.254.223.44@34567@mieru@852f50d8
-  - itv.dimple35.shop@10325@hysteria2@077c593a
-  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
-  - fdc.contact09.shop@7599@hysteria2@a5e674bb
   - ecm.crystal63.shop@10457@hysteria2@32c20971
-  - tld.const98.cfd@14257@hysteria2@32d63a65
   - rpm.cyclic02.cyou@10748@hysteria2@3c0a0c19
-  - pim.depreca09.cyou@3637@hysteria2@d9705693
+  - tld.const98.cfd@14257@hysteria2@32d63a65
+  - itv.dimple35.shop@10325@hysteria2@077c593a
+  - fdc.contact09.shop@7599@hysteria2@a5e674bb
+  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
   - irc.deduce5.cyou@14575@hysteria2@2f9434a9
+  - pim.depreca09.cyou@3637@hysteria2@d9705693
   - gms.doubl02.shop@6622@hysteria2@1beba44b
   - sca.crystal63.shop@14380@anytls@3037ebf0
   - bip.contact09.shop@9844@anytls@7589197e
   - rad.const98.cfd@4633@anytls@eba51fe0
   - xinnusvpn.duckdns.org@8443@vless@cf839874
   - iv2yun.iv2yunch.work@63353@vmess@a012b114
+  - 104.128.72.119@80@ss@99398782
+  - iv2yun.iv2yunch.work@61519@vmess@40b1edb8
   - us.hagrid-connected.com@443@vless@f8458d6c
   - g.r.stockym.com@443@vless@32f59120
   - us.a.avrilon.us@443@vless@a848dca1
   - 5.83.129.90@54177@hysteria@7e7bf8ca
-  - kz.hagrid-connected.com@443@vless@f60f047f
-  - pl.hagrid-connected.com@443@vless@a5d607e0
-  - w.r.stockym.com@443@vless@1f2540c6
+  - zadefree-hyperlink.hyperfreelink.com@443@vless@667e809c
   - log.bpminecraft.com@8880@vless@e892d40f
-  - argg6.auragg.org@443@vless@90c3ef8f
+  - 185.18.250.157@443@vless@7d9b6e10
   - uk.r.stockym.com@23564@vless@569a97ad
-  - argg4.auragg.org@443@vless@4b9e9beb
   - ppm.nsuex.com@55715@vless@86770fa6
   - cand.appcodes.ir@2026@vless@7bac0110
+  - 204.48.29.137@1088@socks5@09bb7403
+  - 3.16.130.237@443@ss@0de4178f
   - 13.38.46.189@443@ss@da77bacd
   - digital.try-me.store@443@vless@ea4cf4de
   - 83.147.18.179@23564@vless@6a1d1abe
   - 106.75.160.27@39001@trojan@0d135ca9
   - concise-buck.rooster465.autos@443@trojan@15ca1c50
   - argg3.auragg.org@443@hysteria2@fd4150fc
-  - argg2.auragg.org@443@hysteria2@d727c3be
-  - 13.58.60.229@443@ss@38431de4
+  - 3.14.249.239@443@ss@e78e719d
   - 47.102.150.0@7890@socks5@e751ac6b
+  - 13.58.60.229@443@ss@38431de4
+  - argg2.auragg.org@443@hysteria2@d727c3be
+  - 35.180.199.237@443@ss@95990817
   - am.janvpn.ru@443@vless@f06d1eed
   - 143.198.235.98@30080@vmess@c6bbd179
   - app-sync-data.auragg.org@443@vless@5b06c42c
   - 151.101.3.8@80@vless@6d9519a1
   - www.ntu.edu.sg@443@vless@448cd1a9
   - 104.16.107.139@8880@vless@197c088f
+  - v9.hdacd.com@30809@vmess@f970299e
+  - 45.130.125.101@8443@vless@7f998de6
   - 69.48.229.50@40443@vless@ea5caaf5
-  - happy-monkfish.rooster465.autos@443@trojan@f5123ce6
   - 43.133.182.111@443@vless@d88eb3cc
+  - happy-monkfish.rooster465.autos@443@trojan@f5123ce6
   - 5.83.129.153@20088@hysteria@db36c238
+  - v36.hdacd.com@30836@vmess@e912117a
+  - v24.hdacd.com@30824@vmess@3b8e774e
+  - 82.47.22.163@443@vless@642bd61d
   - s561.gogocs.xyz@443@vless@8d6ccb10
   - s348.okgfw.top@443@vless@4e122802
-  - 82.47.22.163@443@vless@642bd61d
   - 119.166.114.153@5000@socks5@22bfc44b
-  - 51.210.5.144@1088@socks5@97b8cf1e
+  - 13.193.101.147@443@ss@8f6437e6
   - 13.192.184.199@443@ss@ddd7d1f9
-  - 185.185.80.58@1088@socks5@0219a1be
   - 47.253.211.16@1080@socks5@18ca66a1
-  - 111.229.76.29@1080@socks5@4bf14c37
-  - 59.36.210.211@13552@socks5@70112259
-  - 218.95.39.106@59999@socks5@da5d7022
-  - 183.6.115.212@19450@socks5@3124caf8
-  - 39.105.12.149@8888@socks5@32d01e91
-  - 8.163.50.134@19837@socks5@a9ed61f9
-  - 206.123.156.217@4771@socks5@a6651d05
-  - 79.174.85.32@1080@socks5@80f39abc
-  - 206.123.156.219@5709@socks5@a3555756
-  - 206.123.156.228@10816@socks5@a855914b
-  - 122.224.198.218@1080@socks5@d109ed0f
-  - 39.97.249.14@7890@socks5@3ee7aa6f
-  - 206.123.156.235@7786@socks5@1b5aa506
+  - 185.185.80.58@1088@socks5@0219a1be
+  - 206.123.156.199@5827@socks5@8d62c9b9
+  - 47.94.255.116@7890@socks5@74cbfeac
+  - 206.123.156.215@7425@socks5@bfac4170
+  - 115.239.244.142@8310@socks5@4b4ed3db
+  - 156.238.232.133@5555@socks5@280ebece
+  - 203.189.135.105@1080@socks5@988b837a
+  - 206.123.156.219@7992@socks5@7d0e60f3
+  - 178.216.152.110@1359@socks5@a13e650c
+  - 206.123.156.219@10319@socks5@09f0f536
+  - 206.123.156.209@5456@socks5@e8129797
+  - 206.123.156.230@4488@socks5@d1305607
+  - 206.123.156.215@4178@socks5@b4bb3d69
+  - 206.123.156.215@31338@socks5@4c99ae23
+  - 206.123.156.199@5862@socks5@b3cdf81d
+  - 206.123.156.228@8188@socks5@dff9d7d6
+  - 206.123.156.236@45525@socks5@86e444c0
+  - 206.123.156.228@8355@socks5@d1c547d8
+  - 206.123.156.215@27860@socks5@d8f2ae4d
+  - 206.123.156.215@15348@socks5@e54b1a92
+  - 206.123.156.215@31051@socks5@02e2efed
 - name: PG-default
   type: fallback
   url: https://www.google.com/generate_204
@@ -986,73 +1100,87 @@ proxy-groups:
   proxies:
   - PG-fast
   - 157.254.223.44@34567@mieru@852f50d8
-  - itv.dimple35.shop@10325@hysteria2@077c593a
-  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
-  - fdc.contact09.shop@7599@hysteria2@a5e674bb
   - ecm.crystal63.shop@10457@hysteria2@32c20971
-  - tld.const98.cfd@14257@hysteria2@32d63a65
   - rpm.cyclic02.cyou@10748@hysteria2@3c0a0c19
-  - pim.depreca09.cyou@3637@hysteria2@d9705693
+  - tld.const98.cfd@14257@hysteria2@32d63a65
+  - itv.dimple35.shop@10325@hysteria2@077c593a
+  - fdc.contact09.shop@7599@hysteria2@a5e674bb
+  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
   - irc.deduce5.cyou@14575@hysteria2@2f9434a9
+  - pim.depreca09.cyou@3637@hysteria2@d9705693
   - gms.doubl02.shop@6622@hysteria2@1beba44b
   - sca.crystal63.shop@14380@anytls@3037ebf0
   - bip.contact09.shop@9844@anytls@7589197e
   - rad.const98.cfd@4633@anytls@eba51fe0
   - xinnusvpn.duckdns.org@8443@vless@cf839874
   - iv2yun.iv2yunch.work@63353@vmess@a012b114
+  - 104.128.72.119@80@ss@99398782
+  - iv2yun.iv2yunch.work@61519@vmess@40b1edb8
   - us.hagrid-connected.com@443@vless@f8458d6c
   - g.r.stockym.com@443@vless@32f59120
   - us.a.avrilon.us@443@vless@a848dca1
   - 5.83.129.90@54177@hysteria@7e7bf8ca
-  - kz.hagrid-connected.com@443@vless@f60f047f
-  - pl.hagrid-connected.com@443@vless@a5d607e0
-  - w.r.stockym.com@443@vless@1f2540c6
+  - zadefree-hyperlink.hyperfreelink.com@443@vless@667e809c
   - log.bpminecraft.com@8880@vless@e892d40f
-  - argg6.auragg.org@443@vless@90c3ef8f
+  - 185.18.250.157@443@vless@7d9b6e10
   - uk.r.stockym.com@23564@vless@569a97ad
-  - argg4.auragg.org@443@vless@4b9e9beb
   - ppm.nsuex.com@55715@vless@86770fa6
   - cand.appcodes.ir@2026@vless@7bac0110
+  - 204.48.29.137@1088@socks5@09bb7403
+  - 3.16.130.237@443@ss@0de4178f
   - 13.38.46.189@443@ss@da77bacd
   - digital.try-me.store@443@vless@ea4cf4de
   - 83.147.18.179@23564@vless@6a1d1abe
   - 106.75.160.27@39001@trojan@0d135ca9
   - concise-buck.rooster465.autos@443@trojan@15ca1c50
   - argg3.auragg.org@443@hysteria2@fd4150fc
-  - argg2.auragg.org@443@hysteria2@d727c3be
-  - 13.58.60.229@443@ss@38431de4
+  - 3.14.249.239@443@ss@e78e719d
   - 47.102.150.0@7890@socks5@e751ac6b
+  - 13.58.60.229@443@ss@38431de4
+  - argg2.auragg.org@443@hysteria2@d727c3be
+  - 35.180.199.237@443@ss@95990817
   - am.janvpn.ru@443@vless@f06d1eed
   - 143.198.235.98@30080@vmess@c6bbd179
   - app-sync-data.auragg.org@443@vless@5b06c42c
   - 151.101.3.8@80@vless@6d9519a1
   - www.ntu.edu.sg@443@vless@448cd1a9
   - 104.16.107.139@8880@vless@197c088f
+  - v9.hdacd.com@30809@vmess@f970299e
+  - 45.130.125.101@8443@vless@7f998de6
   - 69.48.229.50@40443@vless@ea5caaf5
-  - happy-monkfish.rooster465.autos@443@trojan@f5123ce6
   - 43.133.182.111@443@vless@d88eb3cc
+  - happy-monkfish.rooster465.autos@443@trojan@f5123ce6
   - 5.83.129.153@20088@hysteria@db36c238
+  - v36.hdacd.com@30836@vmess@e912117a
+  - v24.hdacd.com@30824@vmess@3b8e774e
+  - 82.47.22.163@443@vless@642bd61d
   - s561.gogocs.xyz@443@vless@8d6ccb10
   - s348.okgfw.top@443@vless@4e122802
-  - 82.47.22.163@443@vless@642bd61d
   - 119.166.114.153@5000@socks5@22bfc44b
-  - 51.210.5.144@1088@socks5@97b8cf1e
+  - 13.193.101.147@443@ss@8f6437e6
   - 13.192.184.199@443@ss@ddd7d1f9
-  - 185.185.80.58@1088@socks5@0219a1be
   - 47.253.211.16@1080@socks5@18ca66a1
-  - 111.229.76.29@1080@socks5@4bf14c37
-  - 59.36.210.211@13552@socks5@70112259
-  - 218.95.39.106@59999@socks5@da5d7022
-  - 183.6.115.212@19450@socks5@3124caf8
-  - 39.105.12.149@8888@socks5@32d01e91
-  - 8.163.50.134@19837@socks5@a9ed61f9
-  - 206.123.156.217@4771@socks5@a6651d05
-  - 79.174.85.32@1080@socks5@80f39abc
-  - 206.123.156.219@5709@socks5@a3555756
-  - 206.123.156.228@10816@socks5@a855914b
-  - 122.224.198.218@1080@socks5@d109ed0f
-  - 39.97.249.14@7890@socks5@3ee7aa6f
-  - 206.123.156.235@7786@socks5@1b5aa506
+  - 185.185.80.58@1088@socks5@0219a1be
+  - 206.123.156.199@5827@socks5@8d62c9b9
+  - 47.94.255.116@7890@socks5@74cbfeac
+  - 206.123.156.215@7425@socks5@bfac4170
+  - 115.239.244.142@8310@socks5@4b4ed3db
+  - 156.238.232.133@5555@socks5@280ebece
+  - 203.189.135.105@1080@socks5@988b837a
+  - 206.123.156.219@7992@socks5@7d0e60f3
+  - 178.216.152.110@1359@socks5@a13e650c
+  - 206.123.156.219@10319@socks5@09f0f536
+  - 206.123.156.209@5456@socks5@e8129797
+  - 206.123.156.230@4488@socks5@d1305607
+  - 206.123.156.215@4178@socks5@b4bb3d69
+  - 206.123.156.215@31338@socks5@4c99ae23
+  - 206.123.156.199@5862@socks5@b3cdf81d
+  - 206.123.156.228@8188@socks5@dff9d7d6
+  - 206.123.156.236@45525@socks5@86e444c0
+  - 206.123.156.228@8355@socks5@d1c547d8
+  - 206.123.156.215@27860@socks5@d8f2ae4d
+  - 206.123.156.215@15348@socks5@e54b1a92
+  - 206.123.156.215@31051@socks5@02e2efed
 - name: PG-AnTing
   type: load-balance
   url: https://www.google.com/generate_204
@@ -1061,73 +1189,87 @@ proxy-groups:
   strategy: round-robin
   proxies:
   - 157.254.223.44@34567@mieru@852f50d8
-  - itv.dimple35.shop@10325@hysteria2@077c593a
-  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
-  - fdc.contact09.shop@7599@hysteria2@a5e674bb
   - ecm.crystal63.shop@10457@hysteria2@32c20971
-  - tld.const98.cfd@14257@hysteria2@32d63a65
   - rpm.cyclic02.cyou@10748@hysteria2@3c0a0c19
-  - pim.depreca09.cyou@3637@hysteria2@d9705693
+  - tld.const98.cfd@14257@hysteria2@32d63a65
+  - itv.dimple35.shop@10325@hysteria2@077c593a
+  - fdc.contact09.shop@7599@hysteria2@a5e674bb
+  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
   - irc.deduce5.cyou@14575@hysteria2@2f9434a9
+  - pim.depreca09.cyou@3637@hysteria2@d9705693
   - gms.doubl02.shop@6622@hysteria2@1beba44b
   - sca.crystal63.shop@14380@anytls@3037ebf0
   - bip.contact09.shop@9844@anytls@7589197e
   - rad.const98.cfd@4633@anytls@eba51fe0
   - xinnusvpn.duckdns.org@8443@vless@cf839874
   - iv2yun.iv2yunch.work@63353@vmess@a012b114
+  - 104.128.72.119@80@ss@99398782
+  - iv2yun.iv2yunch.work@61519@vmess@40b1edb8
   - us.hagrid-connected.com@443@vless@f8458d6c
   - g.r.stockym.com@443@vless@32f59120
   - us.a.avrilon.us@443@vless@a848dca1
   - 5.83.129.90@54177@hysteria@7e7bf8ca
-  - kz.hagrid-connected.com@443@vless@f60f047f
-  - pl.hagrid-connected.com@443@vless@a5d607e0
-  - w.r.stockym.com@443@vless@1f2540c6
+  - zadefree-hyperlink.hyperfreelink.com@443@vless@667e809c
   - log.bpminecraft.com@8880@vless@e892d40f
-  - argg6.auragg.org@443@vless@90c3ef8f
+  - 185.18.250.157@443@vless@7d9b6e10
   - uk.r.stockym.com@23564@vless@569a97ad
-  - argg4.auragg.org@443@vless@4b9e9beb
   - ppm.nsuex.com@55715@vless@86770fa6
   - cand.appcodes.ir@2026@vless@7bac0110
+  - 204.48.29.137@1088@socks5@09bb7403
+  - 3.16.130.237@443@ss@0de4178f
   - 13.38.46.189@443@ss@da77bacd
   - digital.try-me.store@443@vless@ea4cf4de
   - 83.147.18.179@23564@vless@6a1d1abe
   - 106.75.160.27@39001@trojan@0d135ca9
   - concise-buck.rooster465.autos@443@trojan@15ca1c50
   - argg3.auragg.org@443@hysteria2@fd4150fc
-  - argg2.auragg.org@443@hysteria2@d727c3be
-  - 13.58.60.229@443@ss@38431de4
+  - 3.14.249.239@443@ss@e78e719d
   - 47.102.150.0@7890@socks5@e751ac6b
+  - 13.58.60.229@443@ss@38431de4
+  - argg2.auragg.org@443@hysteria2@d727c3be
+  - 35.180.199.237@443@ss@95990817
   - am.janvpn.ru@443@vless@f06d1eed
   - 143.198.235.98@30080@vmess@c6bbd179
   - app-sync-data.auragg.org@443@vless@5b06c42c
   - 151.101.3.8@80@vless@6d9519a1
   - www.ntu.edu.sg@443@vless@448cd1a9
   - 104.16.107.139@8880@vless@197c088f
+  - v9.hdacd.com@30809@vmess@f970299e
+  - 45.130.125.101@8443@vless@7f998de6
   - 69.48.229.50@40443@vless@ea5caaf5
-  - happy-monkfish.rooster465.autos@443@trojan@f5123ce6
   - 43.133.182.111@443@vless@d88eb3cc
+  - happy-monkfish.rooster465.autos@443@trojan@f5123ce6
   - 5.83.129.153@20088@hysteria@db36c238
+  - v36.hdacd.com@30836@vmess@e912117a
+  - v24.hdacd.com@30824@vmess@3b8e774e
+  - 82.47.22.163@443@vless@642bd61d
   - s561.gogocs.xyz@443@vless@8d6ccb10
   - s348.okgfw.top@443@vless@4e122802
-  - 82.47.22.163@443@vless@642bd61d
   - 119.166.114.153@5000@socks5@22bfc44b
-  - 51.210.5.144@1088@socks5@97b8cf1e
+  - 13.193.101.147@443@ss@8f6437e6
   - 13.192.184.199@443@ss@ddd7d1f9
-  - 185.185.80.58@1088@socks5@0219a1be
   - 47.253.211.16@1080@socks5@18ca66a1
-  - 111.229.76.29@1080@socks5@4bf14c37
-  - 59.36.210.211@13552@socks5@70112259
-  - 218.95.39.106@59999@socks5@da5d7022
-  - 183.6.115.212@19450@socks5@3124caf8
-  - 39.105.12.149@8888@socks5@32d01e91
-  - 8.163.50.134@19837@socks5@a9ed61f9
-  - 206.123.156.217@4771@socks5@a6651d05
-  - 79.174.85.32@1080@socks5@80f39abc
-  - 206.123.156.219@5709@socks5@a3555756
-  - 206.123.156.228@10816@socks5@a855914b
-  - 122.224.198.218@1080@socks5@d109ed0f
-  - 39.97.249.14@7890@socks5@3ee7aa6f
-  - 206.123.156.235@7786@socks5@1b5aa506
+  - 185.185.80.58@1088@socks5@0219a1be
+  - 206.123.156.199@5827@socks5@8d62c9b9
+  - 47.94.255.116@7890@socks5@74cbfeac
+  - 206.123.156.215@7425@socks5@bfac4170
+  - 115.239.244.142@8310@socks5@4b4ed3db
+  - 156.238.232.133@5555@socks5@280ebece
+  - 203.189.135.105@1080@socks5@988b837a
+  - 206.123.156.219@7992@socks5@7d0e60f3
+  - 178.216.152.110@1359@socks5@a13e650c
+  - 206.123.156.219@10319@socks5@09f0f536
+  - 206.123.156.209@5456@socks5@e8129797
+  - 206.123.156.230@4488@socks5@d1305607
+  - 206.123.156.215@4178@socks5@b4bb3d69
+  - 206.123.156.215@31338@socks5@4c99ae23
+  - 206.123.156.199@5862@socks5@b3cdf81d
+  - 206.123.156.228@8188@socks5@dff9d7d6
+  - 206.123.156.236@45525@socks5@86e444c0
+  - 206.123.156.228@8355@socks5@d1c547d8
+  - 206.123.156.215@27860@socks5@d8f2ae4d
+  - 206.123.156.215@15348@socks5@e54b1a92
+  - 206.123.156.215@31051@socks5@02e2efed
 - name: PG-Sage
   type: load-balance
   url: http://www.eastmoney.com
@@ -1136,73 +1278,87 @@ proxy-groups:
   strategy: round-robin
   proxies:
   - 157.254.223.44@34567@mieru@852f50d8
-  - itv.dimple35.shop@10325@hysteria2@077c593a
-  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
-  - fdc.contact09.shop@7599@hysteria2@a5e674bb
   - ecm.crystal63.shop@10457@hysteria2@32c20971
-  - tld.const98.cfd@14257@hysteria2@32d63a65
   - rpm.cyclic02.cyou@10748@hysteria2@3c0a0c19
-  - pim.depreca09.cyou@3637@hysteria2@d9705693
+  - tld.const98.cfd@14257@hysteria2@32d63a65
+  - itv.dimple35.shop@10325@hysteria2@077c593a
+  - fdc.contact09.shop@7599@hysteria2@a5e674bb
+  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
   - irc.deduce5.cyou@14575@hysteria2@2f9434a9
+  - pim.depreca09.cyou@3637@hysteria2@d9705693
   - gms.doubl02.shop@6622@hysteria2@1beba44b
   - sca.crystal63.shop@14380@anytls@3037ebf0
   - bip.contact09.shop@9844@anytls@7589197e
   - rad.const98.cfd@4633@anytls@eba51fe0
   - xinnusvpn.duckdns.org@8443@vless@cf839874
   - iv2yun.iv2yunch.work@63353@vmess@a012b114
+  - 104.128.72.119@80@ss@99398782
+  - iv2yun.iv2yunch.work@61519@vmess@40b1edb8
   - us.hagrid-connected.com@443@vless@f8458d6c
   - g.r.stockym.com@443@vless@32f59120
   - us.a.avrilon.us@443@vless@a848dca1
   - 5.83.129.90@54177@hysteria@7e7bf8ca
-  - kz.hagrid-connected.com@443@vless@f60f047f
-  - pl.hagrid-connected.com@443@vless@a5d607e0
-  - w.r.stockym.com@443@vless@1f2540c6
+  - zadefree-hyperlink.hyperfreelink.com@443@vless@667e809c
   - log.bpminecraft.com@8880@vless@e892d40f
-  - argg6.auragg.org@443@vless@90c3ef8f
+  - 185.18.250.157@443@vless@7d9b6e10
   - uk.r.stockym.com@23564@vless@569a97ad
-  - argg4.auragg.org@443@vless@4b9e9beb
   - ppm.nsuex.com@55715@vless@86770fa6
   - cand.appcodes.ir@2026@vless@7bac0110
+  - 204.48.29.137@1088@socks5@09bb7403
+  - 3.16.130.237@443@ss@0de4178f
   - 13.38.46.189@443@ss@da77bacd
   - digital.try-me.store@443@vless@ea4cf4de
   - 83.147.18.179@23564@vless@6a1d1abe
   - 106.75.160.27@39001@trojan@0d135ca9
   - concise-buck.rooster465.autos@443@trojan@15ca1c50
   - argg3.auragg.org@443@hysteria2@fd4150fc
-  - argg2.auragg.org@443@hysteria2@d727c3be
-  - 13.58.60.229@443@ss@38431de4
+  - 3.14.249.239@443@ss@e78e719d
   - 47.102.150.0@7890@socks5@e751ac6b
+  - 13.58.60.229@443@ss@38431de4
+  - argg2.auragg.org@443@hysteria2@d727c3be
+  - 35.180.199.237@443@ss@95990817
   - am.janvpn.ru@443@vless@f06d1eed
   - 143.198.235.98@30080@vmess@c6bbd179
   - app-sync-data.auragg.org@443@vless@5b06c42c
   - 151.101.3.8@80@vless@6d9519a1
   - www.ntu.edu.sg@443@vless@448cd1a9
   - 104.16.107.139@8880@vless@197c088f
+  - v9.hdacd.com@30809@vmess@f970299e
+  - 45.130.125.101@8443@vless@7f998de6
   - 69.48.229.50@40443@vless@ea5caaf5
-  - happy-monkfish.rooster465.autos@443@trojan@f5123ce6
   - 43.133.182.111@443@vless@d88eb3cc
+  - happy-monkfish.rooster465.autos@443@trojan@f5123ce6
   - 5.83.129.153@20088@hysteria@db36c238
+  - v36.hdacd.com@30836@vmess@e912117a
+  - v24.hdacd.com@30824@vmess@3b8e774e
+  - 82.47.22.163@443@vless@642bd61d
   - s561.gogocs.xyz@443@vless@8d6ccb10
   - s348.okgfw.top@443@vless@4e122802
-  - 82.47.22.163@443@vless@642bd61d
   - 119.166.114.153@5000@socks5@22bfc44b
-  - 51.210.5.144@1088@socks5@97b8cf1e
+  - 13.193.101.147@443@ss@8f6437e6
   - 13.192.184.199@443@ss@ddd7d1f9
-  - 185.185.80.58@1088@socks5@0219a1be
   - 47.253.211.16@1080@socks5@18ca66a1
-  - 111.229.76.29@1080@socks5@4bf14c37
-  - 59.36.210.211@13552@socks5@70112259
-  - 218.95.39.106@59999@socks5@da5d7022
-  - 183.6.115.212@19450@socks5@3124caf8
-  - 39.105.12.149@8888@socks5@32d01e91
-  - 8.163.50.134@19837@socks5@a9ed61f9
-  - 206.123.156.217@4771@socks5@a6651d05
-  - 79.174.85.32@1080@socks5@80f39abc
-  - 206.123.156.219@5709@socks5@a3555756
-  - 206.123.156.228@10816@socks5@a855914b
-  - 122.224.198.218@1080@socks5@d109ed0f
-  - 39.97.249.14@7890@socks5@3ee7aa6f
-  - 206.123.156.235@7786@socks5@1b5aa506
+  - 185.185.80.58@1088@socks5@0219a1be
+  - 206.123.156.199@5827@socks5@8d62c9b9
+  - 47.94.255.116@7890@socks5@74cbfeac
+  - 206.123.156.215@7425@socks5@bfac4170
+  - 115.239.244.142@8310@socks5@4b4ed3db
+  - 156.238.232.133@5555@socks5@280ebece
+  - 203.189.135.105@1080@socks5@988b837a
+  - 206.123.156.219@7992@socks5@7d0e60f3
+  - 178.216.152.110@1359@socks5@a13e650c
+  - 206.123.156.219@10319@socks5@09f0f536
+  - 206.123.156.209@5456@socks5@e8129797
+  - 206.123.156.230@4488@socks5@d1305607
+  - 206.123.156.215@4178@socks5@b4bb3d69
+  - 206.123.156.215@31338@socks5@4c99ae23
+  - 206.123.156.199@5862@socks5@b3cdf81d
+  - 206.123.156.228@8188@socks5@dff9d7d6
+  - 206.123.156.236@45525@socks5@86e444c0
+  - 206.123.156.228@8355@socks5@d1c547d8
+  - 206.123.156.215@27860@socks5@d8f2ae4d
+  - 206.123.156.215@15348@socks5@e54b1a92
+  - 206.123.156.215@31051@socks5@02e2efed
 - name: PG-CN
   type: load-balance
   url: https://www.sse.com.cn
@@ -1210,12 +1366,88 @@ proxy-groups:
   lazy: false
   strategy: round-robin
   proxies:
-  - 111.229.76.29@1080@socks5@4bf14c37
-  - 59.36.210.211@13552@socks5@70112259
-  - 218.95.39.106@59999@socks5@da5d7022
-  - 183.6.115.212@19450@socks5@3124caf8
-  - 39.105.12.149@8888@socks5@32d01e91
-  - 122.224.198.218@1080@socks5@d109ed0f
+  - 157.254.223.44@34567@mieru@852f50d8
+  - ecm.crystal63.shop@10457@hysteria2@32c20971
+  - rpm.cyclic02.cyou@10748@hysteria2@3c0a0c19
+  - tld.const98.cfd@14257@hysteria2@32d63a65
+  - itv.dimple35.shop@10325@hysteria2@077c593a
+  - fdc.contact09.shop@7599@hysteria2@a5e674bb
+  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
+  - irc.deduce5.cyou@14575@hysteria2@2f9434a9
+  - pim.depreca09.cyou@3637@hysteria2@d9705693
+  - gms.doubl02.shop@6622@hysteria2@1beba44b
+  - sca.crystal63.shop@14380@anytls@3037ebf0
+  - bip.contact09.shop@9844@anytls@7589197e
+  - rad.const98.cfd@4633@anytls@eba51fe0
+  - xinnusvpn.duckdns.org@8443@vless@cf839874
+  - iv2yun.iv2yunch.work@63353@vmess@a012b114
+  - 104.128.72.119@80@ss@99398782
+  - iv2yun.iv2yunch.work@61519@vmess@40b1edb8
+  - us.hagrid-connected.com@443@vless@f8458d6c
+  - g.r.stockym.com@443@vless@32f59120
+  - us.a.avrilon.us@443@vless@a848dca1
+  - 5.83.129.90@54177@hysteria@7e7bf8ca
+  - zadefree-hyperlink.hyperfreelink.com@443@vless@667e809c
+  - log.bpminecraft.com@8880@vless@e892d40f
+  - 185.18.250.157@443@vless@7d9b6e10
+  - uk.r.stockym.com@23564@vless@569a97ad
+  - ppm.nsuex.com@55715@vless@86770fa6
+  - cand.appcodes.ir@2026@vless@7bac0110
+  - 204.48.29.137@1088@socks5@09bb7403
+  - 3.16.130.237@443@ss@0de4178f
+  - 13.38.46.189@443@ss@da77bacd
+  - digital.try-me.store@443@vless@ea4cf4de
+  - 83.147.18.179@23564@vless@6a1d1abe
+  - 106.75.160.27@39001@trojan@0d135ca9
+  - concise-buck.rooster465.autos@443@trojan@15ca1c50
+  - argg3.auragg.org@443@hysteria2@fd4150fc
+  - 3.14.249.239@443@ss@e78e719d
+  - 47.102.150.0@7890@socks5@e751ac6b
+  - 13.58.60.229@443@ss@38431de4
+  - argg2.auragg.org@443@hysteria2@d727c3be
+  - 35.180.199.237@443@ss@95990817
+  - am.janvpn.ru@443@vless@f06d1eed
+  - 143.198.235.98@30080@vmess@c6bbd179
+  - app-sync-data.auragg.org@443@vless@5b06c42c
+  - 151.101.3.8@80@vless@6d9519a1
+  - www.ntu.edu.sg@443@vless@448cd1a9
+  - 104.16.107.139@8880@vless@197c088f
+  - v9.hdacd.com@30809@vmess@f970299e
+  - 45.130.125.101@8443@vless@7f998de6
+  - 69.48.229.50@40443@vless@ea5caaf5
+  - 43.133.182.111@443@vless@d88eb3cc
+  - happy-monkfish.rooster465.autos@443@trojan@f5123ce6
+  - 5.83.129.153@20088@hysteria@db36c238
+  - v36.hdacd.com@30836@vmess@e912117a
+  - v24.hdacd.com@30824@vmess@3b8e774e
+  - 82.47.22.163@443@vless@642bd61d
+  - s561.gogocs.xyz@443@vless@8d6ccb10
+  - s348.okgfw.top@443@vless@4e122802
+  - 119.166.114.153@5000@socks5@22bfc44b
+  - 13.193.101.147@443@ss@8f6437e6
+  - 13.192.184.199@443@ss@ddd7d1f9
+  - 47.253.211.16@1080@socks5@18ca66a1
+  - 185.185.80.58@1088@socks5@0219a1be
+  - 206.123.156.199@5827@socks5@8d62c9b9
+  - 47.94.255.116@7890@socks5@74cbfeac
+  - 206.123.156.215@7425@socks5@bfac4170
+  - 115.239.244.142@8310@socks5@4b4ed3db
+  - 156.238.232.133@5555@socks5@280ebece
+  - 203.189.135.105@1080@socks5@988b837a
+  - 206.123.156.219@7992@socks5@7d0e60f3
+  - 178.216.152.110@1359@socks5@a13e650c
+  - 206.123.156.219@10319@socks5@09f0f536
+  - 206.123.156.209@5456@socks5@e8129797
+  - 206.123.156.230@4488@socks5@d1305607
+  - 206.123.156.215@4178@socks5@b4bb3d69
+  - 206.123.156.215@31338@socks5@4c99ae23
+  - 206.123.156.199@5862@socks5@b3cdf81d
+  - 206.123.156.228@8188@socks5@dff9d7d6
+  - 206.123.156.236@45525@socks5@86e444c0
+  - 206.123.156.228@8355@socks5@d1c547d8
+  - 206.123.156.215@27860@socks5@d8f2ae4d
+  - 206.123.156.215@15348@socks5@e54b1a92
+  - 206.123.156.215@31051@socks5@02e2efed
 - name: PG-Google
   type: url-test
   url: https://www.google.com/generate_204
@@ -1224,73 +1456,87 @@ proxy-groups:
   lazy: false
   proxies:
   - 157.254.223.44@34567@mieru@852f50d8
-  - itv.dimple35.shop@10325@hysteria2@077c593a
-  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
-  - fdc.contact09.shop@7599@hysteria2@a5e674bb
   - ecm.crystal63.shop@10457@hysteria2@32c20971
-  - tld.const98.cfd@14257@hysteria2@32d63a65
   - rpm.cyclic02.cyou@10748@hysteria2@3c0a0c19
-  - pim.depreca09.cyou@3637@hysteria2@d9705693
+  - tld.const98.cfd@14257@hysteria2@32d63a65
+  - itv.dimple35.shop@10325@hysteria2@077c593a
+  - fdc.contact09.shop@7599@hysteria2@a5e674bb
+  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
   - irc.deduce5.cyou@14575@hysteria2@2f9434a9
+  - pim.depreca09.cyou@3637@hysteria2@d9705693
   - gms.doubl02.shop@6622@hysteria2@1beba44b
   - sca.crystal63.shop@14380@anytls@3037ebf0
   - bip.contact09.shop@9844@anytls@7589197e
   - rad.const98.cfd@4633@anytls@eba51fe0
+  - 104.128.72.119@80@ss@99398782
   - us.hagrid-connected.com@443@vless@f8458d6c
   - us.a.avrilon.us@443@vless@a848dca1
   - log.bpminecraft.com@8880@vless@e892d40f
   - ppm.nsuex.com@55715@vless@86770fa6
+  - 204.48.29.137@1088@socks5@09bb7403
+  - 3.16.130.237@443@ss@0de4178f
   - argg3.auragg.org@443@hysteria2@fd4150fc
-  - argg2.auragg.org@443@hysteria2@d727c3be
-  - 13.58.60.229@443@ss@38431de4
+  - 3.14.249.239@443@ss@e78e719d
   - 47.102.150.0@7890@socks5@e751ac6b
+  - 13.58.60.229@443@ss@38431de4
+  - argg2.auragg.org@443@hysteria2@d727c3be
   - 143.198.235.98@30080@vmess@c6bbd179
   - 104.16.107.139@8880@vless@197c088f
   - 69.48.229.50@40443@vless@ea5caaf5
+  - v24.hdacd.com@30824@vmess@3b8e774e
   - 47.253.211.16@1080@socks5@18ca66a1
+  - 206.123.156.219@7992@socks5@7d0e60f3
+  - 206.123.156.215@31051@socks5@02e2efed
   - xinnusvpn.duckdns.org@8443@vless@cf839874
   - iv2yun.iv2yunch.work@63353@vmess@a012b114
+  - iv2yun.iv2yunch.work@61519@vmess@40b1edb8
   - g.r.stockym.com@443@vless@32f59120
   - 5.83.129.90@54177@hysteria@7e7bf8ca
-  - kz.hagrid-connected.com@443@vless@f60f047f
-  - pl.hagrid-connected.com@443@vless@a5d607e0
-  - w.r.stockym.com@443@vless@1f2540c6
-  - argg6.auragg.org@443@vless@90c3ef8f
+  - zadefree-hyperlink.hyperfreelink.com@443@vless@667e809c
+  - 185.18.250.157@443@vless@7d9b6e10
   - uk.r.stockym.com@23564@vless@569a97ad
-  - argg4.auragg.org@443@vless@4b9e9beb
   - cand.appcodes.ir@2026@vless@7bac0110
   - 13.38.46.189@443@ss@da77bacd
   - digital.try-me.store@443@vless@ea4cf4de
   - 83.147.18.179@23564@vless@6a1d1abe
   - 106.75.160.27@39001@trojan@0d135ca9
   - concise-buck.rooster465.autos@443@trojan@15ca1c50
+  - 35.180.199.237@443@ss@95990817
   - am.janvpn.ru@443@vless@f06d1eed
   - app-sync-data.auragg.org@443@vless@5b06c42c
   - 151.101.3.8@80@vless@6d9519a1
   - www.ntu.edu.sg@443@vless@448cd1a9
-  - happy-monkfish.rooster465.autos@443@trojan@f5123ce6
+  - v9.hdacd.com@30809@vmess@f970299e
+  - 45.130.125.101@8443@vless@7f998de6
   - 43.133.182.111@443@vless@d88eb3cc
+  - happy-monkfish.rooster465.autos@443@trojan@f5123ce6
   - 5.83.129.153@20088@hysteria@db36c238
+  - v36.hdacd.com@30836@vmess@e912117a
+  - 82.47.22.163@443@vless@642bd61d
   - s561.gogocs.xyz@443@vless@8d6ccb10
   - s348.okgfw.top@443@vless@4e122802
-  - 82.47.22.163@443@vless@642bd61d
   - 119.166.114.153@5000@socks5@22bfc44b
-  - 51.210.5.144@1088@socks5@97b8cf1e
+  - 13.193.101.147@443@ss@8f6437e6
   - 13.192.184.199@443@ss@ddd7d1f9
   - 185.185.80.58@1088@socks5@0219a1be
-  - 111.229.76.29@1080@socks5@4bf14c37
-  - 59.36.210.211@13552@socks5@70112259
-  - 218.95.39.106@59999@socks5@da5d7022
-  - 183.6.115.212@19450@socks5@3124caf8
-  - 39.105.12.149@8888@socks5@32d01e91
-  - 8.163.50.134@19837@socks5@a9ed61f9
-  - 206.123.156.217@4771@socks5@a6651d05
-  - 79.174.85.32@1080@socks5@80f39abc
-  - 206.123.156.219@5709@socks5@a3555756
-  - 206.123.156.228@10816@socks5@a855914b
-  - 122.224.198.218@1080@socks5@d109ed0f
-  - 39.97.249.14@7890@socks5@3ee7aa6f
-  - 206.123.156.235@7786@socks5@1b5aa506
+  - 206.123.156.199@5827@socks5@8d62c9b9
+  - 47.94.255.116@7890@socks5@74cbfeac
+  - 206.123.156.215@7425@socks5@bfac4170
+  - 115.239.244.142@8310@socks5@4b4ed3db
+  - 156.238.232.133@5555@socks5@280ebece
+  - 203.189.135.105@1080@socks5@988b837a
+  - 178.216.152.110@1359@socks5@a13e650c
+  - 206.123.156.219@10319@socks5@09f0f536
+  - 206.123.156.209@5456@socks5@e8129797
+  - 206.123.156.230@4488@socks5@d1305607
+  - 206.123.156.215@4178@socks5@b4bb3d69
+  - 206.123.156.215@31338@socks5@4c99ae23
+  - 206.123.156.199@5862@socks5@b3cdf81d
+  - 206.123.156.228@8188@socks5@dff9d7d6
+  - 206.123.156.236@45525@socks5@86e444c0
+  - 206.123.156.228@8355@socks5@d1c547d8
+  - 206.123.156.215@27860@socks5@d8f2ae4d
+  - 206.123.156.215@15348@socks5@e54b1a92
   - PG-fast
   - PG-default
 - name: PG-GitHub
@@ -1300,73 +1546,87 @@ proxy-groups:
   lazy: false
   proxies:
   - 157.254.223.44@34567@mieru@852f50d8
-  - itv.dimple35.shop@10325@hysteria2@077c593a
-  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
-  - fdc.contact09.shop@7599@hysteria2@a5e674bb
   - ecm.crystal63.shop@10457@hysteria2@32c20971
-  - tld.const98.cfd@14257@hysteria2@32d63a65
   - rpm.cyclic02.cyou@10748@hysteria2@3c0a0c19
-  - pim.depreca09.cyou@3637@hysteria2@d9705693
+  - tld.const98.cfd@14257@hysteria2@32d63a65
+  - itv.dimple35.shop@10325@hysteria2@077c593a
+  - fdc.contact09.shop@7599@hysteria2@a5e674bb
+  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
   - irc.deduce5.cyou@14575@hysteria2@2f9434a9
+  - pim.depreca09.cyou@3637@hysteria2@d9705693
   - gms.doubl02.shop@6622@hysteria2@1beba44b
   - sca.crystal63.shop@14380@anytls@3037ebf0
   - bip.contact09.shop@9844@anytls@7589197e
-  - rad.const98.cfd@4633@anytls@eba51fe0
   - iv2yun.iv2yunch.work@63353@vmess@a012b114
+  - rad.const98.cfd@4633@anytls@eba51fe0
   - xinnusvpn.duckdns.org@8443@vless@cf839874
+  - 104.128.72.119@80@ss@99398782
+  - iv2yun.iv2yunch.work@61519@vmess@40b1edb8
   - g.r.stockym.com@443@vless@32f59120
   - us.hagrid-connected.com@443@vless@f8458d6c
-  - kz.hagrid-connected.com@443@vless@f60f047f
+  - zadefree-hyperlink.hyperfreelink.com@443@vless@667e809c
   - us.a.avrilon.us@443@vless@a848dca1
+  - 185.18.250.157@443@vless@7d9b6e10
   - 5.83.129.90@54177@hysteria@7e7bf8ca
-  - pl.hagrid-connected.com@443@vless@a5d607e0
   - log.bpminecraft.com@8880@vless@e892d40f
-  - argg6.auragg.org@443@vless@90c3ef8f
+  - 204.48.29.137@1088@socks5@09bb7403
   - uk.r.stockym.com@23564@vless@569a97ad
-  - argg4.auragg.org@443@vless@4b9e9beb
-  - w.r.stockym.com@443@vless@1f2540c6
   - ppm.nsuex.com@55715@vless@86770fa6
   - cand.appcodes.ir@2026@vless@7bac0110
+  - 3.16.130.237@443@ss@0de4178f
   - 13.38.46.189@443@ss@da77bacd
   - 47.102.150.0@7890@socks5@e751ac6b
   - 106.75.160.27@39001@trojan@0d135ca9
   - concise-buck.rooster465.autos@443@trojan@15ca1c50
+  - 3.14.249.239@443@ss@e78e719d
   - digital.try-me.store@443@vless@ea4cf4de
   - 83.147.18.179@23564@vless@6a1d1abe
   - 13.58.60.229@443@ss@38431de4
   - am.janvpn.ru@443@vless@f06d1eed
+  - 35.180.199.237@443@ss@95990817
   - 143.198.235.98@30080@vmess@c6bbd179
   - app-sync-data.auragg.org@443@vless@5b06c42c
   - www.ntu.edu.sg@443@vless@448cd1a9
-  - 151.101.3.8@80@vless@6d9519a1
-  - argg2.auragg.org@443@hysteria2@d727c3be
   - argg3.auragg.org@443@hysteria2@fd4150fc
+  - 151.101.3.8@80@vless@6d9519a1
   - 104.16.107.139@8880@vless@197c088f
+  - argg2.auragg.org@443@hysteria2@d727c3be
+  - 45.130.125.101@8443@vless@7f998de6
   - 69.48.229.50@40443@vless@ea5caaf5
   - 43.133.182.111@443@vless@d88eb3cc
   - 5.83.129.153@20088@hysteria@db36c238
-  - happy-monkfish.rooster465.autos@443@trojan@f5123ce6
   - 119.166.114.153@5000@socks5@22bfc44b
-  - 51.210.5.144@1088@socks5@97b8cf1e
-  - 185.185.80.58@1088@socks5@0219a1be
-  - 47.253.211.16@1080@socks5@18ca66a1
+  - happy-monkfish.rooster465.autos@443@trojan@f5123ce6
+  - v36.hdacd.com@30836@vmess@e912117a
+  - v9.hdacd.com@30809@vmess@f970299e
+  - v24.hdacd.com@30824@vmess@3b8e774e
+  - 82.47.22.163@443@vless@642bd61d
   - s561.gogocs.xyz@443@vless@8d6ccb10
   - s348.okgfw.top@443@vless@4e122802
-  - 82.47.22.163@443@vless@642bd61d
+  - 47.253.211.16@1080@socks5@18ca66a1
+  - 185.185.80.58@1088@socks5@0219a1be
+  - 206.123.156.199@5827@socks5@8d62c9b9
+  - 13.193.101.147@443@ss@8f6437e6
   - 13.192.184.199@443@ss@ddd7d1f9
-  - 111.229.76.29@1080@socks5@4bf14c37
-  - 59.36.210.211@13552@socks5@70112259
-  - 218.95.39.106@59999@socks5@da5d7022
-  - 183.6.115.212@19450@socks5@3124caf8
-  - 39.105.12.149@8888@socks5@32d01e91
-  - 206.123.156.217@4771@socks5@a6651d05
-  - 79.174.85.32@1080@socks5@80f39abc
-  - 206.123.156.219@5709@socks5@a3555756
-  - 206.123.156.228@10816@socks5@a855914b
-  - 122.224.198.218@1080@socks5@d109ed0f
-  - 8.163.50.134@19837@socks5@a9ed61f9
-  - 206.123.156.235@7786@socks5@1b5aa506
-  - 39.97.249.14@7890@socks5@3ee7aa6f
+  - 47.94.255.116@7890@socks5@74cbfeac
+  - 206.123.156.215@7425@socks5@bfac4170
+  - 115.239.244.142@8310@socks5@4b4ed3db
+  - 156.238.232.133@5555@socks5@280ebece
+  - 206.123.156.219@7992@socks5@7d0e60f3
+  - 178.216.152.110@1359@socks5@a13e650c
+  - 206.123.156.219@10319@socks5@09f0f536
+  - 206.123.156.209@5456@socks5@e8129797
+  - 206.123.156.230@4488@socks5@d1305607
+  - 206.123.156.215@4178@socks5@b4bb3d69
+  - 206.123.156.215@31338@socks5@4c99ae23
+  - 206.123.156.199@5862@socks5@b3cdf81d
+  - 206.123.156.228@8188@socks5@dff9d7d6
+  - 206.123.156.236@45525@socks5@86e444c0
+  - 206.123.156.228@8355@socks5@d1c547d8
+  - 206.123.156.215@27860@socks5@d8f2ae4d
+  - 206.123.156.215@15348@socks5@e54b1a92
+  - 203.189.135.105@1080@socks5@988b837a
+  - 206.123.156.215@31051@socks5@02e2efed
   - PG-fast
   - PG-default
 - name: PG-YouTube
@@ -1377,73 +1637,87 @@ proxy-groups:
   strategy: round-robin
   proxies:
   - 157.254.223.44@34567@mieru@852f50d8
-  - itv.dimple35.shop@10325@hysteria2@077c593a
-  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
-  - fdc.contact09.shop@7599@hysteria2@a5e674bb
   - ecm.crystal63.shop@10457@hysteria2@32c20971
-  - tld.const98.cfd@14257@hysteria2@32d63a65
   - rpm.cyclic02.cyou@10748@hysteria2@3c0a0c19
-  - pim.depreca09.cyou@3637@hysteria2@d9705693
+  - tld.const98.cfd@14257@hysteria2@32d63a65
+  - itv.dimple35.shop@10325@hysteria2@077c593a
+  - fdc.contact09.shop@7599@hysteria2@a5e674bb
+  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
   - irc.deduce5.cyou@14575@hysteria2@2f9434a9
+  - pim.depreca09.cyou@3637@hysteria2@d9705693
   - gms.doubl02.shop@6622@hysteria2@1beba44b
   - sca.crystal63.shop@14380@anytls@3037ebf0
   - bip.contact09.shop@9844@anytls@7589197e
   - rad.const98.cfd@4633@anytls@eba51fe0
+  - 104.128.72.119@80@ss@99398782
   - us.hagrid-connected.com@443@vless@f8458d6c
   - us.a.avrilon.us@443@vless@a848dca1
   - log.bpminecraft.com@8880@vless@e892d40f
   - ppm.nsuex.com@55715@vless@86770fa6
+  - 204.48.29.137@1088@socks5@09bb7403
+  - 3.16.130.237@443@ss@0de4178f
   - argg3.auragg.org@443@hysteria2@fd4150fc
-  - argg2.auragg.org@443@hysteria2@d727c3be
-  - 13.58.60.229@443@ss@38431de4
+  - 3.14.249.239@443@ss@e78e719d
   - 47.102.150.0@7890@socks5@e751ac6b
+  - 13.58.60.229@443@ss@38431de4
+  - argg2.auragg.org@443@hysteria2@d727c3be
   - 143.198.235.98@30080@vmess@c6bbd179
   - 104.16.107.139@8880@vless@197c088f
   - 69.48.229.50@40443@vless@ea5caaf5
+  - v24.hdacd.com@30824@vmess@3b8e774e
   - 47.253.211.16@1080@socks5@18ca66a1
+  - 206.123.156.219@7992@socks5@7d0e60f3
+  - 206.123.156.215@31051@socks5@02e2efed
   - xinnusvpn.duckdns.org@8443@vless@cf839874
   - iv2yun.iv2yunch.work@63353@vmess@a012b114
+  - iv2yun.iv2yunch.work@61519@vmess@40b1edb8
   - g.r.stockym.com@443@vless@32f59120
   - 5.83.129.90@54177@hysteria@7e7bf8ca
-  - kz.hagrid-connected.com@443@vless@f60f047f
-  - pl.hagrid-connected.com@443@vless@a5d607e0
-  - w.r.stockym.com@443@vless@1f2540c6
-  - argg6.auragg.org@443@vless@90c3ef8f
+  - zadefree-hyperlink.hyperfreelink.com@443@vless@667e809c
+  - 185.18.250.157@443@vless@7d9b6e10
   - uk.r.stockym.com@23564@vless@569a97ad
-  - argg4.auragg.org@443@vless@4b9e9beb
   - cand.appcodes.ir@2026@vless@7bac0110
   - 13.38.46.189@443@ss@da77bacd
   - digital.try-me.store@443@vless@ea4cf4de
   - 83.147.18.179@23564@vless@6a1d1abe
   - 106.75.160.27@39001@trojan@0d135ca9
   - concise-buck.rooster465.autos@443@trojan@15ca1c50
+  - 35.180.199.237@443@ss@95990817
   - am.janvpn.ru@443@vless@f06d1eed
   - app-sync-data.auragg.org@443@vless@5b06c42c
   - 151.101.3.8@80@vless@6d9519a1
   - www.ntu.edu.sg@443@vless@448cd1a9
-  - happy-monkfish.rooster465.autos@443@trojan@f5123ce6
+  - v9.hdacd.com@30809@vmess@f970299e
+  - 45.130.125.101@8443@vless@7f998de6
   - 43.133.182.111@443@vless@d88eb3cc
+  - happy-monkfish.rooster465.autos@443@trojan@f5123ce6
   - 5.83.129.153@20088@hysteria@db36c238
+  - v36.hdacd.com@30836@vmess@e912117a
+  - 82.47.22.163@443@vless@642bd61d
   - s561.gogocs.xyz@443@vless@8d6ccb10
   - s348.okgfw.top@443@vless@4e122802
-  - 82.47.22.163@443@vless@642bd61d
   - 119.166.114.153@5000@socks5@22bfc44b
-  - 51.210.5.144@1088@socks5@97b8cf1e
+  - 13.193.101.147@443@ss@8f6437e6
   - 13.192.184.199@443@ss@ddd7d1f9
   - 185.185.80.58@1088@socks5@0219a1be
-  - 111.229.76.29@1080@socks5@4bf14c37
-  - 59.36.210.211@13552@socks5@70112259
-  - 218.95.39.106@59999@socks5@da5d7022
-  - 183.6.115.212@19450@socks5@3124caf8
-  - 39.105.12.149@8888@socks5@32d01e91
-  - 8.163.50.134@19837@socks5@a9ed61f9
-  - 206.123.156.217@4771@socks5@a6651d05
-  - 79.174.85.32@1080@socks5@80f39abc
-  - 206.123.156.219@5709@socks5@a3555756
-  - 206.123.156.228@10816@socks5@a855914b
-  - 122.224.198.218@1080@socks5@d109ed0f
-  - 39.97.249.14@7890@socks5@3ee7aa6f
-  - 206.123.156.235@7786@socks5@1b5aa506
+  - 206.123.156.199@5827@socks5@8d62c9b9
+  - 47.94.255.116@7890@socks5@74cbfeac
+  - 206.123.156.215@7425@socks5@bfac4170
+  - 115.239.244.142@8310@socks5@4b4ed3db
+  - 156.238.232.133@5555@socks5@280ebece
+  - 203.189.135.105@1080@socks5@988b837a
+  - 178.216.152.110@1359@socks5@a13e650c
+  - 206.123.156.219@10319@socks5@09f0f536
+  - 206.123.156.209@5456@socks5@e8129797
+  - 206.123.156.230@4488@socks5@d1305607
+  - 206.123.156.215@4178@socks5@b4bb3d69
+  - 206.123.156.215@31338@socks5@4c99ae23
+  - 206.123.156.199@5862@socks5@b3cdf81d
+  - 206.123.156.228@8188@socks5@dff9d7d6
+  - 206.123.156.236@45525@socks5@86e444c0
+  - 206.123.156.228@8355@socks5@d1c547d8
+  - 206.123.156.215@27860@socks5@d8f2ae4d
+  - 206.123.156.215@15348@socks5@e54b1a92
   - PG-fast
   - PG-default
 - name: PG-Twitter
@@ -1454,73 +1728,87 @@ proxy-groups:
   lazy: false
   proxies:
   - 157.254.223.44@34567@mieru@852f50d8
-  - itv.dimple35.shop@10325@hysteria2@077c593a
-  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
-  - fdc.contact09.shop@7599@hysteria2@a5e674bb
   - ecm.crystal63.shop@10457@hysteria2@32c20971
-  - tld.const98.cfd@14257@hysteria2@32d63a65
   - rpm.cyclic02.cyou@10748@hysteria2@3c0a0c19
-  - pim.depreca09.cyou@3637@hysteria2@d9705693
+  - tld.const98.cfd@14257@hysteria2@32d63a65
+  - itv.dimple35.shop@10325@hysteria2@077c593a
+  - fdc.contact09.shop@7599@hysteria2@a5e674bb
+  - vip.curvy45.cfd@14953@hysteria2@26c3af2b
   - irc.deduce5.cyou@14575@hysteria2@2f9434a9
+  - pim.depreca09.cyou@3637@hysteria2@d9705693
   - gms.doubl02.shop@6622@hysteria2@1beba44b
   - sca.crystal63.shop@14380@anytls@3037ebf0
   - bip.contact09.shop@9844@anytls@7589197e
   - rad.const98.cfd@4633@anytls@eba51fe0
+  - 104.128.72.119@80@ss@99398782
   - us.hagrid-connected.com@443@vless@f8458d6c
   - us.a.avrilon.us@443@vless@a848dca1
   - log.bpminecraft.com@8880@vless@e892d40f
   - ppm.nsuex.com@55715@vless@86770fa6
+  - 204.48.29.137@1088@socks5@09bb7403
+  - 3.16.130.237@443@ss@0de4178f
   - argg3.auragg.org@443@hysteria2@fd4150fc
-  - argg2.auragg.org@443@hysteria2@d727c3be
-  - 13.58.60.229@443@ss@38431de4
+  - 3.14.249.239@443@ss@e78e719d
   - 47.102.150.0@7890@socks5@e751ac6b
+  - 13.58.60.229@443@ss@38431de4
+  - argg2.auragg.org@443@hysteria2@d727c3be
   - 143.198.235.98@30080@vmess@c6bbd179
   - 104.16.107.139@8880@vless@197c088f
   - 69.48.229.50@40443@vless@ea5caaf5
+  - v24.hdacd.com@30824@vmess@3b8e774e
   - 47.253.211.16@1080@socks5@18ca66a1
+  - 206.123.156.219@7992@socks5@7d0e60f3
+  - 206.123.156.215@31051@socks5@02e2efed
   - xinnusvpn.duckdns.org@8443@vless@cf839874
   - iv2yun.iv2yunch.work@63353@vmess@a012b114
+  - iv2yun.iv2yunch.work@61519@vmess@40b1edb8
   - g.r.stockym.com@443@vless@32f59120
   - 5.83.129.90@54177@hysteria@7e7bf8ca
-  - kz.hagrid-connected.com@443@vless@f60f047f
-  - pl.hagrid-connected.com@443@vless@a5d607e0
-  - w.r.stockym.com@443@vless@1f2540c6
-  - argg6.auragg.org@443@vless@90c3ef8f
+  - zadefree-hyperlink.hyperfreelink.com@443@vless@667e809c
+  - 185.18.250.157@443@vless@7d9b6e10
   - uk.r.stockym.com@23564@vless@569a97ad
-  - argg4.auragg.org@443@vless@4b9e9beb
   - cand.appcodes.ir@2026@vless@7bac0110
   - 13.38.46.189@443@ss@da77bacd
   - digital.try-me.store@443@vless@ea4cf4de
   - 83.147.18.179@23564@vless@6a1d1abe
   - 106.75.160.27@39001@trojan@0d135ca9
   - concise-buck.rooster465.autos@443@trojan@15ca1c50
+  - 35.180.199.237@443@ss@95990817
   - am.janvpn.ru@443@vless@f06d1eed
   - app-sync-data.auragg.org@443@vless@5b06c42c
   - 151.101.3.8@80@vless@6d9519a1
   - www.ntu.edu.sg@443@vless@448cd1a9
-  - happy-monkfish.rooster465.autos@443@trojan@f5123ce6
+  - v9.hdacd.com@30809@vmess@f970299e
+  - 45.130.125.101@8443@vless@7f998de6
   - 43.133.182.111@443@vless@d88eb3cc
+  - happy-monkfish.rooster465.autos@443@trojan@f5123ce6
   - 5.83.129.153@20088@hysteria@db36c238
+  - v36.hdacd.com@30836@vmess@e912117a
+  - 82.47.22.163@443@vless@642bd61d
   - s561.gogocs.xyz@443@vless@8d6ccb10
   - s348.okgfw.top@443@vless@4e122802
-  - 82.47.22.163@443@vless@642bd61d
   - 119.166.114.153@5000@socks5@22bfc44b
-  - 51.210.5.144@1088@socks5@97b8cf1e
+  - 13.193.101.147@443@ss@8f6437e6
   - 13.192.184.199@443@ss@ddd7d1f9
   - 185.185.80.58@1088@socks5@0219a1be
-  - 111.229.76.29@1080@socks5@4bf14c37
-  - 59.36.210.211@13552@socks5@70112259
-  - 218.95.39.106@59999@socks5@da5d7022
-  - 183.6.115.212@19450@socks5@3124caf8
-  - 39.105.12.149@8888@socks5@32d01e91
-  - 8.163.50.134@19837@socks5@a9ed61f9
-  - 206.123.156.217@4771@socks5@a6651d05
-  - 79.174.85.32@1080@socks5@80f39abc
-  - 206.123.156.219@5709@socks5@a3555756
-  - 206.123.156.228@10816@socks5@a855914b
-  - 122.224.198.218@1080@socks5@d109ed0f
-  - 39.97.249.14@7890@socks5@3ee7aa6f
-  - 206.123.156.235@7786@socks5@1b5aa506
+  - 206.123.156.199@5827@socks5@8d62c9b9
+  - 47.94.255.116@7890@socks5@74cbfeac
+  - 206.123.156.215@7425@socks5@bfac4170
+  - 115.239.244.142@8310@socks5@4b4ed3db
+  - 156.238.232.133@5555@socks5@280ebece
+  - 203.189.135.105@1080@socks5@988b837a
+  - 178.216.152.110@1359@socks5@a13e650c
+  - 206.123.156.219@10319@socks5@09f0f536
+  - 206.123.156.209@5456@socks5@e8129797
+  - 206.123.156.230@4488@socks5@d1305607
+  - 206.123.156.215@4178@socks5@b4bb3d69
+  - 206.123.156.215@31338@socks5@4c99ae23
+  - 206.123.156.199@5862@socks5@b3cdf81d
+  - 206.123.156.228@8188@socks5@dff9d7d6
+  - 206.123.156.236@45525@socks5@86e444c0
+  - 206.123.156.228@8355@socks5@d1c547d8
+  - 206.123.156.215@27860@socks5@d8f2ae4d
+  - 206.123.156.215@15348@socks5@e54b1a92
   - PG-fast
   - PG-default
 rule-providers:
