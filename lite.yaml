@@ -237,32 +237,6 @@ proxies:
   down: 1000 Mbps
   alpn:
   - h3
-- name: 69.84.182.152@80@vless@053bbc58
-  type: vless
-  server: 69.84.182.152
-  port: 80
-  uuid: cdfa9cde-b1c8-4f72-84bd-2266e8514764
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiaEhLN095OU11YyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=?ed=2560
-    headers:
-      Host: arkamoshtari.peghmoshtari.workers.dev
-- name: 104.21.6.82@8080@vless@a735ffab
-  type: vless
-  server: 104.21.6.82
-  port: 8080
-  network: ws
-  packet-encoding: xudp
-  skip-cert-verify: false
-  tls: false
-  udp: true
-  uuid: 03a8d415-1d9c-470d-9e2d-ea0fd6aef9c0
-  ws-opts:
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: server7.wimig16819.workers.dev
-    max-early-data: 2560
-    path: /eyJqdW5rIjoiSWdvVk5ETHBhRnNQamIiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iXX0=
 - name: 172.67.143.139@8080@vless@2fa51af6
   type: vless
   server: 172.67.143.139
@@ -301,6 +275,22 @@ proxies:
   xudp: true
   packet-encoding: xudp
   servername: gpuopen.com
+- name: 104.21.6.82@8080@vless@a735ffab
+  type: vless
+  server: 104.21.6.82
+  port: 8080
+  network: ws
+  packet-encoding: xudp
+  skip-cert-verify: false
+  tls: false
+  udp: true
+  uuid: 03a8d415-1d9c-470d-9e2d-ea0fd6aef9c0
+  ws-opts:
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: server7.wimig16819.workers.dev
+    max-early-data: 2560
+    path: /eyJqdW5rIjoiSWdvVk5ETHBhRnNQamIiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iXX0=
 - name: 172.67.134.161@8080@vless@890c862e
   type: vless
   server: 172.67.134.161
@@ -344,14 +334,18 @@ proxies:
   down: 1000 Mbps
   alpn:
   - h3
-- name: 3.16.130.237@443@ss@0de4178f
+- name: 13.38.46.189@443@ss@da77bacd
   type: ss
-  server: 3.16.130.237
+  server: 13.38.46.189
   port: 443
   cipher: aes-256-cfb
   password: amazonskr05
   sub_tag: S001-260618
   udp: true
+- name: 47.102.150.0@7890@socks5@e751ac6b
+  type: socks5
+  server: 47.102.150.0
+  port: 7890
 - name: 104.128.72.119@80@ss@99398782
   type: ss
   server: 104.128.72.119
@@ -366,13 +360,6 @@ proxies:
     path: /ws
     tls: false
   udp: true
-- name: ecm.crystal63.shop@10457@hysteria2@32c20971
-  type: hysteria2
-  server: ecm.crystal63.shop
-  port: 10457
-  password: LQzKSf45H5RDqsdkp2ZIDbf5Po13TQlp
-  sni: bing.com
-  skip-cert-verify: true
 - name: 172.67.69.211@2087@vless@c04b785f
   type: vless
   server: 172.67.69.211
@@ -392,25 +379,23 @@ proxies:
   xudp: true
   packet-encoding: xudp
   servername: vamosargentina.dpdns.org
-- name: 151.101.3.8@80@vless@6d9519a1
+- name: 69.48.229.50@40443@vless@ea5caaf5
   type: vless
-  server: 151.101.3.8
-  port: 80
-  encryption: none
-  network: ws
+  server: 69.48.229.50
+  port: 40443
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: 6AOnobBShzL_N96JRBNMfbL84_3myz8ZbKfZUEqRXiY
+    short-id: ''
   sub_tag: S001-260618
+  tls: true
   udp: true
-  uuid: 3b940e86-7b0d-40da-acf1-12d334e41023
-  ws-opts:
-    headers:
-      Host: Fastapi.Org
-      User-Agent: Mozilla/5.0 (Windows NT 6.0; Win64; x64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/55.0.2883.87 Safari/537.36
-    path: /
-    early-data-header-name: Sec-WebSocket-Protocol
-    max-early-data: 1024
+  uuid: ab51054f-de76-4a0f-9f3a-b44c8df86a6c
   xudp: true
   packet-encoding: xudp
+  servername: deepl.com
 - name: 204.48.29.137@1088@socks5@09bb7403
   type: socks5
   server: 204.48.29.137
@@ -418,10 +403,6 @@ proxies:
   password: ''
   skip-cert-verify: true
   username: ''
-- name: 119.166.114.153@5000@socks5@22bfc44b
-  type: socks5
-  server: 119.166.114.153
-  port: 5000
 - name: 35.180.122.124@443@ss@e109d200
   type: ss
   server: 35.180.122.124
@@ -429,6 +410,13 @@ proxies:
   cipher: aes-256-cfb
   password: amazonskr05
   sub_tag: A001-260618
+  udp: true
+- name: 15.237.218.22@443@ss@aebad3c3
+  type: ss
+  server: 15.237.218.22
+  port: 443
+  cipher: aes-256-cfb
+  password: amazonskr05
   udp: true
 - name: 150.251.112.40@443@vless@9db35c7d
   type: vless
@@ -452,38 +440,28 @@ proxies:
   xudp: true
   packet-encoding: xudp
   servername: www.cloudflare.com
-- name: 3.129.218.147@443@ss@bbb6dc40
-  type: ss
-  server: 3.129.218.147
-  port: 443
-  cipher: aes-256-cfb
-  password: amazonskr05
-  udp: true
-- name: 151.101.117.177@443@vless@7a88591d
+- name: 47.97.19.9@1081@socks5@81d9ca94
+  type: socks5
+  server: 47.97.19.9
+  port: 1081
+- name: 95.182.98.231@2090@vless@73bf4d17
   type: vless
-  server: 151.101.117.177
-  port: 443
-  alpn:
-  - h3
-  client-fingerprint: chrome
+  server: 95.182.98.231
+  port: 2090
   encryption: none
-  network: xhttp
-  sub_tag: B007-260618
-  tls: true
+  http-opts:
+    headers: {}
+    path:
+    - /
+  network: http
+  sub_tag: S001-260618
   udp: true
-  uuid: 2fb948c4-3120-415a-bf4f-be18c74cd466
-  xhttp-opts:
-    host: ovd13.global.ssl.fastly.net
-    mode: packet-up
-    path: /
-    sc-min-posts-interval-ms: 30
-    x-padding-bytes: 100-1000
+  uuid: eab915bc-d2df-73d1-47d0-6eb240497055
   xudp: true
   packet-encoding: xudp
-  servername: manage.fastly.com
-- name: 199.232.100.11@80@vless@c839c438
+- name: 151.101.168.11@80@vless@eb235147
   type: vless
-  server: 199.232.100.11
+  server: 151.101.168.11
   port: 80
   network: ws
   sub_tag: A001-260618
@@ -492,62 +470,69 @@ proxies:
   ws-opts:
     headers:
       Host: Fastapi.Org
-      User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/533.4
-        (KHTML, like Gecko) Chrome/5.0.375.99 Safari/533.4
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/57.0.2987.133 Safari/537.36
     path: /
   xudp: true
   packet-encoding: xudp
-- name: 47.253.211.16@1080@socks5@18ca66a1
-  type: socks5
-  server: 47.253.211.16
-  port: 1080
-  password: ''
-  username: ''
-- name: 15.188.191.198@22223@vless@f5fb0675
+- name: 199.232.97.11@80@vless@ecb06aed
   type: vless
-  server: 15.188.191.198
-  port: 22223
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  network: tcp
-  flow: ''
-- name: 15.188.191.198@22224@vless@d1d3447f
+  server: 199.232.97.11
+  port: 80
+  network: ws
+  sub_tag: A001-260618
+  udp: true
+  uuid: 3b940e86-7b0d-40da-acf1-12d334e41023
+  ws-opts:
+    headers:
+      Host: Fastapi.Org
+      User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/70.0.3538.67 Safari/537.36
+    path: /
+  xudp: true
+  packet-encoding: xudp
+- name: 199.232.184.11@80@vless@3d07844e
   type: vless
-  server: 15.188.191.198
-  port: 22224
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  network: tcp
-  flow: ''
+  server: 199.232.184.11
+  port: 80
+  network: ws
+  sub_tag: A001-260618
+  udp: true
+  uuid: 3b940e86-7b0d-40da-acf1-12d334e41023
+  ws-opts:
+    headers:
+      Host: Fastapi.Org
+      User-Agent: Mozilla/5.0 (Windows NT 6.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/60.0.3112.90 Safari/537.36
+    path: /
+  xudp: true
+  packet-encoding: xudp
 - name: 37.120.189.175@1080@socks5@df2c8fc8
   type: socks5
   server: 37.120.189.175
   port: 1080
-- name: 45.133.251.196@1080@socks5@d261197a
+- name: 92.119.56.37@7171@socks5@1b0c5056
   type: socks5
-  server: 45.133.251.196
-  port: 1080
-- name: 193.39.9.123@9000@vless@54b384c3
-  type: vless
-  server: 193.39.9.123
-  port: 9000
-  uuid: 3ccfd1ea-27f6-4af7-a025-7dc1867ae214
-  network: tcp
-  flow: ''
-- name: 93.177.116.84@1080@socks5@438723d5
+  server: 92.119.56.37
+  port: 7171
+- name: 5.255.103.55@1080@socks5@832a1ad4
   type: socks5
-  server: 93.177.116.84
+  server: 5.255.103.55
   port: 1080
-- name: 171.25.158.95@1080@socks5@7dff12a6
-  type: socks5
-  server: 171.25.158.95
-  port: 1080
-- name: 206.123.156.228@34053@socks5@5c4c2c69
+- name: 206.123.156.228@36794@socks5@8a928af3
   type: socks5
   server: 206.123.156.228
-  port: 34053
-- name: 39.97.249.14@7890@socks5@3ee7aa6f
+  port: 36794
+- name: 206.123.156.215@34050@socks5@93269ded
   type: socks5
-  server: 39.97.249.14
-  port: 7890
+  server: 206.123.156.215
+  port: 34050
+- name: 103.149.182.79@8388@ss@6bb86606
+  type: ss
+  server: 103.149.182.79
+  port: 8388
+  cipher: chacha20-ietf
+  password: asd123456
 proxy-groups:
 - name: PG-fast
   type: url-test
@@ -558,35 +543,32 @@ proxy-groups:
   proxies:
   - 157.254.223.44@34567@mieru@852f50d8
   - 5.83.129.90@54177@hysteria@7e7bf8ca
-  - 69.84.182.152@80@vless@053bbc58
-  - 104.21.6.82@8080@vless@a735ffab
   - 172.67.143.139@8080@vless@2fa51af6
   - 83.147.18.179@23564@vless@6a1d1abe
+  - 104.21.6.82@8080@vless@a735ffab
   - 172.67.134.161@8080@vless@890c862e
   - 104.21.39.53@8080@vless@0210cabb
   - 5.83.129.153@20088@hysteria@db36c238
-  - 3.16.130.237@443@ss@0de4178f
+  - 13.38.46.189@443@ss@da77bacd
+  - 47.102.150.0@7890@socks5@e751ac6b
   - 104.128.72.119@80@ss@99398782
-  - ecm.crystal63.shop@10457@hysteria2@32c20971
   - 172.67.69.211@2087@vless@c04b785f
-  - 151.101.3.8@80@vless@6d9519a1
+  - 69.48.229.50@40443@vless@ea5caaf5
   - 204.48.29.137@1088@socks5@09bb7403
-  - 119.166.114.153@5000@socks5@22bfc44b
   - 35.180.122.124@443@ss@e109d200
+  - 15.237.218.22@443@ss@aebad3c3
   - 150.251.112.40@443@vless@9db35c7d
-  - 3.129.218.147@443@ss@bbb6dc40
-  - 151.101.117.177@443@vless@7a88591d
-  - 199.232.100.11@80@vless@c839c438
-  - 47.253.211.16@1080@socks5@18ca66a1
-  - 15.188.191.198@22223@vless@f5fb0675
-  - 15.188.191.198@22224@vless@d1d3447f
+  - 47.97.19.9@1081@socks5@81d9ca94
+  - 95.182.98.231@2090@vless@73bf4d17
+  - 151.101.168.11@80@vless@eb235147
+  - 199.232.97.11@80@vless@ecb06aed
+  - 199.232.184.11@80@vless@3d07844e
   - 37.120.189.175@1080@socks5@df2c8fc8
-  - 45.133.251.196@1080@socks5@d261197a
-  - 193.39.9.123@9000@vless@54b384c3
-  - 93.177.116.84@1080@socks5@438723d5
-  - 171.25.158.95@1080@socks5@7dff12a6
-  - 206.123.156.228@34053@socks5@5c4c2c69
-  - 39.97.249.14@7890@socks5@3ee7aa6f
+  - 92.119.56.37@7171@socks5@1b0c5056
+  - 5.255.103.55@1080@socks5@832a1ad4
+  - 206.123.156.228@36794@socks5@8a928af3
+  - 206.123.156.215@34050@socks5@93269ded
+  - 103.149.182.79@8388@ss@6bb86606
 - name: PG-default
   type: fallback
   url: https://www.google.com/generate_204
@@ -596,35 +578,32 @@ proxy-groups:
   - PG-fast
   - 157.254.223.44@34567@mieru@852f50d8
   - 5.83.129.90@54177@hysteria@7e7bf8ca
-  - 69.84.182.152@80@vless@053bbc58
-  - 104.21.6.82@8080@vless@a735ffab
   - 172.67.143.139@8080@vless@2fa51af6
   - 83.147.18.179@23564@vless@6a1d1abe
+  - 104.21.6.82@8080@vless@a735ffab
   - 172.67.134.161@8080@vless@890c862e
   - 104.21.39.53@8080@vless@0210cabb
   - 5.83.129.153@20088@hysteria@db36c238
-  - 3.16.130.237@443@ss@0de4178f
+  - 13.38.46.189@443@ss@da77bacd
+  - 47.102.150.0@7890@socks5@e751ac6b
   - 104.128.72.119@80@ss@99398782
-  - ecm.crystal63.shop@10457@hysteria2@32c20971
   - 172.67.69.211@2087@vless@c04b785f
-  - 151.101.3.8@80@vless@6d9519a1
+  - 69.48.229.50@40443@vless@ea5caaf5
   - 204.48.29.137@1088@socks5@09bb7403
-  - 119.166.114.153@5000@socks5@22bfc44b
   - 35.180.122.124@443@ss@e109d200
+  - 15.237.218.22@443@ss@aebad3c3
   - 150.251.112.40@443@vless@9db35c7d
-  - 3.129.218.147@443@ss@bbb6dc40
-  - 151.101.117.177@443@vless@7a88591d
-  - 199.232.100.11@80@vless@c839c438
-  - 47.253.211.16@1080@socks5@18ca66a1
-  - 15.188.191.198@22223@vless@f5fb0675
-  - 15.188.191.198@22224@vless@d1d3447f
+  - 47.97.19.9@1081@socks5@81d9ca94
+  - 95.182.98.231@2090@vless@73bf4d17
+  - 151.101.168.11@80@vless@eb235147
+  - 199.232.97.11@80@vless@ecb06aed
+  - 199.232.184.11@80@vless@3d07844e
   - 37.120.189.175@1080@socks5@df2c8fc8
-  - 45.133.251.196@1080@socks5@d261197a
-  - 193.39.9.123@9000@vless@54b384c3
-  - 93.177.116.84@1080@socks5@438723d5
-  - 171.25.158.95@1080@socks5@7dff12a6
-  - 206.123.156.228@34053@socks5@5c4c2c69
-  - 39.97.249.14@7890@socks5@3ee7aa6f
+  - 92.119.56.37@7171@socks5@1b0c5056
+  - 5.255.103.55@1080@socks5@832a1ad4
+  - 206.123.156.228@36794@socks5@8a928af3
+  - 206.123.156.215@34050@socks5@93269ded
+  - 103.149.182.79@8388@ss@6bb86606
 - name: PG-AnTing
   type: load-balance
   url: https://www.google.com/generate_204
@@ -634,35 +613,32 @@ proxy-groups:
   proxies:
   - 157.254.223.44@34567@mieru@852f50d8
   - 5.83.129.90@54177@hysteria@7e7bf8ca
-  - 69.84.182.152@80@vless@053bbc58
-  - 104.21.6.82@8080@vless@a735ffab
   - 172.67.143.139@8080@vless@2fa51af6
   - 83.147.18.179@23564@vless@6a1d1abe
+  - 104.21.6.82@8080@vless@a735ffab
   - 172.67.134.161@8080@vless@890c862e
   - 104.21.39.53@8080@vless@0210cabb
   - 5.83.129.153@20088@hysteria@db36c238
-  - 3.16.130.237@443@ss@0de4178f
+  - 13.38.46.189@443@ss@da77bacd
+  - 47.102.150.0@7890@socks5@e751ac6b
   - 104.128.72.119@80@ss@99398782
-  - ecm.crystal63.shop@10457@hysteria2@32c20971
   - 172.67.69.211@2087@vless@c04b785f
-  - 151.101.3.8@80@vless@6d9519a1
+  - 69.48.229.50@40443@vless@ea5caaf5
   - 204.48.29.137@1088@socks5@09bb7403
-  - 119.166.114.153@5000@socks5@22bfc44b
   - 35.180.122.124@443@ss@e109d200
+  - 15.237.218.22@443@ss@aebad3c3
   - 150.251.112.40@443@vless@9db35c7d
-  - 3.129.218.147@443@ss@bbb6dc40
-  - 151.101.117.177@443@vless@7a88591d
-  - 199.232.100.11@80@vless@c839c438
-  - 47.253.211.16@1080@socks5@18ca66a1
-  - 15.188.191.198@22223@vless@f5fb0675
-  - 15.188.191.198@22224@vless@d1d3447f
+  - 47.97.19.9@1081@socks5@81d9ca94
+  - 95.182.98.231@2090@vless@73bf4d17
+  - 151.101.168.11@80@vless@eb235147
+  - 199.232.97.11@80@vless@ecb06aed
+  - 199.232.184.11@80@vless@3d07844e
   - 37.120.189.175@1080@socks5@df2c8fc8
-  - 45.133.251.196@1080@socks5@d261197a
-  - 193.39.9.123@9000@vless@54b384c3
-  - 93.177.116.84@1080@socks5@438723d5
-  - 171.25.158.95@1080@socks5@7dff12a6
-  - 206.123.156.228@34053@socks5@5c4c2c69
-  - 39.97.249.14@7890@socks5@3ee7aa6f
+  - 92.119.56.37@7171@socks5@1b0c5056
+  - 5.255.103.55@1080@socks5@832a1ad4
+  - 206.123.156.228@36794@socks5@8a928af3
+  - 206.123.156.215@34050@socks5@93269ded
+  - 103.149.182.79@8388@ss@6bb86606
 - name: PG-Sage
   type: load-balance
   url: http://www.eastmoney.com
@@ -672,35 +648,32 @@ proxy-groups:
   proxies:
   - 157.254.223.44@34567@mieru@852f50d8
   - 5.83.129.90@54177@hysteria@7e7bf8ca
-  - 69.84.182.152@80@vless@053bbc58
-  - 104.21.6.82@8080@vless@a735ffab
   - 172.67.143.139@8080@vless@2fa51af6
   - 83.147.18.179@23564@vless@6a1d1abe
+  - 104.21.6.82@8080@vless@a735ffab
   - 172.67.134.161@8080@vless@890c862e
   - 104.21.39.53@8080@vless@0210cabb
   - 5.83.129.153@20088@hysteria@db36c238
-  - 3.16.130.237@443@ss@0de4178f
+  - 13.38.46.189@443@ss@da77bacd
+  - 47.102.150.0@7890@socks5@e751ac6b
   - 104.128.72.119@80@ss@99398782
-  - ecm.crystal63.shop@10457@hysteria2@32c20971
   - 172.67.69.211@2087@vless@c04b785f
-  - 151.101.3.8@80@vless@6d9519a1
+  - 69.48.229.50@40443@vless@ea5caaf5
   - 204.48.29.137@1088@socks5@09bb7403
-  - 119.166.114.153@5000@socks5@22bfc44b
   - 35.180.122.124@443@ss@e109d200
+  - 15.237.218.22@443@ss@aebad3c3
   - 150.251.112.40@443@vless@9db35c7d
-  - 3.129.218.147@443@ss@bbb6dc40
-  - 151.101.117.177@443@vless@7a88591d
-  - 199.232.100.11@80@vless@c839c438
-  - 47.253.211.16@1080@socks5@18ca66a1
-  - 15.188.191.198@22223@vless@f5fb0675
-  - 15.188.191.198@22224@vless@d1d3447f
+  - 47.97.19.9@1081@socks5@81d9ca94
+  - 95.182.98.231@2090@vless@73bf4d17
+  - 151.101.168.11@80@vless@eb235147
+  - 199.232.97.11@80@vless@ecb06aed
+  - 199.232.184.11@80@vless@3d07844e
   - 37.120.189.175@1080@socks5@df2c8fc8
-  - 45.133.251.196@1080@socks5@d261197a
-  - 193.39.9.123@9000@vless@54b384c3
-  - 93.177.116.84@1080@socks5@438723d5
-  - 171.25.158.95@1080@socks5@7dff12a6
-  - 206.123.156.228@34053@socks5@5c4c2c69
-  - 39.97.249.14@7890@socks5@3ee7aa6f
+  - 92.119.56.37@7171@socks5@1b0c5056
+  - 5.255.103.55@1080@socks5@832a1ad4
+  - 206.123.156.228@36794@socks5@8a928af3
+  - 206.123.156.215@34050@socks5@93269ded
+  - 103.149.182.79@8388@ss@6bb86606
 - name: PG-CN
   type: load-balance
   url: https://www.sse.com.cn
@@ -710,35 +683,32 @@ proxy-groups:
   proxies:
   - 157.254.223.44@34567@mieru@852f50d8
   - 5.83.129.90@54177@hysteria@7e7bf8ca
-  - 69.84.182.152@80@vless@053bbc58
-  - 104.21.6.82@8080@vless@a735ffab
   - 172.67.143.139@8080@vless@2fa51af6
   - 83.147.18.179@23564@vless@6a1d1abe
+  - 104.21.6.82@8080@vless@a735ffab
   - 172.67.134.161@8080@vless@890c862e
   - 104.21.39.53@8080@vless@0210cabb
   - 5.83.129.153@20088@hysteria@db36c238
-  - 3.16.130.237@443@ss@0de4178f
+  - 13.38.46.189@443@ss@da77bacd
+  - 47.102.150.0@7890@socks5@e751ac6b
   - 104.128.72.119@80@ss@99398782
-  - ecm.crystal63.shop@10457@hysteria2@32c20971
   - 172.67.69.211@2087@vless@c04b785f
-  - 151.101.3.8@80@vless@6d9519a1
+  - 69.48.229.50@40443@vless@ea5caaf5
   - 204.48.29.137@1088@socks5@09bb7403
-  - 119.166.114.153@5000@socks5@22bfc44b
   - 35.180.122.124@443@ss@e109d200
+  - 15.237.218.22@443@ss@aebad3c3
   - 150.251.112.40@443@vless@9db35c7d
-  - 3.129.218.147@443@ss@bbb6dc40
-  - 151.101.117.177@443@vless@7a88591d
-  - 199.232.100.11@80@vless@c839c438
-  - 47.253.211.16@1080@socks5@18ca66a1
-  - 15.188.191.198@22223@vless@f5fb0675
-  - 15.188.191.198@22224@vless@d1d3447f
+  - 47.97.19.9@1081@socks5@81d9ca94
+  - 95.182.98.231@2090@vless@73bf4d17
+  - 151.101.168.11@80@vless@eb235147
+  - 199.232.97.11@80@vless@ecb06aed
+  - 199.232.184.11@80@vless@3d07844e
   - 37.120.189.175@1080@socks5@df2c8fc8
-  - 45.133.251.196@1080@socks5@d261197a
-  - 193.39.9.123@9000@vless@54b384c3
-  - 93.177.116.84@1080@socks5@438723d5
-  - 171.25.158.95@1080@socks5@7dff12a6
-  - 206.123.156.228@34053@socks5@5c4c2c69
-  - 39.97.249.14@7890@socks5@3ee7aa6f
+  - 92.119.56.37@7171@socks5@1b0c5056
+  - 5.255.103.55@1080@socks5@832a1ad4
+  - 206.123.156.228@36794@socks5@8a928af3
+  - 206.123.156.215@34050@socks5@93269ded
+  - 103.149.182.79@8388@ss@6bb86606
 - name: PG-Google
   type: url-test
   url: https://www.google.com/generate_204
@@ -747,36 +717,33 @@ proxy-groups:
   lazy: false
   proxies:
   - 157.254.223.44@34567@mieru@852f50d8
-  - 3.16.130.237@443@ss@0de4178f
+  - 47.102.150.0@7890@socks5@e751ac6b
   - 104.128.72.119@80@ss@99398782
-  - ecm.crystal63.shop@10457@hysteria2@32c20971
+  - 69.48.229.50@40443@vless@ea5caaf5
   - 204.48.29.137@1088@socks5@09bb7403
-  - 3.129.218.147@443@ss@bbb6dc40
-  - 47.253.211.16@1080@socks5@18ca66a1
   - 5.83.129.90@54177@hysteria@7e7bf8ca
-  - 69.84.182.152@80@vless@053bbc58
-  - 104.21.6.82@8080@vless@a735ffab
   - 172.67.143.139@8080@vless@2fa51af6
   - 83.147.18.179@23564@vless@6a1d1abe
+  - 104.21.6.82@8080@vless@a735ffab
   - 172.67.134.161@8080@vless@890c862e
   - 104.21.39.53@8080@vless@0210cabb
   - 5.83.129.153@20088@hysteria@db36c238
+  - 13.38.46.189@443@ss@da77bacd
   - 172.67.69.211@2087@vless@c04b785f
-  - 151.101.3.8@80@vless@6d9519a1
-  - 119.166.114.153@5000@socks5@22bfc44b
   - 35.180.122.124@443@ss@e109d200
+  - 15.237.218.22@443@ss@aebad3c3
   - 150.251.112.40@443@vless@9db35c7d
-  - 151.101.117.177@443@vless@7a88591d
-  - 199.232.100.11@80@vless@c839c438
-  - 15.188.191.198@22223@vless@f5fb0675
-  - 15.188.191.198@22224@vless@d1d3447f
+  - 47.97.19.9@1081@socks5@81d9ca94
+  - 95.182.98.231@2090@vless@73bf4d17
+  - 151.101.168.11@80@vless@eb235147
+  - 199.232.97.11@80@vless@ecb06aed
+  - 199.232.184.11@80@vless@3d07844e
   - 37.120.189.175@1080@socks5@df2c8fc8
-  - 45.133.251.196@1080@socks5@d261197a
-  - 193.39.9.123@9000@vless@54b384c3
-  - 93.177.116.84@1080@socks5@438723d5
-  - 171.25.158.95@1080@socks5@7dff12a6
-  - 206.123.156.228@34053@socks5@5c4c2c69
-  - 39.97.249.14@7890@socks5@3ee7aa6f
+  - 92.119.56.37@7171@socks5@1b0c5056
+  - 5.255.103.55@1080@socks5@832a1ad4
+  - 206.123.156.228@36794@socks5@8a928af3
+  - 206.123.156.215@34050@socks5@93269ded
+  - 103.149.182.79@8388@ss@6bb86606
   - PG-fast
   - PG-default
 - name: PG-GitHub
@@ -787,35 +754,32 @@ proxy-groups:
   proxies:
   - 157.254.223.44@34567@mieru@852f50d8
   - 5.83.129.90@54177@hysteria@7e7bf8ca
-  - 69.84.182.152@80@vless@053bbc58
-  - 104.21.6.82@8080@vless@a735ffab
   - 5.83.129.153@20088@hysteria@db36c238
   - 172.67.134.161@8080@vless@890c862e
   - 172.67.143.139@8080@vless@2fa51af6
   - 83.147.18.179@23564@vless@6a1d1abe
-  - 3.16.130.237@443@ss@0de4178f
   - 104.21.39.53@8080@vless@0210cabb
+  - 104.21.6.82@8080@vless@a735ffab
+  - 13.38.46.189@443@ss@da77bacd
+  - 47.102.150.0@7890@socks5@e751ac6b
   - 104.128.72.119@80@ss@99398782
-  - ecm.crystal63.shop@10457@hysteria2@32c20971
   - 172.67.69.211@2087@vless@c04b785f
+  - 69.48.229.50@40443@vless@ea5caaf5
   - 204.48.29.137@1088@socks5@09bb7403
-  - 151.101.3.8@80@vless@6d9519a1
-  - 119.166.114.153@5000@socks5@22bfc44b
   - 35.180.122.124@443@ss@e109d200
-  - 3.129.218.147@443@ss@bbb6dc40
+  - 15.237.218.22@443@ss@aebad3c3
+  - 47.97.19.9@1081@socks5@81d9ca94
   - 150.251.112.40@443@vless@9db35c7d
-  - 15.188.191.198@22223@vless@f5fb0675
-  - 15.188.191.198@22224@vless@d1d3447f
+  - 95.182.98.231@2090@vless@73bf4d17
   - 37.120.189.175@1080@socks5@df2c8fc8
-  - 151.101.117.177@443@vless@7a88591d
-  - 45.133.251.196@1080@socks5@d261197a
-  - 193.39.9.123@9000@vless@54b384c3
-  - 93.177.116.84@1080@socks5@438723d5
-  - 199.232.100.11@80@vless@c839c438
-  - 47.253.211.16@1080@socks5@18ca66a1
-  - 171.25.158.95@1080@socks5@7dff12a6
-  - 206.123.156.228@34053@socks5@5c4c2c69
-  - 39.97.249.14@7890@socks5@3ee7aa6f
+  - 151.101.168.11@80@vless@eb235147
+  - 199.232.97.11@80@vless@ecb06aed
+  - 199.232.184.11@80@vless@3d07844e
+  - 92.119.56.37@7171@socks5@1b0c5056
+  - 5.255.103.55@1080@socks5@832a1ad4
+  - 206.123.156.228@36794@socks5@8a928af3
+  - 206.123.156.215@34050@socks5@93269ded
+  - 103.149.182.79@8388@ss@6bb86606
   - PG-fast
   - PG-default
 - name: PG-YouTube
@@ -826,36 +790,33 @@ proxy-groups:
   strategy: round-robin
   proxies:
   - 157.254.223.44@34567@mieru@852f50d8
-  - 3.16.130.237@443@ss@0de4178f
+  - 47.102.150.0@7890@socks5@e751ac6b
   - 104.128.72.119@80@ss@99398782
-  - ecm.crystal63.shop@10457@hysteria2@32c20971
+  - 69.48.229.50@40443@vless@ea5caaf5
   - 204.48.29.137@1088@socks5@09bb7403
-  - 3.129.218.147@443@ss@bbb6dc40
-  - 47.253.211.16@1080@socks5@18ca66a1
   - 5.83.129.90@54177@hysteria@7e7bf8ca
-  - 69.84.182.152@80@vless@053bbc58
-  - 104.21.6.82@8080@vless@a735ffab
   - 172.67.143.139@8080@vless@2fa51af6
   - 83.147.18.179@23564@vless@6a1d1abe
+  - 104.21.6.82@8080@vless@a735ffab
   - 172.67.134.161@8080@vless@890c862e
   - 104.21.39.53@8080@vless@0210cabb
   - 5.83.129.153@20088@hysteria@db36c238
+  - 13.38.46.189@443@ss@da77bacd
   - 172.67.69.211@2087@vless@c04b785f
-  - 151.101.3.8@80@vless@6d9519a1
-  - 119.166.114.153@5000@socks5@22bfc44b
   - 35.180.122.124@443@ss@e109d200
+  - 15.237.218.22@443@ss@aebad3c3
   - 150.251.112.40@443@vless@9db35c7d
-  - 151.101.117.177@443@vless@7a88591d
-  - 199.232.100.11@80@vless@c839c438
-  - 15.188.191.198@22223@vless@f5fb0675
-  - 15.188.191.198@22224@vless@d1d3447f
+  - 47.97.19.9@1081@socks5@81d9ca94
+  - 95.182.98.231@2090@vless@73bf4d17
+  - 151.101.168.11@80@vless@eb235147
+  - 199.232.97.11@80@vless@ecb06aed
+  - 199.232.184.11@80@vless@3d07844e
   - 37.120.189.175@1080@socks5@df2c8fc8
-  - 45.133.251.196@1080@socks5@d261197a
-  - 193.39.9.123@9000@vless@54b384c3
-  - 93.177.116.84@1080@socks5@438723d5
-  - 171.25.158.95@1080@socks5@7dff12a6
-  - 206.123.156.228@34053@socks5@5c4c2c69
-  - 39.97.249.14@7890@socks5@3ee7aa6f
+  - 92.119.56.37@7171@socks5@1b0c5056
+  - 5.255.103.55@1080@socks5@832a1ad4
+  - 206.123.156.228@36794@socks5@8a928af3
+  - 206.123.156.215@34050@socks5@93269ded
+  - 103.149.182.79@8388@ss@6bb86606
   - PG-fast
   - PG-default
 - name: PG-Twitter
@@ -866,36 +827,33 @@ proxy-groups:
   lazy: false
   proxies:
   - 157.254.223.44@34567@mieru@852f50d8
-  - 3.16.130.237@443@ss@0de4178f
+  - 47.102.150.0@7890@socks5@e751ac6b
   - 104.128.72.119@80@ss@99398782
-  - ecm.crystal63.shop@10457@hysteria2@32c20971
+  - 69.48.229.50@40443@vless@ea5caaf5
   - 204.48.29.137@1088@socks5@09bb7403
-  - 3.129.218.147@443@ss@bbb6dc40
-  - 47.253.211.16@1080@socks5@18ca66a1
   - 5.83.129.90@54177@hysteria@7e7bf8ca
-  - 69.84.182.152@80@vless@053bbc58
-  - 104.21.6.82@8080@vless@a735ffab
   - 172.67.143.139@8080@vless@2fa51af6
   - 83.147.18.179@23564@vless@6a1d1abe
+  - 104.21.6.82@8080@vless@a735ffab
   - 172.67.134.161@8080@vless@890c862e
   - 104.21.39.53@8080@vless@0210cabb
   - 5.83.129.153@20088@hysteria@db36c238
+  - 13.38.46.189@443@ss@da77bacd
   - 172.67.69.211@2087@vless@c04b785f
-  - 151.101.3.8@80@vless@6d9519a1
-  - 119.166.114.153@5000@socks5@22bfc44b
   - 35.180.122.124@443@ss@e109d200
+  - 15.237.218.22@443@ss@aebad3c3
   - 150.251.112.40@443@vless@9db35c7d
-  - 151.101.117.177@443@vless@7a88591d
-  - 199.232.100.11@80@vless@c839c438
-  - 15.188.191.198@22223@vless@f5fb0675
-  - 15.188.191.198@22224@vless@d1d3447f
+  - 47.97.19.9@1081@socks5@81d9ca94
+  - 95.182.98.231@2090@vless@73bf4d17
+  - 151.101.168.11@80@vless@eb235147
+  - 199.232.97.11@80@vless@ecb06aed
+  - 199.232.184.11@80@vless@3d07844e
   - 37.120.189.175@1080@socks5@df2c8fc8
-  - 45.133.251.196@1080@socks5@d261197a
-  - 193.39.9.123@9000@vless@54b384c3
-  - 93.177.116.84@1080@socks5@438723d5
-  - 171.25.158.95@1080@socks5@7dff12a6
-  - 206.123.156.228@34053@socks5@5c4c2c69
-  - 39.97.249.14@7890@socks5@3ee7aa6f
+  - 92.119.56.37@7171@socks5@1b0c5056
+  - 5.255.103.55@1080@socks5@832a1ad4
+  - 206.123.156.228@36794@socks5@8a928af3
+  - 206.123.156.215@34050@socks5@93269ded
+  - 103.149.182.79@8388@ss@6bb86606
   - PG-fast
   - PG-default
 rule-providers:
