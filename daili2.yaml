@@ -44,44 +44,32 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
-- port: 9002
-  server: 193.176.84.35
-  skip-cert-verify: true
-  sni: www.bing.com
+- server: cu4.ainivp.com
+  port: 33402
+  type: vmess
+  uuid: 9227afcd-026e-781f-1abc-c06efabd2338
+  alterId: 0
+  cipher: auto
   tls: true
-  type: http
-  PingRate: 66
-  PingAverage: 818
-  country: Romania
-  ISO: RO
-  name: 193.176.84.35:9002@http@RO
-  UpdateDay: 2026-07-28T22:00
-  PFirstFoundDay: 2026-05-30T01:43
-  Rank: 98114
+  skip-cert-verify: true
+  servername: cu4.ainivp.com
+  network: ws
+  ws-opts:
+    path: /ray
+    headers:
+      Host: cu4.ainivp.com
+  PingRate: 33
+  PingAverage: 1180
+  country: United States
+  ISO: US
+  name: cu4.ainivp.com:33402@vmess@US
+  UpdateDay: 2026-07-28T22:01
+  PFirstFoundDay: 2026-07-28T18:45
+  Rank: 1354
   RescueCount: 0
   Alive: true
-  LastWorkDate: 2026-07-28T22:00
-  average: 2001
-  success_rate: 100
-- password: ''
-  port: '9002'
-  server: 138.199.35.199
-  skip-cert-verify: true
-  tls: true
-  type: http
-  username: ''
-  PingRate: 66
-  PingAverage: 702
-  country: United Kingdom
-  ISO: GB
-  name: 138.199.35.199:9002@http@GB
-  UpdateDay: 2026-07-28T22:00
-  PFirstFoundDay: 2026-07-05T04:23
-  Rank: 26025
-  RescueCount: 0
-  Alive: true
-  LastWorkDate: 2026-07-28T22:00
-  average: 2380
+  LastWorkDate: 2026-07-28T22:01
+  average: 1894
   success_rate: 100
 proxy-groups:
 - name: PG-default
@@ -90,8 +78,7 @@ proxy-groups:
   interval: 200
   strategy: consistent-hashing
   proxies: &id001
-  - 193.176.84.35:9002@http@RO
-  - 138.199.35.199:9002@http@GB
+  - cu4.ainivp.com:33402@vmess@US
 - name: PG-AnTing
   type: load-balance
   url: http://www.gstatic.com/generate_204
@@ -104,7 +91,6 @@ proxy-groups:
   interval: 300
   strategy: round-robin
   proxies:
-  - 193.176.84.35:9002@http@RO
-  - 138.199.35.199:9002@http@GB
+  - cu4.ainivp.com:33402@vmess@US
 rules:
 - MATCH,PG-default
