@@ -45,43 +45,134 @@ dns:
     - 240.0.0.0/4
 proxies:
 - port: 9002
-  server: 193.176.84.37
+  server: 84.239.49.214
+  skip-cert-verify: true
+  tls: true
+  type: http
+  PingRate: 100
+  PingAverage: 554
+  country: Romania
+  ISO: RO
+  name: 84.239.49.214:9002@http@RO
+  UpdateDay: 2026-07-28T11:30
+  PFirstFoundDay: 2026-04-28T10:36
+  Rank: 233582
+  RescueCount: 0
+  Alive: true
+  LastWorkDate: 2026-07-28T11:30
+  average: 2501
+  success_rate: 100
+- type: http
+  server: 84.239.49.234
+  port: 9002
+  skip-cert-verify: true
+  tls: true
+  PingRate: 100
+  PingAverage: 567
+  country: Romania
+  ISO: RO
+  name: 84.239.49.234:9002@http@RO
+  UpdateDay: 2026-07-28T11:30
+  PFirstFoundDay: 2026-05-09T04:44
+  Rank: 229898
+  RescueCount: 0
+  Alive: true
+  LastWorkDate: 2026-07-28T11:30
+  average: 2484
+  success_rate: 100
+- port: 9002
+  server: 193.176.84.38
+  skip-cert-verify: true
+  tls: true
+  type: http
+  PingRate: 66
+  PingAverage: 765
+  country: Romania
+  ISO: RO
+  name: 193.176.84.38:9002@http@RO
+  UpdateDay: 2026-07-28T11:30
+  PFirstFoundDay: 2026-05-28T21:29
+  Rank: 121712
+  RescueCount: 0
+  Alive: true
+  LastWorkDate: 2026-07-28T11:30
+  average: 1985
+  success_rate: 100
+- port: 9002
+  server: 193.176.84.19
   skip-cert-verify: true
   sni: www.bing.com
   tls: true
   type: http
-  PingRate: 100
-  PingAverage: 265
+  PingRate: 33
+  PingAverage: 1338
   country: Romania
   ISO: RO
-  name: 193.176.84.37:9002@http@RO
-  UpdateDay: 2026-07-28T11:29
-  PFirstFoundDay: 2026-05-28T08:29
-  Rank: 121094
+  name: 193.176.84.19:9002@http@RO
+  UpdateDay: 2026-07-28T11:30
+  PFirstFoundDay: 2026-05-28T10:25
+  Rank: 97999
   RescueCount: 0
   Alive: true
-  LastWorkDate: 2026-07-28T11:29
-  average: 1894
+  LastWorkDate: 2026-07-28T11:30
+  average: 1851
   success_rate: 100
-- server: 15302cac-td6n40-ten5li-mv7m.jp4.oshuawei.com
+- port: 9002
+  server: 84.17.47.149
+  skip-cert-verify: true
+  tls: true
+  type: http
+  PingRate: 100
+  PingAverage: 568
+  country: United Kingdom
+  ISO: GB
+  name: 84.17.47.149:9002@http@GB
+  UpdateDay: 2026-07-28T11:30
+  PFirstFoundDay: 2026-07-05T08:22
+  Rank: 21642
+  RescueCount: 0
+  Alive: true
+  LastWorkDate: 2026-07-28T11:30
+  average: 2444
+  success_rate: 100
+- port: 9002
+  server: 156.146.59.29
+  sin: "https://t.me/WangCai2\U0001F1E8\U0001F1F3"
+  skip-cert-verify: true
+  tls: true
+  type: http
+  PingRate: 33
+  PingAverage: 1284
+  country: United Kingdom
+  ISO: GB
+  name: 156.146.59.29:9002@http@GB
+  UpdateDay: 2026-07-28T11:30
+  PFirstFoundDay: 2026-07-07T02:30
+  Rank: 13052
+  RescueCount: 0
+  Alive: true
+  LastWorkDate: 2026-07-28T11:30
+  average: 1956
+  success_rate: 100
+- server: 30d15ff8-taz0g0-tcdmjc-1gevg.jp.oshuawei.com
   port: 443
   type: http
-  username: 94d40708-8273-11ea-8fc9-f23c913c8d2b
-  password: 94d40708-8273-11ea-8fc9-f23c913c8d2b
+  username: f02ee2b4-d760-11ec-bd7c-f23c913c8d2b
+  password: f02ee2b4-d760-11ec-bd7c-f23c913c8d2b
   tls: true
   PingRate: 100
-  PingAverage: 582
+  PingAverage: 1482
   ISO: US
-  UpdateDay: 2026-07-28T11:29
-  PFirstFoundDay: 2026-04-07T10:29
-  Rank: 9927
+  UpdateDay: 2026-07-28T11:30
+  PFirstFoundDay: 2026-02-23T02:20
+  Rank: 5435
   RescueCount: 0
   Alive: true
-  LastWorkDate: 2026-07-28T11:29
-  average: 2095
-  success_rate: 100
+  LastWorkDate: 2026-07-28T11:30
+  average: 300
+  success_rate: 50
   country: United States
-  name: 15302cac-td6n40-ten5li-mv7m.jp4.oshuawei.com:443@http@US
+  name: 30d15ff8-taz0g0-tcdmjc-1gevg.jp.oshuawei.com:443@http@US
 proxy-groups:
 - name: PG-default
   type: fallback
@@ -89,8 +180,13 @@ proxy-groups:
   interval: 200
   strategy: consistent-hashing
   proxies: &id001
-  - 193.176.84.37:9002@http@RO
-  - 15302cac-td6n40-ten5li-mv7m.jp4.oshuawei.com:443@http@US
+  - 84.239.49.214:9002@http@RO
+  - 84.239.49.234:9002@http@RO
+  - 193.176.84.38:9002@http@RO
+  - 193.176.84.19:9002@http@RO
+  - 84.17.47.149:9002@http@GB
+  - 156.146.59.29:9002@http@GB
+  - 30d15ff8-taz0g0-tcdmjc-1gevg.jp.oshuawei.com:443@http@US
 - name: PG-AnTing
   type: load-balance
   url: http://www.gstatic.com/generate_204
@@ -103,7 +199,12 @@ proxy-groups:
   interval: 300
   strategy: round-robin
   proxies:
-  - 193.176.84.37:9002@http@RO
-  - 15302cac-td6n40-ten5li-mv7m.jp4.oshuawei.com:443@http@US
+  - 84.239.49.214:9002@http@RO
+  - 84.239.49.234:9002@http@RO
+  - 193.176.84.38:9002@http@RO
+  - 193.176.84.19:9002@http@RO
+  - 84.17.47.149:9002@http@GB
+  - 156.146.59.29:9002@http@GB
+  - 30d15ff8-taz0g0-tcdmjc-1gevg.jp.oshuawei.com:443@http@US
 rules:
 - MATCH,PG-default
