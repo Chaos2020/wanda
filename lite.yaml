@@ -442,14 +442,14 @@ proxies:
       Host: server10.sotowoy673.workers.dev
     max-early-data: 2560
     path: /eyJqdW5rIjoiQkRZWDhCN01sIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIl19
-- name: 43.207.141.180@53641@http@eb3163c6
-  type: http
-  server: 43.207.141.180
-  port: 53641
 - name: 3.19.213.118@25389@http@395818f0
   type: http
   server: 3.19.213.118
   port: 25389
+- name: 43.207.141.180@53641@http@eb3163c6
+  type: http
+  server: 43.207.141.180
+  port: 53641
 - name: 185.200.188.234@10001@http@0fd40b9a
   type: http
   server: 185.200.188.234
@@ -464,10 +464,6 @@ proxies:
   type: http
   server: 114.236.137.41
   port: 21000
-- name: 3.19.213.118@53573@http@274d00ab
-  type: http
-  server: 3.19.213.118
-  port: 53573
 - name: 5.83.129.90@54177@hysteria@7e7bf8ca
   type: hysteria
   server: 5.83.129.90
@@ -524,10 +520,6 @@ proxies:
   type: http
   server: 34.246.183.20
   port: 49543
-- name: 3.19.213.118@3128@http@0afd7b0b
-  type: http
-  server: 3.19.213.118
-  port: 3128
 - name: 18.162.200.96@14492@http@efe1a44d
   type: http
   server: 18.162.200.96
@@ -1144,6 +1136,17 @@ proxies:
   type: http
   server: 178.244.225.106
   port: 3310
+- name: 47.239.71.70@11601@socks5@5da8ea7c
+  type: socks5
+  server: 47.239.71.70
+  port: 11601
+  udp: true
+  username: '123'
+  password: '123'
+- name: 209.14.115.222@999@http@b0f52eb5
+  type: http
+  server: 209.14.115.222
+  port: 999
 proxy-groups:
 - name: PG-fast
   type: url-test
@@ -1191,12 +1194,11 @@ proxy-groups:
   - 13.206.73.237@58915@http@b7ee161d
   - 5.83.129.153@20088@hysteria@d2243d68
   - 172.67.153.109@8080@vless@6a5ff822
-  - 43.207.141.180@53641@http@eb3163c6
   - 3.19.213.118@25389@http@395818f0
+  - 43.207.141.180@53641@http@eb3163c6
   - 185.200.188.234@10001@http@0fd40b9a
   - 183.6.115.212@19450@http@bc6b1042
   - 114.236.137.41@21000@http@c08d0010
-  - 3.19.213.118@53573@http@274d00ab
   - 5.83.129.90@54177@hysteria@7e7bf8ca
   - 36.147.78.166@443@http@7e8befba
   - 151.242.127.148@3128@http@e2c55124
@@ -1208,7 +1210,6 @@ proxy-groups:
   - 13.41.196.179@8381@http@85c18155
   - 43.208.134.144@12597@http@efa73fbf
   - 34.246.183.20@49543@http@67ad4e57
-  - 3.19.213.118@3128@http@0afd7b0b
   - 18.162.200.96@14492@http@efe1a44d
   - 54.253.167.61@30660@http@ada342f2
   - 5.83.129.143@26691@hysteria@383b71cc
@@ -1352,6 +1353,8 @@ proxy-groups:
   - 40.176.175.23@7251@http@3c989799
   - 78.12.252.87@46500@http@699fe3f5
   - 178.244.225.106@3310@http@400ebb93
+  - 47.239.71.70@11601@socks5@5da8ea7c
+  - 209.14.115.222@999@http@b0f52eb5
 - name: PG-default
   type: fallback
   url: https://www.google.com/generate_204
@@ -1398,12 +1401,11 @@ proxy-groups:
   - 13.206.73.237@58915@http@b7ee161d
   - 5.83.129.153@20088@hysteria@d2243d68
   - 172.67.153.109@8080@vless@6a5ff822
-  - 43.207.141.180@53641@http@eb3163c6
   - 3.19.213.118@25389@http@395818f0
+  - 43.207.141.180@53641@http@eb3163c6
   - 185.200.188.234@10001@http@0fd40b9a
   - 183.6.115.212@19450@http@bc6b1042
   - 114.236.137.41@21000@http@c08d0010
-  - 3.19.213.118@53573@http@274d00ab
   - 5.83.129.90@54177@hysteria@7e7bf8ca
   - 36.147.78.166@443@http@7e8befba
   - 151.242.127.148@3128@http@e2c55124
@@ -1415,7 +1417,6 @@ proxy-groups:
   - 13.41.196.179@8381@http@85c18155
   - 43.208.134.144@12597@http@efa73fbf
   - 34.246.183.20@49543@http@67ad4e57
-  - 3.19.213.118@3128@http@0afd7b0b
   - 18.162.200.96@14492@http@efe1a44d
   - 54.253.167.61@30660@http@ada342f2
   - 5.83.129.143@26691@hysteria@383b71cc
@@ -1559,6 +1560,8 @@ proxy-groups:
   - 40.176.175.23@7251@http@3c989799
   - 78.12.252.87@46500@http@699fe3f5
   - 178.244.225.106@3310@http@400ebb93
+  - 47.239.71.70@11601@socks5@5da8ea7c
+  - 209.14.115.222@999@http@b0f52eb5
 - name: PG-AnTing
   type: load-balance
   url: https://www.google.com/generate_204
@@ -1605,12 +1608,11 @@ proxy-groups:
   - 13.206.73.237@58915@http@b7ee161d
   - 5.83.129.153@20088@hysteria@d2243d68
   - 172.67.153.109@8080@vless@6a5ff822
-  - 43.207.141.180@53641@http@eb3163c6
   - 3.19.213.118@25389@http@395818f0
+  - 43.207.141.180@53641@http@eb3163c6
   - 185.200.188.234@10001@http@0fd40b9a
   - 183.6.115.212@19450@http@bc6b1042
   - 114.236.137.41@21000@http@c08d0010
-  - 3.19.213.118@53573@http@274d00ab
   - 5.83.129.90@54177@hysteria@7e7bf8ca
   - 36.147.78.166@443@http@7e8befba
   - 151.242.127.148@3128@http@e2c55124
@@ -1622,7 +1624,6 @@ proxy-groups:
   - 13.41.196.179@8381@http@85c18155
   - 43.208.134.144@12597@http@efa73fbf
   - 34.246.183.20@49543@http@67ad4e57
-  - 3.19.213.118@3128@http@0afd7b0b
   - 18.162.200.96@14492@http@efe1a44d
   - 54.253.167.61@30660@http@ada342f2
   - 5.83.129.143@26691@hysteria@383b71cc
@@ -1766,6 +1767,8 @@ proxy-groups:
   - 40.176.175.23@7251@http@3c989799
   - 78.12.252.87@46500@http@699fe3f5
   - 178.244.225.106@3310@http@400ebb93
+  - 47.239.71.70@11601@socks5@5da8ea7c
+  - 209.14.115.222@999@http@b0f52eb5
 - name: PG-Sage
   type: load-balance
   url: http://www.eastmoney.com
@@ -1812,12 +1815,11 @@ proxy-groups:
   - 13.206.73.237@58915@http@b7ee161d
   - 5.83.129.153@20088@hysteria@d2243d68
   - 172.67.153.109@8080@vless@6a5ff822
-  - 43.207.141.180@53641@http@eb3163c6
   - 3.19.213.118@25389@http@395818f0
+  - 43.207.141.180@53641@http@eb3163c6
   - 185.200.188.234@10001@http@0fd40b9a
   - 183.6.115.212@19450@http@bc6b1042
   - 114.236.137.41@21000@http@c08d0010
-  - 3.19.213.118@53573@http@274d00ab
   - 5.83.129.90@54177@hysteria@7e7bf8ca
   - 36.147.78.166@443@http@7e8befba
   - 151.242.127.148@3128@http@e2c55124
@@ -1829,7 +1831,6 @@ proxy-groups:
   - 13.41.196.179@8381@http@85c18155
   - 43.208.134.144@12597@http@efa73fbf
   - 34.246.183.20@49543@http@67ad4e57
-  - 3.19.213.118@3128@http@0afd7b0b
   - 18.162.200.96@14492@http@efe1a44d
   - 54.253.167.61@30660@http@ada342f2
   - 5.83.129.143@26691@hysteria@383b71cc
@@ -1973,6 +1974,8 @@ proxy-groups:
   - 40.176.175.23@7251@http@3c989799
   - 78.12.252.87@46500@http@699fe3f5
   - 178.244.225.106@3310@http@400ebb93
+  - 47.239.71.70@11601@socks5@5da8ea7c
+  - 209.14.115.222@999@http@b0f52eb5
 - name: PG-CN
   type: load-balance
   url: https://www.sse.com.cn
@@ -2008,7 +2011,6 @@ proxy-groups:
   - sca.crystal63.shop@14380@anytls@3037ebf0
   - bip.contact09.shop@9844@anytls@7589197e
   - rad.const98.cfd@4633@anytls@eba51fe0
-  - 3.19.213.118@53573@http@274d00ab
   - 154.26.192.123@10988@http@bb5e44d6
   - 34.69.61.247@80@http@37147e16
   - 202.141.161.51@10808@socks5@36db749f
@@ -2041,8 +2043,8 @@ proxy-groups:
   - 13.206.73.237@58915@http@b7ee161d
   - 5.83.129.153@20088@hysteria@d2243d68
   - 172.67.153.109@8080@vless@6a5ff822
-  - 43.207.141.180@53641@http@eb3163c6
   - 3.19.213.118@25389@http@395818f0
+  - 43.207.141.180@53641@http@eb3163c6
   - 185.200.188.234@10001@http@0fd40b9a
   - 183.6.115.212@19450@http@bc6b1042
   - 114.236.137.41@21000@http@c08d0010
@@ -2056,7 +2058,6 @@ proxy-groups:
   - 13.41.196.179@8381@http@85c18155
   - 43.208.134.144@12597@http@efa73fbf
   - 34.246.183.20@49543@http@67ad4e57
-  - 3.19.213.118@3128@http@0afd7b0b
   - 18.162.200.96@14492@http@efe1a44d
   - 54.253.167.61@30660@http@ada342f2
   - 5.83.129.143@26691@hysteria@383b71cc
@@ -2196,6 +2197,8 @@ proxy-groups:
   - 40.176.175.23@7251@http@3c989799
   - 78.12.252.87@46500@http@699fe3f5
   - 178.244.225.106@3310@http@400ebb93
+  - 47.239.71.70@11601@socks5@5da8ea7c
+  - 209.14.115.222@999@http@b0f52eb5
   - PG-fast
   - PG-default
 - name: PG-GitHub
@@ -2242,8 +2245,8 @@ proxy-groups:
   - 40.192.121.249@11265@http@a77e784e
   - 13.206.73.237@58915@http@b7ee161d
   - 5.83.129.153@20088@hysteria@d2243d68
-  - 43.207.141.180@53641@http@eb3163c6
   - 3.19.213.118@25389@http@395818f0
+  - 43.207.141.180@53641@http@eb3163c6
   - 5.83.129.90@54177@hysteria@7e7bf8ca
   - 185.200.188.234@10001@http@0fd40b9a
   - 183.6.115.212@19450@http@bc6b1042
@@ -2251,7 +2254,6 @@ proxy-groups:
   - 151.242.127.148@3128@http@e2c55124
   - 172.67.153.109@8080@vless@6a5ff822
   - 154.26.192.123@10988@http@bb5e44d6
-  - 3.19.213.118@53573@http@274d00ab
   - 8.138.217.152@21001@http@bbdd4120
   - 181.39.25.196@8118@http@0b31b6a5
   - 36.147.78.166@443@http@7e8befba
@@ -2260,7 +2262,6 @@ proxy-groups:
   - 43.208.134.144@12597@http@efa73fbf
   - 37.59.125.131@8888@http@240dd137
   - 34.246.183.20@49543@http@67ad4e57
-  - 3.19.213.118@3128@http@0afd7b0b
   - 18.162.200.96@14492@http@efe1a44d
   - 16.62.123.236@1316@http@6f9da88a
   - 54.253.167.61@30660@http@ada342f2
@@ -2404,6 +2405,8 @@ proxy-groups:
   - 31.141.213.90@3310@http@2f64c67c
   - 56.155.73.215@44885@http@0843cdd6
   - 178.244.225.106@3310@http@400ebb93
+  - 47.239.71.70@11601@socks5@5da8ea7c
+  - 209.14.115.222@999@http@b0f52eb5
   - PG-fast
   - PG-default
 - name: PG-YouTube
@@ -2425,7 +2428,6 @@ proxy-groups:
   - sca.crystal63.shop@14380@anytls@3037ebf0
   - bip.contact09.shop@9844@anytls@7589197e
   - rad.const98.cfd@4633@anytls@eba51fe0
-  - 3.19.213.118@53573@http@274d00ab
   - 154.26.192.123@10988@http@bb5e44d6
   - 34.69.61.247@80@http@37147e16
   - 202.141.161.51@10808@socks5@36db749f
@@ -2458,8 +2460,8 @@ proxy-groups:
   - 13.206.73.237@58915@http@b7ee161d
   - 5.83.129.153@20088@hysteria@d2243d68
   - 172.67.153.109@8080@vless@6a5ff822
-  - 43.207.141.180@53641@http@eb3163c6
   - 3.19.213.118@25389@http@395818f0
+  - 43.207.141.180@53641@http@eb3163c6
   - 185.200.188.234@10001@http@0fd40b9a
   - 183.6.115.212@19450@http@bc6b1042
   - 114.236.137.41@21000@http@c08d0010
@@ -2473,7 +2475,6 @@ proxy-groups:
   - 13.41.196.179@8381@http@85c18155
   - 43.208.134.144@12597@http@efa73fbf
   - 34.246.183.20@49543@http@67ad4e57
-  - 3.19.213.118@3128@http@0afd7b0b
   - 18.162.200.96@14492@http@efe1a44d
   - 54.253.167.61@30660@http@ada342f2
   - 5.83.129.143@26691@hysteria@383b71cc
@@ -2613,6 +2614,8 @@ proxy-groups:
   - 40.176.175.23@7251@http@3c989799
   - 78.12.252.87@46500@http@699fe3f5
   - 178.244.225.106@3310@http@400ebb93
+  - 47.239.71.70@11601@socks5@5da8ea7c
+  - 209.14.115.222@999@http@b0f52eb5
   - PG-fast
   - PG-default
 - name: PG-Twitter
@@ -2634,7 +2637,6 @@ proxy-groups:
   - sca.crystal63.shop@14380@anytls@3037ebf0
   - bip.contact09.shop@9844@anytls@7589197e
   - rad.const98.cfd@4633@anytls@eba51fe0
-  - 3.19.213.118@53573@http@274d00ab
   - 154.26.192.123@10988@http@bb5e44d6
   - 34.69.61.247@80@http@37147e16
   - 202.141.161.51@10808@socks5@36db749f
@@ -2667,8 +2669,8 @@ proxy-groups:
   - 13.206.73.237@58915@http@b7ee161d
   - 5.83.129.153@20088@hysteria@d2243d68
   - 172.67.153.109@8080@vless@6a5ff822
-  - 43.207.141.180@53641@http@eb3163c6
   - 3.19.213.118@25389@http@395818f0
+  - 43.207.141.180@53641@http@eb3163c6
   - 185.200.188.234@10001@http@0fd40b9a
   - 183.6.115.212@19450@http@bc6b1042
   - 114.236.137.41@21000@http@c08d0010
@@ -2682,7 +2684,6 @@ proxy-groups:
   - 13.41.196.179@8381@http@85c18155
   - 43.208.134.144@12597@http@efa73fbf
   - 34.246.183.20@49543@http@67ad4e57
-  - 3.19.213.118@3128@http@0afd7b0b
   - 18.162.200.96@14492@http@efe1a44d
   - 54.253.167.61@30660@http@ada342f2
   - 5.83.129.143@26691@hysteria@383b71cc
@@ -2822,6 +2823,8 @@ proxy-groups:
   - 40.176.175.23@7251@http@3c989799
   - 78.12.252.87@46500@http@699fe3f5
   - 178.244.225.106@3310@http@400ebb93
+  - 47.239.71.70@11601@socks5@5da8ea7c
+  - 209.14.115.222@999@http@b0f52eb5
   - PG-fast
   - PG-default
 rule-providers:
