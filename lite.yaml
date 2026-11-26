@@ -328,6 +328,10 @@ proxies:
   type: http
   server: 140.210.143.19
   port: 8080
+- name: 140.210.143.18@8080@http@10c1e83f
+  type: http
+  server: 140.210.143.18
+  port: 8080
 - name: 172.64.69.89@443@https@c1972297
   type: http
   server: 172.64.69.89
@@ -1480,18 +1484,6 @@ proxies:
   port: 443
   tls: true
   skip-cert-verify: true
-- name: 38.28.185.142@443@https@2a9e0abc
-  type: http
-  server: 38.28.185.142
-  port: 443
-  tls: true
-  skip-cert-verify: true
-- name: 46.17.91.114@3000@https@154bb72c
-  type: http
-  server: 46.17.91.114
-  port: 3000
-  tls: true
-  skip-cert-verify: true
 - name: 38.247.141.135@443@https@3c9c5de9
   type: http
   server: 38.247.141.135
@@ -1538,6 +1530,12 @@ proxies:
   port: 443
   tls: true
   skip-cert-verify: true
+- name: 166.157.172.235@8443@https@0fcb6703
+  type: http
+  server: 166.157.172.235
+  port: 8443
+  tls: true
+  skip-cert-verify: true
 - name: CF-VLESS
   type: vless
   server: sm-vless.chinainvestors.xyz
@@ -1571,6 +1569,7 @@ proxy-groups:
   proxies:
   - 140.207.53.251@8888@http@dc78eb20
   - 140.210.143.19@8080@http@0e79619e
+  - 140.210.143.18@8080@http@10c1e83f
   - 172.64.69.89@443@https@c1972297
   - 70.91.247.164@8443@https@eed82258
   - 172.184.160.15@8443@https@8de2c1e1
@@ -1760,8 +1759,6 @@ proxy-groups:
   - 195.80.165.154@443@https@d2657463
   - 129.153.93.183@443@https@81e2f56a
   - 212.200.119.174@443@https@55ccac2e
-  - 38.28.185.142@443@https@2a9e0abc
-  - 46.17.91.114@3000@https@154bb72c
   - 38.247.141.135@443@https@3c9c5de9
   - 38.28.185.247@443@https@f5e43e5a
   - 166.157.172.234@8443@https@6548d260
@@ -1769,11 +1766,13 @@ proxy-groups:
   - 38.28.185.224@443@https@b086bb41
   - 62.210.124.132@24667@hysteria@09a0acac
   - 83.212.225.30@443@https@01465f06
+  - 166.157.172.235@8443@https@0fcb6703
 - name: op-pool-1
   type: select
   proxies:
   - 140.207.53.251@8888@http@dc78eb20
   - 140.210.143.19@8080@http@0e79619e
+  - 140.210.143.18@8080@http@10c1e83f
   - 172.64.69.89@443@https@c1972297
   - 70.91.247.164@8443@https@eed82258
   - 172.184.160.15@8443@https@8de2c1e1
@@ -1963,8 +1962,6 @@ proxy-groups:
   - 195.80.165.154@443@https@d2657463
   - 129.153.93.183@443@https@81e2f56a
   - 212.200.119.174@443@https@55ccac2e
-  - 38.28.185.142@443@https@2a9e0abc
-  - 46.17.91.114@3000@https@154bb72c
   - 38.247.141.135@443@https@3c9c5de9
   - 38.28.185.247@443@https@f5e43e5a
   - 166.157.172.234@8443@https@6548d260
@@ -1972,11 +1969,13 @@ proxy-groups:
   - 38.28.185.224@443@https@b086bb41
   - 62.210.124.132@24667@hysteria@09a0acac
   - 83.212.225.30@443@https@01465f06
+  - 166.157.172.235@8443@https@0fcb6703
 - name: op-pool-2
   type: select
   proxies:
   - 140.207.53.251@8888@http@dc78eb20
   - 140.210.143.19@8080@http@0e79619e
+  - 140.210.143.18@8080@http@10c1e83f
   - 172.64.69.89@443@https@c1972297
   - 70.91.247.164@8443@https@eed82258
   - 172.184.160.15@8443@https@8de2c1e1
@@ -2166,8 +2165,6 @@ proxy-groups:
   - 195.80.165.154@443@https@d2657463
   - 129.153.93.183@443@https@81e2f56a
   - 212.200.119.174@443@https@55ccac2e
-  - 38.28.185.142@443@https@2a9e0abc
-  - 46.17.91.114@3000@https@154bb72c
   - 38.247.141.135@443@https@3c9c5de9
   - 38.28.185.247@443@https@f5e43e5a
   - 166.157.172.234@8443@https@6548d260
@@ -2175,11 +2172,13 @@ proxy-groups:
   - 38.28.185.224@443@https@b086bb41
   - 62.210.124.132@24667@hysteria@09a0acac
   - 83.212.225.30@443@https@01465f06
+  - 166.157.172.235@8443@https@0fcb6703
 - name: op-pool-3
   type: select
   proxies:
   - 140.207.53.251@8888@http@dc78eb20
   - 140.210.143.19@8080@http@0e79619e
+  - 140.210.143.18@8080@http@10c1e83f
   - 172.64.69.89@443@https@c1972297
   - 70.91.247.164@8443@https@eed82258
   - 172.184.160.15@8443@https@8de2c1e1
@@ -2369,8 +2368,6 @@ proxy-groups:
   - 195.80.165.154@443@https@d2657463
   - 129.153.93.183@443@https@81e2f56a
   - 212.200.119.174@443@https@55ccac2e
-  - 38.28.185.142@443@https@2a9e0abc
-  - 46.17.91.114@3000@https@154bb72c
   - 38.247.141.135@443@https@3c9c5de9
   - 38.28.185.247@443@https@f5e43e5a
   - 166.157.172.234@8443@https@6548d260
@@ -2378,11 +2375,13 @@ proxy-groups:
   - 38.28.185.224@443@https@b086bb41
   - 62.210.124.132@24667@hysteria@09a0acac
   - 83.212.225.30@443@https@01465f06
+  - 166.157.172.235@8443@https@0fcb6703
 - name: op-pool-4
   type: select
   proxies:
   - 140.207.53.251@8888@http@dc78eb20
   - 140.210.143.19@8080@http@0e79619e
+  - 140.210.143.18@8080@http@10c1e83f
   - 172.64.69.89@443@https@c1972297
   - 70.91.247.164@8443@https@eed82258
   - 172.184.160.15@8443@https@8de2c1e1
@@ -2572,8 +2571,6 @@ proxy-groups:
   - 195.80.165.154@443@https@d2657463
   - 129.153.93.183@443@https@81e2f56a
   - 212.200.119.174@443@https@55ccac2e
-  - 38.28.185.142@443@https@2a9e0abc
-  - 46.17.91.114@3000@https@154bb72c
   - 38.247.141.135@443@https@3c9c5de9
   - 38.28.185.247@443@https@f5e43e5a
   - 166.157.172.234@8443@https@6548d260
@@ -2581,6 +2578,7 @@ proxy-groups:
   - 38.28.185.224@443@https@b086bb41
   - 62.210.124.132@24667@hysteria@09a0acac
   - 83.212.225.30@443@https@01465f06
+  - 166.157.172.235@8443@https@0fcb6703
 - name: EASTMONEY
   type: fallback
   url: https://push2.eastmoney.com/api/qt/ulist.np/get?secids=1.000001&fields=f2
@@ -2588,6 +2586,7 @@ proxy-groups:
   proxies:
   - 140.207.53.251@8888@http@dc78eb20
   - 140.210.143.19@8080@http@0e79619e
+  - 140.210.143.18@8080@http@10c1e83f
   - 172.64.69.89@443@https@c1972297
   - 70.91.247.164@8443@https@eed82258
   - 172.184.160.15@8443@https@8de2c1e1
@@ -2777,8 +2776,6 @@ proxy-groups:
   - 195.80.165.154@443@https@d2657463
   - 129.153.93.183@443@https@81e2f56a
   - 212.200.119.174@443@https@55ccac2e
-  - 38.28.185.142@443@https@2a9e0abc
-  - 46.17.91.114@3000@https@154bb72c
   - 38.247.141.135@443@https@3c9c5de9
   - 38.28.185.247@443@https@f5e43e5a
   - 166.157.172.234@8443@https@6548d260
@@ -2786,6 +2783,7 @@ proxy-groups:
   - 38.28.185.224@443@https@b086bb41
   - 62.210.124.132@24667@hysteria@09a0acac
   - 83.212.225.30@443@https@01465f06
+  - 166.157.172.235@8443@https@0fcb6703
 - name: EASTMONEY-RES
   type: fallback
   url: https://push2.eastmoney.com/api/qt/clist/get?pn=1&pz=5&po=1&np=1&fltt=2&invt=2&fid=f3&fs=m:1+t:2&fields=f12,f14,f2
@@ -2800,6 +2798,7 @@ proxy-groups:
   proxies:
   - 140.207.53.251@8888@http@dc78eb20
   - 140.210.143.19@8080@http@0e79619e
+  - 140.210.143.18@8080@http@10c1e83f
   - 172.64.69.89@443@https@c1972297
   - 70.91.247.164@8443@https@eed82258
   - 172.184.160.15@8443@https@8de2c1e1
@@ -2989,8 +2988,6 @@ proxy-groups:
   - 195.80.165.154@443@https@d2657463
   - 129.153.93.183@443@https@81e2f56a
   - 212.200.119.174@443@https@55ccac2e
-  - 38.28.185.142@443@https@2a9e0abc
-  - 46.17.91.114@3000@https@154bb72c
   - 38.247.141.135@443@https@3c9c5de9
   - 38.28.185.247@443@https@f5e43e5a
   - 166.157.172.234@8443@https@6548d260
@@ -2998,6 +2995,7 @@ proxy-groups:
   - 38.28.185.224@443@https@b086bb41
   - 62.210.124.132@24667@hysteria@09a0acac
   - 83.212.225.30@443@https@01465f06
+  - 166.157.172.235@8443@https@0fcb6703
 - name: FT
   type: url-test
   url: https://www.ft.com/robots.txt
@@ -3006,6 +3004,7 @@ proxy-groups:
   proxies:
   - 140.207.53.251@8888@http@dc78eb20
   - 140.210.143.19@8080@http@0e79619e
+  - 140.210.143.18@8080@http@10c1e83f
   - 172.64.69.89@443@https@c1972297
   - 70.91.247.164@8443@https@eed82258
   - 172.184.160.15@8443@https@8de2c1e1
@@ -3195,8 +3194,6 @@ proxy-groups:
   - 195.80.165.154@443@https@d2657463
   - 129.153.93.183@443@https@81e2f56a
   - 212.200.119.174@443@https@55ccac2e
-  - 38.28.185.142@443@https@2a9e0abc
-  - 46.17.91.114@3000@https@154bb72c
   - 38.247.141.135@443@https@3c9c5de9
   - 38.28.185.247@443@https@f5e43e5a
   - 166.157.172.234@8443@https@6548d260
@@ -3204,6 +3201,7 @@ proxy-groups:
   - 38.28.185.224@443@https@b086bb41
   - 62.210.124.132@24667@hysteria@09a0acac
   - 83.212.225.30@443@https@01465f06
+  - 166.157.172.235@8443@https@0fcb6703
 - name: FT-CN
   type: url-test
   url: https://www.ftchinese.com/rss/feed
@@ -3213,6 +3211,7 @@ proxy-groups:
   proxies:
   - 140.207.53.251@8888@http@dc78eb20
   - 140.210.143.19@8080@http@0e79619e
+  - 140.210.143.18@8080@http@10c1e83f
   - 172.64.69.89@443@https@c1972297
   - 70.91.247.164@8443@https@eed82258
   - 172.184.160.15@8443@https@8de2c1e1
@@ -3402,8 +3401,6 @@ proxy-groups:
   - 195.80.165.154@443@https@d2657463
   - 129.153.93.183@443@https@81e2f56a
   - 212.200.119.174@443@https@55ccac2e
-  - 38.28.185.142@443@https@2a9e0abc
-  - 46.17.91.114@3000@https@154bb72c
   - 38.247.141.135@443@https@3c9c5de9
   - 38.28.185.247@443@https@f5e43e5a
   - 166.157.172.234@8443@https@6548d260
@@ -3411,6 +3408,7 @@ proxy-groups:
   - 38.28.185.224@443@https@b086bb41
   - 62.210.124.132@24667@hysteria@09a0acac
   - 83.212.225.30@443@https@01465f06
+  - 166.157.172.235@8443@https@0fcb6703
 - name: BLOOMBERG
   type: url-test
   url: https://www.bloomberg.com/robots.txt
@@ -3419,6 +3417,7 @@ proxy-groups:
   proxies:
   - 140.207.53.251@8888@http@dc78eb20
   - 140.210.143.19@8080@http@0e79619e
+  - 140.210.143.18@8080@http@10c1e83f
   - 172.64.69.89@443@https@c1972297
   - 70.91.247.164@8443@https@eed82258
   - 172.184.160.15@8443@https@8de2c1e1
@@ -3608,8 +3607,6 @@ proxy-groups:
   - 195.80.165.154@443@https@d2657463
   - 129.153.93.183@443@https@81e2f56a
   - 212.200.119.174@443@https@55ccac2e
-  - 38.28.185.142@443@https@2a9e0abc
-  - 46.17.91.114@3000@https@154bb72c
   - 38.247.141.135@443@https@3c9c5de9
   - 38.28.185.247@443@https@f5e43e5a
   - 166.157.172.234@8443@https@6548d260
@@ -3617,6 +3614,7 @@ proxy-groups:
   - 38.28.185.224@443@https@b086bb41
   - 62.210.124.132@24667@hysteria@09a0acac
   - 83.212.225.30@443@https@01465f06
+  - 166.157.172.235@8443@https@0fcb6703
 - name: WSJ
   type: url-test
   url: https://www.wsj.com/robots.txt
@@ -3625,6 +3623,7 @@ proxy-groups:
   proxies:
   - 140.207.53.251@8888@http@dc78eb20
   - 140.210.143.19@8080@http@0e79619e
+  - 140.210.143.18@8080@http@10c1e83f
   - 172.64.69.89@443@https@c1972297
   - 70.91.247.164@8443@https@eed82258
   - 172.184.160.15@8443@https@8de2c1e1
@@ -3814,8 +3813,6 @@ proxy-groups:
   - 195.80.165.154@443@https@d2657463
   - 129.153.93.183@443@https@81e2f56a
   - 212.200.119.174@443@https@55ccac2e
-  - 38.28.185.142@443@https@2a9e0abc
-  - 46.17.91.114@3000@https@154bb72c
   - 38.247.141.135@443@https@3c9c5de9
   - 38.28.185.247@443@https@f5e43e5a
   - 166.157.172.234@8443@https@6548d260
@@ -3823,6 +3820,7 @@ proxy-groups:
   - 38.28.185.224@443@https@b086bb41
   - 62.210.124.132@24667@hysteria@09a0acac
   - 83.212.225.30@443@https@01465f06
+  - 166.157.172.235@8443@https@0fcb6703
 - name: NYTIMES
   type: url-test
   url: https://www.nytimes.com/robots.txt
@@ -3831,6 +3829,7 @@ proxy-groups:
   proxies:
   - 140.207.53.251@8888@http@dc78eb20
   - 140.210.143.19@8080@http@0e79619e
+  - 140.210.143.18@8080@http@10c1e83f
   - 172.64.69.89@443@https@c1972297
   - 70.91.247.164@8443@https@eed82258
   - 172.184.160.15@8443@https@8de2c1e1
@@ -4020,8 +4019,6 @@ proxy-groups:
   - 195.80.165.154@443@https@d2657463
   - 129.153.93.183@443@https@81e2f56a
   - 212.200.119.174@443@https@55ccac2e
-  - 38.28.185.142@443@https@2a9e0abc
-  - 46.17.91.114@3000@https@154bb72c
   - 38.247.141.135@443@https@3c9c5de9
   - 38.28.185.247@443@https@f5e43e5a
   - 166.157.172.234@8443@https@6548d260
@@ -4029,6 +4026,7 @@ proxy-groups:
   - 38.28.185.224@443@https@b086bb41
   - 62.210.124.132@24667@hysteria@09a0acac
   - 83.212.225.30@443@https@01465f06
+  - 166.157.172.235@8443@https@0fcb6703
 - name: CNN
   type: url-test
   url: https://www.cnn.com/robots.txt
@@ -4037,6 +4035,7 @@ proxy-groups:
   proxies:
   - 140.207.53.251@8888@http@dc78eb20
   - 140.210.143.19@8080@http@0e79619e
+  - 140.210.143.18@8080@http@10c1e83f
   - 172.64.69.89@443@https@c1972297
   - 70.91.247.164@8443@https@eed82258
   - 172.184.160.15@8443@https@8de2c1e1
@@ -4226,8 +4225,6 @@ proxy-groups:
   - 195.80.165.154@443@https@d2657463
   - 129.153.93.183@443@https@81e2f56a
   - 212.200.119.174@443@https@55ccac2e
-  - 38.28.185.142@443@https@2a9e0abc
-  - 46.17.91.114@3000@https@154bb72c
   - 38.247.141.135@443@https@3c9c5de9
   - 38.28.185.247@443@https@f5e43e5a
   - 166.157.172.234@8443@https@6548d260
@@ -4235,6 +4232,7 @@ proxy-groups:
   - 38.28.185.224@443@https@b086bb41
   - 62.210.124.132@24667@hysteria@09a0acac
   - 83.212.225.30@443@https@01465f06
+  - 166.157.172.235@8443@https@0fcb6703
 - name: PG-default
   type: fallback
   url: https://www.google.com/generate_204
@@ -4244,6 +4242,7 @@ proxy-groups:
   - PG-fast
   - 140.207.53.251@8888@http@dc78eb20
   - 140.210.143.19@8080@http@0e79619e
+  - 140.210.143.18@8080@http@10c1e83f
   - 172.64.69.89@443@https@c1972297
   - 70.91.247.164@8443@https@eed82258
   - 172.184.160.15@8443@https@8de2c1e1
@@ -4433,8 +4432,6 @@ proxy-groups:
   - 195.80.165.154@443@https@d2657463
   - 129.153.93.183@443@https@81e2f56a
   - 212.200.119.174@443@https@55ccac2e
-  - 38.28.185.142@443@https@2a9e0abc
-  - 46.17.91.114@3000@https@154bb72c
   - 38.247.141.135@443@https@3c9c5de9
   - 38.28.185.247@443@https@f5e43e5a
   - 166.157.172.234@8443@https@6548d260
@@ -4442,6 +4439,7 @@ proxy-groups:
   - 38.28.185.224@443@https@b086bb41
   - 62.210.124.132@24667@hysteria@09a0acac
   - 83.212.225.30@443@https@01465f06
+  - 166.157.172.235@8443@https@0fcb6703
   - CF-VLESS
   - CF-VLESS-2
 - name: PG-AnTing
@@ -4453,6 +4451,7 @@ proxy-groups:
   proxies:
   - 140.207.53.251@8888@http@dc78eb20
   - 140.210.143.19@8080@http@0e79619e
+  - 140.210.143.18@8080@http@10c1e83f
   - 172.64.69.89@443@https@c1972297
   - 70.91.247.164@8443@https@eed82258
   - 172.184.160.15@8443@https@8de2c1e1
@@ -4642,8 +4641,6 @@ proxy-groups:
   - 195.80.165.154@443@https@d2657463
   - 129.153.93.183@443@https@81e2f56a
   - 212.200.119.174@443@https@55ccac2e
-  - 38.28.185.142@443@https@2a9e0abc
-  - 46.17.91.114@3000@https@154bb72c
   - 38.247.141.135@443@https@3c9c5de9
   - 38.28.185.247@443@https@f5e43e5a
   - 166.157.172.234@8443@https@6548d260
@@ -4651,6 +4648,7 @@ proxy-groups:
   - 38.28.185.224@443@https@b086bb41
   - 62.210.124.132@24667@hysteria@09a0acac
   - 83.212.225.30@443@https@01465f06
+  - 166.157.172.235@8443@https@0fcb6703
 - name: PG-Sage
   type: load-balance
   url: http://www.eastmoney.com
@@ -4660,6 +4658,7 @@ proxy-groups:
   proxies:
   - 140.207.53.251@8888@http@dc78eb20
   - 140.210.143.19@8080@http@0e79619e
+  - 140.210.143.18@8080@http@10c1e83f
   - 172.64.69.89@443@https@c1972297
   - 70.91.247.164@8443@https@eed82258
   - 172.184.160.15@8443@https@8de2c1e1
@@ -4849,8 +4848,6 @@ proxy-groups:
   - 195.80.165.154@443@https@d2657463
   - 129.153.93.183@443@https@81e2f56a
   - 212.200.119.174@443@https@55ccac2e
-  - 38.28.185.142@443@https@2a9e0abc
-  - 46.17.91.114@3000@https@154bb72c
   - 38.247.141.135@443@https@3c9c5de9
   - 38.28.185.247@443@https@f5e43e5a
   - 166.157.172.234@8443@https@6548d260
@@ -4858,6 +4855,7 @@ proxy-groups:
   - 38.28.185.224@443@https@b086bb41
   - 62.210.124.132@24667@hysteria@09a0acac
   - 83.212.225.30@443@https@01465f06
+  - 166.157.172.235@8443@https@0fcb6703
 - name: PG-CN
   type: load-balance
   url: https://www.sse.com.cn
@@ -4867,6 +4865,7 @@ proxy-groups:
   proxies:
   - 140.207.53.251@8888@http@dc78eb20
   - 140.210.143.19@8080@http@0e79619e
+  - 140.210.143.18@8080@http@10c1e83f
   - 172.64.69.89@443@https@c1972297
   - 70.91.247.164@8443@https@eed82258
   - 172.184.160.15@8443@https@8de2c1e1
@@ -5056,8 +5055,6 @@ proxy-groups:
   - 195.80.165.154@443@https@d2657463
   - 129.153.93.183@443@https@81e2f56a
   - 212.200.119.174@443@https@55ccac2e
-  - 38.28.185.142@443@https@2a9e0abc
-  - 46.17.91.114@3000@https@154bb72c
   - 38.247.141.135@443@https@3c9c5de9
   - 38.28.185.247@443@https@f5e43e5a
   - 166.157.172.234@8443@https@6548d260
@@ -5065,6 +5062,7 @@ proxy-groups:
   - 38.28.185.224@443@https@b086bb41
   - 62.210.124.132@24667@hysteria@09a0acac
   - 83.212.225.30@443@https@01465f06
+  - 166.157.172.235@8443@https@0fcb6703
 - name: PG-Residential
   type: select
   proxies:
@@ -5140,14 +5138,15 @@ proxy-groups:
   - 38.28.193.83@443@https@7a5b4f5f
   - 137.175.22.88@443@https@75479b57
   - 129.153.93.183@443@https@81e2f56a
-  - 38.28.185.142@443@https@2a9e0abc
   - 38.247.141.135@443@https@3c9c5de9
   - 38.28.185.247@443@https@f5e43e5a
   - 166.157.172.234@8443@https@6548d260
   - 24.225.10.211@443@https@e3adc2ac
   - 38.28.185.224@443@https@b086bb41
+  - 166.157.172.235@8443@https@0fcb6703
   - 140.207.53.251@8888@http@dc78eb20
   - 140.210.143.19@8080@http@0e79619e
+  - 140.210.143.18@8080@http@10c1e83f
   - 172.64.69.89@443@https@c1972297
   - 120.232.204.58@31343@https@3d23e7d0
   - 63.180.250.201@443@https@b28ac940
@@ -5176,14 +5175,14 @@ proxy-groups:
   - 193.176.84.20@9002@https@04fa23c2
   - 47.84.230.119@6443@https@38ecb0ad
   - 80.86.231.109@443@https@535de9bb
-  - 193.176.84.33@9002@https@990fdde2
 - name: PG-Google
   type: fallback
   url: https://www.google.com/generate_204
-  interval: 481
+  interval: 514
   lazy: true
   proxies:
   - PG-Google-fast
+  - 193.176.84.33@9002@https@990fdde2
   - 193.176.84.23@9002@https@a189658b
   - 93.190.247.126@8446@https@f5668428
   - 193.176.84.3@9002@https@80877112
@@ -5281,7 +5280,6 @@ proxy-groups:
   - 202.85.53.25@443@https@4b864571
   - 195.80.165.154@443@https@d2657463
   - 212.200.119.174@443@https@55ccac2e
-  - 46.17.91.114@3000@https@154bb72c
   - 62.210.124.132@24667@hysteria@09a0acac
   - 83.212.225.30@443@https@01465f06
   - PG-fast
@@ -5295,6 +5293,7 @@ proxy-groups:
   proxies:
   - 140.207.53.251@8888@http@dc78eb20
   - 140.210.143.19@8080@http@0e79619e
+  - 140.210.143.18@8080@http@10c1e83f
   - 172.64.69.89@443@https@c1972297
   - 70.91.247.164@8443@https@eed82258
   - 172.184.160.15@8443@https@8de2c1e1
@@ -5385,21 +5384,21 @@ proxy-groups:
   - 193.176.84.40@9002@https@f4ea570c
   - 134.59.1.187@443@https@ee9ce3dd
   - 158.173.154.4@9002@https@cc5cc58d
-  - 156.240.1.131@443@https@2dc30cb1
   - 84.17.47.124@9002@https@cd0a82d8
+  - 156.240.1.131@443@https@2dc30cb1
   - 84.234.98.120@443@https@062ee58f
   - 84.17.47.147@9002@https@09ccd3d1
   - 45.154.87.153@443@https@b2823e7f
   - 130.17.13.234@8443@https@97ce24b1
   - 135.106.161.7@443@https@3eb484b1
-  - 213.214.134.50@443@https@51505c84
 - name: PG-GitHub-b1
   type: url-test
   url: https://github.com/robots.txt
-  interval: 447
+  interval: 557
   tolerance: 200
   lazy: true
   proxies:
+  - 213.214.134.50@443@https@51505c84
   - 198.100.153.39@443@https@a2eedb4d
   - 3.224.225.34@443@https@fedeae71
   - 38.28.193.47@443@https@75d7b962
@@ -5453,7 +5452,6 @@ proxy-groups:
   - 193.87.1.47@443@https@77031c2f
   - 38.28.193.191@443@https@412c1b1e
   - 85.209.157.181@8443@https@af85d26d
-  - 46.17.91.114@3000@https@154bb72c
   - 37.16.74.237@8443@https@ff116899
   - 83.212.225.32@443@https@d51f1e21
   - 193.32.2.11@443@https@adb5fb95
@@ -5486,13 +5484,13 @@ proxy-groups:
   - 166.157.172.234@8443@https@6548d260
   - 24.225.10.211@443@https@e3adc2ac
   - 137.175.22.41@443@https@db9fb041
+  - 166.157.172.235@8443@https@0fcb6703
   - 38.28.185.197@443@https@75120194
   - 38.28.185.222@443@https@d76d6894
   - 137.175.22.45@443@https@6c462a8c
   - 38.28.185.205@443@https@a5594a4f
   - 38.28.193.83@443@https@7a5b4f5f
   - 129.153.93.183@443@https@81e2f56a
-  - 38.28.185.142@443@https@2a9e0abc
   - 38.247.141.135@443@https@3c9c5de9
   - 80.211.213.46@3129@https@1d63f6da
   - 38.28.185.247@443@https@f5e43e5a
@@ -5503,7 +5501,7 @@ proxy-groups:
 - name: PG-GitHub
   type: fallback
   url: https://github.com/robots.txt
-  interval: 580
+  interval: 432
   lazy: true
   proxies:
   - PG-GitHub-fast
@@ -5580,14 +5578,15 @@ proxy-groups:
   - 38.28.193.83@443@https@7a5b4f5f
   - 137.175.22.88@443@https@75479b57
   - 129.153.93.183@443@https@81e2f56a
-  - 38.28.185.142@443@https@2a9e0abc
   - 38.247.141.135@443@https@3c9c5de9
   - 38.28.185.247@443@https@f5e43e5a
   - 166.157.172.234@8443@https@6548d260
   - 24.225.10.211@443@https@e3adc2ac
   - 38.28.185.224@443@https@b086bb41
+  - 166.157.172.235@8443@https@0fcb6703
   - 140.207.53.251@8888@http@dc78eb20
   - 140.210.143.19@8080@http@0e79619e
+  - 140.210.143.18@8080@http@10c1e83f
   - 172.64.69.89@443@https@c1972297
   - 120.232.204.58@31343@https@3d23e7d0
   - 63.180.250.201@443@https@b28ac940
@@ -5616,14 +5615,14 @@ proxy-groups:
   - 193.176.84.20@9002@https@04fa23c2
   - 47.84.230.119@6443@https@38ecb0ad
   - 80.86.231.109@443@https@535de9bb
-  - 193.176.84.33@9002@https@990fdde2
 - name: PG-YouTube
   type: fallback
   url: https://www.youtube.com/generate_204
-  interval: 558
+  interval: 317
   lazy: true
   proxies:
   - PG-YouTube-fast
+  - 193.176.84.33@9002@https@990fdde2
   - 193.176.84.23@9002@https@a189658b
   - 93.190.247.126@8446@https@f5668428
   - 193.176.84.3@9002@https@80877112
@@ -5721,7 +5720,6 @@ proxy-groups:
   - 202.85.53.25@443@https@4b864571
   - 195.80.165.154@443@https@d2657463
   - 212.200.119.174@443@https@55ccac2e
-  - 46.17.91.114@3000@https@154bb72c
   - 62.210.124.132@24667@hysteria@09a0acac
   - 83.212.225.30@443@https@01465f06
   - PG-fast
@@ -5796,14 +5794,15 @@ proxy-groups:
   - 38.28.193.83@443@https@7a5b4f5f
   - 137.175.22.88@443@https@75479b57
   - 129.153.93.183@443@https@81e2f56a
-  - 38.28.185.142@443@https@2a9e0abc
   - 38.247.141.135@443@https@3c9c5de9
   - 38.28.185.247@443@https@f5e43e5a
   - 166.157.172.234@8443@https@6548d260
   - 24.225.10.211@443@https@e3adc2ac
   - 38.28.185.224@443@https@b086bb41
+  - 166.157.172.235@8443@https@0fcb6703
   - 140.207.53.251@8888@http@dc78eb20
   - 140.210.143.19@8080@http@0e79619e
+  - 140.210.143.18@8080@http@10c1e83f
   - 172.64.69.89@443@https@c1972297
   - 120.232.204.58@31343@https@3d23e7d0
   - 63.180.250.201@443@https@b28ac940
@@ -5832,14 +5831,14 @@ proxy-groups:
   - 193.176.84.20@9002@https@04fa23c2
   - 47.84.230.119@6443@https@38ecb0ad
   - 80.86.231.109@443@https@535de9bb
-  - 193.176.84.33@9002@https@990fdde2
 - name: PG-Twitter
   type: fallback
   url: https://x.com/robots.txt
-  interval: 397
+  interval: 449
   lazy: true
   proxies:
   - PG-Twitter-fast
+  - 193.176.84.33@9002@https@990fdde2
   - 193.176.84.23@9002@https@a189658b
   - 93.190.247.126@8446@https@f5668428
   - 193.176.84.3@9002@https@80877112
@@ -5937,7 +5936,6 @@ proxy-groups:
   - 202.85.53.25@443@https@4b864571
   - 195.80.165.154@443@https@d2657463
   - 212.200.119.174@443@https@55ccac2e
-  - 46.17.91.114@3000@https@154bb72c
   - 62.210.124.132@24667@hysteria@09a0acac
   - 83.212.225.30@443@https@01465f06
   - PG-fast
@@ -5957,6 +5955,7 @@ proxy-groups:
   proxies:
   - 140.207.53.251@8888@http@dc78eb20
   - 140.210.143.19@8080@http@0e79619e
+  - 140.210.143.18@8080@http@10c1e83f
   - 172.64.69.89@443@https@c1972297
   - 70.91.247.164@8443@https@eed82258
   - 172.184.160.15@8443@https@8de2c1e1
@@ -6146,8 +6145,6 @@ proxy-groups:
   - 195.80.165.154@443@https@d2657463
   - 129.153.93.183@443@https@81e2f56a
   - 212.200.119.174@443@https@55ccac2e
-  - 38.28.185.142@443@https@2a9e0abc
-  - 46.17.91.114@3000@https@154bb72c
   - 38.247.141.135@443@https@3c9c5de9
   - 38.28.185.247@443@https@f5e43e5a
   - 166.157.172.234@8443@https@6548d260
@@ -6155,11 +6152,13 @@ proxy-groups:
   - 38.28.185.224@443@https@b086bb41
   - 62.210.124.132@24667@hysteria@09a0acac
   - 83.212.225.30@443@https@01465f06
+  - 166.157.172.235@8443@https@0fcb6703
 - name: op-kilo
   type: select
   proxies:
   - 140.207.53.251@8888@http@dc78eb20
   - 140.210.143.19@8080@http@0e79619e
+  - 140.210.143.18@8080@http@10c1e83f
   - 172.64.69.89@443@https@c1972297
   - 70.91.247.164@8443@https@eed82258
   - 172.184.160.15@8443@https@8de2c1e1
@@ -6349,8 +6348,6 @@ proxy-groups:
   - 195.80.165.154@443@https@d2657463
   - 129.153.93.183@443@https@81e2f56a
   - 212.200.119.174@443@https@55ccac2e
-  - 38.28.185.142@443@https@2a9e0abc
-  - 46.17.91.114@3000@https@154bb72c
   - 38.247.141.135@443@https@3c9c5de9
   - 38.28.185.247@443@https@f5e43e5a
   - 166.157.172.234@8443@https@6548d260
@@ -6358,6 +6355,7 @@ proxy-groups:
   - 38.28.185.224@443@https@b086bb41
   - 62.210.124.132@24667@hysteria@09a0acac
   - 83.212.225.30@443@https@01465f06
+  - 166.157.172.235@8443@https@0fcb6703
 - name: PG-opencode-fast
   type: url-test
   url: https://opencode.ai/inference/v1/chat/completions
@@ -6429,14 +6427,15 @@ proxy-groups:
   - 38.28.193.83@443@https@7a5b4f5f
   - 137.175.22.88@443@https@75479b57
   - 129.153.93.183@443@https@81e2f56a
-  - 38.28.185.142@443@https@2a9e0abc
   - 38.247.141.135@443@https@3c9c5de9
   - 38.28.185.247@443@https@f5e43e5a
   - 166.157.172.234@8443@https@6548d260
   - 24.225.10.211@443@https@e3adc2ac
   - 38.28.185.224@443@https@b086bb41
+  - 166.157.172.235@8443@https@0fcb6703
   - 140.207.53.251@8888@http@dc78eb20
   - 140.210.143.19@8080@http@0e79619e
+  - 140.210.143.18@8080@http@10c1e83f
   - 172.64.69.89@443@https@c1972297
   - 120.232.204.58@31343@https@3d23e7d0
   - 63.180.250.201@443@https@b28ac940
@@ -6465,15 +6464,15 @@ proxy-groups:
   - 193.176.84.20@9002@https@04fa23c2
   - 47.84.230.119@6443@https@38ecb0ad
   - 80.86.231.109@443@https@535de9bb
-  - 193.176.84.33@9002@https@990fdde2
 - name: PG-opencode
   type: fallback
   url: https://opencode.ai/inference/v1/chat/completions
   expected-status: 400-599
-  interval: 463
+  interval: 575
   lazy: true
   proxies:
   - PG-opencode-fast
+  - 193.176.84.33@9002@https@990fdde2
   - 193.176.84.23@9002@https@a189658b
   - 93.190.247.126@8446@https@f5668428
   - 193.176.84.3@9002@https@80877112
@@ -6571,7 +6570,6 @@ proxy-groups:
   - 202.85.53.25@443@https@4b864571
   - 195.80.165.154@443@https@d2657463
   - 212.200.119.174@443@https@55ccac2e
-  - 46.17.91.114@3000@https@154bb72c
   - 62.210.124.132@24667@hysteria@09a0acac
   - 83.212.225.30@443@https@01465f06
   - PG-fast
